@@ -16,8 +16,8 @@ https://theworldismindproject.com   ← (se actualiza con cada *push* a `main`)
 
 ## 📂 Estructura del repo
 /index.html Página principal (landing)
-/img/yoacolor.png Foto de Dani
-/img/logoTWIMP.jpg.PNG Logo TWIMP horizontal
+C:\Users\daora\OneDrive\Desktop\TWIM (Imágenes)\yoacolor.png Foto de Dani
+C:\Users\daora\OneDrive\Desktop\TWIM (Imágenes)\Imagen de WhatsApp 2025-04-22 a las 15.09.14_a5e8e198.jpg G Logo TWIMP horizontal
 /css/ (opcional) hojas de estilo separadas
 /README.md Este archivo
 /LICENSE Licencia CC BY-NC-ND 4.0
