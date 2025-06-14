@@ -4,46 +4,98 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The World Is Mind Project | Psicología que impulsa organizaciones</title>
-  <meta name="description" content="Convertimos la ansiedad laboral en ventaja competitiva. Programas de bienestar corporativo basados en ciencia psicológica y narrativa. Únete a la lista beta." />
+  <title>Transforma la ansiedad en ventaja competitiva | TWIM Project</title>
+  <meta name="description" content="Programas de bienestar corporativo respaldados por ciencia clínica y narrativa estratégica." />
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:title" content="Transforma la ansiedad en ventaja competitiva" />
+  <meta property="og:description" content="Diagnóstico 360°, workshops y mentoring para convertir el silencio emocional en diálogo creativo." />
+  <meta property="og:image" content="https://twimproject.com/logotwimp.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://twimproject.com/" />
+
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
+
+  <!-- Fav‑icons generados con realfavicongenerator.net -->
+  <link rel="icon" type="image/png" sizes="32x32"   href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96"   href="/favicon-96x96.png">
+  <link rel="apple-touch-icon"        sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="TWIM Project" />
+
   <style>
-    :root{--primary:#6C1E4F;--accent:#FF7E5F;--light:#FFF7F0;--dark:#1B1425}
+    :root{
+      --primary:#D74A2B;
+      --primary-dark:#B2361B;
+      --accent:#F2D7C3;
+      --bg:#FFFDFB;
+      --bg-soft:#FCF5F0;
+    }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter',sans-serif;line-height:1.6;color:#333;background:#fff}
-    header{background:var(--dark);color:#fff;padding:.75rem 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-    .container{width:90%;max-width:1200px;margin:auto}
+    body{font-family:'Barlow Condensed',sans-serif;line-height:1.5;background:var(--bg);color:var(--primary-dark)}
+    h1,h2,h3{font-weight:600;letter-spacing:.3px;color:var(--primary-dark)}
+    a{color:var(--primary);text-decoration:none;transition:color .2s}
+    a:hover{color:var(--primary-dark)}
+    .container{width:95%;max-width:1300px;margin:auto}
+
+    /* Header */
+    header{background:var(--primary);padding:1.4rem 0;position:sticky;top:0;z-index:999;box-shadow:0 3px 12px rgba(0,0,0,.25)}
     nav{display:flex;justify-content:space-between;align-items:center}
-    nav a{color:#fff;margin-left:1rem;text-decoration:none;font-weight:500}
-    nav img{height:44px;width:auto}
-    .btn{display:inline-block;padding:.75rem 1.5rem;background:var(--accent);color:#000;border-radius:4px;font-weight:600;text-decoration:none;transition:.2s all}
-    .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.15)}
-    .hero{display:flex;flex-direction:column;justify-content:center;align-items:start;min-height:72vh;background:linear-gradient(120deg,var(--light),#FFFFFF)}
-    .hero h1{font-size:2.9rem;margin-bottom:1rem;color:var(--primary)}
-    .hero p{max-width:540px;margin-bottom:1.5rem;font-size:1.1rem}
+    nav img{height:140px;width:auto;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
+    @media(max-width:600px){nav img{height:90px}}
+    nav .links a{color:#fff;margin-left:1.6rem;font-weight:400}
+    nav .links a:hover{opacity:.8}
+    .btn{display:inline-block;padding:.9rem 1.9rem;background:var(--primary-dark);color:#fff;border-radius:4px;font-weight:400;transition:.2s}
+    .btn:hover{background:var(--primary)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:center;min-height:82vh;padding-top:6vh}
+    .hero h1{font-size:clamp(2.8rem,6vw,3.6rem);margin-bottom:1rem}
+    .hero p{font-size:1.25rem;margin-bottom:2rem;max-width:580px}
+    .hero img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.15)}
+
+    /* Generic sections */
     .section{padding:4rem 0}
-    .section.bg-light{background:var(--light)}
-    .cards{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(254px,1fr))}
-    .card{background:#fff;border:1px solid #e0e0e0;padding:1.5rem;border-radius:6px;transition:.2s all}
-    .card:hover{box-shadow:0 8px 20px rgba(0,0,0,.08);transform:translateY(-4px)}
-    .card h3{margin-bottom:.5rem;color:var(--primary)}
+    .bg-soft{background:var(--bg-soft)}
     .two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2rem;align-items:center}
-    .portrait{width:100%;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.1)}
-    iframe{width:100%;aspect-ratio:16/9;border:none;border-radius:6px}
-    footer{background:#0A0A0A;color:#bbb;padding:2rem 0;text-align:center;font-size:.875rem}
-    footer a{color:#bbb;margin:0 .5rem}
+    @media(max-width:700px){.two-col{grid-template-columns:1fr}}
+    .portrait{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.12)}
+
+    /* Cards */
+    .cards{display:grid;gap:1.8rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.06);padding:2rem;border-radius:8px;text-align:center;transition:.2s}
+    .card:hover{box-shadow:0 12px 28px rgba(0,0,0,.1);transform:translateY(-6px)}
+    .card i{font-size:2.4rem;color:var(--primary);margin-bottom:1rem}
+    .card details{margin-top:1rem;text-align:left}
+
+    /* Iceberg */
+    .iceberg-wrap{display:flex;justify-content:center;padding:3rem 0;background:var(--bg)}
+    .iceberg-wrap img{max-width:320px;width:80%;opacity:.9}
+    @media(max-width:700px){.iceberg-wrap img{max-width:260px}}
+
+    /* Media */
+    iframe{width:100%;aspect-ratio:16/9;border:none;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
+
+    /* Footer */
+    footer{background:var(--primary-dark);color:#fff;text-align:center;font-size:.9rem;padding:2.4rem 0}
+    footer a{color:var(--accent)}
+
+    /* Form */
+    form{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
+    form input[type=email]{flex:1;padding:.9rem;border:1px solid rgba(0,0,0,.15);border-radius:4px}
   </style>
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <div class="container">
       <nav>
-        <a href="#home"><img src="logoTWIMP.jpg.PNG" alt="The World Is Mind Project Logo" /></a>
-        <div>
-          <a href="#about">Sobre mí</a>
+        <a href="#home"><img src="logotwimp.jpg" alt="TWIM Project – logotipo"></a>
+        <div class="links">
+          <a href="#about">Sobre mí</a>
           <a href="#solutions">Soluciones</a>
           <a href="#content">Contenido</a>
           <a href="#contact">Contacto</a>
@@ -52,87 +104,126 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero container" id="home">
-    <h1>Transforma la ansiedad<br>en ventaja competitiva</h1>
-    <p>Programas de bienestar corporativo respaldados por ciencia clínica y un enfoque narrativo que convierte el silencio emocional en diálogo creativo.</p>
-    <a href="#beta" class="btn">Únete a la lista beta</a>
+    <div>
+      <h1>Transforma la ansiedad<br>en ventaja competitiva</h1>
+      <p>Programas de bienestar corporativo respaldados por ciencia clínica y un enfoque narrativo que convierte el silencio emocional en diálogo creativo.</p>
+      <a href="ROI_TWIMP_v2.xlsx" download class="btn">Descargar plantilla ROI</a>
+
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="email" name="email" placeholder="Tu correo corporativo" required />
+        <button type="submit" class="btn">Quiero saber más</button>
+      </form>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=60" alt="Equipo creativo colaborando en oficina">
+    </div>
   </section>
 
-  <section class="section bg-light" id="about">
+  <!-- ABOUT -->
+  <section class="section bg-soft" id="about">
     <div class="container two-col">
       <div>
         <h2>Hola, soy Dani Orozco</h2>
-        <p><strong>Psicólogo General Sanitario. 12+ años de experiencia desbloqueando estructuras mentales complejas</strong> en adolescentes, adultos y equipos de alto rendimiento. Fui investigador de tendencias para marcas como Nike, FC Barcelona y Amazon; hoy utilizo esa visión estratégica para diseñar culturas corporativas emocionalmente sostenibles.</p>
-        <p>Divulgador en <em>@psicologorandom</em> y creador de <strong>The World Is Mind Project</strong>: donde la psicología clínica se une al análisis cultural para potenciar organizaciones.</p>
+        <p><strong>Psicólogo General Sanitario.</strong> Más de 12 años ayudando a cientos de personas y equipos a reestructurar su mente para rendir sin romperse. He trabajado mano a mano con analistas identificando tendencias globales para Nike, FC Barcelona y Amazon, anticipando los cambios culturales que impactan en el bienestar y la productividad. Hoy fusiono ese radar estratégico con metodología clínica para diseñar culturas corporativas emocionalmente sostenibles.</p>
+        <p>Divulgador en <em>@unpsicologorandom</em> y creador de <strong>TWIM Project</strong>: donde la psicología clínica se une al análisis cultural para potenciar organizaciones.</p>
       </div>
       <div>
-        <img src="yoacolor.png" alt="Dani Orozco retrato" class="portrait" />
+        <iframe src="https://www.youtube.com/embed/Tci-M2rfQrc?rel=0" title="Presentación de Dani Orozco" class="portrait" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
+  <!-- ICEBERG -->
+  <div class="iceberg-wrap"><img src="logofigura.jpg" alt="Ilustración iceberg doble rostro"></div>
+
+  <!-- SOLUCIONES -->
   <section class="section" id="solutions">
     <div class="container">
       <h2>Soluciones para tu empresa</h2>
       <div class="cards" style="margin-top:2rem;">
+        <!-- Card 1 -->
         <div class="card">
-          <h3>Diagnóstico 360º</h3>
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Diagnóstico 360º</h3>
           <p>Encuestas, focus groups y mapa de riesgos psicosociales para detectar la fuente real de tensión cultural.</p>
+          <details>
+            <summary>Más detalles</summary>
+            <ul>
+              <li>Encuesta validada a toda la plantilla (10 min)</li>
+              <li>Focus group de 90 min con muestra representativa</li>
+              <li>Informe ejecutivo con heat‑map de riesgos y 3 quick‑wins</li>
+              <li>Baseline de KPIs: absentismo, eNPS, rotación</li>
+            </ul>
+            <p><strong>Resultado:</strong> claridad absoluta sobre dónde intervenir primero.</p>
+          </details>
         </div>
+        <!-- Card 2 -->
         <div class="card">
+          <i class="fa-solid fa-hand-holding-heart"></i>
           <h3>MindShift Workshops</h3>
           <p>Talleres experienciales para transformar micro‑ansiedad en colaboración profunda y foco creativo.</p>
+          <details>
+            <summary>Más detalles</summary>
+            <ul>
+              <li>Sesión interactiva de 3 h (online o presencial)</li>
+              <li>Técnicas de co‑regulación y diálogo valiente</li>
+              <li>Workbooks y audios descargables</li>
+              <li>Certificado de asistencia</li>
+            </ul>
+            <p><strong>Impacto:</strong> –25 % estrés autoinformado después de 30 días.</p>
+          </details>
         </div>
+        <!-- Card 3 -->
         <div class="card">
+          <i class="fa-solid fa-chalkboard-user"></i>
           <h3>Mentoring de líderes</h3>
           <p>Sesiones quincenales para directivos: legitimar límites, feedback valiente y clima psicológico seguro.</p>
+          <details>
+            <summary>Más detalles</summary>
+            <ul>
+              <li>6 sesiones 1‑a‑1 de 60 min</li>
+              <li>Shadowing y feedback 360º</li>
+              <li>Toolkit de conversaciones difíciles</li>
+              <li>Medición de eNPS y rotación del equipo</li>
+            </ul>
+            <p><strong>Resultado:</strong> líderes que fomentan confianza y retienen talento.</p>
+          </details>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section bg-light" id="content">
+  <!-- VIDEO -->
+  <section class="section bg-soft" id="content">
     <div class="container">
       <h2>Vídeo destacado</h2>
-      <!-- Sustituye "VIDEO_ID" cuando subas tu vídeo a YouTube -->
-      <iframe src="https://www.youtube.com/embed/O2kSjjdSpXg"
- title="Introducción a The World Is Mind Project"></iframe>
+      <iframe src="https://www.youtube.com/embed/O2kSjjdSpXg" title="Introducción" allowfullscreen></iframe>
     </div>
   </section>
 
-  <section class="section" id="beta">
-    <div class="container">
-      <h2>Únete a la beta</h2>
-      <p>Recibe gratis la plantilla ROI y accede antes que nadie al método completo. Sin spam, solo ciencia aplicada.</p>
-      <form action="https://formspree.io/f/yourformid" method="POST" style="margin-top:1.5rem;display:flex;gap:.5rem;flex-wrap:wrap;">
-        <input type="email" name="email" placeholder="Tu email" required style="flex:1;padding:.75rem;border:1px solid #ccc;border-radius:4px;">
-        <button type="submit" class="btn">Quiero entrar</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="section bg-light" id="contact">
+  <!-- CONTACTO -->
+  <section class="section" id="contact">
     <div class="container two-col">
       <div>
         <h2>Contacto directo</h2>
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:danielorozco@theworldismindproject.com">danielorozco@theworldismindproject.com</a></p>
-        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/34625231297">+34 625 231 297</a></p>
-        <p>Redes sociales:<br>
-          <a href="https://instagram.com/unpsicologorandom"><i class="fa-brands fa-instagram"></i> Instagram</a> · 
-          <a href="https://youtube.com/@psicologorandom"><i class="fa-brands fa-youtube"></i> YouTube</a> · 
-          <a href="https://www.linkedin.com/in/dani-orozco"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        </p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:contacto@twimproject.com">contacto@twimproject.com</a></p>
+        <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/unpsicologorandom">@unpsicologorandom</a></p>
+        <p><i class="fa-brands fa-youtube"></i> <a href="https://youtube.com/@psicologorandom">Canal de YouTube</a></p>
+        <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/">LinkedIn</a></p>
       </div>
       <div>
         <h2>Preguntas frecuentes</h2>
-        <p><strong>¿Cuánto dura un workshop?</strong><br>Entre 2 y 3 horas — online o presencial.</p>
+        <p><strong>¿Cuánto dura un workshop?</strong><br>Entre 2 y 3 h — online o presencial.</p>
         <p><strong>¿Qué resultados puedo esperar?</strong><br>Reducción de absentismo, aumento del eNPS y ROI medido cada trimestre.</p>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 The World Is Mind Project · Diseñado por Dani Orozco</p>
+    © 2025 TWIM Project &nbsp;·&nbsp; <a href="privacy.html">Privacidad</a>
   </footer>
 </body>
 </html>
