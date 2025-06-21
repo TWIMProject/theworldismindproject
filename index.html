@@ -4,325 +4,181 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transforma la ansiedad en ventaja competitiva | TWIM Project</title>
+  <title>Transforma la ansiedad en ventaja competitiva | TWIM Project</title>
   <meta name="description" content="Programas de bienestar corporativo respaldados por ciencia clínica y narrativa estratégica." />
-  <!-- Open Graph / Twitter Card -->
+  <!-- Open Graph / Twitter Card -->
   <meta property="og:title" content="Transforma la ansiedad en ventaja competitiva" />
-  <meta property="og:description" content="Diagnóstico 360°, workshops y mentoring para convertir el silencio emocional en diálogo creativo." />
+  <meta property="og:description" content="Diagnóstico 360°, workshops y mentoring para convertir el silencio emocional en diálogo creativo." />
   <meta property="og:image" content="https://twimproject.com/logotwimp.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://twimproject.com/" />
 
-  <!-- Fonts & Icons -->
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
 
-  <!-- Fav‑icons generados con realfavicongenerator.net -->
-  <link rel="icon" type="image/png" sizes="32x32"   href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96"   href="/favicon-96x96.png">
-  <link rel="apple-touch-icon"        sizes="180x180" href="/apple-touch-icon.png">
+  <!-- Fav-icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="apple-mobile-web-app-title" content="TWIM Project" />
+  <meta name="apple-mobile-web-app-title" content="TWIM Project" />
 
   <style>
-    :root{
-      --primary:#D74A2B;
-      --primary-dark:#B2361B;
-      --accent:#F2D7C3;
-      --bg:#FFFDFB;
-      --bg-soft:#FCF5F0;
-    }
+    :root{--primary:#D74A2B;--primary-dark:#B2361B;--accent:#F2D7C3;--bg:#FFFDFB;--bg-soft:#FCF5F0}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Barlow Condensed',sans-serif;line-height:1.5;background:var(--bg);color:var(--primary-dark)}
     h1,h2,h3{font-weight:600;letter-spacing:.3px;color:var(--primary-dark)}
     a{color:var(--primary);text-decoration:none;transition:color .2s}
     a:hover{color:var(--primary-dark)}
     .container{width:95%;max-width:1300px;margin:auto}
-    
-/* ===== Modal “Más Info” para Programs Group ===== */
-.modal-backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.modal {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  position: relative;
-}
-.modal h3 {
-  margin-bottom: 1rem;
-  color: var(--primary-dark);
-}
-.modal input[type="email"] {
-  width: 100%;
-  padding: .75rem;
-  margin-bottom: 1rem;
-  border: 1px solid rgba(0,0,0,.2);
-  border-radius: 4px;
-}
-.modal .btn { width: 100%; }
-.modal-close {
-  position: absolute;
-  top: .5rem; right: .5rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-    /* Header */
+
+    /* Modal backdrop */
+    .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);justify-content:center;align-items:center;z-index:1000}
+    .modal{background:#fff;padding:2rem;border-radius:8px;max-width:400px;width:90%;text-align:center;position:relative}
+    .modal h3{margin-bottom:1rem;color:var(--primary-dark)}
+    .modal input[type="email"]{width:100%;padding:.75rem;margin-bottom:1rem;border:1px solid rgba(0,0,0,.2);border-radius:4px}
+    .modal .btn{width:100%;margin-top:.5rem}
+    .modal-close{position:absolute;top:.5rem;right:.5rem;font-size:1.2rem;cursor:pointer}
+
+    /* Header */
     header{background:var(--primary);padding:1.4rem 0;position:sticky;top:0;z-index:999;box-shadow:0 3px 12px rgba(0,0,0,.25)}
     nav{display:flex;justify-content:space-between;align-items:center}
     nav img{height:140px;width:auto;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
     @media(max-width:600px){nav img{height:90px}}
-    nav .links a{color:#fff;margin-left:1.6rem;font-weight:400}
-    nav .links a:hover{opacity:.8}
+    .links a{color:#fff;margin-left:1.6rem;font-weight:400}
+    .links a:hover{opacity:.8}
     .btn{display:inline-block;padding:.9rem 1.9rem;background:var(--primary-dark);color:#fff;border-radius:4px;font-weight:400;transition:.2s}
     .btn:hover{background:var(--primary)}
 
-    /* Hero */
+    /* Hero */
     .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:center;min-height:82vh;padding-top:6vh}
     .hero h1{font-size:clamp(2.8rem,6vw,3.6rem);margin-bottom:1rem}
     .hero p{font-size:1.25rem;margin-bottom:2rem;max-width:580px}
     .hero img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.15)}
 
-    /* Generic sections */
+    /* Sections */
     .section{padding:4rem 0}
     .bg-soft{background:var(--bg-soft)}
     .two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2rem;align-items:center}
     @media(max-width:700px){.two-col{grid-template-columns:1fr}}
     .portrait{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.12)}
 
-    /* Cards */
+    /* Cards */
     .cards{display:grid;gap:1.8rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     .card{background:#fff;border:1px solid rgba(0,0,0,.06);padding:2rem;border-radius:8px;text-align:center;transition:.2s}
     .card:hover{box-shadow:0 12px 28px rgba(0,0,0,.1);transform:translateY(-6px)}
     .card i{font-size:2.4rem;color:var(--primary);margin-bottom:1rem}
     .card details{margin-top:1rem;text-align:left}
 
-    /* Media */
+    /* Media */
     iframe{width:100%;aspect-ratio:16/9;border:none;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.08)}
 
-    /* Footer */
+    /* Footer */
     footer{background:var(--primary-dark);color:#fff;text-align:center;font-size:.9rem;padding:2.4rem 0}
     footer a{color:var(--accent)}
-
-    /* Form */
-    form{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
-    form input[type=email]{flex:1;padding:.9rem;border:1px solid rgba(0,0,0,.15);border-radius:4px}
-        /* ===== Estilos Modal Más Info ===== */
-    .modal-backdrop {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    .modal {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      max-width: 400px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-    }
-    .modal h3 {
-      margin-bottom: 1rem;
-      color: var(--primary-dark);
-    }
-    .modal-close {
-      position: absolute;
-      top: .5rem; right: .5rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-
   </style>
 </head>
-    <!-- ===== Modal Más Info ===== -->
-  <div id="info-modal-backdrop" class="modal-backdrop">
-   </body>
-</html>
-  </div>
-
-  <script>
-    // Referencias a elementos del DOM
-    const backdrop     = document.getElementById('info-modal-backdrop');
-    const closeBtn     = document.getElementById('modal-close');
-    const infoBtns     = document.querySelectorAll('.info-btn');
-    const form         = document.getElementById('info-form');
-    const downloadLink = document.getElementById('download-pdf');
-
-    let currentPdf = ''; // guardará el nombre del PDF a descargar
-
-  // 1) Al hacer click en Más Info
-    infoBtns.forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
-        currentPdf = idx === 0
-          ? 'Programa_In-Company_Info.pdf'
-          : 'Grupo_Online_Info.pdf';
-        backdrop.style.display = 'flex';
-      });
-    });
-
-    // 2) Cerrar modal con la X
-    closeBtn.addEventListener('click', () => {
-      backdrop.style.display = 'none';
-      form.style.display = 'block';
-      downloadLink.style.display = 'none';
-      form.reset();
-    });
-
-    // 3) Al enviar el email
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      form.style.display = 'none';
-      downloadLink.style.display = 'inline-block';
-      downloadLink.href = currentPdf;
-    });
-
-    // 4) Cerrar si se hace click fuera del modal
-    backdrop.addEventListener('click', e => {
-      if (e.target === backdrop) closeBtn.click();
-    });
-  </script>
-</body>
-</html>
-
 <body>
-  <!-- HEADER -->
+  <!-- HEADER -->
   <header>
     <div class="container">
       <nav>
-       <a href="#home"><img src="LOGO.png" alt="LOGO"></a>
+        <a href="#home"><img src="LOGO.png" alt="LOGO"></a>
         <div class="links">
-          <a href="#about">Sobre mí</a>
+          <a href="#about">Sobre mí</a>
           <a href="#solutions">Soluciones</a>
           <a href="#content">Contenido</a>
-          <a href="#contact">Contacto</a>
+          <a href="#contacto">Contacto</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO -->
   <section class="hero container" id="home">
     <div>
       <h1>Transforma la ansiedad<br>en ventaja competitiva</h1>
       <p>Programas de bienestar corporativo respaldados por ciencia clínica y un enfoque narrativo que convierte el silencio emocional en diálogo creativo.</p>
       <a href="ROI_TWIMP_v2.xlsx" download class="btn">Descargar plantilla ROI</a>
-
-      <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="email" name="email" placeholder="Tu correo corporativo" required />
+      <form action="https://formspree.io/f/yourformid" method="POST" style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+        <input type="email" name="email" placeholder="Tu correo corporativo" required style="flex:1; padding:.9rem; border:1px solid rgba(0,0,0,.15); border-radius:4px;">
         <button type="submit" class="btn">Quiero saber más</button>
       </form>
     </div>
     <div>
       <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=60" alt="Equipo creativo colaborando en oficina">
     </div>
-  </section><!-- FIN HERO -->
+  </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT -->
   <section class="section bg-soft" id="about">
     <div class="container two-col">
       <div>
         <h2>Hola, soy Dani Orozco</h2>
-        <p><strong>Psicólogo General Sanitario.</strong> Más de 12 años ayudando a cientos de personas y equipos a reestructurar su mente para rendir sin romperse. He trabajado mano a mano con analistas identificando tendencias globales para Nike, FC Barcelona y Amazon, anticipando los cambios culturales que impactan en el bienestar y la productividad. Hoy fusiono ese radar estratégico con metodología clínica para diseñar culturas corporativas emocionalmente sostenibles.</p>
-        <p>Divulgador en <em>@unpsicologorandom</em> y creador de <strong>TWIM Project</strong>: donde la psicología clínica se une al análisis cultural para potenciar organizaciones.</p>
+        <p><strong>Psicólogo General Sanitario.</strong> Más de 12 años ayudando a cientos de personas y equipos a reestructurar su mente para rendir sin romperse...</p>
       </div>
       <div>
-        <iframe
-  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7339952644309843968?compact=1"
-  width="100%"
-  height="399"
-  frameborder="0"
-  allowfullscreen
-  title="Vídeo presentación LinkedIn"
-  class="portrait">
-</iframe>
+        <iframe src="https://www.linkedin.com/embed/feed/update/..." class="portrait" allowfullscreen title="Vídeo LinkedIn"></iframe>
+      </div>
     </div>
   </section>
 
-  <!-- SOLUCIONES -->
+  <!-- SOLUTIONS -->
   <section class="section" id="solutions">
     <div class="container">
       <h2>Soluciones para tu empresa</h2>
       <div class="cards" style="margin-top:2rem;">
-        <!-- Card 1 -->
         <div class="card">
           <i class="fa-solid fa-chart-line"></i>
-          <h3>Diagnóstico 360º</h3>
-          <p>Encuestas, focus groups y mapa de riesgos psicosociales para detectar la fuente real de tensión cultural.</p>
-          <details>
-            <summary>Más detalles</summary>
-            <ul>
-              <li>Encuesta validada a toda la plantilla (10 min)</li>
-              <li>Focus group de 90 min con muestra representativa</li>
-              <li>Informe ejecutivo con heat‑map de riesgos y 3 quick‑wins</li>
-              <li>Baseline de KPIs: absentismo, eNPS, rotación</li>
-            </ul>
-            <p><strong>Resultado:</strong> claridad absoluta sobre dónde intervenir primero.</p>
-          </details>
+          <h3>Diagnóstico 360º</h3>
+          <p>Encuestas, focus groups y mapa de riesgos...</p>
         </div>
-        <!-- Card 2 -->
         <div class="card">
           <i class="fa-solid fa-hand-holding-heart"></i>
           <h3>MindShift Workshops</h3>
-          <p>Talleres experienciales para transformar micro‑ansiedad en colaboración profunda y foco creativo.</p>
-          <details>
-            <summary>Más detalles</summary>
-            <ul>
-              <li>Sesión interactiva de 3 h (online o presencial)</li>
-              <li>Técnicas de co‑regulación y diálogo valiente</li>
-              <li>Workbooks y audios descargables</li>
-              <li>Certificado de asistencia</li>
-            </ul>
-            <p><strong>Impacto:</strong> –25 % estrés autoinformado después de 30 días.</p>
-          </details>
+          <p>Talleres experienciales...</p>
         </div>
-        <!-- Card 3 -->
         <div class="card">
           <i class="fa-solid fa-chalkboard-user"></i>
           <h3>Mentoring de líderes</h3>
-          <p>Sesiones quincenales para directivos: legitimar límites, feedback valiente y clima psicológico seguro.</p>
-          <details>
-            <summary>Más detalles</summary>
-            <ul>
-              <li>6 sesiones 1‑a‑1 de 60 min</li>
-              <li>Shadowing y feedback 360º</li>
-              <li>Toolkit de conversaciones difíciles</li>
-              <li>Medición de eNPS y rotación del equipo</li>
-            </ul>
-            <p><strong>Resultado:</strong> líderes que fomentan confianza y retienen talento.</p>
-          </details>
+          <p>Sesiones quincenales...</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =============== PROGRAMS GROUP =============== -->
-<section class="section" id="programs">
-  <div class="container">
-    <h2>Programs Group</h2>
-    <div class="cards" style="margin-top:2rem;">
-      <!-- In-Company -->
-      <div class="card">
-        <button class="btn info-btn" style="margin-top:.5rem; background:#555; color:#fff; width:100%;">
-  Más Info
-</button>
-        <i class="fa-solid fa-building" style="color:var(--primary);"></i>
-        <h3>Programa In-Company</h3>
+  <!-- PROGRAMS GROUP -->
+  <section class="section" id="programs">
+    <div class="container">
+      <h2>Programs Group</h2>
+      <div class="cards" style="margin-top:2rem;">
+        <div class="card">
+          <button class="btn info-btn" data-pdf="Programa_In-Company_Info.pdf">Más Info</button>
+          <i class="fa-solid fa-building"></i>
+          <h3>Programa Grupo Online</h3>
+         <p>“Ansiedad Laboral → Sentido Profesional”</p>
+        <ul style="text-align:left; margin:1rem 0;">
+          <li>6 sesiones × 90 min vía Zoom</li>
+          <li>8–12 plazas</li>
+          <li>Formato psicodinámico genuino</li>
+          <li>Cuaderno y audio-guide tras cada sesión</li>
+          <li>Reembolso 100 % tras 1.ª sesión</li>
+        </ul>
+        <a
+          href="https://buy.stripe.com/4gMfZhftE1CJ44rdDG2sM02"
+          class="btn"
+          target="_blank" rel="noopener"
+        >
+          Reservar Online
+        </a>
+        </div>
+        <div class="card">
+          <button class="btn info-btn" data-pdf="Grupo_Online_Info.pdf">Más Info</button>
+          <i class="fa-solid fa-users"></i>
+           <h3>Programa In-Company</h3>
         <p> “Ansiedad Laboral → Ventaja Competitiva”</p>
         <ul style="text-align:left; margin:1rem 0;">
           <li>6 sesiones × 90 min (online o presencial)</li>
@@ -339,178 +195,42 @@
           Reservar In-Company
         </a>
       </div>
-      <!-- Grupo Online -->
-      <div class="card">
-        <button class="btn info-btn" style="margin-top:.5rem; background:#555; color:#fff; width:100%;">
-  Más Info
-</button>
-        <i class="fa-solid fa-users" style="color:var(--primary);"></i>
-        <h3>Grupo Online</h3>
-        <p>“Ansiedad Laboral → Sentido Profesional”</p>
-        <ul style="text-align:left; margin:1rem 0;">
-          <li>6 sesiones × 90 min vía Zoom</li>
-          <li>8–12 plazas</li>
-          <li>Formato psicodinámico genuino</li>
-          <li>Cuaderno y audio-guide tras cada sesión</li>
-          <li>Reembolso 100 % tras 1.ª sesión</li>
-        </ul>
-        <a
-          href="https://buy.stripe.com/4gMfZhftE1CJ44rdDG2sM02"
-          class="btn"
-          target="_blank" rel="noopener"
-        >
-          Reservar Online
-        </a>
+       </div>   
+</section>
+  <!-- KEYNOTES -->
+  <section class="section bg-soft" id="keynotes">
+    <div class="container">
+      <h2>Conferencias que accionan mentes</h2>
+      <div class="keynote-hero" style="text-align:center; margin-bottom:2rem;">
+        <img src="twimp.jpg" alt="Dani Orozco en conferencia" style="max-width:100%; border-radius:8px;">
+      </div>
+      <div class="cards" style="margin-top:2rem;">
+        <div class="card">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Motivación Sostenible</h3>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-fire-flame-curved"></i>
+          <h3>Ansiedad Productiva</h3>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Conversación Estratégica</h3>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-   // 1) Al hacer click en Más Info
-    infoBtns.forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
-        currentPdf = idx === 0
-          ? 'Programa_In-Company_Info.pdf'
-          : 'Grupo_Online_Info.pdf';
-        backdrop.style.display = 'flex';
-      });
-    });
+  </section>
 
-    // 2) Cerrar modal con la X
-    closeBtn.addEventListener('click', () => {
-      backdrop.style.display = 'none';
-      form.style.display = 'block';
-      downloadLink.style.display = 'none';
-      form.reset();
-    });
-
-    // 3) Al enviar el email
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      form.style.display = 'none';
-      downloadLink.style.display = 'inline-block';
-      downloadLink.href = currentPdf;
-    });
-
-    // 4) Cerrar si se hace click fuera del modal
-    backdrop.addEventListener('click', e => {
-      if (e.target === backdrop) closeBtn.click();
-    });
-  </script>
-</body>
-</html>
-
-<!-- =============== FIN PROGRAMS GROUP =============== -->
-
-<!-- KEYNOTES / CONFERENCIAS -->
-<section class="section bg-soft" id="keynotes">
-  <div class="container">
-    <h2>Conferencias que accionan mentes</h2>
-    <div class="keynote-hero" style="text-align:center; margin-bottom:2rem;">
-  <img src="twimp.jpg" alt="Dani Orozco en conferencia" style="max-width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.1)">
-</div>
-    <div class="cards" style="margin-top:2rem;">
-
-      <!-- Motivación Sostenible -->
-      <div class="card">
-        <i class="fa-solid fa-bolt"></i>
-        <h3>Motivación Sostenible</h3>
-        <p>Del impulso inconsciente al hábito visible en una semana.</p>
-        <details>
-          <summary>Más detalles</summary>
-          <ul>
-            <li>Origen del deseo: mapeo de impulso auténtico vs metas introyectadas</li>
-            <li>Alianza del Yo: refuerzo de la instancia mediadora</li>
-            <li>Circuito de refuerzo: plan de 7 pasos inconscientes</li>
-          </ul>
-        </details>
-      </div>
-
-      <!-- Ansiedad Productiva -->
-      <div class="card">
-        <i class="fa-solid fa-fire-flame-curved"></i>
-        <h3>Ansiedad Productiva</h3>
-        <p>Sublima la presión en creatividad y resultados.</p>
-        <details>
-          <summary>Más detalles</summary>
-          <ul>
-            <li>Matriz de defensas: represión, formación reactiva y proyección</li>
-            <li>Reencuadre psíquico: revisión de fantasía persecutoria</li>
-            <li>Canal de sublimación: micro-proyecto inmediato</li>
-          </ul>
-        </details>
-      </div>
-
-      <!-- Conversación Estratégica -->
-      <div class="card">
-        <i class="fa-solid fa-comments"></i>
-        <h3>Conversación Estratégica</h3>
-        <p>Del silencio oculto al feedback transformador.</p>
-        <details>
-          <summary>Más detalles</summary>
-          <ul>
-            <li>Mapa de transferencias: expectativas y miedos proyectados</li>
-            <li>Role-play de reenactment: actualización de narrativas internas</li>
-            <li>Test de resonancia: evalúa la transformación emocional</li>
-          </ul>
-        </details>
-      </div>
-
+  <!-- CONTENT -->
+  <section class="section bg-soft" id="content">
+    <div class="container">
+      <h2>Conocimiento que Activa</h2>
+      <iframe src="https://www.youtube.com/embed/dwNx4rJ0xvY" title="Preview conferencia" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+      <p style="margin-top:1rem; text-align:center;"><a href="#contacto" class="btn">Consulta formatos para tu evento</a></p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section bg-soft" id="content">
-  <div class="container">
-    <h2>Conocimiento que Activa</h2>
-    <iframe
-      src="https://www.youtube.com/embed/dwNx4rJ0xvY?si=Z28q9BsVteLndupY"
-      title="Preview de conferencia con Dani Orozco"
-      width="100%"
-      height="400"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-    <p style="margin-top:1rem; text-align:center; font-size:1.1rem;">
-      
-      No se trata de un pico de energía temporal, sino de salir con <strong>conocimiento aplicable</strong>.<br>
-      
-     <a href="#contacto" class="btn">Consulta formatos para tu evento</a>
-    </p>
-  </div>
-</section>
-<!-- SECCIÓN DE CONTACTO -->
-<section class="section bg-soft" id="contacto">
-  <div class="container two-col">
-    <!-- Formulario de contacto -->
-    <div>
-      <h2>¿Hablamos de tu evento?</h2>
-      <p>Déjame diseñar una keynote o workshop a medida para tu congreso o empresa.</p>
-      <form action="https://formspree.io/f/mpwrqplb" method="POST">
-        <div style="margin-bottom:1rem;">
-          <label>Nombre completo<br>
-            <input type="text" name="name" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
-          </label>
-        </div>
-        <div style="margin-bottom:1rem;">
-          <label>Email de contacto<br>
-            <input type="email" name="email" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
-          </label>
-        </div>
-        <div style="margin-bottom:1rem;">
-          <label>Empresa o congreso<br>
-            <input type="text" name="empresa" style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
-          </label>
-        </div>
-        <div style="margin-bottom:1.5rem;">
-          <label>Mensaje<br>
-            <textarea name="message" rows="4" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px"></textarea>
-          </label>
-        </div>
-        <button type="submit" class="btn">Enviar solicitud</button>
-      </form>
-    </div>
-    
-  <!-- CONTACTO -->
+  <!-- CONTACTO -->
   <section class="section" id="contact">
     <div class="container two-col">
       <div>
@@ -527,71 +247,56 @@
       </div>
     </div>
   </section>
-  <!-- … últimas secciones … -->
-
-  <!-- FOOTER -->
+ 
+  <!-- FOOTER -->
   <footer>
-    © 2025 TWIM Project &nbsp;·&nbsp; <a href="privacy.html">Privacidad</a>
+    © 2025 TWIM Project · <a href="privacy.html">Privacidad</a>
   </footer>
-      <!-- ===== Modal “Más Info” ===== -->
+
+  <!-- Modal “Más Info” -->
   <div id="info-modal-backdrop" class="modal-backdrop">
     <div class="modal">
       <span id="modal-close" class="modal-close">&times;</span>
       <h3>¿Quieres más detalles?</h3>
-      <p>Déjanos tu email y te enviaremos un PDF con el contenido completo.</p>
       <form id="info-form">
-        <input type="email" name="email" placeholder="Tu correo" required
-               style="width:100%;padding:.75rem;margin-bottom:1rem;border:1px solid rgba(0,0,0,.2);border-radius:4px;">
-        <button type="submit" class="btn" style="width:100%;">Recibir PDF</button>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <button type="submit" class="btn">Recibir PDF</button>
       </form>
-      <a id="download-pdf" href="#" download class="btn"
-         style="margin-top:1rem; display:none; width:100%;">
-        Descargar ahora
-      </a>
+      <a id="download-pdf" href="#" download class="btn" style="display:none;">Descargar ahora</a>
     </div>
   </div>
-  <script>
-    // Referencias
-    const backdrop     = document.getElementById('info-modal-backdrop');
-    const closeBtn     = document.getElementById('modal-close');
-    const infoBtns     = document.querySelectorAll('.info-btn');
-    const form         = document.getElementById('info-form');
-    const downloadLink = document.getElementById('download-pdf');
-    let currentPdf = '';
 
-    // 1) Al hacer click en Más Info
-    infoBtns.forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
-        currentPdf = idx === 0
-          ? 'Programa_In-Company_Info.pdf'
-          : 'Grupo_Online_Info.pdf';
-        backdrop.style.display = 'flex';
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const backdrop = document.getElementById('info-modal-backdrop');
+      const closeBtn = document.getElementById('modal-close');
+      const infoBtns = document.querySelectorAll('.info-btn');
+      const form = document.getElementById('info-form');
+      const downloadLink = document.getElementById('download-pdf');
+      let currentPdf = '';
+
+      infoBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentPdf = btn.dataset.pdf;
+          downloadLink.href = currentPdf;
+          form.style.display = 'block';
+          downloadLink.style.display = 'none';
+          backdrop.style.display = 'flex';
+        });
+      });
+
+      closeBtn.addEventListener('click', () => backdrop.style.display = 'none');
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        form.style.display = 'none';
+        downloadLink.style.display = 'inline-block';
+      });
+
+      backdrop.addEventListener('click', e => {
+        if(e.target === backdrop) closeBtn.click();
       });
     });
-
-    // 2) Cerrar modal con la X
-    closeBtn.addEventListener('click', () => {
-      backdrop.style.display = 'none';
-      form.style.display = 'block';
-      downloadLink.style.display = 'none';
-      form.reset();
-    });
-
-    // 3) Al enviar el email
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      form.style.display = 'none';
-      downloadLink.style.display = 'inline-block';
-      downloadLink.href = currentPdf;
-    });
-
-    // 4) Cerrar si se hace click fuera del modal
-    backdrop.addEventListener('click', e => {
-      if (e.target === backdrop) closeBtn.click();
-    });
   </script>
-</body>
-</html>
-
 </body>
 </html>
