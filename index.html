@@ -150,12 +150,12 @@
 
   </style>
 </head>
-    <!-- ===== Modal Más Info (ya lo tienes arriba) ===== -->
+    <!-- ===== Modal Más Info ===== -->
   <div id="info-modal-backdrop" class="modal-backdrop">
-    <!-- … tu código del modal … -->
+   </body>
+</html>
   </div>
 
-  <!-- ===== Aquí pega este SCRIPT justo antes de </body> ===== -->
   <script>
     // Referencias a elementos del DOM
     const backdrop     = document.getElementById('info-modal-backdrop');
@@ -166,10 +166,9 @@
 
     let currentPdf = ''; // guardará el nombre del PDF a descargar
 
-    // 1) Asignar qué PDF tocar según el botón pulsado
+  // 1) Al hacer click en Más Info
     infoBtns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
-        // idx 0 → In-Company, idx 1 → Online
         currentPdf = idx === 0
           ? 'Programa_In-Company_Info.pdf'
           : 'Grupo_Online_Info.pdf';
@@ -177,7 +176,7 @@
       });
     });
 
-    // 2) Cerrar modal
+    // 2) Cerrar modal con la X
     closeBtn.addEventListener('click', () => {
       backdrop.style.display = 'none';
       form.style.display = 'block';
@@ -185,21 +184,19 @@
       form.reset();
     });
 
-    // 3) Envío del formulario: ocultar formulario y mostrar enlace
+    // 3) Al enviar el email
     form.addEventListener('submit', e => {
       e.preventDefault();
       form.style.display = 'none';
       downloadLink.style.display = 'inline-block';
-      // Apunta al PDF correcto (en la raíz)
       downloadLink.href = currentPdf;
     });
 
-    // 4) Cerrar al click fuera del modal
+    // 4) Cerrar si se hace click fuera del modal
     backdrop.addEventListener('click', e => {
       if (e.target === backdrop) closeBtn.click();
     });
   </script>
-
 </body>
 </html>
 
@@ -368,6 +365,40 @@
     </div>
   </div>
 </section>
+   // 1) Al hacer click en Más Info
+    infoBtns.forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        currentPdf = idx === 0
+          ? 'Programa_In-Company_Info.pdf'
+          : 'Grupo_Online_Info.pdf';
+        backdrop.style.display = 'flex';
+      });
+    });
+
+    // 2) Cerrar modal con la X
+    closeBtn.addEventListener('click', () => {
+      backdrop.style.display = 'none';
+      form.style.display = 'block';
+      downloadLink.style.display = 'none';
+      form.reset();
+    });
+
+    // 3) Al enviar el email
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      form.style.display = 'none';
+      downloadLink.style.display = 'inline-block';
+      downloadLink.href = currentPdf;
+    });
+
+    // 4) Cerrar si se hace click fuera del modal
+    backdrop.addEventListener('click', e => {
+      if (e.target === backdrop) closeBtn.click();
+    });
+  </script>
+</body>
+</html>
+
 <!-- =============== FIN PROGRAMS GROUP =============== -->
 
 <!-- KEYNOTES / CONFERENCIAS -->
