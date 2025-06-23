@@ -91,7 +91,7 @@
   </style>
 </head>
 <body>
-  <!-- HEADER -->
+ <!-- HEADER -->
   <header>
     <div class="container">
       <nav>
@@ -105,234 +105,188 @@
       </nav>
     </div>
   </header>
-  <!-- HERO -->
-  <section
-  style="
-    position: relative;
-    background: <img src="BUSTO.png") center/cover no-repeat;
-    filter: blur(4px) brightness(0.8);
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  "
->
-  <!-- Overlay naranja -->
-  <div
-    style="
-      position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
-      background: rgba(221, 76, 0, 0.4);
-    "
-  ></div>
 
-  <!-- Lema -->
-  <p
-    style="
-      position: relative;
-      max-width: 700px;
-      margin: 0 1rem;
-      padding: 2rem;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.85);
-      color: #8B2E00;
-      font-size: 1.75rem;
-      line-height: 1.3;
-      text-align: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      z-index: 1;
-    "
-  >
-    El mundo es de quien domina su mente. Lo demás es ruido
-  </p>
-</section>
+  <!-- HERO -->
+  <section id="home" class="hero hero--bg">
+    <div class="hero__overlay"></div>
+    <p class="hero__text">El mundo es de quien domina su mente. Lo demás es ruido</p>
+  </section>
   <!-- ABOUT -->
-  <section class="section bg-soft" id="about">
+  <section id="about" class="section bg-soft">
     <div class="container two-col">
       <div>
         <h2>Hola, soy Dani Orozco</h2>
         <p><strong>Psicólogo General Sanitario.</strong> Más de 12 años ayudando a cientos de personas y equipos a reestructurar su mente para rendir sin romperse. He trabajado mano a mano con analistas identificando tendencias globales para Nike, FC Barcelona y Amazon, anticipando los cambios culturales que impactan en el bienestar y la productividad. Hoy fusiono ese radar estratégico con metodología clínica para diseñar culturas corporativas emocionalmente sostenibles.</p>
       </div>
       <div>
-        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7339952644309843968?compact=1" width="100%" height="399" frameborder="0" allowfullscreen" 
-          class="portrait" allowfullscreen title="Vídeo LinkedIn">
-        </iframe>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7339952644309843968?compact=1" title="Vídeo LinkedIn" class="portrait" allowfullscreen></iframe>
       </div>
     </div>
   </section>
- <!-- SOLUCIONES -->
-  <div>
-      <h1>Transforma la ansiedad<br>en ventaja competitiva</h1>
-    <img
-  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=60"
-  alt="Equipo creativo colaborando en oficina"
-  style="max-width: 100%; width: 600px; height: auto;"
-/>
-      <p>Programas de bienestar corporativo respaldados por ciencia clínica y un enfoque psicodinámico que convierte el silencio emocional en diálogo creativo.
-      Calcula lo que te puedes ahorrar en costes laborales descargándote la plantilla ROI</p>
-      <a href="ROI_TWIMP_v2.xlsx" download class="btn">Descargar plantilla ROI</a>
-      <form action="https://formspree.io/f/yourformid" method="POST" style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
-        <input type="email" name="email" placeholder="Tu correo corporativo" required style="flex:1; padding:.9rem; border:1px solid rgba(0,0,0,.15); border-radius:4px;">
-        <button type="submit" class="btn">Quiero saber más</button>
-      </form>
-    </div>
-  <section class="section" id="solutions">
+
+  <!-- SOLUTIONS -->
+  <section id="solutions" class="section">
     <div class="container">
       <h2>Método MindShift • Soluciones para tu empresa</h2>
       <div class="cards" style="margin-top:2rem;">
-        <!-- Card 1 -->
+        <!-- Card 1 -->
         <div class="card">
           <i class="fa-solid fa-chart-line"></i>
-          <h3>Diagnóstico 360º</h3>
+          <h3>Diagnóstico 360º</h3>
           <p>Encuestas, focus groups y mapa de riesgos psicosociales para detectar la fuente real de tensión cultural.</p>
           <details>
             <summary>Más detalles</summary>
             <ul>
-              <li>Encuesta validada a toda la plantilla (10 min)</li>
-              <li>Focus group de 90 min con muestra representativa</li>
-              <li>Informe ejecutivo con heat‑map de riesgos y 3 quick‑wins</li>
+              <li>Encuesta validada a toda la plantilla (10 min)</li>
+              <li>Focus group de 90 min con muestra representativa</li>
+              <li>Informe ejecutivo con heat-map de riesgos y 3 quick-wins</li>
               <li>Baseline de KPIs: absentismo, eNPS, rotación</li>
             </ul>
             <p><strong>Resultado:</strong> claridad absoluta sobre dónde intervenir primero.</p>
           </details>
         </div>
-        <!-- Card 2 -->
+        <!-- Card 2 -->
+      <div class="card">
+        <i class="fa-solid fa-hand-holding-heart"></i>
+        <h3>MindShift Workshops</h3>
+        <p>Talleres experienciales para transformar micro-ansiedad en colaboración profunda y foco creativo.</p>
+        <details>
+          <summary>Más detalles</summary>
+          <ul>
+            <li>Sesión interactiva de 3 h (online o presencial)</li>
+            <li>Técnicas de co-regulación y diálogo valiente</li>
+            <li>Workbooks y audios descargables</li>
+            <li>Certificado de asistencia</li>
+          </ul>
+          <p><strong>Impacto:</strong> –25 % estrés autoinformado después de 30 días.</p>
+        </details>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <h3>Mentoring de líderes</h3>
+        <p>Sesiones quincenales para directivos: legitimar límites, feedback valiente y clima psicológico seguro.</p>
+        <details>
+          <summary>Más detalles</summary>
+          <ul>
+            <li>6 sesiones 1-a-1 de 60 min</li>
+            <li>Shadowing y feedback 360º</li>
+            <li>Toolkit de conversaciones difíciles</li>
+            <li>Medición de eNPS y rotación del equipo</li>
+          </ul>
+          <p><strong>Resultado:</strong> líderes que fomentan confianza y retienen talento.</p>
+        </details>
+      </div>
+    </div> <!-- /.cards -->
+  </div> <!-- /.container -->
+</section> <!-- /#solutions -->
+
+ <!-- PROGRAMS GROUP -->
+  <section class="section" id="programs">
+    <div class="container">
+      <h2>Programs Group</h2>
+      <div class="cards" style="margin-top:2rem;">
+        <!-- Card 1 -->
         <div class="card">
-          <i class="fa-solid fa-hand-holding-heart"></i>
-          <h3>MindShift Workshops</h3>
-          <p>Talleres experienciales para transformar micro‑ansiedad en colaboración profunda y foco creativo.</p>
+          <button class="btn info-btn" data-pdf="Grupo_Online_Info.pdf">Más Info</button>
+          <i class="fa-solid fa-building"></i>
+          <h3>Programa "Trabajo Para Otro" Grupo Online</h3>
+          <p>“Ansiedad Laboral → Sentido Profesional”</p>
+          <ul style="text-align:left; margin:1rem 0;">
+            <li>6 sesiones × 90 min vía Zoom</li>
+            <li>8–12 plazas</li>
+            <li>Formato psicodinámico genuino</li>
+            <li>Cuaderno y audio-guide tras cada sesión</li>
+            <li>Reembolso 100 % tras 1.ª sesión</li>
+          </ul>
+          <a
+            href="https://buy.stripe.com/4gMfZhftE1CJ44rdDG2sM02"
+            class="btn"
+            target="_blank" rel="noopener"
+          >
+            Reservar Online
+          </a>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <button class="btn info-btn" data-pdf="Programa_In-Company_Info.pdf">Más Info</button>
+          <i class="fa-solid fa-users"></i>
+          <h3>Programa "Soy Empresa" In-Company</h3>
+          <p>“Ansiedad Laboral → Ventaja Competitiva”</p>
+          <ul style="text-align:left; margin:1rem 0;">
+            <li>6 sesiones × 90 min (online o presencial)</li>
+            <li>8–12 participantes</li>
+            <li>Diagnóstico exprés de tensiones clave</li>
+            <li>Dinámicas psicodinámicas y guías descargables</li>
+            <li>Informe ejecutivo + 3 Quick Wins (48 h)</li>
+          </ul>
+          <a
+            href="https://buy.stripe.com/4gMfZhftE1CJ44rdDG2sM02"
+            class="btn"
+            target="_blank" rel="noopener"
+          >
+            Reservar In-Company
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEYNOTES / CONFERENCIAS -->
+  <section class="section bg-soft" id="keynotes">
+    <div class="container">
+      <h2>Conferencias que accionan mentes</h2>
+      <div class="keynote-hero" style="text-align:center; margin-bottom:2rem;">
+        <img src="twimp.jpg" alt="Dani Orozco en conferencia" style="max-width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.1)">
+      </div>
+      <div class="cards" style="margin-top:2rem;">
+        <!-- Motivación Sostenible -->
+        <div class="card">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Motivación Sostenible</h3>
+          <p>Del impulso inconsciente al hábito visible en una semana.</p>
           <details>
             <summary>Más detalles</summary>
             <ul>
-              <li>Sesión interactiva de 3 h (online o presencial)</li>
-              <li>Técnicas de co‑regulación y diálogo valiente</li>
-              <li>Workbooks y audios descargables</li>
-              <li>Certificado de asistencia</li>
+              <li>Origen del deseo: mapeo de impulso auténtico vs metas introyectadas</li>
+              <li>Alianza del Yo: refuerzo de la instancia mediadora</li>
+              <li>Circuito de refuerzo: plan de 7 pasos inconscientes</li>
             </ul>
-            <p><strong>Impacto:</strong> –25 % estrés autoinformado después de 30 días.</p>
           </details>
         </div>
-        <!-- Card 3 -->
+        <!-- Ansiedad Productiva -->
         <div class="card">
-          <i class="fa-solid fa-chalkboard-user"></i>
-          <h3>Mentoring de líderes</h3>
-          <p>Sesiones quincenales para directivos: legitimar límites, feedback valiente y clima psicológico seguro.</p>
+          <i class="fa-solid fa-fire-flame-curved"></i>
+          <h3>Ansiedad Productiva</h3>
+          <p>Sublima la presión en creatividad y resultados.</p>
           <details>
             <summary>Más detalles</summary>
             <ul>
-              <li>6 sesiones 1‑a‑1 de 60 min</li>
-              <li>Shadowing y feedback 360º</li>
-              <li>Toolkit de conversaciones difíciles</li>
-              <li>Medición de eNPS y rotación del equipo</li>
+              <li>Matriz de defensas: represión, formación reactiva y proyección</li>
+              <li>Reencuadre psíquico: revisión de fantasía persecutoria</li>
+              <li>Canal de sublimación: micro-proyecto inmediato</li>
             </ul>
-            <p><strong>Resultado:</strong> líderes que fomentan confianza y retienen talento.</p>
+          </details>
+        </div>
+        <!-- Conversación Estratégica -->
+        <div class="card">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Conversación Estratégica</h3>
+          <p>Del silencio oculto al feedback transformador.</p>
+          <details>
+            <summary>Más detalles</summary>
+            <ul>
+              <li>Mapa de transferencias: expectativas y miedos proyectados</li>
+              <li>Role-play de reenactment: actualización de narrativas internas</li>
+              <li>Test de resonancia: evalúa la transformación emocional</li>
+            </ul>
           </details>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROGRAMS GROUP -->
-  <section class="section" id="programs">
-    <div class="container">
-      <h2>Programs Group</h2>
-      <div class="cards" style="margin-top:2rem;">
-        <div class="card">
-          <button class="btn info-btn" data-pdf="Grupo_Online_Info.pdf">Más Info</button>
-          <i class="fa-solid fa-building"></i>
-          <h3>Programa "Trabajo Para Otro" Grupo Online</h3>
-         <p>“Ansiedad Laboral → Sentido Profesional”</p>
-        <ul style="text-align:left; margin:1rem 0;">
-          <li>6 sesiones × 90 min vía Zoom</li>
-          <li>8–12 plazas</li>
-          <li>Formato psicodinámico genuino</li>
-          <li>Cuaderno y audio-guide tras cada sesión</li>
-          <li>Reembolso 100 % tras 1.ª sesión</li>
-        </ul>
-        <a
-          href="https://buy.stripe.com/4gMfZhftE1CJ44rdDG2sM02"
-          class="btn"
-          target="_blank" rel="noopener"
-        >
-          Reservar Online
-        </a>
-        </div>
-        <div class="card">
-          <button class="btn info-btn" data-pdf="Programa_In-Company_Info.pdf">Más Info</button>
-          <i class="fa-solid fa-users"></i>
-           <h3>Programa "Soy Empresa" In-Company</h3>
-        <p> “Ansiedad Laboral → Ventaja Competitiva”</p>
-        <ul style="text-align:left; margin:1rem 0;">
-          <li>6 sesiones × 90 min (online o presencial)</li>
-          <li>8–12 participantes</li>
-          <li>Diagnóstico exprés de tensiones clave</li>
-          <li>Dinámicas psicodinámicas y guías descargables</li>
-          <li>Informe ejecutivo + 3 Quick Wins (48 h)</li>
-        </ul>
-        <a
-          href="https://buy.stripe.com/4gMfZhftE1CJ44rdDG2sM02"
-          class="btn"
-          target="_blank" rel="noopener"
-        >
-          Reservar In-Company
-        </a>
-      </div>
-       </div>   
-</section>
-  <!-- KEYNOTES / CONFERENCIAS -->
-<section class="section bg-soft" id="keynotes">
-  <div class="container">
-    <h2>Conferencias que accionan mentes</h2>
-    <div class="keynote-hero" style="text-align:center; margin-bottom:2rem;">
-  <img src="twimp.jpg" alt="Dani Orozco en conferencia" style="max-width:100%; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.1)">
-</div>
-    <div class="cards" style="margin-top:2rem;">
-
-      <!-- Motivación Sostenible -->
-      <div class="card">
-        <i class="fa-solid fa-bolt"></i>
-        <h3>Motivación Sostenible</h3>
-        <p>Del impulso inconsciente al hábito visible en una semana.</p>
-        <details>
-          <summary>Más detalles</summary>
-          <ul>
-            <li>Origen del deseo: mapeo de impulso auténtico vs metas introyectadas</li>
-            <li>Alianza del Yo: refuerzo de la instancia mediadora</li>
-            <li>Circuito de refuerzo: plan de 7 pasos inconscientes</li>
-          </ul>
-        </details>
-      </div>
-
-      <!-- Ansiedad Productiva -->
-      <div class="card">
-        <i class="fa-solid fa-fire-flame-curved"></i>
-        <h3>Ansiedad Productiva</h3>
-        <p>Sublima la presión en creatividad y resultados.</p>
-        <details>
-          <summary>Más detalles</summary>
-          <ul>
-            <li>Matriz de defensas: represión, formación reactiva y proyección</li>
-            <li>Reencuadre psíquico: revisión de fantasía persecutoria</li>
-            <li>Canal de sublimación: micro-proyecto inmediato</li>
-          </ul>
-        </details>
-      </div>
-
-      <!-- Conversación Estratégica -->
-      <div class="card">
-        <i class="fa-solid fa-comments"></i>
-        <h3>Conversación Estratégica</h3>
-        <p>Del silencio oculto al feedback transformador.</p>
-        <details>
-          <summary>Más detalles</summary>
-          <ul>
-            <li>Mapa de transferencias: expectativas y miedos proyectados</li>
-            <li>Role-play de reenactment: actualización de narrativas internas</li>
-            <li>Test de resonancia: evalúa la transformación emocional</li>
-          </ul>
-        </details>
-      </div>
-   
   <!-- CONTENT -->
   <section class="section bg-soft" id="content">
     <div class="container">
@@ -343,59 +297,60 @@
   </section>
 
   <!-- SECCIÓN DE CONTACTO -->
-<section class="section bg-soft" id="contacto">
-  <div class="container two-col">
-    <!-- Formulario de contacto -->
-    <div>
-      <h2>¿Hablamos de tu evento?</h2>
-      <p>Déjame diseñar una keynote o workshop a medida para tu congreso o empresa.</p>
-      <form action="https://formspree.io/f/mpwrqplb" method="POST">
-        <div style="margin-bottom:1rem;">
-          <label>Nombre completo<br>
-            <input type="text" name="name" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
-          </label>
-        </div>
-        <div style="margin-bottom:1rem;">
-          <label>Email de contacto<br>
-            <input type="email" name="email" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
-          </label>
-        </div>
-        <div style="margin-bottom:1rem;">
-          <label>Empresa o congreso<br>
-            <input type="text" name="empresa" style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
-          </label>
-        </div>
-        <div style="margin-bottom:1.5rem;">
-          <label>Mensaje<br>
-            <textarea name="message" rows="4" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px"></textarea>
-          </label>
-        </div>
-        <button type="submit" class="btn">Enviar solicitud</button>
-      </form>
-    </div>
-     <!-- CONTACTO -->
+  <section class="section bg-soft" id="contacto">
+    <div class="container two-col">
+      <div>
+        <h2>¿Hablamos de tu evento?</h2>
+        <p>Déjame diseñar una keynote o workshop a medida para tu congreso o empresa.</p>
+        <form action="https://formspree.io/f/mpwrqplb" method="POST">
+          <div style="margin-bottom:1rem;">
+            <label>Nombre completo<br>
+              <input type="text" name="name" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
+            </label>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <label>Email de contacto<br>
+              <input type="email" name="email" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
+            </label>
+          </div>
+          <div style="margin-bottom:1rem;">
+            <label>Empresa o congreso<br>
+              <input type="text" name="empresa" style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px">
+            </label>
+          </div>
+          <div style="margin-bottom:1.5rem;">
+            <label>Mensaje<br>
+              <textarea name="message" rows="4" required style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn">Enviar solicitud</button>
+        </form>
+      </div>
+  </section>
+
+  <!-- CONTACTO DIRECTO / FAQs -->
   <section class="section" id="contact">
     <div class="container two-col">
       <div>
         <h2>Contacto directo</h2>
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:danielorozco@theworldismindproject.com">Contacta</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:danielorozco@theworldismindproject.com">danielorozco@theworldismindproject.com</a></p>
         <p><i class="fa-brands fa-instagram"></i> <a href="https://instagram.com/unpsicologorandom">@unpsicologorandom</a></p>
         <p><i class="fa-brands fa-youtube"></i> <a href="https://youtube.com/@psicologorandom">YouTube</a></p>
         <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/">LinkedIn</a></p>
       </div>
       <div>
         <h2>Preguntas frecuentes</h2>
-        <p><strong>¿Cuánto dura un workshop?</strong><br>Entre 2 y 3 h — online o presencial.</p>
+        <p><strong>¿Cuánto dura un workshop?</strong><br>Entre 2 y 3 h — online o presencial.</p>
         <p><strong>¿Qué resultados puedo esperar?</strong><br>Reducción de absentismo, aumento del eNPS y ROI medido cada trimestre.</p>
       </div>
     </div>
   </section>
-  <!-- … últimas secciones … -->
-    
+
   <!-- FOOTER -->
   <footer>
     © 2025 TWIM Project · <a href="privacy.html">Privacidad</a>
   </footer>
+
   <!-- Modal “Más Info” -->
   <div id="info-modal-backdrop" class="modal-backdrop">
     <div class="modal">
@@ -408,6 +363,7 @@
       <a id="download-pdf" href="#" download class="btn" style="display:none;">Descargar ahora</a>
     </div>
   </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const backdrop = document.getElementById('info-modal-backdrop');
@@ -436,9 +392,7 @@
       });
 
       backdrop.addEventListener('click', e => {
-        if(e.target === backdrop) closeBtn.click();
+        if (e.target === backdrop) closeBtn.click();
       });
     });
   </script>
-</body>
-</html>
