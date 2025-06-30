@@ -96,6 +96,46 @@ $1
     @media (max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
 
      /* --- Responsive para la sección de la Guía Anti-Burnout --- */
+     /* --- Versión escritorio para la sección de la Guía Anti-Burnout --- */
+#guia-antiburnout .container.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;    /* dos columnas iguales en desktop */
+  gap: 3rem;                         /* separación entre ellas */
+  align-items: center;               /* alinea verticalmente imagen y texto */
+}
+
+/* Imagen con estilo consistente */
+#guia-antiburnout .guia-img img {
+  width: 100%;                       /* ocupa toda la columna */
+  max-width: 400px;                  /* límite de tamaño */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  margin: 0 auto;                    /* centra horizontalmente */
+}
+
+/* Texto y listas */
+#guia-antiburnout .guia-text ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+/* Botones en línea para desktop */
+#guia-antiburnout .guia-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#guia-antiburnout .guia-buttons .btn {
+  display: inline-block;
+  width: auto;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+}
+
 @media (max-width: 700px) {
   /* 1) Pasamos de dos columnas a una sola */
   #guia-antiburnout .container.two-col {
@@ -354,50 +394,51 @@ $1
     </div>
   </section>
 <!-- GUÍA ANTI-BURNOUT -->
-  <section id="guia-antiburnout" class="section bg-soft">
-    <div class="container two-col" style="align-items: flex-start;">
-      <!-- Imagen promocional -->
-    <div>
+<section id="guia-antiburnout" class="section bg-soft">
+  <div class="container two-col">
+    <!-- Imagen promocional -->
+    <div class="guia-img">
       <img 
         src="guia+sesión.jpg" 
-        alt="Promoción Guía Anti-Burnout">
-        <style= "width:300px; height: auto; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,.1); margin-bottom:1rem;">
+        alt="Promoción Guía Anti-Burnout"
       >
     </div>
     <!-- Texto descriptivo -->
-    <div>
+    <div class="guia-text">
       <h2>Guía Práctica Anti-Burnout</h2>
       <p>
         Descubre los pasos clave para reconectar con tu energía y mantener un rendimiento sostenible.  
         Esta guía te ofrece:
       </p>
-      <ul style="margin:1rem 0 1.5rem 1.2rem;">
+      <ul>
         <li>Técnicas basadas en evidencia clínica para gestionar el estrés.</li>
         <li>Un mapa visual paso a paso del proceso anti-burnout.</li>
         <li>Plantillas y cuestionarios de autoevaluación para medir tu progreso.</li>
         <li>Consejos prácticos y ejercicios diarios fáciles de integrar.</li>
         <li>Casos reales y ejemplos que facilitan la implementación.</li>
       </ul>
-          <div style="text-align:center;">
-            <a
-               href="https://buy.stripe.com/7sY9AT2GS0yF9oLdDG2sM03"
-               class="btn"
-               target="_blank"
-               rel="noopener"
-              >
-              Comprar Guía (€5)
-            </a>
-            <a
-              href="https://buy.stripe.com/7sY7sLa9k4OVdF19nq2sM04"
-              class="btn"
-              target="_blank"
-              rel="noopener"
-            >
-              Guía + Sesión Online 60 min (€99)
-            </a>
-          </div>
+      <div class="guia-buttons">
+        <a
+           href="https://buy.stripe.com/7sY9AT2GS0yF9oLdDG2sM03"
+           class="btn"
+           target="_blank"
+           rel="noopener"
+        >
+          Comprar Guía (€5)
+        </a>
+        <a
+          href="https://buy.stripe.com/7sY7sLa9k4OVdF19nq2sM04"
+          class="btn"
+          target="_blank"
+          rel="noopener"
+        >
+          Guía + Sesión Online 60 min (€99)
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
   <!-- SECCIÓN DE CONTACTO -->
   <section class="section bg-soft" id="contacto">
     <div class="container two-col">
