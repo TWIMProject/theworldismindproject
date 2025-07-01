@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página de inicio -->
+  <url>
+    <loc>https://twimproject.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <!-- Puedes añadir aquí futuras URLs internas cuando crees más páginas -->
+</urlset>
