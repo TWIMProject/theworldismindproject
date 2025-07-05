@@ -176,6 +176,7 @@ $1
           <a href="#content">Contenido</a>
           <a href="#guia-antiburnout">Guía Anti-Burnout/GAB+Sesión</a>
           <a href="#contacto">Contacto</a>
+          <a href="#myShop" class="btn" style="margin-left:1rem;">Tienda</a>
         </div>
       </nav>
     </div>
@@ -486,54 +487,54 @@ $1
       </form>
       <a id="download-pdf" href="#" download class="btn" style="display:none;">Descargar ahora</a>
     </div>
-  </div>
-
-  <script>
+</script>
+   <!-- Tienda SpreadShop -->
 <div id="myShop">
-    <a href="https://twimproject.myspreadshop.es">twimproject</a>
+  <a href="https://twimproject.myspreadshop.es" target="_blank" rel="noopener">
+    TWIM Project Shop
+  </a>
 </div>
-
 <script>
-    var spread_shop_config = {
-        shopName: 'twimproject',
-        locale: 'es_ES',
-        prefix: 'https://twimproject.myspreadshop.es',
-        baseId: 'myShop'
-    };
+  var spread_shop_config = {
+    shopName: 'twimproject',
+    locale: 'es_ES',
+    prefix: 'https://twimproject.myspreadshop.es',
+    baseId: 'myShop'
+  };
 </script>
+<script src="https://twimproject.myspreadshop.es/shopfiles/shopclient/shopclient.nocache.js" defer></script>
 
-<script type="text/javascript"
-        src="https://twimproject.myspreadshop.es/shopfiles/shopclient/shopclient.nocache.js">
-</script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const backdrop = document.getElementById('info-modal-backdrop');
-      const closeBtn = document.getElementById('modal-close');
-      const infoBtns = document.querySelectorAll('.info-btn');
-      const form = document.getElementById('info-form');
-      const downloadLink = document.getElementById('download-pdf');
-      let currentPdf = '';
+<!-- Script de la modal -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const backdrop     = document.getElementById('info-modal-backdrop');
+  const closeBtn     = document.getElementById('modal-close');
+  const infoBtns     = document.querySelectorAll('.info-btn');
+  const form         = document.getElementById('info-form');
+  const downloadLink = document.getElementById('download-pdf');
+  let currentPdf = '';
 
-      infoBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          currentPdf = btn.dataset.pdf;
-          downloadLink.href = currentPdf;
-          form.style.display = 'block';
-          downloadLink.style.display = 'none';
-          backdrop.style.display = 'flex';
-        });
-      });
-
-      closeBtn.addEventListener('click', () => backdrop.style.display = 'none');
-
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        form.style.display = 'none';
-        downloadLink.style.display = 'inline-block';
-      });
-
-      backdrop.addEventListener('click', e => {
-        if (e.target === backdrop) closeBtn.click();
-      });
+  infoBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentPdf            = btn.dataset.pdf;
+      downloadLink.href     = currentPdf;
+      form.style.display    = 'block';
+      downloadLink.style.display = 'none';
+      backdrop.style.display     = 'flex';
     });
-  </script>
+  });
 
+  closeBtn.addEventListener('click', () => (backdrop.style.display = 'none'));
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    form.style.display         = 'none';
+    downloadLink.style.display = 'inline-block';
+  });
+
+  backdrop.addEventListener('click', e => {
+    if (e.target === backdrop) closeBtn.click();
+  });
+});
+</script>
+  </body>
