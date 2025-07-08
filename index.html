@@ -472,11 +472,6 @@ $1
     </div>
   </section>
   
-  <!-- FOOTER -->
-  <footer>
-    © 2025 TWIM Project · <a href="privacy.html">Privacidad</a>
-  </footer>
-
   <!-- Modal “Más Info” -->
   <div id="info-modal-backdrop" class="modal-backdrop">
     <div class="modal">
@@ -504,6 +499,9 @@ $1
       locale: 'es_ES',
       prefix: 'https://twimproject0.myspreadshop.es',
       baseId: 'myShop-container'
+      // Este token indica la ruta inicial dentro de tu tienda embebida
+      // Una cadena vacía carga la página principal de productos
+    startToken: ''
     };
   </script>
   <!-- 2) Cliente Spreadshop -->
@@ -540,6 +538,9 @@ $1
       });
     });
   </script>
-
+ <!-- FOOTER -->
+  <footer>
+    © 2025 TWIM Project · <a href="privacy.html">Privacidad</a>
+  </footer>
 </body>
 </html>
