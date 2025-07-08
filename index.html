@@ -163,20 +163,6 @@ $1
     /* Desktop Breakpoint */
     @media (min-width: 1024px) {.hero { grid-template-columns: 1fr 1fr; padding-top: 10vh; }.hero__text { font-size: 3rem; max-width: 600px; }
 }
-     <!-- Tienda SpreadShop -->
-<!-- Botón del menú -->
-<a href="#myShop" class="btn" style="margin-left:1rem;">Tienda</a>
-<div id="myShop"></div>
-<script>
-  var spread_shop_config = {
-    shopName: 'twimproject0',         // Tu nombre de tienda en Spreadshop
-    locale: 'es_ES',                  // Idioma y localización
-    prefix: 'https://twimproject0.myspreadshop.es', // URL base de la tienda
-    baseId: 'myShop'                  // El id del div donde se montará
-  };
-</script>
-<script src="https://twimproject0.myspreadshop.es/shopfiles/shopclient/shopclient.nocache.js" defer>
-   </script>
   </style>
 </head>
 <body>
@@ -501,51 +487,59 @@ $1
         <button type="submit" class="btn">Recibir PDF</button>
       </form>
       <a id="download-pdf" href="#" download class="btn" style="display:none;">Descargar ahora</a>
+    </div> 
+  </div>
+ <!-- Sección Tienda -->
+  <section id="myShop" class="section bg-soft">
+    <div class="container">
+      <h2>TWIM Project Shop</h2>
+      <!-- Aquí la librería inyecta tu tienda -->
+      <div id="myShop-container"></div>
     </div>
-</script>
-   <!-- Tienda SpreadShop -->
-<div id="myShop">
-  <a href="https://twimproject0.myspreadshop.es/" target="_blank" rel="noopener">
-    TWIM Project Shop
-  </a>
-<!-- Sección donde se renderea la tienda Spreadshop -->
-<section id="myShop" class="section bg-soft">
-  <div class="container">
-    <h2>TWIM Project Shop</h2>
-</div>
+  </section>
+   <!-- 1) Configuración Spreadshop -->
+  <script>
+    var spread_shop_config = {
+      shopName: 'twimproject0',
+      locale: 'es_ES',
+      prefix: 'https://twimproject0.myspreadshop.es',
+      baseId: 'myShop-container'
+    };
+  </script>
+  <!-- 2) Cliente Spreadshop -->
+  <script src="https://twimproject0.myspreadshop.es/shopfiles/shopclient/shopclient.nocache.js" defer></script>
 
+  <!-- 3) Script de la Modal -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const backdrop     = document.getElementById('info-modal-backdrop');
+      const closeBtn     = document.getElementById('modal-close');
+      const infoBtns     = document.querySelectorAll('.info-btn');
+      const form         = document.getElementById('info-form');
+      const downloadLink = document.getElementById('download-pdf');
+      let currentPdf = '';
 
-<!-- Script de la modal -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const backdrop     = document.getElementById('info-modal-backdrop');
-  const closeBtn     = document.getElementById('modal-close');
-  const infoBtns     = document.querySelectorAll('.info-btn');
-  const form         = document.getElementById('info-form');
-  const downloadLink = document.getElementById('download-pdf');
-  let currentPdf = '';
+      infoBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentPdf            = btn.dataset.pdf;
+          downloadLink.href     = currentPdf;
+          form.style.display    = 'block';
+          downloadLink.style.display = 'none';
+          backdrop.style.display     = 'flex';
+        });
+      });
 
-  infoBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      currentPdf            = btn.dataset.pdf;
-      downloadLink.href     = currentPdf;
-      form.style.display    = 'block';
-      downloadLink.style.display = 'none';
-      backdrop.style.display     = 'flex';
+      closeBtn.addEventListener('click', () => backdrop.style.display = 'none');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        form.style.display         = 'none';
+        downloadLink.style.display = 'inline-block';
+      });
+      backdrop.addEventListener('click', e => {
+        if (e.target === backdrop) closeBtn.click();
+      });
     });
-  });
+  </script>
 
-  closeBtn.addEventListener('click', () => (backdrop.style.display = 'none'));
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    form.style.display         = 'none';
-    downloadLink.style.display = 'inline-block';
-  });
-
-  backdrop.addEventListener('click', e => {
-    if (e.target === backdrop) closeBtn.click();
-  });
-});
-</script>
-
+</body>
+</html>
