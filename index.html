@@ -161,7 +161,22 @@ $1
     footer a { color: var(--accent); }
 
     /* Desktop Breakpoint */
-    @media (min-width: 1024px) {.hero { grid-template-columns: 1fr 1fr; padding-top: 10vh; }.hero__text { font-size: 3rem; max-width: 600px; }}
+    @media (min-width: 1024px) {.hero { grid-template-columns: 1fr 1fr; padding-top: 10vh; }.hero__text { font-size: 3rem; max-width: 600px; }
+}
+     <!-- Tienda SpreadShop -->
+<!-- Botón del menú -->
+<a href="#myShop" class="btn" style="margin-left:1rem;">Tienda</a>
+<div id="myShop"></div>
+<script>
+  var spread_shop_config = {
+    shopName: 'twimproject0',         // Tu nombre de tienda en Spreadshop
+    locale: 'es_ES',                  // Idioma y localización
+    prefix: 'https://twimproject0.myspreadshop.es', // URL base de la tienda
+    baseId: 'myShop'                  // El id del div donde se montará
+  };
+</script>
+<script src="https://twimproject0.myspreadshop.es/shopfiles/shopclient/shopclient.nocache.js" defer>
+   </script>
   </style>
 </head>
 <body>
@@ -493,16 +508,12 @@ $1
   <a href="https://twimproject0.myspreadshop.es/" target="_blank" rel="noopener">
     TWIM Project Shop
   </a>
+<!-- Sección donde se renderea la tienda Spreadshop -->
+<section id="myShop" class="section bg-soft">
+  <div class="container">
+    <h2>TWIM Project Shop</h2>
 </div>
-<script>
-  var spread_shop_config = {
-    shopName: 'twimproject0',
-    locale: 'es_ES',
-    prefix: 'https://twimproject0.myspreadshop.es',
-    baseId: 'myShop'
-  };
-</script>
-<script src="https://twimproject0.myspreadshop.es/shopfiles/shopclient/shopclient.nocache.js" defer></script>
+
 
 <!-- Script de la modal -->
 <script>
