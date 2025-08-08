@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- 1. Título SEO -->
   <title>Transforma la ansiedad laboral en ventaja | TWIM Project</title>
-   <!-- 2. Meta descripción -->
-  <meta name="description" content=""Soluciones clínicas y estratégicas para convertir la ansiedad laboral en rendimiento sostenible. Workshops, guía anti-burnout y mentoring personalizado.">
-   <!-- 3. Indexación -->
+  <!-- 2. Meta descripción -->
+  <meta name="description" content="Soluciones clínicas y estratégicas para convertir la ansiedad laboral en rendimiento sostenible. Workshops, guía anti-burnout, mentoring y el libro 'Los engranajes de la mente'.">
+  <!-- 3. Indexación -->
   <meta name="robots" content="index, follow">
-    <!-- 3.canonical URL -->
+  <!-- 3. Canonical URL -->
   <link rel="canonical" href="https://twimproject.com/">
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png">
   <!-- 4. Open Graph y Twitter Cards -->
-  <meta property="og:title"       content="TWIM Project – Transforma tu ansiedad en rendimiento">
-  <meta property="og:description" content="Descubre cómo Dani Orozco ayuda a empresas a transformar la ansiedad en rendimiento sostenible.">
-  <meta property="og:image"       content="https://twimproject.com/preview.jpg">
-  <meta property="og:url"         content="https://twimproject.com/">
-  <meta property="og:type"        content="website">
+  <meta property="og:title" content="TWIM Project – Transforma tu ansiedad en rendimiento">
+  <meta property="og:description" content="Descubre cómo Dani Orozco ayuda a empresas y personas a transformar la ansiedad en rendimiento sostenible.">
+  <meta property="og:image" content="https://twimproject.com/preview.jpg">
+  <meta property="og:url" content="https://twimproject.com/">
+  <meta property="og:type" content="website">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="TWIM Project – Transforma tu ansiedad en rendimiento">
@@ -29,9 +29,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
-</head>
+
+  <!-- JSON-LD para SEO del libro -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "Los engranajes de la mente",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Orozco Abia"
+    },
+    "image": [
+      "https://twimproject.com/IMG_8597.jepg",
+      "https://twimproject.com/IMG_8596.jepg",
+      "https://twimproject.com/IMG_8598.jepg"
+    ],
+    "bookFormat": "https://schema.org/Paperback",
+    "isbn": "978-XXXXXXXXXX",
+    "description": "Un viaje claro y práctico por el Yo, el Ello y el Superyó: cómo se forman, cómo chocan entre sí y cómo entenderlos para reducir la ansiedad, el burnout y los bucles de autosabotaje.",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://amzn.eu/d/38Veu6F",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
   
-   <style>
+  <style>
     :root {--primary: #D74A2B;--primary-dark: #B2361B;--accent: #F2D7C3;--bg: #FFFDFB;--bg-soft: #FCF5F0;}
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Barlow Condensed', sans-serif; line-height: 1.5; background: var(--bg); color: var(--primary-dark); }
@@ -66,7 +92,6 @@
 .hero__overlay {position: absolute;inset: 0;background: rgba(221, 76, 0, 0.4);z-index: 1;}
 .hero__text {position: relative;z-index: 2;max-width: 700px;margin: 0 1rem;padding: 2rem;border-radius: 6px;background: rgba(255,255,255,0.85);color: #8B2E00;font-size: clamp(2rem,5vw,3rem);line-height: 1.3;text-align: center;text-transform: uppercase;box-shadow: 0 6px 18px rgba(0,0,0,0.12);}
 
-$1
     .section{ padding:4rem 0; }
     .bg-soft{ background:var(--bg-soft); }
     .two-col{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:2rem; align-items:center; }
@@ -169,6 +194,7 @@ $1
 </head>
 <body>
  <!-- HEADER -->
+   <!-- HEADER -->
   <header>
     <div class="container">
       <nav>
@@ -177,6 +203,7 @@ $1
           <a href="#about">Sobre mí</a>
           <a href="#solutions">Soluciones</a>
           <a href="#content">Contenido</a>
+          <a href="#libro">Libro</a>
           <a href="#guia-antiburnout">Guía Anti-Burnout/GAB+Sesión</a>
           <a href="#contacto">Contacto</a>
           <a href="#myShop" class="btn" style="margin-left:1rem;">Tienda</a>
@@ -378,6 +405,28 @@ $1
       <p style="margin-top:1rem; text-align:center;"><a href="#contacto" class="btn">Consulta formatos para tu evento</a></p>
     </div>
   </section>
+
+  <!-- SECCIÓN LIBRO -->
+  <section id="libro" class="section bg-soft">
+    <div class="container two-col">
+      <div>
+        <img src="IMG_8597.jepg" alt="Portada del libro Los engranajes de la mente de Daniel Orozco Abia" style="border-radius:8px;max-width:100%;height:auto;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
+      </div>
+      <div>
+        <h2>Los engranajes de la mente</h2>
+        <p>Comprendiendo el Yo, el Ello y el Superyó desde una mirada psicoanalítica clara y aplicable: cómo se forman, cómo chocan entre sí y cómo ese conflicto se traduce en ansiedad y burnout, y qué hacer para reencauzarlo en la vida diaria y el trabajo.</p>
+        <a href="https://amzn.eu/d/38Veu6F" target="_blank" rel="noopener nofollow sponsored" class="btn" style="margin-bottom:1rem;">Comprar en Amazon</a>
+        <details>
+          <summary style="cursor:pointer;">Ver contraportadas</summary>
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;">
+            <img src="IMG_8596.jepg" alt="Contraportada Copérnico Darwin Freud" style="max-width:260px;border-radius:8px;border:1px solid #eee;" loading="lazy">
+            <img src="IMG_8598.jepg" alt="Contraportada Kindle" style="max-width:260px;border-radius:8px;border:1px solid #eee;" loading="lazy">
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  
 <!-- GUÍA ANTI-BURNOUT -->
 <section id="guia-antiburnout" class="section bg-soft">
   <div class="container two-col">
