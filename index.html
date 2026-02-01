@@ -163,35 +163,7 @@
     }
   }
   </script>
-<!-- ============================================================ -->
-<!-- INSTRUCCIONES DE USO:                                       -->
-<!-- ============================================================ -->
-<!-- 
-1. BUSCA en tu index.html esta línea:
-   "1. Organization Schema" o "ProfessionalService"
-   
-2. BORRA desde <script type="application/ld+json"> 
-   hasta </script> (todo ese bloque)
-   
-3. BUSCA también si tienes:
-   "3. Services Schema" 
-   Y BORRA ese bloque también (ya está incluido arriba)
-   
-4. PEGA todo este código (desde el <!-- 1. Organization hasta </script>)
-   
-5. GUARDA y sube a GitHub:
-   git add index.html
-   git commit -m "Fix Organization schema validation"
-   git push origin main
-   
-6. ESPERA 2-3 minutos (GitHub Pages se actualiza automáticamente)
-   
-7. VUELVE a probar en:
-   https://search.google.com/test/rich-results
-   URL: https://twimproject.com
-   
-✅ RESULTADO ESPERADO: Organization 1 valid item detected (sin errores)
--->
+
   <!-- 4. Book Schema -->
   <script type="application/ld+json">
   {
@@ -205,8 +177,8 @@
     },
     "image": [
       "https://twimproject.com/imagen amazon.jpeg",
-      "https://twimproject.com/IMG_8596.jepg",
-      "https://twimproject.com/IMG_8598.jepg"
+      "https://twimproject.com/IMG_8596.jpeg",
+      "https://twimproject.com/IMG_8598.jpeg"
     ],
     "bookFormat": "https://schema.org/Paperback",
     "isbn": "B0DJYS2S3R",
@@ -472,7 +444,7 @@
           src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7343593179272622080?compact=1"
           style="width:100%; height:100%; border:none;"
           allowfullscreen
-          title="Vídeo presentación Daniel Orozco en LinkedIn"
+          title="Vídeo presentación Daniel Orozco Abia en LinkedIn"
           loading="lazy">
         </iframe>
       </div>
@@ -664,61 +636,78 @@
   </section>
 
   <!-- LIBROS -->
-  <section id="libros" class="section">
-    <div class="container two-col">
-      <div>
+ <!-- LIBROS -->
+<section id="libros" class="section">
+  <div class="container">
+    <h2>Mis Libros</h2>
+    <div class="cards" style="margin-top:2rem;">
+      
+      <!-- Libro 1: Los engranajes de la mente -->
+      <div class="card">
         <img 
           src="imagen amazon.jpeg" 
           alt="Portada del libro Los engranajes de la mente de Daniel Orozco Abia - Psicoanálisis aplicado al burnout" 
-          style="border-radius:8px;max-width:100%;height:auto;box-shadow:0 2px 8px rgba(0,0,0,0.06)"
+          style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)"
           loading="lazy"
-          width="400"
-          height="600">
-      </div>
-      <div>
-        <h2>Los engranajes de la mente</h2>
-        <p>Comprendiendo el Yo, el Ello y el Superyó desde una mirada psicoanalítica clara y aplicable: cómo se forman, cómo chocan entre sí y cómo ese conflicto se traduce en ansiedad y burnout, y qué hacer para reencauzarlo en la vida diaria y el trabajo.</p>
-        <a href="https://amzn.eu/d/38Veu6F" target="_blank" rel="noopener nofollow sponsored" class="btn" style="margin-bottom:1rem;">
+          width="300"
+          height="450">
+        <h3>Los engranajes de la mente</h3>
+        <p>Comprendiendo el Yo, el Ello y el Superyó desde una mirada psicoanalítica clara y aplicable: cómo se forman, cómo chocan entre sí y cómo ese conflicto se traduce en ansiedad y burnout.</p>
+        <a href="https://amzn.eu/d/38Veu6F" target="_blank" rel="noopener nofollow sponsored" class="btn" style="margin:1rem 0;">
           Comprar en Amazon
         </a>
-        <details>
+        <details style="margin-top:1rem;">
           <summary style="cursor:pointer;">Ver contraportadas</summary>
-          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;">
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;justify-content:center;">
             <img 
               src="IMG_8596.jpeg" 
-              alt="Contraportada del libro mostrando citas de Copérnico, Darwin y Freud sobre revoluciones científicas" 
-              style="max-width:260px;border-radius:8px;border:1px solid #eee;" 
+              alt="Contraportada del libro mostrando citas de Copérnico, Darwin y Freud" 
+              style="max-width:160px;border-radius:8px;border:1px solid #eee;" 
               loading="lazy"
-              width="260"
-              height="400">
+              width="160"
+              height="240">
             <img 
               src="IMG_8598.jpeg" 
               alt="Contraportada versión Kindle del libro Los engranajes de la mente" 
-              style="max-width:260px;border-radius:8px;border:1px solid #eee;" 
+              style="max-width:160px;border-radius:8px;border:1px solid #eee;" 
               loading="lazy"
-              width="260"
-              height="400">
+              width="160"
+              height="240">
           </div>
-          <div>
-         <h2>Burnout, el libro para no petar</h2>
-        <p>Manual de Emergencia para trabajar sin odiarte tanto</p>
-        <a href="https://amzn.eu/d/8Bgbi0t" target="_blank" rel="noopener nofollow sponsored" class="btn" style="margin-bottom:1rem;">
-          Comprar en Amazon
-        </a>
-        <details>
-          <summary style="cursor:pointer;">Ver contraportadas</summary>
-          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;">
-            <img 
-              src="contraportada BUrnout.jpg" 
-              alt="Contraportada del libro" 
-              style="max-width:260px;border-radius:8px;border:1px solid #eee;" 
-              loading="lazy"
-              width="260"
-              height="400">
         </details>
       </div>
+
+      <!-- Libro 2: Burnout, el libro para no petar -->
+      <div class="card">
+        <img 
+          src="contraportada BUrnout.jpg" 
+          alt="Portada del libro Burnout, el libro para no petar de Daniel Orozco Abia" 
+          style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06)"
+          loading="lazy"
+          width="300"
+          height="450">
+        <h3>Burnout, el libro para no petar</h3>
+        <p>Manual de Emergencia para trabajar sin odiarte tanto</p>
+        <a href="https://amzn.eu/d/8Bgbi0t" target="_blank" rel="noopener nofollow sponsored" class="btn" style="margin:1rem 0;">
+          Comprar en Amazon
+        </a>
+        <details style="margin-top:1rem;">
+          <summary style="cursor:pointer;">Ver contraportada</summary>
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;justify-content:center;">
+            <img 
+              src="contraportada BUrnout.jpg" 
+              alt="Contraportada del libro Burnout" 
+              style="max-width:200px;border-radius:8px;border:1px solid #eee;" 
+              loading="lazy"
+              width="200"
+              height="300">
+          </div>
+        </details>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
   
   <!-- GUÍA ANTI-BURNOUT -->
   <section id="guia-antiburnout" class="section bg-soft">
