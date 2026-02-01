@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página de inicio -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
   <url>
     <loc>https://twimproject.com/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://twimproject.com/LOGO.png</image:loc>
+      <image:title>TWIM Project Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://twimproject.com/preview.jpg</image:loc>
+      <image:title>TWIM Project - Transformando ansiedad en rendimiento</image:title>
+    </image:image>
   </url>
-  <!-- Puedes añadir aquí futuras URLs internas cuando crees más páginas -->
+
+  <!-- Sobre mí -->
+  <url>
+    <loc>https://twimproject.com/#about</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Soluciones -->
+  <url>
+    <loc>https://twimproject.com/#solutions</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Programas -->
+  <url>
+    <loc>https://twimproject.com/#programs</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Conferencias -->
+  <url>
+    <loc>https://twimproject.com/#keynotes</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Libros -->
+  <url>
+    <loc>https://twimproject.com/#libros</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://twimproject.com/imagen amazon.jpeg</image:loc>
+      <image:title>Los engranajes de la mente - Daniel Orozco</image:title>
+    </image:image>
+  </url>
+
+  <!-- Guía Anti-Burnout -->
+  <url>
+    <loc>https://twimproject.com/#guia-antiburnout</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Contacto -->
+  <url>
+    <loc>https://twimproject.com/#contacto</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Tienda -->
+  <url>
+    <loc>https://twimproject.com/#myShop</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Política de Privacidad -->
+  <url>
+    <loc>https://twimproject.com/privacy.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
