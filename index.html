@@ -508,7 +508,7 @@
     /* ── LIBROS ── */
     .libros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
     .libro-card { display: flex; gap: 1.6rem; align-items: flex-start; }
-    .libro-card img { width: 155px; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.1); flex-shrink: 0; }
+    .libro-card img { width: 180px; height: auto; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.1); flex-shrink: 0; object-fit: contain; }
     .libro-info h3 { font-size: 1.15rem; margin-bottom: .4rem; }
     .libro-info p { font-size: .9rem; margin-bottom: 1rem; line-height: 1.6; }
     .libro-info details { margin-top: .8rem; }
@@ -516,7 +516,7 @@
 
     /* ── GUÍA ── */
     .guia-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; }
-    .guia-grid img { width: 100%; max-width: 380px; border-radius: 10px; box-shadow: 0 10px 32px rgba(0,0,0,.15); }
+    .guia-grid img { width: 100%; max-width: 380px; height: auto; border-radius: 10px; box-shadow: 0 10px 32px rgba(0,0,0,.15); object-fit: contain; }
     .guia-text h2 { color: var(--white); margin-bottom: .8rem; }
     .guia-text p { opacity: .9; margin-bottom: 1rem; }
     .guia-text ul { list-style: none; margin-bottom: 1.8rem; }
@@ -793,7 +793,7 @@
     <p class="section-sub"></p>
     <div class="libros-grid">
       <div class="libro-card">
-        <img src="portadalosengranajes.jpg" alt="Portada del libro Los engranajes de la mente" loading="lazy" width="300" height="450">
+        <img src="portadalosengranajes.jpg" alt="Portada del libro Los engranajes de la mente" loading="lazy">
         <div class="libro-info">
           <h3>Los engranajes de la mente</h3>
           <p>Comprendiendo el Yo, el Ello y el Superyó desde una mirada psicoanalítica clara y aplicable; cómo se forman, cómo chocan entre sí y cómo ese conflicto se traduce en ansiedad y burnout.</p>
@@ -808,7 +808,7 @@
         </div>
       </div>
       <div class="libro-card">
-        <img src="ChatGPT Image 5 sept 2025, 11_05_55.png" alt="Portada del libro Burnout" loading="lazy" width="300" height="450">
+        <img src="ChatGPT Image 5 sept 2025, 11_05_55.png" alt="Portada del libro Burnout" loading="lazy">
         <div class="libro-info">
           <h3>Burnout, el libro para no petar</h3>
           <p>Manual de Emergencia para trabajar sin odiarte tanto.</p>
@@ -830,7 +830,7 @@
   <div class="container">
     <div class="guia-grid">
       <div>
-        <img src="guia+sesión.jpg" alt="Guía Práctica Anti-Burnout y sesión con Daniel Orozco" loading="lazy" width="400" height="550">
+        <img src="guia+sesión.jpg" alt="Guía Práctica Anti-Burnout y sesión con Daniel Orozco" loading="lazy">
       </div>
       <div class="guia-text">
         <h2 class="section-title">Guía Práctica Anti-Burnout</h2>
