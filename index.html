@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="es" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ========== SEO FUNDAMENTALS ========== -->
+
   <title>Daniel Orozco Abia · Psicólogo General Sanitario en Valencia | Adultos, Deportistas y Parejas</title>
   <meta name="description" content="Psicólogo General Sanitario CV11515 en Valencia. Terapia psicoanalítica para adultos, deportistas profesionales y relaciones de pareja. Autor de 'Los Engranajes de la Mente' y 'Burnout: El libro para no petar'.">
   <meta name="keywords" content="psicólogo Valencia, terapia adultos, psicólogo deportistas, terapia de pareja, psicoanálisis, autoexigencia, ansiedad, burnout, Daniel Orozco Abia, consulta psicológica">
@@ -18,6 +20,7 @@
   <link rel="apple-touch-icon" href="logo-mindworld.png">
 
   <!-- ========== OPEN GRAPH ========== -->
+
   <meta property="og:title" content="Daniel Orozco Abia · Psicólogo Sanitario en Valencia">
   <meta property="og:description" content="Terapia psicoanalítica para adultos, deportistas profesionales y parejas. Más de una década de experiencia clínica. CV11515.">
   <meta property="og:image" content="https://twimproject.com/daniel-orozco-consulta.jpg">
@@ -28,6 +31,7 @@
   <meta property="og:locale" content="es_ES">
 
   <!-- ========== TWITTER CARDS ========== -->
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@daniorozcopsicologo">
   <meta name="twitter:creator" content="@daniorozcopsicologo">
@@ -36,6 +40,7 @@
   <meta name="twitter:image" content="https://twimproject.com/daniel-orozco-consulta.jpg">
 
   <!-- ========== PRECONNECT & PRELOAD ========== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -45,12 +50,16 @@
   <link rel="preload" href="daniel-orozco-consulta.jpg" as="image" type="image/jpeg">
 
   <!-- ========== FONTS & ICONS ========== -->
+
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" />
 
 <!-- ============================================================ -->
+
 <!-- SCHEMA -->
+
 <!-- ============================================================ -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -127,6 +136,7 @@
   }
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -152,6 +162,7 @@
   }
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -178,6 +189,7 @@
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "28" }
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -206,6 +218,7 @@
   ]
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -219,6 +232,7 @@
   ]
 }
 </script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -496,7 +510,7 @@
     .conf-card li { font-size: .85rem; color: rgba(255,255,255,.6); padding: .2rem 0 .2rem 1.2rem; position: relative; }
     .conf-card li::before { content: '·'; position: absolute; left: 0; color: var(--beige); font-weight: 700; font-size: 1.2rem; }
     .conf-img { text-align: center; margin-bottom: 2.5rem; }
-    .conf-img img { max-width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .conf-img img { max-width: 100%; max-height: 55vh; width: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
 
     /* ── YOUTUBE ── */
     .youtube { text-align: center; }
@@ -580,27 +594,76 @@
     .modal .btn { width: 100%; margin-top: .5rem; }
     .modal-close { position: absolute; top: .6rem; right: .8rem; font-size: 1.3rem; cursor: pointer; color: var(--text-muted); }
 
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: .5rem;
+      z-index: 1001;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      margin: 5px 0;
+      transition: all .3s;
+      border-radius: 2px;
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .about-grid, .prog-grid, .libros-grid, .contacto-grid, .guia-grid { grid-template-columns: 1fr; }
       .esp-grid, .conf-grid { grid-template-columns: 1fr; }
       .about-img { order: -1; }
       .libro-card { flex-direction: column; align-items: center; text-align: center; }
-      .libro-card img { width: 140px; }
+      .libro-card img { width: 160px; }
       .guia-grid img { margin: 0 auto; }
+      .conf-img img { max-height: 50vh; width: auto; max-width: 100%; object-fit: contain; }
     }
     @media (max-width: 600px) {
-      header nav img { height: 55px; }
-      .nav-links { display: none; }
+      .hamburger { display: block; }
+      header nav img { height: 70px; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--green-dark);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .3rem;
+        z-index: 1000;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        font-size: 1.2rem;
+        padding: .8rem 1.5rem;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+      }
       .hero__content { padding: 1.8rem 1.3rem; margin: 0 .8rem; }
       section { padding: 3.5rem 0; }
       .guia-buttons { flex-direction: column; }
+      .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
     }
   </style>
+
 </head>
 
 <!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -611,13 +674,17 @@
 <body>
 
 <!-- ── HEADER ── -->
+
 <header>
   <div class="container">
     <nav>
       <a href="#home" aria-label="Ir a inicio">
-        <img src="logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia, Psicólogo General Sanitario" width="140" height="140">
+        <img src="logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia, Psicólogo General Sanitario">
       </a>
-      <div class="nav-links">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
         <a href="#about">Sobre mí</a>
         <a href="#especialidades">Especialidades</a>
         <a href="#programs">Programas</a>
@@ -632,11 +699,13 @@
 </header>
 
 <!-- ── ANNOUNCEMENT ── -->
+
 <div class="announcement">
   Nuevo: <strong>Rompe el "TENGO QUE"</strong> · 30 accesos a 29€ — <a href="#programs">Ver programa →</a>
 </div>
 
 <!-- ── HERO ── -->
+
 <section id="home" class="hero">
   <div class="hero__overlay"></div>
   <div class="hero__content">
@@ -650,6 +719,7 @@
 </section>
 
 <!-- ── ABOUT ── -->
+
 <section id="about" class="bg-sand">
   <div class="container">
     <div class="about-grid">
@@ -673,6 +743,7 @@
 </section>
 
 <!-- ── ESPECIALIDADES ── -->
+
 <section id="especialidades">
   <div class="container">
     <div class="section-line"></div>
@@ -699,6 +770,7 @@
 </section>
 
 <!-- ── PROGRAMAS ── -->
+
 <section id="programs" class="bg-sand">
   <div class="container">
     <div class="section-line"></div>
@@ -735,13 +807,14 @@
 </section>
 
 <!-- ── CONFERENCIAS ── -->
+
 <section id="keynotes" class="bg-green">
   <div class="container">
     <div class="section-line" style="background:var(--beige-light)"></div>
     <h2 class="section-title">Conferencias</h2>
     <p class="section-sub">Formaciones para equipos y organizaciones.</p>
     <div class="conf-img">
-      <img src="twimp.jpg" alt="Daniel Orozco Abia impartiendo conferencia" loading="lazy" width="800" height="600">
+      <img src="twimp.jpg" alt="Daniel Orozco Abia impartiendo conferencia" loading="lazy">
     </div>
     <div class="conf-grid">
       <div class="conf-card">
@@ -776,6 +849,7 @@
 </section>
 
 <!-- ── YOUTUBE ── -->
+
 <section class="youtube bg-sand">
   <div class="container">
     <div class="section-line"></div>
@@ -786,6 +860,7 @@
 </section>
 
 <!-- ── LIBROS ── -->
+
 <section id="libros">
   <div class="container">
     <div class="section-line"></div>
@@ -826,6 +901,7 @@
 </section>
 
 <!-- ── GUÍA ANTI-BURNOUT ── -->
+
 <section id="guia-antiburnout" class="bg-green">
   <div class="container">
     <div class="guia-grid">
@@ -852,6 +928,7 @@
 </section>
 
 <!-- ── CONTACTO ── -->
+
 <section id="contacto" class="bg-sand">
   <div class="container">
     <div class="contacto-grid">
@@ -902,27 +979,12 @@
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
       </div>
-      
-<!-- MAPA CONSULTA -->
-<div style="grid-column:1/-1;margin-top:2rem;">
-  <h3>Dónde estoy</h3>
-  <p style="margin-bottom:1rem;">C/ de l'Ambaixador Vich, 3, 1b · 46002 València (Ciutat Vella)</p>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.0!2d-0.3763!3d39.4735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4cf980f369%3A0x0!2sC%2F%20de%20l'Ambaixador%20Vich%2C%203%2C%2046002%20Val%C3%A8ncia!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
-    width="100%"
-    height="350"
-    style="border:none;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.08);"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Ubicación consulta Daniel Orozco Abia, Valencia">
-  </iframe>
- </div>
- </div>        
-</div>
+    </div>
+  </div>
 </section>
 
 <!-- ── FAQ ── -->
+
 <section id="faqs">
   <div class="container">
     <div class="section-line"></div>
@@ -949,11 +1011,13 @@
 </section>
 
 <!-- ── FOOTER ── -->
+
 <footer>
   <p>© 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · <a href="privacy.html">Privacidad</a></p>
 </footer>
 
 <!-- ── MODAL ── -->
+
 <div id="info-modal-backdrop" class="modal-backdrop">
   <div class="modal">
     <span id="modal-close" class="modal-close">&times;</span>
@@ -965,6 +1029,24 @@
     <a id="download-pdf" href="#" download class="btn btn-green" style="display:none;">Descargar ahora</a>
   </div>
 </div>
+
+<script>
+  // Hamburger menu
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  });
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
