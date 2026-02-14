@@ -3,7 +3,7 @@ TWIM PROJECT - ESTILOS GLOBALES
 Archivo CSS compartido para toda la web
 =========================================== */
 
-/* VARIABLES DE COLOR */
+/* VARIABLES DE COLOR - sincronizadas con la home (index.html) */ 
 :root {
 –primary: #265C4B;
 –primary-dark: #173D30;
