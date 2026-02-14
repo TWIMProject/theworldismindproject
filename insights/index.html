@@ -26,204 +26,45 @@
   <!-- CSS EXTERNO COMPARTIDO -->
   <link rel="stylesheet" href="../twim-styles.css">
 
-  <!-- ESTILOS ESPECÍFICOS INSIGHTS -->
+  <!-- SOLO HAMBURGUESA MÓVIL (lo que falta respecto a la home) -->
   <style>
-    .pillar-card {
-      border: 2px solid #000;
-      padding: 2.5rem 2rem;
-      margin-bottom: 3rem;
-      position: relative;
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
     }
-    .pillar-card::before {
-      content: 'ARTÍCULO PRINCIPAL';
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      background: #000;
-      color: #fff;
-      padding: 0.25rem 0.7rem;
-      position: absolute;
-      top: -0.75rem;
-      left: 1.5rem;
-    }
-    .pillar-card h2 {
-      margin-top: 0.5rem;
-      font-size: 1.6rem;
-      line-height: 1.25;
-    }
-    .pillar-card p {
-      margin: 1rem 0;
-      opacity: 0.8;
-      line-height: 1.6;
-    }
-    .pillar-card .card-meta {
+    .hamburger span {
       display: block;
-      font-size: 0.8rem;
-      opacity: 0.5;
-      margin-bottom: 1rem;
-    }
-    .pillar-card .read-link {
-      font-weight: 600;
-      text-decoration: none;
-      color: #000;
-      border-bottom: 2px solid #000;
-      padding-bottom: 2px;
-      transition: opacity 0.2s;
-    }
-    .pillar-card .read-link:hover {
-      opacity: 0.6;
-    }
-
-    .section-block {
-      margin-top: 3.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid #ddd;
-    }
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      color: #666;
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    @media (min-width: 640px) {
-      .articles-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    .article-card {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid #eee;
-    }
-    .articles-grid .article-card:last-child {
-      border-bottom: none;
-    }
-    @media (min-width: 640px) {
-      .article-card {
-        padding: 1.5rem;
-        border-bottom: none;
-        border-left: 3px solid #eee;
-        transition: border-color 0.2s;
-      }
-      .article-card:hover {
-        border-left-color: #000;
-      }
-    }
-    .article-card .tag {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #fff;
-      background: #000;
-      padding: 0.15rem 0.5rem;
-      margin-bottom: 0.6rem;
-    }
-    .article-card h3 {
-      font-size: 1.1rem;
-      line-height: 1.3;
-      margin: 0 0 0.5rem;
-    }
-    .article-card p {
-      font-size: 0.9rem;
-      line-height: 1.5;
-      opacity: 0.7;
-      margin: 0 0 0.6rem;
-    }
-    .article-card .card-meta {
-      display: block;
-      font-size: 0.75rem;
-      opacity: 0.45;
-      margin-bottom: 0.5rem;
-    }
-    .article-card .read-link {
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      color: #000;
-      transition: opacity 0.2s;
-    }
-    .article-card .read-link:hover {
-      opacity: 0.5;
-    }
-
-    .cta-banner {
-      margin-top: 3.5rem;
-      padding: 2.5rem 2rem;
-      background: #000;
-      color: #fff;
-      text-align: center;
-    }
-    .cta-banner h3 {
-      font-size: 1.4rem;
-      margin: 0 0 0.8rem;
-      color: #fff;
-    }
-    .cta-banner p {
-      font-size: 0.95rem;
-      opacity: 0.75;
-      margin: 0 0 1.5rem;
-      line-height: 1.5;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta-banner .btn-cta {
-      display: inline-block;
+      width: 24px;
+      height: 2px;
       background: #fff;
-      color: #000;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 0.8rem 2rem;
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      transition: opacity 0.2s;
+      margin: 5px 0;
+      transition: 0.3s;
     }
-    .cta-banner .btn-cta:hover {
-      opacity: 0.85;
-    }
-
-    .footer-links {
-      margin-bottom: 1rem;
-    }
-    .footer-links a {
-      color: #000;
-      text-decoration: none;
-      font-size: 0.85rem;
-      margin: 0 0.8rem;
-      transition: opacity 0.2s;
-    }
-    .footer-links a:hover {
-      opacity: 0.5;
-    }
-    .footer-social {
-      margin: 1rem 0;
-    }
-    .footer-social a {
-      color: #000;
-      font-size: 1.1rem;
-      margin: 0 0.6rem;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .footer-social a:hover {
-      opacity: 0.5;
-    }
-    .footer-legal {
-      font-size: 0.75rem;
-      opacity: 0.5;
-      margin-top: 1rem;
+    @media (max-width: 600px) {
+      .hamburger {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary-dark);
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-links a {
+        margin-left: 0 !important;
+      }
     }
   </style>
 </head>
@@ -234,11 +75,16 @@
       <a href="https://twimproject.com/">
         <img src="../logo-mindworld.png" alt="TWIM Project" loading="eager">
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="https://twimproject.com/">Inicio</a>
         <a href="https://twimproject.com/insights/">Insights</a>
         <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn">Rompe el TENGO QUE (29€)</a>
       </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
 
@@ -258,96 +104,97 @@
     </div>
 
     <!-- REFLEXIONES -->
-    <div class="section-block">
-      <h2 class="section-label">Reflexiones</h2>
-      <div class="articles-grid">
-        <div class="article-card">
-          <span class="tag">Reflexión</span>
-          <h3>Elegir es perder: por qué te cuesta tanto tomar decisiones</h3>
-          <p>Qué hay detrás de la parálisis al elegir, por qué repites los mismos patrones y la diferencia entre elegir y obedecer.</p>
-          <span class="card-meta">13 feb 2026 · 4 min</span>
-          <a class="read-link" href="elegir-es-perder-psicologia-decision.html">Leer →</a>
-        </div>
+    <h2 class="section-label">Reflexiones</h2>
+    <div class="articles-grid">
+      <div class="article-card">
+        <span class="tag">Reflexión</span>
+        <h3>Elegir es perder: por qué te cuesta tanto tomar decisiones</h3>
+        <p>Qué hay detrás de la parálisis al elegir, por qué repites los mismos patrones y la diferencia entre elegir y obedecer.</p>
+        <span class="card-meta">13 feb 2026 · 4 min</span>
+        <a class="read-link" href="elegir-es-perder-psicologia-decision.html">Leer →</a>
       </div>
     </div>
 
     <!-- SERIE: ROMPE EL TENGO QUE -->
-    <div class="section-block">
-      <h2 class="section-label">Serie: Rompe el «TENGO QUE»</h2>
-      <div class="articles-grid">
+    <h2 class="section-label">Serie: Rompe el «TENGO QUE»</h2>
+    <div class="articles-grid">
 
-        <div class="article-card">
-          <span class="tag">Técnica</span>
-          <h3>Urgencia mental: qué es y cómo frenarla en 120 segundos</h3>
-          <p>Guía práctica para cortar el «ahora/ya/no puedo parar» en 2 minutos. Incluye variantes por contexto y mini-plan de 7 días.</p>
-          <span class="card-meta">3 feb 2026 · 9 min</span>
-          <a class="read-link" href="urgencia-mental-frenarla-120-segundos.html">Leer →</a>
-        </div>
-
-        <div class="article-card">
-          <span class="tag">Ejercicios</span>
-          <h3>Del «debería» al «quiero»: 5 ejercicios para recuperar la agencia</h3>
-          <p>Reescritura, registro alivio/coste, micro-límites, diálogo con el juez. 10–15 min/día.</p>
-          <span class="card-meta">4 feb 2026 · 8 min</span>
-          <a class="read-link" href="del-deberia-al-quiero-ejercicios.html">Leer →</a>
-        </div>
-
-        <div class="article-card">
-          <span class="tag">Diagnóstico</span>
-          <h3>15 señales de que vives en obligación (y no por deseo)</h3>
-          <p>Autochequeo rápido: señales cognitivas, corporales y conductuales del mandato interno.</p>
-          <span class="card-meta">5 feb 2026 · 7 min</span>
-          <a class="read-link" href="senales-vivir-en-obligacion.html">Leer →</a>
-        </div>
-
-        <div class="article-card">
-          <span class="tag">Tutorial</span>
-          <h3>Técnica de 2 minutos para cortar rumiación</h3>
-          <p>Paso a paso para interrumpir el bucle mental sin convertirlo en otro deber.</p>
-          <span class="card-meta">6 feb 2026 · 6 min</span>
-          <a class="read-link" href="tecnica-2-minutos-rumiacion.html">Leer →</a>
-        </div>
-
-        <div class="article-card">
-          <span class="tag">Psicoeducación</span>
-          <h3>Juez interno: qué es, de dónde viene y cómo desactivar su urgencia</h3>
-          <p>Orígenes, lenguaje del juez y 5 intervenciones prácticas. Incluye mini-protocolo de 7 días.</p>
-          <span class="card-meta">7 feb 2026 · 8 min</span>
-          <a class="read-link" href="juez-interno-como-desactivar.html">Leer →</a>
-        </div>
-
-        <div class="article-card">
-          <span class="tag">Guía completa</span>
-          <h3>Protocolo de 7 días (10–15 min): plan para salir del piloto automático</h3>
-          <p>Plan detallado día a día con tareas, frases guía y plantilla de protocolo personal.</p>
-          <span class="card-meta">10 feb 2026 · 9 min</span>
-          <a class="read-link" href="protocolo-7-dias-urgencia-mental.html">Leer →</a>
-        </div>
-
+      <div class="article-card">
+        <span class="tag">Técnica</span>
+        <h3>Urgencia mental: qué es y cómo frenarla en 120 segundos</h3>
+        <p>Guía práctica para cortar el «ahora/ya/no puedo parar» en 2 minutos. Incluye variantes por contexto y mini-plan de 7 días.</p>
+        <span class="card-meta">3 feb 2026 · 9 min</span>
+        <a class="read-link" href="urgencia-mental-frenarla-120-segundos.html">Leer →</a>
       </div>
+
+      <div class="article-card">
+        <span class="tag">Ejercicios</span>
+        <h3>Del «debería» al «quiero»: 5 ejercicios para recuperar la agencia</h3>
+        <p>Reescritura, registro alivio/coste, micro-límites, diálogo con el juez. 10–15 min/día.</p>
+        <span class="card-meta">4 feb 2026 · 8 min</span>
+        <a class="read-link" href="del-deberia-al-quiero-ejercicios.html">Leer →</a>
+      </div>
+
+      <div class="article-card">
+        <span class="tag">Diagnóstico</span>
+        <h3>15 señales de que vives en obligación (y no por deseo)</h3>
+        <p>Autochequeo rápido: señales cognitivas, corporales y conductuales del mandato interno.</p>
+        <span class="card-meta">5 feb 2026 · 7 min</span>
+        <a class="read-link" href="senales-vivir-en-obligacion.html">Leer →</a>
+      </div>
+
+      <div class="article-card">
+        <span class="tag">Tutorial</span>
+        <h3>Técnica de 2 minutos para cortar rumiación</h3>
+        <p>Paso a paso para interrumpir el bucle mental sin convertirlo en otro deber.</p>
+        <span class="card-meta">6 feb 2026 · 6 min</span>
+        <a class="read-link" href="tecnica-2-minutos-rumiacion.html">Leer →</a>
+      </div>
+
+      <div class="article-card">
+        <span class="tag">Psicoeducación</span>
+        <h3>Juez interno: qué es, de dónde viene y cómo desactivar su urgencia</h3>
+        <p>Orígenes, lenguaje del juez y 5 intervenciones prácticas. Incluye mini-protocolo de 7 días.</p>
+        <span class="card-meta">7 feb 2026 · 8 min</span>
+        <a class="read-link" href="juez-interno-como-desactivar.html">Leer →</a>
+      </div>
+
+      <div class="article-card">
+        <span class="tag">Guía completa</span>
+        <h3>Protocolo de 7 días (10–15 min): plan para salir del piloto automático</h3>
+        <p>Plan detallado día a día con tareas, frases guía y plantilla de protocolo personal.</p>
+        <span class="card-meta">10 feb 2026 · 9 min</span>
+        <a class="read-link" href="protocolo-7-dias-urgencia-mental.html">Leer →</a>
+      </div>
+
     </div>
 
     <!-- CTA BANNER -->
     <div class="cta-banner">
       <h3>Rompe el «TENGO QUE»</h3>
       <p>Todo el contenido de estos artículos integrado en un entrenamiento breve con vídeo, PDF, audio y protocolo guiado.</p>
-      <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn-cta">Reservar acceso — 29 €</a>
+      <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn">Reservar acceso — 29 €</a>
     </div>
 
   </div>
 
   <footer>
-    <div class="footer-links">
-      <a href="https://twimproject.com/">Inicio</a>
-      <a href="https://twimproject.com/insights/">Insights</a>
-      <a href="https://twimproject.com/privacy.html">Privacidad</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/daniorozcopsicologo/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/@daniorozcopsicologo" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-    </div>
-    <p class="footer-legal">&copy; 2026 TWIM Project · Daniel Orozco Abia, Psicólogo General Sanitario CV11515</p>
+    <p>&copy; 2026 TWIM Project &middot; Daniel Orozco Abia, Psicólogo General Sanitario CV11515</p>
+    <p>
+      <a href="https://twimproject.com/">Inicio</a> &middot;
+      <a href="https://twimproject.com/insights/">Insights</a> &middot;
+      <a href="https://twimproject.com/privacy.html">Privacidad</a> &middot;
+      <a href="https://www.instagram.com/daniorozcopsicologo/" target="_blank" rel="noopener">Instagram</a> &middot;
+      <a href="https://www.youtube.com/@daniorozcopsicologo" target="_blank" rel="noopener">YouTube</a>
+    </p>
   </footer>
+
+  <!-- HAMBURGUESA JS -->
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>
