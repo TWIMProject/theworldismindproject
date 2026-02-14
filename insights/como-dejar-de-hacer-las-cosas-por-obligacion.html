@@ -72,7 +72,7 @@
       "name": "TWIM Project",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://twimproject.com/mind-world.jpg"
+        "url": "https://twimproject.com/logo-mindworld.png"
       }
     },
     "datePublished": "2026-02-03",
@@ -126,9 +126,419 @@
     ]
   }
   </script>
-  <style>
-    :root{--primary:#D74A2B;--primary-dark:#B2361B;--accent:#F2D7C3;--bg:#FFFDFB;--bg-soft:#FCF5F0;--text:#3D1A0A;--text-light:#6B3A22}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Barlow Condensed',sans-serif;line-height:1.75;background:var(--bg);color:var(--text);font-size:18px;font-weight:300}h1,h2,h3{font-weight:600;letter-spacing:.3px;color:var(--primary-dark)}header{background:var(--primary);padding:1rem 0;position:sticky;top:0;z-index:999;box-shadow:0 3px 12px rgba(0,0,0,.25)}header nav{display:flex;justify-content:space-between;align-items:center;width:95%;max-width:1600px;margin:auto}header nav a img{height:80px;width:auto;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}header .nav-links a{color:#fff;text-decoration:none;margin-left:1.4rem;font-weight:400;font-size:1rem;transition:opacity .2s}header .nav-links a:hover{opacity:.8}.btn{display:inline-block;padding:.75rem 1.6rem;background:var(--primary-dark);color:#fff;border-radius:4px;font-weight:400;text-decoration:none;transition:.2s}.btn:hover{background:var(--primary);color:#fff}.article-hero{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);padding:5rem 1.5rem 4rem;text-align:center;color:#fff}.article-hero h1{font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.2;color:#fff;max-width:800px;margin:0 auto .8rem}.article-hero .meta{font-size:.95rem;opacity:.85;font-weight:300}.article-hero .meta a{color:var(--accent)}.breadcrumb{font-size:.85rem;color:rgba(255,255,255,.7);margin-bottom:1.2rem}.breadcrumb a{color:rgba(255,255,255,.85);text-decoration:none}.breadcrumb a:hover{text-decoration:underline}.article-content{max-width:740px;margin:-2rem auto 0;padding:3rem 2rem 4rem;background:#fff;border-radius:8px 8px 0 0;box-shadow:0 -4px 20px rgba(0,0,0,.06);position:relative;z-index:1}.article-content h2{font-size:1.6rem;margin:2.8rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid var(--accent)}.article-content h3{font-size:1.25rem;margin:2rem 0 .6rem}.article-content p{margin-bottom:1.2rem}.article-content ul,.article-content ol{margin:1rem 0 1.5rem 1.2rem}.article-content li{margin-bottom:.5rem}.article-content a{color:var(--primary);text-decoration:underline}.article-content a:hover{color:var(--primary-dark)}.highlight-box{background:var(--bg-soft);border-left:4px solid var(--primary);padding:1.5rem 1.8rem;margin:2rem 0;border-radius:0 6px 6px 0}.highlight-box p{margin-bottom:.5rem}.highlight-box p:last-child{margin-bottom:0}.step-box{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;padding:1.4rem 1.6rem;margin:1rem 0;position:relative;padding-left:4.5rem}.step-box .step-time{position:absolute;left:1rem;top:1.4rem;background:var(--primary);color:#fff;font-size:.8rem;font-weight:600;padding:.3rem .6rem;border-radius:4px;white-space:nowrap}.step-box strong{color:var(--primary-dark)}.cta-block{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);color:#fff;padding:2.5rem 2rem;border-radius:8px;text-align:center;margin:3rem 0}.cta-block h3{color:#fff;margin-bottom:.6rem;font-size:1.4rem}.cta-block p{opacity:.9;margin-bottom:1.2rem}.cta-block .btn{background:#fff;color:var(--primary-dark);font-weight:600;font-size:1.1rem;padding:1rem 2.5rem}.cta-block .btn:hover{background:var(--accent)}.cta-block .cta-details{font-size:.85rem;opacity:.75;margin-top:.8rem}.faq-item{border-bottom:1px solid rgba(0,0,0,.08);padding:1.2rem 0}.faq-item summary{font-weight:600;color:var(--primary-dark);cursor:pointer;font-size:1.05rem;list-style:none}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary::before{content:"▸ ";color:var(--primary)}.faq-item[open] summary::before{content:"▾ "}.faq-item p{margin-top:.6rem;font-size:.95rem}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin:1.5rem 0}.related-card{background:var(--bg-soft);padding:1.2rem;border-radius:6px;text-decoration:none;color:var(--text);transition:.2s;display:block}.related-card:hover{box-shadow:0 6px 16px rgba(0,0,0,.1);transform:translateY(-3px);text-decoration:none}.related-card strong{display:block;color:var(--primary-dark);margin-bottom:.3rem;font-size:.95rem}.related-card span{font-size:.85rem;color:var(--text-light)}footer{background:var(--primary-dark);color:#fff;text-align:center;font-size:.9rem;padding:2.4rem 0}footer a{color:var(--accent);text-decoration:none}@media(max-width:600px){header nav a img{height:55px}.article-content{padding:2rem 1.2rem 3rem;margin-top:-1rem}.step-box{padding-left:1.2rem;padding-top:3rem}.step-box .step-time{top:.8rem;left:1rem}.nav-links{display:none}}
-      <style>
+ /* ===========================================
+TWIM PROJECT - ESTILOS GLOBALES
+Archivo CSS compartido para toda la web
+=========================================== */
+
+/* VARIABLES DE COLOR - sincronizadas con la home (index.html) */ 
+:root {
+–white: #265C4B;
+–green-dark: #173D30;
+–accent: #CDDDD6;
+–bg: #FCFEFD;
+–bg-soft: #EDF3F0;
+–text: #2B2420;
+–green-light: #7A6E65;
+–beige: #C2A78B;
+}
+
+/* RESET BÁSICO */
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* TIPOGRAFÍA BASE */
+body {
+font-family: ‘Barlow Condensed’, sans-serif;
+line-height: 1.75;
+background: var(–bg);
+color: var(–text);
+font-size: 18px;
+font-weight: 300;
+}
+
+h1, h2, h3 {
+font-weight: 600;
+letter-spacing: 0.3px;
+color: var(–green-dark);
+}
+
+/* HEADER */
+header {
+background: var(–green-dark);
+padding: 1rem 0;
+position: sticky;
+top: 0;
+z-index: 999;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+header nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 95%;
+max-width: 1600px;
+margin: auto;
+}
+
+header nav a img {
+height: 80px;
+width: auto;
+filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+header .nav-links a {
+color: #fff;
+text-decoration: none;
+margin-left: 1.4rem;
+font-weight: 400;
+font-size: 1rem;
+transition: opacity 0.2s;
+}
+
+header .nav-links a:hover {
+opacity: 0.8;
+}
+
+/* BOTÓN GENERAL */
+.btn {
+display: inline-block;
+padding: 0.75rem 1.6rem;
+background: var(–green-dark);
+color: #fff;
+border-radius: 4px;
+font-weight: 400;
+text-decoration: none;
+transition: 0.2s;
+}
+
+.btn:hover {
+background: var(–green);
+color: #fff;
+}
+
+/* HERO DE PÁGINA */
+.page-hero {
+background: linear-gradient(135deg, var(–green-dark) 0%, var(–green) 100%);
+padding: 5rem 1.5rem 4rem;
+text-align: center;
+color: #fff;
+}
+
+.page-hero h1 {
+font-size: clamp(2rem, 5vw, 3rem);
+color: #fff;
+margin-bottom: 0.6rem;
+}
+
+.page-hero p {
+font-size: 1.1rem;
+opacity: 0.85;
+max-width: 600px;
+margin: 0 auto;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.insights-container,
+.article-container {
+max-width: 900px;
+margin: -2rem auto 0;
+padding: 2rem 1.5rem 4rem;
+position: relative;
+z-index: 1;
+}
+
+/* TARJETA PILAR */
+.pillar-card {
+background: #fff;
+border: 3px solid var(–green);
+border-radius: 10px;
+padding: 2rem;
+margin-bottom: 2rem;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+position: relative;
+overflow: hidden;
+}
+
+.pillar-card::before {
+content: “ARTÍCULO PRINCIPAL”;
+position: absolute;
+top: 0;
+right: 0;
+background: var(–green);
+color: #fff;
+font-size: 0.75rem;
+font-weight: 600;
+padding: 0.3rem 1rem;
+border-radius: 0 0 0 8px;
+}
+
+.pillar-card h2 {
+margin-top: 0.5rem;
+font-size: 1.5rem;
+}
+
+.pillar-card p {
+margin: 0.6rem 0 1rem;
+color: var(–green-light);
+font-size: 0.95rem;
+}
+
+.pillar-card a.read-link {
+color: var(–green);
+text-decoration: none;
+font-weight: 600;
+font-size: 1rem;
+}
+
+.pillar-card a.read-link:hover {
+text-decoration: underline;
+}
+
+/* GRID DE ARTÍCULOS */
+.articles-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 1.5rem;
+margin-top: 1rem;
+}
+
+/* TARJETA DE ARTÍCULO */
+.article-card {
+background: #fff;
+border: 1px solid rgba(0, 0, 0, 0.06);
+border-radius: 8px;
+padding: 1.6rem;
+transition: 0.2s;
+display: flex;
+flex-direction: column;
+}
+
+.article-card:hover {
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+transform: translateY(-4px);
+}
+
+.article-card .tag {
+font-size: 0.75rem;
+font-weight: 600;
+color: var(–beige);
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 0.5rem;
+}
+
+.article-card h3 {
+font-size: 1.15rem;
+margin-bottom: 0.4rem;
+line-height: 1.3;
+}
+
+.article-card p {
+font-size: 0.9rem;
+color: var(–green-light);
+flex-grow: 1;
+margin-bottom: 1rem;
+}
+
+.article-card .card-meta {
+font-size: 0.8rem;
+color: var(–green-light);
+opacity: 0.7;
+margin-bottom: 0.6rem;
+}
+
+.article-card a.read-link {
+color: var(–green);
+text-decoration: none;
+font-weight: 600;
+font-size: 0.9rem;
+margin-top: auto;
+}
+
+.article-card a.read-link:hover {
+text-decoration: underline;
+}
+
+/* ETIQUETA DE SECCIÓN */
+.section-label {
+font-size: 1.3rem;
+color: var(–green-dark);
+margin: 2.5rem 0 1rem;
+padding-bottom: 0.4rem;
+border-bottom: 2px solid var(–accent);
+}
+
+/* BANNER CTA */
+.cta-banner {
+background: linear-gradient(135deg, var(–green-dark) 0%, var(–green) 100%);
+color: #fff;
+padding: 2rem;
+border-radius: 8px;
+text-align: center;
+margin: 3rem 0 1rem;
+}
+
+.cta-banner h3 {
+color: #fff;
+margin-bottom: 0.5rem;
+font-size: 1.3rem;
+}
+
+.cta-banner p {
+opacity: 0.85;
+margin-bottom: 1rem;
+}
+
+.cta-banner .btn {
+background: #fff;
+color: var(–beige);
+font-weight: 600;
+padding: 0.8rem 2rem;
+}
+
+.cta-banner .btn:hover {
+background: var(–accent);
+color: var(–green-dark);
+}
+
+/* ESTILOS ESPECÍFICOS DE ARTÍCULOS INDIVIDUALES */
+.article-header {
+background: #fff;
+padding: 2rem;
+border-radius: 10px;
+margin-bottom: 2rem;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.article-header .breadcrumb {
+font-size: 0.85rem;
+color: var(–text-light);
+margin-bottom: 1rem;
+}
+
+.article-header .breadcrumb a {
+color: var(–primary);
+text-decoration: none;
+}
+
+.article-header .breadcrumb a:hover {
+text-decoration: underline;
+}
+
+.article-header h1 {
+font-size: clamp(1.8rem, 4vw, 2.4rem);
+margin-bottom: 1rem;
+line-height: 1.2;
+}
+
+.article-meta {
+font-size: 0.9rem;
+color: var(–text-light);
+border-top: 1px solid var(–accent);
+padding-top: 0.8rem;
+}
+
+.article-content {
+background: #fff;
+padding: 2.5rem;
+border-radius: 10px;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+line-height: 1.8;
+}
+
+.article-content h2 {
+margin-top: 2rem;
+margin-bottom: 1rem;
+font-size: 1.5rem;
+}
+
+.article-content h3 {
+margin-top: 1.5rem;
+margin-bottom: 0.8rem;
+font-size: 1.2rem;
+}
+
+.article-content p {
+margin-bottom: 1.2rem;
+}
+
+.article-content ul, .article-content ol {
+margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.article-content li {
+margin-bottom: 0.6rem;
+}
+
+.article-content strong {
+font-weight: 600;
+color: var(–primary-dark);
+}
+
+.article-content em {
+font-style: italic;
+color: var(–text-light);
+}
+
+.article-content blockquote {
+border-left: 4px solid var(–primary);
+padding-left: 1.5rem;
+margin: 1.5rem 0;
+font-style: italic;
+color: var(–text-light);
+}
+
+.highlight-box {
+background: var(–bg-soft);
+border-left: 4px solid var(–beige);
+padding: 1.5rem;
+margin: 1.5rem 0;
+border-radius: 4px;
+}
+
+.highlight-box h3 {
+margin-top: 0;
+color: var(–primary);
+}
+
+/* FOOTER */
+footer {
+background: var(–primary-dark);
+color: #fff;
+text-align: center;
+font-size: 0.9rem;
+padding: 2.4rem 0;
+}
+
+footer a {
+color: var(–accent);
+text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+header nav a img {
+height: 55px;
+}
+
+.nav-links {
+display: none;
+}
+
+.insights-container,
+.article-container {
+padding: 1.5rem 1rem 3rem;
+}
+
+.article-content {
+padding: 1.5rem;
+}
+}
 </head>
 <body>
 
@@ -136,7 +546,7 @@
 
   <header>
     <nav>
-      <a href="https://twimproject.com/"><img src="../LOGO.png" alt="TWIM Project" loading="eager"></a>
+      <a href="https://twimproject.com/"><img src="../logo-mindworld.png" alt="TWIM Project" loading="eager"></a>
       <div class="nav-links">
         <a href="https://twimproject.com/">Inicio</a>
         <a href="https://twimproject.com/insights/">Insights</a>
