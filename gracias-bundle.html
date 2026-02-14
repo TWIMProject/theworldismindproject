@@ -4,7 +4,17 @@
   <meta charset="UTF-8">
   <title>¡Gracias por tu compra!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="tu-estilo.css"><!-- Ajusta la ruta si hace falta -->
+  <style>
+    :root {--green:#265C4B;--green-dark:#173D30;--beige:#C2A78B;--beige-light:#D4C4AE;--sand:#F7F4F0;--cream:#FDFCFA;--text:#2B2420;--text-soft:#6B6058;--white:#FFFFFF;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Barlow Condensed',sans-serif;line-height:1.7;background:var(--cream);color:var(--text);font-size:18px;font-weight:300}
+    h1,h2{font-weight:600;color:var(--green-dark)}
+    a{color:var(--green);text-decoration:none;transition:all .2s}
+    a:hover{color:var(--green-dark)}
+    .container{width:93%;max-width:1200px;margin:0 auto}
+    .btn{display:inline-block;padding:.75rem 1.6rem;border-radius:5px;font-weight:500;text-decoration:none;font-size:.95rem;background:var(--green);color:var(--white);transition:all .25s}
+    .btn:hover{background:var(--green-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(38,92,75,.25)}
+  </style>
 </head>
 <body>
   <header>
@@ -37,8 +47,8 @@
     </p>
   </main>
 
-  <footer style="text-align:center; padding:2rem 0; background:var(--primary-dark); color:#fff;">
-    © 2025 TWIM Project · <a href="privacy.html" style="color:var(--accent);">Privacidad</a>
+  <footer style="text-align:center; padding:2rem 0; background:var(--green-dark); color:#fff;">
+    © 2026 TWIM Project · <a href="privacy.html" style="color:var(--beige-light);">Privacidad</a>
   </footer>
 </body>
 </html>
