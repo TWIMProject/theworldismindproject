@@ -23,86 +23,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
 
-  <style>
-    :root{--primary:#265C4B;--primary-dark:#173D30;--accent:#CDDDD6;--bg:#FCFEFD;--bg-soft:#EDF3F0;--text:#2B2420;--text-light:#7A6E65;--beige:#C2A78B}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Barlow Condensed',sans-serif;line-height:1.75;background:var(--bg);color:var(--text);font-size:18px;font-weight:300}
-    h1,h2,h3{font-weight:600;letter-spacing:.3px;color:var(--primary-dark)}
-    header{background:var(--primary-dark);padding:1rem 0;position:sticky;top:0;z-index:999;box-shadow:0 3px 12px rgba(0,0,0,.25)}
-    header nav{display:flex;justify-content:space-between;align-items:center;width:95%;max-width:1600px;margin:auto}
-    header nav a img{height:80px;width:auto;filter:drop-shadow(0 2px 4px rgba(0,0,0,.2))}
-    header .nav-links a{color:#fff;text-decoration:none;margin-left:1.4rem;font-weight:400;font-size:1rem;transition:opacity .2s}
-    header .nav-links a:hover{opacity:.8}
-    .btn{display:inline-block;padding:.75rem 1.6rem;background:var(--primary-dark);color:#fff;border-radius:4px;font-weight:400;text-decoration:none;transition:.2s}
-    .btn:hover{background:var(--primary);color:#fff}
-
-    .article-hero{
-      background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);
-      padding:5rem 1.5rem 4rem;
-      text-align:center;
-      color:#fff;
-    }
-    .article-hero h1{font-size:clamp(2rem,5vw,2.8rem);color:#fff;margin-bottom:.6rem;max-width:700px;margin-left:auto;margin-right:auto}
-    .article-hero .subtitle{font-size:1.1rem;opacity:.85;max-width:600px;margin:0 auto .8rem}
-    .article-hero .meta{font-size:.9rem;opacity:.65}
-
-    .article-container{
-      max-width:720px;
-      margin:-2rem auto 0;
-      padding:2.5rem 1.5rem 4rem;
-      position:relative;
-      z-index:1;
-      background:#fff;
-      border-radius:10px 10px 0 0;
-      box-shadow:0 -4px 20px rgba(0,0,0,.06);
-    }
-
-    .article-container p{
-      margin-bottom:1.6rem;
-      font-size:1.08rem;
-      line-height:1.85;
-    }
-
-    .article-container h2{
-      font-size:1.4rem;
-      margin:2.8rem 0 1rem;
-      padding-bottom:.4rem;
-      border-bottom:2px solid var(--accent);
-    }
-
-    .back-link{
-      display:inline-block;
-      margin-bottom:2rem;
-      color:var(--beige);
-      text-decoration:none;
-      font-weight:400;
-      font-size:.95rem;
-    }
-    .back-link:hover{text-decoration:underline}
-
-    .cta-banner{
-      background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);
-      color:#fff;
-      padding:2rem;
-      border-radius:8px;
-      text-align:center;
-      margin:3rem 0 1rem;
-    }
-    .cta-banner h3{color:#fff;margin-bottom:.5rem;font-size:1.3rem}
-    .cta-banner p{opacity:.85;margin-bottom:1rem}
-    .cta-banner .btn{background:var(--beige);color:#fff;font-weight:600;padding:.8rem 2rem}
-    .cta-banner .btn:hover{background:#A89070}
-
-    footer{background:var(--primary-dark);color:#fff;text-align:center;font-size:.9rem;padding:2.4rem 0}
-    footer a{color:var(--accent);text-decoration:none}
-
-    @media(max-width:600px){
-      header nav a img{height:55px}
-      .nav-links{display:none}
-      .article-container{padding:1.5rem 1rem 3rem;margin-top:-1rem}
-      .article-hero{padding:3.5rem 1.2rem 3rem}
-    }
-  </style>
+  <!-- CSS EXTERNO COMPARTIDO -->
+  <link rel="stylesheet" href="../twim-styles.css">
 
   <script type="application/ld+json">
   {
