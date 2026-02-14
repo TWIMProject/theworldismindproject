@@ -3,16 +3,29 @@ TWIM PROJECT - ESTILOS GLOBALES
 Archivo CSS compartido para toda la web
 =========================================== */
 
-/* VARIABLES DE COLOR */
+/* VARIABLES DE COLOR — sincronizadas con la home (index.html) */
 :root {
+–green: #265C4B;
+–green-dark: #173D30;
+–green-light: #2E6B5A;
+–beige: #C2A78B;
+–beige-dark: #A89070;
+–beige-light: #D4C4AE;
+–sand: #F7F4F0;
+–sand-dark: #EDE8E2;
+–cream: #FDFCFA;
+–text: #2B2420;
+–text-soft: #6B6058;
+–text-muted: #9A8E84;
+–white: #FFFFFF;
+–border: rgba(43,36,32,.07);
+/* Alias para compatibilidad */
 –primary: #265C4B;
 –primary-dark: #173D30;
-–accent: #CDDDD6;
-–bg: #FCFEFD;
-–bg-soft: #EDF3F0;
-–text: #2B2420;
-–text-light: #7A6E65;
-–beige: #C2A78B;
+–accent: #D4C4AE;
+–bg: #FDFCFA;
+–bg-soft: #F7F4F0;
+–text-light: #6B6058;
 }
 
 /* RESET BÁSICO */
@@ -35,17 +48,17 @@ font-weight: 300;
 h1, h2, h3 {
 font-weight: 600;
 letter-spacing: 0.3px;
-color: var(–primary-dark);
+color: var(–green-dark);
 }
 
 /* HEADER */
 header {
-background: var(–primary-dark);
-padding: 1rem 0;
+background: var(–green-dark);
+padding: .8rem 0;
 position: sticky;
 top: 0;
 z-index: 999;
-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+box-shadow: 0 2px 16px rgba(0,0,0,.15);
 }
 
 header nav {
@@ -58,44 +71,53 @@ margin: auto;
 }
 
 header nav a img {
-height: 80px;
+height: 75px;
 width: auto;
 filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 header .nav-links a {
-color: #fff;
+color: rgba(255,255,255,.8);
 text-decoration: none;
 margin-left: 1.4rem;
 font-weight: 400;
-font-size: 1rem;
-transition: opacity 0.2s;
+font-size: .88rem;
+padding: .4rem .65rem;
+border-radius: 4px;
+transition: all .2s;
 }
 
 header .nav-links a:hover {
-opacity: 0.8;
+color: #fff;
+background: rgba(255,255,255,.08);
 }
 
 /* BOTÓN GENERAL */
 .btn {
 display: inline-block;
-padding: 0.75rem 1.6rem;
-background: var(–primary-dark);
+padding: .75rem 1.6rem;
+background: var(–green);
 color: #fff;
-border-radius: 4px;
-font-weight: 400;
+border-radius: 5px;
+font-weight: 500;
 text-decoration: none;
-transition: 0.2s;
+font-size: .95rem;
+transition: all .25s ease;
+cursor: pointer;
+border: none;
+font-family: inherit;
 }
 
 .btn:hover {
-background: var(–primary);
+background: var(–green-dark);
 color: #fff;
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(38,92,75,.25);
 }
 
 /* HERO DE PÁGINA */
 .page-hero {
-background: linear-gradient(135deg, var(–primary-dark) 0%, var(–primary) 100%);
+background: linear-gradient(135deg, var(–green-dark) 0%, var(–green) 100%);
 padding: 5rem 1.5rem 4rem;
 text-align: center;
 color: #fff;
@@ -127,7 +149,7 @@ z-index: 1;
 /* TARJETA PILAR */
 .pillar-card {
 background: #fff;
-border: 3px solid var(–primary);
+border: 3px solid var(–green);
 border-radius: 10px;
 padding: 2rem;
 margin-bottom: 2rem;
@@ -137,11 +159,11 @@ overflow: hidden;
 }
 
 .pillar-card::before {
-content: “ARTÍCULO PRINCIPAL”;
+content: "ARTÍCULO PRINCIPAL";
 position: absolute;
 top: 0;
 right: 0;
-background: var(–primary);
+background: var(–green);
 color: #fff;
 font-size: 0.75rem;
 font-weight: 600;
@@ -161,7 +183,7 @@ font-size: 0.95rem;
 }
 
 .pillar-card a.read-link {
-color: var(–primary);
+color: var(–green);
 text-decoration: none;
 font-weight: 600;
 font-size: 1rem;
@@ -182,8 +204,8 @@ margin-top: 1rem;
 /* TARJETA DE ARTÍCULO */
 .article-card {
 background: #fff;
-border: 1px solid rgba(0, 0, 0, 0.06);
-border-radius: 8px;
+border: 1px solid var(–border);
+border-radius: 10px;
 padding: 1.6rem;
 transition: 0.2s;
 display: flex;
@@ -225,7 +247,7 @@ margin-bottom: 0.6rem;
 }
 
 .article-card a.read-link {
-color: var(–primary);
+color: var(–green);
 text-decoration: none;
 font-weight: 600;
 font-size: 0.9rem;
@@ -239,15 +261,15 @@ text-decoration: underline;
 /* ETIQUETA DE SECCIÓN */
 .section-label {
 font-size: 1.3rem;
-color: var(–primary-dark);
+color: var(–green-dark);
 margin: 2.5rem 0 1rem;
 padding-bottom: 0.4rem;
-border-bottom: 2px solid var(–accent);
+border-bottom: 2px solid var(–beige);
 }
 
 /* BANNER CTA */
 .cta-banner {
-background: linear-gradient(135deg, var(–primary-dark) 0%, var(–primary) 100%);
+background: linear-gradient(135deg, var(–green-dark) 0%, var(–green) 100%);
 color: #fff;
 padding: 2rem;
 border-radius: 8px;
@@ -267,15 +289,17 @@ margin-bottom: 1rem;
 }
 
 .cta-banner .btn {
-background: #fff;
-color: var(–beige);
+background: var(–beige);
+color: #fff;
 font-weight: 600;
 padding: 0.8rem 2rem;
 }
 
 .cta-banner .btn:hover {
-background: var(–accent);
-color: var(–primary-dark);
+background: var(–beige-dark);
+color: #fff;
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(194,167,139,.3);
 }
 
 /* ESTILOS ESPECÍFICOS DE ARTÍCULOS INDIVIDUALES */
@@ -294,7 +318,7 @@ margin-bottom: 1rem;
 }
 
 .article-header .breadcrumb a {
-color: var(–primary);
+color: var(–green);
 text-decoration: none;
 }
 
@@ -310,8 +334,8 @@ line-height: 1.2;
 
 .article-meta {
 font-size: 0.9rem;
-color: var(–text-light);
-border-top: 1px solid var(–accent);
+color: var(–text-soft);
+border-top: 1px solid var(–sand-dark);
 padding-top: 0.8rem;
 }
 
@@ -349,7 +373,7 @@ margin-bottom: 0.6rem;
 
 .article-content strong {
 font-weight: 600;
-color: var(–primary-dark);
+color: var(–green-dark);
 }
 
 .article-content em {
@@ -358,7 +382,7 @@ color: var(–text-light);
 }
 
 .article-content blockquote {
-border-left: 4px solid var(–primary);
+border-left: 4px solid var(–green);
 padding-left: 1.5rem;
 margin: 1.5rem 0;
 font-style: italic;
@@ -366,7 +390,7 @@ color: var(–text-light);
 }
 
 .highlight-box {
-background: var(–bg-soft);
+background: var(–sand);
 border-left: 4px solid var(–beige);
 padding: 1.5rem;
 margin: 1.5rem 0;
@@ -375,21 +399,25 @@ border-radius: 4px;
 
 .highlight-box h3 {
 margin-top: 0;
-color: var(–primary);
+color: var(–green);
 }
 
 /* FOOTER */
 footer {
-background: var(–primary-dark);
-color: #fff;
+background: var(–green-dark);
+color: rgba(255,255,255,.65);
 text-align: center;
-font-size: 0.9rem;
-padding: 2.4rem 0;
+font-size: 0.85rem;
+padding: 2.2rem 1.5rem;
 }
 
 footer a {
-color: var(–accent);
+color: rgba(255,255,255,.65);
 text-decoration: none;
+}
+
+footer a:hover {
+color: var(–white);
 }
 
 /* RESPONSIVE */
