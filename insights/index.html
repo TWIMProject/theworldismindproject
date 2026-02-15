@@ -60,6 +60,8 @@
       .nav-links a {
         margin-left: 0 !important;
       }
+    }
+
     :root {
       --green: #265C4B;
       --green-dark: #173D30;
@@ -341,13 +343,14 @@ footer a:hover { color: var(--white); }
       <a href="https://twimproject.com/" aria-label="Ir a inicio">
         <img src="../logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia" loading="eager">
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="https://twimproject.com/">Inicio</a>
         <a href="https://twimproject.com/#about">Sobre mí</a>
         <a href="https://twimproject.com/insights/">Insights</a>
         <a href="https://twimproject.com/#contacto">Contacto</a>
         <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn btn-beige">Rompe el TENGO QUE (39€)</a>
       </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
@@ -434,6 +437,7 @@ footer a:hover { color: var(--white); }
 
   <!-- FOOTER -->
 
+  <script>document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
   <footer>
     <p>© 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · <a href="https://twimproject.com/privacy.html">Privacidad</a></p>
   </footer>
