@@ -23,43 +23,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <style>
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #fff;
-      margin: 5px 0;
-      transition: 0.3s;
-    }
-    @media (max-width: 600px) {
-      .hamburger {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--green-dark);
-        padding: 1rem 1.5rem;
-        flex-direction: column;
-        gap: 1rem;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      }
-      .nav-links.open {
-        display: flex;
-      }
-      .nav-links a {
-        margin-left: 0 !important;
-      }
     :root {
       --green: #265C4B;
       --green-dark: #173D30;
@@ -77,363 +40,386 @@
       --border: rgba(43,36,32,.07);
     }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Barlow Condensed', sans-serif;
-  line-height: 1.7;
-  background: var(--cream);
-  color: var(--text);
-  font-size: 18px;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-}
-h1, h2, h3 { font-weight: 600; letter-spacing: .3px; color: var(--green-dark); }
-p { color: var(--text-soft); }
-a { transition: all .2s ease; }
-.container { width: 93%; max-width: 1200px; margin: 0 auto; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      line-height: 1.7;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-weight: 600; letter-spacing: .3px; color: var(--green-dark); }
+    p { color: var(--text-soft); }
+    a { transition: all .2s ease; }
+    .container { width: 93%; max-width: 1200px; margin: 0 auto; }
 
-/* ── BUTTONS ── */
-.btn {
-  display: inline-block;
-  padding: .75rem 1.6rem;
-  border-radius: 5px;
-  font-weight: 500;
-  text-decoration: none;
-  font-size: .95rem;
-  transition: all .25s ease;
-  cursor: pointer;
-  border: none;
-  font-family: inherit;
-}
-.btn-green { background: var(--green); color: var(--white); }
-.btn-green:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(38,92,75,.25); }
-.btn-beige { background: var(--beige); color: var(--white); }
-.btn-beige:hover { background: var(--beige-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(194,167,139,.3); }
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-block;
+      padding: .75rem 1.6rem;
+      border-radius: 5px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: .95rem;
+      transition: all .25s ease;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .btn-green { background: var(--green); color: var(--white); }
+    .btn-green:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(38,92,75,.25); }
+    .btn-beige { background: var(--beige); color: var(--white); }
+    .btn-beige:hover { background: var(--beige-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(194,167,139,.3); }
 
-/* ── HEADER ── */
-header {
-  background: var(--green-dark);
-  padding: .8rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 16px rgba(0,0,0,.15);
-}
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 93%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-header nav a img {
-  height: 75px;
-  width: auto;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
-}
-.nav-links { display: flex; align-items: center; gap: .15rem; }
-.nav-links a {
-  color: rgba(255,255,255,.8);
-  text-decoration: none;
-  font-weight: 400;
-  font-size: .88rem;
-  padding: .4rem .65rem;
-  border-radius: 4px;
-  transition: all .2s;
-}
-.nav-links a:hover { color: #fff; background: rgba(255,255,255,.08); }
+    /* ── HEADER ── */
+    header {
+      background: var(--green-dark);
+      padding: .8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 16px rgba(0,0,0,.15);
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 93%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header nav a img {
+      height: 75px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
+    }
+    .nav-links { display: flex; align-items: center; gap: .15rem; }
+    .nav-links a {
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      font-weight: 400;
+      font-size: .88rem;
+      padding: .4rem .65rem;
+      border-radius: 4px;
+      transition: all .2s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.08); }
 
-/* ── PAGE HERO ── */
-.page-hero {
-  background: linear-gradient(150deg, var(--green-dark), var(--green));
-  padding: 5rem 1.5rem 4rem;
-  text-align: center;
-  color: var(--white);
-}
-.page-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: var(--white);
-  margin-bottom: .6rem;
-}
-.page-hero p {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,.8);
-  max-width: 600px;
-  margin: 0 auto;
-}
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(150deg, var(--green-dark), var(--green));
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      margin-bottom: .6rem;
+    }
+    .page-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.8);
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-/* ── INSIGHTS CONTAINER ── */
-.insights-container {
-  max-width: 900px;
-  margin: -2rem auto 0;
-  padding: 2rem 1.5rem 4rem;
-  position: relative;
-  z-index: 1;
-}
+    /* ── INSIGHTS CONTAINER ── */
+    .insights-container {
+      max-width: 900px;
+      margin: -2rem auto 0;
+      padding: 2rem 1.5rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
 
-/* ── PILLAR CARD ── */
-.pillar-card {
-  background: var(--white);
-  border: 2px solid var(--green);
-  border-radius: 10px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 16px rgba(0,0,0,.06);
-  position: relative;
-  overflow: hidden;
-}
-.pillar-card::before {
-  content: "ARTÍCULO PRINCIPAL";
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: var(--green);
-  color: var(--white);
-  font-size: .72rem;
-  font-weight: 600;
-  padding: .35rem 1rem;
-  border-radius: 0 8px 0 8px;
-  letter-spacing: .3px;
-}
-.pillar-card h2 {
-  margin-top: .5rem;
-  font-size: 1.5rem;
-  color: var(--green-dark);
-}
-.pillar-card p {
-  margin: .6rem 0 1rem;
-  color: var(--text-soft);
-  font-size: .95rem;
-}
-.pillar-card .card-meta {
-  font-size: .8rem;
-  color: var(--text-muted);
-  margin-bottom: .6rem;
-  display: block;
-}
-.pillar-card a.read-link {
-  color: var(--green);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-}
-.pillar-card a.read-link:hover { color: var(--beige-dark); }
+    /* ── PILLAR CARD ── */
+    .pillar-card {
+      background: var(--white);
+      border: 2px solid var(--green);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .pillar-card::before {
+      content: "ARTÍCULO PRINCIPAL";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--green);
+      color: var(--white);
+      font-size: .72rem;
+      font-weight: 600;
+      padding: .35rem 1rem;
+      border-radius: 0 8px 0 8px;
+      letter-spacing: .3px;
+    }
+    .pillar-card h2 {
+      margin-top: .5rem;
+      font-size: 1.5rem;
+      color: var(--green-dark);
+    }
+    .pillar-card p {
+      margin: .6rem 0 1rem;
+      color: var(--text-soft);
+      font-size: .95rem;
+    }
+    .pillar-card .card-meta {
+      font-size: .8rem;
+      color: var(--text-muted);
+      margin-bottom: .6rem;
+      display: block;
+    }
+    .pillar-card a.read-link {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .pillar-card a.read-link:hover { color: var(--beige-dark); }
 
-/* ── SECTION LABEL ── */
-.section-label {
-  font-size: 1.3rem;
-  color: var(--green-dark);
-  margin: 2.5rem 0 1rem;
-  padding-bottom: .5rem;
-  border-bottom: 2px solid var(--beige-light);
-}
+    /* ── SECTION LABEL ── */
+    .section-label {
+      font-size: 1.3rem;
+      color: var(--green-dark);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--beige-light);
+    }
 
-/* ── ARTICLES GRID ── */
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-.article-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.6rem;
-  transition: all .25s;
-  display: flex;
-  flex-direction: column;
-}
-.article-card:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,.07);
-  transform: translateY(-3px);
-}
-.article-card .tag {
-  font-size: .72rem;
-  font-weight: 600;
-  color: var(--beige-dark);
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  margin-bottom: .5rem;
-}
-.article-card h3 {
-  font-size: 1.12rem;
-  margin-bottom: .4rem;
-  line-height: 1.3;
-  color: var(--green-dark);
-}
-.article-card p {
-  font-size: .9rem;
-  color: var(--text-soft);
-  flex-grow: 1;
-  margin-bottom: 1rem;
-  line-height: 1.55;
-}
-.article-card .card-meta {
-  font-size: .78rem;
-  color: var(--text-muted);
-  margin-bottom: .6rem;
-}
-.article-card a.read-link {
-  color: var(--green);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: .9rem;
-  margin-top: auto;
-}
-.article-card a.read-link:hover { color: var(--beige-dark); }
+    /* ── ARTICLES GRID ── */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .article-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.6rem;
+      transition: all .25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .article-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,.07);
+      transform: translateY(-3px);
+    }
+    .article-card .tag {
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--beige-dark);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: .5rem;
+    }
+    .article-card h3 {
+      font-size: 1.12rem;
+      margin-bottom: .4rem;
+      line-height: 1.3;
+      color: var(--green-dark);
+    }
+    .article-card p {
+      font-size: .9rem;
+      color: var(--text-soft);
+      flex-grow: 1;
+      margin-bottom: 1rem;
+      line-height: 1.55;
+    }
+    .article-card .card-meta {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-bottom: .6rem;
+    }
+    .article-card a.read-link {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .9rem;
+      margin-top: auto;
+    }
+    .article-card a.read-link:hover { color: var(--beige-dark); }
 
-/* ── CTA BANNER ── */
-.cta-banner {
-  background: linear-gradient(150deg, var(--green-dark), var(--green));
-  color: var(--white);
-  padding: 2.5rem 2rem;
-  border-radius: 10px;
-  text-align: center;
-  margin: 3rem 0 1rem;
-}
-.cta-banner h3 {
-  color: var(--white);
-  margin-bottom: .5rem;
-  font-size: 1.35rem;
-}
-.cta-banner p {
-  color: rgba(255,255,255,.8);
-  margin-bottom: 1.2rem;
-}
-.cta-banner .btn-beige {
-  font-weight: 600;
-  padding: .85rem 2.2rem;
-  font-size: 1rem;
-}
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(150deg, var(--green-dark), var(--green));
+      color: var(--white);
+      padding: 2.5rem 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin: 3rem 0 1rem;
+    }
+    .cta-banner h3 {
+      color: var(--white);
+      margin-bottom: .5rem;
+      font-size: 1.35rem;
+    }
+    .cta-banner p {
+      color: rgba(255,255,255,.8);
+      margin-bottom: 1.2rem;
+    }
+    .cta-banner .btn-beige {
+      font-weight: 600;
+      padding: .85rem 2.2rem;
+      font-size: 1rem;
+    }
 
-/* ── FOOTER ── */
-footer {
-  background: var(--green-dark);
-  color: rgba(255,255,255,.65);
-  text-align: center;
-  padding: 2.2rem 1.5rem;
-  font-size: .85rem;
-}
-footer a {
-  color: rgba(255,255,255,.65);
-  text-decoration: none;
-}
-footer a:hover { color: var(--white); }
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,.65);
+      text-align: center;
+      padding: 2.2rem 1.5rem;
+      font-size: .85rem;
+    }
+    footer a {
+      color: rgba(255,255,255,.65);
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--white); }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-  header nav a img { height: 60px; }
-  .nav-links { display: none; }
-  .insights-container { padding: 1.5rem 1rem 3rem; }
-  .page-hero { padding: 4rem 1rem 3rem; }
-}
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hamburger { display: block; }
+      header nav a img { height: 60px; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--green-dark);
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { margin-left: 0 !important; }
+      .insights-container { padding: 1.5rem 1rem 3rem; }
+      .page-hero { padding: 4rem 1rem 3rem; }
+    }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
-
   <header>
     <nav>
       <a href="https://twimproject.com/" aria-label="Ir a inicio">
         <img src="../logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia" loading="eager">
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="https://twimproject.com/">Inicio</a>
         <a href="https://twimproject.com/#about">Sobre mí</a>
         <a href="https://twimproject.com/insights/">Insights</a>
         <a href="https://twimproject.com/#contacto">Contacto</a>
         <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn btn-beige">Rompe el TENGO QUE (39€)</a>
       </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
   <!-- PAGE HERO -->
-
   <div class="page-hero">
     <h1>Insights</h1>
     <p>Psicología aplicada al rendimiento y la elección. Sin rodeos, sin relleno.</p>
   </div>
 
   <!-- CONTENT -->
-
   <div class="insights-container">
 
-<!-- PILLAR -->
-<div class="pillar-card">
-  <h2>Cómo dejar de hacer las cosas por obligación (y recuperar tu margen de elección)</h2>
-  <p>El mapa completo del mecanismo: qué es el mandato interno, por qué «hacer» calma, el juez interno, la técnica de 120 segundos, el protocolo de 7 días y los errores comunes. Punto de partida para todo el cluster.</p>
-  <span class="card-meta">3 feb 2026 · 12 min</span>
-  <a class="read-link" href="como-dejar-de-hacer-las-cosas-por-obligacion.html">Leer artículo →</a>
-</div>
+    <!-- PILLAR -->
+    <div class="pillar-card">
+      <h2>Cómo dejar de hacer las cosas por obligación (y recuperar tu margen de elección)</h2>
+      <p>El mapa completo del mecanismo: qué es el mandato interno, por qué «hacer» calma, el juez interno, la técnica de 120 segundos, el protocolo de 7 días y los errores comunes. Punto de partida para todo el cluster.</p>
+      <span class="card-meta">3 feb 2026 · 12 min</span>
+      <a class="read-link" href="como-dejar-de-hacer-las-cosas-por-obligacion.html">Leer artículo →</a>
+    </div>
 
-<h2 class="section-label">Serie: Rompe el «TENGO QUE»</h2>
+    <h2 class="section-label">Serie: Rompe el «TENGO QUE»</h2>
 
-<div class="articles-grid">
+    <div class="articles-grid">
+      <div class="article-card">
+        <span class="tag">Técnica</span>
+        <h3>Urgencia mental: qué es y cómo frenarla en 120 segundos</h3>
+        <p>Guía práctica para cortar el «ahora/ya/no puedo parar» en 2 minutos. Incluye variantes por contexto y mini-plan de 7 días.</p>
+        <span class="card-meta">3 feb 2026 · 9 min</span>
+        <a class="read-link" href="urgencia-mental-frenarla-120-segundos.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Ejercicios</span>
+        <h3>Del «debería» al «quiero»: 5 ejercicios para recuperar la agencia</h3>
+        <p>Reescritura, registro alivio/coste, micro-límites, diálogo con el juez. 10–15 min/día.</p>
+        <span class="card-meta">4 feb 2026 · 8 min</span>
+        <a class="read-link" href="del-deberia-al-quiero-ejercicios.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Diagnóstico</span>
+        <h3>15 señales de que vives en obligación (y no por deseo)</h3>
+        <p>Autochequeo rápido: señales cognitivas, corporales y conductuales del mandato interno.</p>
+        <span class="card-meta">5 feb 2026 · 7 min</span>
+        <a class="read-link" href="senales-vivir-en-obligacion.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Tutorial</span>
+        <h3>Técnica de 2 minutos para cortar rumiación</h3>
+        <p>Paso a paso para interrumpir el bucle mental sin convertirlo en otro deber.</p>
+        <span class="card-meta">6 feb 2026 · 6 min</span>
+        <a class="read-link" href="tecnica-2-minutos-rumiacion.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Psicoeducación</span>
+        <h3>Juez interno: qué es, de dónde viene y cómo desactivar su urgencia</h3>
+        <p>Orígenes, lenguaje del juez y 5 intervenciones prácticas. Incluye mini-protocolo de 7 días.</p>
+        <span class="card-meta">7 feb 2026 · 8 min</span>
+        <a class="read-link" href="juez-interno-como-desactivar.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Guía completa</span>
+        <h3>Protocolo de 7 días (10–15 min): plan para salir del piloto automático</h3>
+        <p>Plan detallado día a día con tareas, frases guía y plantilla de protocolo personal.</p>
+        <span class="card-meta">10 feb 2026 · 9 min</span>
+        <a class="read-link" href="protocolo-7-dias-urgencia-mental.html">Leer →</a>
+      </div>
+    </div>
 
-  <div class="article-card">
-    <span class="tag">Técnica</span>
-    <h3>Urgencia mental: qué es y cómo frenarla en 120 segundos</h3>
-    <p>Guía práctica para cortar el «ahora/ya/no puedo parar» en 2 minutos. Incluye variantes por contexto y mini-plan de 7 días.</p>
-    <span class="card-meta">3 feb 2026 · 9 min</span>
-    <a class="read-link" href="urgencia-mental-frenarla-120-segundos.html">Leer →</a>
-  </div>
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h3>Rompe el «TENGO QUE»</h3>
+      <p>Todo el contenido de estos artículos integrado en un entrenamiento breve con vídeo, PDF, audio y protocolo guiado.</p>
+      <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn btn-beige">Reservar acceso (39€)</a>
+    </div>
 
-  <div class="article-card">
-    <span class="tag">Ejercicios</span>
-    <h3>Del «debería» al «quiero»: 5 ejercicios para recuperar la agencia</h3>
-    <p>Reescritura, registro alivio/coste, micro-límites, diálogo con el juez. 10–15 min/día.</p>
-    <span class="card-meta">4 feb 2026 · 8 min</span>
-    <a class="read-link" href="del-deberia-al-quiero-ejercicios.html">Leer →</a>
-  </div>
-
-  <div class="article-card">
-    <span class="tag">Diagnóstico</span>
-    <h3>15 señales de que vives en obligación (y no por deseo)</h3>
-    <p>Autochequeo rápido: señales cognitivas, corporales y conductuales del mandato interno.</p>
-    <span class="card-meta">5 feb 2026 · 7 min</span>
-    <a class="read-link" href="senales-vivir-en-obligacion.html">Leer →</a>
-  </div>
-
-  <div class="article-card">
-    <span class="tag">Tutorial</span>
-    <h3>Técnica de 2 minutos para cortar rumiación</h3>
-    <p>Paso a paso para interrumpir el bucle mental sin convertirlo en otro deber.</p>
-    <span class="card-meta">6 feb 2026 · 6 min</span>
-    <a class="read-link" href="tecnica-2-minutos-rumiacion.html">Leer →</a>
-  </div>
-
-  <div class="article-card">
-    <span class="tag">Psicoeducación</span>
-    <h3>Juez interno: qué es, de dónde viene y cómo desactivar su urgencia</h3>
-    <p>Orígenes, lenguaje del juez y 5 intervenciones prácticas. Incluye mini-protocolo de 7 días.</p>
-    <span class="card-meta">7 feb 2026 · 8 min</span>
-    <a class="read-link" href="juez-interno-como-desactivar.html">Leer →</a>
-  </div>
-
-  <div class="article-card">
-    <span class="tag">Guía completa</span>
-    <h3>Protocolo de 7 días (10–15 min): plan para salir del piloto automático</h3>
-    <p>Plan detallado día a día con tareas, frases guía y plantilla de protocolo personal.</p>
-    <span class="card-meta">10 feb 2026 · 9 min</span>
-    <a class="read-link" href="protocolo-7-dias-urgencia-mental.html">Leer →</a>
-  </div>
-
-</div>
-
-<!-- CTA -->
-<div class="cta-banner">
-  <h3>Rompe el «TENGO QUE»</h3>
-  <p>Todo el contenido de estos artículos integrado en un entrenamiento breve con vídeo, PDF, audio y protocolo guiado.</p>
-  <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn btn-beige">Reservar acceso (39€)</a>
-</div>
   </div>
 
   <!-- FOOTER -->
-
+  <script>document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
   <footer>
     <p>© 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · <a href="https://twimproject.com/privacy.html">Privacidad</a></p>
   </footer>
