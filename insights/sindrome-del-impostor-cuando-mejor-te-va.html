@@ -40,14 +40,15 @@
       --text-muted: #9A8E84;
       --white: #FFFFFF;
       --border: rgba(43,36,32,.07);
+       --accent: #D4C4AE;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Barlow Condensed', sans-serif;
-      line-height: 1.7;
-      background: var(--cream);
+     line-height: 1.75;
+      background: #efefef;
       color: var(--text);
       font-size: 18px;
       font-weight: 300;
@@ -161,17 +162,24 @@
       border-radius: 12px;
       padding: 2.2rem 2.2rem 1.6rem;
       box-shadow: 0 6px 22px rgba(0,0,0,.06);
+       max-width: 740px;
+      margin: 0 auto;
+      line-height: 1.8;
     }
     .article-box h2 {
-      margin: 1.6rem 0 .7rem;
-      font-size: 1.35rem;
+      margin: 2rem 0 1rem;
+      font-size: 1.85rem;
       color: var(--green-dark);
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent);
+      line-height: 1.2;
     }
+    .article-box p { margin-bottom: 1.2rem; }
     .article-box ul, .article-box ol {
-      margin: .4rem 0 1.2rem 1.1rem;
+      margin: 1rem 0 1.5rem 1.3rem;
       color: var(--text-soft);
     }
-    .article-box li { margin-bottom: .35rem; }
+     .article-box li { margin-bottom: .55rem; }
 
     .mini-box {
       background: var(--sand);
@@ -226,6 +234,7 @@
       .nav-links.open { display: flex; }
       .nav-links a { margin-left: 0 !important; }
       .article-box { padding: 1.6rem 1.4rem 1.2rem; }
+      .article-box h2 { font-size: 1.65rem; }
     }
   </style>
 </head>
