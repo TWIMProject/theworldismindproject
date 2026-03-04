@@ -3,355 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Síndrome del impostor. Por qué cuanto mejor te va, más miedo tienes a que se note | TWIM Project</title>
-  <meta name="description" content="Cuando el elogio aprieta y el éxito no entra, suele activarse un juez interno. Un mapa claro del mecanismo y un primer gesto para regular la alarma.">
+  <meta name="description" content="Cuando el elogio aprieta y el éxito no entra, suele activarse un juez interno. Un mapa claro del mecanismo y un primer gesto para regular la alarma. Por Daniel Orozco Abia, Psicólogo CV11515.">
   <meta name="keywords" content="síndrome del impostor, impostor, inseguridad laboral, juez interno, autoexigencia, ansiedad por exposición, Daniel Orozco Abia">
   <meta name="author" content="Daniel Orozco Abia">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://twimproject.com/insights/sindrome-del-impostor-cuando-mejor-te-va.html">
+  <meta name="geo.region" content="ES">
 
+  <link rel="icon" href="../logo-mindworld.png" type="image/png">
   <meta property="og:title" content="Síndrome del impostor. Por qué cuanto mejor te va, más miedo tienes a que se note">
   <meta property="og:description" content="Cuando el elogio aprieta y el éxito no entra, suele activarse un juez interno. Un mapa claro del mecanismo y un primer gesto para regular la alarma.">
-  <meta property="og:image" content="https://twimproject.com/daniel-orozco-consulta.jpg">
+  <meta property="og:image" content="https://twimproject.com/preview.jpg">
   <meta property="og:url" content="https://twimproject.com/insights/sindrome-del-impostor-cuando-mejor-te-va.html">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-03-04">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="../logo-mindworld.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../twim-styles.css">
 
-  <style>
-    :root {
-      --green: #265C4B;
-      --green-dark: #173D30;
-      --green-light: #2E6B5A;
-      --beige: #C2A78B;
-      --beige-dark: #A89070;
-      --beige-light: #D4C4AE;
-      --sand: #F7F4F0;
-      --sand-dark: #EDE8E2;
-      --cream: #FDFCFA;
-      --text: #2B2420;
-      --text-soft: #6B6058;
-      --text-muted: #9A8E84;
-      --white: #FFFFFF;
-      --border: rgba(43,36,32,.07);
-       --accent: #D4C4AE;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Barlow Condensed', sans-serif;
-     line-height: 1.75;
-      background: #efefef;
-      color: var(--text);
-      font-size: 18px;
-      font-weight: 300;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3 { font-weight: 600; letter-spacing: .3px; color: var(--green-dark); }
-    p { color: var(--text-soft); margin-bottom: 1rem; }
-    a { transition: all .2s ease; }
-
-    .container { width: 93%; max-width: 1200px; margin: 0 auto; }
-
-    header {
-      background: var(--green-dark);
-      padding: .8rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 2px 16px rgba(0,0,0,.15);
-    }
-    header nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 93%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    header nav a img {
-      height: 75px;
-      width: auto;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
-    }
-    .nav-links { display: flex; align-items: center; gap: .15rem; }
-    .nav-links a {
-      color: rgba(255,255,255,.8);
-      text-decoration: none;
-      font-weight: 400;
-      font-size: .88rem;
-      padding: .4rem .65rem;
-      border-radius: 4px;
-      transition: all .2s;
-    }
-    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.08); }
-
-    .btn {
-      display: inline-block;
-      padding: .75rem 1.6rem;
-      border-radius: 5px;
-      font-weight: 500;
-      text-decoration: none;
-      font-size: .95rem;
-      transition: all .25s ease;
-      cursor: pointer;
-      border: none;
-      font-family: inherit;
-    }
-    .btn-beige { background: var(--beige); color: var(--white); }
-    .btn-beige:hover { background: var(--beige-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(194,167,139,.3); }
-
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #fff;
-      margin: 5px 0;
-      transition: 0.3s;
-    }
-
-    .article-hero {
-      background: linear-gradient(150deg, var(--green-dark), var(--green));
-      padding: 5rem 1.5rem 4rem;
-      text-align: center;
-      color: var(--white);
-    }
-    .crumbs {
-      font-size: .85rem;
-      color: rgba(255,255,255,.7);
-      margin-bottom: 1rem;
-      letter-spacing: .2px;
-    }
-    .article-hero h1 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--white);
-      margin-bottom: .7rem;
-      line-height: 1.15;
-    }
-    .article-meta {
-      font-size: .95rem;
-      color: rgba(255,255,255,.75);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .article-container {
-      max-width: 900px;
-      margin: -2rem auto 0;
-      padding: 2rem 1.5rem 4rem;
-      position: relative;
-      z-index: 1;
-    }
-    .article-box {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.2rem 2.2rem 1.6rem;
-      box-shadow: 0 6px 22px rgba(0,0,0,.06);
-       max-width: 740px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-    .article-box h2 {
-      margin: 2rem 0 1rem;
-      font-size: 1.85rem;
-      color: var(--green-dark);
-      padding-bottom: .4rem;
-      border-bottom: 2px solid var(--accent);
-      line-height: 1.2;
-    }
-    .article-box p { margin-bottom: 1.2rem; }
-    .article-box ul, .article-box ol {
-      margin: 1rem 0 1.5rem 1.3rem;
-      color: var(--text-soft);
-    }
-     .article-box li { margin-bottom: .55rem; }
-
-    .mini-box {
-      background: var(--sand);
-      border: 1px solid var(--sand-dark);
-      border-radius: 10px;
-      padding: 1.2rem 1.2rem .8rem;
-      margin: 1.4rem 0 1.2rem;
-    }
-    .mini-box p { margin-bottom: .8rem; }
-
-    .related {
-      margin-top: 1.4rem;
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--border);
-      font-size: 1rem;
-    }
-    .related a {
-      color: var(--green);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .related a:hover { color: var(--beige-dark); }
-
-    footer {
-      background: var(--green-dark);
-      color: rgba(255,255,255,.65);
-      text-align: center;
-      padding: 2.2rem 1.5rem;
-      font-size: .85rem;
-    }
-    footer a {
-      color: rgba(255,255,255,.65);
-      text-decoration: none;
-    }
-    footer a:hover { color: var(--white); }
-
-    @media (max-width: 600px) {
-      .hamburger { display: block; }
-      header nav a img { height: 60px; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--green-dark);
-        padding: 1rem 1.5rem;
-        flex-direction: column;
-        gap: 1rem;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Síndrome del impostor. Por qué cuanto mejor te va, más miedo tienes a que se note",
+    "description":"Cuando el elogio aprieta y el éxito no entra, suele activarse un juez interno. Un mapa claro del mecanismo y un primer gesto para regular la alarma.",
+    "author":{
+      "@type":"Person",
+      "name":"Daniel Orozco Abia",
+      "jobTitle":"Psicólogo General Sanitario",
+      "url":"https://twimproject.com/#about"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"TWIM Project",
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://twimproject.com/logo-mindworld.png"
       }
-      .nav-links.open { display: flex; }
-      .nav-links a { margin-left: 0 !important; }
-      .article-box { padding: 1.6rem 1.4rem 1.2rem; }
-      .article-box h2 { font-size: 1.65rem; }
-    }
-  </style>
+    },
+    "datePublished":"2026-03-04",
+    "mainEntityOfPage":"https://twimproject.com/insights/sindrome-del-impostor-cuando-mejor-te-va.html",
+    "image":"https://twimproject.com/preview.jpg",
+    "inLanguage":"es"
+  }
+  </script>
 </head>
 
 <body>
   <header>
     <nav>
-      <a href="https://twimproject.com/" aria-label="Ir a inicio">
-        <img src="../logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia" loading="eager">
-      </a>
-
+      <a href="https://twimproject.com/"><img src="../logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia" loading="eager"></a>
       <div class="nav-links" id="navLinks">
         <a href="https://twimproject.com/">Inicio</a>
-        <a href="https://twimproject.com/#about">Sobre mí</a>
         <a href="https://twimproject.com/insights/">Insights</a>
-        <a href="https://twimproject.com/#contacto">Contacto</a>
-        <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn btn-beige">Rompe el TENGO QUE (39€)</a>
+        <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn">Rompe el TENGO QUE (39€)</a>
       </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
   <div class="article-hero">
-    <div class="crumbs">TWIM Project · Insights · Artículo</div>
-    <h1>Síndrome del impostor. Por qué cuanto mejor te va, más miedo tienes a que se note</h1>
-    <div class="article-meta">
-      Por Daniel Orozco Abia, Psicólogo General Sanitario CV11515 · 4 de marzo de 2026 · 10 min de lectura
+    <div class="breadcrumb">
+      <a href="https://twimproject.com/">TWIM Project</a> &rsaquo;
+      <a href="https://twimproject.com/insights/">Insights</a> &rsaquo; Artículo
     </div>
+    <h1>Síndrome del impostor. Por qué cuanto mejor te va, más miedo tienes a que se note</h1>
+    <p class="meta">Por <a href="https://twimproject.com/#about">Daniel Orozco Abia</a>, Psicólogo General Sanitario CV11515 &middot; 4 de marzo de 2026 &middot; 10 min de lectura</p>
   </div>
 
-  <main class="article-container">
-    <article class="article-box">
+  <article class="article-content">
 
-      <p>Hay una escena que se repite en silencio. Por fuera cumples, entregas, resuelves. Te miran y parece obvio que puedes con ello. Y por dentro algo no encaja. No te reconoces en la imagen que los demás ven. No es modestia. Es un desajuste que aprieta.</p>
+    <p>Hay una escena que se repite en silencio. Por fuera cumples, entregas, resuelves. Te miran y parece obvio que puedes con ello. Y por dentro algo no encaja. No te reconoces en la imagen que los demás ven. No es modestia. Es un desajuste que aprieta.</p>
 
-      <p>Te felicitan y no te relaja, te tensa. Te dan más responsabilidad y no te anima, te obliga a apretar más. Y aparece ese pensamiento que casi nunca se dice en voz alta. A ver cuándo se dan cuenta.</p>
+    <p>Te felicitan y no te relaja, te tensa. Te dan más responsabilidad y no te anima, te obliga a apretar más. Y aparece ese pensamiento que casi nunca se dice en voz alta. A ver cuándo se dan cuenta.</p>
 
-      <h2>Cuando el elogio aprieta</h2>
-      <p>En consulta esto suele tener una clave muy clara. No es una duda razonable del tipo me falta experiencia. Es una alarma emocional del tipo si se nota mi duda pierdo el lugar. La persona no está valorando un desempeño. Está protegiendo una posición interna.</p>
+    <h2>Cuando el elogio aprieta</h2>
+    <p>En consulta esto suele tener una clave muy clara. No es una duda razonable del tipo me falta experiencia. Es una alarma emocional del tipo si se nota mi duda pierdo el lugar. La persona no está valorando un desempeño. Está protegiendo una posición interna.</p>
 
-      <p>Por eso los trucos típicos duran poco. Listas de logros, frases motivacionales, recordatorios de capacidad. Todo eso puede calmar un rato. Pero el mecanismo vuelve porque no vive en la información. Vive en una relación con la propia valía.</p>
+    <p>Por eso los trucos típicos duran poco. Listas de logros, frases motivacionales, recordatorios de capacidad. Todo eso puede calmar un rato. Pero el mecanismo vuelve porque no vive en la información. Vive en una relación con la propia valía.</p>
 
-      <h2>La vigilancia que no se ve</h2>
-      <p>El síndrome del impostor no solo hace pensar. Hace vigilar. Mides el tono, el gesto, el silencio, la seguridad con la que respondes. No es que no sepas. Es que no te permites no saber sin sentir peligro.</p>
+    <h2>La vigilancia que no se ve</h2>
+    <p>El síndrome del impostor no solo hace pensar. Hace vigilar. Mides el tono, el gesto, el silencio, la seguridad con la que respondes. No es que no sepas. Es que no te permites no saber sin sentir peligro.</p>
 
-      <p>En la práctica suele haber tres piezas que se encajan como un mecanismo.</p>
-      <ol>
-        <li>Distancia entre cómo te ven y cómo te sientes.</li>
-        <li>Miedo a que esa distancia se descubra.</li>
-        <li>Esfuerzo por controlar la imagen para que no se note.</li>
-      </ol>
+    <p>En la práctica suele haber tres piezas que se encajan como un mecanismo.</p>
+    <ul>
+      <li>Distancia entre cómo te ven y cómo te sientes.</li>
+      <li>Miedo a que esa distancia se descubra.</li>
+      <li>Esfuerzo por controlar la imagen para que no se note.</li>
+    </ul>
 
-      <h2>El juez interno y por qué nada es suficiente</h2>
-      <p>La mayoría de personas lo describen como una voz interna que examina. No es una voz que empuja de forma sana. Es una voz que pasa lista.</p>
+    <h2>El juez interno y por qué nada es suficiente</h2>
+    <p>La mayoría de personas lo describen como una voz interna que examina. No es una voz que empuja de forma sana. Es una voz que pasa lista.</p>
 
-      <p>La diferencia se nota rápido.</p>
-      <ol>
-        <li>Empuje sano. Prepárate bien y confía en el proceso.</li>
-        <li>Juez interno. Como dudes se nota. Como no seas impecable te caes.</li>
-      </ol>
+    <div class="highlight-box">
+      <p>Empuje sano. Prepárate bien y confía en el proceso.</p>
+      <p>Juez interno. Como dudes se nota. Como no seas impecable te caes.</p>
+    </div>
 
-      <p>Con ese juez, el éxito no se disfruta. Se sobrevive. Y el elogio, que debería calmar, a veces activa más alarma. Si te colocan muy arriba, la caída se siente más dolorosa. Entonces la mente se protege quitándote mérito.</p>
+    <p>Con ese juez, el éxito no se disfruta. Se sobrevive. Y el elogio, que debería calmar, a veces activa más alarma. Si te colocan muy arriba, la caída se siente más dolorosa. Entonces la mente se protege quitándote mérito.</p>
 
-      <h2>Lo que lo mantiene sin darte cuenta</h2>
-      <p>No son defectos. Son intentos de control. Funcionan a corto plazo y te cuestan caro a largo.</p>
-      <ol>
-        <li>Sobrepreparación. Sale bien, pero confirma una idea peligrosa. Si no hago el doble no valgo.</li>
-        <li>Perfeccionismo. No busca excelencia. Busca inmunidad contra la vergüenza.</li>
-        <li>Evitación. No porque no puedas, sino para no ser visto.</li>
-        <li>Justificación constante. Explicas de más para que no se note la inseguridad.</li>
-        <li>Desconexión del cuerpo. Insomnio, tensión, cansancio extraño. La mente en guardia y el cuerpo pagando.</li>
-      </ol>
+    <h2>Lo que lo mantiene sin darte cuenta</h2>
+    <p>No son defectos. Son intentos de control. Funcionan a corto plazo y te cuestan caro a largo.</p>
+    <ul>
+      <li>Sobrepreparación. Sale bien, pero confirma una idea peligrosa. Si no hago el doble no valgo.</li>
+      <li>Perfeccionismo. No busca excelencia. Busca inmunidad contra la vergüenza.</li>
+      <li>Evitación. No porque no puedas, sino para no ser visto.</li>
+      <li>Justificación constante. Explicas de más para que no se note la inseguridad.</li>
+      <li>Desconexión del cuerpo. Insomnio, tensión, cansancio extraño. La mente en guardia y el cuerpo pagando.</li>
+    </ul>
 
-      <h2>Primer gesto cuando aparezca</h2>
-      <div class="mini-box">
-        <p>Cuando sube la emoción de me van a descubrir, discutir con la cabeza suele empeorarla. El juez interno discute mejor que tú. El primer gesto es volver al presente y etiquetar.</p>
-        <ol>
-          <li>Pies al suelo.</li>
-          <li>Exhala lento, más largo que la inhalación.</li>
-          <li>Mira un punto fijo un segundo.</li>
-          <li>Di por dentro. Ahora soy adulta. Lo que oigo no es un hecho. Es el juez interno pasando lista.</li>
-        </ol>
-        <p>Esto no es autoengaño. Es orientación. Separas una voz interna de la realidad. Y esa separación baja la alarma lo suficiente como para no actuar desde la vergüenza.</p>
-      </div>
+    <h2>Primer gesto cuando aparezca</h2>
 
-      <h2>Un registro breve para ganar margen</h2>
-      <p>Durante 7 días anota solo tres cosas. Un minuto al día. No para analizarte sin fin. Para ver el mecanismo con claridad.</p>
-      <ol>
-        <li>La escena. Qué pasó.</li>
-        <li>La frase exacta del juez. Literal.</li>
-        <li>Lo que hiciste después. Trabajar de más, callarte, revisar, evitar, justificarte.</li>
-      </ol>
+    <div class="intervention-box">
+      <h3>Regular y etiquetar</h3>
+      <p>Cuando sube la emoción de me van a descubrir, discutir con la cabeza suele empeorarla. El juez interno discute mejor que tú. El primer gesto es volver al presente y etiquetar.</p>
+      <ul>
+        <li>Pies al suelo.</li>
+        <li>Exhala lento, más largo que la inhalación.</li>
+        <li>Mira un punto fijo un segundo.</li>
+        <li>Di por dentro. Ahora soy adulta. Lo que oigo no es un hecho. Es el juez interno pasando lista.</li>
+      </ul>
+      <p>Esto no es autoengaño. Es orientación. Separas una voz interna de la realidad. Y esa separación baja la alarma lo suficiente como para no actuar desde la vergüenza.</p>
+    </div>
 
-      <p>Este registro hace algo muy potente. Separa tú de la voz. Y cuando esa separación aparece, por primera vez hay elección.</p>
+    <h2>Un registro breve para ganar margen</h2>
+    <p>Durante 7 días anota solo tres cosas. Un minuto al día. No para analizarte sin fin. Para ver el mecanismo con claridad.</p>
+    <ul>
+      <li>La escena. Qué pasó.</li>
+      <li>La frase exacta del juez. Literal.</li>
+      <li>Lo que hiciste después. Trabajar de más, callarte, revisar, evitar, justificarte.</li>
+    </ul>
 
-      <h2>Cierre</h2>
-      <p>El síndrome del impostor no es que no valgas. Es que hay una parte de ti que no puede recibir el reconocimiento sin sospecha, porque vive bajo un juez interno. El primer cambio no es creerte lo contrario a la fuerza. Es reconocer quién habla dentro de ti y dejar de obedecerlo como si fuera la verdad.</p>
+    <p>Este registro hace algo muy potente. Separa tú de la voz. Y cuando esa separación aparece, por primera vez hay elección.</p>
 
-      <div class="related">
-        Para seguir con el mismo hilo, te interesa este artículo
-        <a href="juez-interno-como-desactivar.html">Juez interno. Qué es, de dónde viene y cómo desactivar su urgencia</a>
-      </div>
+    <div class="cta-block">
+      <h3>Si el juez aprieta, no lo pelees. Interrúmpelo</h3>
+      <p>Si te interesa trabajar este mecanismo con un protocolo breve, “Rompe el TENGO QUE” integra herramientas prácticas para bajar urgencia y recuperar margen de elección.</p>
+      <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn">Reservar acceso (39€)</a>
+      <p class="cta-details">Acceso inmediato</p>
+    </div>
 
-    </article>
-  </main>
+    <h2>Sigue leyendo</h2>
+    <div class="related-grid">
+      <a class="related-card" href="juez-interno-como-desactivar.html"><strong>Juez interno. Qué es, de dónde viene y cómo desactivar su urgencia</strong><span>Orígenes, lenguaje del juez y 5 intervenciones prácticas</span></a>
+      <a class="related-card" href="tecnica-2-minutos-rumiacion.html"><strong>Técnica de 2 minutos para cortar rumiación</strong><span>Interrumpe el bucle sin convertirlo en otro deber</span></a>
+      <a class="related-card" href="como-dejar-de-hacer-las-cosas-por-obligacion.html"><strong>Cómo dejar de hacer las cosas por obligación</strong><span>El mapa completo del mecanismo y el margen de elección</span></a>
+    </div>
 
-  <script>
-    document.getElementById('hamburger').addEventListener('click', function () {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-  </script>
+  </article>
 
+  <script>document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
   <footer>
-    <p>© 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · <a href="https://twimproject.com/privacy.html">Privacidad</a></p>
+    <p>&copy; 2026 TWIM Project &middot; Daniel Orozco Abia, Psicólogo General Sanitario CV11515</p>
+    <p><a href="https://twimproject.com/">Inicio</a> &middot; <a href="https://twimproject.com/insights/">Insights</a> &middot; <a href="https://twimproject.com/privacy.html">Privacidad</a></p>
   </footer>
 </body>
 </html>
