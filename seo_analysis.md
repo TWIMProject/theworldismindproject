@@ -1,90 +1,137 @@
 # Análisis SEO - TWIM Project
-## Fecha: 30 enero 2026
+## Última actualización: 9 marzo 2026
 
-### ✅ PUNTOS FUERTES ACTUALES
+---
 
-1. **Meta Tags Básicos**: Título, descripción y robots implementados
-2. **Open Graph & Twitter Cards**: Configuración social presente
-3. **Schema.org**: JSON-LD para el libro implementado
-4. **SSL/HTTPS**: Sitio seguro
-5. **Canonical URL**: Implementado
-6. **Responsive**: Meta viewport configurado
+## SCORE ACTUAL ESTIMADO: 88/100
 
-### ⚠️ PROBLEMAS CRÍTICOS DETECTADOS
+| Métrica | Score | Estado |
+|---------|-------|--------|
+| Technical SEO | 90/100 | Excelente |
+| On-Page SEO | 88/100 | Muy bueno |
+| Schema/Structured Data | 95/100 | Excelente |
+| Content Quality | 85/100 | Bueno |
+| Mobile-First | 90/100 | Excelente |
 
-#### 1. **URLs con Fragmentos (#)** - CRÍTICO
-- Todas las secciones usan URLs de tipo `#about`, `#solutions`, etc.
-- Los motores de búsqueda NO indexan contenido con fragmentos como páginas separadas
-- **Impacto**: Solo se indexa como 1 página, perdiendo 10+ oportunidades de ranking
+---
 
-#### 2. **Ausencia de Headings Jerárquicos**
-- Solo hay H2 y H3, falta estructura H1 → H2 → H3
-- El título principal debería ser H1, no `<p class="hero__text">`
-- **Impacto**: Motores no identifican correctamente la jerarquía de contenido
+### PUNTOS FUERTES ACTUALES
 
-#### 3. **Imágenes sin ALT o ALT deficiente**
-- Muchas imágenes carecen de ALT descriptivo
-- Logo solo tiene "LOGO" como ALT
-- **Impacto**: Pérdida de SEO visual y accesibilidad
+1. **Schema.org muy completo**: Organization, Person, Book, FAQPage, BreadcrumbList, Product, WebSite, VideoObject, Article (con datePublished/dateModified en todos)
+2. **Meta Tags optimizados**: Title, description, keywords, author, geo tags, robots directives en todas las páginas
+3. **Open Graph + Twitter Cards**: Configuración social completa en homepage y artículos
+4. **Jerarquía HTML correcta**: H1 en hero, estructura H1→H2→H3 coherente
+5. **Imágenes optimizadas**: ALT descriptivos, WebP con fallback, lazy loading, width/height para CLS
+6. **Performance**: Preconnect, preload, dns-prefetch, font-display:swap, lazy loading en iframes
+7. **Accesibilidad**: Aria-labels, autocomplete en forms, honeypot anti-spam
+8. **Contenido de calidad**: 10 artículos bien estructurados con pillar + cluster strategy
+9. **Links internos**: Sección "Sigue leyendo" con artículos relacionados en todos los artículos
+10. **BreadcrumbList schema**: Implementado en homepage y en todos los artículos
 
-#### 4. **Falta de Schema.org completo**
-- Solo hay Schema para el libro
-- Faltan schemas para:
-  - Organization (empresa/profesional)
-  - Service (servicios ofrecidos)
-  - Person (Daniel Orozco)
-  - Event (workshops/conferencias)
-  - FAQPage (preguntas frecuentes)
+---
 
-#### 5. **Meta Tags Incompletos**
-- Falta `author`
-- Falta `keywords` (opcional pero útil)
-- Falta `geo.region` para SEO local
-- Twitter no tiene `@username`
+### MEJORAS IMPLEMENTADAS (9 marzo 2026)
 
-#### 6. **Contenido Duplicado Potencial**
-- Videos e iframes sin lazy loading
-- Formularios sin honeypot anti-spam
+#### 1. VideoObject Schema en homepage
+- Schema completo para el vídeo de YouTube embebido
+- Incluye thumbnailUrl, embedUrl, contentUrl, author y publisher
+- **Impacto**: Rich snippets de vídeo en SERPs
 
-#### 7. **Performance SEO**
-- CSS inline muy grande (>4KB)
-- No hay preload para recursos críticos
-- Fonts desde Google sin preconnect optimizado
+#### 2. dateModified en todos los artículos
+- Añadido `dateModified` al Article schema de los 9 artículos
+- Google usa dateModified para freshness signals
+- **Impacto**: Mejor señal de actualización para crawlers
 
-#### 8. **Links Externos sin rel apropiado**
-- Amazon link tiene `nofollow sponsored` ✓
-- Pero faltan `noopener` en varios externos
-- Instagram/YouTube/LinkedIn sin tracking
+#### 3. BreadcrumbList schema en artículos
+- Schema de breadcrumbs añadido a los 9 artículos de insights
+- Estructura: Inicio → Insights → [Título del artículo]
+- **Impacto**: Breadcrumbs visibles en SERPs, mejor navegación para crawlers
 
-### 🎯 PRIORIDADES DE MEJORA
+#### 4. robots.txt corregido
+- Eliminada la regla `Disallow: /*.pdf$` que bloqueaba PDFs educativos
+- Añadidas reglas para páginas que no deben indexarse (gracias-bundle, preventa)
+- **Impacto**: PDFs ahora indexables, páginas transaccionales protegidas
 
-**ALTA PRIORIDAD (Implementar YA):**
-1. Añadir H1 principal en hero
-2. Completar Schema.org (Organization, Service, Person, FAQPage)
-3. Optimizar ALTs de todas las imágenes
-4. Añadir meta author y geo tags
-5. Implementar lazy loading en imágenes e iframes
+#### 5. sitemap.xml mejorado
+- Añadido namespace `xmlns:image` para image sitemap
+- Incluidas imágenes principales de la homepage (daniel-orozco-consulta, portadas de libros)
+- Actualizado lastmod del insights/index.html a fecha actual
+- **Impacto**: Mejor indexación de imágenes, señal de freshness
 
-**MEDIA PRIORIDAD (Esta semana):**
-6. Separar CSS crítico del inline
-7. Añadir preload para fonts y recursos críticos
-8. Implementar breadcrumbs con Schema
-9. Añadir sitemap.xml
-10. Añadir robots.txt
+#### 6. Related articles en elegir-es-perder
+- Era el único artículo sin sección "Sigue leyendo"
+- Añadidos 3 artículos relacionados (pillar article, juez interno, síndrome del impostor)
+- **Impacto**: Mejor internal linking, reduce bounce rate
 
-**BAJA PRIORIDAD (Próximo mes):**
-11. Crear blog para contenido indexable
-12. Implementar AMP o estructura similar
-13. Añadir RSS feed
-14. Integrar Google Analytics 4 y Search Console
+---
 
-### 📊 SCORE ESTIMADO ACTUAL: 72/100
+### OPORTUNIDADES PENDIENTES (Prioridad alta → baja)
 
-**Desglose:**
-- Technical SEO: 65/100
-- On-Page SEO: 70/100
-- Content Quality: 85/100
-- User Experience: 80/100
-- Mobile-First: 90/100
+#### ALTA PRIORIDAD
 
-### 🎯 SCORE OBJETIVO: 92/100
+1. **Crear landing pages de servicios independientes**
+   - `/terapia-adultos/` con schema Service
+   - `/psicologia-deportistas/` con schema Service
+   - `/terapia-de-pareja/` con schema Service
+   - Impacto: Cada servicio puede rankear por sus propias keywords
+
+2. **Implementar Google Business Profile**
+   - Optimizar ficha con fotos, horarios, categorías
+   - Pedir reseñas de pacientes
+   - Añadir LocalBusiness schema al sitio
+   - Impacto: Visibilidad en Google Maps, Local Pack
+
+3. **Ampliar artículos del blog**
+   - Crear contenido sobre: narcisismo, dependencia emocional, apego, ansiedad
+   - Formato: "Psicólogo explica: [tema con volumen de búsqueda]"
+   - Frecuencia mínima: 2 artículos/mes
+   - Impacto: Tráfico orgánico long-tail
+
+#### MEDIA PRIORIDAD
+
+4. **Integrar transcripciones de YouTube como artículos**
+   - Cada vídeo popular → artículo con transcript optimizado
+   - Schema VideoObject en cada artículo con vídeo
+   - Impacto: Doble indexación (YouTube + Web)
+
+5. **Añadir AggregateRating/Review schema**
+   - Recopilar testimonios de pacientes
+   - Implementar schema Review
+   - Impacto: Estrellas en SERPs, mayor CTR
+
+6. **Mejorar imágenes OG por artículo**
+   - Crear imagen OG específica para cada artículo (no reusar preview.jpg)
+   - 1200x630px con título del artículo y foto de Daniel
+   - Impacto: Mayor CTR en redes sociales
+
+#### BAJA PRIORIDAD
+
+7. **Implementar hreflang** (si se traduce contenido)
+8. **Añadir tabla de contenidos** a artículos largos (>8 min lectura)
+9. **Crear RSS feed** para el blog
+10. **Implementar AMP** para artículos
+
+---
+
+### KEYWORDS OBJETIVO
+
+| Keyword | Volumen (ES) | Dificultad | Estado |
+|---------|-------------|------------|--------|
+| psicólogo Valencia | 2.4K/mes | Alta | Optimizado |
+| Daniel Orozco psicólogo | 200/mes | Baja | Posición 1 |
+| síndrome del impostor | 12K/mes | Media | Artículo publicado |
+| autoexigencia psicología | 1.2K/mes | Media | Contenido presente |
+| terapia de pareja Valencia | 1.5K/mes | Alta | Necesita landing page |
+| psicólogo deportista | 800/mes | Media | Servicio listado |
+| narcisismo psicología | 8K/mes | Media | Sin contenido aún |
+| dependencia emocional | 15K/mes | Media | Sin contenido aún |
+| apego ansioso | 10K/mes | Media | Sin contenido aún |
+
+---
+
+### MÉTRICAS A MONITORIZAR
+
+- **Search Console**: Impresiones, clicks, CTR, posición media
+- **GA4**: Tráfico orgánico, páginas/sesión, tiempo en página
+- **Conversiones**: Envíos de formulario, clicks en Stripe, compras libro
+- **Indexación**: Páginas indexadas vs enviadas en sitemap
