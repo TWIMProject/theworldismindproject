@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Programa Dependencia Emocional para Mujeres · Deja de Buscarte en Otros | TWIM Project</title>
+  <meta name="description" content="Programa de dependencia emocional para mujeres. Entiende el mecanismo, desmonta la necesidad de validación y construye un valor propio que no dependa de nadie. Por Daniel Orozco Abia, Psicólogo CV11515." />
+  <meta name="keywords" content="dependencia emocional, programa dependencia emocional, dependencia emocional mujeres, superar dependencia emocional, autoestima baja, necesidad de validación, baja confianza, Daniel Orozco Abia" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="logo-mindworld.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {--primary:#265C4B;--primary-dark:#173D30;--accent:#D4C4AE;--accent-dark:#A89070;--bg:#FDFCFA;--bg-soft:#F7F4F0;--text:#2B2420;--text-soft:#6B6058;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Barlow Condensed',sans-serif;line-height:1.6;background:var(--bg);color:var(--text);font-weight:300;font-size:18px}
+    h1,h2,h3{font-weight:600;letter-spacing:.3px;color:var(--primary-dark)}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{color:var(--primary-dark)}
+    .container{width:92%;max-width:980px;margin:auto}
+
+    .topbar{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
+    .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:44px;width:auto}
+    .btn{display:inline-block;padding:.9rem 1.4rem;background:var(--primary-dark);color:#fff;border-radius:4px;font-weight:400;transition:.2s;font-family:inherit;font-size:1rem}
+    .btn:hover{background:var(--primary)}
+    .btn.secondary{background:#fff;color:var(--primary-dark);border:1px solid rgba(0,0,0,.15)}
+    .btn.secondary:hover{border-color:rgba(0,0,0,.3)}
+    .btn.btn-accent{background:var(--accent);color:#fff}
+    .btn.btn-accent:hover{background:var(--accent-dark)}
+
+    .hero{padding:3.2rem 0 2rem}
+    .seo-tag{display:inline-block;background:var(--primary);color:#fff;font-size:.9rem;font-weight:600;padding:.3rem .8rem;border-radius:4px;margin-bottom:.5rem;letter-spacing:.3px}
+    .safe-box{background:#fff;border:2px solid var(--accent);border-radius:10px;padding:1.6rem;margin:1.5rem 0;text-align:center}
+    .safe-box h3{color:var(--primary);margin-bottom:.5rem;font-size:1.3rem}
+    .safe-box p{font-size:1.1rem;margin:.3rem 0}
+    .safe-box .safe-items{display:grid;grid-template-columns:1fr;gap:.5rem;margin-top:1rem;text-align:left}
+    @media(min-width:600px){.safe-box .safe-items{grid-template-columns:1fr 1fr}}
+    .safe-item{background:var(--bg-soft);padding:.8rem 1rem;border-radius:6px;font-size:1.05rem}
+    .safe-item strong{color:var(--primary-dark)}
+    .badge{display:inline-block;background:var(--bg-soft);border:1px solid rgba(0,0,0,.08);padding:.35rem .65rem;border-radius:999px;font-size:1.05rem}
+    .hero h1{font-size:clamp(2.3rem,4.2vw,3.2rem);text-transform:uppercase;line-height:1.1;margin:.9rem 0 .5rem}
+    .subtitle{font-size:1.35rem;color:var(--text-soft);margin-bottom:1rem}
+    .bullets{margin:1rem 0 1.3rem 1.1rem;font-size:1.2rem}
+    .bullets li{margin:.35rem 0}
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:1rem}
+    .micro{font-size:1.05rem;opacity:.85;margin-top:.6rem}
+
+    .section{padding:2.2rem 0}
+    .panel{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:1.6rem;box-shadow:0 6px 16px rgba(0,0,0,.04)}
+    .panel h2{font-size:1.9rem;margin-bottom:.75rem;text-transform:uppercase}
+    .panel p,.panel li{font-size:1.18rem}
+    .panel ul{margin:.6rem 0 0 1.1rem}
+
+    .grid{display:grid;grid-template-columns:1fr;gap:1.2rem}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+    details{border-top:1px solid rgba(0,0,0,.08);padding:.8rem 0}
+    details:first-of-type{border-top:none}
+    summary{cursor:pointer;font-size:1.22rem;font-weight:600}
+    details p{margin-top:.5rem}
+
+    .urgency{background:var(--bg-soft);border-left:4px solid var(--primary);padding:1.2rem;margin:1.5rem 0;border-radius:4px}
+    .urgency p{margin:.5rem 0;font-size:1.15rem}
+    .urgency strong{color:var(--primary-dark)}
+
+    .escalera{background:var(--bg-soft);border-radius:10px;padding:2rem;margin:1.5rem 0}
+    .escalera h2{text-transform:uppercase;margin-bottom:1rem}
+    .nivel{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;padding:1.2rem;margin:.8rem 0;display:flex;align-items:flex-start;gap:1rem}
+    .nivel-badge{background:var(--primary);color:#fff;font-weight:600;font-size:.85rem;padding:.3rem .7rem;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:.15rem}
+    .nivel-badge.premium{background:var(--accent-dark)}
+    .nivel-badge.core{background:var(--primary-dark)}
+    .nivel-info h3{font-size:1.15rem;margin-bottom:.25rem}
+    .nivel-info p{font-size:1rem;margin:0}
+
+    .modulos-grid{display:grid;grid-template-columns:1fr;gap:.8rem}
+    @media(min-width:700px){.modulos-grid{grid-template-columns:1fr 1fr}}
+    .modulo{background:var(--bg-soft);border-radius:8px;padding:1.2rem;border-left:4px solid var(--primary)}
+    .modulo h3{font-size:1.1rem;margin-bottom:.3rem;color:var(--primary)}
+    .modulo p{font-size:1rem;margin:0}
+
+    footer{margin-top:2.4rem;padding:2rem 0;background:var(--primary-dark);color:rgba(255,255,255,.65);text-align:center;font-size:.85rem}
+    footer a{color:rgba(255,255,255,.65)}
+
+    @media(max-width:600px){
+      .hero h1{font-size:2rem}
+      .nivel{flex-direction:column;gap:.5rem}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="wrap">
+        <div class="logo">
+          <a href="https://twimproject.com/"><img src="LOGO.png" alt="TWIM Project"></a>
+          <span class="badge">Programa para mujeres</span>
+        </div>
+        <div class="ctaRow">
+          <a class="btn secondary" href="https://twimproject.com/">Volver a TWIM</a>
+          <a class="btn" href="#reservar">Reservar plaza (49€)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <span class="seo-tag">PROGRAMA DE DEPENDENCIA EMOCIONAL</span>
+      <h1>Deja de Buscarte en Otros</h1>
+      <div class="subtitle">Programa para mujeres que quieren sentir que valen sin necesitar que nadie se lo confirme</div>
+
+      <p style="font-size:1.15rem;margin-bottom:1rem;color:var(--text-soft);">Si has llegado hasta aquí, probablemente llevas tiempo sintiendo que algo no encaja. Que necesitas demasiado a los demás. Que tu valor sube y baja según cómo te traten. <strong>No estás rota. Hay un mecanismo detrás y se puede entender.</strong> Este es un espacio seguro para empezar.</p>
+
+      <ul class="bullets">
+        <li>Entiende por qué necesitas su mirada para creer en la tuya (sin culpa).</li>
+        <li>Desmonta el mecanismo de la dependencia emocional paso a paso.</li>
+        <li>Construye un valor propio que no dependa de que alguien te lo confirme.</li>
+      </ul>
+
+      <div class="safe-box">
+        <h3>No tienes que decidir sola</h3>
+        <p>Lee todo lo que necesites. Tómate tu tiempo. Y si te resuena, aquí estaremos.</p>
+        <div class="safe-items">
+          <div class="safe-item"><strong>Sin compromiso.</strong> Lee, explora, decide cuando estés lista.</div>
+          <div class="safe-item"><strong>Sin prisa.</strong> El acceso es tuyo para siempre, a tu ritmo.</div>
+          <div class="safe-item"><strong>Sin juicio.</strong> Esto no va de lo que «deberías» hacer.</div>
+          <div class="safe-item"><strong>Con red.</strong> Si en algún momento necesitas más, hay opciones de acompañamiento.</div>
+        </div>
+      </div>
+
+      <div class="urgency">
+        <p><strong>Precio de lanzamiento: 49€</strong> (después 79€)</p>
+        <p><strong>Entrega: abril de 2026</strong></p>
+        <p>Acceso de por vida al contenido. Sin letra pequeña.</p>
+      </div>
+
+      <div class="ctaRow" id="reservar">
+        <a class="btn" href="https://twimproject.com/#contacto">
+          Quiero saber más / Reservar mi plaza
+        </a>
+        <span class="micro">Escríbenos sin compromiso. Te contamos todo lo que necesites antes de decidir.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid">
+
+      <div class="panel">
+        <h2>El problema</h2>
+        <p>Si te pasa esto, estás en el sitio correcto:</p>
+        <ul>
+          <li>Necesitas que te digan que lo has hecho bien para sentirte tranquila.</li>
+          <li>Cuando alguien se enfada contigo, sientes que tu valor se derrumba.</li>
+          <li>Adaptas lo que dices, lo que haces o lo que sientes para que te acepten.</li>
+          <li>Te da pánico la idea de que te dejen o te rechacen.</li>
+          <li>Sabes que no deberías necesitar tanto a los demás, pero no puedes evitarlo.</li>
+        </ul>
+        <p style="margin-top:.8rem;"><strong>Esto no es debilidad. Es un mecanismo aprendido que se puede desmontar.</strong></p>
+      </div>
+
+      <div class="panel">
+        <h2>Qué vas a conseguir</h2>
+        <ul>
+          <li>Entender de dónde viene tu necesidad de aprobación (sin culpa ni juicio).</li>
+          <li>Reconocer el momento exacto en que «buscas fuera» lo que solo puedes darte tú.</li>
+          <li>Dejar de confundir amor con necesidad de validación.</li>
+          <li>Construir una base de valor propio que no se tambalee cuando alguien no responde como esperas.</li>
+          <li>Aprender a estar sola sin sentir vacío.</li>
+        </ul>
+        <p style="margin-top:.8rem;">No se trata de no necesitar a nadie. Se trata de que necesitar no te destruya.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <h2>El mecanismo</h2>
+        <p>La dependencia emocional no es una decisión. Es un sistema que se activa solo.</p>
+        <p style="margin-top:.5rem;">Aparece una duda sobre tu valor → tu mente busca confirmación fuera → la encuentras y te calma un rato → pero la duda vuelve → necesitas otra dosis.</p>
+        <p style="margin-top:.5rem;">Ese ciclo se repite porque la validación externa calma, pero no cura. Y cuantas más veces funciona, más atrapada quedas.</p>
+        <p style="margin-top:.8rem;"><strong>Este programa interviene el mecanismo. No te dice «quiérete más». Te enseña a ver qué te lo impide y a trabajar desde ahí.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="panel" style="border-left:4px solid var(--accent);background:var(--bg-soft);">
+        <h2 style="text-transform:none;font-size:1.5rem;">Si estás leyendo esto y sientes que «no es para ti» o «no lo mereces», para un momento</h2>
+        <p style="margin-top:.5rem;">Esa voz que dice que no vale la pena, que probablemente no te va a funcionar, que mejor lo dejas para otro día, es exactamente el mecanismo del que hablamos. No es una razón para no entrar. Es una señal de que estás en el sitio correcto.</p>
+        <p style="margin-top:.5rem;">No tienes que estar preparada. No tienes que estar segura. Solo tienes que estar aquí. El resto lo hace el programa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <h2>Contenido del programa core (79€ / lanzamiento: 49€)</h2>
+        <div class="modulos-grid" style="margin-top:1rem;">
+          <div class="modulo">
+            <h3>Módulo 1 · El mapa</h3>
+            <p>De dónde viene la necesidad de aprobación. El vínculo temprano, el superyó y la búsqueda del espejo en el otro.</p>
+          </div>
+          <div class="modulo">
+            <h3>Módulo 2 · El ciclo</h3>
+            <p>El mecanismo de la dependencia emocional: disparador → búsqueda → alivio → vacío → repetición. Cómo funciona y por qué se mantiene.</p>
+          </div>
+          <div class="modulo">
+            <h3>Módulo 3 · La trampa</h3>
+            <p>Confundir amor con necesidad. Cómo la dependencia se disfraza de entrega, de generosidad, de «soy así». Señales para diferenciarlo.</p>
+          </div>
+          <div class="modulo">
+            <h3>Módulo 4 · El corte</h3>
+            <p>Técnicas para interrumpir el automatismo: la pausa de 90 segundos, el registro de búsquedas y el ejercicio del espejo propio.</p>
+          </div>
+          <div class="modulo">
+            <h3>Módulo 5 · La base</h3>
+            <p>Construir valor propio: protocolo de 21 días con micro-ejercicios diarios (10-15 min) para dejar de buscarte en otros.</p>
+          </div>
+        </div>
+        <p style="margin-top:1rem;font-size:1.1rem;"><strong>Incluye:</strong> Vídeo grabado (~2h, 5 módulos) + Cuaderno de trabajo PDF (20+ páginas) + 3 audios guiados + Protocolo de 21 días.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="escalera">
+        <h2>Escalera completa del programa</h2>
+        <p style="margin-bottom:1rem;">Elige el nivel que necesites. Cada nivel incluye todo lo del anterior.</p>
+
+        <div class="nivel">
+          <span class="nivel-badge">GRATIS</span>
+          <div class="nivel-info">
+            <h3>Test: ¿Buscas tu valor en los demás?</h3>
+            <p>Autodiagnóstico rápido + mini-guía con 3 técnicas de emergencia para cuando necesitas aprobación y no llega.</p>
+          </div>
+        </div>
+
+        <div class="nivel">
+          <span class="nivel-badge">€9</span>
+          <div class="nivel-info">
+            <h3>Mini-guía: 5 señales de que te pierdes en tus relaciones</h3>
+            <p>PDF descargable + audio guiado de 15 min con el ejercicio del «espejo propio».</p>
+          </div>
+        </div>
+
+        <div class="nivel">
+          <span class="nivel-badge core">€79 → 49€</span>
+          <div class="nivel-info">
+            <h3>Programa core: Deja de Buscarte en Otros</h3>
+            <p>5 módulos en vídeo + cuaderno + 3 audios + protocolo de 21 días. El programa completo para desmontar el mecanismo.</p>
+          </div>
+        </div>
+
+        <div class="nivel">
+          <span class="nivel-badge premium">€279</span>
+          <div class="nivel-info">
+            <h3>Premium: Programa + grupo + sesión individual</h3>
+            <p>Todo el programa core + 4 sesiones grupales online (máx. 10 mujeres) + 1 sesión individual de 50 min con Daniel Orozco.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <h2>Quién soy</h2>
+        <p>Soy Daniel Orozco Abia, psicólogo en consulta privada desde 2012.</p>
+        <p style="margin-top:.5rem;">Llevo más de una década viendo en consulta cómo la dependencia emocional funciona por debajo de muchos problemas que se presentan como «ansiedad», «inseguridad» o «problemas de pareja». No es falta de fuerza. Es un patrón que se instaló cuando no tenías herramientas para cuestionarlo.</p>
+        <p style="margin-top:.5rem;">Este programa condensa el mapa del mecanismo y los pasos mínimos para empezar a cambiarlo. Material educativo, no terapia. Pero con la misma honestidad que uso en consulta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <h2>Preguntas frecuentes</h2>
+
+        <details>
+          <summary>¿Es solo para mujeres?</summary>
+          <p>Está diseñado pensando en mujeres porque la dependencia emocional se manifiesta de forma particular en ellas (socialización, rol relacional, presión cultural). Si eres hombre y te resuena, también te va a servir.</p>
+        </details>
+
+        <details>
+          <summary>¿Es terapia?</summary>
+          <p>No. Es material educativo: explicación del mecanismo + ejercicios + protocolo de 21 días. Si necesitas acompañamiento terapéutico, esto puede ser un buen complemento, pero no lo sustituye.</p>
+        </details>
+
+        <details>
+          <summary>¿Cuánto tiempo necesito al día?</summary>
+          <p>10-15 minutos durante 21 días para el protocolo. El vídeo son unas 2 horas que puedes ver a tu ritmo.</p>
+        </details>
+
+        <details>
+          <summary>¿Y si estoy en una relación ahora mismo?</summary>
+          <p>Mejor. El programa no te dice que dejes a nadie. Te ayuda a ver el mecanismo mientras vives tu vida normal. Los cambios más potentes se hacen en contexto real, no en el vacío.</p>
+        </details>
+
+        <details>
+          <summary>¿Qué pasa si tengo mucha ansiedad o estoy en crisis?</summary>
+          <p>Si la ansiedad es intensa o sientes que no puedes manejarla sola, prioriza el apoyo profesional. Este programa es educativo y funciona bien como complemento, pero no sustituye terapia en crisis.</p>
+        </details>
+
+        <details>
+          <summary>¿Cómo accedo?</summary>
+          <p>Contacta para reservar tu plaza. Recibirás email de confirmación + acceso en la fecha de entrega.</p>
+        </details>
+
+        <details>
+          <summary>¿Y si no estoy segura de si es para mí?</summary>
+          <p>Es normal dudar. Si reconoces el patrón de buscar validación, si tu estado de ánimo depende de cómo te tratan, si te cuesta estar sola, este programa trabaja exactamente eso. No tienes que estar segura para empezar. Solo curiosa.</p>
+        </details>
+
+        <details>
+          <summary>¿Hay devoluciones?</summary>
+          <p>El programa core (grabado) no tiene devolución por ser contenido digital con acceso inmediato. Pero puedes escribirnos antes de comprar con todas las dudas que tengas. Preferimos que entres tranquila a que entres con prisa. El programa premium tiene reembolso 100% tras la primera sesión grupal si sientes que no es para ti.</p>
+        </details>
+
+        <details>
+          <summary>Tengo miedo de invertir y que no me funcione</summary>
+          <p>Ese miedo tiene sentido. Probablemente es parte del mismo mecanismo que te trae aquí: la dificultad de confiar en tu propia decisión. No te vamos a presionar. Lee los artículos gratuitos del blog, mira si el enfoque te resuena y decide desde ahí. Si necesitas hablar antes, escríbenos.</p>
+        </details>
+
+        <div class="safe-box" style="margin-top:1.2rem;">
+          <h3>No tienes que decidir ahora</h3>
+          <p>Si necesitas más información o simplemente quieres hablar antes de dar el paso, escríbenos. Sin compromiso, sin presión. Estamos aquí para acompañarte, no para venderte.</p>
+          <div style="margin-top:1rem;">
+            <a class="btn" href="https://twimproject.com/#contacto">Escribir sin compromiso</a>
+          </div>
+          <p style="margin-top:.8rem;font-size:.95rem;opacity:.7;">Material educativo (no terapia) · Acceso de por vida · Por Daniel Orozco, Psicólogo CV11515</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 TWIM Project &middot; Daniel Orozco Abia &middot; Psicólogo General Sanitario CV11515</p>
+    <p><a href="mailto:danielorozco@theworldismindproject.com">danielorozco@theworldismindproject.com</a></p>
+  </footer>
+
+</body>
+</html>
