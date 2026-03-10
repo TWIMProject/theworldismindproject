@@ -83,11 +83,9 @@ secrets/
 # Certificados SSL privados
 *.pem
 *.key
-*.crt (si son privados)
 
 # ===== ANALYTICS & TRACKING =====
 
-# Google Analytics IDs (si almacenas en archivos)
 ga-config.js
 
 # ===== ARCHIVOS DE CONSTRUCCIÓN =====
@@ -100,17 +98,6 @@ out/
 # Archivos compilados
 *.min.js
 *.min.css
-
-# ===== MULTIMEDIA PESADO (opcional) =====
-
-# Descomenta si tienes videos grandes que no quieres versionar
-# *.mp4
-# *.mov
-# *.avi
-
-# Archivos PSD/AI originales (si son muy pesados)
-# *.psd
-# *.ai
 
 # ===== TESTING =====
 
@@ -125,8 +112,4 @@ docs/_build/
 
 # ===== OTROS =====
 
-# Archivos de lock de dependencias (si no usas npm)
-# package-lock.json
-
-# Logs de despliegue
 deploy.log
