@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Taller No Puedo Parar · Para profesionales que se exigen demasiado | TWIM Project</title>
+  <meta name="description" content="Taller en vivo de 90 minutos para profesionales que se exigen demasiado y no consiguen desconectar. Entiende el mecanismo, aprende la técnica de 120 segundos y sal con un plan de 7 días. Por Daniel Orozco Abia, Psicólogo CV11515." />
+  <meta name="keywords" content="no puedo parar, autoexigencia, desconectar del trabajo, taller psicología, burnout profesional, urgencia mental, Daniel Orozco Abia" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://twimproject.com/nopuedoparar-taller.html" />
+
+  <meta property="og:title" content="Taller No Puedo Parar · Profesionales que se exigen demasiado" />
+  <meta property="og:description" content="90 minutos en vivo. Entiende por qué no puedes parar, aprende una técnica de 120 segundos y sal con un plan de 7 días." />
+  <meta property="og:url" content="https://twimproject.com/nopuedoparar-taller.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="icon" href="logo-mindworld.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    :root {
+      --green: #265C4B;
+      --green-dark: #173D30;
+      --green-light: #2E6B5A;
+      --beige: #C2A78B;
+      --beige-dark: #A89070;
+      --beige-light: #D4C4AE;
+      --sand: #F7F4F0;
+      --sand-dark: #EDE8E2;
+      --cream: #FDFCFA;
+      --text: #2B2420;
+      --text-soft: #6B6058;
+      --text-muted: #9A8E84;
+      --white: #FFFFFF;
+      --border: rgba(43,36,32,.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      line-height: 1.75;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { font-weight: 600; letter-spacing: .3px; color: var(--green-dark); }
+    a { transition: all .2s ease; text-decoration: none; }
+    .container { width: 93%; max-width: 980px; margin: 0 auto; }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--green-dark);
+      padding: .8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 16px rgba(0,0,0,.15);
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 93%;
+      max-width: 980px;
+      margin: auto;
+    }
+
+    header .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header .logo-area img {
+      height: 52px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
+    }
+
+    header .logo-area .badge {
+      display: inline-block;
+      background: rgba(255,255,255,.12);
+      color: rgba(255,255,255,.85);
+      padding: .3rem .7rem;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 400;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    header .nav-cta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    header .nav-cta a {
+      color: rgba(255,255,255,.8);
+      font-weight: 400;
+      font-size: .88rem;
+      padding: .4rem .65rem;
+      border-radius: 4px;
+      transition: all .2s;
+    }
+
+    header .nav-cta a:hover {
+      color: #fff;
+      background: rgba(255,255,255,.08);
+    }
+
+    header .nav-cta .btn-header {
+      background: var(--beige);
+      color: #fff;
+      font-weight: 600;
+      padding: .55rem 1.2rem;
+      border-radius: 5px;
+      font-size: .9rem;
+    }
+
+    header .nav-cta .btn-header:hover {
+      background: var(--beige-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(194,167,139,.3);
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-block;
+      padding: .85rem 1.8rem;
+      background: var(--green);
+      color: #fff;
+      border-radius: 5px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all .25s ease;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn:hover {
+      background: var(--green-dark);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(38,92,75,.25);
+    }
+
+    .btn-beige { background: var(--beige); }
+    .btn-beige:hover { background: var(--beige-dark); box-shadow: 0 4px 12px rgba(194,167,139,.3); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      padding: 4.5rem 1.5rem 3.5rem;
+      color: #fff;
+    }
+
+    .hero .seo-tag {
+      display: inline-block;
+      background: rgba(255,255,255,.12);
+      color: rgba(255,255,255,.9);
+      font-size: .82rem;
+      font-weight: 600;
+      padding: .35rem .9rem;
+      border-radius: 4px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin: 1rem 0 .6rem;
+      color: #fff;
+    }
+
+    .hero .subtitle {
+      font-size: 1.3rem;
+      opacity: .88;
+      margin-bottom: 1.2rem;
+      max-width: 650px;
+      font-weight: 300;
+    }
+
+    .hero .intro-text {
+      font-size: 1.1rem;
+      opacity: .82;
+      margin-bottom: 1.5rem;
+      max-width: 650px;
+      line-height: 1.7;
+    }
+
+    .hero .intro-text strong {
+      color: #fff;
+      opacity: 1;
+    }
+
+    .hero .bullets {
+      list-style: none;
+      margin: 0 0 1.5rem;
+      padding: 0;
+    }
+
+    .hero .bullets li {
+      font-size: 1.15rem;
+      margin: .5rem 0;
+      padding-left: 1.6rem;
+      position: relative;
+      opacity: .92;
+    }
+
+    .hero .bullets li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--beige-light);
+      font-size: .85rem;
+      top: .15rem;
+    }
+
+    .hero .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    .hero .btn {
+      background: var(--beige);
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 1rem 2rem;
+    }
+
+    .hero .btn:hover {
+      background: var(--beige-dark);
+      box-shadow: 0 4px 12px rgba(194,167,139,.3);
+    }
+
+    .hero .micro {
+      font-size: .95rem;
+      opacity: .7;
+    }
+
+    /* ── URGENCY BOX ── */
+    .urgency-hero {
+      background: rgba(255,255,255,.1);
+      border-left: 4px solid var(--beige-light);
+      padding: 1.2rem 1.4rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .urgency-hero p {
+      margin: .4rem 0;
+      font-size: 1.05rem;
+      opacity: .9;
+    }
+
+    .urgency-hero strong { color: #fff; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 2.5rem 0; }
+    .section-alt { background: var(--sand); }
+
+    /* ── PANELS ── */
+    .panel {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,.06);
+    }
+
+    .panel h2 {
+      font-size: 1.7rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--beige-light);
+    }
+
+    .panel p, .panel li { font-size: 1.12rem; color: var(--text-soft); }
+    .panel p strong { color: var(--green-dark); }
+    .panel ul { margin: .8rem 0 0 1.2rem; }
+    .panel li { margin: .4rem 0; }
+
+    /* ── HIGHLIGHT PANEL ── */
+    .highlight-panel {
+      background: var(--sand);
+      border-left: 4px solid var(--beige);
+      border-radius: 0 10px 10px 0;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,.04);
+    }
+
+    .highlight-panel h2 {
+      text-transform: none;
+      font-size: 1.4rem;
+      color: var(--green-dark);
+      margin-bottom: .6rem;
+    }
+
+    .highlight-panel p {
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      margin-top: .5rem;
+    }
+
+    /* ── MECHANISM FLOW ── */
+    .mechanism-flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+      justify-content: center;
+      align-items: center;
+      margin: 1.5rem 0;
+    }
+
+    .mechanism-step {
+      text-align: center;
+      min-width: 120px;
+    }
+
+    .mechanism-step .step-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--green-dark);
+      display: block;
+    }
+
+    .mechanism-step .step-desc {
+      font-size: .88rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .mechanism-arrow {
+      color: var(--beige);
+      font-size: 1.2rem;
+    }
+
+    /* ── LEARNING ITEMS ── */
+    .learning-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .learning-item {
+      background: var(--sand);
+      border-radius: 8px;
+      padding: 1.4rem;
+      border-left: 4px solid var(--green);
+      transition: .2s;
+    }
+
+    .learning-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+
+    .learning-item .item-number {
+      font-size: .85rem;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: .3rem;
+    }
+
+    .learning-item h3 {
+      font-size: 1.05rem;
+      margin-bottom: .3rem;
+      color: var(--green);
+    }
+
+    .learning-item p { font-size: .98rem; margin: 0; color: var(--text-soft); }
+
+    /* ── FAQ ── */
+    .faq-item {
+      border-bottom: 1px solid var(--sand-dark);
+      padding: 1rem 0;
+    }
+
+    .faq-item summary {
+      font-weight: 500;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--green-dark);
+      list-style: none;
+      padding: .2rem 0;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before { content: "\25B8 "; color: var(--green); }
+    .faq-item[open] summary::before { content: "\25BE "; }
+
+    .faq-item p {
+      margin-top: .5rem;
+      font-size: 1rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+    }
+
+    /* ── CTA BLOCK ── */
+    .cta-block {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      color: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 10px;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .cta-block h3 {
+      color: #fff;
+      margin-bottom: .5rem;
+      font-size: 1.35rem;
+    }
+
+    .cta-block p {
+      opacity: .88;
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    .cta-block .btn {
+      background: var(--beige);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1rem 2.5rem;
+    }
+
+    .cta-block .btn:hover { background: var(--beige-dark); }
+
+    .cta-block .cta-details {
+      font-size: .88rem;
+      opacity: .7;
+      margin-top: .8rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,.65);
+      text-align: center;
+      font-size: .85rem;
+      padding: 2.2rem 1.5rem;
+      margin-top: 0;
+    }
+
+    footer p { color: rgba(255,255,255,.65); margin: .3rem 0; }
+    footer a { color: rgba(255,255,255,.65); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:600px) {
+      .hero { padding: 3rem 1rem 2.5rem; }
+      .hero h1 { font-size: 2rem; }
+      header .logo-area .badge { display: none; }
+      header .nav-cta a:not(.btn-header) { display: none; }
+      .panel { padding: 1.4rem; }
+      .mechanism-flow { flex-direction: column; }
+      .mechanism-arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <nav>
+      <div class="logo-area">
+        <a href="https://twimproject.com/"><img src="logo-mindworld.png" alt="TWIM Project"></a>
+        <span class="badge">Taller en vivo &middot; 30 marzo</span>
+      </div>
+      <div class="nav-cta">
+        <a href="https://twimproject.com/">Volver a TWIM</a>
+        <a class="btn-header" href="mailto:danielorozco@theworldismindproject.com?subject=Quiero%20reservar%20plaza%20%E2%80%93%20No%20puedo%20parar">Reservar plaza (19&euro;)</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="container">
+      <span class="seo-tag">Taller en vivo &middot; 20 plazas</span>
+      <h1>No puedo parar</h1>
+      <div class="subtitle">Taller para profesionales que se exigen demasiado y no consiguen desconectar</div>
+
+      <p class="intro-text">Sabes que deber&iacute;as parar. No quieres seguir. Pero lo haces igual. Y cuando intentas descansar, aparece culpa, prisa por dentro, inquietud. <strong>Eso no es falta de voluntad. Es un mecanismo. Y se puede intervenir.</strong></p>
+
+      <ul class="bullets">
+        <li>Entiende por qu&eacute; no puedes parar aunque quieres (el mecanismo real, no teor&iacute;a).</li>
+        <li>Aprende una t&eacute;cnica de 120 segundos para intervenir en el momento exacto.</li>
+        <li>Sal con un plan de 7 d&iacute;as para empezar a recuperar margen de elecci&oacute;n.</li>
+      </ul>
+
+      <div class="urgency-hero">
+        <p><strong>Fecha:</strong> Domingo 30 de marzo de 2026, 19:30h (hora Espa&ntilde;a)</p>
+        <p><strong>Formato:</strong> Google Meet en vivo (se graba)</p>
+        <p><strong>Duraci&oacute;n:</strong> 90 minutos (incluye ejercicio pr&aacute;ctico + Q&amp;A)</p>
+        <p><strong>Plazas:</strong> 20 m&aacute;ximo</p>
+        <p><strong>Precio de lanzamiento:</strong> 19&euro;</p>
+      </div>
+
+      <div class="cta-row" id="reservar">
+        <a class="btn" href="mailto:danielorozco@theworldismindproject.com?subject=Quiero%20reservar%20plaza%20%E2%80%93%20No%20puedo%20parar">
+          Reservar mi plaza (19&euro;)
+        </a>
+        <span class="micro">20 plazas. Cuando se llenen, se cierran.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ¿TE PASA ESTO? ── -->
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <h2>&iquest;Te pasa esto?</h2>
+        <p>Si reconoces 3 o m&aacute;s, este taller es para ti:</p>
+        <ul>
+          <li>Sabes que deber&iacute;as parar, pero no puedes.</li>
+          <li>Descansar te genera culpa o inquietud.</li>
+          <li>Sientes alivio al &laquo;hacer&raquo;, aunque est&eacute;s agotado.</li>
+          <li>Tu mente dice &laquo;solo 5 minutos m&aacute;s&raquo; y se multiplica.</li>
+          <li>Necesitas &laquo;haber hecho suficiente&raquo; para poder parar.</li>
+          <li>El domingo por la tarde ya est&aacute;s pensando en el lunes.</li>
+          <li>Respondes mensajes por culpa, no por urgencia.</li>
+        </ul>
+        <p style="margin-top:.8rem;"><strong>No es un defecto. Es un automatismo que se puede desmontar.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUÉ NO VAS A ENCONTRAR ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="panel">
+        <h2>Qu&eacute; no vas a encontrar</h2>
+        <ul>
+          <li>&laquo;Qui&eacute;rete m&aacute;s.&raquo;</li>
+          <li>&laquo;Ten fuerza de voluntad.&raquo;</li>
+          <li>&laquo;Piensa en positivo.&raquo;</li>
+          <li>&laquo;Deber&iacute;as descansar m&aacute;s.&raquo;</li>
+          <li>Frases motivacionales vac&iacute;as.</li>
+        </ul>
+        <p style="margin-top:.8rem;">Cambiar un mandato por otro no resuelve nada. Si te digo &laquo;deber&iacute;as descansar&raquo;, estoy alimentando el mismo mecanismo con otra consigna. Aqu&iacute; no venimos a eso. Venimos a ver el mecanismo y a intervenir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EL MECANISMO ── -->
+  <section class="section">
+    <div class="container">
+      <div class="panel">
+        <h2>El mecanismo</h2>
+        <p>El &laquo;tengo que&raquo; no es una idea. Es un modo autom&aacute;tico que funciona as&iacute;:</p>
+
+        <div class="mechanism-flow">
+          <div class="mechanism-step">
+            <span class="step-title">Disparador</span>
+            <span class="step-desc">Email, tarea, tiempo libre</span>
+          </div>
+          <span class="mechanism-arrow">&rarr;</span>
+          <div class="mechanism-step">
+            <span class="step-title">Mandato</span>
+            <span class="step-desc">&laquo;Hazlo ya&raquo;</span>
+          </div>
+          <span class="mechanism-arrow">&rarr;</span>
+          <div class="mechanism-step">
+            <span class="step-title">Activaci&oacute;n</span>
+            <span class="step-desc">Cuerpo tenso, prisa</span>
+          </div>
+          <span class="mechanism-arrow">&rarr;</span>
+          <div class="mechanism-step">
+            <span class="step-title">Conducta</span>
+            <span class="step-desc">Haces. Obedeces.</span>
+          </div>
+          <span class="mechanism-arrow">&rarr;</span>
+          <div class="mechanism-step">
+            <span class="step-title">Alivio</span>
+            <span class="step-desc">Baja la tensi&oacute;n</span>
+          </div>
+        </div>
+
+        <p style="margin-top:1rem;">Ese alivio r&aacute;pido es la raz&oacute;n por la que se repite. Y tambi&eacute;n la raz&oacute;n por la que te drena. <strong>El problema no es la carga. Es la relaci&oacute;n con el deber. Y esa relaci&oacute;n se puede intervenir.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUÉ VAS A APRENDER ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="panel">
+        <h2>Qu&eacute; vas a aprender en 90 minutos</h2>
+        <div class="learning-grid">
+          <div class="learning-item">
+            <span class="item-number">1</span>
+            <h3>El mapa del mecanismo</h3>
+            <p>Qu&eacute; es el mandato interno, c&oacute;mo funciona el juez que convierte descanso en culpa, y por qu&eacute; &laquo;hacer&raquo; calma a corto plazo pero te destruye a largo.</p>
+          </div>
+          <div class="learning-item">
+            <span class="item-number">2</span>
+            <h3>T&eacute;cnica de 120 segundos</h3>
+            <p>Una intervenci&oacute;n concreta de 5 pasos para el segundo exacto en que aparece el &laquo;hazlo ya&raquo;. La practicamos juntos en el taller.</p>
+          </div>
+          <div class="learning-item">
+            <span class="item-number">3</span>
+            <h3>Plan de 7 d&iacute;as</h3>
+            <p>Protocolo de 10-15 minutos al d&iacute;a: observar, intervenir, consolidar. Sin hero&iacute;smo. Sin perfecci&oacute;n. Solo repetir lo suficiente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TALLER PARA PRACTICAR ── -->
+  <section class="section">
+    <div class="container">
+      <div class="highlight-panel">
+        <h2>No es un taller para ver. Es un taller para practicar.</h2>
+        <p>No vas a estar 90 minutos escuch&aacute;ndome hablar. A mitad del taller vamos a hacer el ejercicio juntos. T&uacute;, en tu casa, con papel y boli, aplicando la t&eacute;cnica en tiempo real. Eso cambia algo. Escuchar no.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUIÉN SOY ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="panel">
+        <h2>Qui&eacute;n soy</h2>
+        <p>Soy Daniel Orozco Abia, psic&oacute;logo en consulta privada en Valencia desde 2012. Orientaci&oacute;n psicoanal&iacute;tica.</p>
+        <p style="margin-top:.5rem;">Llevo m&aacute;s de una d&eacute;cada viendo en consulta c&oacute;mo este mecanismo se repite en personas responsables, competentes y capaces. No es falta de voluntad. Es un sistema interno que se refuerza porque calma algo a corto plazo. Y se puede desmontar.</p>
+        <p style="margin-top:.5rem;">Este taller condensa el mapa y los primeros pasos para empezar. Material educativo, no terapia. Pero con la misma honestidad que uso en consulta.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA MEDIO ── -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-block">
+        <p style="opacity:.7;margin-bottom:.3rem;">Domingo 30 de marzo &middot; 19:30h &middot; Google Meet</p>
+        <p style="opacity:.7;margin-bottom:.8rem;">90 minutos. 20 plazas. 19&euro;. En vivo. Se graba.</p>
+        <a class="btn" href="mailto:danielorozco@theworldismindproject.com?subject=Quiero%20reservar%20plaza%20%E2%80%93%20No%20puedo%20parar">Reservar mi plaza (19&euro;)</a>
+        <p class="cta-details">Recibir&aacute;s un email de confirmaci&oacute;n con los datos de acceso antes del taller</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="panel">
+        <h2>Preguntas frecuentes</h2>
+
+        <details class="faq-item">
+          <summary>&iquest;Es terapia?</summary>
+          <p>No. Es material educativo: explicaci&oacute;n del mecanismo + t&eacute;cnica pr&aacute;ctica + plan de acci&oacute;n. Si necesitas acompa&ntilde;amiento terap&eacute;utico, esto puede ser un buen punto de partida, pero no lo sustituye.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>&iquest;Y si de verdad tengo mucho trabajo?</summary>
+          <p>Este taller no va de tener mucho o poco trabajo. Va de la relaci&oacute;n que tienes con el deber. Puedes tener mucho trabajo y no sentir culpa al parar. O poco y no poder desconectar. El problema no es la carga. Es el mecanismo.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>&iquest;Puedo verlo despu&eacute;s si no puedo el 30?</summary>
+          <p>S&iacute;. Se graba y tendr&aacute;s acceso a la grabaci&oacute;n. Pero el ejercicio pr&aacute;ctico se hace en directo, as&iacute; que si puedes estar, mejor.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>&iquest;Qu&eacute; necesito para asistir?</summary>
+          <p>Un sitio tranquilo, papel y boli. Nada m&aacute;s. El enlace de Google Meet te llega por email antes del taller.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>&iquest;Y si no estoy seguro de si es para m&iacute;?</summary>
+          <p>Si has le&iacute;do hasta aqu&iacute; y algo te ha resonado, probablemente lo es. El taller no requiere que est&eacute;s en crisis. Solo que reconozcas el patr&oacute;n.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>&iquest;Hay devoluciones?</summary>
+          <p>S&iacute;. Si al terminar el taller sientes que no te ha aportado nada, escr&iacute;benos y te devolvemos el importe. Sin preguntas.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>&iquest;Cu&aacute;nto dura?</summary>
+          <p>90 minutos. Incluye explicaci&oacute;n del mecanismo, ejercicio pr&aacute;ctico guiado y espacio para preguntas.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA FINAL ── -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-block">
+        <h3>No puedo parar</h3>
+        <p>Taller en vivo &middot; 30 de marzo &middot; 19:30h &middot; 20 plazas &middot; 19&euro;</p>
+        <a class="btn" href="mailto:danielorozco@theworldismindproject.com?subject=Quiero%20reservar%20plaza%20%E2%80%93%20No%20puedo%20parar">Reservar mi plaza</a>
+        <p class="cta-details">Material educativo (no terapia) &middot; Se graba &middot; Por Daniel Orozco, Psic&oacute;logo CV11515</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>&copy; 2026 TWIM Project &middot; Daniel Orozco Abia &middot; Psic&oacute;logo General Sanitario CV11515</p>
+    <p><a href="https://twimproject.com/">Inicio</a> &middot; <a href="https://twimproject.com/insights/">Insights</a> &middot; <a href="mailto:danielorozco@theworldismindproject.com">danielorozco@theworldismindproject.com</a></p>
+  </footer>
+
+</body>
+</html>
