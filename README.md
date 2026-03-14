@@ -11,7 +11,7 @@
 **Sitio web oficial del proyecto de divulgación y bienestar psicológico**  
 Impulsado por **Daniel Orozco Abia** | Psicólogo General Sanitario CV11515
 
-[🌐 Ver Sitio Web](https://twimproject.com) • [📧 Contacto](mailto:danielorozco@theworldismindproject.com) • [📚 Libro](https://amzn.eu/d/38Veu6F)
+[🌐 Ver Sitio Web](https://twimproject.com) • [📧 Contacto](mailto:danielorozco@twimproject.com) • [📚 Libro](https://amzn.eu/d/38Veu6F)
 
 ---
 
@@ -345,7 +345,7 @@ Este proyecto está licenciado bajo **Creative Commons Attribution-NonCommercial
 - ✅ **Puedes:** Ver el código, aprender de él, usarlo como referencia
 - ❌ **No puedes:** Usarlo comercialmente, modificarlo para redistribuir, crear derivados
 
-Para usos comerciales o académicos, contacta: [danielorozco@theworldismindproject.com](mailto:danielorozco@theworldismindproject.com)
+Para usos comerciales o académicos, contacta: [danielorozco@twimproject.com](mailto:danielorozco@twimproject.com)
 
 **Lectura completa:** [LICENSE](LICENSE)
 
@@ -358,7 +358,7 @@ Para usos comerciales o académicos, contacta: [danielorozco@theworldismindproje
 ### Daniel Orozco Abia
 **Psicólogo General Sanitario · CV11515**
 
-[![Email](https://img.shields.io/badge/Email-danielorozco%40theworldismindproject.com-D74A2B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:danielorozco@theworldismindproject.com)
+[![Email](https://img.shields.io/badge/Email-danielorozco%40twimproject.com-D74A2B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:danielorozco@twimproject.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dani%20Orozco-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/)
 [![Instagram](https://img.shields.io/badge/Instagram-%40unpsicologorandom-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/unpsicologorandom)
 [![YouTube](https://img.shields.io/badge/YouTube-Psicólogo%20Random-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@psicologorandom)
