@@ -21,7 +21,7 @@
 
 #### En Stripe Dashboard:
 1. **Mensaje post-pago**: Ve a Payment Links > tu enlace > After payment. Configura:
-   > Reserva confirmada. El domingo 30 de marzo a las 19:30h recibiras un email con el enlace de Google Meet. Prepara papel y boli. Si tienes alguna duda, escribeme a danielorozco@theworldismindproject.com. Gracias por confiar. - Daniel
+   > Reserva confirmada. El domingo 30 de marzo a las 19:30h recibiras un email con el enlace de Google Meet. Prepara papel y boli. Si tienes alguna duda, escribeme a danielorozco@twimproject.com. Gracias por confiar. - Daniel
 2. **Recoger emails**: Verifica que "Collect email addresses" esta activado en el payment link.
 
 #### En Instagram:
