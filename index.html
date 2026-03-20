@@ -1013,6 +1013,19 @@
         <a href="talleres/bachillerato-motivacion/" class="btn btn-beige">Ver taller Bachillerato</a>
       </div>
     </div>
+    <div class="workshops-download">
+      <div class="workshops-download__copy">
+        <span class="workshops-spotlight__eyebrow workshops-download__eyebrow">Más detalles</span>
+        <h3>¿Quieres más detalles?</h3>
+        <p>Si quieres revisar la información del dossier tranquilamente, deja tu correo y te mostramos el acceso directo al PDF desde aquí mismo, dentro del bloque de talleres.</p>
+      </div>
+      <form id="workshops-info-form" class="workshops-download__form">
+        <label class="sr-only" for="workshops-email">Tu correo</label>
+        <input type="email" id="workshops-email" name="email" placeholder="Tu correo" required>
+        <button type="submit" class="btn btn-green">Recibir PDF</button>
+      </form>
+      <a id="workshops-download-pdf" href="Grupo_Online_Info.pdf" download class="btn btn-green workshops-download__link" style="display:none;">Descargar ahora</a>
+    </div>
   </div>
 </section>
 
@@ -1296,20 +1309,6 @@
   <p style="font-size:.85em;opacity:.7;margin-top:4px;">Especialista en ansiedad, depresión, estrés, dependencia emocional y burnout · Terapia para adultos, adolescentes, deportistas y parejas · Presencial y online · <a href="privacy.html">Privacidad</a></p>
 </footer>
 
-<!-- ── MODAL ── -->
-
-<div id="info-modal-backdrop" class="modal-backdrop">
-  <div class="modal">
-    <span id="modal-close" class="modal-close">&times;</span>
-    <h3>¿Quieres más detalles?</h3>
-    <form id="info-form">
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <button type="submit" class="btn btn-green">Recibir PDF</button>
-    </form>
-    <a id="download-pdf" href="#" download class="btn btn-green" style="display:none;">Descargar ahora</a>
-  </div>
-</div>
-
 <script>
   // Hamburger menu
   document.addEventListener('DOMContentLoaded', () => {
@@ -1330,29 +1329,13 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const backdrop = document.getElementById('info-modal-backdrop');
-    const closeBtn = document.getElementById('modal-close');
-    const infoBtns = document.querySelectorAll('.info-btn');
-    const form = document.getElementById('info-form');
-    const downloadLink = document.getElementById('download-pdf');
-    let currentPdf = '';
-    infoBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentPdf = btn.dataset.pdf;
-        downloadLink.href = currentPdf;
-        form.style.display = 'block';
-        downloadLink.style.display = 'none';
-        backdrop.style.display = 'flex';
-      });
-    });
-    closeBtn.addEventListener('click', () => backdrop.style.display = 'none');
+    const form = document.getElementById('workshops-info-form');
+    const downloadLink = document.getElementById('workshops-download-pdf');
+    if (!form || !downloadLink) return;
     form.addEventListener('submit', e => {
       e.preventDefault();
       form.style.display = 'none';
       downloadLink.style.display = 'inline-block';
-    });
-    backdrop.addEventListener('click', e => {
-      if (e.target === backdrop) closeBtn.click();
     });
   });
 </script>
