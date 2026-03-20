@@ -92,7 +92,7 @@
       margin: 0 auto;
     }
     header nav a img {
-      height: 75px;
+      height: 88px;
       width: auto;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
     }
@@ -125,6 +125,30 @@
       color: rgba(255,255,255,.8);
       max-width: 600px;
       margin: 0 auto;
+    }
+    .hero-shortcuts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .75rem;
+      max-width: 920px;
+      margin: 1.8rem auto 0;
+    }
+    .hero-shortcuts a {
+      color: var(--white);
+      text-decoration: none;
+      padding: .7rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      font-size: .9rem;
+      font-weight: 500;
+      line-height: 1.2;
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+    .hero-shortcuts a:hover {
+      background: rgba(255,255,255,.16);
+      transform: translateY(-2px);
     }
 
     /* ── INSIGHTS CONTAINER ── */
@@ -345,6 +369,8 @@
       .nav-links.open { display: flex; }
       .nav-links a { margin-left: 0 !important; }
       .insights-container { padding: 1.5rem 1rem 3rem; }
+      .hero-shortcuts { gap: .6rem; }
+      .hero-shortcuts a { width: 100%; max-width: 320px; }
       .page-hero { padding: 4rem 1rem 3rem; }
     }
   </style>
@@ -372,6 +398,12 @@
   <div class="page-hero">
     <h1>Insights</h1>
     <p>Psicología aplicada al rendimiento y la elección. Sin rodeos, sin relleno.</p>
+    <div class="hero-shortcuts" aria-label="Secciones de artículos">
+      <a href="#rompe-tengo-que">Rompe el «TENGO QUE»</a>
+      <a href="#ansiedad-rendimiento">Ansiedad, presión y rendimiento</a>
+      <a href="#dependencia-emocional">Dependencia emocional</a>
+      <a href="#malestar-laboral">Malestar laboral</a>
+    </div>
   </div>
 
   <!-- CONTENT -->
@@ -385,7 +417,7 @@
       <a class="read-link" href="como-dejar-de-hacer-las-cosas-por-obligacion.html">Leer artículo →</a>
     </div>
 
-    <h2 class="section-label">Serie: Rompe el «TENGO QUE»</h2>
+    <h2 id="rompe-tengo-que" class="section-label">Serie: Rompe el «TENGO QUE»</h2>
 
     <div class="articles-grid">
       <div class="article-card">
@@ -432,7 +464,7 @@
       </div>
     </div>
     
-    <h2 class="section-label">Ansiedad, presión y rendimiento</h2>
+    <h2 id="ansiedad-rendimiento" class="section-label">Ansiedad, presión y rendimiento</h2>
 
 <div class="articles-grid">
   <div class="article-card">
@@ -451,7 +483,7 @@
   </div>
 </div>
     
-    <h2 class="section-label">Serie: Deja de Buscarte en Otros · Dependencia emocional</h2>
+    <h2 id="dependencia-emocional" class="section-label">Serie: Deja de Buscarte en Otros · Dependencia emocional</h2>
 
     <div class="pillar-card">
       <h2>Dependencia emocional: cómo dejar de necesitar que te validen para sentir que vales</h2>
@@ -484,7 +516,7 @@
       </div>
     </div>
 
-    <h2 class="section-label">Serie: Trabajo Para Otro · Malestar laboral</h2>
+    <h2 id="malestar-laboral" class="section-label">Serie: Trabajo Para Otro · Malestar laboral</h2>
 
     <div class="pillar-card">
       <h2>Malestar laboral cuando trabajas para otro: el mapa completo de lo que te pasa por dentro</h2>
