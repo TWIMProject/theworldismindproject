@@ -1,0 +1,115 @@
+# ============================================
+# TWIM Project - .gitignore
+# ============================================
+
+# ===== SISTEMA OPERATIVO =====
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===== EDITORES DE CÓDIGO =====
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (WebStorm, PhpStorm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# ===== NODE.JS (si usas build tools) =====
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# ===== ARCHIVOS TEMPORALES =====
+
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ===== ARCHIVOS DE BACKUP =====
+
+*.backup
+*.old
+backup/
+backups/
+
+# ===== ARCHIVOS SENSIBLES =====
+
+# Claves API, configuraciones privadas
+.env
+.env.local
+.env.production
+config.private.js
+secrets/
+
+# Certificados SSL privados
+*.pem
+*.key
+
+# ===== ANALYTICS & TRACKING =====
+
+ga-config.js
+
+# ===== ARCHIVOS DE CONSTRUCCIÓN =====
+
+dist/
+build/
+out/
+.cache/
+
+# Archivos compilados
+*.min.js
+*.min.css
+
+# ===== TESTING =====
+
+coverage/
+.nyc_output/
+*.test.js.snap
+
+# ===== DOCUMENTACIÓN GENERADA =====
+
+docs/build/
+docs/_build/
+
+# ===== OTROS =====
+
+deploy.log
