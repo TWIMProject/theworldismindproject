@@ -544,12 +544,8 @@
       margin-bottom: 2.2rem;
     }
     .workshops-spotlight__layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2rem;
-      align-items: stretch;
+      display: block;
     }
-    .workshops-spotlight__lead,
     .workshops-spotlight__card {
       border-radius: 12px;
       padding: 2rem;
@@ -569,23 +565,6 @@
       letter-spacing: .04em;
       text-transform: uppercase;
     }
-    .workshops-spotlight__lead h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: .8rem; }
-    .workshops-spotlight__lead p { font-size: 1rem; margin-bottom: 1rem; }
-    .workshops-spotlight__bullets { list-style: none; margin: 1.4rem 0 1.8rem; }
-    .workshops-spotlight__bullets li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: .7rem;
-      color: rgba(255,255,255,.9);
-    }
-    .workshops-spotlight__bullets li::before {
-      content: '•';
-      position: absolute;
-      left: .35rem;
-      color: var(--beige-light);
-      font-size: 1.1rem;
-    }
-    .workshops-spotlight__cta { display: flex; gap: .8rem; flex-wrap: wrap; }
     .workshops-spotlight__card h4 { font-size: 1.25rem; margin-bottom: .5rem; }
     .workshops-spotlight__meta { color: var(--beige-light); font-size: .95rem; margin-bottom: 1rem; }
     .workshops-spotlight__card ul { list-style: none; margin: 0 0 1.4rem; }
@@ -752,7 +731,6 @@
       }
       .hero__content { padding: 1.8rem 1.3rem; margin: 0 .8rem; }
       .workshops-spotlight { padding: 4.2rem 0 3.8rem; }
-      .workshops-spotlight__lead, .workshops-spotlight__card { padding: 1.5rem; }
       section { padding: 3.5rem 0; }
       .guia-buttons { flex-direction: column; }
       .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
@@ -872,6 +850,44 @@
         <i class="fa-solid fa-heart" aria-hidden="true"></i>
         <h3>Terapia de pareja</h3>
         <p>Dependencia emocional, conflictos que se repiten, desconexión emocional, crisis, celos y reconstrucción del vínculo. La terapia de pareja no es un juicio; es un espacio para entender qué le pasa a cada uno y qué le pasa a la relación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TALLERES DESTACADOS ── -->
+
+<section id="talleres-destacados" class="workshops-spotlight">
+  <div class="container">
+    <div class="section-line"></div>
+    <div class="workshops-spotlight__intro">
+      <h2 class="section-title">Talleres destacados</h2>
+      <p class="section-sub">Los talleres pasan a primer plano porque son los programas con lanzamiento prioritario. Aquí tienes el acceso más visible para descubrirlos y reservar tu plaza con facilidad.</p>
+    </div>
+    <div class="workshops-spotlight__layout">
+      <div class="workshops-spotlight__mini-grid">
+        <article class="workshops-spotlight__card">
+          <span class="workshops-spotlight__eyebrow">Talleres presenciales</span>
+          <h4>Adolescentes en Valencia</h4>
+          <p class="workshops-spotlight__meta">Grupos reducidos · septiembre 2026</p>
+          <ul>
+            <li>TDAH, autoestima, regulación emocional e identidad.</li>
+            <li>Motivación, apatía académica y decisión vocacional.</li>
+            <li>Formato cerrado con acompañamiento también a familias.</li>
+          </ul>
+          <a href="#talleres" class="btn btn-beige">Explorar talleres</a>
+        </article>
+        <article class="workshops-spotlight__card">
+          <span class="workshops-spotlight__eyebrow">Taller en vivo</span>
+          <h4>No puedo parar</h4>
+          <p class="workshops-spotlight__meta">Para profesionales con estrés y autoexigencia</p>
+          <ul>
+            <li>Sesión en directo de 90 minutos con práctica guiada.</li>
+            <li>Técnica concreta para frenar urgencia mental.</li>
+            <li>Ideal como puerta de entrada antes de otros programas.</li>
+          </ul>
+          <a href="nopuedoparar-taller.html" class="btn btn-beige">Ver taller en vivo</a>
+        </article>
       </div>
     </div>
   </div>
