@@ -362,6 +362,7 @@
       font-size: 18px;
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
     h1, h2, h3 { font-weight: 600; letter-spacing: .3px; color: var(--green-dark); }
     p { color: var(--text-soft); }
@@ -369,6 +370,8 @@
     .container { width: 93%; max-width: 1200px; margin: 0 auto; }
 
     /* ── BUTTONS ── */
+    img, iframe, video { max-width: 100%; height: auto; }
+
     .btn {
       display: inline-block;
       padding: .75rem 1.6rem;
@@ -427,9 +430,13 @@
       background: var(--green);
       color: var(--white);
       text-align: center;
-      padding: .5rem 1rem;
+      padding: .65rem 1rem;
       font-size: .88rem;
       font-weight: 300;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .45rem .75rem;
     }
     .announcement strong { font-weight: 600; }
     .announcement a { color: var(--beige-light); text-decoration: underline; text-underline-offset: 2px; }
@@ -483,6 +490,7 @@
       line-height: 1.55;
     }
     .hero__cta { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    .hero__cta .btn { min-width: 180px; }
 
     /* ── SECTIONS ── */
     section { padding: 5rem 0; }
@@ -763,9 +771,15 @@
         text-align: center;
         border-bottom: 1px solid rgba(255,255,255,.08);
       }
-      .hero__content { padding: 1.8rem 1.3rem; margin: 0 .8rem; }
+      .hero__content { padding: 1.8rem 1.2rem; margin: 0 .8rem; }
+      .hero__text { font-size: clamp(1.9rem, 8vw, 2.5rem); }
+      .hero__subtitle { font-size: 1rem; }
+      .hero__cta { flex-direction: column; align-items: stretch; }
+      .hero__cta .btn, .guia-buttons .btn { width: 100%; }
+      .announcement { padding-left: .85rem; padding-right: .85rem; }
       .workshops-spotlight { padding: 4.2rem 0 3.8rem; }
       section { padding: 3.5rem 0; }
+      .contacto-form, .prog-card, .workshops-download { padding: 1.35rem; }
       .guia-buttons { flex-direction: column; }
       .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
     }
