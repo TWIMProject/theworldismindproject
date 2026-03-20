@@ -357,7 +357,7 @@
       align-items: center;
     }
     header nav img {
-      height: 75px;
+      height: 90px;
       width: auto;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
     }
@@ -527,6 +527,72 @@
     .prog-standard li { padding: .3rem 0 .3rem 1.4rem; font-size: .93rem; color: var(--text); position: relative; }
     .prog-standard li::before { content: '—'; position: absolute; left: 0; color: var(--green); font-weight: 600; }
 
+    /* ── TALLERES DESTACADOS ── */
+    .workshops-spotlight {
+      background: linear-gradient(150deg, var(--green-dark), var(--green));
+      color: var(--white);
+      padding: 5.5rem 0 5rem;
+    }
+    .workshops-spotlight .section-line { background: var(--beige-light); }
+    .workshops-spotlight .section-title,
+    .workshops-spotlight h3,
+    .workshops-spotlight h4 { color: var(--white); }
+    .workshops-spotlight .section-sub,
+    .workshops-spotlight p { color: rgba(255,255,255,.82); }
+    .workshops-spotlight__intro {
+      max-width: 780px;
+      margin-bottom: 2.2rem;
+    }
+    .workshops-spotlight__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+    .workshops-spotlight__lead,
+    .workshops-spotlight__card {
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.08);
+      box-shadow: 0 14px 40px rgba(0,0,0,.12);
+    }
+    .workshops-spotlight__eyebrow {
+      display: inline-flex;
+      margin-bottom: 1rem;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      color: var(--beige-light);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .workshops-spotlight__lead h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: .8rem; }
+    .workshops-spotlight__lead p { font-size: 1rem; margin-bottom: 1rem; }
+    .workshops-spotlight__bullets { list-style: none; margin: 1.4rem 0 1.8rem; }
+    .workshops-spotlight__bullets li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: .7rem;
+      color: rgba(255,255,255,.9);
+    }
+    .workshops-spotlight__bullets li::before {
+      content: '•';
+      position: absolute;
+      left: .35rem;
+      color: var(--beige-light);
+      font-size: 1.1rem;
+    }
+    .workshops-spotlight__cta { display: flex; gap: .8rem; flex-wrap: wrap; }
+    .workshops-spotlight__card h4 { font-size: 1.25rem; margin-bottom: .5rem; }
+    .workshops-spotlight__meta { color: var(--beige-light); font-size: .95rem; margin-bottom: 1rem; }
+    .workshops-spotlight__card ul { list-style: none; margin: 0 0 1.4rem; }
+    .workshops-spotlight__card li { position: relative; padding-left: 1.4rem; margin-bottom: .55rem; color: rgba(255,255,255,.86); }
+    .workshops-spotlight__card li::before { content: '✓'; position: absolute; left: 0; color: var(--beige-light); font-weight: 600; }
+    .workshops-spotlight__mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
     /* ── CONFERENCIAS ── */
     .conf-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.8rem; }
     .conf-card {
@@ -651,7 +717,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .about-grid, .prog-grid, .libros-grid, .contacto-grid, .guia-grid { grid-template-columns: 1fr; }
+      .about-grid, .prog-grid, .libros-grid, .contacto-grid, .guia-grid, .workshops-spotlight__layout, .workshops-spotlight__mini-grid { grid-template-columns: 1fr; }
       .esp-grid, .conf-grid { grid-template-columns: 1fr; }
       .about-img { order: -1; }
       .libro-card { flex-direction: column; align-items: center; text-align: center; }
@@ -685,6 +751,8 @@
         border-bottom: 1px solid rgba(255,255,255,.08);
       }
       .hero__content { padding: 1.8rem 1.3rem; margin: 0 .8rem; }
+      .workshops-spotlight { padding: 4.2rem 0 3.8rem; }
+      .workshops-spotlight__lead, .workshops-spotlight__card { padding: 1.5rem; }
       section { padding: 3.5rem 0; }
       .guia-buttons { flex-direction: column; }
       .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
@@ -809,6 +877,58 @@
   </div>
 </section>
 
+<!-- ── TALLERES DESTACADOS ── -->
+
+<section id="talleres-destacados" class="workshops-spotlight">
+  <div class="container">
+    <div class="section-line"></div>
+    <div class="workshops-spotlight__intro">
+      <h2 class="section-title">Talleres destacados</h2>
+      <p class="section-sub">Los talleres pasan a primer plano porque son los programas con lanzamiento prioritario. Aquí tienes el acceso más visible para descubrirlos y reservar tu plaza con facilidad.</p>
+    </div>
+    <div class="workshops-spotlight__layout">
+      <div class="workshops-spotlight__lead">
+        <span class="workshops-spotlight__eyebrow">Prioridad de lanzamiento</span>
+        <h3>Programas grupales con más presencia y una ruta clara hacia la reserva.</h3>
+        <p>He reforzado visualmente esta parte de la web para que los talleres no queden por detrás del resto de propuestas y sea más natural llegar a ellos desde escritorio.</p>
+        <ul class="workshops-spotlight__bullets">
+          <li>Visibilidad temprana en la home, antes del bloque general de programas.</li>
+          <li>Mensajes más claros sobre formato, plazas y momento de inicio.</li>
+          <li>Accesos directos tanto al bloque de talleres como a la opción en vivo para profesionales.</li>
+        </ul>
+        <div class="workshops-spotlight__cta">
+          <a href="#talleres" class="btn btn-beige">Ver talleres para adolescentes</a>
+          <a href="nopuedoparar-taller.html" class="btn btn-outline-white">Ver taller en vivo</a>
+        </div>
+      </div>
+      <div class="workshops-spotlight__mini-grid">
+        <article class="workshops-spotlight__card">
+          <span class="workshops-spotlight__eyebrow">Talleres presenciales</span>
+          <h4>Adolescentes en Valencia</h4>
+          <p class="workshops-spotlight__meta">Grupos reducidos · septiembre 2026</p>
+          <ul>
+            <li>TDAH, autoestima, regulación emocional e identidad.</li>
+            <li>Motivación, apatía académica y decisión vocacional.</li>
+            <li>Formato cerrado con acompañamiento también a familias.</li>
+          </ul>
+          <a href="#talleres" class="btn btn-beige">Explorar talleres</a>
+        </article>
+        <article class="workshops-spotlight__card">
+          <span class="workshops-spotlight__eyebrow">Taller en vivo</span>
+          <h4>No puedo parar</h4>
+          <p class="workshops-spotlight__meta">Para profesionales con estrés y autoexigencia</p>
+          <ul>
+            <li>Sesión en directo de 90 minutos con práctica guiada.</li>
+            <li>Técnica concreta para frenar urgencia mental.</li>
+            <li>Ideal como puerta de entrada antes de otros programas.</li>
+          </ul>
+          <a href="nopuedoparar-taller.html" class="btn btn-beige">Ver taller en vivo</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── PROGRAMAS ── -->
 
 <section id="programs" class="bg-sand">
@@ -870,6 +990,11 @@
     <div class="section-line"></div>
     <h2 class="section-title">Talleres presenciales para adolescentes</h2>
     <p class="section-sub">Dos grupos reducidos en Valencia para septiembre de 2026, pensados para trabajar aquello que la presión académica no alcanza a nombrar.</p>
+    <div class="workshops-spotlight__lead" style="background:var(--sand); color:var(--text); border:1px solid var(--border); box-shadow:none; margin-bottom:1.6rem;">
+      <span class="workshops-spotlight__eyebrow" style="background:rgba(38,92,75,.08); color:var(--green);">Lanzamiento prioritario</span>
+      <h3 style="color:var(--green-dark);">Una propuesta central dentro de la web, no un bloque secundario.</h3>
+      <p style="color:var(--text-soft);">Estos talleres ganan presencia porque son los programas que van a salir sí o sí. Por eso este bloque mantiene una jerarquía más visible, con información resumida y acceso directo a cada opción.</p>
+    </div>
     <div class="prog-grid">
       <div class="prog-card prog-featured">
         <span class="prog-badge">3º–4º ESO · TDAH</span>
