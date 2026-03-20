@@ -74,8 +74,9 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    body { background: var(--cream); }
+    body { background: var(--cream); overflow-x: hidden; }
     a { text-decoration: none; }
+    img, iframe, video { max-width: 100%; height: auto; }
     p { color: var(--text-soft); }
     .container { width: 93%; max-width: 1120px; margin: 0 auto; }
     .site-header { background: var(--green-dark); padding: .8rem 0; position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,.15); }
@@ -84,6 +85,11 @@
     .site-header .nav-links { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.2rem; }
     .site-header .nav-links a { color: rgba(255,255,255,.8); font-size:.9rem; padding:.45rem .7rem; border-radius:4px; }
     .site-header .nav-links a:hover, .site-header .nav-links a.active { color:#fff; background: rgba(255,255,255,.08); }
+    .hamburger { display:none; background:none; border:none; cursor:pointer; padding:.5rem; margin-left:auto; z-index:1001; }
+    .hamburger span { display:block; width:24px; height:2px; margin:5px 0; background:#fff; border-radius:999px; transition:.3s; }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity:0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .hero { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); color:#fff; padding: 5.5rem 0 4.5rem; }
     .hero-grid { display:grid; grid-template-columns: 1.25fr .75fr; gap:2rem; align-items:end; }
     .eyebrow { display:inline-flex; align-items:center; gap:.5rem; background: rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:.4rem .85rem; font-size:.82rem; font-weight:600; text-transform:uppercase; letter-spacing:.5px; }
@@ -140,17 +146,23 @@
     footer a:hover { color:#fff; }
     @media (max-width: 860px) {
       .hero-grid, .tips-grid, .group-grid, .workshop-grid, .cross-link { grid-template-columns: 1fr; display:grid; }
-      .site-header nav { flex-direction:column; align-items:flex-start; }
-      .site-header .nav-links { justify-content:flex-start; }
       .hero { padding-top: 4.5rem; }
     }
-    @media (max-width: 560px) {
+    @media (max-width: 640px) {
       body { font-size: 17px; }
-      .site-header .brand img { height: 60px; }
-      .site-header .nav-links { gap:.35rem; }
-      .site-header .nav-links a { padding:.35rem .55rem; font-size:.84rem; }
+      .site-header { padding: .65rem 0; }
+      .site-header nav { align-items:center; }
+      .site-header .brand img { height: 58px; }
+      .hamburger { display:block; }
+      .site-header .nav-links { display:none; position:fixed; inset:0; background:rgba(23,61,48,.98); padding:6.5rem 1rem 2rem; flex-direction:column; align-items:stretch; justify-content:flex-start; gap:.75rem; overflow-y:auto; }
+      .site-header .nav-links.open { display:flex; }
+      .site-header .nav-links a { padding:.9rem 1rem; font-size:1rem; text-align:center; border:1px solid rgba(255,255,255,.08); border-radius:10px; background:rgba(255,255,255,.03); }
+      .hero { padding: 4.5rem 0 3.5rem; }
       .hero h1 { font-size: 2.35rem; }
       .hero .subtitle { font-size: 1.08rem; }
+      .cta-row { flex-direction:column; align-items:stretch; }
+      .cta-row .btn { width:100%; text-align:center; }
+      .content-card, .cta-box, .cross-link, .quote-block { padding: 1.35rem; }
       .email-link { word-break: break-word; }
     }
   </style>
@@ -168,7 +180,8 @@
     <div class="container">
       <nav>
         <a class="brand" href="../../index.html" aria-label="Ir a inicio"><img src="../../logo-mindworld.png" alt="TWIM Project"></a>
-        <div class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+        <div class="nav-links" id="navLinks">
           <a href="../../index.html#about">Sobre mí</a>
           <a href="../../index.html#especialidades">Especialidades</a>
           <a href="../../index.html#programs">Programas</a>
@@ -348,5 +361,21 @@
     <p>© 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515 en Valencia</p>
     <p><a href="../../index.html">Inicio</a> · <a href="../../insights/">Insights</a> · <a href="../../privacy.html">Privacidad</a> · <a href="mailto:danielorozco@twimproject.com">danielorozco@twimproject.com</a></p>
   </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('open');
+        });
+      });
+    }
+  </script>
 </body>
 </html>

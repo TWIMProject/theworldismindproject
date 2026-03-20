@@ -43,6 +43,16 @@ background: var(--bg);
 color: var(--text);
 font-size: 18px;
 font-weight: 300;
+overflow-x: hidden;
+}
+
+html, body {
+max-width: 100%;
+}
+
+img, iframe, video {
+max-width: 100%;
+height: auto;
 }
 
 h1, h2, h3 {
@@ -90,6 +100,44 @@ transition: all .2s;
 header .nav-links a:hover {
 color: #fff;
 background: rgba(255,255,255,.08);
+}
+
+header .nav-links {
+display: flex;
+align-items: center;
+gap: .2rem;
+flex-wrap: wrap;
+}
+
+.hamburger {
+display: none;
+background: none;
+border: none;
+cursor: pointer;
+padding: .5rem;
+z-index: 1001;
+}
+
+.hamburger span {
+display: block;
+width: 24px;
+height: 2px;
+background: #fff;
+margin: 5px 0;
+transition: all .3s;
+border-radius: 999px;
+}
+
+.hamburger.active span:nth-child(1) {
+transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+transform: translateY(-7px) rotate(-45deg);
 }
 
 /* BOTÓN GENERAL */
@@ -799,5 +847,108 @@ font-size: .82rem;
 
 .comparison-table th, .comparison-table td {
 padding: .5rem .6rem;
+}
+}
+
+@media (max-width: 900px) {
+header nav {
+gap: .8rem;
+}
+
+header .nav-links {
+gap: .35rem;
+}
+
+.article-content,
+.insights-container,
+.article-container {
+padding-left: 1.25rem;
+padding-right: 1.25rem;
+}
+}
+
+@media (max-width: 640px) {
+body {
+font-size: 17px;
+}
+
+header {
+padding: .65rem 0;
+}
+
+header nav {
+width: min(94%, 1200px);
+}
+
+header nav a img {
+height: 58px;
+}
+
+.hamburger {
+display: block;
+}
+
+header .nav-links {
+display: none;
+position: fixed;
+inset: 0;
+padding: 6.5rem 1.25rem 2rem;
+background: rgba(23,61,48,.98);
+flex-direction: column;
+align-items: stretch;
+justify-content: flex-start;
+flex-wrap: nowrap;
+overflow-y: auto;
+}
+
+header .nav-links.open {
+display: flex;
+}
+
+header .nav-links a {
+margin-left: 0;
+width: 100%;
+text-align: center;
+padding: .95rem 1rem;
+font-size: 1.05rem;
+border: 1px solid rgba(255,255,255,.08);
+border-radius: 10px;
+background: rgba(255,255,255,.03);
+}
+
+.page-hero,
+.article-hero {
+padding: 4rem 1rem 3rem;
+}
+
+.article-content,
+.insights-container,
+.article-container {
+padding-left: 1rem;
+padding-right: 1rem;
+padding-bottom: 3rem;
+}
+
+.article-content {
+border-radius: 16px 16px 0 0;
+}
+
+.article-content h2 {
+font-size: 1.4rem;
+}
+
+.article-content h3 {
+font-size: 1.12rem;
+}
+
+.cta-block,
+.cta-banner,
+.highlight-box {
+padding: 1.35rem;
+}
+
+.related-grid,
+.articles-grid {
+grid-template-columns: 1fr;
 }
 }
