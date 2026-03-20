@@ -3,6 +3,10 @@
 
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /gracias-bundle.html
+Disallow: /rompetengoquepreventa.html
 
 # Sitemap location
 Sitemap: https://twimproject.com/sitemap.xml

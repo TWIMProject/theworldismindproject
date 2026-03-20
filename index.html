@@ -47,7 +47,8 @@
   <link rel="dns-prefetch" href="https://www.youtube.com">
   <link rel="dns-prefetch" href="https://www.linkedin.com">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" as="style">
-  <link rel="preload" href="daniel-orozco-consulta.jpg" as="image" type="image/jpeg">
+  <link rel="preload" href="daniel-orozco-consulta.webp" as="image" type="image/webp">
+  <link rel="preload" href="hero-bg.webp" as="image" type="image/webp">
 
   <!-- ========== FONTS & ICONS ========== -->
 
@@ -86,6 +87,8 @@
     "@type": "Person",
     "@id": "https://twimproject.com/#daniel-orozco-abia"
   },
+  "email": "danielorozco@theworldismindproject.com",
+  "telephone": "+34625231297",
   "email": "danielorozco@twimproject.com",
   "address": {
     "@type": "PostalAddress",
@@ -93,6 +96,14 @@
     "addressRegion": "Comunidad Valenciana",
     "addressCountry": "ES"
   },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:45"
+    }
+  ],
   "areaServed": [
     { "@type": "City", "name": "Valencia" },
     { "@type": "Country", "name": "España" }
@@ -102,6 +113,7 @@
     "https://instagram.com/daniorozcopsicologo",
     "https://youtube.com/@daniorozcopsicologo",
     "https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/",
+    "https://www.tiktok.com/@daniorozcopsicologo1",
     "https://amzn.eu/d/38Veu6F"
   ],
   "hasOfferCatalog": {
@@ -160,7 +172,8 @@
   "sameAs": [
     "https://instagram.com/daniorozcopsicologo",
     "https://youtube.com/@daniorozcopsicologo",
-    "https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/"
+    "https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/",
+    "https://www.tiktok.com/@daniorozcopsicologo1"
   ],
   "hasCredential": {
     "@type": "EducationalOccupationalCredential",
@@ -194,7 +207,7 @@
     "availability": "https://schema.org/InStock",
     "seller": { "@type": "Organization", "name": "Amazon" }
   },
-  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "28" }
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "9", "bestRating": "5" }
 }
 </script>
 
@@ -230,6 +243,23 @@
     },
     {
       "@type": "Question",
+      "name": "¿Quién es Daniel Orozco psicólogo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Daniel Orozco Abia es Psicólogo General Sanitario colegiado (CV11515) con más de una década de experiencia clínica en Valencia. Su enfoque se basa en el psicoanálisis como herramienta para guiar procesos de transformación personal. Es autor de 'Los engranajes de la mente' y creador de TWIM Project (The World Is Mind Project), una plataforma de divulgación en salud mental." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta un psicólogo en Valencia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "El precio de una sesión de psicología en Valencia varía según el profesional y la modalidad. En TWIM Project, las tarifas se adaptan al tipo de terapia (individual, de pareja o deportiva). Puedes contactar directamente para consultar disponibilidad y condiciones." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es TWIM Project?",
+      "acceptedAnswer": { "@type": "Answer", "text": "TWIM Project (The World Is Mind Project) es la plataforma fundada por Daniel Orozco Abia que integra consulta psicológica, divulgación en salud mental y programas formativos. Incluye terapia clínica, conferencias, el canal de YouTube con más de 10.000 suscriptores y publicaciones como 'Los engranajes de la mente'." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo saber si necesito ir al psicólogo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si sientes malestar emocional persistente, ansiedad, dificultad para descansar, bloqueos recurrentes, problemas en tus relaciones o la sensación de vivir en piloto automático, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia." }
       "name": "¿Tratas ansiedad y depresión?",
       "acceptedAnswer": { "@type": "Answer", "text": "Sí. La ansiedad y la depresión son dos de los motivos de consulta más frecuentes. Trabajo desde un enfoque psicoanalítico que no se queda en el síntoma: buscamos juntos el origen del malestar para que el cambio sea profundo. Tanto en adultos como en adolescentes." }
     },
@@ -279,13 +309,29 @@
     "url": "https://twimproject.com/rompetengoquepreventa.html",
     "priceCurrency": "EUR",
     "price": "39",
-    "priceValidUntil": "2026-02-25",
+    "priceValidUntil": "2026-12-31",
     "availability": "https://schema.org/LimitedAvailability",
     "seller": { "@type": "Person", "name": "Daniel Orozco Abia" }
   }
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TWIM Project",
+  "alternateName": "The World Is Mind Project",
+  "url": "https://twimproject.com",
+  "publisher": { "@type": "Organization", "@id": "https://twimproject.com/#organization" },
+  "inLanguage": "es",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://twimproject.com/insights/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
   <style>
     :root {
       --green: #265C4B;
@@ -653,46 +699,31 @@
     .faq-item[open] summary::after { content: '−'; }
     .faq-item p { margin-top: .7rem; font-size: .93rem; line-height: 1.65; }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--green-dark);
-      color: rgba(255,255,255,.65);
-      text-align: center;
-      padding: 2.2rem 1.5rem;
-      font-size: .85rem;
-    }
-    footer a { color: rgba(255,255,255,.65); text-decoration: none; }
-    footer a:hover { color: var(--white); }
+<!-- ========== VIDEO SCHEMA ========== -->
 
-    /* ── MODAL ── */
-    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.45); justify-content: center; align-items: center; z-index: 1000; }
-    .modal { background: var(--white); padding: 2rem; border-radius: 10px; max-width: 400px; width: 90%; text-align: center; position: relative; }
-    .modal h3 { margin-bottom: 1rem; color: var(--green-dark); }
-    .modal input[type="email"] { width: 100%; padding: .7rem; margin-bottom: 1rem; border: 1.5px solid var(--sand-dark); border-radius: 6px; font-family: inherit; }
-    .modal .btn { width: 100%; margin-top: .5rem; }
-    .modal-close { position: absolute; top: .6rem; right: .8rem; font-size: 1.3rem; cursor: pointer; color: var(--text-muted); }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Daniel Orozco Abia - Contenido psicoanalítico",
+  "description": "Canal de psicología y psicoanálisis de Daniel Orozco Abia, Psicólogo General Sanitario CV11515 en Valencia. Contenido sobre narcisismo, autoexigencia, ansiedad y relaciones.",
+  "thumbnailUrl": "https://img.youtube.com/vi/dwNx4rJ0xvY/maxresdefault.jpg",
+  "uploadDate": "2024-01-01",
+  "contentUrl": "https://www.youtube.com/watch?v=dwNx4rJ0xvY",
+  "embedUrl": "https://www.youtube.com/embed/dwNx4rJ0xvY",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://twimproject.com/#organization"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://twimproject.com/#daniel-orozco-abia"
+  },
+  "inLanguage": "es"
+}
+</script>
 
-    /* ── HAMBURGER ── */
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: .5rem;
-      z-index: 1001;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: #fff;
-      margin: 5px 0;
-      transition: all .3s;
-      border-radius: 2px;
-    }
-    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  <link rel="stylesheet" href="twim-home.css">
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
@@ -758,7 +789,10 @@
   <div class="container">
     <nav>
       <a href="#home" aria-label="Ir a inicio">
-        <img src="logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia, Psicólogo General Sanitario">
+        <picture>
+          <source srcset="logo-mindworld.webp" type="image/webp">
+          <img src="logo-mindworld.png" alt="TWIM Project - Daniel Orozco Abia, Psicólogo General Sanitario en Valencia" width="1024" height="1024">
+        </picture>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
@@ -817,7 +851,10 @@
         </div>
       </div>
       <div class="about-img">
-        <img src="daniel-orozco-consulta.jpg" alt="Daniel Orozco Abia - Psicólogo General Sanitario en Valencia" width="450" height="600" loading="eager">
+        <picture>
+          <source srcset="daniel-orozco-consulta.webp" type="image/webp">
+          <img src="daniel-orozco-consulta.jpg" alt="Daniel Orozco Abia - Psicólogo General Sanitario en Valencia" width="800" height="1067" loading="eager">
+        </picture>
       </div>
     </div>
   </div>
@@ -992,7 +1029,10 @@
     <h2 class="section-title">Conferencias</h2>
     <p class="section-sub">Formaciones para equipos y organizaciones.</p>
     <div class="conf-img">
-      <img src="twimp.jpg" alt="Daniel Orozco Abia impartiendo conferencia" loading="lazy">
+      <picture>
+        <source srcset="twimp.webp" type="image/webp">
+        <img src="twimp.jpg" alt="Daniel Orozco Abia impartiendo conferencia sobre psicología y rendimiento" width="1200" height="801" loading="lazy">
+      </picture>
     </div>
     <div class="conf-grid">
       <div class="conf-card">
@@ -1046,7 +1086,10 @@
     <p class="section-sub"></p>
     <div class="libros-grid">
       <div class="libro-card">
-        <img src="portadalosengranajes.jpg" alt="Portada del libro Los engranajes de la mente" loading="lazy">
+        <picture>
+          <source srcset="portadalosengranajes.webp" type="image/webp">
+          <img src="portadalosengranajes.jpg" alt="Portada del libro Los engranajes de la mente - Daniel Orozco Abia" width="971" height="1500" loading="lazy">
+        </picture>
         <div class="libro-info">
           <h3>Los engranajes de la mente</h3>
           <p>Comprendiendo el Yo, el Ello y el Superyó desde una mirada psicoanalítica clara y aplicable; cómo se forman, cómo chocan entre sí y cómo ese conflicto se traduce en ansiedad y burnout.</p>
@@ -1054,14 +1097,23 @@
           <details>
             <summary>Ver contraportadas</summary>
             <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;">
-              <img src="IMG_8596.jpeg" alt="Contraportada" style="max-width:130px;border-radius:6px;" loading="lazy">
-              <img src="IMG_8598.jpeg" alt="Contraportada Kindle" style="max-width:130px;border-radius:6px;" loading="lazy">
+              <picture>
+                <source srcset="IMG_8596.webp" type="image/webp">
+                <img src="IMG_8596.jpeg" alt="Contraportada del libro Los engranajes de la mente" width="600" height="891" style="max-width:130px;border-radius:6px;" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="IMG_8598.webp" type="image/webp">
+                <img src="IMG_8598.jpeg" alt="Contraportada Kindle de Los engranajes de la mente" width="600" height="920" style="max-width:130px;border-radius:6px;" loading="lazy">
+              </picture>
             </div>
           </details>
         </div>
       </div>
       <div class="libro-card">
-        <img src="ChatGPT Image 5 sept 2025, 11_05_55.png" alt="Portada del libro Burnout" loading="lazy">
+        <picture>
+          <source srcset="portada-burnout.webp" type="image/webp">
+          <img src="portada-burnout.jpg" alt="Portada del libro Burnout: el libro para no petar - Daniel Orozco Abia" width="600" height="900" loading="lazy">
+        </picture>
         <div class="libro-info">
           <h3>Burnout, el libro para no petar</h3>
           <p>Manual de Emergencia para trabajar sin odiarte tanto.</p>
@@ -1069,7 +1121,10 @@
           <details>
             <summary>Ver contraportada</summary>
             <div style="margin-top:10px;">
-              <img src="contraportada BUrnout.jpg" alt="Contraportada Burnout" style="max-width:160px;border-radius:6px;" loading="lazy">
+              <picture>
+                <source srcset="contraportada-burnout.webp" type="image/webp">
+                <img src="contraportada-burnout.jpg" alt="Contraportada del libro Burnout - Daniel Orozco Abia" width="600" height="900" style="max-width:160px;border-radius:6px;" loading="lazy">
+              </picture>
             </div>
           </details>
         </div>
@@ -1084,7 +1139,10 @@
   <div class="container">
     <div class="guia-grid">
       <div>
-        <img src="guia+sesión.jpg" alt="Guía Práctica Anti-Burnout y sesión con Daniel Orozco" loading="lazy">
+        <picture>
+          <source srcset="guia-sesion.webp" type="image/webp">
+          <img src="guia-sesion.jpg" alt="Guía Práctica Anti-Burnout y sesión con Daniel Orozco Abia" width="800" height="533" loading="lazy">
+        </picture>
       </div>
       <div class="guia-text">
         <h2 class="section-title">Guía Práctica Anti-Burnout</h2>
@@ -1157,6 +1215,9 @@
         <a class="contacto-link" href="https://www.linkedin.com/in/daniel-orozco-abia-1a0a90115/" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin"></i> LinkedIn
         </a>
+        <a class="contacto-link" href="https://www.tiktok.com/@daniorozcopsicologo1" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
       </div>
     </div>
   </div>
@@ -1190,6 +1251,20 @@
         <p>Las sesiones individuales duran 50 minutos. En terapia de pareja, 60 minutos. La frecuencia de las sesiones depende del encuadre que acordemos ambas partes.</p>
       </details>
       <details class="faq-item">
+        <summary>¿Quién es Daniel Orozco psicólogo?</summary>
+        <p>Daniel Orozco Abia es Psicólogo General Sanitario colegiado (CV11515) con más de una década de experiencia clínica en Valencia. Su enfoque se basa en el psicoanálisis como herramienta para guiar procesos de transformación personal. Es autor de <em>Los engranajes de la mente</em> y creador de TWIM Project.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuánto cuesta un psicólogo en Valencia?</summary>
+        <p>El precio varía según el profesional y la modalidad. En TWIM Project, las tarifas se adaptan al tipo de terapia (individual, de pareja o deportiva). Puedes contactar directamente para consultar disponibilidad y condiciones.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué es TWIM Project?</summary>
+        <p>TWIM Project (The World Is Mind Project) es la plataforma fundada por Daniel Orozco Abia que integra consulta psicológica, divulgación en salud mental y programas formativos. Incluye terapia clínica, conferencias, el canal de YouTube y publicaciones como <em>Los engranajes de la mente</em>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo saber si necesito ir al psicólogo?</summary>
+        <p>Si sientes malestar emocional persistente, ansiedad, dificultad para descansar, bloqueos recurrentes o la sensación de vivir en piloto automático, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia.</p>
         <summary>¿Tratas ansiedad y depresión?</summary>
         <p>Sí. La ansiedad y la depresión son dos de los motivos de consulta más frecuentes. Trabajo desde un enfoque psicoanalítico que no se queda en el síntoma: buscamos juntos el origen del malestar para que el cambio sea profundo. Tanto en adultos como en adolescentes.</p>
       </details>

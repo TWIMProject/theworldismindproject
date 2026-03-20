@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+
+  <title>{{TITULO_COMPLETO}} | TWIM Project</title>
+  <meta name="description" content="{{META_DESCRIPTION_155_CHARS}}">
+  <meta name="keywords" content="{{KEYWORD_1}}, {{KEYWORD_2}}, {{KEYWORD_3}}, psicología, Daniel Orozco Abia">
+  <meta name="author" content="Daniel Orozco Abia">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://twimproject.com/insights/{{SLUG}}.html">
+
+  <!-- Geographic -->
+
+  <meta name="geo.region" content="ES">
+  <meta name="geo.placename" content="Valencia, España">
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="../logo-mindworld.png" type="image/png">
+  <link rel="apple-touch-icon" href="../logo-mindworld.png">
+
+  <!-- Open Graph -->
+
+  <meta property="og:title" content="{{TITULO_COMPLETO}}">
+  <meta property="og:description" content="{{OG_DESCRIPTION_110_CHARS}}">
+  <meta property="og:image" content="https://twimproject.com/preview.jpg">
+  <meta property="og:url" content="https://twimproject.com/insights/{{SLUG}}.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TWIM Project">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:author" content="Daniel Orozco Abia">
+  <meta property="article:published_time" content="{{YYYY-MM-DD}}">
+
+  <!-- Twitter -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITULO_CORTO_70_CHARS}}">
+  <meta name="twitter:description" content="{{TWITTER_DESCRIPTION_125_CHARS}}">
+  <meta name="twitter:image" content="https://twimproject.com/preview.jpg">
+
+  <!-- Preconnect -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../twim-styles.css">
+
+  <!-- Article Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{TITULO_COMPLETO}}",
+    "description": "{{META_DESCRIPTION_155_CHARS}}",
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Orozco Abia",
+      "jobTitle": "Psicólogo General Sanitario",
+      "url": "https://twimproject.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TWIM Project",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://twimproject.com/logo-mindworld.png"
+      }
+    },
+    "datePublished": "{{YYYY-MM-DD}}",
+    "dateModified": "{{YYYY-MM-DD}}",
+    "mainEntityOfPage": "https://twimproject.com/insights/{{SLUG}}.html",
+    "image": "https://twimproject.com/preview.jpg",
+    "inLanguage": "es",
+    "keywords": ["{{KEYWORD_1}}", "{{KEYWORD_2}}", "{{KEYWORD_3}}"]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "{{PREGUNTA_1}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{RESPUESTA_1}}"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "{{PREGUNTA_2}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{RESPUESTA_2}}"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "{{PREGUNTA_3}}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{RESPUESTA_3}}"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://twimproject.com"},
+      {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://twimproject.com/insights/"},
+      {"@type": "ListItem", "position": 3, "name": "{{TITULO_CORTO_70_CHARS}}"}
+    ]
+  }
+  </script>
+
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="../" aria-label="Ir a inicio">
+        <picture>
+          <source srcset="../logo-mindworld.webp" type="image/webp">
+          <img src="../logo-mindworld.png" alt="TWIM Project" width="1024" height="1024">
+        </picture>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="../#about">Sobre mí</a>
+        <a href="../#especialidades">Especialidades</a>
+        <a href="../#programs">Programas</a>
+        <a href="../#libros">Libros</a>
+        <a href="./">Insights</a>
+        <a href="../#contacto">Contacto</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ── BREADCRUMB ── -->
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="../">Inicio</a> › <a href="./">Insights</a> › <span>{{TITULO_CORTO_70_CHARS}}</span>
+  </div>
+</nav>
+
+<!-- ── ARTICLE ── -->
+
+<main>
+  <article class="insight-article">
+    <div class="container article-container">
+
+      <h1>{{TITULO_COMPLETO}}</h1>
+      <p class="article-meta">
+        Por <strong>Daniel Orozco Abia</strong> · Psicólogo General Sanitario CV11515 · <time datetime="{{YYYY-MM-DD}}">{{FECHA_LEGIBLE}}</time>
+      </p>
+
+      <!-- ══ CONTENIDO DEL ARTÍCULO ══ -->
+
+      <p class="article-intro">{{PARRAFO_INTRODUCTORIO}}</p>
+
+      <h2>{{SUBTITULO_1}}</h2>
+      <p>{{CONTENIDO_1}}</p>
+
+      <h2>{{SUBTITULO_2}}</h2>
+      <p>{{CONTENIDO_2}}</p>
+
+      <h2>{{SUBTITULO_3}}</h2>
+      <p>{{CONTENIDO_3}}</p>
+
+      <!-- ══ FAQ ══ -->
+
+      <section class="article-faq">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>{{PREGUNTA_1}}</summary>
+          <p>{{RESPUESTA_1}}</p>
+        </details>
+        <details>
+          <summary>{{PREGUNTA_2}}</summary>
+          <p>{{RESPUESTA_2}}</p>
+        </details>
+        <details>
+          <summary>{{PREGUNTA_3}}</summary>
+          <p>{{RESPUESTA_3}}</p>
+        </details>
+      </section>
+
+      <!-- ══ CTA ══ -->
+
+      <div class="article-cta">
+        <p>Si quieres explorar esto en profundidad, podemos trabajarlo juntos.</p>
+        <a href="../#contacto" class="btn btn-green">Pedir cita</a>
+        <a href="./" class="btn btn-outline-dark">Más Insights</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- ── FOOTER ── -->
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 TWIM Project · Daniel Orozco Abia · <a href="../privacy.html">Política de privacidad</a></p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VMMZ1TKWZ0');
+</script>
+
+</body>
+</html>
