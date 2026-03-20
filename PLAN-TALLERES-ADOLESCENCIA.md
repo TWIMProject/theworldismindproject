@@ -111,11 +111,12 @@ El blog actual no tiene NADA dirigido a padres de adolescentes. Artículos propu
 
 ### FASE 3 — PRIORIDAD MEDIA (semanas 3-6): Prueba social y confianza
 
-#### 3.1 Añadir testimonios o casos (anonimizados)
-- Si no hay testimonios de talleres anteriores (primera edición), usar:
-  - Testimonios de padres de pacientes adolescentes en consulta individual (anonimizados)
+#### 3.1 Añadir casos clínicos anonimizados (NUNCA testimonios de pacientes)
+- Política firme: nunca se pedirá a ningún paciente o ex-paciente que hable o dé testimonio
+- Usar exclusivamente:
+  - Casos clínicos anonimizados (cambiando nombres, edades, detalles identificativos)
   - Citas de investigación que avalen el formato grupal
-  - Fragmentos de reseñas de los libros en Amazon
+  - Viñetas clínicas tipo "En consulta, es frecuente ver adolescentes que..."
 - Ubicación: entre la sección "Lo que un grupo puede hacer..." y el bloque de detalles
 
 #### 3.2 Añadir sección "Por qué un grupo y no terapia individual"
@@ -138,11 +139,10 @@ El blog actual no tiene NADA dirigido a padres de adolescentes. Artículos propu
   - "Lo que la medicación no puede hacer por tu hijo con TDAH"
 - Cada vídeo con CTA a la landing page del taller
 
-#### 4.2 Colaboraciones estratégicas
-- Contactar asociaciones TDAH en Valencia (APADAH, APNADAH Valencia)
-- Contactar colegios e institutos de Valencia para presentar los talleres
-- Contactar orientadores escolares como canal de derivación
-- Contactar pediatras y psiquiatras infanto-juveniles de Valencia
+#### 4.2 Colaboraciones estratégicas (canal confirmado)
+- Daniel cuenta con un contacto experto en conectar y vender programas/talleres a instituciones educativas
+- A través de este canal: colegios, institutos, asociaciones TDAH, orientadores escolares
+- Complementar con contactos propios: pediatras y psiquiatras infanto-juveniles de Valencia
 
 #### 4.3 Google Ads (micro-presupuesto)
 - Campañas de búsqueda para:

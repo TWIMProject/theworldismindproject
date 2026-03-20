@@ -87,7 +87,6 @@
     "@type": "Person",
     "@id": "https://twimproject.com/#daniel-orozco-abia"
   },
-  "email": "danielorozco@theworldismindproject.com",
   "telephone": "+34625231297",
   "email": "danielorozco@twimproject.com",
   "address": {
@@ -260,6 +259,9 @@
       "@type": "Question",
       "name": "¿Cómo saber si necesito ir al psicólogo?",
       "acceptedAnswer": { "@type": "Answer", "text": "Si sientes malestar emocional persistente, ansiedad, dificultad para descansar, bloqueos recurrentes, problemas en tus relaciones o la sensación de vivir en piloto automático, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia." }
+    },
+    {
+      "@type": "Question",
       "name": "¿Tratas ansiedad y depresión?",
       "acceptedAnswer": { "@type": "Answer", "text": "Sí. La ansiedad y la depresión son dos de los motivos de consulta más frecuentes. Trabajo desde un enfoque psicoanalítico que no se queda en el síntoma: buscamos juntos el origen del malestar para que el cambio sea profundo. Tanto en adultos como en adolescentes." }
     },
@@ -1276,6 +1278,8 @@
       <details class="faq-item">
         <summary>¿Cómo saber si necesito ir al psicólogo?</summary>
         <p>Si sientes malestar emocional persistente, ansiedad, dificultad para descansar, bloqueos recurrentes o la sensación de vivir en piloto automático, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia.</p>
+      </details>
+      <details class="faq-item">
         <summary>¿Tratas ansiedad y depresión?</summary>
         <p>Sí. La ansiedad y la depresión son dos de los motivos de consulta más frecuentes. Trabajo desde un enfoque psicoanalítico que no se queda en el síntoma: buscamos juntos el origen del malestar para que el cambio sea profundo. Tanto en adultos como en adolescentes.</p>
       </details>
@@ -1335,8 +1339,15 @@
     if (!form || !downloadLink) return;
     form.addEventListener('submit', e => {
       e.preventDefault();
-      form.style.display = 'none';
-      downloadLink.style.display = 'inline-block';
+      const email = form.querySelector('input[name="email"]').value;
+      fetch('https://formspree.io/f/mpwrqplb', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, motivo: 'descarga-pdf-talleres' })
+      }).finally(() => {
+        form.style.display = 'none';
+        downloadLink.style.display = 'inline-block';
+      });
     });
   });
 </script>

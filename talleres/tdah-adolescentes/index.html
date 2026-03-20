@@ -19,6 +19,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Taller TDAH Adolescentes Valencia — Más allá del TDAH | TWIM Project">
   <meta name="twitter:description" content="Taller psicoeducativo grupal presencial en Valencia para adolescentes de 3º y 4º de ESO con TDAH.">
+  <meta property="og:image" content="https://twimproject.com/daniel-orozco-consulta.jpg">
+  <meta property="og:image:alt" content="Daniel Orozco Abia - Psicólogo General Sanitario en Valencia">
+  <meta name="twitter:image" content="https://twimproject.com/daniel-orozco-consulta.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
@@ -119,6 +122,18 @@
     .faq-item p { padding: 0 0 1rem; }
     .cross-link { background: var(--sand); border-radius: 18px; padding: 1.5rem; display:flex; justify-content:space-between; gap:1rem; align-items:center; }
     .cross-link a { color: var(--green); font-weight:600; }
+    .cta-form { display:grid; gap:.8rem; max-width:520px; margin:1.5rem auto 0; text-align:left; }
+    .cta-form__row { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+    .cta-form input, .cta-form textarea { width:100%; padding:.7rem .9rem; border:1px solid rgba(255,255,255,.2); border-radius:6px; font-family:inherit; font-size:.93rem; font-weight:300; color:var(--text); background:rgba(255,255,255,.95); }
+    .cta-form input:focus, .cta-form textarea:focus { outline:none; border-color:var(--beige); }
+    .cta-form textarea { resize:vertical; }
+    .cta-form button { margin-top:.3rem; }
+    .cta-alt { margin-top:1.2rem; }
+    .cta-alt__links { display:flex; justify-content:center; gap:1.2rem; margin-top:.5rem; }
+    .cta-alt__link { display:inline-flex; align-items:center; gap:.4rem; color:var(--beige-light); font-size:.95rem; font-weight:500; }
+    .cta-alt__link:hover { color:#fff; }
+    .cta-alt__link i { font-size:1.1rem; }
+    @media (max-width: 560px) { .cta-form__row { grid-template-columns:1fr; } }
     footer { background: var(--green-dark); color:#fff; text-align:center; padding:2rem 1rem; }
     footer p { color: rgba(255,255,255,.7); }
     footer a { color: rgba(255,255,255,.7); }
@@ -139,6 +154,14 @@
       .email-link { word-break: break-word; }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VMMZ1TKWZ0');
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -164,7 +187,8 @@
         <h1>Tu hijo no es vago ni tonto. Tiene TDAH y necesita algo que las clases de repaso no pueden darle.</h1>
         <p class="subtitle">Un taller psicoeducativo grupal presencial en Valencia para adolescentes de 3º y 4º de ESO con TDAH. 16 sesiones, grupo cerrado de 6, dirigido por un Psicólogo General Sanitario con más de 13 años de experiencia.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:danielorozco@twimproject.com?subject=Informaci%C3%B3n%20taller%20TDAH%20ESO">Quiero información</a>
+          <a class="btn btn-primary" href="#cta-final">Quiero información</a>
+          <a class="btn" href="https://wa.me/34625231297?text=Hola%20Daniel%2C%20me%20interesa%20el%20taller%20de%20TDAH%20para%20adolescentes." style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
           <span class="hero-note">Solo 6 plazas · Inicio septiembre 2026</span>
         </div>
       </div>
@@ -270,8 +294,27 @@
         <div class="cta-box">
           <h2>¿Quieres explorar si este taller es adecuado para tu hijo o hija?</h2>
           <p>El primer paso es una reunión informativa conmigo y tu pareja, o contigo si eres familia monoparental, donde os explico el taller en detalle, resuelvo vuestras dudas y evaluamos juntos si encaja con la situación de vuestro hijo o hija. Sin compromiso.</p>
-          <a class="email-link" href="mailto:danielorozco@twimproject.com?subject=Informaci%C3%B3n%20taller%20TDAH%20ESO">danielorozco@twimproject.com</a>
-          <p class="subnote">Indica el nombre y la edad de tu hijo/a y te responderé para agendar la reunión.</p>
+          <form action="https://formspree.io/f/mpwrqplb" method="POST" class="cta-form">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="motivo" value="taller-tdah-adolescentes">
+            <div class="cta-form__row">
+              <input type="text" name="nombre_padre" placeholder="Tu nombre" required>
+              <input type="email" name="email" placeholder="Tu email" required>
+            </div>
+            <div class="cta-form__row">
+              <input type="text" name="nombre_hijo" placeholder="Nombre de tu hijo/a">
+              <input type="text" name="edad_hijo" placeholder="Edad de tu hijo/a">
+            </div>
+            <textarea name="message" placeholder="¿Quieres añadir algo? (opcional)" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary">Solicitar reunión informativa</button>
+          </form>
+          <div class="cta-alt">
+            <p class="subnote">¿Prefieres contacto directo?</p>
+            <div class="cta-alt__links">
+              <a href="https://wa.me/34625231297?text=Hola%20Daniel%2C%20me%20interesa%20el%20taller%20de%20TDAH%20para%20adolescentes." class="cta-alt__link"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a href="mailto:danielorozco@twimproject.com?subject=Informaci%C3%B3n%20taller%20TDAH%20ESO" class="cta-alt__link"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+          </div>
         </div>
       </section>
 
