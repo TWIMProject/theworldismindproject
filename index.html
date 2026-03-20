@@ -334,6 +334,29 @@
   }
 }
 </script>
+
+<!-- ========== VIDEO SCHEMA ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Daniel Orozco Abia - Contenido psicoanalítico",
+  "description": "Canal de psicología y psicoanálisis de Daniel Orozco Abia, Psicólogo General Sanitario CV11515 en Valencia. Contenido sobre narcisismo, autoexigencia, ansiedad y relaciones.",
+  "thumbnailUrl": "https://img.youtube.com/vi/dwNx4rJ0xvY/maxresdefault.jpg",
+  "uploadDate": "2024-01-01",
+  "contentUrl": "https://www.youtube.com/watch?v=dwNx4rJ0xvY",
+  "embedUrl": "https://www.youtube.com/embed/dwNx4rJ0xvY",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://twimproject.com/#organization"
+  },
+  "author": {
+    "@type": "Person",
+    "@id": "https://twimproject.com/#daniel-orozco-abia"
+  },
+  "inLanguage": "es"
+}
+</script>
   <style>
     :root {
       --green: #265C4B;
@@ -547,6 +570,8 @@
     .esp-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.07); transform: translateY(-3px); }
     .esp-card i { font-size: 1.5rem; color: var(--green); margin-bottom: .8rem; display: block; }
     .esp-card h3 { font-size: 1.15rem; margin-bottom: .6rem; }
+    .esp-card, .conf-card, .workshops-spotlight__card, .prog-card { min-width: 0; }
+    .esp-card h3, .esp-card p, .conf-card h3, .conf-card p, .workshops-spotlight__card h4, .workshops-spotlight__card li, .prog-card h3, .prog-card li { overflow-wrap: anywhere; }
     .esp-card p { font-size: .93rem; line-height: 1.65; }
 
     /* ── PROGRAMS ── */
@@ -710,32 +735,6 @@
     .faq-item[open] summary::after { content: '−'; }
     .faq-item p { margin-top: .7rem; font-size: .93rem; line-height: 1.65; }
 
-<!-- ========== VIDEO SCHEMA ========== -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Daniel Orozco Abia - Contenido psicoanalítico",
-  "description": "Canal de psicología y psicoanálisis de Daniel Orozco Abia, Psicólogo General Sanitario CV11515 en Valencia. Contenido sobre narcisismo, autoexigencia, ansiedad y relaciones.",
-  "thumbnailUrl": "https://img.youtube.com/vi/dwNx4rJ0xvY/maxresdefault.jpg",
-  "uploadDate": "2024-01-01",
-  "contentUrl": "https://www.youtube.com/watch?v=dwNx4rJ0xvY",
-  "embedUrl": "https://www.youtube.com/embed/dwNx4rJ0xvY",
-  "publisher": {
-    "@type": "Organization",
-    "@id": "https://twimproject.com/#organization"
-  },
-  "author": {
-    "@type": "Person",
-    "@id": "https://twimproject.com/#daniel-orozco-abia"
-  },
-  "inLanguage": "es"
-}
-</script>
-
-  <link rel="stylesheet" href="twim-home.css">
-
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .about-grid, .prog-grid, .libros-grid, .contacto-grid, .guia-grid, .workshops-spotlight__layout, .workshops-spotlight__mini-grid { grid-template-columns: 1fr; }
@@ -779,7 +778,8 @@
       .announcement { padding-left: .85rem; padding-right: .85rem; }
       .workshops-spotlight { padding: 4.2rem 0 3.8rem; }
       section { padding: 3.5rem 0; }
-      .contacto-form, .prog-card, .workshops-download { padding: 1.35rem; }
+      .contacto-form, .prog-card, .workshops-download, .esp-card, .conf-card, .workshops-spotlight__card { padding: 1.35rem; }
+      .container { width: min(100% - 1.5rem, 1200px); }
       .guia-buttons { flex-direction: column; }
       .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
     }
