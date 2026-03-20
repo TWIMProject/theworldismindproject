@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insights | TWIM Project — Psicología aplicada al rendimiento y la elección</title>
-  <meta name="description" content="Artículos de psicología aplicada: urgencia mental, autoexigencia, juez interno, rumiación y cómo recuperar margen de elección. Por Daniel Orozco Abia, Psicólogo CV11515.">
-  <meta name="keywords" content="psicología aplicada, urgencia mental, autoexigencia, burnout, artículos psicología, Daniel Orozco Abia">
+  <title>Blog Psicología Valencia · Ansiedad, Estrés, Depresión y Dependencia Emocional | TWIM Project</title>
+  <meta name="description" content="Artículos de psicología: ansiedad, depresión, estrés laboral, dependencia emocional, autoestima baja, burnout y autoexigencia. Recursos prácticos para adultos y adolescentes por Daniel Orozco Abia, Psicólogo en Valencia CV11515.">
+  <meta name="keywords" content="blog psicología, artículos psicología Valencia, ansiedad, depresión, estrés laboral, dependencia emocional, autoestima baja, urgencia mental, autoexigencia, burnout, malestar laboral, psicólogo Valencia, Daniel Orozco Abia, psicología adultos, psicología adolescentes, adolescencia, gestión emocional, salud mental">
   <meta name="author" content="Daniel Orozco Abia">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://twimproject.com/insights/">
   <meta name="geo.region" content="ES">
   <link rel="icon" href="../logo-mindworld.png" type="image/png">
-  <meta property="og:title" content="Insights | TWIM Project">
-  <meta property="og:description" content="Artículos de psicología aplicada al rendimiento y la elección.">
+  <meta property="og:title" content="Blog Psicología Valencia · Ansiedad, Estrés, Depresión | TWIM Project">
+  <meta property="og:description" content="Artículos de psicología: ansiedad, depresión, estrés, dependencia emocional, autoestima y burnout. Recursos prácticos por Daniel Orozco Abia, Psicólogo Valencia.">
   <meta property="og:image" content="https://twimproject.com/daniel-orozco-consulta.jpg">
   <meta property="og:url" content="https://twimproject.com/insights/">
   <meta property="og:type" content="website">
@@ -92,7 +92,7 @@
       margin: 0 auto;
     }
     header nav a img {
-      height: 75px;
+      height: 88px;
       width: auto;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
     }
@@ -125,6 +125,30 @@
       color: rgba(255,255,255,.8);
       max-width: 600px;
       margin: 0 auto;
+    }
+    .hero-shortcuts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .75rem;
+      max-width: 920px;
+      margin: 1.8rem auto 0;
+    }
+    .hero-shortcuts a {
+      color: var(--white);
+      text-decoration: none;
+      padding: .7rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      font-size: .9rem;
+      font-weight: 500;
+      line-height: 1.2;
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+    .hero-shortcuts a:hover {
+      background: rgba(255,255,255,.16);
+      transform: translateY(-2px);
     }
 
     /* ── INSIGHTS CONTAINER ── */
@@ -319,9 +343,34 @@
         gap: 1rem;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-links a {
+        margin-left: 0 !important;
+      }
+    }
+
+    :root {
+      --green: #265C4B;
+      --green-dark: #173D30;
+      --green-light: #2E6B5A;
+      --beige: #C2A78B;
+      --beige-dark: #A89070;
+      --beige-light: #D4C4AE;
+      --sand: #F7F4F0;
+      --sand-dark: #EDE8E2;
+      --cream: #FDFCFA;
+      --text: #2B2420;
+      --text-soft: #6B6058;
+      --text-muted: #9A8E84;
+      --white: #FFFFFF;
+      --border: rgba(43,36,32,.07);
       .nav-links.open { display: flex; }
       .nav-links a { margin-left: 0 !important; }
       .insights-container { padding: 1.5rem 1rem 3rem; }
+      .hero-shortcuts { gap: .6rem; }
+      .hero-shortcuts a { width: 100%; max-width: 320px; }
       .page-hero { padding: 4rem 1rem 3rem; }
     }
   </style>
@@ -339,7 +388,7 @@
         <a href="https://twimproject.com/#about">Sobre mí</a>
         <a href="https://twimproject.com/insights/">Insights</a>
         <a href="https://twimproject.com/#contacto">Contacto</a>
-        <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn btn-beige">Rompe el TENGO QUE (39€)</a>
+        <a href="mailto:danielorozco@twimproject.com?subject=Quiero%20informaci%C3%B3n%20sobre%20Rompe%20el%20TENGO%20QUE" class="btn btn-beige">Rompe el TENGO QUE · Más información</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
     </nav>
@@ -349,6 +398,12 @@
   <div class="page-hero">
     <h1>Insights</h1>
     <p>Psicología aplicada al rendimiento y la elección. Sin rodeos, sin relleno.</p>
+    <div class="hero-shortcuts" aria-label="Secciones de artículos">
+      <a href="#rompe-tengo-que">Rompe el «TENGO QUE»</a>
+      <a href="#ansiedad-rendimiento">Ansiedad, presión y rendimiento</a>
+      <a href="#dependencia-emocional">Dependencia emocional</a>
+      <a href="#malestar-laboral">Malestar laboral</a>
+    </div>
   </div>
 
   <!-- CONTENT -->
@@ -362,7 +417,7 @@
       <a class="read-link" href="como-dejar-de-hacer-las-cosas-por-obligacion.html">Leer artículo →</a>
     </div>
 
-    <h2 class="section-label">Serie: Rompe el «TENGO QUE»</h2>
+    <h2 id="rompe-tengo-que" class="section-label">Serie: Rompe el «TENGO QUE»</h2>
 
     <div class="articles-grid">
       <div class="article-card">
@@ -409,8 +464,8 @@
       </div>
     </div>
     
-    <h2 class="section-label">Serie: Síndrome del impostor</h2>
-    
+    <h2 id="ansiedad-rendimiento" class="section-label">Ansiedad, presión y rendimiento</h2>
+
 <div class="articles-grid">
   <div class="article-card">
     <span class="tag">Psicoeducación</span>
@@ -419,15 +474,143 @@
     <span class="card-meta">4 mar 2026 · 10 min</span>
     <a class="read-link" href="sindrome-del-impostor-cuando-mejor-te-va.html">Leer →</a>
   </div>
+  <div class="article-card">
+    <span class="tag">Psicoeducación</span>
+    <h3>Ansiedad productiva: cómo convertir la presión que te paraliza en algo que funcione</h3>
+    <p>Qué hace tu mente con la presión, por qué la convierte en bloqueo y cómo redirigirla antes de que te paralice. Incluye micro-técnica aplicable.</p>
+    <span class="card-meta">11 mar 2026 · 8 min</span>
+    <a class="read-link" href="ansiedad-productiva-presion-creatividad.html">Leer →</a>
+  </div>
 </div>
     
-    <!-- CTA -->
+    <h2 id="dependencia-emocional" class="section-label">Serie: Deja de Buscarte en Otros · Dependencia emocional</h2>
+
+    <div class="pillar-card">
+      <h2>Dependencia emocional: cómo dejar de necesitar que te validen para sentir que vales</h2>
+      <p>Mapa completo del mecanismo de la dependencia emocional: de dónde viene, cómo funciona, por qué se repite y qué hacer para empezar a salir. Punto de partida para toda la serie.</p>
+      <span class="card-meta">10 mar 2026 · 12 min</span>
+      <a class="read-link" href="dependencia-emocional-como-dejar-de-depender.html">Leer artículo →</a>
+    </div>
+
+    <div class="articles-grid">
+      <div class="article-card">
+        <span class="tag">Diagnóstico</span>
+        <h3>10 señales de dependencia emocional que confundes con amor</h3>
+        <p>Autodiagnóstico rápido: 10 señales de que tu forma de querer esconde dependencia emocional. Sin juicio, con claridad.</p>
+        <span class="card-meta">10 mar 2026 · 8 min</span>
+        <a class="read-link" href="senales-dependencia-emocional-confundes-con-amor.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Técnica</span>
+        <h3>Por qué necesitas que te validen (y cómo dejar de hacerlo)</h3>
+        <p>El mecanismo de la validación externa: de dónde viene, cómo te atrapa y 3 técnicas para regularte sin depender del otro.</p>
+        <span class="card-meta">10 mar 2026 · 9 min</span>
+        <a class="read-link" href="por-que-necesitas-que-te-validen.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Psicoeducación</span>
+        <h3>Autoestima baja: el origen que nadie te explica</h3>
+        <p>La autoestima no se arregla con frases motivacionales. El origen real, el mecanismo que la mantiene y lo que sí funciona.</p>
+        <span class="card-meta">10 mar 2026 · 10 min</span>
+        <a class="read-link" href="autoestima-baja-origen-que-nadie-te-explica.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Psicoeducación</span>
+        <h3>Idealización y devaluación en la pareja: por qué tu mente convierte a las personas en perfectas o en monstruos</h3>
+        <p>Qué es la idealización y devaluación en las relaciones de pareja, por qué ocurre desde una perspectiva psicoanalítica y qué puedes hacer para salir del ciclo.</p>
+        <span class="card-meta">20 mar 2026 · 10 min</span>
+        <a class="read-link" href="idealizacion-devaluacion-pareja.html">Leer →</a>
+      </div>
+    </div>
+
+    <h2 id="malestar-laboral" class="section-label">Serie: Trabajo Para Otro · Malestar laboral</h2>
+
+    <div class="pillar-card">
+      <h2>Malestar laboral cuando trabajas para otro: el mapa completo de lo que te pasa por dentro</h2>
+      <p>El mapa completo del mecanismo: las tres necesidades internas que el trabajo reactiva, por qué aguantar no funciona, por qué irse no siempre resuelve, y qué se puede hacer sin cambiar de trabajo. Punto de partida para toda la serie.</p>
+      <span class="card-meta">11 mar 2026 · 12 min</span>
+      <a class="read-link" href="malestar-laboral-trabajas-para-otro-mapa-completo.html">Leer artículo →</a>
+    </div>
+
+    <div class="articles-grid">
+      <div class="article-card">
+        <span class="tag">Diagnóstico</span>
+        <h3>Señales de que tu trabajo te está enfermando (y no es por el horario)</h3>
+        <p>Diagnóstico corporal, emocional y conductual del malestar laboral profundo. Incluye checklist con tres niveles de alarma.</p>
+        <span class="card-meta">11 mar 2026 · 8 min</span>
+        <a class="read-link" href="senales-trabajo-te-enferma.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Psicoeducación</span>
+        <h3>Por qué obedeces en el trabajo como obedecías en casa</h3>
+        <p>El patrón de obediencia temprana: cómo se grabó, cómo se activa frente al jefe, las normas y los compañeros, y un registro para empezar a verlo.</p>
+        <span class="card-meta">11 mar 2026 · 9 min</span>
+        <a class="read-link" href="obediencia-trabajo-casa.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Técnica</span>
+        <h3>Cómo sobrevivir a una jornada laboral que te drena sin desconectarte de ti</h3>
+        <p>Micro-técnica de tres cortes al día para mantenerte presente en una jornada que te activa sin anularte por dentro.</p>
+        <span class="card-meta">11 mar 2026 · 7 min</span>
+        <a class="read-link" href="sobrevivir-jornada-laboral-sin-desconectarte.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Ejercicios</span>
+        <h3>Registro semanal: distinguir malestar real de activación antigua</h3>
+        <p>Ejercicio concreto de 5 líneas al día para separar lo que viene de la situación real de lo que se activa desde dentro.</p>
+        <span class="card-meta">11 mar 2026 · 8 min</span>
+        <a class="read-link" href="registro-semanal-malestar-activacion.html">Leer →</a>
+      </div>
+      <div class="article-card">
+        <span class="tag">Psicoeducación</span>
+        <h3>"¿Debería dejarlo?" — Cómo saber si el malestar es del sitio o del patrón</h3>
+        <p>Marco para pensar si tu malestar es señal de irte o de mirar algo dentro. Sin respuesta fácil, con claridad para decidir.</p>
+        <span class="card-meta">11 mar 2026 · 9 min</span>
+        <a class="read-link" href="deberia-dejar-trabajo-malestar.html">Leer →</a>
+      </div>
+    </div>
+
+    <!-- CTA Trabajo Para Otro -->
+    <div class="cta-banner">
+      <h3>Trabajo Para Otro · Grupo Online</h3>
+      <p>Un programa grupal online con acompañamiento profesional para personas que trabajan por cuenta ajena y sienten malestar, vacío o conflicto con su trabajo. No es coaching. No es motivación. Es un espacio para entender qué se activa en ti y empezar a construir algo distinto por dentro.</p>
+      <a href="mailto:danielorozco@twimproject.com?subject=Quiero%20informarme%20sobre%20Trabajo%20Para%20Otro%20-%20Grupo%20Online" class="btn btn-beige">Infórmate sobre el grupo</a>
+    </div>
+
+    <!-- CTA Deja de Buscarte -->
+    <div class="cta-banner">
+      <h3>Deja de Buscarte en Otros · Programa de dependencia emocional</h3>
+      <p>5 módulos en vídeo + cuaderno de trabajo + 3 audios guiados + protocolo de 21 días. Diseñado para mujeres que quieren sentir que valen sin necesitar que nadie se lo confirme.</p>
+      <a href="https://twimproject.com/dejadebuscarteenotros-preventa.html" class="btn btn-beige">Ver programa (49€ lanzamiento)</a>
+    </div>
+
+    <!-- CTA Taller No Puedo Parar -->
+    <div class="cta-banner" style="background:linear-gradient(135deg,#173D30 0%,#265C4B 100%);">
+      <h3>Taller en vivo: No puedo parar</h3>
+      <p>90 minutos para profesionales que se exigen demasiado. El mecanismo, la técnica de 120 segundos y un plan de 7 días.</p>
+      <a href="https://twimproject.com/nopuedoparar-taller.html" class="btn btn-beige">Reservar plaza (19€)</a>
+    </div>
+
+    <!-- CTA Rompe el TENGO QUE -->
     <div class="cta-banner">
       <h3>Rompe el «TENGO QUE»</h3>
       <p>Todo el contenido de estos artículos integrado en un entrenamiento breve con vídeo, PDF, audio y protocolo guiado.</p>
-      <a href="https://buy.stripe.com/dRmbJ1dlw6X358v8jm2sM06" class="btn btn-beige">Reservar acceso (39€)</a>
+      <a href="mailto:danielorozco@twimproject.com?subject=Quiero%20informaci%C3%B3n%20sobre%20Rompe%20el%20TENGO%20QUE" class="btn btn-beige">Pedir información (39€)</a>
     </div>
 
+    <!-- CTA Taller TDAH -->
+    <div class="cta-banner">
+      <h3>Taller presencial: Más allá del TDAH</h3>
+      <p>Grupo reducido en Valencia para adolescentes de 3º y 4º de ESO con TDAH. Autoestima, regulación emocional e identidad en 16 sesiones con acompañamiento a familias.</p>
+      <a href="https://twimproject.com/talleres/tdah-adolescentes/" class="btn btn-beige">Ver taller TDAH</a>
+    </div>
+
+    <!-- CTA Taller Bachillerato -->
+    <div class="cta-banner">
+      <h3>Taller presencial: Tu camino, tu decisión</h3>
+      <p>Para adolescentes de 1º y 2º de Bachillerato con apatía académica, presión y confusión vocacional. 16 sesiones presenciales en Valencia con grupo cerrado de 6 plazas.</p>
+      <a href="https://twimproject.com/talleres/bachillerato-motivacion/" class="btn btn-beige">Ver taller Bachillerato</a>
+    </div>
   </div>
 
   <!-- FOOTER -->
