@@ -452,14 +452,22 @@
     .announcement {
       background: var(--green);
       color: var(--white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
       text-align: center;
-      padding: .65rem 1rem;
+      padding: .75rem 1rem;
       font-size: .88rem;
       font-weight: 300;
-      display: flex;
-      flex-wrap: wrap;
+    }
+    .announcement__item {
+      display: inline-flex;
+      align-items: center;
       justify-content: center;
-      gap: .45rem .75rem;
+      gap: .35rem;
+      flex-wrap: wrap;
     }
     .announcement strong { font-weight: 600; }
     .announcement a { color: var(--beige-light); text-decoration: underline; text-underline-offset: 2px; }
@@ -746,42 +754,62 @@
       .conf-img img { max-height: 50vh; width: auto; max-width: 100%; object-fit: contain; }
     }
     @media (max-width: 600px) {
-      .hamburger { display: block; }
-      header nav img { height: 70px; }
+      header { padding: .65rem 0; }
+      .hamburger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        flex-shrink: 0;
+      }
+      header nav { gap: .75rem; }
+      header nav img { height: 56px; }
       .nav-links {
         display: none;
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--green-dark);
+        inset: 0;
+        padding: 6.5rem 1rem 1.5rem;
+        background: rgba(23,61,48,.98);
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: .3rem;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: .55rem;
+        overflow-y: auto;
         z-index: 1000;
       }
       .nav-links.open { display: flex; }
       .nav-links a {
-        font-size: 1.2rem;
-        padding: .8rem 1.5rem;
-        width: 80%;
+        font-size: 1.05rem;
+        padding: .9rem 1rem;
+        width: 100%;
         text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.08);
+        border-radius: 10px;
+        background: rgba(255,255,255,.03);
       }
+      .announcement {
+        flex-direction: column;
+        gap: .6rem;
+        padding: .9rem .85rem;
+        line-height: 1.5;
+      }
+      .announcement__item { display: flex; }
       .hero__content { padding: 1.8rem 1.2rem; margin: 0 .8rem; }
       .hero__text { font-size: clamp(1.9rem, 8vw, 2.5rem); }
       .hero__subtitle { font-size: 1rem; }
       .hero__cta { flex-direction: column; align-items: stretch; }
       .hero__cta .btn, .guia-buttons .btn { width: 100%; }
-      .announcement { padding-left: .85rem; padding-right: .85rem; }
       .workshops-spotlight { padding: 4.2rem 0 3.8rem; }
       section { padding: 3.5rem 0; }
       .contacto-form, .prog-card, .workshops-download, .esp-card, .conf-card, .workshops-spotlight__card { padding: 1.35rem; }
       .container { width: min(100% - 1.5rem, 1200px); }
       .guia-buttons { flex-direction: column; }
       .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
+      .footer-legal,
+      .footer-meta { text-wrap: pretty; }
+      .footer-legal { font-size: .92rem; }
+      .footer-meta { font-size: .88rem; }
     }
   </style>
 
@@ -832,8 +860,8 @@
 <!-- ── ANNOUNCEMENT ── -->
 
 <div class="announcement">
-  Nuevo: <strong>Rompe el "TENGO QUE"</strong> · 30 accesos a 39€ — <a href="#programs">Ver programa →</a>
-  Nuevo: <strong>Talleres para adolescentes</strong> · TDAH y motivación en Bachillerato — <a href="#talleres">Ver talleres →</a>
+  <div class="announcement__item">Nuevo: <strong>Rompe el "TENGO QUE"</strong> · 30 accesos a 39€ — <a href="#programs">Ver programa →</a></div>
+  <div class="announcement__item">Nuevo: <strong>Talleres para adolescentes</strong> · TDAH y motivación en Bachillerato — <a href="#talleres">Ver talleres →</a></div>
 </div>
 
 <!-- ── HERO ── -->
@@ -1324,8 +1352,8 @@
 <!-- ── FOOTER ── -->
 
 <footer>
-  <p>© 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515 en Valencia</p>
-  <p style="font-size:.85em;opacity:.7;margin-top:4px;">Especialista en ansiedad, depresión, estrés, dependencia emocional y burnout · Terapia para adultos, adolescentes, deportistas y parejas · Presencial y online · <a href="privacy.html">Privacidad</a></p>
+  <p class="footer-legal">© 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515 en Valencia</p>
+  <p class="footer-meta">Especialista en ansiedad, depresión, estrés, dependencia emocional y burnout · Terapia para adultos, adolescentes, deportistas y parejas · Presencial y online · <a href="privacy.html">Privacidad</a></p>
 </footer>
 
 <script>
