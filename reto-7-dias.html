@@ -16,18 +16,21 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --forest: #2D5016;
-            --forest-med: #3D6B1E;
-            --forest-light: #5A8F3A;
-            --forest-pale: #EBF5E3;
-            --beige: #F5F0E8;
-            --beige-dark: #E8DFD0;
-            --beige-deep: #D4C9B8;
-            --text: #1C1C1C;
-            --text-med: #555555;
-            --text-light: #888888;
-            --gold: #8B6914;
-            --white: #FAFAF8;
+            --green: #1f5a49;
+            --green-dark: #174a3c;
+            --green-deep: #11352b;
+            --green-light: #2c6c59;
+            --beige: #c7a587;
+            --beige-dark: #aa8665;
+            --beige-light: #decab6;
+            --sand: #f7f4f0;
+            --sand-dark: #ede8e2;
+            --cream: #fdfcfa;
+            --text: #2b2420;
+            --text-soft: #6b6058;
+            --text-muted: #9a8e84;
+            --white: #ffffff;
+            --border: rgba(43,36,32,.07);
             --serif: 'DM Serif Display', Georgia, serif;
             --sans: 'DM Sans', -apple-system, sans-serif;
         }
@@ -36,13 +39,13 @@
         body {
             font-family: var(--sans);
             color: var(--text);
-            background: var(--white);
+            background: var(--cream);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
         /* ═══ HERO ═══ */
         .hero {
-            background: var(--forest);
+            background: var(--green);
             color: white;
             padding: 0;
             overflow: hidden;
@@ -55,7 +58,7 @@
             left: 0;
             right: 0;
             height: 60px;
-            background: var(--white);
+            background: var(--cream);
             clip-path: ellipse(55% 100% at 50% 100%);
         }
         .hero-inner {
@@ -98,7 +101,7 @@
         .hero-cta {
             display: inline-block;
             background: var(--beige);
-            color: var(--forest);
+            color: var(--green-deep);
             font-family: var(--sans);
             font-weight: 600;
             font-size: 16px;
@@ -110,7 +113,7 @@
             cursor: pointer;
         }
         .hero-cta:hover {
-            background: white;
+            background: var(--beige-light);
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
@@ -137,7 +140,7 @@
         /* ═══ RECOGNITION SECTION ═══ */
         .recognition {
             padding: 80px 24px;
-            background: var(--white);
+            background: var(--cream);
         }
         .recognition-inner {
             max-width: 680px;
@@ -146,7 +149,7 @@
         .recognition h2 {
             font-family: var(--serif);
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-            color: var(--forest);
+            color: var(--green);
             margin-bottom: 32px;
             line-height: 1.25;
         }
@@ -158,11 +161,11 @@
         }
         .recognition-list li {
             padding: 18px 22px;
-            background: var(--beige);
+            background: var(--sand);
             border-radius: 8px;
             font-size: 15.5px;
             line-height: 1.55;
-            border-left: 4px solid var(--forest-light);
+            border-left: 4px solid var(--green-light);
             transition: transform 0.2s ease;
         }
         .recognition-list li:hover {
@@ -171,16 +174,16 @@
         .recognition-closer {
             margin-top: 32px;
             font-size: 16px;
-            color: var(--text-med);
+            color: var(--text-soft);
             line-height: 1.7;
         }
         .recognition-closer strong {
-            color: var(--forest);
+            color: var(--green);
         }
         /* ═══ WHAT IS SECTION ═══ */
         .what-is {
             padding: 80px 24px;
-            background: var(--beige);
+            background: var(--sand);
         }
         .what-is-inner {
             max-width: 680px;
@@ -189,12 +192,12 @@
         .what-is h2 {
             font-family: var(--serif);
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-            color: var(--forest);
+            color: var(--green);
             margin-bottom: 12px;
         }
         .what-is-intro {
             font-size: 16px;
-            color: var(--text-med);
+            color: var(--text-soft);
             margin-bottom: 36px;
             line-height: 1.7;
         }
@@ -208,7 +211,7 @@
             gap: 14px;
             align-items: start;
             padding: 18px;
-            background: var(--white);
+            background: var(--cream);
             border-radius: 8px;
             transition: box-shadow 0.25s ease;
         }
@@ -218,7 +221,7 @@
         .day-num {
             width: 44px;
             height: 44px;
-            background: var(--forest);
+            background: var(--green);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -236,13 +239,13 @@
         }
         .day-content p {
             font-size: 14px;
-            color: var(--text-med);
+            color: var(--text-soft);
             line-height: 1.5;
         }
         /* ═══ NO-BS SECTION ═══ */
         .no-bs {
             padding: 80px 24px;
-            background: var(--white);
+            background: var(--cream);
         }
         .no-bs-inner {
             max-width: 680px;
@@ -251,7 +254,7 @@
         .no-bs h2 {
             font-family: var(--serif);
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-            color: var(--forest);
+            color: var(--green);
             margin-bottom: 28px;
         }
         .two-col {
@@ -268,12 +271,12 @@
             border-radius: 8px;
         }
         .col-card.no-col {
-            background: #FFF5F0;
-            border: 1px solid #F0D9CC;
+            background: var(--sand-dark);
+            border: 1px solid var(--beige-light);
         }
         .col-card.yes-col {
-            background: var(--forest-pale);
-            border: 1px solid #C8E0B8;
+            background: var(--sand);
+            border: 1px solid var(--green-light);
         }
         .col-card h3 {
             font-size: 14px;
@@ -282,8 +285,8 @@
             letter-spacing: 1px;
             margin-bottom: 12px;
         }
-        .col-card.no-col h3 { color: #8B4C1A; }
-        .col-card.yes-col h3 { color: var(--forest); }
+        .col-card.no-col h3 { color: var(--beige-dark); }
+        .col-card.yes-col h3 { color: var(--green); }
         .col-card ul {
             list-style: none;
             font-size: 14.5px;
@@ -296,12 +299,12 @@
             margin-right: 8px;
             font-weight: 600;
         }
-        .col-card.no-col ul li::before { content: '—'; color: #8B4C1A; }
-        .col-card.yes-col ul li::before { content: '→'; color: var(--forest); }
+        .col-card.no-col ul li::before { content: '—'; color: var(--beige-dark); }
+        .col-card.yes-col ul li::before { content: '→'; color: var(--green); }
         /* ═══ AUTHOR ═══ */
         .author {
             padding: 60px 24px;
-            background: var(--beige);
+            background: var(--sand);
         }
         .author-inner {
             max-width: 680px;
@@ -313,23 +316,23 @@
         .author-text h3 {
             font-family: var(--serif);
             font-size: 1.3rem;
-            color: var(--forest);
+            color: var(--green);
             margin-bottom: 8px;
         }
         .author-text .credentials {
             font-size: 13px;
-            color: var(--text-light);
+            color: var(--text-muted);
             margin-bottom: 12px;
         }
         .author-text p {
             font-size: 15px;
-            color: var(--text-med);
+            color: var(--text-soft);
             line-height: 1.7;
         }
         /* ═══ CTA / FORM SECTION ═══ */
         .cta-section {
             padding: 80px 24px;
-            background: var(--forest);
+            background: var(--green);
             color: white;
             text-align: center;
             position: relative;
@@ -341,7 +344,7 @@
             left: 0;
             right: 0;
             height: 60px;
-            background: var(--beige);
+            background: var(--sand);
             clip-path: ellipse(55% 100% at 50% 0%);
         }
         .cta-inner {
@@ -404,7 +407,7 @@
             width: 100%;
             padding: 16px;
             background: var(--beige);
-            color: var(--forest);
+            color: var(--green-deep);
             border: none;
             border-radius: 6px;
             font-family: var(--sans);
@@ -415,7 +418,7 @@
             margin-top: 4px;
         }
         .form-submit:hover {
-            background: white;
+            background: var(--beige-light);
             transform: translateY(-1px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
@@ -428,14 +431,14 @@
         /* ═══ QUOTE BAR ═══ */
         .quote-bar {
             padding: 40px 24px;
-            background: var(--white);
+            background: var(--cream);
             text-align: center;
         }
         .quote-bar p {
             font-family: var(--serif);
             font-style: italic;
             font-size: clamp(1rem, 2.5vw, 1.25rem);
-            color: var(--forest-light);
+            color: var(--green-light);
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
@@ -593,7 +596,7 @@
                 </ul>
             </div>
         </div>
-        <p style="font-size: 15px; color: var(--text-med); line-height: 1.7;">
+        <p style="font-size: 15px; color: var(--text-soft); line-height: 1.7;">
             Este reto no te va a "curar". Siete días no cambian un patrón que lleva décadas funcionando.
             Lo que sí hacen es mostrarte el mecanismo con una claridad que probablemente no tenías.
             Y cuando ves el mecanismo, dejas de obedecerlo a ciegas.
