@@ -110,6 +110,23 @@ coverage/
 docs/build/
 docs/_build/
 
+# ===== PYTHON =====
+
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# ===== NOTEBOOKLM =====
+
+# Artefactos generados (audio, vídeo, imágenes - demasiado grandes para git)
+notebooklm/output/
+
+# Credenciales de sesión NotebookLM
+.notebooklm/
+notebooklm/.env
+
 # ===== OTROS =====
 
 deploy.log
