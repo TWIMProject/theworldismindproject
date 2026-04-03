@@ -176,28 +176,22 @@ async def generate_audio(client: NotebookLMClient, notebook_id: str):
             language=AUDIO_LANGUAGE,
             instructions=AUDIO_INSTRUCTIONS,
         )
-        print(f"  Estado: {status}")
+        print(f"  Task ID: {status.task_id}")
 
         # Esperar a que el audio esté listo
         print("  Esperando generación (puede tardar varios minutos)...")
-        artifact = await client.artifacts.wait_for_audio(notebook_id, timeout=600)
+        result = await client.artifacts.wait_for_completion(
+            notebook_id, status.task_id, timeout=600
+        )
+        print(f"  ✅ Audio generado correctamente")
 
-        if artifact and hasattr(artifact, "audio_url") and artifact.audio_url:
-            print(f"  ✅ Audio generado: {artifact.audio_url}")
+        # Descargar audio
+        AUDIO_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_path = AUDIO_OUTPUT_DIR / f"twim_podcast_{timestamp}.mp4"
 
-            # Descargar audio
-            AUDIO_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = AUDIO_OUTPUT_DIR / f"twim_podcast_{timestamp}.wav"
-
-            audio_data = await client.artifacts.download_audio(notebook_id)
-            if audio_data:
-                output_path.write_bytes(audio_data)
-                print(f"  💾 Guardado en: {output_path}")
-            else:
-                print(f"  ℹ️  Audio disponible en NotebookLM (descarga manual)")
-        else:
-            print("  ℹ️  Audio en proceso. Revisa NotebookLM para el resultado.")
+        saved_path = await client.artifacts.download_audio(notebook_id, str(output_path))
+        print(f"  💾 Guardado en: {saved_path}")
 
     except Exception as e:
         print(f"  ❌ Error generando audio: {e}")
