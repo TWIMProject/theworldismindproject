@@ -1,0 +1,5 @@
+# TWIM Project - NotebookLM Integration
+# pip install -r notebooklm/requirements.txt
+
+notebooklm-py[browser]>=0.3.4
+playwright>=1.40.0

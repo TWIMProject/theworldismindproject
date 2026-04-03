@@ -110,6 +110,23 @@ coverage/
 docs/build/
 docs/_build/
 
+# ===== PYTHON =====
+
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# ===== NOTEBOOKLM =====
+
+# Archivos de audio generados (demasiado grandes para git)
+notebooklm/audio/
+
+# Credenciales de sesión NotebookLM
+.notebooklm/
+notebooklm/.env
+
 # ===== OTROS =====
 
 deploy.log
