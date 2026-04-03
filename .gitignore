@@ -120,8 +120,8 @@ venv/
 
 # ===== NOTEBOOKLM =====
 
-# Archivos de audio generados (demasiado grandes para git)
-notebooklm/audio/
+# Artefactos generados (audio, vídeo, imágenes - demasiado grandes para git)
+notebooklm/output/
 
 # Credenciales de sesión NotebookLM
 .notebooklm/
