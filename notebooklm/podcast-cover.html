@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portada Podcast - TWIM Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  /*
+    INSTRUCCIONES DE USO:
+    1. Abre este archivo en Chrome/Safari
+    2. Haz captura de pantalla (o Cmd+Shift+4 en Mac)
+    3. Recorta a 1920x1080 para YouTube
+    4. O usa como miniatura
+
+    Tamaño: 1920x1080 (16:9 YouTube)
+  */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .cover {
+    width: 1920px;
+    height: 1080px;
+    background: linear-gradient(145deg, #173D30 0%, #265C4B 35%, #1a4537 65%, #0f2b20 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+  }
+
+  /* Texturas de fondo */
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(194,167,139,.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(194,167,139,.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 90%, rgba(0,0,0,.3) 0%, transparent 50%);
+  }
+
+  /* Línea decorativa superior */
+  .accent-line {
+    width: 80px;
+    height: 4px;
+    background: #C2A78B;
+    border-radius: 2px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Icono de auriculares/podcast */
+  .podcast-icon {
+    font-size: 48px;
+    color: rgba(194,167,139,.6);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 20px;
+  }
+
+  .title {
+    font-size: 92px;
+    font-weight: 700;
+    color: #FDFCFA;
+    text-align: center;
+    line-height: 1.05;
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    letter-spacing: .5px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+    font-weight: 300;
+    color: rgba(194,167,139,.85);
+    text-align: center;
+    margin-top: 28px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    padding: 14px 32px;
+    border: 1.5px solid rgba(194,167,139,.3);
+    border-radius: 50px;
+    color: rgba(255,255,255,.7);
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    letter-spacing: .5px;
+  }
+
+  .badge .dot {
+    width: 10px;
+    height: 10px;
+    background: #C2A78B;
+    border-radius: 50%;
+  }
+
+  /* Logo en esquina */
+  .logo-corner {
+    position: absolute;
+    bottom: 50px;
+    right: 60px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .logo-corner img {
+    height: 50px;
+    width: auto;
+    opacity: .7;
+  }
+  .logo-corner span {
+    color: rgba(255,255,255,.5);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* Ondas sonoras decorativas */
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    z-index: 0;
+    opacity: .08;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    padding-bottom: 40px;
+  }
+  .waves .bar {
+    width: 4px;
+    background: #C2A78B;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="accent-line"></div>
+  <div class="podcast-icon">&#9835; &#9835; &#9835;</div>
+  <h1 class="title">El cansancio que no<br>se cura durmiendo</h1>
+  <p class="subtitle">Podcast sobre psicología del bienestar laboral</p>
+  <div class="badge">
+    <span class="dot"></span>
+    Daniel Orozco Abia &middot; Psicólogo CV11515
+  </div>
+
+  <div class="logo-corner">
+    <span>TWIM Project</span>
+  </div>
+
+  <!-- Ondas sonoras decorativas -->
+  <div class="waves">
+    <div class="bar" style="height:20px"></div>
+    <div class="bar" style="height:45px"></div>
+    <div class="bar" style="height:30px"></div>
+    <div class="bar" style="height:65px"></div>
+    <div class="bar" style="height:40px"></div>
+    <div class="bar" style="height:85px"></div>
+    <div class="bar" style="height:55px"></div>
+    <div class="bar" style="height:100px"></div>
+    <div class="bar" style="height:70px"></div>
+    <div class="bar" style="height:120px"></div>
+    <div class="bar" style="height:80px"></div>
+    <div class="bar" style="height:140px"></div>
+    <div class="bar" style="height:95px"></div>
+    <div class="bar" style="height:120px"></div>
+    <div class="bar" style="height:65px"></div>
+    <div class="bar" style="height:100px"></div>
+    <div class="bar" style="height:50px"></div>
+    <div class="bar" style="height:80px"></div>
+    <div class="bar" style="height:35px"></div>
+    <div class="bar" style="height:60px"></div>
+    <div class="bar" style="height:25px"></div>
+    <div class="bar" style="height:45px"></div>
+    <div class="bar" style="height:70px"></div>
+    <div class="bar" style="height:110px"></div>
+    <div class="bar" style="height:85px"></div>
+    <div class="bar" style="height:130px"></div>
+    <div class="bar" style="height:90px"></div>
+    <div class="bar" style="height:115px"></div>
+    <div class="bar" style="height:75px"></div>
+    <div class="bar" style="height:95px"></div>
+    <div class="bar" style="height:55px"></div>
+    <div class="bar" style="height:70px"></div>
+    <div class="bar" style="height:40px"></div>
+    <div class="bar" style="height:60px"></div>
+    <div class="bar" style="height:30px"></div>
+    <div class="bar" style="height:50px"></div>
+    <div class="bar" style="height:20px"></div>
+  </div>
+</div>
+</body>
+</html>
