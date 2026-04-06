@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluciones · Programas, Talleres y Herramientas | TWIM Project · Daniel Orozco Abia</title>
+  <meta name="description" content="Programas de psicología aplicada, talleres para adolescentes y herramientas Anti-Burnout. Autoexigencia, dependencia emocional, TDAH, apatía académica y malestar laboral. Por Daniel Orozco Abia, Psicólogo CV11515 en Valencia.">
+  <meta name="keywords" content="programas psicología, talleres adolescentes Valencia, psicólogo autoexigencia, dependencia emocional programa, TDAH taller adolescentes, burnout guía, malestar laboral grupo, Daniel Orozco Abia, psicólogo Valencia">
+  <meta name="author" content="Daniel Orozco Abia">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://twimproject.com/soluciones/">
+  <meta name="geo.region" content="ES">
+  <meta name="geo.placename" content="Valencia, España">
+  <link rel="icon" href="../logo-mindworld.png" type="image/png">
+
+  <meta property="og:title" content="Soluciones · Programas, Talleres y Herramientas | TWIM Project">
+  <meta property="og:description" content="Programas de psicología aplicada, talleres para adolescentes y herramientas Anti-Burnout por Daniel Orozco Abia, Psicólogo CV11515.">
+  <meta property="og:image" content="https://twimproject.com/daniel-orozco-sillon.jpg">
+  <meta property="og:url" content="https://twimproject.com/soluciones/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+  <style>
+    :root {
+      --green: #265C4B;
+      --green-dark: #173D30;
+      --green-light: #2E6B5A;
+      --beige: #C2A78B;
+      --beige-dark: #A89070;
+      --beige-light: #D4C4AE;
+      --sand: #F7F4F0;
+      --sand-dark: #EDE8E2;
+      --cream: #FDFCFA;
+      --text: #2B2420;
+      --text-soft: #6B6058;
+      --text-muted: #9A8E84;
+      --white: #FFFFFF;
+      --border: rgba(43,36,32,.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      line-height: 1.7;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-weight: 600; letter-spacing: .3px; color: var(--green-dark); }
+    p { color: var(--text-soft); }
+    a { transition: all .2s ease; }
+    .container { width: 93%; max-width: 1200px; margin: 0 auto; }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--green-dark);
+      padding: .8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 16px rgba(0,0,0,.15);
+    }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 93%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header nav a img {
+      height: 88px;
+      width: auto;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
+    }
+    .nav-links { display: flex; align-items: center; gap: .15rem; }
+    .nav-links a {
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      font-weight: 400;
+      font-size: .88rem;
+      padding: .4rem .65rem;
+      border-radius: 4px;
+      transition: all .2s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.08); }
+
+    /* ── HERO ── */
+    .page-hero {
+      background: linear-gradient(150deg, var(--green-dark), var(--green));
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--white);
+      margin-bottom: .6rem;
+    }
+    .page-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.8);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hero-shortcuts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .75rem;
+      margin-top: 2rem;
+    }
+    .hero-shortcuts a {
+      display: inline-block;
+      padding: .5rem 1.1rem;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 6px;
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 400;
+      transition: all .2s;
+    }
+    .hero-shortcuts a:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.5); color: #fff; }
+
+    /* ── CONTENT ── */
+    .sol-container { padding: 3rem 1rem 4rem; }
+    .sol-container .container { max-width: 1100px; }
+
+    .section-label {
+      font-size: 1.3rem;
+      color: var(--green-dark);
+      padding-bottom: .6rem;
+      margin: 3rem 0 1.5rem;
+      border-bottom: 2px solid var(--beige);
+    }
+    .section-label:first-of-type { margin-top: 0; }
+
+    /* ── CARDS ── */
+    .sol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .sol-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .sol-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+    .sol-card .badge {
+      display: inline-block;
+      background: var(--sand);
+      color: var(--beige-dark);
+      font-size: .72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: .3rem .7rem;
+      border-radius: 4px;
+      margin-bottom: .8rem;
+      align-self: flex-start;
+    }
+    .sol-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: .4rem;
+      line-height: 1.25;
+    }
+    .sol-card .tagline {
+      font-size: .92rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .sol-card ul {
+      list-style: none;
+      margin-bottom: 1.2rem;
+      flex-grow: 1;
+    }
+    .sol-card li {
+      padding: .2rem 0 .2rem 1.2rem;
+      position: relative;
+      font-size: .9rem;
+      color: var(--text-soft);
+    }
+    .sol-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 600;
+    }
+    .sol-card .price {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 1rem;
+    }
+    .sol-card .btn {
+      display: inline-block;
+      padding: .7rem 1.3rem;
+      border-radius: 5px;
+      font-weight: 500;
+      text-decoration: none;
+      font-size: .92rem;
+      text-align: center;
+      transition: all .25s ease;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .btn-green { background: var(--green); color: var(--white); }
+    .btn-green:hover { background: var(--green-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(38,92,75,.25); }
+    .btn-beige { background: var(--beige); color: var(--white); }
+    .btn-beige:hover { background: var(--beige-dark); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green); }
+    .btn-outline:hover { background: var(--green); color: var(--white); }
+
+    .sol-card .card-footer {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    /* ── FEATURED (bg-green cards) ── */
+    .sol-card.featured {
+      background: var(--green-dark);
+      border-color: transparent;
+    }
+    .sol-card.featured h3 { color: var(--white); }
+    .sol-card.featured .tagline { color: rgba(255,255,255,.65); }
+    .sol-card.featured li { color: rgba(255,255,255,.8); }
+    .sol-card.featured li::before { color: var(--beige-light); }
+    .sol-card.featured .price { color: var(--beige-light); }
+    .sol-card.featured .badge { background: rgba(255,255,255,.1); color: var(--beige-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      padding: 2rem 0;
+      font-size: .85rem;
+    }
+    footer a { color: var(--beige-light); text-decoration: none; }
+    footer a:hover { color: #fff; }
+    footer p { color: rgba(255,255,255,.6); }
+
+    /* ── HAMBURGER ── */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; transition: .3s; border-radius: 1px; }
+    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hamburger { display: block; position: relative; z-index: 1001; }
+      header nav a img { height: 60px; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(23,61,48,.98);
+        padding: 6.5rem 1rem 2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: .75rem;
+        overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: .95rem 1rem;
+        font-size: 1rem;
+        border: 1px solid rgba(255,255,255,.08);
+        border-radius: 10px;
+        background: rgba(255,255,255,.03);
+      }
+      .page-hero { padding: 4rem 1rem 3rem; }
+      .hero-shortcuts { gap: .6rem; }
+      .hero-shortcuts a { width: 100%; max-width: 320px; }
+      .sol-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <a href="https://twimproject.com/" aria-label="Ir a inicio">
+        <img src="../logo-mindworld.png" alt="Mind World Project - Daniel Orozco Abia" loading="eager">
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="https://twimproject.com/#about">Sobre mí</a>
+        <a href="https://twimproject.com/soluciones/">Soluciones</a>
+        <a href="https://twimproject.com/#keynotes">Conferencias</a>
+        <a href="https://twimproject.com/#podcast">Podcast</a>
+        <a href="https://twimproject.com/insights/">Artículos Clave</a>
+        <a href="https://twimproject.com/#contacto">Contacto</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <h1>Soluciones</h1>
+    <p>Programas, talleres y herramientas de psicología aplicada. Sin atajos motivacionales.</p>
+    <div class="hero-shortcuts" aria-label="Categorías">
+      <a href="#programas-digitales">Programas digitales</a>
+      <a href="#talleres-adolescentes">Talleres para adolescentes</a>
+      <a href="#taller-vivo">Taller en vivo</a>
+      <a href="#guia-herramientas">Guía + Herramientas</a>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="sol-container">
+    <div class="container">
+
+      <!-- ═══ PROGRAMAS DIGITALES ═══ -->
+      <h2 id="programas-digitales" class="section-label">Programas digitales</h2>
+
+      <div class="sol-grid">
+
+        <div class="sol-card">
+          <span class="badge">Autoexigencia</span>
+          <h3>Deja de Obligarte</h3>
+          <p class="tagline">Para personas con autoexigencia desbordante que no consiguen descansar sin culpa</p>
+          <ul>
+            <li>Vídeo grabado 75-90 min (4 módulos)</li>
+            <li>PDF de trabajo + audio bonus</li>
+            <li>Protocolo 7 días (10-15 min/día)</li>
+            <li>Acceso inmediato</li>
+          </ul>
+          <p class="price">39 €</p>
+          <div class="card-footer">
+            <a href="../dejadeobligarte.html" class="btn btn-green">Ver programa</a>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <span class="badge">Dependencia emocional</span>
+          <h3>Deja de Buscarte en Otros</h3>
+          <p class="tagline">Para mujeres que quieren sentir que valen sin necesitar que nadie se lo confirme</p>
+          <ul>
+            <li>Vídeo grabado ~2h (5 módulos)</li>
+            <li>Cuaderno de trabajo PDF + 3 audios guiados</li>
+            <li>Protocolo de 21 días (10-15 min/día)</li>
+            <li>Acceso de por vida · Sin prisa</li>
+          </ul>
+          <p class="price">70 €</p>
+          <div class="card-footer">
+            <a href="../dejadebuscarteenotros-preventa.html" class="btn btn-green">Ver programa</a>
+          </div>
+        </div>
+
+        <div class="sol-card featured">
+          <span class="badge">Malestar laboral · Grupo</span>
+          <h3>Trabajo Para Otro · Grupo Online</h3>
+          <p class="tagline">De la ansiedad laboral al sentido profesional</p>
+          <ul>
+            <li>6 sesiones × 90 min vía Google Meet</li>
+            <li>8–12 plazas</li>
+            <li>Formato psicodinámico genuino</li>
+            <li>Cuaderno y audio-guide tras cada sesión</li>
+            <li>Reembolso 100% tras la 1.ª sesión si no encaja</li>
+          </ul>
+          <p class="price">Consultar</p>
+          <div class="card-footer">
+            <a href="mailto:danielorozco@twimproject.com?subject=Quiero%20informarme%20sobre%20Trabajo%20Para%20Otro%20-%20Grupo%20Online" class="btn btn-beige">Reserva tu plaza</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ TALLERES ADOLESCENTES ═══ -->
+      <h2 id="talleres-adolescentes" class="section-label">Talleres presenciales para adolescentes · Valencia</h2>
+
+      <div class="sol-grid">
+
+        <div class="sol-card">
+          <span class="badge">3.º–4.º ESO · TDAH</span>
+          <h3>Más allá del TDAH</h3>
+          <p class="tagline">Autoestima, regulación emocional e identidad en adolescentes con TDAH</p>
+          <ul>
+            <li>16 sesiones semanales de 90 min</li>
+            <li>Grupo cerrado · máximo 6 plazas</li>
+            <li>14 sesiones con adolescentes + 2 con padres</li>
+            <li>Inicio septiembre 2026</li>
+          </ul>
+          <p class="price">720 €</p>
+          <div class="card-footer">
+            <a href="../talleres/tdah-adolescentes/" class="btn btn-green">Ver taller</a>
+            <a href="../insights/tdah-adolescentes-autoestima-lo-que-las-notas-no-dicen.html" class="btn btn-outline">Leer artículo</a>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <span class="badge">1.º–2.º Bach · Motivación</span>
+          <h3>Tu camino, tu decisión</h3>
+          <p class="tagline">Apatía académica, confusión vocacional y presión familiar</p>
+          <ul>
+            <li>16 sesiones semanales de 90 min</li>
+            <li>Grupo cerrado · máximo 6 plazas</li>
+            <li>14 sesiones con adolescentes + 2 con padres</li>
+            <li>Inicio septiembre 2026</li>
+          </ul>
+          <p class="price">720 €</p>
+          <div class="card-footer">
+            <a href="../talleres/bachillerato-motivacion/" class="btn btn-green">Ver taller</a>
+            <a href="../insights/hijo-no-es-vago-apatia-bachillerato.html" class="btn btn-outline">Leer artículo</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ TALLER EN VIVO ═══ -->
+      <h2 id="taller-vivo" class="section-label">Taller en vivo</h2>
+
+      <div class="sol-grid">
+
+        <div class="sol-card featured">
+          <span class="badge">Taller en directo</span>
+          <h3>No puedo parar</h3>
+          <p class="tagline">Para profesionales con estrés y autoexigencia</p>
+          <ul>
+            <li>Sesión en directo de 90 minutos con práctica guiada</li>
+            <li>Técnica concreta para frenar urgencia mental</li>
+            <li>Ideal como puerta de entrada antes de otros programas</li>
+          </ul>
+          <div class="card-footer">
+            <a href="../nopuedoparar-taller.html" class="btn btn-beige">Ver taller en vivo</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ═══ GUÍA + HERRAMIENTAS ═══ -->
+      <h2 id="guia-herramientas" class="section-label">Guía + Herramientas</h2>
+
+      <div class="sol-grid">
+
+        <div class="sol-card">
+          <span class="badge">Guía descargable</span>
+          <h3>Guía Práctica Anti-Burnout</h3>
+          <p class="tagline">Técnicas basadas en evidencia clínica para gestionar el estrés y mantener un rendimiento sostenible</p>
+          <ul>
+            <li>Mapa visual paso a paso del proceso anti-burnout</li>
+            <li>Plantillas y cuestionarios de autoevaluación</li>
+            <li>Ejercicios diarios fáciles de integrar</li>
+          </ul>
+          <p class="price">5 €</p>
+          <div class="card-footer">
+            <a href="https://buy.stripe.com/7sY9AT2GS0yF9oLdDG2sM03" class="btn btn-green" target="_blank" rel="noopener noreferrer">Comprar Guía</a>
+          </div>
+        </div>
+
+        <div class="sol-card">
+          <span class="badge">Guía + Sesión</span>
+          <h3>Guía Anti-Burnout + Sesión Online 60 min</h3>
+          <p class="tagline">La guía más una sesión individual de 60 minutos con Daniel</p>
+          <ul>
+            <li>Todo lo de la guía</li>
+            <li>Sesión individual online de 60 min</li>
+            <li>Personalización del plan anti-burnout</li>
+          </ul>
+          <p class="price">99 €</p>
+          <div class="card-footer">
+            <a href="https://buy.stripe.com/7sY7sLa9k4OVdF19nq2sM04" class="btn btn-green" target="_blank" rel="noopener noreferrer">Comprar Guía + Sesión</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 TWIM Project &middot; Daniel Orozco Abia, Psicólogo General Sanitario CV11515</p>
+    <p><a href="https://twimproject.com/">Inicio</a> &middot; <a href="https://twimproject.com/soluciones/">Soluciones</a> &middot; <a href="https://twimproject.com/insights/">Artículos Clave</a> &middot; <a href="https://twimproject.com/privacy.html">Privacidad</a></p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VMMZ1TKWZ0');
+</script>
+
+</body>
+</html>
