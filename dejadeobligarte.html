@@ -1,236 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deja de Obligarte · Programa de Autoexigencia | TWIM Project</title>
-  <meta name="description" content="Para personas con autoexigencia desbordante que no consiguen descansar sin culpa. Entrenamiento grabado + protocolo de 7 días. 39€. Por Daniel Orozco Abia, Psicólogo CV11515." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://twimproject.com/dejadeobligarte.html" />
-
+  <meta name="description" content="Para personas con autoexigencia desbordante que no consiguen descansar sin culpa. Entrenamiento grabado + protocolo de 7 días. 39€. Por Daniel Orozco Abia, Psicólogo CV11515.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://twimproject.com/dejadeobligarte.html">
+  <link rel="icon" href="logo-mindworld.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="twim-styles.css">
   <style>
-    :root {--primary:#265C4B;--primary-dark:#173D30;--accent:#D4C4AE;--bg:#FDFCFA;--bg-soft:#F7F4F0;}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Barlow Condensed',sans-serif;line-height:1.5;background:var(--bg);color:var(--primary-dark)}
-    h1,h2{font-weight:600;letter-spacing:.3px;color:var(--primary-dark)}
-    a{color:var(--primary);text-decoration:none}
-    a:hover{color:var(--primary-dark)}
-    .container{width:92%;max-width:980px;margin:auto}
+    body { font-family:'Barlow Condensed',sans-serif; margin:0; background:#FDFCFA; color:#2B2420; font-size:18px; font-weight:300; line-height:1.7; }
+    .landing-header { background:#173D30; padding:.8rem 0; position:sticky; top:0; z-index:999; }
+    .landing-header .wrap { display:flex; justify-content:space-between; align-items:center; width:93%; max-width:1100px; margin:0 auto; }
+    .landing-header img { height:65px; width:auto; }
+    .landing-header .nav-btns { display:flex; gap:.6rem; align-items:center; }
+    .landing-header .nav-btns a { padding:.55rem 1.1rem; border-radius:5px; text-decoration:none; font-size:.9rem; font-weight:400; }
+    .btn-back { background:transparent; color:rgba(255,255,255,.7); border:1px solid rgba(255,255,255,.2); }
+    .btn-back:hover { border-color:rgba(255,255,255,.5); color:#fff; }
+    .btn-cta-nav { background:#C2A78B; color:#fff; }
+    .btn-cta-nav:hover { background:#A89070; }
 
-    .topbar{position:sticky;top:0;z-index:999;background:#fff;border-bottom:1px solid rgba(0,0,0,.06)}
-    .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo img{height:44px;width:auto}
-    .btn{display:inline-block;padding:.9rem 1.4rem;background:var(--primary-dark);color:#fff;border-radius:4px;font-weight:400;transition:.2s}
-    .btn:hover{background:var(--primary)}
-    .btn.secondary{background:#fff;color:var(--primary-dark);border:1px solid rgba(0,0,0,.15)}
-    .btn.secondary:hover{border-color:rgba(0,0,0,.3)}
+    .hero { background:linear-gradient(150deg,#173D30,#265C4B); padding:4rem 1.5rem 3.5rem; text-align:center; color:#fff; }
+    .hero h1 { font-size:clamp(2rem,5vw,3rem); font-weight:600; margin-bottom:.6rem; color:#fff; }
+    .hero .tagline { font-size:1.15rem; color:rgba(255,255,255,.8); max-width:600px; margin:0 auto 1.5rem; }
+    .hero .price-badge { display:inline-block; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); padding:.6rem 1.5rem; border-radius:50px; font-size:1.1rem; font-weight:500; }
 
-    .hero{padding:3.2rem 0 2rem}
-    .badge{display:inline-block;background:var(--bg-soft);border:1px solid rgba(0,0,0,.08);padding:.35rem .65rem;border-radius:999px;font-size:1.05rem}
-    .hero h1{font-size:clamp(2.3rem,4.2vw,3.2rem);text-transform:uppercase;line-height:1.1;margin:.9rem 0 .5rem}
-    .subtitle{font-size:1.35rem;color:#6B6058;margin-bottom:1rem}
-    .bullets{margin:1rem 0 1.3rem 1.1rem;font-size:1.2rem}
-    .bullets li{margin:.35rem 0}
-    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:1rem}
-    .micro{font-size:1.05rem;opacity:.85;margin-top:.6rem}
+    .content { width:93%; max-width:800px; margin:0 auto; padding:3rem 0 4rem; }
+    .section { margin-bottom:3rem; }
+    .section h2 { font-size:1.4rem; color:#173D30; margin-bottom:1rem; padding-bottom:.4rem; border-bottom:2px solid #C2A78B; }
+    .section p { color:#6B6058; margin-bottom:.8rem; }
+    .section ul { list-style:none; margin:0 0 1rem; }
+    .section li { padding:.35rem 0 .35rem 1.4rem; position:relative; font-size:.97rem; color:#6B6058; }
+    .section li::before { content:'▸'; position:absolute; left:0; color:#265C4B; font-weight:600; }
 
-    .section{padding:2.2rem 0}
-    .panel{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:1.6rem;box-shadow:0 6px 16px rgba(0,0,0,.04)}
-    .panel h2{font-size:1.9rem;margin-bottom:.75rem;text-transform:uppercase}
-    .panel p,.panel li{font-size:1.18rem}
-    .panel ul{margin:.6rem 0 0 1.1rem}
+    .highlight { background:#F7F4F0; border-left:4px solid #265C4B; padding:1.2rem 1.5rem; border-radius:0 8px 8px 0; margin:1.5rem 0; }
+    .highlight p { margin-bottom:.3rem; }
 
-    .grid{display:grid;grid-template-columns:1fr;gap:1.2rem}
-    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
-    details{border-top:1px solid rgba(0,0,0,.08);padding:.8rem 0}
-    details:first-of-type{border-top:none}
-    summary{cursor:pointer;font-size:1.22rem;font-weight:600}
-    details p{margin-top:.5rem}
+    .includes-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1rem 0; }
+    .include-card { background:#F7F4F0; padding:1.2rem; border-radius:8px; }
+    .include-card h3 { font-size:1rem; margin-bottom:.3rem; color:#173D30; }
+    .include-card p { font-size:.9rem; color:#9A8E84; margin:0; }
+    @media(max-width:600px) { .includes-grid { grid-template-columns:1fr; } }
 
-    .urgency{background:var(--bg-soft);border-left:4px solid var(--primary);padding:1.2rem;margin:1.5rem 0;border-radius:4px}
-    .urgency p{margin:.5rem 0;font-size:1.15rem}
-    .urgency strong{color:var(--primary-dark)}
+    .cta-section { background:#173D30; color:#fff; padding:3rem 1.5rem; text-align:center; border-radius:12px; margin:2rem 0; }
+    .cta-section h2 { color:#fff; border:none; font-size:1.6rem; margin-bottom:.5rem; }
+    .cta-section p { color:rgba(255,255,255,.75); margin-bottom:1.2rem; }
+    .cta-section .btn { display:inline-block; background:#C2A78B; color:#fff; padding:.9rem 2.2rem; border-radius:6px; text-decoration:none; font-weight:500; font-size:1.05rem; }
+    .cta-section .btn:hover { background:#A89070; }
+    .cta-section .micro { display:block; margin-top:.8rem; font-size:.85rem; color:rgba(255,255,255,.5); }
 
-    footer{margin-top:2.4rem;padding:2rem 0;background:var(--primary-dark);color:#fff;text-align:center}
-    footer a{color:var(--accent)}
+    .faq details { border-top:1px solid rgba(43,36,32,.07); padding:1rem 0; }
+    .faq summary { cursor:pointer; font-size:1.05rem; font-weight:600; color:#173D30; }
+    .faq details p { margin-top:.5rem; font-size:.95rem; }
+
+    footer { background:#173D30; color:rgba(255,255,255,.6); text-align:center; padding:2rem; font-size:.85rem; }
+    footer a { color:#D4C4AE; text-decoration:none; }
   </style>
 </head>
-
 <body>
 
-  <div class="topbar">
-    <div class="container">
-      <div class="wrap">
-        <div class="logo">
-          <a href="https://twimproject.com/"><img src="LOGO.png" alt="TWIM Project"></a>
-          <span class="badge">Entrenamiento grabado</span>
-        </div>
-        <div class="ctaRow">
-          <a class="btn secondary" href="https://twimproject.com/">Volver a TWIM</a>
-          <a class="btn" href="mailto:danielorozco@twimproject.com?subject=Quiero%20informaci%C3%B3n%20sobre%20Deja%20de%20Obligarte" target="_blank" rel="noopener">Pedir información (39€)</a>
-          <a class="btn" href="mailto:danielorozco@twimproject.com?subject=Quiero%20acceder%20a%20Deja%20de%20Obligarte">Acceder</a>
-        </div>
+  <div class="landing-header">
+    <div class="wrap">
+      <a href="https://twimproject.com/"><img src="logo-mindworld.png" alt="TWIM Project"></a>
+      <div class="nav-btns">
+        <a href="https://twimproject.com/" class="btn-back">Volver a TWIM</a>
+        <a href="mailto:danielorozco@twimproject.com?subject=Quiero%20acceder%20a%20Deja%20de%20Obligarte" class="btn-cta-nav">Acceder (39€)</a>
       </div>
     </div>
   </div>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Deja de Obligarte</h1>
-      <div class="subtitle">Para personas con autoexigencia desbordante que no consiguen descansar sin culpa (90 min + 7 días)</div>
+  <div class="hero">
+    <h1>Deja de Obligarte</h1>
+    <p class="tagline">Para personas con autoexigencia desbordante que no consiguen descansar sin culpa</p>
+    <span class="price-badge">39 € · Acceso inmediato</span>
+  </div>
 
-      <ul class="bullets">
-        <li>Detecta el segundo exacto en el que el "tengo que" te secuestra.</li>
-        <li>Gana margen antes de actuar en automático.</li>
-        <li>Aplica un protocolo de 7 días (10–15 min/día) para empezar a decidir con más calma.</li>
+  <div class="content">
+
+    <div class="section">
+      <h2>El problema</h2>
+      <p>Si te pasa esto, estás en el sitio correcto:</p>
+      <ul>
+        <li>Dices «no quiero», pero acabas haciendo igual.</li>
+        <li>Cuando intentas parar, aparece culpa, prisa por dentro o inquietud.</li>
+        <li>Descansar no se siente como descanso: se siente como «estar haciendo algo mal».</li>
+        <li>Te enfadas contigo porque «sabes» que deberías parar… pero no puedes.</li>
       </ul>
-
-      <div class="urgency">
-        <p>💰 <strong>Precio: 39€</strong></p>
-        <p>⚡ <strong>Acceso inmediato</strong></p>
-        <p>🎁 Vídeo grabado + PDF de trabajo + audio bonus + protocolo de 7 días</p>
-      </div>
-
-      <div class="ctaRow">
-        <a class="btn" href="mailto:danielorozco@twimproject.com?subject=Quiero%20informaci%C3%B3n%20sobre%20Deja%20de%20Obligarte" target="_blank" rel="noopener">
-          Pedir información (39€)
-        </a>
-        <span class="micro">Te respondemos en menos de 24 h con el acceso personalizado</span>
-      </div>
-
-      <div class="ctaRow">
-        <a class="btn" href="mailto:danielorozco@twimproject.com?subject=Quiero%20acceder%20a%20Deja%20de%20Obligarte">
-          Acceder
-        </a>
-        <span class="micro">Te respondemos en menos de 24 h con unas breves preguntas para personalizar tu experiencia</span>
+      <div class="highlight">
+        <p><strong>Esto no va de productividad. Va de recuperar elección.</strong></p>
       </div>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container grid">
-
-      <div class="panel">
-        <h2>El problema</h2>
-        <p>Si te pasa esto, estás en el sitio correcto:</p>
-        <ul>
-          <li>Dices "no quiero", pero acabas haciendo igual.</li>
-          <li>Cuando intentas parar, aparece culpa, prisa por dentro o inquietud.</li>
-          <li>Descansar no se siente como descanso: se siente como "estar haciendo algo mal".</li>
-          <li>Te enfadas contigo porque "sabes" que deberías parar… pero no puedes.</li>
-        </ul>
-        <p style="margin-top:.8rem;"><strong>Esto no va de productividad. Va de recuperar elección.</strong></p>
-      </div>
-
-      <div class="panel">
-        <h2>Qué vas a conseguir</h2>
-        <ul>
-          <li>Reconocer tu "mandato" típico (la frase exacta que te empuja).</li>
-          <li>Ver qué estás calmando cuando obedeces (sin moralina).</li>
-          <li>Usar un protocolo breve para no obedecer en el primer segundo.</li>
-          <li>Empezar un plan de 7 días para ganar margen real de decisión.</li>
-        </ul>
-        <p style="margin-top:.8rem;">No se trata de "dejar de hacer". Se trata de dejar de obedecer sin elegir.</p>
-      </div>
-
-      <div class="panel">
-        <h2>Qué incluye</h2>
-        <ul>
-          <li>Vídeo grabado de 75–90 min (4 módulos).</li>
-          <li>PDF de trabajo (10–15 páginas) con ejercicios guiados.</li>
-          <li>Audio bonus de 8–12 min: "cierre del día" para cortar rumiación y bajar la urgencia interna.</li>
-          <li>Protocolo práctico de 7 días (10–15 min/día).</li>
-        </ul>
-      </div>
-
-      <div class="panel">
-        <h2>El mecanismo</h2>
-        <p>El "tengo que" no es solo una idea: es un modo automático.</p>
-        <p style="margin-top:.5rem;">Aparece un disparador → tu mente lanza una urgencia → tu cuerpo se activa → actúas → algo se calma.</p>
-        <p style="margin-top:.5rem;">Ese alivio rápido es la razón por la que se repite… y también la razón por la que te drena.</p>
-        <p style="margin-top:.8rem;"><strong>Aquí no venimos a pelear contigo. Venimos a intervenir el mecanismo para recuperar margen.</strong></p>
-      </div>
-
+    <div class="section">
+      <h2>Qué vas a conseguir</h2>
+      <ul>
+        <li>Reconocer tu «mandato» típico (la frase exacta que te empuja).</li>
+        <li>Ver qué estás calmando cuando obedeces (sin moralina).</li>
+        <li>Usar un protocolo breve para no obedecer en el primer segundo.</li>
+        <li>Empezar un plan de 7 días para ganar margen real de decisión.</li>
+      </ul>
+      <p>No se trata de «dejar de hacer». Se trata de dejar de obedecer sin elegir.</p>
     </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="panel">
-        <h2>Quién soy</h2>
-        <p>Soy Daniel Orozco Abia, psicólogo en consulta privada desde 2012.</p>
-        <p style="margin-top:.5rem;">He visto este patrón repetirse en personas responsables y capaces: no es falta de voluntad, es un sistema interno que se refuerza porque calma algo a corto plazo.</p>
-        <p style="margin-top:.5rem;">Este entrenamiento condensa el mapa y los pasos mínimos para empezar a desmontarlo sin violencia.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="panel">
-        <h2>FAQ</h2>
-
-        <details>
-          <summary>¿Cuánto dura?</summary>
-          <p>75–90 minutos, dividido en 4 módulos.</p>
-        </details>
-
-        <details>
-          <summary>¿Es terapia?</summary>
-          <p>No. Es material educativo: explicación del mecanismo + ejercicios + protocolo de 7 días.</p>
-        </details>
-
-        <details>
-          <summary>¿Cuánto tiempo necesito al día?</summary>
-          <p>10–15 minutos durante 7 días.</p>
-        </details>
-
-        <details>
-          <summary>¿Y si tengo mucha ansiedad?</summary>
-          <p>Si es intensa o te desborda, esto no sustituye apoyo profesional. Aquí trabajamos herramientas educativas.</p>
-        </details>
-
-        <details>
-          <summary>¿Y si vuelvo a caer en el "tengo que"?</summary>
-          <p>Es normal. El objetivo no es perfección: es detectar antes y recortar el automatismo.</p>
-        </details>
-
-        <details>
-          <summary>¿Cómo accedo?</summary>
-          <p>Escríbenos a <a href="mailto:danielorozco@twimproject.com">danielorozco@twimproject.com</a>. Te haremos unas breves preguntas para conocerte mejor y personalizar tu experiencia. Después te enviaré la información y los PDFs pertinentes, resolveré tus dudas e incluso podremos valorar una videollamada si tiene sentido. Cuando encaje contigo, te pasaré el enlace de pago (39€).</p>
-        </details>
-
-        <details>
-          <summary>¿Esto sirve si tengo mil responsabilidades?</summary>
-          <p>Está diseñado justo para eso: micro-intervenciones y margen, no "cambios de vida" imposibles.</p>
-        </details>
-
-        <details>
-          <summary>¿Hay devoluciones? ¿Y si siento que "no me encaja"?</summary>
-          <p>No. Es un producto digital (vídeo, PDF y audio), y no se hacen devoluciones.</p>
-          <p>Si te aparece un "esto no es para mí" muy rápido, muchas veces no es falta de encaje: es resistencia al cambio justo donde el "tengo que" te mantiene en automático.</p>
-          <p>Antes de descartarlo, haz este test mínimo: mira el Módulo 1, completa el "Mapa del secuestro" y aplica 48 horas el protocolo de "90 segundos antes de actuar" en 1 situación al día. Luego decide si lo continúas.</p>
-        </details>
-
-        <div class="ctaRow" style="margin-top:1.2rem;">
-          <a class="btn" href="mailto:danielorozco@twimproject.com?subject=Quiero%20informaci%C3%B3n%20sobre%20Deja%20de%20Obligarte" target="_blank" rel="noopener">Pedir información ahora (39€)</a>
-          <span class="micro">Material educativo (no terapia).</span>
-          <a class="btn" href="mailto:danielorozco@twimproject.com?subject=Quiero%20acceder%20a%20Deja%20de%20Obligarte">Acceder</a>
-          <span class="micro">Material educativo (no terapia). Te respondemos en menos de 24 h.</span>
+    <div class="section">
+      <h2>Qué incluye</h2>
+      <div class="includes-grid">
+        <div class="include-card">
+          <h3>Vídeo grabado</h3>
+          <p>75–90 min dividido en 4 módulos</p>
         </div>
-
+        <div class="include-card">
+          <h3>PDF de trabajo</h3>
+          <p>10–15 páginas con ejercicios guiados</p>
+        </div>
+        <div class="include-card">
+          <h3>Audio bonus</h3>
+          <p>8–12 min: cierre del día para cortar rumiación</p>
+        </div>
+        <div class="include-card">
+          <h3>Protocolo 7 días</h3>
+          <p>10–15 min/día para ganar margen de decisión</p>
+        </div>
       </div>
     </div>
-  </section>
+
+    <div class="section">
+      <h2>El mecanismo</h2>
+      <p>El «tengo que» no es solo una idea: es un modo automático.</p>
+      <p>Aparece un disparador → tu mente lanza una urgencia → tu cuerpo se activa → actúas → algo se calma.</p>
+      <p>Ese alivio rápido es la razón por la que se repite… y también la razón por la que te drena.</p>
+      <div class="highlight">
+        <p><strong>Aquí no venimos a pelear contigo. Venimos a intervenir el mecanismo para recuperar margen.</strong></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Quién soy</h2>
+      <p><strong>Daniel Orozco Abia</strong>, psicólogo en consulta privada desde 2012. He visto este patrón repetirse en personas responsables y capaces: no es falta de voluntad, es un sistema interno que se refuerza porque calma algo a corto plazo.</p>
+      <p>Este entrenamiento condensa el mapa y los pasos mínimos para empezar a desmontarlo sin violencia.</p>
+    </div>
+
+    <div class="cta-section">
+      <h2>39 € · Acceso inmediato</h2>
+      <p>Vídeo (4 módulos) + PDF de trabajo + audio bonus + protocolo de 7 días</p>
+      <a href="mailto:danielorozco@twimproject.com?subject=Quiero%20acceder%20a%20Deja%20de%20Obligarte" class="btn">Acceder al programa</a>
+      <span class="micro">Te respondemos en menos de 24 h con el acceso personalizado. Material educativo (no terapia).</span>
+    </div>
+
+    <div class="section faq">
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Cuánto dura?</summary>
+        <p>75–90 minutos, dividido en 4 módulos.</p>
+      </details>
+      <details>
+        <summary>¿Es terapia?</summary>
+        <p>No. Es material educativo: explicación del mecanismo + ejercicios + protocolo de 7 días.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tiempo necesito al día?</summary>
+        <p>10–15 minutos durante 7 días.</p>
+      </details>
+      <details>
+        <summary>¿Y si tengo mucha ansiedad?</summary>
+        <p>Si es intensa o te desborda, esto no sustituye apoyo profesional. Aquí trabajamos herramientas educativas.</p>
+      </details>
+      <details>
+        <summary>¿Y si vuelvo a caer en el «tengo que»?</summary>
+        <p>Es normal. El objetivo no es perfección: es detectar antes y recortar el automatismo.</p>
+      </details>
+      <details>
+        <summary>¿Cómo accedo?</summary>
+        <p>Escríbenos a <a href="mailto:danielorozco@twimproject.com" style="color:#265C4B;">danielorozco@twimproject.com</a>. Te haremos unas breves preguntas para conocerte mejor y personalizar tu experiencia. Después te enviaremos la información, resolveremos tus dudas y te pasaremos el enlace de pago (39€).</p>
+      </details>
+      <details>
+        <summary>¿Hay devoluciones?</summary>
+        <p>No. Es un producto digital (vídeo, PDF y audio). Si te aparece un «esto no es para mí» muy rápido, prueba el Módulo 1 y el protocolo de 90 segundos durante 48 horas antes de descartar.</p>
+      </details>
+    </div>
+
+  </div>
 
   <footer>
-    © 2026 TWIM Project · <a href="mailto:danielorozco@twimproject.com">danielorozco@twimproject.com</a>
+    <p>&copy; 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515</p>
+    <p><a href="https://twimproject.com/">Inicio</a> · <a href="https://twimproject.com/soluciones/">Soluciones</a> · <a href="https://twimproject.com/insights/">Artículos Clave</a> · <a href="privacy.html">Privacidad</a></p>
   </footer>
 
 </body>
