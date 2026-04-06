@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu guía está lista · TWIM Project</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="logo-mindworld.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #265C4B;
+      --green-dark: #173D30;
+      --beige: #C2A78B;
+      --beige-light: #D4C4AE;
+      --cream: #FDFCFA;
+      --text: #2B2420;
+      --text-soft: #6B6058;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      max-width: 520px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.08);
+    }
+    .icon { font-size: 3rem; margin-bottom: 1rem; }
+    h1 { font-size: 1.8rem; color: var(--green-dark); margin-bottom: .5rem; }
+    p { color: var(--text-soft); font-size: 1.05rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .btn-download {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--green);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      font-family: inherit;
+      transition: all .25s;
+    }
+    .btn-download:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(38,92,75,.3); }
+    .back-link {
+      display: block;
+      margin-top: 1.5rem;
+      color: var(--beige);
+      text-decoration: none;
+      font-size: .92rem;
+    }
+    .back-link:hover { color: var(--green); }
+    .error { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="icon">📄</div>
+    <h1 id="titulo">Tu guía está lista</h1>
+    <p id="descripcion">Gracias por tu interés. Descarga la guía ahora mismo.</p>
+    <a id="btn-descarga" href="#" class="btn-download" download>Descargar guía (PDF)</a>
+    <a href="https://twimproject.com/soluciones/" class="back-link">← Volver a Soluciones</a>
+  </div>
+
+  <div class="card error" id="error-card">
+    <div class="icon">🤔</div>
+    <h1>Algo no ha ido bien</h1>
+    <p>No hemos podido identificar qué guía necesitas. Vuelve a intentarlo desde la página de Soluciones.</p>
+    <a href="https://twimproject.com/soluciones/" class="btn-download">Ir a Soluciones</a>
+  </div>
+
+  <script>
+    const guias = {
+      tdah: {
+        titulo: 'Tu guía sobre TDAH en adolescentes está lista',
+        descripcion: 'Descarga "TDAH y adolescencia: lo que las notas de tu hijo no dicen". Claves desde la psicología profunda para entender lo que realmente le pasa por dentro.',
+        archivo: 'talleres/TWIM Guia Padres TDAH ESO.pdf'
+      },
+      bachillerato: {
+        titulo: 'Tu guía sobre apatía en Bachillerato está lista',
+        descripcion: 'Descarga "Tu hijo no es vago: lo que la apatía en Bachillerato esconde". Claves para entender por qué tu adolescente ha dejado de querer.',
+        archivo: 'talleres/TWIM Guia Padres Bachillerato.pdf'
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const tipo = params.get('tipo');
+
+    if (tipo && guias[tipo]) {
+      const g = guias[tipo];
+      document.getElementById('titulo').textContent = g.titulo;
+      document.getElementById('descripcion').textContent = g.descripcion;
+      document.getElementById('btn-descarga').href = g.archivo;
+      document.getElementById('error-card').style.display = 'none';
+    } else {
+      document.querySelector('.card:not(.error)').style.display = 'none';
+      document.getElementById('error-card').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

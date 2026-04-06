@@ -252,6 +252,68 @@
     .sol-card.featured .price { color: var(--beige-light); }
     .sol-card.featured .badge { background: rgba(255,255,255,.1); color: var(--beige-light); }
 
+    /* ── LEAD MAGNET FORMS ── */
+    .lead-magnet {
+      background: var(--sand);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      grid-column: 1 / -1;
+    }
+    .lead-magnet h3 { font-size: 1.1rem; margin-bottom: .3rem; }
+    .lead-magnet .lm-sub { font-size: .92rem; color: var(--text-muted); margin-bottom: 1.2rem; }
+    .lead-magnet form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8rem;
+    }
+    .lead-magnet .field { display: flex; flex-direction: column; }
+    .lead-magnet .field.full { grid-column: 1 / -1; }
+    .lead-magnet label {
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: .25rem;
+    }
+    .lead-magnet input, .lead-magnet select {
+      padding: .6rem .8rem;
+      border: 1.5px solid var(--sand-dark);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: .9rem;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color .2s;
+    }
+    .lead-magnet input:focus, .lead-magnet select:focus {
+      outline: none;
+      border-color: var(--green);
+    }
+    .lead-magnet .btn-submit {
+      grid-column: 1 / -1;
+      padding: .8rem;
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: .95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .25s;
+    }
+    .lead-magnet .btn-submit:hover { background: var(--green-dark); }
+    .lead-magnet .privacy {
+      grid-column: 1 / -1;
+      font-size: .75rem;
+      color: var(--text-muted);
+    }
+    .lead-magnet .privacy a { color: var(--green); }
+    @media (max-width: 600px) {
+      .lead-magnet form { grid-template-columns: 1fr; }
+    }
+
     /* ── FOOTER ── */
     footer {
       background: var(--green-dark);
@@ -433,6 +495,82 @@
             <a href="../talleres/bachillerato-motivacion/" class="btn btn-green">Ver taller</a>
             <a href="../insights/hijo-no-es-vago-apatia-bachillerato.html" class="btn btn-outline">Leer artículo</a>
           </div>
+        </div>
+
+        <!-- LEAD MAGNET: TDAH -->
+        <div class="lead-magnet">
+          <h3>📄 Descarga gratis: Guía para padres · TDAH y adolescencia</h3>
+          <p class="lm-sub">«Lo que las notas de tu hijo no dicen» — Claves desde la psicología profunda. PDF de 7 páginas.</p>
+          <form action="https://formspree.io/f/mpwrqplb" method="POST">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Lead magnet: Guía TDAH adolescentes">
+            <input type="hidden" name="_next" value="https://twimproject.com/gracias-guia.html?tipo=tdah">
+            <input type="hidden" name="producto" value="Guía Padres TDAH ESO">
+            <div class="field">
+              <label for="tdah-nombre">Nombre *</label>
+              <input type="text" id="tdah-nombre" name="nombre" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="tdah-apellidos">Apellidos *</label>
+              <input type="text" id="tdah-apellidos" name="apellidos" required autocomplete="family-name">
+            </div>
+            <div class="field">
+              <label for="tdah-localidad">Localidad *</label>
+              <input type="text" id="tdah-localidad" name="localidad" required>
+            </div>
+            <div class="field">
+              <label for="tdah-pais">País *</label>
+              <input type="text" id="tdah-pais" name="pais" required value="España" autocomplete="country-name">
+            </div>
+            <div class="field">
+              <label for="tdah-profesion">Profesión (opcional)</label>
+              <input type="text" id="tdah-profesion" name="profesion" autocomplete="organization-title">
+            </div>
+            <div class="field">
+              <label for="tdah-nacimiento">Fecha de nacimiento *</label>
+              <input type="date" id="tdah-nacimiento" name="fecha_nacimiento" required>
+            </div>
+            <button type="submit" class="btn-submit">Descargar guía gratis</button>
+            <p class="privacy">Al enviar aceptas nuestra <a href="../privacy.html" target="_blank">política de privacidad</a>. Tus datos se usan para enviarte la guía y, si lo deseas, contenido ocasional de TWIM Project.</p>
+          </form>
+        </div>
+
+        <!-- LEAD MAGNET: BACHILLERATO -->
+        <div class="lead-magnet">
+          <h3>📄 Descarga gratis: Guía para padres · Apatía en Bachillerato</h3>
+          <p class="lm-sub">«Tu hijo no es vago: lo que la apatía esconde» — Claves para entender por qué ha dejado de querer. PDF de 7 páginas.</p>
+          <form action="https://formspree.io/f/mpwrqplb" method="POST">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Lead magnet: Guía Bachillerato apatía">
+            <input type="hidden" name="_next" value="https://twimproject.com/gracias-guia.html?tipo=bachillerato">
+            <input type="hidden" name="producto" value="Guía Padres Bachillerato">
+            <div class="field">
+              <label for="bach-nombre">Nombre *</label>
+              <input type="text" id="bach-nombre" name="nombre" required autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="bach-apellidos">Apellidos *</label>
+              <input type="text" id="bach-apellidos" name="apellidos" required autocomplete="family-name">
+            </div>
+            <div class="field">
+              <label for="bach-localidad">Localidad *</label>
+              <input type="text" id="bach-localidad" name="localidad" required>
+            </div>
+            <div class="field">
+              <label for="bach-pais">País *</label>
+              <input type="text" id="bach-pais" name="pais" required value="España" autocomplete="country-name">
+            </div>
+            <div class="field">
+              <label for="bach-profesion">Profesión (opcional)</label>
+              <input type="text" id="bach-profesion" name="profesion" autocomplete="organization-title">
+            </div>
+            <div class="field">
+              <label for="bach-nacimiento">Fecha de nacimiento *</label>
+              <input type="date" id="bach-nacimiento" name="fecha_nacimiento" required>
+            </div>
+            <button type="submit" class="btn-submit">Descargar guía gratis</button>
+            <p class="privacy">Al enviar aceptas nuestra <a href="../privacy.html" target="_blank">política de privacidad</a>. Tus datos se usan para enviarte la guía y, si lo deseas, contenido ocasional de TWIM Project.</p>
+          </form>
         </div>
 
       </div>
