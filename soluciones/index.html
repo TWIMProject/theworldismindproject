@@ -728,39 +728,55 @@
     });
   </script>
 
-<!-- MailerLite: suscribir leads de guías de padres en paralelo a Formspree -->
+<!-- Lead magnet forms: AJAX submit to Formspree + MailerLite, then redirect -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Map lead magnet product names to MailerLite groups
-    const productGroupMap = {
+    const mailerLiteGroups = {
       'Guía Padres TDAH ESO': 'padres-talleres-tdah',
       'Guía Padres Bachillerato': 'padres-talleres-bachillerato',
     };
 
     document.querySelectorAll('.lead-magnet form').forEach(form => {
-      form.addEventListener('submit', () => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+
+        const nextInput = form.querySelector('input[name="_next"]');
+        const redirectUrl = nextInput ? nextInput.value : 'https://twimproject.com/soluciones/';
+
+        // MailerLite subscription (parallel, fire-and-forget)
         const producto = form.querySelector('input[name="producto"]');
-        if (!producto) return;
-        const group = productGroupMap[producto.value];
-        if (!group) return;
+        if (producto) {
+          const group = mailerLiteGroups[producto.value];
+          if (group) {
+            const email = form.querySelector('input[name="email"]');
+            const nombre = form.querySelector('input[name="nombre"]');
+            if (email && email.value) {
+              fetch('https://lighthearted-kitten-8aba94.netlify.app/.netlify/functions/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  email: email.value.trim(),
+                  name: nombre ? nombre.value.trim() : '',
+                  group: group,
+                }),
+              }).catch(() => {});
+            }
+          }
+        }
 
-        const email = form.querySelector('input[name="email"]');
-        const nombre = form.querySelector('input[name="nombre"]');
-        if (!email || !email.value) return;
-
-        // Fire-and-forget: subscribe to MailerLite in the background.
-        // keepalive: true ensures the request completes even when
-        // the browser navigates away (Formspree redirects to gracias-guia).
-        fetch('https://lighthearted-kitten-8aba94.netlify.app/.netlify/functions/subscribe', {
+        // Formspree AJAX submit — then redirect manually
+        fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email: email.value.trim(),
-            name: nombre ? nombre.value.trim() : '',
-            group: group,
-          }),
-          keepalive: true,
-        }).catch(() => {}); // Silent fail — Formspree is the primary path
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' },
+        }).then(() => {
+          window.location.href = redirectUrl;
+        }).catch(() => {
+          window.location.href = redirectUrl;
+        });
       });
     });
   });
