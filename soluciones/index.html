@@ -751,7 +751,7 @@
         // Fire-and-forget: subscribe to MailerLite in the background.
         // keepalive: true ensures the request completes even when
         // the browser navigates away (Formspree redirects to gracias-guia).
-        fetch('/.netlify/functions/subscribe', {
+        fetch('https://lighthearted-kitten-8aba94.netlify.app/.netlify/functions/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
