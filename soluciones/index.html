@@ -728,6 +728,42 @@
     });
   </script>
 
+<!-- MailerLite: suscribir leads de guías de padres en paralelo a Formspree -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Map lead magnet product names to MailerLite groups
+    const productGroupMap = {
+      'Guía Padres TDAH ESO': 'padres-talleres-tdah',
+      'Guía Padres Bachillerato': 'padres-talleres-bachillerato',
+    };
+
+    document.querySelectorAll('.lead-magnet form').forEach(form => {
+      form.addEventListener('submit', () => {
+        const producto = form.querySelector('input[name="producto"]');
+        if (!producto) return;
+        const group = productGroupMap[producto.value];
+        if (!group) return;
+
+        const email = form.querySelector('input[name="email"]');
+        const nombre = form.querySelector('input[name="nombre"]');
+        if (!email || !email.value) return;
+
+        // Fire-and-forget: subscribe to MailerLite in the background
+        // Formspree handles the form submission and redirect normally
+        fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: email.value.trim(),
+            name: nombre ? nombre.value.trim() : '',
+            group: group,
+          }),
+        }).catch(() => {}); // Silent fail — Formspree is the primary path
+      });
+    });
+  });
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
 <script>

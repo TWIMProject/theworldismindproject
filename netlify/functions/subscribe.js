@@ -41,6 +41,9 @@ exports.handler = async (event) => {
     "lead-magnet-dependencia": "MAILERLITE_GROUP_LEAD_MAGNET",
     "reto-7-dias": "MAILERLITE_GROUP_RETO",
     "lista-general": "MAILERLITE_GROUP_GENERAL",
+    "padres-talleres-tdah": "MAILERLITE_GROUP_PADRES_TDAH",
+    "padres-talleres-bachillerato": "MAILERLITE_GROUP_PADRES_BACH",
+    "padres-talleres-adolescentes": "MAILERLITE_GROUP_PADRES_TALLERES",
   };
 
   const groupEnvKey = groupEnvMap[group] || "MAILERLITE_GROUP_LEAD_MAGNET";

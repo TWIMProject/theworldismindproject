@@ -1145,18 +1145,28 @@
         <a href="talleres/bachillerato-motivacion/" class="btn btn-beige">Ver taller Bachillerato</a>
       </div>
     </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a href="https://wa.me/34625231297?text=Hola%20Daniel%2C%20me%20interesan%20los%20talleres%20para%20adolescentes." class="btn btn-green" style="display:inline-flex;align-items:center;gap:.5rem;font-size:1rem;">
+        <i class="fa-brands fa-whatsapp"></i> Pregúntame por WhatsApp
+      </a>
+    </div>
     <div class="workshops-download">
       <div class="workshops-download__copy">
-        <span class="workshops-spotlight__eyebrow workshops-download__eyebrow">Más detalles</span>
-        <h3>¿Quieres más detalles?</h3>
-        <p>Si quieres revisar la información del dossier tranquilamente, deja tu correo y te mostramos el acceso directo al PDF desde aquí mismo, dentro del bloque de talleres.</p>
+        <span class="workshops-spotlight__eyebrow workshops-download__eyebrow">Guías gratuitas para padres</span>
+        <h3>¿Quieres entender mejor qué le pasa a tu hijo?</h3>
+        <p>Deja tu correo y accede a las guías gratuitas para padres: claves desde la psicología profunda sobre TDAH y apatía en Bachillerato.</p>
       </div>
       <form id="workshops-info-form" class="workshops-download__form">
         <label class="sr-only" for="workshops-email">Tu correo</label>
         <input type="email" id="workshops-email" name="email" placeholder="Tu correo" required>
-        <button type="submit" class="btn btn-green">Recibir PDF</button>
+        <button type="submit" class="btn btn-green" id="workshops-info-btn">Recibir guías</button>
       </form>
-      <a id="workshops-download-pdf" href="Grupo_Online_Info.html" class="btn btn-green workshops-download__link" style="display:none;">Ver información</a>
+      <div id="workshops-download-links" style="display:none;">
+        <p style="margin-bottom:.75rem;font-size:.95rem;color:var(--text-soft);">Descarga las guías:</p>
+        <a href="talleres/TWIM Guia Padres TDAH ESO.pdf" class="btn btn-green workshops-download__link" download>Guía TDAH y adolescencia (PDF)</a>
+        <a href="talleres/TWIM Guia Padres Bachillerato.pdf" class="btn btn-green workshops-download__link" style="margin-top:.5rem;" download>Guía apatía en Bachillerato (PDF)</a>
+      </div>
+      <div id="workshops-form-error" style="display:none;color:#c0392b;font-size:.9rem;margin-top:.5rem;"></div>
     </div>
   </div>
 </section>
@@ -1487,19 +1497,33 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('workshops-info-form');
-    const downloadLink = document.getElementById('workshops-download-pdf');
-    if (!form || !downloadLink) return;
-    form.addEventListener('submit', e => {
+    const linksDiv = document.getElementById('workshops-download-links');
+    const errorDiv = document.getElementById('workshops-form-error');
+    if (!form || !linksDiv) return;
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = form.querySelector('input[name="email"]').value;
-      fetch('https://formspree.io/f/mpwrqplb', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, motivo: 'descarga-pdf-talleres' })
-      }).finally(() => {
+      const btn = document.getElementById('workshops-info-btn');
+      const email = form.querySelector('input[name="email"]').value.trim();
+      if (!email || !email.includes('@')) {
+        errorDiv.textContent = 'Por favor, introduce un email válido.';
+        errorDiv.style.display = 'block';
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+      errorDiv.style.display = 'none';
+      try {
+        await fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name: '', group: 'padres-talleres-adolescentes' }),
+        });
         form.style.display = 'none';
-        downloadLink.style.display = 'inline-block';
-      });
+        linksDiv.style.display = 'block';
+      } catch {
+        form.style.display = 'none';
+        linksDiv.style.display = 'block';
+      }
     });
   });
 </script>
