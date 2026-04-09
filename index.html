@@ -1157,14 +1157,16 @@
         <p>Deja tu correo y accede a las guías gratuitas para padres: claves desde la psicología profunda sobre TDAH y apatía en Bachillerato.</p>
       </div>
       <form id="workshops-info-form" class="workshops-download__form">
+        <label class="sr-only" for="workshops-nombre">Tu nombre</label>
+        <input type="text" id="workshops-nombre" name="nombre" placeholder="Tu nombre" required>
         <label class="sr-only" for="workshops-email">Tu correo</label>
         <input type="email" id="workshops-email" name="email" placeholder="Tu correo" required>
         <button type="submit" class="btn btn-green" id="workshops-info-btn">Recibir guías</button>
       </form>
       <div id="workshops-download-links" style="display:none;">
         <p style="margin-bottom:.75rem;font-size:.95rem;color:var(--text-soft);">Descarga las guías:</p>
-        <a href="talleres/TWIM Guia Padres TDAH ESO.pdf" class="btn btn-green workshops-download__link" download>Guía TDAH y adolescencia (PDF)</a>
-        <a href="talleres/TWIM Guia Padres Bachillerato.pdf" class="btn btn-green workshops-download__link" style="margin-top:.5rem;" download>Guía apatía en Bachillerato (PDF)</a>
+        <a href="talleres/twim-guia-padres-tdah-eso.pdf" class="btn btn-green workshops-download__link" download>Guía TDAH y adolescencia (PDF)</a>
+        <a href="talleres/twim-guia-padres-bachillerato.pdf" class="btn btn-green workshops-download__link" style="margin-top:.5rem;" download>Guía apatía en Bachillerato (PDF)</a>
       </div>
       <div id="workshops-form-error" style="display:none;color:#c0392b;font-size:.9rem;margin-top:.5rem;"></div>
     </div>
@@ -1503,6 +1505,7 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('workshops-info-btn');
+      const nombre = form.querySelector('input[name="nombre"]').value.trim();
       const email = form.querySelector('input[name="email"]').value.trim();
       if (!email || !email.includes('@')) {
         errorDiv.textContent = 'Por favor, introduce un email válido.';
@@ -1516,7 +1519,7 @@
         await fetch('/.netlify/functions/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, name: '', group: 'padres-talleres-adolescentes' }),
+          body: JSON.stringify({ email, name: nombre, group: 'padres-talleres-adolescentes' }),
         });
         form.style.display = 'none';
         linksDiv.style.display = 'block';
