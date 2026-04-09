@@ -748,8 +748,9 @@
         const nombre = form.querySelector('input[name="nombre"]');
         if (!email || !email.value) return;
 
-        // Fire-and-forget: subscribe to MailerLite in the background
-        // Formspree handles the form submission and redirect normally
+        // Fire-and-forget: subscribe to MailerLite in the background.
+        // keepalive: true ensures the request completes even when
+        // the browser navigates away (Formspree redirects to gracias-guia).
         fetch('/.netlify/functions/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -758,6 +759,7 @@
             name: nombre ? nombre.value.trim() : '',
             group: group,
           }),
+          keepalive: true,
         }).catch(() => {}); // Silent fail — Formspree is the primary path
       });
     });
