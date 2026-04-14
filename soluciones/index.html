@@ -754,7 +754,7 @@
             const email = form.querySelector('input[name="email"]');
             const nombre = form.querySelector('input[name="nombre"]');
             if (email && email.value) {
-              fetch('https://lighthearted-kitten-8aba94.netlify.app/.netlify/functions/subscribe', {
+              fetch('/.netlify/functions/subscribe', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
