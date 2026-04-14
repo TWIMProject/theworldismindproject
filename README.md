@@ -114,7 +114,6 @@ Impulsado por **Daniel Orozco Abia** | Psicólogo General Sanitario CV11515
 - [Soluciones](https://twimproject.com/#solutions)
 - [Programas](https://twimproject.com/#programs)
 - [Libro](https://twimproject.com/#libros)
-- [Guía Anti-Burnout](https://twimproject.com/#guia-antiburnout)
 - [Contacto](https://twimproject.com/#contacto)
 
 ---
@@ -163,7 +162,6 @@ theworldismindproject/
 │   │   ├── BUSTO.png              # Imagen hero background
 │   │   ├── twimp.jpg              # Foto conferencia
 │   │   ├── imagen amazon.jpeg     # Portada libro
-│   │   ├── guia+sesión.jpg        # Promo guía anti-burnout
 │   │   └── ...
 │   │
 │   ├── css/                        # (Opcional) Estilos externos

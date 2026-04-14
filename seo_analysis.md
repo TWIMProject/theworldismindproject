@@ -49,7 +49,7 @@
 
 #### 4. robots.txt corregido
 - Eliminada la regla `Disallow: /*.pdf$` que bloqueaba PDFs educativos
-- Añadidas reglas para páginas que no deben indexarse (gracias-bundle, preventa)
+- Añadidas reglas para páginas que no deben indexarse (preventa)
 - **Impacto**: PDFs ahora indexables, páginas transaccionales protegidas
 
 #### 5. sitemap.xml mejorado
