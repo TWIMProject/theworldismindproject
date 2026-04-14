@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Anti-Test | Deja de Buscarte en Otros</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --green: #1f5a49;
+    --green-dark: #174a3c;
+    --beige: #c7a587;
+    --sand: #f7f4f0;
+    --cream: #fdfcfa;
+    --text: #2b2420;
+    --text-light: #6b5e56;
+    --accent: #c7a587;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+
+  .header .brand {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 24px;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .header h1 span {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--beige);
+    margin-top: 4px;
+  }
+
+  .header .subtitle {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    max-width: 480px;
+    margin: 16px auto 0;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: var(--beige);
+    margin: 32px auto;
+  }
+
+  /* ===== INTRO ===== */
+  .intro {
+    background: var(--sand);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 32px;
+    border-left: 3px solid var(--green);
+  }
+
+  .intro p {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  .intro p:last-child { margin-bottom: 0; }
+
+  .intro strong { color: var(--green-dark); }
+
+  /* ===== PROGRESS ===== */
+  .progress-wrap {
+    margin-bottom: 32px;
+  }
+
+  .progress-bar-bg {
+    width: 100%;
+    height: 4px;
+    background: #e8e0d8;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--green);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+    width: 0%;
+  }
+
+  .progress-text {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 8px;
+    text-align: right;
+  }
+
+  /* ===== QUESTION CARD ===== */
+  .question-card {
+    display: none;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .question-card.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .question-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    color: var(--beige);
+    margin-bottom: 8px;
+  }
+
+  .question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--green-dark);
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .option-btn {
+    background: white;
+    border: 2px solid #e8e0d8;
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.6;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s ease;
+  }
+
+  .option-btn:hover {
+    border-color: var(--green);
+    background: var(--sand);
+  }
+
+  .option-btn.selected {
+    border-color: var(--green);
+    background: var(--green);
+    color: white;
+  }
+
+  /* ===== RESULTS ===== */
+  .results-section {
+    display: none;
+    animation: fadeIn 0.6s ease;
+  }
+
+  .results-section.active { display: block; }
+
+  .results-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .results-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+  }
+
+  .results-header p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+
+  /* Radar / Bar chart */
+  .dimensions-chart {
+    background: white;
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+
+  .dimension-row {
+    margin-bottom: 20px;
+  }
+
+  .dimension-row:last-child { margin-bottom: 0; }
+
+  .dimension-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+
+  .dimension-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .dimension-value {
+    font-size: 0.78rem;
+    color: var(--text-light);
+  }
+
+  .dimension-bar-bg {
+    width: 100%;
+    height: 8px;
+    background: var(--sand);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .dimension-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1.2s ease;
+    width: 0%;
+  }
+
+  .dim-espejo .dimension-bar-fill { background: #1f5a49; }
+  .dim-ciclo .dimension-bar-fill { background: #2a7a63; }
+  .dim-mascara .dimension-bar-fill { background: #c7a587; }
+  .dim-piloto .dimension-bar-fill { background: #a07d5e; }
+  .dim-base .dimension-bar-fill { background: #174a3c; }
+
+  /* Dominant pattern */
+  .dominant-pattern {
+    background: var(--green-dark);
+    color: white;
+    border-radius: 12px;
+    padding: 32px 28px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .dominant-pattern .label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--beige);
+    margin-bottom: 12px;
+  }
+
+  .dominant-pattern h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .dominant-pattern p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* Insight blocks */
+  .insight-block {
+    background: var(--sand);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 16px;
+    border-left: 3px solid var(--beige);
+  }
+
+  .insight-block h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--green-dark);
+    margin-bottom: 8px;
+  }
+
+  .insight-block p {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* CTA */
+  .cta-section {
+    background: white;
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    padding: 32px 28px;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  .cta-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--green-dark);
+    margin-bottom: 12px;
+  }
+
+  .cta-section p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 14px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cta-btn:hover { background: var(--green-dark); }
+
+  .cta-secondary {
+    display: block;
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+
+  /* Share */
+  .share-section {
+    text-align: center;
+    padding: 20px 0 40px;
+  }
+
+  .share-section p {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+  }
+
+  .share-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .share-btn {
+    background: var(--sand);
+    border: 1px solid #e0d6cc;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .share-btn:hover {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid #e8e0d8;
+  }
+
+  .footer p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+  }
+
+  .footer a {
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .container { padding: 16px; }
+    .header h1 { font-size: 1.8rem; }
+    .header h1 span { font-size: 1.1rem; }
+    .question-text { font-size: 1.15rem; }
+    .dominant-pattern h3 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand">TWIM Project</div>
+    <h1>El Anti-Test <span>Esto no te dice si eres dependiente. Te muestra c&oacute;mo funciona.</span></h1>
+    <p class="subtitle">Los tests normales te ponen una etiqueta. Este te ense&ntilde;a un mecanismo. 10 situaciones reales. Sin respuestas correctas. Sin puntuaci&oacute;n buena o mala.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- INTRO -->
+  <div class="intro" id="intro-section">
+    <p>Esto no es un test al uso. No te voy a decir si "eres dependiente" o "no lo eres". Esa clasificaci&oacute;n no sirve para nada.</p>
+    <p>Lo que vas a ver son <strong>10 situaciones cotidianas</strong>. En cada una hay dos opciones. Ninguna es buena y ninguna es mala. Las dos revelan algo.</p>
+    <p>Al final no recibir&aacute;s un diagn&oacute;stico. Recibir&aacute;s un mapa. <strong>Tu mapa.</strong> Uno que te muestra qu&eacute; mecanismo domina en tu forma de relacionarte y por d&oacute;nde se filtra la necesidad de que alguien de fuera te confirme.</p>
+    <p style="margin-top:16px;">
+      <button class="cta-btn" onclick="startTest()">Empezar</button>
+    </p>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-wrap" id="progress-section" style="display:none;">
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progress-fill"></div>
+    </div>
+    <div class="progress-text" id="progress-text">1 de 10</div>
+  </div>
+
+  <!-- QUESTIONS -->
+  <div id="questions-container"></div>
+
+  <!-- RESULTS -->
+  <div class="results-section" id="results-section">
+    <div class="results-header">
+      <h2>Tu mapa</h2>
+      <p>Esto no es un veredicto. Es una fotograf&iacute;a de c&oacute;mo opera tu dependencia ahora mismo.</p>
+    </div>
+
+    <div class="dimensions-chart">
+      <div class="dimension-row dim-espejo">
+        <div class="dimension-label">
+          <span class="dimension-name">Necesidad de espejo</span>
+          <span class="dimension-value" id="val-espejo">0%</span>
+        </div>
+        <div class="dimension-bar-bg"><div class="dimension-bar-fill" id="bar-espejo"></div></div>
+      </div>
+      <div class="dimension-row dim-ciclo">
+        <div class="dimension-label">
+          <span class="dimension-name">Ciclo de validaci&oacute;n</span>
+          <span class="dimension-value" id="val-ciclo">0%</span>
+        </div>
+        <div class="dimension-bar-bg"><div class="dimension-bar-fill" id="bar-ciclo"></div></div>
+      </div>
+      <div class="dimension-row dim-mascara">
+        <div class="dimension-label">
+          <span class="dimension-name">M&aacute;scara activa</span>
+          <span class="dimension-value" id="val-mascara">0%</span>
+        </div>
+        <div class="dimension-bar-bg"><div class="dimension-bar-fill" id="bar-mascara"></div></div>
+      </div>
+      <div class="dimension-row dim-piloto">
+        <div class="dimension-label">
+          <span class="dimension-name">Piloto autom&aacute;tico</span>
+          <span class="dimension-value" id="val-piloto">0%</span>
+        </div>
+        <div class="dimension-bar-bg"><div class="dimension-bar-fill" id="bar-piloto"></div></div>
+      </div>
+      <div class="dimension-row dim-base">
+        <div class="dimension-label">
+          <span class="dimension-name">Base vac&iacute;a</span>
+          <span class="dimension-value" id="val-base">0%</span>
+        </div>
+        <div class="dimension-bar-bg"><div class="dimension-bar-fill" id="bar-base"></div></div>
+      </div>
+    </div>
+
+    <div class="dominant-pattern" id="dominant-pattern">
+      <!-- filled by JS -->
+    </div>
+
+    <div id="insights-container">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="cta-section">
+      <h3>Ahora que ves el mecanismo, puedes dejar de obedecerlo</h3>
+      <p>"Deja de Buscarte en Otros" es un programa de 5 m&oacute;dulos que trabaja exactamente las 5 dimensiones que acabas de ver. No motivaci&oacute;n. No frases bonitas. Estructura psicoanal&iacute;tica aplicada a tu d&iacute;a a d&iacute;a.</p>
+      <a href="#" class="cta-btn" id="cta-link">Quiero ver el programa</a>
+      <span class="cta-secondary">V&iacute;deo (2h) + Cuaderno de trabajo + 3 audios guiados + Protocolo 21 d&iacute;as</span>
+    </div>
+
+    <div class="share-section">
+      <p>Comparte tu mapa (sin revelar resultados)</p>
+      <div class="share-buttons">
+        <button class="share-btn" onclick="shareWhatsApp()">WhatsApp</button>
+        <button class="share-btn" onclick="shareTwitter()">Twitter / X</button>
+        <button class="share-btn" onclick="copyLink()">Copiar enlace</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Daniel Orozco &mdash; Psic&oacute;logo Col. CV-12663 &mdash; <a href="https://twimproject.com" target="_blank">TWIM Project</a></p>
+  </div>
+
+</div>
+
+<script>
+// ===== QUESTIONS DATA =====
+const questions = [
+  {
+    text: "Tu pareja llega a casa despu\u00e9s de un d\u00eda largo. Apenas habla. No te mira. No te pregunta c\u00f3mo est\u00e1s.",
+    options: [
+      {
+        text: "Empiezas a repasar mentalmente qu\u00e9 has podido hacer mal. Revis\u00e1s conversaciones, gestos, detalles del d\u00eda buscando el error.",
+        scores: { espejo: 2, base: 1 }
+      },
+      {
+        text: "Intentas animarle. Preguntas varias veces si est\u00e1 bien. Preparas algo, propones algo, haces algo. Lo que sea para que cambie la energ\u00eda.",
+        scores: { ciclo: 2, piloto: 1 }
+      }
+    ]
+  },
+  {
+    text: "Una amiga te cancela un plan en el \u00faltimo momento. Dice que est\u00e1 cansada. No da m\u00e1s detalles.",
+    options: [
+      {
+        text: "Le dices que no pasa nada, aunque por dentro sientes que es algo personal. Te quedas rumiando si realmente quer\u00eda verte o solo qued\u00f3 contigo por compromiso.",
+        scores: { espejo: 2, ciclo: 1 }
+      },
+      {
+        text: "Le escribes un mensaje largo dici\u00e9ndole que la entiendes, que descanse, que ella es lo primero. Necesitas asegurarte de que no se enfade contigo por sentirte mal.",
+        scores: { mascara: 2, espejo: 1 }
+      }
+    ]
+  },
+  {
+    text: "En una reuni\u00f3n de trabajo, tu jefe elogia el trabajo de un compa\u00f1ero. A ti no te menciona.",
+    options: [
+      {
+        text: "Pasas el resto del d\u00eda con una sensaci\u00f3n de encogimiento. No est\u00e1s enfadada exactamente. Es m\u00e1s como si algo dentro se hubiera desinflado.",
+        scores: { base: 2, espejo: 1 }
+      },
+      {
+        text: "Empiezas a trabajar m\u00e1s. Env\u00edas m\u00e1s emails, te quedas m\u00e1s horas. Sin que nadie te lo pida. Necesitas que la pr\u00f3xima vez s\u00ed se note.",
+        scores: { piloto: 2, ciclo: 1 }
+      }
+    ]
+  },
+  {
+    text: "Llevas una semana sin saber nada de alguien que te importa. No ha escrito. No ha llamado.",
+    options: [
+      {
+        text: "Escribes t\u00fa. Pero antes de darle a enviar, borras el mensaje tres veces. Redactas algo que suene natural, que no parezca que lo necesitas.",
+        scores: { mascara: 2, piloto: 1 }
+      },
+      {
+        text: "No escribes. Pero esa persona ocupa espacio en tu cabeza a todas horas. La espera se convierte en el centro de tu semana.",
+        scores: { espejo: 2, base: 1 }
+      }
+    ]
+  },
+  {
+    text: "Alguien cercano te dice algo que te duele. No con mala intenci\u00f3n, pero te duele.",
+    options: [
+      {
+        text: "No dices nada. Sonr\u00edes. Cambias de tema. Por dentro, la frase se repite en bucle durante d\u00edas.",
+        scores: { mascara: 2, piloto: 1 }
+      },
+      {
+        text: "Reaccionas en el momento. Despu\u00e9s te sientes culpable por haber reaccionado y piensas en disculparte aunque no hiciste nada malo.",
+        scores: { ciclo: 2, base: 1 }
+      }
+    ]
+  },
+  {
+    text: "Est\u00e1s sola en casa un s\u00e1bado por la noche. No tienes planes. Nadie te ha escrito.",
+    options: [
+      {
+        text: "Coges el m\u00f3vil. Miras Instagram, WhatsApp, Instagram otra vez. No buscas nada concreto. Buscas la sensaci\u00f3n de que alguien est\u00e1 ah\u00ed.",
+        scores: { espejo: 2, ciclo: 1 }
+      },
+      {
+        text: "Te mantienes ocupada. Ordenas, limpias, cocinas, pones una serie. Cualquier cosa para no quedarte a solas con la sensaci\u00f3n de vac\u00edo.",
+        scores: { piloto: 2, base: 1 }
+      }
+    ]
+  },
+  {
+    text: "Una persona que acabas de conocer te trata especialmente bien. Te escucha, te entiende, te hace sentir importante.",
+    options: [
+      {
+        text: "Sientes una conexi\u00f3n instant\u00e1nea. Ya est\u00e1s pensando en c\u00f3mo ser\u00eda tener a esa persona en tu vida. Te ilusionas r\u00e1pido.",
+        scores: { mascara: 2, base: 1 }
+      },
+      {
+        text: "Desconf\u00edas. Piensas que es imposible que alguien te trate as\u00ed sin que haya algo detr\u00e1s. O que en alg\u00fan momento dejar\u00e1 de hacerlo.",
+        scores: { base: 2, ciclo: 1 }
+      }
+    ]
+  },
+  {
+    text: "Has tenido un buen d\u00eda. Has hecho cosas, has resuelto problemas, te has sentido capaz. Pero nadie lo ha visto.",
+    options: [
+      {
+        text: "El buen d\u00eda se va desinflando poco a poco. Al llegar la noche, ya no se siente tan bueno. Como si lo que hiciste necesitara un testigo para contar.",
+        scores: { base: 2, espejo: 1 }
+      },
+      {
+        text: "Le cuentas a alguien lo que has hecho. No exactamente para presumir. M\u00e1s como para confirmar que de verdad fue un buen d\u00eda.",
+        scores: { ciclo: 2, mascara: 1 }
+      }
+    ]
+  },
+  {
+    text: "Tu pareja (o alguien cercano) te pide espacio. Dice que necesita estar solo/a un tiempo.",
+    options: [
+      {
+        text: "Dices que lo entiendes. Pero por dentro sientes p\u00e1nico. Empiezas a calcular qu\u00e9 puedes hacer para que vuelva cuanto antes, sin que parezca que est\u00e1s desesperada.",
+        scores: { piloto: 2, mascara: 1 }
+      },
+      {
+        text: "Sientes que algo se rompe dentro. No es enfado. Es la sensaci\u00f3n de que sin esa persona, t\u00fa te desdibuj\u00e1s. Como si tu forma dependiera de su presencia.",
+        scores: { base: 2, espejo: 1 }
+      }
+    ]
+  },
+  {
+    text: "Miras atr\u00e1s y ves que en tus relaciones siempre has sido la que m\u00e1s da, la que m\u00e1s se adapta, la que m\u00e1s cede.",
+    options: [
+      {
+        text: "Piensas que es porque eres as\u00ed. Generosa. Entregada. Que es tu forma de querer y que simplemente no has encontrado a quien lo valore.",
+        scores: { mascara: 2, base: 1 }
+      },
+      {
+        text: "Sabes que no est\u00e1 bien. Lo ves. Pero cuando est\u00e1s dentro de la relaci\u00f3n, no puedes evitarlo. Es como si el patr\u00f3n fuera m\u00e1s fuerte que t\u00fa.",
+        scores: { ciclo: 2, piloto: 1 }
+      }
+    ]
+  }
+];
+
+// ===== DIMENSION DATA =====
+const dimensions = {
+  espejo: {
+    name: "Necesidad de espejo",
+    title: "La Necesidad de Espejo",
+    description: "Tu regulaci\u00f3n emocional depende en gran medida de que alguien de fuera te devuelva una imagen. Cuando recibes esa confirmaci\u00f3n, algo se afloja. Cuando no la recibes, algo se desploma. No es un capricho. Es un d\u00e9ficit estructural que viene de lejos. Se instal\u00f3 en el v\u00ednculo temprano y sigue operando en silencio.",
+    insight: "El M\u00f3dulo 1 del programa (El Mapa) trabaja exactamente esto. De d\u00f3nde viene, c\u00f3mo funciona el juez interno que lo mantiene activo, y por qu\u00e9 no es culpa tuya pero s\u00ed es tu responsabilidad entenderlo."
+  },
+  ciclo: {
+    name: "Ciclo de validaci\u00f3n",
+    title: "El Ciclo de Validaci\u00f3n",
+    description: "Tu patr\u00f3n dominante es el circuito completo. Disparador \u2192 duda sobre tu valor \u2192 b\u00fasqueda de confirmaci\u00f3n \u2192 alivio temporal \u2192 vac\u00edo \u2192 repetici\u00f3n. La validaci\u00f3n externa te calma, pero no te cura. Y cada vez necesitas m\u00e1s dosis para sentir el mismo efecto.",
+    insight: "El M\u00f3dulo 2 (El Ciclo) descompone este mecanismo pieza a pieza. Cuando ves c\u00f3mo funciona el circuito, dejas de confundirlo con tu personalidad."
+  },
+  mascara: {
+    name: "M\u00e1scara activa",
+    title: "La M\u00e1scara",
+    description: "Tu dependencia se ha disfrazado de virtud. De generosidad, de sensibilidad, de entrega, de empat\u00eda. Lo complicado es que esas cosas pueden ser parcialmente ciertas. Puedes ser emp\u00e1tica y dependiente a la vez. La m\u00e1scara no anula lo que eres. Lo usa para que no veas lo que hay debajo.",
+    insight: "El M\u00f3dulo 3 (La Trampa) trabaja las cinco m\u00e1scaras de la dependencia y desmonta por qu\u00e9 las f\u00f3rmulas tipo \u201cqui\u00e9rete m\u00e1s\u201d no funcionan para este problema."
+  },
+  piloto: {
+    name: "Piloto autom\u00e1tico",
+    title: "El Piloto Autom\u00e1tico",
+    description: "Act\u00faas antes de pensar. Reaccionas antes de elegir. Cuando el disparador se activa, tu cuerpo ya est\u00e1 respondiendo antes de que tu mente tenga tiempo de intervenir. No es falta de voluntad. Es un automatismo que lleva a\u00f1os instal\u00e1ndose.",
+    insight: "El M\u00f3dulo 4 (El Corte) te da cuatro t\u00e9cnicas concretas para interrumpir el automatismo. La pausa de 90 segundos, el etiquetado del juez, el espejo propio y un plan de emergencia para cuando la urgencia es demasiado fuerte."
+  },
+  base: {
+    name: "Base vac\u00eda",
+    title: "La Base Vac\u00eda",
+    description: "En el lugar donde deber\u00eda haber una base s\u00f3lida de valor propio, hay un espacio vac\u00edo que necesita llenarse desde fuera. No es que no te valores. Es que el mecanismo que construye la autoestima se qued\u00f3 a medias. Y eso no se arregla con afirmaciones positivas.",
+    insight: "El M\u00f3dulo 5 (La Base) reconstruye la autoestima desde donde realmente se construye. No con frases bonitas. Con un protocolo de 21 d\u00edas basado en experiencia, no en motivaci\u00f3n."
+  }
+};
+
+// ===== STATE =====
+let currentQuestion = 0;
+let scores = { espejo: 0, ciclo: 0, mascara: 0, piloto: 0, base: 0 };
+let answered = new Array(questions.length).fill(-1);
+
+// ===== FUNCTIONS =====
+function startTest() {
+  document.getElementById('intro-section').style.display = 'none';
+  document.getElementById('progress-section').style.display = 'block';
+  renderQuestion(0);
+}
+
+function renderQuestion(index) {
+  const container = document.getElementById('questions-container');
+  const q = questions[index];
+
+  container.innerHTML = `
+    <div class="question-card active">
+      <div class="question-number">Situaci\u00f3n ${index + 1} de ${questions.length}</div>
+      <div class="question-text">${q.text}</div>
+      <div class="options">
+        ${q.options.map((opt, i) => `
+          <button class="option-btn" onclick="selectOption(${index}, ${i})">
+            ${opt.text}
+          </button>
+        `).join('')}
+      </div>
+    </div>
+  `;
+
+  updateProgress(index);
+}
+
+function selectOption(qIndex, optIndex) {
+  const q = questions[qIndex];
+  const selected = q.options[optIndex];
+
+  // Remove previous scores if re-answering
+  if (answered[qIndex] >= 0) {
+    const prev = q.options[answered[qIndex]];
+    for (const [dim, val] of Object.entries(prev.scores)) {
+      scores[dim] -= val;
+    }
+  }
+
+  // Add new scores
+  for (const [dim, val] of Object.entries(selected.scores)) {
+    scores[dim] += val;
+  }
+  answered[qIndex] = optIndex;
+
+  // Visual feedback
+  const buttons = document.querySelectorAll('.option-btn');
+  buttons.forEach(b => b.classList.remove('selected'));
+  buttons[optIndex].classList.add('selected');
+
+  // Next question after delay
+  setTimeout(() => {
+    if (qIndex < questions.length - 1) {
+      currentQuestion = qIndex + 1;
+      renderQuestion(currentQuestion);
+    } else {
+      showResults();
+    }
+  }, 400);
+}
+
+function updateProgress(index) {
+  const pct = ((index + 1) / questions.length) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = `${index + 1} de ${questions.length}`;
+}
+
+function showResults() {
+  document.getElementById('progress-section').style.display = 'none';
+  document.getElementById('questions-container').innerHTML = '';
+  document.getElementById('results-section').classList.add('active');
+
+  // Calculate actual max achievable per dimension
+  // (pick the option that gives more for that dimension in each question)
+  const maxAchievable = { espejo: 0, ciclo: 0, mascara: 0, piloto: 0, base: 0 };
+  const minAchievable = { espejo: 0, ciclo: 0, mascara: 0, piloto: 0, base: 0 };
+  for (const dim in maxAchievable) {
+    questions.forEach(q => {
+      const a = q.options[0].scores[dim] || 0;
+      const b = q.options[1].scores[dim] || 0;
+      maxAchievable[dim] += Math.max(a, b);
+      minAchievable[dim] += Math.min(a, b);
+    });
+  }
+
+  // Normalize: map [min, max] range to [15%, 100%] so bars are always visible
+  // but low scores don't look artificially high
+  const pcts = {};
+  let maxDim = 'espejo';
+  let maxVal = 0;
+  for (const dim in scores) {
+    const range = maxAchievable[dim] - minAchievable[dim];
+    const normalized = range > 0
+      ? (scores[dim] - minAchievable[dim]) / range
+      : 0;
+    pcts[dim] = Math.round(15 + normalized * 85); // 15% floor, 100% ceiling
+    if (scores[dim] > maxVal) {
+      maxVal = scores[dim];
+      maxDim = dim;
+    }
+  }
+
+  // Animate bars
+  setTimeout(() => {
+    for (const dim in pcts) {
+      document.getElementById(`bar-${dim}`).style.width = pcts[dim] + '%';
+      document.getElementById(`val-${dim}`).textContent = pcts[dim] + '%';
+    }
+  }, 200);
+
+  // Dominant pattern
+  const dominant = dimensions[maxDim];
+  document.getElementById('dominant-pattern').innerHTML = `
+    <div class="label">Tu patr\u00f3n dominante</div>
+    <h3>${dominant.title}</h3>
+    <p>${dominant.description}</p>
+  `;
+
+  // Top 3 insights
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  const insightsHTML = sorted.slice(0, 3).map(([dim]) => {
+    const d = dimensions[dim];
+    return `
+      <div class="insight-block">
+        <h4>${d.name}</h4>
+        <p>${d.insight}</p>
+      </div>
+    `;
+  }).join('');
+  document.getElementById('insights-container').innerHTML = insightsHTML;
+
+  // Scroll to top of results
+  document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ===== SHARE FUNCTIONS =====
+function shareWhatsApp() {
+  const text = 'Acabo de hacer el Anti-Test de dependencia emocional. No te dice si eres dependiente. Te muestra c\u00f3mo funciona. Prueba el tuyo:';
+  const url = window.location.href;
+  window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
+}
+
+function shareTwitter() {
+  const text = 'Acabo de hacer el Anti-Test de dependencia emocional. No diagnostica. Muestra el mecanismo.';
+  const url = window.location.href;
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = event.target;
+    btn.textContent = 'Copiado';
+    setTimeout(() => { btn.textContent = 'Copiar enlace'; }, 2000);
+  });
+}
+</script>
+
+</body>
+</html>
