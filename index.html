@@ -748,16 +748,6 @@
     .libro-info details { margin-top: .8rem; }
     .libro-info summary { cursor: pointer; font-size: .88rem; color: var(--green); font-weight: 400; }
 
-    /* ── GUÍA ── */
-    .guia-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; }
-    .guia-grid img { width: 100%; max-width: 380px; height: auto; border-radius: 10px; box-shadow: 0 10px 32px rgba(0,0,0,.15); object-fit: contain; }
-    .guia-text h2 { color: var(--white); margin-bottom: .8rem; }
-    .guia-text p { opacity: .9; margin-bottom: 1rem; }
-    .guia-text ul { list-style: none; margin-bottom: 1.8rem; }
-    .guia-text li { padding: .25rem 0 .25rem 1.4rem; position: relative; font-size: .93rem; opacity: .85; }
-    .guia-text li::before { content: '✓'; position: absolute; left: 0; color: var(--beige-light); font-weight: 600; }
-    .guia-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-
     /* ── CONTACTO ── */
     .contacto-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; }
     .contacto-form { background: var(--white); padding: 2.5rem; border-radius: 10px; border: 1px solid var(--border); }
@@ -829,12 +819,11 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .about-grid, .prog-grid, .libros-grid, .contacto-grid, .guia-grid, .workshops-spotlight__layout, .workshops-spotlight__mini-grid { grid-template-columns: 1fr; }
+      .about-grid, .prog-grid, .libros-grid, .contacto-grid, .workshops-spotlight__layout, .workshops-spotlight__mini-grid { grid-template-columns: 1fr; }
       .esp-grid, .conf-grid { grid-template-columns: 1fr; }
       .about-img { order: -1; }
       .libro-card { flex-direction: column; align-items: center; text-align: center; }
       .libro-card img { width: 160px; }
-      .guia-grid img { margin: 0 auto; }
       .conf-img img { max-height: 50vh; width: auto; max-width: 100%; object-fit: contain; }
     }
     @media (max-width: 600px) {
@@ -885,12 +874,11 @@
       .hero__text { font-size: clamp(1.9rem, 8vw, 2.5rem); }
       .hero__subtitle { font-size: 1rem; }
       .hero__cta { flex-direction: column; align-items: stretch; }
-      .hero__cta .btn, .guia-buttons .btn { width: 100%; }
+      .hero__cta .btn { width: 100%; }
       .workshops-spotlight { padding: 4.2rem 0 3.8rem; }
       section { padding: 3.5rem 0; }
       .contacto-form, .prog-card, .workshops-download, .esp-card, .conf-card, .workshops-spotlight__card { padding: 1.35rem; }
       .container { width: min(100% - 1.5rem, 1200px); }
-      .guia-buttons { flex-direction: column; }
       .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
       .footer-legal,
       .footer-meta,
@@ -1301,36 +1289,6 @@
               </picture>
             </div>
           </details>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── GUÍA ANTI-BURNOUT ── -->
-
-<section id="guia-antiburnout" class="bg-green">
-  <div class="container">
-    <div class="guia-grid">
-      <div>
-        <picture>
-          <source srcset="guia-sesion.webp" type="image/webp">
-          <img src="guia-sesion.jpg" alt="Guía Práctica Anti-Burnout y sesión con Daniel Orozco Abia" width="800" height="533" loading="lazy">
-        </picture>
-      </div>
-      <div class="guia-text">
-        <h2 class="section-title">Guía Práctica Anti-Burnout</h2>
-        <p>Descubre los pasos clave para reconectar con tu energía y mantener un rendimiento sostenible.</p>
-        <ul>
-          <li>Técnicas basadas en evidencia clínica para gestionar el estrés</li>
-          <li>Un mapa visual paso a paso del proceso anti-burnout</li>
-          <li>Plantillas y cuestionarios de autoevaluación</li>
-          <li>Consejos prácticos y ejercicios diarios fáciles de integrar</li>
-          <li>Casos reales y ejemplos que facilitan la implementación</li>
-        </ul>
-        <div class="guia-buttons">
-          <a href="https://buy.stripe.com/7sY9AT2GS0yF9oLdDG2sM03" class="btn btn-beige" target="_blank" rel="noopener noreferrer">Comprar Guía (5€)</a>
-          <a href="https://buy.stripe.com/7sY7sLa9k4OVdF19nq2sM04" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">Guía + Sesión Online 60 min (99€)</a>
         </div>
       </div>
     </div>
