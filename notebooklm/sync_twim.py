@@ -122,7 +122,6 @@ CONTENT_SOURCES = {
         "files": [
             "Grupo_Online_Info.pdf",
             "Programa_In-Company_Info.pdf",
-            "guia-practica-anti-burnout.pdf",
         ],
     },
 }
