@@ -368,16 +368,6 @@
     .podcast-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
     .podcast-note { font-size: .78rem; color: var(--text-muted); font-style: italic; }
 
-    /* ── GUÍA ── */
-    .guia-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; }
-    .guia-grid img { width: 100%; max-width: 380px; height: auto; border-radius: 10px; box-shadow: 0 10px 32px rgba(0,0,0,.15); object-fit: contain; }
-    .guia-text h2 { color: var(--white); margin-bottom: .8rem; }
-    .guia-text p { opacity: .9; margin-bottom: 1rem; }
-    .guia-text ul { list-style: none; margin-bottom: 1.8rem; }
-    .guia-text li { padding: .25rem 0 .25rem 1.4rem; position: relative; font-size: .93rem; opacity: .85; }
-    .guia-text li::before { content: '✓'; position: absolute; left: 0; color: var(--beige-light); font-weight: 600; }
-    .guia-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-
     /* ── CONTACTO ── */
     .contacto-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; }
     .contacto-form { background: var(--white); padding: 2.5rem; border-radius: 10px; border: 1px solid var(--border); }
@@ -468,13 +458,12 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      .about-grid, .prog-grid, .libros-grid, .contacto-grid, .guia-grid, .podcast-grid, .workshops-download { grid-template-columns: 1fr; }
+      .about-grid, .prog-grid, .libros-grid, .contacto-grid, .podcast-grid, .workshops-download { grid-template-columns: 1fr; }
       .podcast-visual { order: -1; margin-bottom: .5rem; }
       .esp-grid, .conf-grid { grid-template-columns: 1fr; }
       .about-img { order: -1; }
       .libro-card { flex-direction: column; align-items: center; text-align: center; }
       .libro-card img { width: 160px; }
-      .guia-grid img { margin: 0 auto; }
       .conf-img img { max-height: 50vh; width: auto; max-width: 100%; object-fit: contain; }
       .workshops-download__form { justify-content: flex-start; }
     }
@@ -522,7 +511,6 @@
       .announcement__item { display: flex; }
       .hero__content { padding: 1.8rem 1.3rem; margin: 0 .8rem; }
       section { padding: 3.5rem 0; }
-      .guia-buttons { flex-direction: column; }
       .conf-img img { max-height: 45vh; width: auto; max-width: 100%; object-fit: contain; }
       .footer-legal,
       .footer-meta { text-wrap: pretty; }
