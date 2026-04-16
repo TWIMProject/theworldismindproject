@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrusel Reto 7 Días — Descargar slides</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a1a; color: #fff; font-family: 'Inter', sans-serif; padding: 40px 20px; }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; text-align: center; margin-bottom: 10px; }
+  .instructions { text-align: center; color: #999; font-size: 14px; margin-bottom: 40px; }
+  .slide-wrapper { display: flex; flex-direction: column; align-items: center; margin-bottom: 60px; }
+  .slide-label { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; color: #C2A78B; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 2px; }
+  .download-btn {
+    margin-top: 14px; padding: 10px 28px; background: #C2A78B; color: #173D30;
+    border: none; border-radius: 8px; font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+  }
+  .download-btn:hover { background: #d4b89e; }
+
+  .slide {
+    width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* === DARK SLIDES (1, 7, 8) === */
+  .slide-dark {
+    background: linear-gradient(155deg, #173D30 0%, #1e4d3d 40%, #173D30 100%);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 100px 90px; text-align: center;
+  }
+  .slide-dark .main-text {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 72px; font-weight: 700;
+    color: #FDFCFA; line-height: 1.15; letter-spacing: 0.5px;
+  }
+  .slide-dark .sub-text {
+    font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 400;
+    color: rgba(253,252,250,0.65); line-height: 1.6; margin-top: 40px;
+  }
+  .slide-dark .logo {
+    position: absolute; top: 60px; left: 80px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 600;
+    color: rgba(253,252,250,0.35); text-transform: uppercase; letter-spacing: 3px;
+  }
+  .slide-dark .footer-mark {
+    position: absolute; bottom: 55px;
+    font-family: 'Inter', sans-serif; font-size: 18px; color: rgba(253,252,250,0.3);
+  }
+
+  /* === LIGHT SLIDES (2-6) === */
+  .slide-light {
+    background: #FDFCFA; display: flex; flex-direction: column;
+    justify-content: center; padding: 100px 90px;
+  }
+  .slide-light .number {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 120px; font-weight: 700;
+    color: #C2A78B; opacity: 0.35; line-height: 1; margin-bottom: 10px;
+  }
+  .slide-light .bar {
+    width: 70px; height: 6px; background: #C2A78B; border-radius: 3px; margin-bottom: 44px;
+  }
+  .slide-light .title {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 58px; font-weight: 700;
+    color: #173D30; line-height: 1.15; margin-bottom: 36px; letter-spacing: 0.3px;
+  }
+  .slide-light .body {
+    font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 400;
+    color: #2B2420; line-height: 1.7; max-width: 860px;
+  }
+  .slide-light .side-bar {
+    position: absolute; left: 0; top: 200px; width: 8px; height: 300px;
+    background: #C2A78B; border-radius: 0 4px 4px 0;
+  }
+  .slide-light .logo {
+    position: absolute; top: 60px; right: 80px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 600;
+    color: rgba(23,61,48,0.2); text-transform: uppercase; letter-spacing: 3px;
+  }
+  .slide-light .page-num {
+    position: absolute; bottom: 55px; right: 80px;
+    font-family: 'Inter', sans-serif; font-size: 20px; color: rgba(43,36,32,0.25);
+  }
+
+  /* === CTA SLIDE === */
+  .cta-badge {
+    display: inline-block; background: #C2A78B; color: #173D30;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 30px; font-weight: 700;
+    padding: 16px 44px; border-radius: 12px; margin-top: 50px;
+    text-transform: uppercase; letter-spacing: 2px;
+  }
+  .cta-url {
+    font-family: 'Inter', sans-serif; font-size: 24px; color: rgba(253,252,250,0.45);
+    margin-top: 24px;
+  }
+
+  /* Scale for preview */
+  @media (max-width: 1200px) {
+    .slide { transform: scale(0.45); transform-origin: top center; margin-bottom: -740px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Carrusel Reto 7 Días — 8 slides</h1>
+<p class="instructions">Haz click en "Descargar PNG" debajo de cada slide. Se descarga a 1080×1350px listo para Instagram.</p>
+
+<!-- ========== SLIDE 1 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 1 — Gancho</span>
+  <div class="slide slide-dark" id="slide1">
+    <div class="logo">TWIM Project</div>
+    <div class="main-text">5 señales de que buscas validación sin darte cuenta.</div>
+    <div class="sub-text">Ninguna es obvia. Todas son frecuentes.</div>
+    <div class="footer-mark">@daniorozcopsicologo</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide1', '01-gancho')">Descargar PNG</button>
+</div>
+
+<!-- ========== SLIDE 2 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 2 — Señal 1</span>
+  <div class="slide slide-light" id="slide2">
+    <div class="side-bar"></div>
+    <div class="logo">TWIM Project</div>
+    <div class="number">01</div>
+    <div class="bar"></div>
+    <div class="title">Relees el mensaje tres veces antes de enviarlo.</div>
+    <div class="body">No es perfeccionismo. Es que necesitas asegurarte de que lo que dices no va a molestar. Estás editando tu existencia para que encaje en la del otro.</div>
+    <div class="page-num">2 / 8</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide2', '02-señal-releer')">Descargar PNG</button>
+</div>
+
+<!-- ========== SLIDE 3 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 3 — Señal 2</span>
+  <div class="slide slide-light" id="slide3">
+    <div class="side-bar"></div>
+    <div class="logo">TWIM Project</div>
+    <div class="number">02</div>
+    <div class="bar"></div>
+    <div class="title">Preguntas «¿te parece bien?» cuando ya habías decidido.</div>
+    <div class="body">La decisión ya estaba tomada. La pregunta no busca opinión. Busca permiso. Y sin ese permiso, algo dentro de ti no se calma.</div>
+    <div class="page-num">3 / 8</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide3', '03-señal-permiso')">Descargar PNG</button>
+</div>
+
+<!-- ========== SLIDE 4 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 4 — Señal 3</span>
+  <div class="slide slide-light" id="slide4">
+    <div class="side-bar"></div>
+    <div class="logo">TWIM Project</div>
+    <div class="number">03</div>
+    <div class="bar"></div>
+    <div class="title">Si no te contesta rápido, tu cabeza ya está fabricando explicaciones.</div>
+    <div class="body">Ninguna de esas explicaciones es buena. Siempre empieza con «se ha enfadado» o «he hecho algo mal». El silencio del otro activa tu alarma más rápido que cualquier palabra.</div>
+    <div class="page-num">4 / 8</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide4', '04-señal-silencio')">Descargar PNG</button>
+</div>
+
+<!-- ========== SLIDE 5 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 5 — Señal 4</span>
+  <div class="slide slide-light" id="slide5">
+    <div class="side-bar"></div>
+    <div class="logo">TWIM Project</div>
+    <div class="number">04</div>
+    <div class="bar"></div>
+    <div class="title">Pides perdón por cosas que no tenías que pedir.</div>
+    <div class="body">La disculpa automática es un mecanismo de supervivencia: si la culpa es tuya, al menos la situación tiene explicación. Prefiero sentirme culpable que no saber qué ha pasado.</div>
+    <div class="page-num">5 / 8</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide5', '05-señal-perdon')">Descargar PNG</button>
+</div>
+
+<!-- ========== SLIDE 6 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 6 — Señal 5</span>
+  <div class="slide slide-light" id="slide6">
+    <div class="side-bar"></div>
+    <div class="logo">TWIM Project</div>
+    <div class="number">05</div>
+    <div class="bar"></div>
+    <div class="title">Das más de lo que te piden. Siempre.</div>
+    <div class="body">Te adelantas a sus necesidades. Le resuelves cosas que no te ha pedido. Por fuera parece generosidad. Por dentro es una forma de asegurar que no se va.</div>
+    <div class="page-num">6 / 8</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide6', '06-señal-dar')">Descargar PNG</button>
+</div>
+
+<!-- ========== SLIDE 7 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 7 — Reframe</span>
+  <div class="slide slide-dark" id="slide7">
+    <div class="logo">TWIM Project</div>
+    <div style="width:70px; height:6px; background:#C2A78B; border-radius:3px; margin-bottom:44px;"></div>
+    <div class="main-text" style="font-size:64px;">Esto no es un defecto de personalidad.</div>
+    <div class="sub-text" style="font-size:30px; max-width:800px;">Es un mecanismo que aprendiste para regular tu malestar. Tiene lógica. Tiene origen. Y tiene solución.<br><br>Pero primero hay que verlo.</div>
+    <div class="footer-mark">@daniorozcopsicologo</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide7', '07-reframe')">Descargar PNG</button>
+</div>
+
+<!-- ========== SLIDE 8 ========== -->
+<div class="slide-wrapper">
+  <span class="slide-label">Slide 8 — CTA</span>
+  <div class="slide slide-dark" id="slide8">
+    <div class="logo">TWIM Project</div>
+    <div class="main-text" style="font-size:60px;">Reto gratuito:<br>7 días para ver el mecanismo.</div>
+    <div class="sub-text" style="font-size:28px; max-width:750px;">Un email al día. 10 minutos de observación.<br>Sin compromiso. Sin positivismo tóxico.<br>Sin «tú puedes».</div>
+    <div class="cta-badge">Link en bio</div>
+    <div class="cta-url">twimproject.com/reto-7-dias</div>
+    <div class="footer-mark">Daniel Orozco · Psicólogo General Sanitario CV11515</div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide8', '08-cta')">Descargar PNG</button>
+</div>
+
+<script>
+function downloadSlide(id, filename) {
+  const el = document.getElementById(id);
+  const btn = el.parentElement.querySelector('.download-btn');
+  btn.textContent = 'Generando...';
+  btn.disabled = true;
+
+  html2canvas(el, {
+    width: 1080,
+    height: 1350,
+    scale: 1,
+    useCORS: true,
+    backgroundColor: null
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = 'carrusel-reto-' + filename + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+    btn.textContent = 'Descargar PNG';
+    btn.disabled = false;
+  }).catch(err => {
+    btn.textContent = 'Error - reintentar';
+    btn.disabled = false;
+    console.error(err);
+  });
+}
+</script>
+
+</body>
+</html>
