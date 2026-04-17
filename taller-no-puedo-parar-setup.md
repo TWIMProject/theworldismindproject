@@ -152,10 +152,10 @@ Y si no es el momento, sin problema. El contenido del blog sigue ahi.
 - [ ] Enlace puesto en bio de Instagram
 
 ### MANYCHAT
-- [ ] Instagram conectado a ManyChat
-- [ ] Automatizacion 1: keyword TALLER con mensaje + enlace de pago
-- [ ] Automatizacion 2: keyword INFO con mensaje sin enlace
-- [ ] Automatizacion 3: comment trigger preparada
+- [x] Instagram conectado a ManyChat (@daniorozcopsicologo)
+- [x] Automatizacion 1: keyword DM **RETO** con mensaje + enlace al reto gratuito (LIVE) — reutilizada para el Reto 7 Dias en lugar del taller
+- [ ] ~~Automatizacion 2: keyword INFO con mensaje sin enlace~~ (descartada: el reto es gratuito, no requiere conversacion previa)
+- [x] Automatizacion 3: comment trigger **QUIERO** preparada (LIVE, se activa con el proximo post/reel)
 - [ ] Probado desde otra cuenta
 
 ### GOOGLE
