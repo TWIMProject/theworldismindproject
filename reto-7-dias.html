@@ -698,29 +698,38 @@
         btn.textContent = 'Enviando...';
         errorDiv.style.display = 'none';
 
+        let res;
         try {
-            const res = await fetch('/.netlify/functions/subscribe', {
+            res = await fetch('/.netlify/functions/subscribe', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, name, whatsapp, group: 'reto-7-dias' }),
             });
-            const data = await res.json();
-
-            if (res.ok) {
-                form.style.display = 'none';
-                successDiv.style.display = 'block';
-            } else {
-                errorDiv.textContent = data.error || 'Ha ocurrido un error. Inténtalo de nuevo.';
-                errorDiv.style.display = 'block';
-                btn.disabled = false;
-                btn.textContent = 'Quiero empezar los 7 días →';
-            }
-        } catch {
-            errorDiv.textContent = 'Error de conexión. Inténtalo de nuevo.';
+        } catch (networkErr) {
+            console.error('[reto-7-dias] network error:', networkErr);
+            errorDiv.textContent = 'No hay conexión con el servidor. Revisa tu red e inténtalo de nuevo.';
             errorDiv.style.display = 'block';
             btn.disabled = false;
             btn.textContent = 'Quiero empezar los 7 días →';
+            return;
         }
+
+        const raw = await res.text();
+        let data = {};
+        try { data = raw ? JSON.parse(raw) : {}; } catch { data = { error: raw }; }
+
+        if (res.ok) {
+            form.style.display = 'none';
+            successDiv.style.display = 'block';
+            return;
+        }
+
+        console.error('[reto-7-dias] subscribe failed', { status: res.status, body: data });
+        const detail = data.error || data.detail || `HTTP ${res.status}`;
+        errorDiv.textContent = `No se pudo completar el alta (${detail}). Si persiste, escríbenos.`;
+        errorDiv.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Quiero empezar los 7 días →';
     });
 </script>
 </body>
