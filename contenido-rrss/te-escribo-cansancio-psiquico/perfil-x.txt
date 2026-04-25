@@ -2,28 +2,39 @@ CONFIGURACIÓN PERFIL X (Twitter)
 Daniel Orozco Abia · TWIM Project
 
 ═══════════════════════════════════
-HANDLE / @USUARIO  (recomendado)
+HANDLE / @USUARIO  (configurado)
 ═══════════════════════════════════
 
-@daniorozcopsicologo  ← coherencia con Instagram (mi voto)
-
-Alternativas si no está libre:
-  @danielorozco_
-  @orozco_psicologo
+@daniorozcopsico  ← 15 chars (límite máx X)
 
 
 ═══════════════════════════════════
-BIO  (160 caracteres máx en X)
+BIO  (160 caracteres máx · OPCIÓN A elegida)
 ═══════════════════════════════════
 
-OPCIÓN A — editorial, alineada con el newsletter (RECOMENDADA · 154 chars):
 Psicólogo psicoanalítico. Escribo sobre la mente, el cansancio y lo que no se dice. Autor de Los engranajes de la mente y Burnout: el libro para no petar.
 
-OPCIÓN B — directa, contraposicionando (152 chars):
-Psicoanálisis aplicado al día a día. Sin "tú puedes" ni atajos. Autor de Los engranajes de la mente · Burnout: el libro para no petar. CEO TWIM Project.
 
-OPCIÓN C — institucional/profesional (154 chars):
-Psicólogo General Sanitario · CV11515. Autor de Los engranajes de la mente y Burnout: el libro para no petar. CEO TWIM Project. Cartas en twimproject.com.
+═══════════════════════════════════
+DESCRIPCIÓN PROFESIONAL  (160 chars máx · solo para cuenta profesional)
+═══════════════════════════════════
+
+OPCIÓN A — servicios + libros (RECOMENDADA · 148 chars):
+Consulta psicoanalítica en Valencia. Conferencias y formaciones para empresas. Autor de Los engranajes de la mente y Burnout: el libro para no petar.
+
+OPCIÓN B — TWIM Project como paraguas (145 chars):
+CEO de TWIM Project. Consulta psicoanalítica en Valencia, conferencias para empresas y divulgación en salud mental. Colegiado CV11515.
+
+OPCIÓN C — formato lista (155 chars):
+Psicoanálisis clínico en Valencia · Conferencias para empresas · Autor de Los engranajes de la mente y Burnout · Cartas en twimproject.com
+
+
+═══════════════════════════════════
+CATEGORÍA PROFESIONAL
+═══════════════════════════════════
+
+Salud mental
+(Alternativas si no aparece: Profesional sanitario · Servicios profesionales)
 
 
 ═══════════════════════════════════
@@ -44,16 +55,8 @@ https://twimproject.com
 FECHA DE NACIMIENTO
 ═══════════════════════════════════
 
-7 marzo 1986
+8 marzo 1986
 (En ajustes → Privacidad: visibilidad "Solo yo" — no aporta a marca)
-
-
-═══════════════════════════════════
-CAMBIAR A PROFESIONAL
-═══════════════════════════════════
-
-SÍ. Sin coste. Desbloquea pestaña "Acerca de", métricas detalladas, etc.
-Categoría sugerida: Salud mental / Servicios profesionales.
 
 
 ═══════════════════════════════════
