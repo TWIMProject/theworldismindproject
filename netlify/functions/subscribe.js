@@ -7,6 +7,7 @@
 //   MAILERLITE_GROUP_PADRES_TDAH    → ID del grupo "Padres TDAH ESO"
 //   MAILERLITE_GROUP_PADRES_BACH    → ID del grupo "Padres Bachillerato"
 //   MAILERLITE_GROUP_PADRES_TALLERES→ ID del grupo "Padres Talleres Adolescentes"
+//   MAILERLITE_GROUP_NEWSLETTER_HOME→ ID del grupo "Web - Newsletter Home"
 //
 // Diagnóstico: GET /.netlify/functions/subscribe?diag=1 devuelve qué env vars están
 // configuradas (sin exponer valores) y la versión de Node del runtime.
@@ -25,6 +26,7 @@ const groupEnvMap = {
   "padres-talleres-tdah": "MAILERLITE_GROUP_PADRES_TDAH",
   "padres-talleres-bachillerato": "MAILERLITE_GROUP_PADRES_BACH",
   "padres-talleres-adolescentes": "MAILERLITE_GROUP_PADRES_TALLERES",
+  "newsletter-home": "MAILERLITE_GROUP_NEWSLETTER_HOME",
 };
 
 function buildHeaders(event) {
