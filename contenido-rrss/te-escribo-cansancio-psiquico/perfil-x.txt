@@ -9,24 +9,31 @@ HANDLE / @USUARIO  (configurado)
 
 
 ═══════════════════════════════════
-BIO  (160 caracteres máx · OPCIÓN A elegida)
+BIO  (160 caracteres máx)
 ═══════════════════════════════════
 
-Psicólogo psicoanalítico. Escribo sobre la mente, el cansancio y lo que no se dice. Autor de Los engranajes de la mente y Burnout: el libro para no petar.
+OPCIÓN A — umbrella amplio (RECOMENDADA · 137 chars):
+Psicólogo. Psicología profunda y aplicada. Escribo sobre la mente, el cansancio y lo que no se dice. Autor de Los engranajes y Burnout.
+
+OPCIÓN B — escuelas explícitas (147 chars):
+Psicólogo. Psicoanálisis, self, psicología profunda. Escribo sobre la mente, el cansancio y lo que no se dice. Autor de Los engranajes y Burnout.
+
+OPCIÓN C — clínico + editorial (152 chars):
+Psicólogo · Psicología profunda y aplicada. Escribo sobre la mente, el cansancio y lo que no se dice. Autor de Los engranajes de la mente y Burnout.
 
 
 ═══════════════════════════════════
 DESCRIPCIÓN PROFESIONAL  (160 chars máx · solo para cuenta profesional)
 ═══════════════════════════════════
 
-OPCIÓN A — servicios + libros (RECOMENDADA · 148 chars):
-Consulta psicoanalítica en Valencia. Conferencias y formaciones para empresas. Autor de Los engranajes de la mente y Burnout: el libro para no petar.
+OPCIÓN A — servicios + libros (RECOMENDADA · 137 chars):
+Consulta clínica en Valencia. Psicología profunda y aplicada. Conferencias y formaciones para empresas. Autor de Los engranajes y Burnout.
 
-OPCIÓN B — TWIM Project como paraguas (145 chars):
-CEO de TWIM Project. Consulta psicoanalítica en Valencia, conferencias para empresas y divulgación en salud mental. Colegiado CV11515.
+OPCIÓN B — TWIM Project como paraguas (152 chars):
+CEO de TWIM Project. Consulta de psicología profunda y aplicada en Valencia, conferencias para empresas y divulgación en salud mental. CV11515.
 
-OPCIÓN C — formato lista (155 chars):
-Psicoanálisis clínico en Valencia · Conferencias para empresas · Autor de Los engranajes de la mente y Burnout · Cartas en twimproject.com
+OPCIÓN C — formato lista (147 chars):
+Psicología profunda y aplicada en Valencia · Conferencias para empresas · Autor de Los engranajes y Burnout · Cartas en twimproject.com
 
 
 ═══════════════════════════════════
@@ -83,9 +90,9 @@ ESTRATEGIA DE CONTENIDO EN X
 
 X funciona distinto a IG/LinkedIn. Formatos que rinden:
 
-· Hilos de 5-8 tweets sobre conceptos psicoanalíticos
+· Hilos de 5-8 tweets desarrollando conceptos clínicos (psicoanálisis, self, profunda)
 · One-liners citables sacados de tus libros
-· Reacciones desde lo psicoanalítico a noticias/cultura
+· Reacciones a noticias/cultura desde la mirada clínica profunda
 · Quote-tweets de divulgadores aportando tu lectura
 
 Frecuencia mínima realista:
