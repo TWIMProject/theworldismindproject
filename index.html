@@ -1328,10 +1328,10 @@
         <button type="submit" class="btn btn-beige" id="newsletter-btn">Quiero recibirlas</button>
         <p class="newsletter-fine">Sin spam. Puedes darte de baja cuando quieras.</p>
       </form>
-      <div id="newsletter-success" class="newsletter-success" hidden>
+      <div id="newsletter-success" class="newsletter-success" style="display:none;">
         <p><strong>Ya casi.</strong> Revisa tu correo y confirma la suscripción.</p>
       </div>
-      <div id="newsletter-error" class="newsletter-error" hidden></div>
+      <div id="newsletter-error" class="newsletter-error" style="display:none;"></div>
     </div>
   </div>
 </section>
@@ -1542,13 +1542,13 @@
       const email = form.querySelector('input[name="email"]').value.trim();
       if (!email || !email.includes('@')) {
         errorDiv.textContent = 'Introduce un email válido.';
-        errorDiv.hidden = false;
+        errorDiv.style.display = 'block';
         return;
       }
       btn.disabled = true;
       const originalLabel = btn.textContent;
       btn.textContent = 'Enviando...';
-      errorDiv.hidden = true;
+      errorDiv.style.display = 'none';
       try {
         const res = await fetch('/.netlify/functions/subscribe', {
           method: 'POST',
@@ -1556,13 +1556,13 @@
           body: JSON.stringify({ email, group: 'newsletter-home' }),
         });
         if (!res.ok) throw new Error('Request failed');
-        form.hidden = true;
-        successDiv.hidden = false;
+        form.style.display = 'none';
+        successDiv.style.display = 'block';
       } catch {
         btn.disabled = false;
         btn.textContent = originalLabel;
         errorDiv.textContent = 'No se pudo completar. Inténtalo en un momento.';
-        errorDiv.hidden = false;
+        errorDiv.style.display = 'block';
       }
     });
   });
