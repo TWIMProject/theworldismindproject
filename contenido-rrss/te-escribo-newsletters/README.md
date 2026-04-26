@@ -7,9 +7,18 @@ landings de producto, briefings internos).
 ## Archivos
 
 - `carta-01-esto-es-lo-que-vas-a-recibir.txt` — manifesto de lanzamiento
-- `carta-02-el-cansancio-que-no-se-quita-durmiendo.txt` — primer contenido
-  editorial (sirve también para reforzar el carrusel "Tu cansancio no es
-  físico" lanzado en redes en paralelo)
+  (meta: por qué existe la newsletter, qué expectativas crear)
+- `carta-02-la-voz-que-te-juzga.txt` — primer contenido editorial sobre
+  el juez interno / superyó
+
+## Principio editorial: NO solapar con redes
+
+Las cartas dan contenido EXCLUSIVO. El suscriptor que paga con su email
+recibe algo que no encuentra gratis en IG, LinkedIn o X.
+
+- Carrusel/hilos (públicos) → tema: "cansancio psíquico, lo que se calla"
+- Cartas (privadas) → temas distintos. Carta #2 va de "el juez interno",
+  ángulo distinto pero del mismo universo conceptual de Daniel.
 
 ## Audiencia (mismo segmento para las dos)
 
