@@ -754,13 +754,13 @@
     .newsletter-wrap { max-width: 560px; margin: 0 auto; text-align: center; }
     .newsletter-sub { font-size: 1.02rem; margin-bottom: 2.2rem; color: rgba(255,255,255,.78); }
     .newsletter-form { display: flex; flex-direction: column; gap: .75rem; max-width: 420px; margin: 0 auto; }
-    .newsletter-form input[type="email"] {
+    .newsletter-form input[type="text"], .newsletter-form input[type="email"] {
       width: 100%; padding: .85rem 1rem; font-family: inherit; font-size: .95rem; font-weight: 300;
       color: var(--text); background: var(--cream); border: 1.5px solid transparent; border-radius: 6px;
       transition: border-color .2s;
     }
-    .newsletter-form input[type="email"]:focus { outline: none; border-color: var(--beige); }
-    .newsletter-form input[type="email"]::placeholder { color: var(--text-muted); }
+    .newsletter-form input[type="text"]:focus, .newsletter-form input[type="email"]:focus { outline: none; border-color: var(--beige); }
+    .newsletter-form input[type="text"]::placeholder, .newsletter-form input[type="email"]::placeholder { color: var(--text-muted); }
     .newsletter-form .btn { width: 100%; }
     .newsletter-fine { font-size: .78rem; color: rgba(255,255,255,.55); margin: .4rem 0 0; }
     .newsletter-success, .newsletter-error { max-width: 420px; margin: 1rem auto 0; text-align: center; }
@@ -982,7 +982,7 @@
         <h2 class="section-title">Hola, soy Daniel Orozco Abia</h2>
         <p><strong>Psicólogo General Sanitario, CV11515.</strong></p>
         <p>Más de una década en consulta privada en Valencia ayudando a <strong>adultos, adolescentes, deportistas profesionales y parejas</strong> a entenderse por dentro para vivir mejor por fuera.</p>
-        <p>Mi enfoque es psicoanalítico pero sin jerga. Trabajo con ansiedad, depresión, estrés, dependencia emocional, trastornos de personalidad, bipolaridad, duelos y todo lo que frena sin que sepas por qué. El objetivo siempre será ayudarte a ver lo que no ves; aquello que, sin que lo sepas, está detrás de tu malestar.</p>
+        <p>Mi enfoque es de psicología profunda y aplicada, pero sin jerga. Trabajo con ansiedad, depresión, estrés, dependencia emocional, trastornos de personalidad, bipolaridad, duelos y todo lo que frena sin que sepas por qué. El objetivo siempre será ayudarte a ver lo que no ves; aquello que, sin que lo sepas, está detrás de tu malestar.</p>
         <p>Autor de <em>Los Engranajes de la Mente</em> y <em>Burnout: El libro para no petar</em>.</p>
         <div class="about-social">
           <a href="https://instagram.com/daniorozcopsicologo" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> @daniorozcopsicologo</a>
@@ -1324,6 +1324,7 @@
       <h2 class="section-title">Te escribo</h2>
       <p class="newsletter-sub">Una carta cada tanto. Sobre la mente, el cansancio y lo que no se dice.</p>
       <form id="newsletter-form" class="newsletter-form" novalidate>
+        <input type="text" id="newsletter-name" name="name" placeholder="Tu nombre (opcional)" aria-label="Tu nombre (opcional)" autocomplete="given-name">
         <input type="email" id="newsletter-email" name="email" placeholder="Tu email" aria-label="Tu email" required autocomplete="email">
         <button type="submit" class="btn btn-beige" id="newsletter-btn">Quiero recibirlas</button>
         <p class="newsletter-fine">Sin spam. Puedes darte de baja cuando quieras.</p>
@@ -1407,7 +1408,7 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>¿Qué tipo de terapia ofreces?</summary>
-        <p>Trabajo desde la orientación psicoanalítica. No nos quedamos en el síntoma, buscamos juntos el origen real de lo que te pasa para que el cambio sea profundo y duradero. Sin jerga innecesaria.</p>
+        <p>Trabajo desde la psicología profunda y aplicada. No nos quedamos en el síntoma, buscamos juntos el origen real de lo que te pasa para que el cambio sea profundo y duradero. Sin jerga innecesaria.</p>
       </details>
       <details class="faq-item">
         <summary>¿Atiendes online o solo presencial?</summary>
@@ -1443,7 +1444,7 @@
       </details>
       <details class="faq-item">
         <summary>¿Tratas ansiedad y depresión?</summary>
-        <p>Sí. La ansiedad y la depresión son dos de los motivos de consulta más frecuentes. Trabajo desde un enfoque psicoanalítico que no se queda en el síntoma: buscamos juntos el origen del malestar para que el cambio sea profundo. Tanto en adultos como en adolescentes.</p>
+        <p>Sí. La ansiedad y la depresión son dos de los motivos de consulta más frecuentes. Trabajo desde un enfoque de psicología profunda y aplicada que no se queda en el síntoma: buscamos juntos el origen del malestar para que el cambio sea profundo. Tanto en adultos como en adolescentes.</p>
       </details>
       <details class="faq-item">
         <summary>¿Trabajas con dependencia emocional?</summary>
@@ -1540,6 +1541,7 @@
       e.preventDefault();
       const btn = document.getElementById('newsletter-btn');
       const email = form.querySelector('input[name="email"]').value.trim();
+      const name = form.querySelector('input[name="name"]').value.trim();
       if (!email || !email.includes('@')) {
         errorDiv.textContent = 'Introduce un email válido.';
         errorDiv.style.display = 'block';
@@ -1553,7 +1555,7 @@
         const res = await fetch('/.netlify/functions/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, group: 'newsletter-home' }),
+          body: JSON.stringify({ email, name, group: 'newsletter-home' }),
         });
         if (!res.ok) throw new Error('Request failed');
         form.style.display = 'none';
