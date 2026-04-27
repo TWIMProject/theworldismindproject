@@ -29,6 +29,15 @@ const groupEnvMap = {
   "newsletter-home": "MAILERLITE_GROUP_NEWSLETTER_HOME",
 };
 
+// Grupos que requieren doble opt-in (MailerLite envía el email de confirmación
+// solo cuando creas el suscriptor con status "unconfirmed"). El resto
+// (lead magnets, retos, talleres) se crean como "active" para que la
+// automatización entregue el recurso al instante.
+const DOUBLE_OPT_IN_GROUPS = new Set([
+  "newsletter-home",
+  "lista-general",
+]);
+
 function buildHeaders(event) {
   const origin = event.headers?.origin || event.headers?.Origin || "";
   const allowOrigin = ALLOWED_ORIGINS.has(origin) ? origin : "https://twimproject.com";
@@ -111,6 +120,8 @@ exports.handler = async (event) => {
       });
     }
 
+    const subscriberStatus = DOUBLE_OPT_IN_GROUPS.has(group) ? "unconfirmed" : "active";
+
     const mlPayload = {
       email,
       fields: {
@@ -119,7 +130,7 @@ exports.handler = async (event) => {
         phone: whatsapp || "",
       },
       groups: [groupId],
-      status: "active",
+      status: subscriberStatus,
     };
 
     let subscriberResponse;
