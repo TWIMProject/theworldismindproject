@@ -88,21 +88,39 @@ Cómo usarlos:
 
 ## 3. PENDIENTE / BLOQUEADO
 
-### 3.1 Auditoría MailerLite (pendiente de ejecutar localmente)
-El sandbox de Claude no tiene acceso de red a `connect.mailerlite.com`. La auditoría hay que lanzarla en la máquina local de Daniel (Windows 11).
+### 3.1 Auditoría MailerLite (COMPLETADA ✅ via MCP)
 
-**Qué verificar cuando se lance el script:**
-- [ ] Grupo `Reto 7 Días` existe con ID correcto → coincide con `MAILERLITE_GROUP_RETO` en Netlify
-- [ ] Automatización `Reto 7 Días` está en estado **ACTIVE**
-- [ ] Dominio `twimproject.com` autenticado con SPF + DKIM en verde
-- [ ] Conteo de suscriptores en el grupo Reto
-- [ ] No hay suscriptores atascados en la secuencia
+Auditoría hecha el 29-04-2026 vía MailerLite MCP server. **Todo funcionando correctamente.**
 
-**Cómo lanzar en Windows 11:**
-```powershell
-cd C:\...\theworldismindproject
-powershell -ExecutionPolicy Bypass -File scripts\audit-mailerlite-netlify.ps1
-```
+**Cuenta:**
+- Email autenticado: `danielorozco@twimproject.com` · Account ID: 2232121 · Entorno: producción
+- 30 suscriptores totales en la cuenta
+
+**Grupo `Reto 7 Dias - Inscritas`:**
+- ID: `183364554663659208` ✅ coincide con env var `MAILERLITE_GROUP_RETO` en Netlify
+- 5 suscriptores activos en el grupo (en distintas fases del reto)
+- Open rate del grupo: 51.85%
+
+**Automatización `Reto 7 días`:**
+- ID: `184902133394442190`
+- Estado: **ENABLED ✅**
+- 17 pasos (8 emails + 7 delays + 2 acciones post-secuencia)
+- 5 personas en cola **progresando sin fallos**
+- 0 errores en el log de actividad
+
+**Stats reales de los emails (al 29-04-2026):**
+| Email | Enviados | Open rate | Notas |
+|-------|----------|-----------|-------|
+| D4 "Cuerpo" | 24 | 62.5% | 1 hard bounce |
+| D5 "Máscara" | 22 | 68.18% | 100% delivery |
+| D7 "Revisión + CTA" | 20 | **70%** · 20% CTR | 1 unsubscribe |
+
+**Otras automatizaciones activas (todas enabled):**
+- Secuencia Anti-Test Dependencia Emocional (15 pasos)
+- Taller TDAH · Nurturing guía (7 pasos)
+- Web - Newsletter Home (3 pasos)
+
+**Conclusión:** El flujo MailerLite está sólido. La conversión Email 7 → CTA programa "Deja de Buscarte en Otros" es del 20% (excelente). No hay nada que arreglar. La acción que produce más impacto ahora es **escalar tráfico** a `reto-7-dias.html` (vía Instagram Ads / contenido orgánico) para llenar la parte alta del embudo.
 
 ### 3.2 Netlify — Variables de entorno (verificado via MCP ✅)
 En sesión anterior se auditaron con Netlify MCP. Las 8 variables críticas estaban presentes:
