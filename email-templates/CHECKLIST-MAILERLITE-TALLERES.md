@@ -108,10 +108,51 @@ Por cada uno de los 8 archivos HTML en `email-templates/talleres-*/`, crea un em
 El único activo de la antigua era el HTML diseñado, pero el contenido en sí estaba desalineado con el copy actual — Daniel tendría que reescribirlo entero igualmente. Coste de la decisión: 0 envíos perdidos (nunca disparó), Daniel pega el HTML una vez en lugar de dos.
 
 ⏳ **Lo que aún tienes que hacer en el dashboard de la nueva:**
-1. **Diseño visual**: cada email lleva contenido en plain text (la API no expone el editor HTML rich). Ve a cada paso de email → editor → "Source / HTML" → pega el HTML completo desde `email-templates/talleres-tdah/email-N-*.html`. ~5 min por email × 4 = 20 min.
+1. **Diseño visual**: cada email lleva contenido en plain text (la API no expone el editor HTML rich). Ve a cada paso de email → editor → "Source / HTML" → pega el HTML completo desde `email-templates/talleres-tdah/email-N-*.html`. ~5 min por email × 4 = 20 min. **NOTA:** el HTML de `email-4-reserva-plaza.html` ya tiene el botón "Reservar entrevista · 40 €" apuntando al Payment Link Stripe del deposit.
 2. **Pasos condicionales**: la API solo soporta `email` + `delay`, no `if-then-exit`. Tras cada delay, añade un bloque `Condition: subscriber is in group "Taller TDAH - Inscritas"` → SÍ exit / NO continuar. 3 condicionales en total.
 3. **Acciones finales**: tras el email 4 + 1 día de espera, añade `Acción: Copy subscriber to "Lista General TWIM"` y `Acción: Remove from "Padres Talleres TDAH"`.
 4. **Sender**: confirma que el remitente del email (from name + email) está configurado correctamente.
+5. **Email 4 (subject + plain text fallback)**: la versión actual menciona "Reservar plaza" pero la estrategia ahora es deposit 40 €. Cambia:
+   - **Asunto:** `Reserva tu entrevista por 40 € (te los devuelvo si vienes)`
+   - **Plain text fallback:** sustituye el bloque final del email por la versión deposit (ver §3.1 abajo).
+
+### 3.1 · Plain text actualizado para email 4 TDAH (deposit)
+
+```
+Hola {$name},
+
+Este es el último email de la secuencia. Te paso los detalles concretos del taller para que puedas decidir con información.
+
+TALLER TDAH ADOLESCENTES · MÁS ALLÁ DEL TDAH
+
+· Adolescentes de 3º y 4º de ESO con TDAH
+· 16 sesiones · Presencial en Valencia
+· Grupo cerrado de 6 · Inicio septiembre 2026
+· Inversión taller: 720 €
+· Dirigido por Daniel Orozco · CV11515
+
+Qué se trabaja: autoestima más allá del rendimiento académico, regulación emocional, identidad adolescente, habilidades de organización reales (no las genéricas), y construcción de un grupo de pares con experiencias similares.
+
+Qué no es: no es una clase de repaso. No es reeducación psicopedagógica. No sustituye a la medicación ni al psiquiatra. Es un trabajo de fondo sobre quién es tu hijo cuando deja de mirarse solo a través de las notas.
+
+CÓMO SE ENTRA AL TALLER
+
+1. Reservas la entrevista informativa de 1h30 con un depósito de 40 € (link abajo).
+2. Si te presentas, te devuelvo los 40 € íntegros — la entrevista es gratuita en concepto.
+3. Si tras la reunión vemos que el formato encaja, te paso el enlace para pagar el taller (720 €).
+4. Si no encaja, te lo digo claro y te devuelvo el depósito.
+
+El depósito es solo el filtro para que la reunión vaya en serio (sin él, llega gente que cancela el día antes y nunca arrancamos).
+
+RESERVAR ENTREVISTA · 40 €
+https://buy.stripe.com/9B6dR9bdo95bfN99nq2sM0a
+
+O responde a este email directamente si prefieres preguntar antes de pagar.
+
+Un abrazo,
+Daniel Orozco
+Psicólogo General Sanitario · CV11515
+```
 
 ### Configuración general (referencia histórica)
 - **Nombre interno:** `Secuencia Padres TDAH`
@@ -155,10 +196,13 @@ El único activo de la antigua era el HTML diseñado, pero el contenido en sí e
 - Estructura creada: 4 emails + 3 delays de 3 días con asunto y contenido en plain text
 
 ⏳ **Lo que aún tienes que hacer en el dashboard:**
-1. Pegar el HTML rico de `email-templates/talleres-bachillerato/email-N-*.html` en cada email (modo "Source / HTML")
+1. Pegar el HTML rico de `email-templates/talleres-bachillerato/email-N-*.html` en cada email (modo "Source / HTML"). **NOTA:** el HTML de `email-4-reserva-plaza.html` ya tiene el botón "Reservar entrevista · 40 €" apuntando al Payment Link Stripe del deposit Bach.
 2. Añadir los 3 condicionales `is in "Taller Bachillerato - Inscritas"` → SÍ exit / NO continuar
 3. Tras el email 4 + 1 día: `Copy to "Lista General TWIM"` + `Remove from "Padres Talleres Bachillerato"`
 4. Verificar sender
+5. **Email 4 (subject + plain text fallback)**:
+   - **Asunto:** `Reserva tu entrevista por 40 € (te los devuelvo si vienes)`
+   - **Plain text:** mismo bloque que TDAH §3.1 sustituyendo "TDAH adolescentes" → "Bachillerato", "3º y 4º de ESO con TDAH" → "1º y 2º de Bachillerato", y la URL final por `https://buy.stripe.com/28E7sLchsgxD58varu2sM0b`
 
 ---
 
