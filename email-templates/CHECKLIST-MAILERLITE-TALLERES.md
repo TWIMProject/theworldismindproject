@@ -1,0 +1,184 @@
+# Runbook activación MailerLite · Talleres adolescentes
+
+> **Para qué sirve este doc:** ejecutarlo de principio a fin deja la captación + secuencias de los talleres TDAH y Bachillerato funcionando sin intervención humana. Tiempo estimado: **45-60 min** la primera vez.
+>
+> Complementa al [SETUP-MAILERLITE-TALLERES.md](./SETUP-MAILERLITE-TALLERES.md) que ya tienes (ese describe el diseño de las secuencias; este es la guía operacional para activarlas).
+
+---
+
+## 0 · Estado actual (lo que YA está hecho desde código)
+
+✅ Forms de las landings (`/talleres/tdah-adolescentes/`, `/talleres/bachillerato-motivacion/`) registran al padre en MailerLite vía `subscribe.js` automáticamente.
+✅ Form de la home (sección talleres) suscribe al grupo genérico al descargar el PDF.
+✅ Env vars de Netlify ya tienen las 3 IDs de grupo configuradas:
+- `MAILERLITE_GROUP_PADRES_TDAH`
+- `MAILERLITE_GROUP_PADRES_BACH`
+- `MAILERLITE_GROUP_PADRES_TALLERES` (genérico de descarga PDF homepage)
+
+✅ Los 8 emails de las dos secuencias están escritos en HTML en:
+- `email-templates/talleres-tdah/` (4 emails)
+- `email-templates/talleres-bachillerato/` (4 emails)
+
+**Lo que NO se puede automatizar vía API y tienes que hacer tú en MailerLite:** crear los grupos extra, pegar los emails en plantillas, montar la automatización (workflow) que los envía con los retrasos correctos.
+
+---
+
+## 1 · Verificar grupos en MailerLite (5 min)
+
+Ve a **Suscriptores → Grupos**. Confirma que existen:
+
+| Grupo | Para qué | ID env var | ¿Existe? |
+|---|---|---|---|
+| **Padres Talleres TDAH** | Padres con interés en TDAH (form landing TDAH) | `MAILERLITE_GROUP_PADRES_TDAH` | ✅ |
+| **Padres Talleres Bachillerato** | Padres con interés en Bachillerato (form landing) | `MAILERLITE_GROUP_PADRES_BACH` | ✅ |
+| **Padres Talleres Adolescentes** | Form genérico de descarga PDF en homepage | `MAILERLITE_GROUP_PADRES_TALLERES` | ✅ |
+| **Taller TDAH - Inscritas** | Padres que YA han pagado plaza TDAH | — | ❓ Crear si no existe |
+| **Taller Bachillerato - Inscritas** | Padres que YA han pagado plaza Bachillerato | — | ❓ Crear si no existe |
+| **Lista General TWIM** | Lista paraguas para newsletter | `MAILERLITE_GROUP_GENERAL` | ✅ |
+
+**Acción:** crea los dos grupos *"Inscritas"* si no existen. Servirán para:
+1. Cortar la secuencia automáticamente cuando el padre ya ha pagado.
+2. Mover al padre a una lista de comunicación post-inscripción.
+
+---
+
+## 2 · Crear los 8 emails como plantilla (15 min)
+
+Por cada uno de los 8 archivos HTML en `email-templates/talleres-*/`, crea un email en MailerLite:
+
+### Workflow para cada email
+
+1. **Suscriptores → Plantillas** (Templates) → **Crear nueva**
+2. Elige tipo **HTML** (no drag-and-drop)
+3. Copia el contenido completo del archivo `.html` y pégalo
+4. Guarda con un nombre claro (ver tabla)
+5. Asunto y preheader según la tabla
+
+### Tabla TDAH (carpeta `email-templates/talleres-tdah/`)
+
+| Archivo | Nombre plantilla | Asunto | Preheader |
+|---|---|---|---|
+| `email-1-bienvenida-guia.html` | `Talleres TDAH · 1 Bienvenida` | Tu guía está dentro (y no es lo que esperas) | Tu guía ya está dentro. Antes de que la abras, te explico qué vas a encontrar. |
+| `email-2-caso-marcos.html` | `Talleres TDAH · 2 Caso Marcos` | Lo que hay debajo de "es que soy tonto" | Un caso clínico anonimizado que explica lo que tu hijo no te puede decir. |
+| `email-3-por-que-grupo.html` | `Talleres TDAH · 3 Por qué grupo` | Por qué tu hijo no va a escuchar esto de ti | Lo que un grupo cerrado de adolescentes con TDAH hace que la consulta individual no puede. |
+| `email-4-reserva-plaza.html` | `Talleres TDAH · 4 Reserva plaza` | Taller TDAH adolescentes · Sept 2026 · 6 plazas | Todos los detalles. 6 plazas. Si tu hijo encaja, hablamos. |
+
+### Tabla Bachillerato (carpeta `email-templates/talleres-bachillerato/`)
+
+| Archivo | Nombre plantilla | Asunto | Preheader |
+|---|---|---|---|
+| `email-1-bienvenida-guia.html` | `Talleres Bach · 1 Bienvenida` | Tu guía está dentro (y no es lo que esperas) | Tu guía ya está dentro. Antes de abrirla, te explico qué vas a encontrar y qué no. |
+| `email-2-no-es-apatia.html` | `Talleres Bach · 2 No es apatía` | No es apatía. Es miedo a elegir. | Lo que tu hijo no te puede explicar sobre por qué ya no le importa nada. |
+| `email-3-por-que-grupo.html` | `Talleres Bach · 3 Por qué grupo` | Por qué tu hijo no va a escuchar esto de ti | Por qué tu hijo va a aceptar de otro adolescente lo que no te acepta a ti. |
+| `email-4-reserva-plaza.html` | `Talleres Bach · 4 Reserva plaza` | Taller Bachillerato · Sept 2026 · 6 plazas | Todos los detalles. 6 plazas. Si tu hijo encaja, hablamos. |
+
+---
+
+## 3 · Crear automatización TDAH (10 min)
+
+**Automatizaciones → Crear nueva → Cuando un suscriptor se une a un grupo**
+
+### Configuración general
+- **Nombre interno:** `Secuencia Padres TDAH`
+- **Trigger:** `Cuando el suscriptor se une al grupo: Padres Talleres TDAH`
+
+### Bloques del workflow (en orden)
+
+```
+1. [Email]   Talleres TDAH · 1 Bienvenida           → enviar inmediatamente
+2. [Espera]  3 días
+3. [Condición] ¿Está en grupo "Taller TDAH - Inscritas"?
+   ├─ SÍ → [Salir del flujo]
+   └─ NO → continuar
+4. [Email]   Talleres TDAH · 2 Caso Marcos
+5. [Espera]  3 días
+6. [Condición] ¿Está en grupo "Taller TDAH - Inscritas"?
+   ├─ SÍ → [Salir del flujo]
+   └─ NO → continuar
+7. [Email]   Talleres TDAH · 3 Por qué grupo
+8. [Espera]  3 días
+9. [Condición] ¿Está en grupo "Taller TDAH - Inscritas"?
+   ├─ SÍ → [Salir del flujo]
+   └─ NO → continuar
+10. [Email]  Talleres TDAH · 4 Reserva plaza
+11. [Espera] 1 día
+12. [Acción] Copiar suscriptor al grupo "Lista General TWIM"
+13. [Acción] Eliminar suscriptor del grupo "Padres Talleres TDAH"
+14. [Fin]
+```
+
+**No actives todavía.** Antes haz el test del paso 5.
+
+---
+
+## 4 · Crear automatización Bachillerato (5 min)
+
+Idéntica a la TDAH pero apuntando al grupo `Padres Talleres Bachillerato` y a las plantillas Bach. Reemplaza:
+- Trigger group: `Padres Talleres Bachillerato`
+- Condition group: `Taller Bachillerato - Inscritas`
+- 4 plantillas Bach en lugar de TDAH
+
+(Si MailerLite te deja duplicar el workflow TDAH, hazlo y solo cambia los grupos y plantillas — más rápido.)
+
+---
+
+## 5 · Test antes de activar (10 min)
+
+Antes de poner esto frente a usuarios reales, comprueba que la cadena completa funciona.
+
+### Test TDAH
+1. Crea o pide a un colaborador un email **fresco** (que no esté en MailerLite).
+2. Ve a https://twimproject.com/talleres/tdah-adolescentes/ → rellena el form de la sección "Solicitar reunión informativa".
+3. Comprueba en MailerLite (filtro **Activo**): el email debe aparecer en el grupo `Padres Talleres TDAH`.
+4. **Email 1** debe llegar al instante. Abre y verifica:
+   - Texto correcto en español
+   - El botón funciona (lleva a `/talleres/tdah-adolescentes/#cta-final`)
+   - El logo y la firma se ven
+5. Para no esperar 3 días, en la automatización pulsa **Acelerar / Skip wait** (si tu plan lo permite) o crea un suscriptor de prueba con la fecha "hace 3 días" para forzar el siguiente paso.
+6. Verifica los 4 emails y la salida del flujo.
+
+### Test "salir del flujo"
+1. Mientras la prueba de TDAH está en mitad de secuencia, **manualmente añade** ese email al grupo `Taller TDAH - Inscritas`.
+2. Verifica que en el siguiente bloque de condición, el flujo lo saca y no recibe el email siguiente.
+
+### Test Bachillerato
+Mismo proceso en `/talleres/bachillerato-motivacion/`.
+
+---
+
+## 6 · Activar (1 min)
+
+Solo cuando todo esté testeado:
+
+- [ ] Activar workflow `Secuencia Padres TDAH`
+- [ ] Activar workflow `Secuencia Padres Bachillerato`
+
+---
+
+## 7 · Cuando alguien pague (proceso semi-manual por ahora)
+
+Hasta que el webhook de Stripe esté integrado:
+
+1. Padre te paga vía Stripe Payment Link.
+2. Tú lo añades manualmente al grupo `Taller TDAH - Inscritas` o `Taller Bachillerato - Inscritas` en MailerLite.
+3. Eso automáticamente lo saca de la secuencia activa (si aún la estaba recibiendo).
+4. (Opcional) Le mandas un email manual de bienvenida al taller con detalles logísticos.
+
+**Mejora futura:** webhook Stripe → endpoint Netlify Function → añadir al grupo de Inscritas en MailerLite. Lo monto cuando me digas que el funnel manual está validado con al menos 1-2 inscripciones reales.
+
+---
+
+## Notas técnicas
+
+- Los emails ya tienen variables `{$name}`, `{$unsubscribe}`, `{$url}` de MailerLite — no las cambies.
+- Sistema visual: hero verde degradado, Barlow Condensed, CTA beige, footer verde oscuro.
+- Casos clínicos (Marcos, Laura) son ficticios — indicado en PD de cada email.
+- Si un padre se suscribe por **dos vías** (descarga PDF en home + landing TDAH), entrará en dos grupos distintos y podría recibir secuencias paralelas. Si esto se vuelve problema, lo solucionamos con una condición global "no enviar si ya está en grupo X".
+- Si decides cambiar el ritmo (3 días entre emails es estándar), recuerda que MailerLite no admite "días laborables" — usa "horas" si quieres más finura (72 horas = 3 días).
+
+---
+
+**Cuando termines este checklist, dime "MailerLite activado"** y paso a montar:
+- Webhook Stripe → MailerLite (auto-mover a Inscritas al pagar)
+- Email de confirmación post-pago
+- Reporte semanal de leads/conversión
