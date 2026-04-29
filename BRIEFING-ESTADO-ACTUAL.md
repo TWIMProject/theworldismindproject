@@ -37,30 +37,38 @@ Checklist de diagnóstico ya redactado en `taller-no-puedo-parar-setup.md`.
 - Generado con Python/Pillow, fuente Barlow Condensed, paleta verde/beige de marca
 - Listo para subir a YouTube → Personalización → Arte del canal
 
-### 2.3 SEO — Landings de posicionamiento (EN CURSO ⚙️)
-Se están creando 7 páginas HTML nuevas para mejorar el posicionamiento en Google por términos de búsqueda relevantes. El planteamiento es que cada página capture tráfico de búsqueda orgánica con keyword específica y convierta a primera consulta.
+### 2.3 SEO — Landings de posicionamiento (COMPLETADO ✅)
+7 páginas HTML nuevas creadas para mejorar el posicionamiento en Google por términos de búsqueda relevantes. Cada página captura tráfico orgánico con keyword específica y convierte a primera consulta.
 
 | # | Archivo | Keyword principal | Estado |
 |---|---------|-------------------|--------|
-| 1 | `daniel-orozco-abia.html` | "Daniel Orozco Abia psicólogo" | **Creada ✅** |
-| 2 | `psicologo-ansiedad-valencia.html` | "psicólogo ansiedad Valencia" | En proceso ⚙️ |
-| 3 | `psicologo-dependencia-emocional-valencia.html` | "psicólogo dependencia emocional Valencia" | Pendiente |
-| 4 | `psicologo-burnout-valencia.html` | "psicólogo burnout Valencia" | Pendiente |
-| 5 | `psicologo-adolescentes-valencia.html` | "psicólogo adolescentes Valencia" | Pendiente |
-| 6 | `terapia-pareja-valencia.html` | "terapia pareja Valencia" | Pendiente |
-| 7 | `psicologo-online.html` | "psicólogo online" | Pendiente |
+| 1 | `daniel-orozco-abia.html` | "Daniel Orozco Abia psicólogo" | ✅ |
+| 2 | `psicologo-ansiedad-valencia.html` | "psicólogo ansiedad Valencia" | ✅ |
+| 3 | `psicologo-dependencia-emocional-valencia.html` | "psicólogo dependencia emocional Valencia" | ✅ |
+| 4 | `psicologo-burnout-valencia.html` | "psicólogo burnout Valencia" | ✅ |
+| 5 | `psicologo-adolescentes-valencia.html` | "psicólogo adolescentes Valencia" | ✅ |
+| 6 | `terapia-pareja-valencia.html` | "terapia pareja Valencia" | ✅ |
+| 7 | `psicologo-online.html` | "psicólogo online" en español (LATAM/EU/EE.UU.) | ✅ |
 
 Cada landing incluye:
-- Meta SEO (title, description, keywords, canonical, OG, Twitter)
-- Schema.org JSON-LD (MedicalBusiness / Service / BreadcrumbList / FAQPage)
-- Contenido clínico específico del tema en voz de Daniel
-- Enlace a artículos insights relacionados
+- Meta SEO completo (title, description, keywords, canonical, Open Graph, Twitter cards)
+- 4 schemas JSON-LD: `MedicalBusiness` + `Service` + `BreadcrumbList` + `FAQPage`
+- Contenido clínico específico del tema en voz editorial de Daniel
+- Cross-linking con artículos relacionados del blog y programas
 - CTA a primera consulta (email + WhatsApp)
+- GA4 tracking integrado
 
-Pendiente tras crear las landings:
-- Actualizar `sitemap.xml` con las 7 nuevas URLs
-- Añadir links desde `index.html` e insights relevantes hacia las landings
-- Commit + push a la rama activa
+**Trabajo adicional completado:**
+- ✅ `sitemap.xml` actualizado con 7 URLs nuevas (40 URLs totales)
+- ✅ Linking interno desde `index.html` (sección "Con quién trabajo" + bio de Daniel)
+- ✅ Linking interno desde `dejadeobligarte.html` y `dejadebuscarteenotros.html`
+- ✅ Auditoría automática pasada con **0 errores, 0 warnings** en las 7 landings
+- ✅ Commits y pushes a `claude/check-manychat-instagram-EQalY`
+
+**Próximos pasos manuales (cuando se desee):**
+- Hacer merge de la rama a `main` para que las landings se desplieguen en producción
+- Enviar el sitemap actualizado a Google Search Console
+- Solicitar indexación manual de las 7 nuevas URLs en GSC
 
 ### 2.4 Scripts de auditoría (LISTOS ✅)
 Creados en `scripts/`:
@@ -80,21 +88,39 @@ Cómo usarlos:
 
 ## 3. PENDIENTE / BLOQUEADO
 
-### 3.1 Auditoría MailerLite (pendiente de ejecutar localmente)
-El sandbox de Claude no tiene acceso de red a `connect.mailerlite.com`. La auditoría hay que lanzarla en la máquina local de Daniel (Windows 11).
+### 3.1 Auditoría MailerLite (COMPLETADA ✅ via MCP)
 
-**Qué verificar cuando se lance el script:**
-- [ ] Grupo `Reto 7 Días` existe con ID correcto → coincide con `MAILERLITE_GROUP_RETO` en Netlify
-- [ ] Automatización `Reto 7 Días` está en estado **ACTIVE**
-- [ ] Dominio `twimproject.com` autenticado con SPF + DKIM en verde
-- [ ] Conteo de suscriptores en el grupo Reto
-- [ ] No hay suscriptores atascados en la secuencia
+Auditoría hecha el 29-04-2026 vía MailerLite MCP server. **Todo funcionando correctamente.**
 
-**Cómo lanzar en Windows 11:**
-```powershell
-cd C:\...\theworldismindproject
-powershell -ExecutionPolicy Bypass -File scripts\audit-mailerlite-netlify.ps1
-```
+**Cuenta:**
+- Email autenticado: `danielorozco@twimproject.com` · Account ID: 2232121 · Entorno: producción
+- 30 suscriptores totales en la cuenta
+
+**Grupo `Reto 7 Dias - Inscritas`:**
+- ID: `183364554663659208` ✅ coincide con env var `MAILERLITE_GROUP_RETO` en Netlify
+- 5 suscriptores activos en el grupo (en distintas fases del reto)
+- Open rate del grupo: 51.85%
+
+**Automatización `Reto 7 días`:**
+- ID: `184902133394442190`
+- Estado: **ENABLED ✅**
+- 17 pasos (8 emails + 7 delays + 2 acciones post-secuencia)
+- 5 personas en cola **progresando sin fallos**
+- 0 errores en el log de actividad
+
+**Stats reales de los emails (al 29-04-2026):**
+| Email | Enviados | Open rate | Notas |
+|-------|----------|-----------|-------|
+| D4 "Cuerpo" | 24 | 62.5% | 1 hard bounce |
+| D5 "Máscara" | 22 | 68.18% | 100% delivery |
+| D7 "Revisión + CTA" | 20 | **70%** · 20% CTR | 1 unsubscribe |
+
+**Otras automatizaciones activas (todas enabled):**
+- Secuencia Anti-Test Dependencia Emocional (15 pasos)
+- Taller TDAH · Nurturing guía (7 pasos)
+- Web - Newsletter Home (3 pasos)
+
+**Conclusión:** El flujo MailerLite está sólido. La conversión Email 7 → CTA programa "Deja de Buscarte en Otros" es del 20% (excelente). No hay nada que arreglar. La acción que produce más impacto ahora es **escalar tráfico** a `reto-7-dias.html` (vía Instagram Ads / contenido orgánico) para llenar la parte alta del embudo.
 
 ### 3.2 Netlify — Variables de entorno (verificado via MCP ✅)
 En sesión anterior se auditaron con Netlify MCP. Las 8 variables críticas estaban presentes:
