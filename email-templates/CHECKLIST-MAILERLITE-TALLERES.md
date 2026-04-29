@@ -88,9 +88,21 @@ Por cada uno de los 8 archivos HTML en `email-templates/talleres-*/`, crea un em
 
 ## 3 · Crear automatización TDAH (10 min)
 
-**Automatizaciones → Crear nueva → Cuando un suscriptor se une a un grupo**
+✅ **YA CREADA vía API (29 abril 2026 · en draft, sin activar):**
+- ID: `186094472462862106`
+- URL dashboard: https://dashboard.mailerlite.com/automations/186094472462862106
+- Trigger: `subscriber_joins_group` → `Padres Talleres TDAH` (`184266598608012376`)
+- Estructura creada: 4 emails + 3 delays de 3 días con asunto y contenido en plain text
 
-### Configuración general
+⚠️ **Conflicto a resolver:** ya existe otra automation activa llamada `Taller TDAH · Nurturing guía` (`184339743593464945`, enabled, 7 steps). Antes de activar la nueva, decide cuál mantener — si las dos están live y apuntan al mismo grupo trigger, los padres reciben dos secuencias paralelas.
+
+⏳ **Lo que aún tienes que hacer en el dashboard de la nueva:**
+1. **Diseño visual**: cada email lleva contenido en plain text (la API no expone el editor HTML rich). Ve a cada paso de email → editor → "Source / HTML" → pega el HTML completo desde `email-templates/talleres-tdah/email-N-*.html`. ~5 min por email × 4 = 20 min.
+2. **Pasos condicionales**: la API solo soporta `email` + `delay`, no `if-then-exit`. Tras cada delay, añade un bloque `Condition: subscriber is in group "Taller TDAH - Inscritas"` → SÍ exit / NO continuar. 3 condicionales en total.
+3. **Acciones finales**: tras el email 4 + 1 día de espera, añade `Acción: Copy subscriber to "Lista General TWIM"` y `Acción: Remove from "Padres Talleres TDAH"`.
+4. **Sender**: confirma que el remitente del email (from name + email) está configurado correctamente.
+
+### Configuración general (referencia histórica)
 - **Nombre interno:** `Secuencia Padres TDAH`
 - **Trigger:** `Cuando el suscriptor se une al grupo: Padres Talleres TDAH`
 
@@ -125,12 +137,17 @@ Por cada uno de los 8 archivos HTML en `email-templates/talleres-*/`, crea un em
 
 ## 4 · Crear automatización Bachillerato (5 min)
 
-Idéntica a la TDAH pero apuntando al grupo `Padres Talleres Bachillerato` y a las plantillas Bach. Reemplaza:
-- Trigger group: `Padres Talleres Bachillerato`
-- Condition group: `Taller Bachillerato - Inscritas`
-- 4 plantillas Bach en lugar de TDAH
+✅ **YA CREADA vía API (29 abril 2026 · en draft, sin activar):**
+- ID: `186094552519541764`
+- URL dashboard: https://dashboard.mailerlite.com/automations/186094552519541764
+- Trigger: `subscriber_joins_group` → `Padres Talleres Bachillerato` (`184266663513818179`)
+- Estructura creada: 4 emails + 3 delays de 3 días con asunto y contenido en plain text
 
-(Si MailerLite te deja duplicar el workflow TDAH, hazlo y solo cambia los grupos y plantillas — más rápido.)
+⏳ **Lo que aún tienes que hacer en el dashboard:**
+1. Pegar el HTML rico de `email-templates/talleres-bachillerato/email-N-*.html` en cada email (modo "Source / HTML")
+2. Añadir los 3 condicionales `is in "Taller Bachillerato - Inscritas"` → SÍ exit / NO continuar
+3. Tras el email 4 + 1 día: `Copy to "Lista General TWIM"` + `Remove from "Padres Talleres Bachillerato"`
+4. Verificar sender
 
 ---
 
