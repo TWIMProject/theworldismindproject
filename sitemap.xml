@@ -58,6 +58,16 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://twimproject.com/libro-engranajes-mente/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://twimproject.com/portadalosengranajes.jpg</image:loc>
+      <image:title>Los Engranajes de la Mente - Libro de Daniel Orozco Abia</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://twimproject.com/talleres/tdah-adolescentes/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
