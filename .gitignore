@@ -130,3 +130,4 @@ notebooklm/.env
 # ===== OTROS =====
 
 deploy.log
+.env.audit
