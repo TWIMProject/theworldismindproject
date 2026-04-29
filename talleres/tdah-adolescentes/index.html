@@ -109,6 +109,21 @@
     .section h2 { font-size: clamp(1.7rem, 3vw, 2.45rem); margin-bottom: 1rem; }
     .section p + p { margin-top: 1rem; }
     .story-card, .problem-card, .group-grid, .workshop-grid, .bio-card, .cross-link { margin-top:1.5rem; }
+    .bio-grid { display:grid; grid-template-columns: minmax(180px, 220px) 1fr; gap: 1.6rem; align-items:flex-start; }
+    .bio-grid img { width: 100%; border-radius: 10px; aspect-ratio: 1/1; object-fit: cover; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+    .book-callout { display:flex; gap:1rem; align-items:center; margin-top:1.2rem; padding: .9rem 1rem; background: var(--sand, #F5EFE6); border-radius: 8px; border-left: 3px solid var(--green); }
+    .book-callout img { width: 72px; height: auto; flex-shrink:0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+    .book-callout .book-text { flex:1; }
+    .book-callout .book-text strong { color: var(--text); display:block; font-size:.95rem; margin-bottom: .15rem; }
+    .book-callout .book-text p { font-size:.88rem; color: var(--text-soft); margin:0 0 .35rem; line-height:1.45; }
+    .book-callout .book-text a { color: var(--green); font-weight:600; font-size:.88rem; }
+    .book-callout .book-text a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .bio-grid { grid-template-columns: 1fr; text-align: left; }
+      .bio-grid img { max-width: 200px; margin: 0 auto; }
+      .book-callout { flex-direction: column; align-items:flex-start; }
+      .book-callout img { width: 90px; }
+    }
     .quote-block { margin:2rem 0; padding:2rem; border-radius:18px; background: linear-gradient(135deg, var(--sand) 0%, var(--sand-dark) 100%); border-left: 6px solid var(--beige); font-size: clamp(1.4rem, 2.4vw, 2rem); color: var(--green-dark); font-weight:600; line-height:1.35; }
     .tips-grid, .group-grid, .workshop-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem; }
     .tip-card, .need-card, .detail-card { background: var(--sand); border:1px solid rgba(38,92,75,.08); border-radius: 16px; padding: 1.3rem; }
@@ -298,8 +313,21 @@
 
       <section class="section">
         <div class="content-card bio-card">
-          <h2>Sobre mí</h2>
-          <p>Soy Daniel Orozco Abia, Psicólogo General Sanitario de orientación psicoanalítica con consulta privada en Valencia desde 2012 (N.º Colegiado CV11515). CEO de The World Is Mind Project y autor de «Los Engranajes de la Mente» y «Burnout: El libro para no petar», ambos disponibles en Amazon. Divulgo sobre psicología desde la perspectiva psicoanalítica en Instagram y YouTube como @daniorozcopsicologo.</p>
+          <div class="bio-grid">
+            <img src="../../daniel-orozco-sillon.webp" alt="Daniel Orozco Abia, Psicólogo General Sanitario en Valencia">
+            <div>
+              <h2>Sobre mí</h2>
+              <p>Soy Daniel Orozco Abia, Psicólogo General Sanitario con consulta privada en Valencia desde 2012 (N.º Colegiado CV11515). Trabajo desde la psicología profunda y aplicada. CEO de The World Is Mind Project y autor de «Los Engranajes de la Mente» y «Burnout: El libro para no petar», ambos disponibles en Amazon. Divulgo sobre psicología profunda y aplicada en Instagram y YouTube como @daniorozcopsicologo.</p>
+              <div class="book-callout">
+                <img src="../../portadalosengranajes.webp" alt="Portada del libro Los Engranajes de la Mente, de Daniel Orozco">
+                <div class="book-text">
+                  <strong>Lectura previa al taller (opcional)</strong>
+                  <p>Mi libro «Los Engranajes de la Mente» explica cómo funciona por dentro la mente de un adolescente. Útil si queréis llegar a la reunión informativa con un marco común.</p>
+                  <a href="https://amzn.eu/d/38Veu6F" target="_blank" rel="noopener">Ver en Amazon →</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -307,7 +335,7 @@
         <div class="cta-box">
           <h2>¿Quieres explorar si este taller es adecuado para tu hijo o hija?</h2>
           <p>El primer paso es una reunión informativa conmigo y tu pareja, o contigo si eres familia monoparental, donde os explico el taller en detalle, resuelvo vuestras dudas y evaluamos juntos si encaja con la situación de vuestro hijo o hija. Sin compromiso.</p>
-          <form action="https://formspree.io/f/mpwrqplb" method="POST" class="cta-form">
+          <form action="https://formspree.io/f/mpwrqplb" method="POST" class="cta-form" id="taller-form" data-mailerlite-group="padres-talleres-tdah">
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
             <input type="hidden" name="motivo" value="taller-tdah-adolescentes">
             <div class="cta-form__row">
@@ -319,8 +347,12 @@
               <input type="text" name="edad_hijo" placeholder="Edad de tu hijo/a">
             </div>
             <textarea name="message" placeholder="¿Quieres añadir algo? (opcional)" rows="3"></textarea>
-            <button type="submit" class="btn btn-primary">Solicitar reunión informativa</button>
+            <button type="submit" class="btn btn-primary" id="taller-submit">Solicitar reunión informativa</button>
           </form>
+          <div id="taller-success" class="cta-success" style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:rgba(38,92,75,.08);border-left:3px solid var(--green);border-radius:4px;">
+            <strong>Recibido.</strong> Te escribiré en menos de 48 h para concretar la reunión informativa. Mientras, mira tu correo: te he mandado información para empezar.
+          </div>
+          <div id="taller-error" class="cta-error" style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:rgba(180,60,40,.08);border-left:3px solid #b43c28;border-radius:4px;color:#7a2a1c;"></div>
           <div class="cta-alt">
             <p class="subnote">¿Prefieres contacto directo?</p>
             <div class="cta-alt__links">
@@ -384,6 +416,55 @@
           hamburger.classList.remove('active');
           navLinks.classList.remove('open');
         });
+      });
+    }
+
+    // Form híbrido: Formspree (notificación rica a Daniel) + MailerLite (alta + secuencia automática)
+    const tallerForm = document.getElementById('taller-form');
+    const tallerSuccess = document.getElementById('taller-success');
+    const tallerError = document.getElementById('taller-error');
+    const tallerSubmit = document.getElementById('taller-submit');
+    if (tallerForm) {
+      tallerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(tallerForm);
+        const email = (formData.get('email') || '').trim();
+        const name = (formData.get('nombre_padre') || '').trim();
+        const group = tallerForm.dataset.mailerliteGroup;
+        if (!email || !email.includes('@')) {
+          tallerError.textContent = 'Introduce un email válido.';
+          tallerError.style.display = 'block';
+          return;
+        }
+        const originalLabel = tallerSubmit.textContent;
+        tallerSubmit.disabled = true;
+        tallerSubmit.textContent = 'Enviando...';
+        tallerError.style.display = 'none';
+        const formspreePromise = fetch(tallerForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' },
+        });
+        const subscribePromise = fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name, group }),
+        });
+        const [formspreeRes, subscribeRes] = await Promise.allSettled([formspreePromise, subscribePromise]);
+        const formspreeOk = formspreeRes.status === 'fulfilled' && formspreeRes.value.ok;
+        const subscribeOk = subscribeRes.status === 'fulfilled' && subscribeRes.value.ok;
+        if (formspreeOk || subscribeOk) {
+          tallerForm.style.display = 'none';
+          tallerSuccess.style.display = 'block';
+          if (typeof gtag === 'function') {
+            gtag('event', 'taller_lead', { taller: 'tdah-adolescentes' });
+          }
+        } else {
+          tallerSubmit.disabled = false;
+          tallerSubmit.textContent = originalLabel;
+          tallerError.textContent = 'No se pudo enviar. Inténtalo en un momento o escríbeme por WhatsApp.';
+          tallerError.style.display = 'block';
+        }
       });
     }
   </script>

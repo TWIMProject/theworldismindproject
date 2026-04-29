@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te escribo · Newsletter de Daniel Orozco | TWIM Project</title>
+  <meta name="description" content="Una carta cada tanto. Sobre la mente, el cansancio y lo que no se dice. Newsletter editorial de Daniel Orozco Abia, psicólogo de orientación clínica profunda en Valencia.">
+  <meta name="author" content="Daniel Orozco Abia">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://twimproject.com/newsletter/">
+  <link rel="icon" type="image/png" href="/logo-mindworld.png">
+  <link rel="apple-touch-icon" href="/logo-mindworld.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Te escribo · Newsletter de Daniel Orozco">
+  <meta property="og:description" content="Una carta cada tanto. Sobre la mente, el cansancio y lo que no se dice.">
+  <meta property="og:image" content="https://twimproject.com/newsletter/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://twimproject.com/newsletter/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TWIM Project">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Te escribo · Newsletter de Daniel Orozco">
+  <meta name="twitter:description" content="Una carta cada tanto. Sobre la mente, el cansancio y lo que no se dice.">
+  <meta name="twitter:image" content="https://twimproject.com/newsletter/og-image.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #265C4B;
+      --green-dark: #173D30;
+      --cream: #FDFCFA;
+      --beige: #C2A78B;
+      --beige-light: #D4C4AE;
+      --beige-muted: #9E907D;
+      --text: #1A1410;
+      --text-soft: #6B6058;
+      --text-muted: #9A8E84;
+      --white: #FFFFFF;
+      --border: rgba(43,36,32,.07);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      color: var(--cream);
+      background: var(--green-dark);
+      line-height: 1.55;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .wrap {
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: .85rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--beige-muted);
+      margin-bottom: 1.6rem;
+    }
+
+    .logo {
+      width: 70px;
+      height: auto;
+      opacity: .85;
+      margin: 0 auto 1.8rem;
+      display: block;
+    }
+
+    h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.6rem, 8vw, 4rem);
+      line-height: 1;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    .sub {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+      color: var(--beige-light);
+      max-width: 460px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.5;
+    }
+
+    form { display: flex; flex-direction: column; gap: .75rem; max-width: 420px; margin: 0 auto; }
+
+    form input[type="text"], form input[type="email"] {
+      width: 100%;
+      padding: .9rem 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--cream);
+      border: 1.5px solid transparent;
+      border-radius: 6px;
+      transition: border-color .2s;
+    }
+    form input:focus { outline: none; border-color: var(--beige); }
+    form input::placeholder { color: var(--text-muted); }
+
+    button {
+      width: 100%;
+      padding: .9rem 1.2rem;
+      background: var(--beige);
+      color: var(--cream);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: .02em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background .25s ease, transform .2s ease;
+    }
+    button:hover { background: #a89070; transform: translateY(-1px); }
+    button:disabled { opacity: .6; cursor: wait; }
+
+    .fine {
+      font-size: .82rem;
+      color: rgba(253,252,250,.55);
+      margin-top: .4rem;
+    }
+
+    .success, .error {
+      max-width: 420px;
+      margin: 1.2rem auto 0;
+      text-align: center;
+      font-size: .95rem;
+    }
+    .success { color: var(--cream); }
+    .success strong { color: var(--beige-light); }
+    .error { color: #f4c2a8; }
+
+    footer {
+      max-width: 540px;
+      margin: 3.5rem auto 0;
+      text-align: center;
+      font-size: .85rem;
+      color: var(--beige-muted);
+      line-height: 1.7;
+    }
+    footer a {
+      color: var(--beige-light);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,196,174,.3);
+      padding-bottom: 1px;
+      transition: border-color .2s ease;
+    }
+    footer a:hover { border-color: var(--beige-light); }
+
+    @media (max-width: 520px) {
+      body { padding: 2rem 1.1rem; }
+      .wrap { padding: .5rem 0; }
+      footer { margin-top: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">TWIM Project · Newsletter</p>
+    <img src="/logo-mindworld.png" alt="TWIM Project" class="logo">
+    <h1>Te escribo</h1>
+    <p class="sub">Una carta cada tanto. Sobre la mente, el cansancio y lo que no se dice.</p>
+
+    <form id="newsletter-form" novalidate>
+      <input type="text" id="newsletter-name" name="name" placeholder="Tu nombre (opcional)" aria-label="Tu nombre (opcional)" autocomplete="given-name">
+      <input type="email" id="newsletter-email" name="email" placeholder="Tu email" aria-label="Tu email" required autocomplete="email">
+      <button type="submit" id="newsletter-btn">Quiero recibirlas</button>
+      <p class="fine">Sin spam. Puedes darte de baja cuando quieras.</p>
+    </form>
+
+    <div id="newsletter-success" class="success" style="display:none;">
+      <p><strong>Hecho.</strong> Te he escrito al correo. Mira tu bandeja.</p>
+    </div>
+    <div id="newsletter-error" class="error" style="display:none;"></div>
+  </div>
+</main>
+
+<footer>
+  Daniel Orozco Abia · Psicólogo General Sanitario · CV11515<br>
+  Valencia, España · <a href="/">twimproject.com</a>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('newsletter-form');
+    const successDiv = document.getElementById('newsletter-success');
+    const errorDiv = document.getElementById('newsletter-error');
+    if (!form || !successDiv || !errorDiv) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('newsletter-btn');
+      const email = form.querySelector('input[name="email"]').value.trim();
+      const name = form.querySelector('input[name="name"]').value.trim();
+      if (!email || !email.includes('@')) {
+        errorDiv.textContent = 'Introduce un email válido.';
+        errorDiv.style.display = 'block';
+        return;
+      }
+      btn.disabled = true;
+      const originalLabel = btn.textContent;
+      btn.textContent = 'Enviando...';
+      errorDiv.style.display = 'none';
+      try {
+        const res = await fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name, group: 'newsletter-home' }),
+        });
+        if (!res.ok) throw new Error('Request failed');
+        form.style.display = 'none';
+        successDiv.style.display = 'block';
+      } catch {
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+        errorDiv.textContent = 'No se pudo completar. Inténtalo en un momento.';
+        errorDiv.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

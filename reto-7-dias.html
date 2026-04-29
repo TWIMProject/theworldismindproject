@@ -597,7 +597,7 @@
                 <h3>Esto sí</h3>
                 <ul>
                     <li>Observación guiada</li>
-                    <li>Marco psicoanalítico real</li>
+                    <li>Marco de psicología profunda real</li>
                     <li>Ejercicios de 10 minutos</li>
                     <li>Tu mecanismo, con nombre</li>
                     <li>Herramientas, no opiniones</li>
@@ -617,7 +617,7 @@
         <div class="author-text">
             <h3>Daniel Orozco Abia</h3>
             <p class="credentials">Psicólogo General Sanitario · CV11515 · Consulta privada en Valencia desde 2012</p>
-            <p>Trabajo desde orientación psicoanalítica. Eso significa que no te voy a decir lo que tienes que hacer. Te voy a ayudar a ver por qué haces lo que haces. La dependencia emocional no es un defecto de carácter. Es un sistema de regulación que se instaló en la infancia y que se puede intervenir cuando se entiende.</p>
+            <p>Trabajo desde la psicología profunda y aplicada. Eso significa que no te voy a decir lo que tienes que hacer. Te voy a ayudar a ver por qué haces lo que haces. La dependencia emocional no es un defecto de carácter. Es un sistema de regulación que se instaló en la infancia y que se puede intervenir cuando se entiende.</p>
         </div>
     </div>
 </section>
@@ -698,29 +698,38 @@
         btn.textContent = 'Enviando...';
         errorDiv.style.display = 'none';
 
+        let res;
         try {
-            const res = await fetch('/.netlify/functions/subscribe', {
+            res = await fetch('/.netlify/functions/subscribe', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, name, whatsapp, group: 'reto-7-dias' }),
             });
-            const data = await res.json();
-
-            if (res.ok) {
-                form.style.display = 'none';
-                successDiv.style.display = 'block';
-            } else {
-                errorDiv.textContent = data.error || 'Ha ocurrido un error. Inténtalo de nuevo.';
-                errorDiv.style.display = 'block';
-                btn.disabled = false;
-                btn.textContent = 'Quiero empezar los 7 días →';
-            }
-        } catch {
-            errorDiv.textContent = 'Error de conexión. Inténtalo de nuevo.';
+        } catch (networkErr) {
+            console.error('[reto-7-dias] network error:', networkErr);
+            errorDiv.textContent = 'No hay conexión con el servidor. Revisa tu red e inténtalo de nuevo.';
             errorDiv.style.display = 'block';
             btn.disabled = false;
             btn.textContent = 'Quiero empezar los 7 días →';
+            return;
         }
+
+        const raw = await res.text();
+        let data = {};
+        try { data = raw ? JSON.parse(raw) : {}; } catch { data = { error: raw }; }
+
+        if (res.ok) {
+            form.style.display = 'none';
+            successDiv.style.display = 'block';
+            return;
+        }
+
+        console.error('[reto-7-dias] subscribe failed', { status: res.status, body: data });
+        const detail = data.error || data.detail || `HTTP ${res.status}`;
+        errorDiv.textContent = `No se pudo completar el alta (${detail}). Si persiste, escríbenos.`;
+        errorDiv.style.display = 'block';
+        btn.disabled = false;
+        btn.textContent = 'Quiero empezar los 7 días →';
     });
 </script>
 </body>
