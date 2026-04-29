@@ -37,30 +37,38 @@ Checklist de diagnóstico ya redactado en `taller-no-puedo-parar-setup.md`.
 - Generado con Python/Pillow, fuente Barlow Condensed, paleta verde/beige de marca
 - Listo para subir a YouTube → Personalización → Arte del canal
 
-### 2.3 SEO — Landings de posicionamiento (EN CURSO ⚙️)
-Se están creando 7 páginas HTML nuevas para mejorar el posicionamiento en Google por términos de búsqueda relevantes. El planteamiento es que cada página capture tráfico de búsqueda orgánica con keyword específica y convierta a primera consulta.
+### 2.3 SEO — Landings de posicionamiento (COMPLETADO ✅)
+7 páginas HTML nuevas creadas para mejorar el posicionamiento en Google por términos de búsqueda relevantes. Cada página captura tráfico orgánico con keyword específica y convierte a primera consulta.
 
 | # | Archivo | Keyword principal | Estado |
 |---|---------|-------------------|--------|
-| 1 | `daniel-orozco-abia.html` | "Daniel Orozco Abia psicólogo" | **Creada ✅** |
-| 2 | `psicologo-ansiedad-valencia.html` | "psicólogo ansiedad Valencia" | En proceso ⚙️ |
-| 3 | `psicologo-dependencia-emocional-valencia.html` | "psicólogo dependencia emocional Valencia" | Pendiente |
-| 4 | `psicologo-burnout-valencia.html` | "psicólogo burnout Valencia" | Pendiente |
-| 5 | `psicologo-adolescentes-valencia.html` | "psicólogo adolescentes Valencia" | Pendiente |
-| 6 | `terapia-pareja-valencia.html` | "terapia pareja Valencia" | Pendiente |
-| 7 | `psicologo-online.html` | "psicólogo online" | Pendiente |
+| 1 | `daniel-orozco-abia.html` | "Daniel Orozco Abia psicólogo" | ✅ |
+| 2 | `psicologo-ansiedad-valencia.html` | "psicólogo ansiedad Valencia" | ✅ |
+| 3 | `psicologo-dependencia-emocional-valencia.html` | "psicólogo dependencia emocional Valencia" | ✅ |
+| 4 | `psicologo-burnout-valencia.html` | "psicólogo burnout Valencia" | ✅ |
+| 5 | `psicologo-adolescentes-valencia.html` | "psicólogo adolescentes Valencia" | ✅ |
+| 6 | `terapia-pareja-valencia.html` | "terapia pareja Valencia" | ✅ |
+| 7 | `psicologo-online.html` | "psicólogo online" en español (LATAM/EU/EE.UU.) | ✅ |
 
 Cada landing incluye:
-- Meta SEO (title, description, keywords, canonical, OG, Twitter)
-- Schema.org JSON-LD (MedicalBusiness / Service / BreadcrumbList / FAQPage)
-- Contenido clínico específico del tema en voz de Daniel
-- Enlace a artículos insights relacionados
+- Meta SEO completo (title, description, keywords, canonical, Open Graph, Twitter cards)
+- 4 schemas JSON-LD: `MedicalBusiness` + `Service` + `BreadcrumbList` + `FAQPage`
+- Contenido clínico específico del tema en voz editorial de Daniel
+- Cross-linking con artículos relacionados del blog y programas
 - CTA a primera consulta (email + WhatsApp)
+- GA4 tracking integrado
 
-Pendiente tras crear las landings:
-- Actualizar `sitemap.xml` con las 7 nuevas URLs
-- Añadir links desde `index.html` e insights relevantes hacia las landings
-- Commit + push a la rama activa
+**Trabajo adicional completado:**
+- ✅ `sitemap.xml` actualizado con 7 URLs nuevas (40 URLs totales)
+- ✅ Linking interno desde `index.html` (sección "Con quién trabajo" + bio de Daniel)
+- ✅ Linking interno desde `dejadeobligarte.html` y `dejadebuscarteenotros.html`
+- ✅ Auditoría automática pasada con **0 errores, 0 warnings** en las 7 landings
+- ✅ Commits y pushes a `claude/check-manychat-instagram-EQalY`
+
+**Próximos pasos manuales (cuando se desee):**
+- Hacer merge de la rama a `main` para que las landings se desplieguen en producción
+- Enviar el sitemap actualizado a Google Search Console
+- Solicitar indexación manual de las 7 nuevas URLs en GSC
 
 ### 2.4 Scripts de auditoría (LISTOS ✅)
 Creados en `scripts/`:
