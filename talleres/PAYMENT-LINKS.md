@@ -97,7 +97,7 @@ Y entonces yo conecto:
 >
 > El siguiente paso es agendar la fecha. Tienes dos opciones:
 >
-> 1. Reservar tú mismo en mi calendario: [CAL_COM_URL]
+> 1. Reservar tú mismo en mi calendario: https://cal.com/daniel-orozco/entrevista-informativa
 > 2. Decirme aquí 2-3 huecos que te vengan bien y agendamos por WhatsApp/email.
 >
 > La reunión dura **1 hora y media**. Recuérdalo: si te presentas, te devuelvo los 40 € íntegros. Si fallas, no son reembolsables.
@@ -173,8 +173,81 @@ Cuando 2-3 deposits hayan pasado por todo el flujo (pagar → presentarse → re
 ✅ **Deposits cableados como CTA primario en `/talleres/`, `/talleres/tdah-adolescentes/` y `/talleres/bachillerato-motivacion/`**
 ✅ Grupos MailerLite "Inscritas" creados
 ✅ 2 automations TDAH/Bach creadas (draft) · email 4 actualizado con CTA deposit
+✅ Cuenta Cal.com creada · URL pública: `https://cal.com/daniel-orozco/entrevista-informativa`
 ⏳ Limit number of payments = 6 en los 2 Payment Links de 720 €
 ⏳ Activar las 2 automations en MailerLite (pegar HTML rich + condicionales + acciones + sender + switch enabled)
+⏳ Conectar Cal.com como `success_url` en los 2 Payment Links de deposit
 ⏳ Actualizar bio Author Central de Amazon (quitar "Un Psicólogo Random")
 ⏳ Subir sitemap.xml a Search Console
-⏳ Cuenta Cal.com para automatizar agendado post-deposit
+
+---
+
+## 8 · Los 3 últimos clicks (cuando Daniel vuelva)
+
+Estos 3 pasos abren el funnel pasivo al 100%. Tiempo estimado total: **~35 min**.
+
+### Paso A · Stripe — redirect post-deposit a Cal.com (3 min × 2 = 6 min)
+
+Para cada uno de los 2 Payment Links de **deposit 40 €** (TDAH y Bach):
+
+1. Entra a [dashboard.stripe.com/payment-links](https://dashboard.stripe.com/payment-links)
+2. Click en el Payment Link → botón **Editar**
+3. Sección **"Tras el pago"** → cambia de "Mostrar página de confirmación" a **"Redirigir a tu sitio web"**
+4. Pega esta URL: `https://cal.com/daniel-orozco/entrevista-informativa`
+5. **Guardar**
+
+Repite para el otro Payment Link.
+
+> Bonus opcional: añade query strings con UTM para distinguir de dónde viene el padre, ej: `https://cal.com/daniel-orozco/entrevista-informativa?utm_source=stripe&utm_taller=tdah`
+
+### Paso B · MailerLite — activar las 2 automations (~25 min)
+
+Pasos detallados en `email-templates/CHECKLIST-MAILERLITE-TALLERES.md` § 3 y § 4. Resumen ejecutivo:
+
+| Automation | Dashboard URL |
+|---|---|
+| TDAH | https://dashboard.mailerlite.com/automations/186094472462862106 |
+| Bach | https://dashboard.mailerlite.com/automations/186094552519541764 |
+
+Para cada una:
+1. Pegar HTML rico de los 4 emails (modo "Source / HTML") desde `email-templates/talleres-{tdah,bachillerato}/email-N-*.html` — el HTML del email 4 ya tiene el botón "Reservar entrevista · 40 €" → Stripe deposit
+2. Cambiar asunto del email 4 a `Reserva tu entrevista por 40 € (te los devuelvo si vienes)` y plain text a la versión de § 3.1 del checklist
+3. Añadir 3 condicionales `is in group "Inscritas"` → SÍ exit / NO continuar
+4. Tras el email 4 + 1 día: `Copy to "Lista General TWIM"` + `Remove from "Padres Talleres TDAH/Bach"`
+5. Verificar sender: `danielorozco@twimproject.com` · `Daniel Orozco - TWIMProject`
+6. **Switch arriba a la derecha → Enabled**
+
+### Paso C · Search Console — submit sitemap (5 min)
+
+1. Entra a [search.google.com/search-console](https://search.google.com/search-console)
+2. Selecciona la propiedad `https://twimproject.com` (ya está verificada — la meta tag está en `index.html:17`)
+3. Menú izquierdo → **Sitemaps** → escribe `sitemap.xml` → **Enviar**
+4. (Opcional) Menú izquierdo → **Inspección de URLs** → solicita indexación manual de:
+   - `https://twimproject.com/`
+   - `https://twimproject.com/talleres/`
+   - `https://twimproject.com/talleres/tdah-adolescentes/`
+   - `https://twimproject.com/talleres/bachillerato-motivacion/`
+   - `https://twimproject.com/libro-engranajes-mente/`
+
+---
+
+## 9 · Lo que queda pasivo y automático tras los 3 clicks
+
+```
+Padre busca "psicólogo TDAH adolescentes Valencia" en Google
+→ Aterriza en /talleres/tdah-adolescentes/ (indexada)
+→ Click "Reservar entrevista · 40 €"
+→ Paga 40 € en Stripe
+→ Stripe redirige a Cal.com
+→ Padre agenda hueco (Cal.com bloquea tu Google Calendar)
+→ Daniel recibe notificación Cal.com + email Stripe
+→ El día de la reunión: Daniel reembolsa 40 € en Stripe + hace la entrevista
+→ Si encaja: Daniel envía manual el Payment Link 720 €
+→ Padre paga 720 € → Daniel añade manual a "Inscritas - TDAH" en MailerLite
+→ Eso corta automáticamente la secuencia de 4 emails de captación
+```
+
+**Lo único manual que queda en este flujo:** procesar el reembolso del deposit tras la reunión y enviar el Payment Link de 720 € si encaja. Ambos son acciones de 30 segundos cada una desde el dashboard de Stripe.
+
+**Para 100% automático** falta el webhook Stripe → Netlify Function → MailerLite (que mueve a "Inscritas" al cobrar 720 €). Lo monto cuando hayas validado el funnel manual con 1-2 inscripciones reales.
+⏳ Cal.com URL ya creada (`https://cal.com/daniel-orozco/entrevista-informativa`) — **falta cablear como `success_url` en los 2 Payment Links de deposit** (Stripe MCP estaba desconectado al momento de cablearla).
