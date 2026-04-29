@@ -94,7 +94,18 @@ Por cada uno de los 8 archivos HTML en `email-templates/talleres-*/`, crea un em
 - Trigger: `subscriber_joins_group` → `Padres Talleres TDAH` (`184266598608012376`)
 - Estructura creada: 4 emails + 3 delays de 3 días con asunto y contenido en plain text
 
-⚠️ **Conflicto a resolver:** ya existe otra automation activa llamada `Taller TDAH · Nurturing guía` (`184339743593464945`, enabled, 7 steps). Antes de activar la nueva, decide cuál mantener — si las dos están live y apuntan al mismo grupo trigger, los padres reciben dos secuencias paralelas.
+✅ **Conflicto resuelto (29 abril 2026):** la automation antigua `Taller TDAH · Nurturing guía` (`184339743593464945`) **fue eliminada vía API** tras audit comparativo. Razones:
+
+| Criterio | Antigua (eliminada) | Nueva (mantenida) |
+|---|---|---|
+| Coherencia con strategy actual | ❌ Caso "Marcos" descrito como "16 años, 2º Bachillerato" en flujo TDAH/ESO | ✅ Marcos = 3º-4º ESO con TDAH |
+| Match con `email-templates/talleres-tdah/` | ❌ Contenido distinto al canónico | ✅ Contenido idéntico |
+| Cadencia según runbook | ❌ 2-3-4 días | ✅ 3-3-3 días |
+| Asuntos según runbook | ❌ "Las notas no son el síntoma", etc. | ✅ "Lo que hay debajo de 'es que soy tonto'", etc. |
+| Stats / subscribers en queue | 0 / 0 (nunca disparó) | 0 / 0 |
+| Diseño HTML hecho | ✅ Sí (pero contenido desalineado) | ❌ No (Daniel lo pega) |
+
+El único activo de la antigua era el HTML diseñado, pero el contenido en sí estaba desalineado con el copy actual — Daniel tendría que reescribirlo entero igualmente. Coste de la decisión: 0 envíos perdidos (nunca disparó), Daniel pega el HTML una vez en lugar de dos.
 
 ⏳ **Lo que aún tienes que hacer en el dashboard de la nueva:**
 1. **Diseño visual**: cada email lleva contenido en plain text (la API no expone el editor HTML rich). Ve a cada paso de email → editor → "Source / HTML" → pega el HTML completo desde `email-templates/talleres-tdah/email-N-*.html`. ~5 min por email × 4 = 20 min.
