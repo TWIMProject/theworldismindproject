@@ -1,17 +1,57 @@
-# Talleres · Stripe Payment Links
+# Talleres · Stripe — Modelo deposit + taller
 
-> Documento interno. **No publicar estos enlaces en ninguna landing pública** mientras estés en Opción A (privado): se mandan por WhatsApp/email solo a padres que ya hayan pasado la reunión informativa y encajen en el grupo.
+> Documento interno. Define el flujo de cobro de los talleres TDAH y Bachillerato adolescentes.
+>
+> **Decisión de Daniel (29 abril 2026):** nadie paga 720 € sin haber pasado primero la entrevista informativa. La entrevista sigue siendo gratuita en concepto, pero hay un **deposit de 40 € como reserva** para garantizar que los padres se presentan.
 
 ---
 
-## Talleres Septiembre 2026
+## 1 · El flujo en 3 escenarios
 
-| Taller | Precio | Plazas | Payment Link |
+| Escenario | Qué cobra Daniel | Reembolso | Por qué |
 |---|---|---|---|
-| **TDAH adolescentes — Más allá del TDAH** | 720 € | 6 | https://buy.stripe.com/28E5kD5T45SZasP8jm2sM08 |
-| **Bachillerato — Encontrar el rumbo** | 720 € | 6 | https://buy.stripe.com/3cI7sL2GS81758vgPS2sM09 |
+| Padre **paga deposit** y **NO se presenta** a la reunión | 40 € retenidos | ❌ no reembolsable | Compensa el tiempo perdido |
+| Padre **paga deposit** y **SE PRESENTA** | 40 € reembolsados al instante | ✅ íntegro | La entrevista es gratuita en concepto — sólo era reserva |
+| Padre se presenta + se inscribe al taller | 720 € cobro adicional (más el reembolso del deposit) | ✅ deposit reembolsado · cobra 720 € por el taller | Limpio y sin liosos cálculos. Entrevista gratis + taller a precio íntegro. |
 
-Stripe IDs (referencia técnica para webhook futuro):
+**Importante:** no se aplica el deposit "a cuenta del taller". Si se aplicara, el padre con interés legítimo terminaría pagando 720 (= 40 deposit + 680 taller) cuando podría pagar 720 directos. El modelo "reembolso íntegro al presentarse" mantiene la promesa original de "entrevista gratuita" intacta.
+
+---
+
+## 2 · Productos en Stripe
+
+### 2.1 · Productos deposit (40 €) — **PENDIENTES DE CREAR**
+
+> El MCP de Stripe está desconectado. Daniel los crea en el dashboard ([dashboard.stripe.com/products](https://dashboard.stripe.com/products)) con esta copia exacta:
+
+#### Producto 1: Reserva entrevista TDAH
+
+| Campo | Valor |
+|---|---|
+| **Nombre** | `Reserva entrevista informativa - Taller TDAH adolescentes` |
+| **Descripción** | `Reserva de la primera reunión informativa de hora y media (presencial Valencia o videollamada) con Daniel Orozco Abia, Psicólogo General Sanitario CV11515. La reunión es gratuita: si te presentas se devuelve íntegra. Si no te presentas, no es reembolsable. Si tras la reunión inscribes a tu hijo/a en el taller TDAH adolescentes (720 €), se cobra el taller por separado.` |
+| **Imagen** | (opcional) `portadalosengranajes.webp` o foto Daniel |
+| **Modelo de precio** | Estándar / pago único |
+| **Importe** | `40,00 €` |
+| **Moneda** | EUR |
+| **Datos a recopilar** | Email ✅ · Nombre ✅ · Teléfono ✅ |
+| **Tras el pago** | Mostrar página de confirmación (luego conectaremos con Cal.com) |
+| **Limit number of payments** | **No establecer** (queremos tantas reservas de entrevista como se pueda; el filtro lo haces tú en la reunión) |
+
+#### Producto 2: Reserva entrevista Bachillerato
+
+Idéntico al anterior cambiando "TDAH adolescentes" por "Bachillerato".
+
+### 2.2 · Productos taller (720 €) — YA EXISTEN
+
+| Taller | Payment Link | Estado |
+|---|---|---|
+| TDAH 720 € | https://buy.stripe.com/28E5kD5T45SZasP8jm2sM08 | ✅ live · uso post-entrevista |
+| Bachillerato 720 € | https://buy.stripe.com/3cI7sL2GS81758vgPS2sM09 | ✅ live · uso post-entrevista |
+
+> ⚠️ **Limit number of payments = 6** sigue pendiente en estos 2 (la API no lo expone). Daniel lo configura desde el dashboard de cada Payment Link.
+
+Stripe IDs ya creados (referencia técnica):
 
 | Taller | Product ID | Price ID | Payment Link ID |
 |---|---|---|---|
@@ -20,7 +60,42 @@ Stripe IDs (referencia técnica para webhook futuro):
 
 ---
 
-## Plantilla mensaje post-reunión (WhatsApp / email)
+## 3 · Cuando Daniel cree los 2 deposits, me pasa las URLs así:
+
+```
+Deposit TDAH:    https://buy.stripe.com/xxxxxxxx
+Deposit Bach:    https://buy.stripe.com/yyyyyyyy
+```
+
+Y entonces yo conecto:
+- Hero CTA primario en `/talleres/tdah-adolescentes/` y `/talleres/bachillerato-motivacion/` → "Reservar entrevista · 40 €"
+- Hero CTA primario en `/talleres/` (página índice) → mismos links
+- Email 4 de cada automation MailerLite (`186094472462862106` TDAH y `186094552519541764` Bach) → CTA "Reservar entrevista · 40 €"
+- Doc operativo de qué hacer cuando alguien paga el deposit (notificación → agendar Cal.com → marcar en MailerLite grupo "Entrevista pagada")
+
+---
+
+## 4 · Plantilla mensajes
+
+### 4.1 · Tras el pago del deposit (automático Stripe envía recibo + Daniel manda este email manual)
+
+> Hola [NOMBRE],
+>
+> Gracias por reservar la entrevista. Te confirmo que he recibido los 40 € de reserva.
+>
+> El siguiente paso es agendar la fecha. Tienes dos opciones:
+>
+> 1. Reservar tú mismo en mi calendario: [CAL_COM_URL]
+> 2. Decirme aquí 2-3 huecos que te vengan bien y agendamos por WhatsApp/email.
+>
+> La reunión dura **1 hora y media**. Recuérdalo: si te presentas, te devuelvo los 40 € íntegros. Si fallas, no son reembolsables.
+>
+> Cualquier cosa, escríbeme aquí mismo.
+>
+> Un abrazo,
+> Daniel
+
+### 4.2 · Tras la reunión, si encaja (ofreciendo el taller)
 
 > Hola [NOMBRE],
 >
@@ -28,55 +103,64 @@ Stripe IDs (referencia técnica para webhook futuro):
 >
 > Aquí tienes el enlace para reservar la plaza:
 >
-> 👉 [PAYMENT_LINK]
+> 👉 [PAYMENT_LINK_720]
 >
-> Son 720 € (pago único). Una vez recibas la confirmación de Stripe, te llega de mi parte un email con los detalles logísticos del primer mes (fechas exactas, lugar, qué llevar).
+> Son 720 € (pago único). Como te has presentado a la reunión, ya te he reembolsado los 40 € de la reserva (puedes verlo en tu cuenta o tarjeta).
+>
+> Una vez recibas la confirmación del taller, te llega de mi parte un email con los detalles logísticos del primer mes.
 >
 > Si tienes cualquier duda antes de pagar, escríbeme aquí mismo.
 >
 > Un abrazo,
 > Daniel
 
----
+### 4.3 · Tras la reunión, si no encaja (devolución y honestidad)
 
-## Configuración usada
-
-- **Modelo:** Pago único en EUR
-- **Cantidad ajustable por cliente:** No
-- **Datos del cliente recopilados:** Email + nombre (Stripe los pide automáticamente)
-- **Códigos promocionales:** No configurados (puedes activarlos desde el dashboard de Stripe si quieres ofrecer alguno puntual)
-- **Límite de pagos:** ⚠️ **Por configurar manualmente en el dashboard.** La API no permite establecer "Limit number of payments". Ve a cada Payment Link en https://dashboard.stripe.com/payment-links → Avanzado → "Limit the number of payments" → 6.
-
----
-
-## Cuando alguien pague (proceso semi-manual hasta webhook)
-
-1. Te llega notificación de Stripe.
-2. **Manualmente** en MailerLite añades su email al grupo correspondiente:
-   - `Taller TDAH - Inscritas` (ID `186093787887437444`)
-   - `Taller Bachillerato - Inscritas` (ID `186093790595909010`)
-3. Eso lo saca automáticamente de la secuencia activa de captación.
-4. Le mandas el email de bienvenida con detalles logísticos (plantilla aún por crear).
+> Hola [NOMBRE],
+>
+> Gracias por confiarme la conversación. Como hablamos, creo que el formato de este taller no es lo que [NOMBRE_HIJO] necesita ahora mismo. Lo que sí creo que le ayudaría es [TERAPIA INDIVIDUAL / ORIENTACIÓN PSICOPEDAGÓGICA / OTRO RECURSO].
+>
+> He procesado el reembolso de los 40 € de la reserva. Te llega en 2-5 días laborales.
+>
+> Si más adelante quieres explorar otra vía, aquí estoy.
+>
+> Un abrazo,
+> Daniel
 
 ---
 
-## Webhook automático (fase 2, cuando hayas validado 1-2 inscripciones reales)
+## 5 · Operativa del reembolso (manual hasta webhook)
 
-Plan técnico:
-1. Configurar webhook en Stripe: evento `checkout.session.completed` → endpoint Netlify Function `/.netlify/functions/stripe-webhook`
-2. La function:
-   - Verifica la firma del webhook con `STRIPE_WEBHOOK_SECRET`
-   - Identifica qué taller compró (por Price ID — ya están en este doc)
-   - Llama a la API de MailerLite para añadir al cliente al grupo `Taller TDAH - Inscritas` o `Taller Bachillerato - Inscritas`
-   - Dispara email de confirmación con detalles logísticos del taller
+Cuando un padre paga el deposit y SE PRESENTA a la reunión:
 
-Cuando me digas "ya tengo 1-2 inscripciones, monta el webhook", lo conecto.
+1. Voy al dashboard de Stripe → Payments → busco la transacción del deposit
+2. Click "Refund" → confirmar 40 € íntegros
+3. Stripe envía el recibo del reembolso al padre automáticamente
+4. (Opcional) marco al padre en MailerLite con tag "entrevista_realizada" para reporting
+
+Si **no se presenta**: no toco nada. Stripe ya cobró, los 40 € se quedan, el padre puede ver en su cuenta el cargo. Recomendación: enviarle un email amable: "Te esperaba el [día] y no apareciste. Sigo aquí si quieres reagendarlo, pero los 40 € ya no son reembolsables." (no obligatorio).
 
 ---
 
-## Tax / IVA
+## 6 · Webhook futuro (cuando se valide el funnel manual)
 
-⚠️ Pendiente de revisar con tu gestor:
-- Algunos talleres psicoeducativos pueden estar **exentos de IVA** por ser servicios sanitarios prestados por psicólogo colegiado.
-- Si aplica exención: actualiza el `tax_code` del producto en Stripe a `txcd_20030000` (servicios educativos / formación) con `tax_behavior: exclusive`.
-- Activa Stripe Tax solo cuando lo confirmes con tu gestor.
+Cuando 2-3 deposits hayan pasado por todo el flujo (pagar → presentarse → reembolso → inscribir o no), monto:
+
+- Webhook Stripe `checkout.session.completed` → Netlify Function `/.netlify/functions/stripe-webhook`
+- La function distingue por Price ID:
+  - Si es deposit → añade al grupo MailerLite `Entrevista reservada - TDAH/Bach` y dispara email 4.1
+  - Si es taller (720 €) → añade al grupo `Inscritas - TDAH/Bach` (corta secuencia de captación + dispara bienvenida con detalles logísticos)
+
+---
+
+## 7 · Estado actual (29 abril 2026, 15:45)
+
+✅ Decisión estratégica tomada (deposit 40 €)
+✅ Productos taller 720 € creados en Stripe (live)
+✅ Grupos MailerLite "Inscritas" creados
+✅ 2 automations TDAH/Bach creadas (draft)
+⏳ **Productos deposit 40 € pendientes de crear** (Daniel en dashboard, copia en sección 2.1)
+⏳ Limit number of payments = 6 en los 2 Payment Links de 720 €
+⏳ Activar las 2 automations en MailerLite
+⏳ Actualizar bio Author Central de Amazon (quitar "Un Psicólogo Random")
+⏳ Subir sitemap.xml a Search Console
