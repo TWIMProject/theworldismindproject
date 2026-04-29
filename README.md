@@ -358,8 +358,8 @@ Para usos comerciales o académicos, contacta: [danielorozco@twimproject.com](ma
 
 [![Email](https://img.shields.io/badge/Email-danielorozco%40twimproject.com-D74A2B?style=for-the-badge&logo=gmail&logoColor=white)](mailto:danielorozco@twimproject.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Dani%20Orozco-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/)
-[![Instagram](https://img.shields.io/badge/Instagram-%40unpsicologorandom-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/unpsicologorandom)
-[![YouTube](https://img.shields.io/badge/YouTube-Psicólogo%20Random-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@psicologorandom)
+[![Instagram](https://img.shields.io/badge/Instagram-%40daniorozcopsicologo-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/daniorozcopsicologo)
+[![YouTube](https://img.shields.io/badge/YouTube-Daniel%20Orozco-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@daniorozcopsicologo)
 
 </div>
 
