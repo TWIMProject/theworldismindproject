@@ -19,7 +19,19 @@
 - `email-templates/talleres-tdah/` (4 emails)
 - `email-templates/talleres-bachillerato/` (4 emails)
 
-**Lo que NO se puede automatizar vía API y tienes que hacer tú en MailerLite:** crear los grupos extra, pegar los emails en plantillas, montar la automatización (workflow) que los envía con los retrasos correctos.
+✅ **Grupos `Inscritas` creados vía API (29 abril 2026):**
+- `Taller TDAH - Inscritas` → ID `186093787887437444`
+- `Taller Bachillerato - Inscritas` → ID `186093790595909010`
+
+✅ **Stripe Payment Links activos** (ver `talleres/PAYMENT-LINKS.md`):
+- TDAH 720 € → `https://buy.stripe.com/28E5kD5T45SZasP8jm2sM08`
+- Bach 720 € → `https://buy.stripe.com/3cI7sL2GS81758vgPS2sM09`
+
+⏳ **Pendiente que añadas en Netlify** (para el webhook futuro):
+- `MAILERLITE_GROUP_INSCRITAS_TDAH` = `186093787887437444`
+- `MAILERLITE_GROUP_INSCRITAS_BACH` = `186093790595909010`
+
+**Lo que sigue siendo manual en MailerLite:** pegar los 8 emails en plantillas y montar las 2 automatizaciones con condicionales (la API solo soporta `email` + `delay` — los pasos condicionales hay que añadirlos en el dashboard).
 
 ---
 
@@ -32,11 +44,11 @@ Ve a **Suscriptores → Grupos**. Confirma que existen:
 | **Padres Talleres TDAH** | Padres con interés en TDAH (form landing TDAH) | `MAILERLITE_GROUP_PADRES_TDAH` | ✅ |
 | **Padres Talleres Bachillerato** | Padres con interés en Bachillerato (form landing) | `MAILERLITE_GROUP_PADRES_BACH` | ✅ |
 | **Padres Talleres Adolescentes** | Form genérico de descarga PDF en homepage | `MAILERLITE_GROUP_PADRES_TALLERES` | ✅ |
-| **Taller TDAH - Inscritas** | Padres que YA han pagado plaza TDAH | — | ❓ Crear si no existe |
-| **Taller Bachillerato - Inscritas** | Padres que YA han pagado plaza Bachillerato | — | ❓ Crear si no existe |
+| **Taller TDAH - Inscritas** | Padres que YA han pagado plaza TDAH | `MAILERLITE_GROUP_INSCRITAS_TDAH` | ✅ creado vía API |
+| **Taller Bachillerato - Inscritas** | Padres que YA han pagado plaza Bachillerato | `MAILERLITE_GROUP_INSCRITAS_BACH` | ✅ creado vía API |
 | **Lista General TWIM** | Lista paraguas para newsletter | `MAILERLITE_GROUP_GENERAL` | ✅ |
 
-**Acción:** crea los dos grupos *"Inscritas"* si no existen. Servirán para:
+Los 2 grupos *"Inscritas"* sirven para:
 1. Cortar la secuencia automáticamente cuando el padre ya ha pagado.
 2. Mover al padre a una lista de comunicación post-inscripción.
 
