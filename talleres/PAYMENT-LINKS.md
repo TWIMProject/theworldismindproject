@@ -20,9 +20,21 @@
 
 ## 2 · Productos en Stripe
 
-### 2.1 · Productos deposit (40 €) — **PENDIENTES DE CREAR**
+### 2.1 · Productos deposit (40 €) — ✅ LIVE
 
-> El MCP de Stripe está desconectado. Daniel los crea en el dashboard ([dashboard.stripe.com/products](https://dashboard.stripe.com/products)) con esta copia exacta:
+| Taller | Payment Link | Estado |
+|---|---|---|
+| Reserva entrevista TDAH 40 € | https://buy.stripe.com/9B6dR9bdo95bfN99nq2sM0a | ✅ live · CTA primario en landings |
+| Reserva entrevista Bach 40 € | https://buy.stripe.com/28E7sLchsgxD58varu2sM0b | ✅ live · CTA primario en landings |
+
+Configuración aplicada (29 abril 2026):
+- Tipo: Puntual (no recurrente)
+- Importe: 40 € · EUR · IVA incluido en el precio
+- Categoría fiscal: Formación
+- Datos recopilados: Email · Nombre · Teléfono · Dirección
+- Limit number of payments: NO (queremos máxima entrada al funnel; el filtro lo hace Daniel en la entrevista)
+
+> Copia original (referencia histórica) usada para crearlos:
 
 #### Producto 1: Reserva entrevista TDAH
 
@@ -153,14 +165,16 @@ Cuando 2-3 deposits hayan pasado por todo el flujo (pagar → presentarse → re
 
 ---
 
-## 7 · Estado actual (29 abril 2026, 15:45)
+## 7 · Estado actual (29 abril 2026)
 
 ✅ Decisión estratégica tomada (deposit 40 €)
 ✅ Productos taller 720 € creados en Stripe (live)
+✅ **Productos deposit 40 € creados en Stripe (live)**
+✅ **Deposits cableados como CTA primario en `/talleres/`, `/talleres/tdah-adolescentes/` y `/talleres/bachillerato-motivacion/`**
 ✅ Grupos MailerLite "Inscritas" creados
-✅ 2 automations TDAH/Bach creadas (draft)
-⏳ **Productos deposit 40 € pendientes de crear** (Daniel en dashboard, copia en sección 2.1)
+✅ 2 automations TDAH/Bach creadas (draft) · email 4 actualizado con CTA deposit
 ⏳ Limit number of payments = 6 en los 2 Payment Links de 720 €
-⏳ Activar las 2 automations en MailerLite
+⏳ Activar las 2 automations en MailerLite (pegar HTML rich + condicionales + acciones + sender + switch enabled)
 ⏳ Actualizar bio Author Central de Amazon (quitar "Un Psicólogo Random")
 ⏳ Subir sitemap.xml a Search Console
+⏳ Cuenta Cal.com para automatizar agendado post-deposit
