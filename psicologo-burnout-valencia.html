@@ -243,6 +243,21 @@
     footer { background:#173D30; color:rgba(255,255,255,.6); text-align:center; padding:2rem 1rem; font-size:.85rem; }
     footer a { color:#D4C4AE; text-decoration:none; }
     footer a:hover { color:#fff; }
+
+    /* ===== Brand link safety net — enlaces inline siempre en verde corporativo ===== */
+    .section p a:not(.btn), .section li a:not(.btn),
+    .section p a:visited, .section li a:visited,
+    .highlight a, .highlight a:visited {
+      color: #265C4B;
+      text-decoration: underline;
+      text-decoration-color: #C2A78B;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+    .section p a:hover, .section li a:hover, .highlight a:hover {
+      color: #173D30;
+      text-decoration-color: #173D30;
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->

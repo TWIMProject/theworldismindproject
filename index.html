@@ -906,6 +906,28 @@
       .footer-meta,
       .footer-privacy { font-size: .88rem; }
     }
+
+    /* ===== Brand link safety net — enlaces inline SIEMPRE en verde corporativo ===== */
+    /* Cubre cualquier <a> dentro de cards de servicio, bio y secciones de contenido */
+    .esp-card a:not(.btn):not(.btn-green):not(.btn-beige):not(.btn-outline-dark),
+    .esp-card a:visited,
+    #about .about-text p a:not(.btn),
+    #about .about-text p a:visited,
+    .about-social a,
+    .about-social a:visited,
+    section.bg-sand p a:not(.btn),
+    section.bg-sand p a:visited {
+      color: var(--green-dark) !important;
+      text-decoration: underline;
+      text-decoration-color: var(--beige);
+      text-underline-offset: 3px;
+    }
+    .esp-card a:not(.btn):hover,
+    #about .about-text p a:hover,
+    section.bg-sand p a:hover {
+      color: var(--green) !important;
+      text-decoration-color: var(--green);
+    }
   </style>
 
 </head>
