@@ -533,33 +533,23 @@
             transform: translateY(0);
         }
     </style>
-  <!--
-    ========================================================================
-    Meta Pixel · TRACKING DE CONVERSIÓN DEL ANUNCIO INSTAGRAM/FACEBOOK
-    ========================================================================
-    REEMPLAZA "TU_PIXEL_ID" por tu Pixel ID real de Meta Business Manager
-    (https://business.facebook.com → Events Manager → Data Sources → tu Pixel).
-    Cuando lo hagas:
-      1. Descomenta los dos <script> de abajo (quita las marcas <!- - y - ->)
-      2. En Meta Ads Manager, cambia el OBJETIVO del ad de "Visitas a la
-         página de destino" → "Conversiones" → evento "Lead"
-      3. Meta optimizará entonces para gente que SÍ se registra,
-         no para clickers curiosos. Conversión esperada: x3 a x5.
-    ========================================================================
-  -->
-  <!--
+  <!-- ========================================================================
+       Meta Pixel · "Daniel Orozco Psicólogo" (ID 1447483376992558)
+       Activo desde 2026-04-30. Dispara PageView en carga + Lead en submit
+       del form (ver bloque JS al final).
+       Si necesitas cambiar el ID, busca '1447483376992558' (3 ocurrencias).
+       ======================================================================== -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
     document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'TU_PIXEL_ID');
+    fbq('init', '1447483376992558');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
-  -->
+    src="https://www.facebook.com/tr?id=1447483376992558&ev=PageView&noscript=1"/></noscript>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
   <script>
