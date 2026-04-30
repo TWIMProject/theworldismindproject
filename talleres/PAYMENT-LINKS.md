@@ -186,19 +186,21 @@ Cuando 2-3 deposits hayan pasado por todo el flujo (pagar → presentarse → re
 
 Estos 3 pasos abren el funnel pasivo al 100%. Tiempo estimado total: **~35 min**.
 
-### Paso A · Stripe — redirect post-deposit a Cal.com (3 min × 2 = 6 min)
+### Paso A · Stripe — redirect post-deposit (3 min × 2 = 6 min)
 
 Para cada uno de los 2 Payment Links de **deposit 40 €** (TDAH y Bach):
 
 1. Entra a [dashboard.stripe.com/payment-links](https://dashboard.stripe.com/payment-links)
 2. Click en el Payment Link → botón **Editar**
 3. Sección **"Tras el pago"** → cambia de "Mostrar página de confirmación" a **"Redirigir a tu sitio web"**
-4. Pega esta URL: `https://cal.com/daniel-orozco/entrevista-informativa`
+4. Pega **una de estas dos URLs** (recomendada la primera):
+   - **`https://twimproject.com/talleres/gracias-reserva.html`** ← recomendada: página intermedia con branding TWIM, 3 pasos claros, CTA Cal.com + WhatsApp/email de respaldo, GA4 event `taller_deposit_paid`
+   - `https://cal.com/daniel-orozco/entrevista-informativa` ← redirect directo a Cal.com (más rápido pero sin contexto)
 5. **Guardar**
 
 Repite para el otro Payment Link.
 
-> Bonus opcional: añade query strings con UTM para distinguir de dónde viene el padre, ej: `https://cal.com/daniel-orozco/entrevista-informativa?utm_source=stripe&utm_taller=tdah`
+> Bonus opcional: añade UTM al final, ej: `?utm_source=stripe&utm_taller=tdah` para distinguir origen en GA4.
 
 ### Paso B · MailerLite — activar las 2 automations (~25 min)
 
