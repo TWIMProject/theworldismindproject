@@ -11,6 +11,7 @@
 //   MAILERLITE_GROUP_INSCRITAS_TDAH → ID del grupo "Taller TDAH - Inscritas" (186093787887437444)
 //   MAILERLITE_GROUP_INSCRITAS_BACH → ID del grupo "Taller Bachillerato - Inscritas" (186093790595909010)
 //   MAILERLITE_GROUP_LEAD_IMPOSTORA → ID del grupo "Lead Magnet - Síndrome Impostora" (Daniel debe crear)
+//   MAILERLITE_GROUP_LEAD_BURNOUT   → ID del grupo "Lead Magnet - Burnout 5 señales" (Daniel debe crear)
 //
 // Diagnóstico: GET /.netlify/functions/subscribe?diag=1 devuelve qué env vars están
 // configuradas (sin exponer valores) y la versión de Node del runtime.
@@ -33,6 +34,7 @@ const groupEnvMap = {
   "inscritas-tdah": "MAILERLITE_GROUP_INSCRITAS_TDAH",
   "inscritas-bachillerato": "MAILERLITE_GROUP_INSCRITAS_BACH",
   "lead-magnet-impostora": "MAILERLITE_GROUP_LEAD_IMPOSTORA",
+  "lead-magnet-burnout": "MAILERLITE_GROUP_LEAD_BURNOUT",
 };
 
 function buildHeaders(event) {
