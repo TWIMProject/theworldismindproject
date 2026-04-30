@@ -4,7 +4,19 @@
  * POST → /.netlify/functions/subscribe { email, group:'newsletter-home' }
  */
 (function () {
-  if (sessionStorage.getItem('twim_te_seen') === '1') return;
+  // sessionStorage puede fallar (modo incógnito, storage bloqueado).
+  // Fallback in-memory para que la función no se rompa.
+  var seenInMemory = false;
+  function alreadyShown() {
+    try { return sessionStorage.getItem('twim_te_seen') === '1'; }
+    catch (_) { return seenInMemory; }
+  }
+  function markShown() {
+    seenInMemory = true;
+    try { sessionStorage.setItem('twim_te_seen', '1'); } catch (_) {}
+  }
+
+  if (alreadyShown()) return;
   if (location.pathname.indexOf('/newsletter') === 0) return; // no en /newsletter/
   if (location.pathname === '/' || location.pathname === '/index.html') return; // home ya tiene su form
 
@@ -30,7 +42,7 @@
   function trigger(reason) {
     if (fired) return;
     fired = true;
-    sessionStorage.setItem('twim_te_seen', '1');
+    markShown();
     mount(reason);
   }
 
@@ -83,16 +95,25 @@
       '</div>';
     document.body.appendChild(ov);
 
+    var lastFocus = document.activeElement;
+    var firstField = ov.querySelector('input[name="email"]');
+    if (firstField) firstField.focus();
+
+    function onEsc(e) { if (e.key === 'Escape') close(); }
+
     function close() {
+      document.removeEventListener('keydown', onEsc);
       ov.remove();
+      try { if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus(); } catch (_) {}
     }
+
     ov.addEventListener('click', function (e) {
       if (e.target === ov) close();
     });
-    ov.querySelectorAll('[data-twim-close]').forEach(function (b) { b.addEventListener('click', close); });
-    document.addEventListener('keydown', function esc(e) {
-      if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); }
+    ov.querySelectorAll('[data-twim-close]').forEach(function (b) {
+      b.addEventListener('click', close);
     });
+    document.addEventListener('keydown', onEsc);
 
     var form = ov.querySelector('[data-twim-form]');
     var ok = ov.querySelector('[data-twim-ok]');

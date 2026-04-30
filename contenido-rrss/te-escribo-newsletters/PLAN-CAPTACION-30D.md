@@ -1,6 +1,6 @@
 # Te escribo · Plan de captación 30 días
 
-> Objetivo: 200 suscriptoras netas en mes 1 al grupo `Web - Newsletter Home` (ID `185842047616288664`).
+> Objetivo: 200 suscriptoras netas en mes 1 al grupo `Web - Newsletter Home` (ID `185936045160793620`). Automation de bienvenida ID `185842047616288664`.
 > Punto de partida: 30 abril 2026.
 > Estrategia: orgánico-primero. Meta ads como gate condicional en semana 4 si el ritmo orgánico no llega al objetivo.
 
@@ -52,8 +52,7 @@
 ### Semana 2 · 7 – 13 mayo · AMPLIFICACIÓN
 
 - Publicar **Carrusel #2** "saberlo no te lo quita" (ya producido en `/contenido-rrss/te-escribo-saberlo-no-te-lo-quita/`). Día sugerido: martes 12 mayo 19:00 CET. Mismo ritual que Carrusel #1.
-- Programar **Carta #2** "la voz que te juzga" (ya redactada en `carta-02-la-voz-que-te-juzga.txt`). Envío sugerido: jueves 14 mayo 19:00 CET (D+9 desde Carta #1). Audiencia: misma que Carta #1.
-- ⏳ **Manual ML (Daniel):** crear nueva campaña en MailerLite con el contenido de `carta-02-la-voz-que-te-juzga.txt`, asunto sugerido "La voz que te juzga (no es la tuya)", scheduled jueves 14 mayo 19:00 CET.
+- ✅ **Carta #2 "La voz que te juzga"** programada vía MCP MailerLite (ID `186162435789423797`) para martes **19 mayo 2026 19:00 CEST** (status `ready`). Audiencia: Newsletter Home + Reto + Lead Magnet Dependencia + Lista General. HTML editorial conservado en `contenido-rrss/te-escribo-newsletters/carta-02-la-voz-que-te-juzga.html`.
 
 ### Semana 3 · 14 – 20 mayo · UPSELL LEAD MAGNETS
 
@@ -83,8 +82,8 @@ Brief Meta detallado: § 4.
 
 | Tarea | Sistema | Quién |
 |---|---|---|
-| Programar Carta #2 (D+9 desde Carta #1) | MailerLite dashboard | Daniel |
-| Verificar email 1 de la automation Web-Newsletter-Home | MailerLite dashboard | Daniel |
+| ✅ Programar Carta #2 (D+14 desde Carta #1, martes 19 mayo 19:00 CEST) | MailerLite (vía MCP) | Auto |
+| Verificar email 1 de la automation Web-Newsletter-Home (que sea la versión final, no draft) | MailerLite dashboard | Daniel |
 | Añadir P.D. de upsell a las 3 welcome emails de lead magnets | MailerLite dashboard | Daniel |
 | Publicar Carrusel #2 IG/LinkedIn semana 2 | Manual social | Daniel |
 | Activar 2 automations talleres TDAH/Bach (pendiente desde antes) | MailerLite dashboard | Daniel |

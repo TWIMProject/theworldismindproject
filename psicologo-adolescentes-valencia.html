@@ -269,6 +269,7 @@
     gtag('js', new Date());
     gtag('config', 'G-VMMZ1TKWZ0');
   </script>
+  <link rel="stylesheet" href="/assets/te-escribo-cta.css">
 </head>
 <body>
 
@@ -478,23 +479,6 @@
 
   <!-- ── TE ESCRIBO · Newsletter cross-sell ── -->
   <section class="te-escribo-cta" aria-labelledby="te-escribo-title">
-    <style>
-      .te-escribo-cta{background:#173D30;color:#fff;padding:3.5rem 1.5rem;}
-      .te-escribo-cta .te-wrap{max-width:640px;margin:0 auto;text-align:center;}
-      .te-escribo-cta .te-kicker{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:#C2A78B;margin:0 0 .8rem;font-weight:400;}
-      .te-escribo-cta h2{font-family:'Barlow Condensed',sans-serif;font-size:2.1rem;line-height:1.2;color:#fff;font-weight:600;margin:0 0 1.1rem;letter-spacing:.3px;}
-      .te-escribo-cta .te-sub{font-size:1.02rem;line-height:1.65;color:rgba(255,255,255,.82);max-width:520px;margin:0 auto 1.8rem;font-weight:300;}
-      .te-escribo-cta .te-form{display:flex;flex-direction:column;gap:.6rem;max-width:420px;margin:0 auto;}
-      .te-escribo-cta .te-form input[type=email]{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.9rem 1rem;border-radius:6px;font-family:inherit;font-size:1rem;}
-      .te-escribo-cta .te-form input[type=email]::placeholder{color:rgba(255,255,255,.55);}
-      .te-escribo-cta .te-form input[type=email]:focus{outline:none;border-color:#C2A78B;background:rgba(255,255,255,.12);}
-      .te-escribo-cta .te-form button{background:#C2A78B;color:#fff;border:none;padding:.95rem 1rem;border-radius:6px;font-family:inherit;font-size:1rem;font-weight:500;cursor:pointer;transition:background .15s;}
-      .te-escribo-cta .te-form button:hover{background:#A89070;}
-      .te-escribo-cta .te-form button:disabled{opacity:.5;cursor:not-allowed;}
-      .te-escribo-cta .te-fine{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:1rem;}
-      .te-escribo-cta .te-ok{background:rgba(194,167,139,.15);border:1px solid rgba(194,167,139,.4);padding:1.1rem;border-radius:6px;color:#fff;max-width:420px;margin:0 auto;display:none;}
-      .te-escribo-cta .te-err{color:#ff9a8b;font-size:.9rem;margin-top:.6rem;display:none;}
-    </style>
     <div class="te-wrap">
       <p class="te-kicker">Te escribo</p>
       <h2 id="te-escribo-title">Lo que tu hija o tu hijo no te cuenta no es porque no quiera. Es porque todavía no tiene palabras.</h2>
@@ -507,33 +491,6 @@
       </form>
       <div class="te-ok" data-te-ok><strong>Hecho.</strong> Te he escrito al correo. Mira tu bandeja.</div>
     </div>
-    <script>
-      (function(){
-        var root=document.querySelector('.te-escribo-cta');
-        if(!root)return;
-        var form=root.querySelector('[data-te-form]');
-        var ok=root.querySelector('[data-te-ok]');
-        var err=root.querySelector('[data-te-err]');
-        if(!form)return;
-        form.addEventListener('submit',async function(e){
-          e.preventDefault();
-          var btn=form.querySelector('button');
-          var email=form.querySelector('input[name="email"]').value.trim();
-          if(!email||email.indexOf('@')===-1){err.textContent='Introduce un email válido.';err.style.display='block';return;}
-          btn.disabled=true;var label=btn.textContent;btn.textContent='Enviando...';
-          err.style.display='none';
-          try{
-            var res=await fetch('/.netlify/functions/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,group:'newsletter-home'})});
-            if(!res.ok)throw new Error('req_failed');
-            form.style.display='none';ok.style.display='block';
-            if(window.gtag)gtag('event','newsletter_signup',{source:'cross_sell_seo',landing:location.pathname});
-          }catch(ex){
-            btn.disabled=false;btn.textContent=label;
-            err.textContent='No se pudo completar. Inténtalo en un momento.';err.style.display='block';
-          }
-        });
-      })();
-    </script>
   </section>
 
   <footer>
@@ -542,5 +499,6 @@
   </footer>
 
   <script src="/assets/te-escribo-exit-intent.js" defer></script>
+  <script src="/assets/te-escribo-cta.js" defer></script>
 </body>
 </html>
