@@ -130,6 +130,16 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://twimproject.com/lead-burnout-5-senales.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://twimproject.com/portada-burnout.jpg</image:loc>
+      <image:title>5 señales del burnout silencioso · TWIM Project</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://twimproject.com/privacy.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
