@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Síndrome de la Impostora · 10 preguntas | TWIM Project</title>
+  <meta name="description" content="Test gratuito de 10 preguntas para identificar si vives con síndrome de la impostora. Resultado inmediato + análisis psicoanalítico por email. Daniel Orozco Abia, Psicólogo General Sanitario CV11515.">
+  <meta name="keywords" content="test síndrome impostora, síndrome del impostor mujer, test impostor syndrome español, autoestima profesional, Daniel Orozco Abia, TWIMProject">
+  <meta name="author" content="Daniel Orozco Abia">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://twimproject.com/test-sindrome-impostora.html">
+  <link rel="icon" href="logo-mindworld.png" type="image/png">
+  <meta property="og:title" content="Test Síndrome de la Impostora · 10 preguntas">
+  <meta property="og:description" content="Test gratuito en 3 minutos. Resultado inmediato + análisis psicoanalítico por email.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://twimproject.com/test-sindrome-impostora.html">
+  <meta property="og:image" content="https://twimproject.com/daniel-orozco-sillon.jpg">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Test Síndrome de la Impostora · 10 preguntas">
+  <meta name="twitter:description" content="Resultado inmediato + análisis psicoanalítico por email.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="twim-styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "Test Síndrome de la Impostora",
+    "about": "Síndrome del impostor",
+    "inLanguage": "es",
+    "educationalLevel": "general",
+    "creator": {
+      "@type": "Person",
+      "name": "Daniel Orozco Abia",
+      "jobTitle": "Psicólogo General Sanitario",
+      "url": "https://twimproject.com"
+    }
+  }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); }
+    a { text-decoration: none; }
+    .container { width: 92%; max-width: 720px; margin: 0 auto; }
+    .site-header { background: var(--green-dark); padding: .8rem 0; }
+    .site-header nav { display:flex; justify-content:center; }
+    .site-header .brand img { height: 60px; width:auto; }
+    .hero { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); color:#fff; padding: 4rem 0 3rem; text-align:center; }
+    .hero .eyebrow { display:inline-block; background: rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.15); border-radius: 999px; padding: .35rem .9rem; font-size: .8rem; font-weight:600; text-transform:uppercase; letter-spacing:.5px; margin-bottom: 1.2rem; }
+    .hero h1 { color:#fff; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin-bottom: .8rem; }
+    .hero .lead { font-size: 1.15rem; color: rgba(255,255,255,.85); max-width: 580px; margin: 0 auto .6rem; }
+    .hero .meta { font-size: .9rem; color: rgba(255,255,255,.65); }
+    .hero .meta i { margin: 0 .4rem; }
+    main { padding: 2.5rem 0 4rem; }
+    .intro-card { background:#fff; border:1px solid var(--border); border-radius: 14px; padding: 1.6rem 1.8rem; margin-bottom: 2rem; box-shadow: 0 6px 20px rgba(23,61,48,.04); }
+    .intro-card p { color: var(--text-soft); line-height: 1.65; margin: .6rem 0; }
+    .intro-card strong { color: var(--green-dark); }
+    .test-progress { font-size:.9rem; color: var(--text-muted); text-align:center; margin-bottom: 1rem; }
+    .test-progress .num { color: var(--green-dark); font-weight: 600; }
+    .question { background:#fff; border:1px solid var(--border); border-radius: 12px; padding: 1.4rem 1.5rem; margin-bottom: 1rem; box-shadow: 0 4px 14px rgba(23,61,48,.04); }
+    .question h3 { font-size: 1.05rem; line-height: 1.45; color: var(--green-dark); margin-bottom: .9rem; font-weight: 500; }
+    .question h3 .qnum { display:inline-block; background: var(--green); color:#fff; width: 26px; height: 26px; border-radius:50%; text-align:center; line-height: 26px; font-size:.85rem; margin-right: .5rem; vertical-align: middle; }
+    .scale { display:grid; grid-template-columns: repeat(5, 1fr); gap: .4rem; }
+    .scale label { display:block; padding: .55rem .3rem; text-align:center; border:1.5px solid var(--border); border-radius: 8px; cursor: pointer; font-size: .82rem; color: var(--text-soft); transition: all .15s; line-height: 1.25; min-height: 56px; display:flex; flex-direction:column; justify-content:center; }
+    .scale label:hover { border-color: var(--beige); background: var(--sand); }
+    .scale input { display:none; }
+    .scale input:checked + span { color: #fff; }
+    .scale label:has(input:checked) { background: var(--green); border-color: var(--green); color:#fff; box-shadow: 0 4px 12px rgba(38,92,75,.25); }
+    .scale .num-val { display:block; font-size: 1rem; font-weight:600; margin-bottom: .15rem; }
+    .submit-row { text-align:center; margin: 1.5rem 0 1rem; }
+    .btn-result { display:inline-block; background: var(--beige); color:#fff; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; font-size: 1.05rem; border: none; cursor: pointer; transition: all .2s; font-family: inherit; }
+    .btn-result:hover:not(:disabled) { background: var(--beige-dark); box-shadow: 0 6px 18px rgba(194,167,139,.35); transform: translateY(-1px); }
+    .btn-result:disabled { background: var(--text-muted); cursor: not-allowed; opacity: .55; }
+    .submit-hint { font-size: .85rem; color: var(--text-muted); margin-top: .6rem; }
+    .result { display:none; background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%); color:#fff; border-radius: 14px; padding: 2rem 1.8rem; margin: 2rem 0; text-align:center; }
+    .result.visible { display:block; }
+    .result .score-badge { display:inline-block; background: rgba(255,255,255,.15); border: 2px solid var(--beige-light, #D4C4AE); border-radius: 999px; padding: .5rem 1.2rem; font-weight:600; margin-bottom: 1rem; font-size: .95rem; }
+    .result h2 { color:#fff; font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: .6rem; line-height: 1.15; }
+    .result .interp { font-size: 1.05rem; line-height: 1.6; color: rgba(255,255,255,.9); max-width: 560px; margin: 0 auto 1.2rem; }
+    .result-form { background: rgba(255,255,255,.08); border-radius: 10px; padding: 1.4rem; margin-top: 1.4rem; }
+    .result-form h3 { color:#fff; font-size: 1.1rem; margin-bottom: .8rem; }
+    .result-form input { width: 100%; padding: .8rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.96); color: var(--text); font-family: inherit; font-size: .98rem; margin-bottom: .6rem; }
+    .result-form input:focus { outline:none; border-color: var(--beige); }
+    .result-form button { width: 100%; padding: .9rem; background: var(--beige); color:#fff; border:none; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; font-family: inherit; transition: background .2s; }
+    .result-form button:hover { background: var(--beige-dark); }
+    .form-fine { font-size: .8rem; color: rgba(255,255,255,.6); margin-top: .8rem; }
+    .form-success { display:none; padding: 1rem; background: rgba(255,255,255,.12); border-radius: 8px; }
+    .form-error { display:none; color: #f4c2a8; font-size: .9rem; margin-top: .5rem; }
+    .cross-card { background: var(--sand); border-radius: 14px; padding: 1.4rem 1.6rem; margin: 2rem 0 1rem; border-left: 4px solid var(--green); }
+    .cross-card h3 { color: var(--green-dark); font-size: 1.1rem; margin-bottom: .4rem; }
+    .cross-card p { color: var(--text-soft); font-size: .95rem; margin-bottom: .6rem; line-height: 1.5; }
+    .cross-card a { color: var(--green); font-weight: 600; }
+    .cross-card a:hover { text-decoration: underline; }
+    footer { background: var(--green-dark); color: rgba(255,255,255,.7); text-align:center; padding: 2rem 1rem; margin-top: 2rem; }
+    footer a { color: rgba(255,255,255,.7); }
+    footer a:hover { color:#fff; }
+    @media (max-width: 540px) {
+      .hero { padding: 3rem 0 2.5rem; }
+      .scale { grid-template-columns: repeat(5, 1fr); gap: .25rem; }
+      .scale label { padding: .45rem .2rem; font-size: .72rem; min-height: 60px; }
+      .scale .num-val { font-size: .9rem; }
+      .question { padding: 1.2rem; }
+      .question h3 { font-size: 1rem; }
+      .intro-card, .result, .result-form { padding: 1.3rem; }
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VMMZ1TKWZ0');
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <a class="brand" href="index.html"><img src="logo-mindworld.png" alt="TWIM Project"></a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Test gratuito · 3 minutos</span>
+      <h1>¿Tengo síndrome de la impostora?</h1>
+      <p class="lead">10 preguntas para identificar si vives con la sensación de que "te van a descubrir" — y cuánto está afectando tu vida.</p>
+      <p class="meta"><i class="fa-solid fa-stopwatch"></i>3 min · <i class="fa-solid fa-lock"></i>Anónimo · <i class="fa-solid fa-envelope"></i>Análisis por email opcional</p>
+    </div>
+  </section>
+
+  <main>
+    <div class="container">
+      <article class="intro-card">
+        <p>El <strong>síndrome de la impostora</strong> no es un diagnóstico clínico, sino un patrón psicológico bien estudiado: gente competente que vive convencida de que sus logros se deben a la suerte, al engaño o a estar en el momento adecuado — nunca a su propia capacidad real.</p>
+        <p>Afecta especialmente a <strong>mujeres profesionales entre 25 y 50 años</strong>, perfiles altamente exigentes y personas que crecieron escuchando "siempre puedes más". Pero no es exclusivo: aparece en cualquiera que haya internalizado un juez interno demasiado severo.</p>
+        <p>Este test usa adaptaciones de la <em>Clance Impostor Phenomenon Scale</em> (1985), instrumento clínico estandarizado. Responde con honestidad — nadie va a leer tus respuestas excepto tú. El resultado es inmediato, y si luego quieres un análisis personalizado lo recibes por email.</p>
+      </article>
+
+      <p class="test-progress">Progreso: <span class="num" id="progress-num">0</span> / 10 preguntas</p>
+      <form id="impostor-test" novalidate>
+        <div class="question">
+          <h3><span class="qnum">1</span>He tenido éxito en proyectos a pesar de pensar que no estaba a la altura.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q1" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q1" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q1" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q1" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q1" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">2</span>Me preocupa que la gente importante en mi vida descubra que no soy tan capaz como creen.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q2" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q2" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q2" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q2" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q2" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">3</span>Tiendo a recordar más los errores que he cometido que las cosas que he hecho bien.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q3" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q3" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q3" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q3" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q3" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">4</span>Cuando recibo un cumplido sobre mi trabajo, me cuesta aceptarlo y tiendo a minimizarlo.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q4" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q4" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q4" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q4" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q4" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">5</span>A veces creo que mis logros se deben más a la suerte o al momento adecuado que a mi capacidad real.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q5" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q5" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q5" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q5" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q5" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">6</span>Cuando comparo mi capacidad con la de mis compañeros, casi siempre me siento por debajo.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q6" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q6" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q6" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q6" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q6" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">7</span>Me da miedo que la próxima vez que tenga que demostrar algo, no esté a la altura.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q7" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q7" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q7" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q7" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q7" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">8</span>Cuando tengo éxito en algo, suelo pensar que ha sido más fácil de lo que parecía y que cualquiera lo habría hecho.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q8" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q8" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q8" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q8" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q8" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">9</span>Me cuesta dormir antes de eventos importantes pensando que voy a fracasar o quedar mal.</h3>
+          <div class="scale">
+            <label><input type="radio" name="q9" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q9" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q9" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q9" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q9" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h3><span class="qnum">10</span>Si recibo críticas, aunque sean constructivas, me cuesta separarlas de "no soy lo suficientemente capaz".</h3>
+          <div class="scale">
+            <label><input type="radio" name="q10" value="1"><span class="num-val">1</span><span>Nunca</span></label>
+            <label><input type="radio" name="q10" value="2"><span class="num-val">2</span><span>Rara vez</span></label>
+            <label><input type="radio" name="q10" value="3"><span class="num-val">3</span><span>A veces</span></label>
+            <label><input type="radio" name="q10" value="4"><span class="num-val">4</span><span>A menudo</span></label>
+            <label><input type="radio" name="q10" value="5"><span class="num-val">5</span><span>Siempre</span></label>
+          </div>
+        </div>
+      </form>
+      <div class="submit-row">
+        <button type="button" id="show-result-btn" class="btn-result" disabled>Ver mi resultado →</button>
+        <p class="submit-hint" id="submit-hint">Responde las 10 preguntas para activar el botón.</p>
+      </div>
+      <section class="result" id="result-block" aria-live="polite">
+        <span class="score-badge" id="score-badge">Puntuación: <span id="score-num">--</span> / 50</span>
+        <h2 id="result-title">Tu resultado</h2>
+        <p class="interp" id="result-interp">—</p>
+
+        <div class="result-form" id="result-form-wrap">
+          <h3>¿Quieres un análisis personalizado por email?</h3>
+          <p style="color:rgba(255,255,255,.85); font-size:.95rem; margin-bottom:1rem;">Te mando una lectura más profunda de lo que indica tu puntuación, qué hay debajo del patrón, y por dónde se trabaja desde la psicología profunda. Sin spam, sin venta agresiva.</p>
+          <form id="lead-form" novalidate>
+            <input type="text" name="name" placeholder="Tu nombre" required autocomplete="name">
+            <input type="email" name="email" placeholder="Tu email" required autocomplete="email">
+            <button type="submit" id="lead-submit-btn">Enviarme el análisis</button>
+            <div class="form-error" id="lead-error"></div>
+          </form>
+          <p class="form-fine">Sin spam. Te puedes salir de un clic en cualquier email.</p>
+        </div>
+
+        <div class="form-success" id="form-success">
+          <p style="color:#fff; margin: 0;"><strong>Hecho.</strong> Te he escrito al correo. Mira tu bandeja (y revisa spam si no la ves).</p>
+        </div>
+      </section>
+      <article class="cross-card">
+        <h3>Mientras tanto, lectura recomendada</h3>
+        <p>Si quieres profundizar antes de recibir el email, este artículo desarrolla el mecanismo psicoanalítico del síndrome del impostor — qué juez interno se activa cuando todo va bien y por qué.</p>
+        <a href="insights/sindrome-del-impostor-cuando-mejor-te-va.html">Síndrome del impostor: por qué cuanto mejor te va, más miedo tienes a que se note →</a>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 TWIM Project · Daniel Orozco Abia · Psicólogo General Sanitario CV11515</p>
+      <p style="margin-top:.4rem;font-size:.85rem;"><a href="index.html">Inicio</a> · <a href="newsletter/">Te escribo</a> · <a href="privacidad.html">Privacidad</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const form = document.getElementById('impostor-test');
+    const submitBtn = document.getElementById('show-result-btn');
+    const submitHint = document.getElementById('submit-hint');
+    const progressNum = document.getElementById('progress-num');
+    const resultBlock = document.getElementById('result-block');
+    const scoreNum = document.getElementById('score-num');
+    const resultTitle = document.getElementById('result-title');
+    const resultInterp = document.getElementById('result-interp');
+
+    // Update progress + enable submit when all 10 are answered
+    form.addEventListener('change', () => {
+      const answered = new Set();
+      form.querySelectorAll('input[type=radio]:checked').forEach(i => answered.add(i.name));
+      progressNum.textContent = answered.size;
+      const complete = answered.size === 10;
+      submitBtn.disabled = !complete;
+      submitHint.textContent = complete ? '¡Listo! Pulsa para ver tu resultado.' : 'Responde las 10 preguntas para activar el botón.';
+    });
+
+    function interpretation(score) {
+      if (score <= 20) return {
+        title: 'Bajo · Síndrome del impostor poco presente',
+        text: 'Tu puntuación sugiere que el patrón impostor no está dominando tu vida. Eso no significa que no aparezca puntualmente — todos lo hacemos en momentos de exposición — pero no estructura cómo te ves a ti misma/o.',
+      };
+      if (score <= 30) return {
+        title: 'Moderado · Síntomas ocasionales',
+        text: 'Vives con síntomas impostor de intensidad moderada. Aparecen sobre todo en momentos de evaluación, exposición o cambio. Suele ser manejable, pero si lo trabajas un poco gana mucho margen tu vida profesional.',
+      };
+      if (score <= 40) return {
+        title: 'Frecuente · Síndrome del impostor establecido',
+        text: 'El patrón impostor está afectando tu día a día: en cómo te diriges al trabajo, cómo aceptas reconocimiento, cómo evalúas tus capacidades. Es un buen momento para mirar lo que hay debajo. Hay un trabajo concreto que puedes hacer.',
+      };
+      return {
+        title: 'Intenso · Está interfiriendo con tu bienestar',
+        text: 'Tu puntuación indica que el síndrome impostor está pesando mucho en tu vida emocional. La diferencia entre lo que sabes que vales y lo que sientes que vales es grande, y eso desgasta. Aquí el trabajo psicológico marca diferencia significativa.',
+      };
+    }
+
+    submitBtn.addEventListener('click', () => {
+      let total = 0;
+      for (let i = 1; i <= 10; i++) {
+        const v = form.querySelector(`input[name=q${i}]:checked`);
+        if (!v) return;
+        total += parseInt(v.value, 10);
+      }
+      const interp = interpretation(total);
+      scoreNum.textContent = total;
+      resultTitle.textContent = interp.title;
+      resultInterp.textContent = interp.text;
+      resultBlock.classList.add('visible');
+      resultBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (typeof gtag === 'function') gtag('event', 'impostor_test_completed', { score: total, band: interp.title.split(' · ')[0] });
+    });
+
+    // Lead form
+    const leadForm = document.getElementById('lead-form');
+    const leadError = document.getElementById('lead-error');
+    const leadSubmitBtn = document.getElementById('lead-submit-btn');
+    const leadFormWrap = document.getElementById('result-form-wrap');
+    const formSuccess = document.getElementById('form-success');
+
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = leadForm.querySelector('input[name=email]').value.trim();
+      const name = leadForm.querySelector('input[name=name]').value.trim();
+      if (!email || !email.includes('@')) {
+        leadError.textContent = 'Introduce un email válido.';
+        leadError.style.display = 'block';
+        return;
+      }
+      leadSubmitBtn.disabled = true;
+      const originalLabel = leadSubmitBtn.textContent;
+      leadSubmitBtn.textContent = 'Enviando...';
+      leadError.style.display = 'none';
+      try {
+        const score = parseInt(scoreNum.textContent, 10) || 0;
+        const res = await fetch('/.netlify/functions/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name, group: 'lead-magnet-impostora', meta: { test_score: score } }),
+        });
+        if (!res.ok) throw new Error('Request failed');
+        leadFormWrap.style.display = 'none';
+        formSuccess.style.display = 'block';
+        if (typeof gtag === 'function') gtag('event', 'impostor_lead_signup', { score });
+      } catch {
+        leadSubmitBtn.disabled = false;
+        leadSubmitBtn.textContent = originalLabel;
+        leadError.textContent = 'Algo no ha ido bien. Prueba en un momento o escríbeme a danielorozco@twimproject.com';
+        leadError.style.display = 'block';
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
