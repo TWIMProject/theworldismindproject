@@ -165,7 +165,7 @@ Cuando 2-3 deposits hayan pasado por todo el flujo (pagar → presentarse → re
 
 ---
 
-## 7 · Estado actual (29 abril 2026)
+## 7 · Estado actual (30 abril 2026)
 
 ✅ Decisión estratégica tomada (deposit 40 €)
 ✅ Productos taller 720 € creados en Stripe (live)
@@ -174,9 +174,12 @@ Cuando 2-3 deposits hayan pasado por todo el flujo (pagar → presentarse → re
 ✅ Grupos MailerLite "Inscritas" creados
 ✅ 2 automations TDAH/Bach creadas (draft) · email 4 actualizado con CTA deposit
 ✅ Cuenta Cal.com creada · URL pública: `https://cal.com/daniel-orozco/entrevista-informativa`
-⏳ Limit number of payments = 6 en los 2 Payment Links de 720 €
-⏳ Activar las 2 automations en MailerLite (pegar HTML rich + condicionales + acciones + sender + switch enabled)
-⏳ Conectar Cal.com como `success_url` en los 2 Payment Links de deposit
+✅ **`success_url` post-deposit cableado vía API Stripe (30 abril 2026):**
+  - TDAH `plink_1TRaXJFW3OLCwM3HTufzolAL` → `https://twimproject.com/talleres/gracias-reserva.html?utm_source=stripe&utm_taller=tdah`
+  - Bach `plink_1TRapuFW3OLCwM3H7CVk5y89` → `https://twimproject.com/talleres/gracias-reserva.html?utm_source=stripe&utm_taller=bach`
+  - `after_completion.type` = `redirect` en ambos (verificado por API).
+⏳ Limit number of payments = 6 en los 2 Payment Links de 720 € (API no expone el campo, manual desde dashboard)
+⏳ Activar las 2 automations en MailerLite — **bloqueado por API**: ni la API v3 ni el MCP de MailerLite exponen el toggle `enabled` ni el editor HTML rico ni los pasos `condition`/`copy-to-group`/`remove-from-group`. El switch del dashboard es el único camino. Pasos manuales en § 8 · Paso B (~25 min).
 ⏳ Actualizar bio Author Central de Amazon (quitar "Un Psicólogo Random")
 ⏳ Subir sitemap.xml a Search Console
 
@@ -186,23 +189,22 @@ Cuando 2-3 deposits hayan pasado por todo el flujo (pagar → presentarse → re
 
 Estos 3 pasos abren el funnel pasivo al 100%. Tiempo estimado total: **~35 min**.
 
-### Paso A · Stripe — redirect post-deposit (3 min × 2 = 6 min)
+### Paso A · Stripe — redirect post-deposit · ✅ COMPLETADO 30 abril 2026
 
-Para cada uno de los 2 Payment Links de **deposit 40 €** (TDAH y Bach):
+Cableado vía Stripe API (MCP) en ambos Payment Links de deposit 40 €:
 
-1. Entra a [dashboard.stripe.com/payment-links](https://dashboard.stripe.com/payment-links)
-2. Click en el Payment Link → botón **Editar**
-3. Sección **"Tras el pago"** → cambia de "Mostrar página de confirmación" a **"Redirigir a tu sitio web"**
-4. Pega **una de estas dos URLs** (recomendada la primera):
-   - **`https://twimproject.com/talleres/gracias-reserva.html`** ← recomendada: página intermedia con branding TWIM, 3 pasos claros, CTA Cal.com + WhatsApp/email de respaldo, GA4 event `taller_deposit_paid`
-   - `https://cal.com/daniel-orozco/entrevista-informativa` ← redirect directo a Cal.com (más rápido pero sin contexto)
-5. **Guardar**
+| Payment Link | Redirect URL |
+|---|---|
+| `plink_1TRaXJFW3OLCwM3HTufzolAL` (TDAH) | `https://twimproject.com/talleres/gracias-reserva.html?utm_source=stripe&utm_taller=tdah` |
+| `plink_1TRapuFW3OLCwM3H7CVk5y89` (Bach) | `https://twimproject.com/talleres/gracias-reserva.html?utm_source=stripe&utm_taller=bach` |
 
-Repite para el otro Payment Link.
+`after_completion.type` ahora es `redirect` (antes `hosted_confirmation`). El flujo `pago → gracias-reserva.html → Cal.com` queda activo de extremo a extremo.
 
-> Bonus opcional: añade UTM al final, ej: `?utm_source=stripe&utm_taller=tdah` para distinguir origen en GA4.
+> Para revertir (si hiciera falta): `stripe payment_links update <id> --after_completion[type]=hosted_confirmation`.
 
-### Paso B · MailerLite — activar las 2 automations (~25 min)
+### Paso B · MailerLite — activar las 2 automations (~25 min, manual dashboard)
+
+> Auditoría 30 abril 2026: la API pública de MailerLite v3 (y el MCP) NO exponen el toggle `enabled` ni el editor HTML rico ni los pasos de tipo `condition` / `copy-to-group` / `remove-from-group`. Sólo se puede modificar `subject` y `plain_text` de cada email vía API. **El paso B es manual sí o sí desde el dashboard.**
 
 Pasos detallados en `email-templates/CHECKLIST-MAILERLITE-TALLERES.md` § 3 y § 4. Resumen ejecutivo:
 
@@ -252,4 +254,4 @@ Padre busca "psicólogo TDAH adolescentes Valencia" en Google
 **Lo único manual que queda en este flujo:** procesar el reembolso del deposit tras la reunión y enviar el Payment Link de 720 € si encaja. Ambos son acciones de 30 segundos cada una desde el dashboard de Stripe.
 
 **Para 100% automático** falta el webhook Stripe → Netlify Function → MailerLite (que mueve a "Inscritas" al cobrar 720 €). Lo monto cuando hayas validado el funnel manual con 1-2 inscripciones reales.
-⏳ Cal.com URL ya creada (`https://cal.com/daniel-orozco/entrevista-informativa`) — **falta cablear como `success_url` en los 2 Payment Links de deposit** (Stripe MCP estaba desconectado al momento de cablearla).
+✅ Cal.com URL creada (`https://cal.com/daniel-orozco/entrevista-informativa`) — el redirect post-deposit pasa primero por `/talleres/gracias-reserva.html` (con UTM `utm_taller=tdah|bach`), que contiene el CTA hacia Cal.com.
