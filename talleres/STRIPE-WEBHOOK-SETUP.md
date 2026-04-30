@@ -25,12 +25,12 @@
 
 Site configuration → Environment variables → **Add variable**:
 
-| Variable | Valor | De dónde |
-|---|---|---|
-| `STRIPE_WEBHOOK_SECRET` | `whsec_...` | Lo da Stripe al crear el endpoint (paso 2.2) |
-| `STRIPE_SECRET_KEY` | `sk_live_...` | https://dashboard.stripe.com/apikeys → "Secret key" |
-| `MAILERLITE_GROUP_INSCRITAS_TDAH` | `186093787887437444` | Ya documentado |
-| `MAILERLITE_GROUP_INSCRITAS_BACH` | `186093790595909010` | Ya documentado |
+| Variable | Valor | De dónde | Obligatoria |
+|---|---|---|---|
+| `STRIPE_WEBHOOK_SECRET` | `whsec_...` | Lo da Stripe al crear el endpoint (paso 2.2) | ✅ |
+| `STRIPE_SECRET_KEY` | `sk_live_...` | https://dashboard.stripe.com/apikeys → "Secret key" | ✅ (sin esto la función no puede leer el `price_id`) |
+| `MAILERLITE_GROUP_INSCRITAS_TDAH` | `186093787887437444` | Ya documentado | ✅ |
+| `MAILERLITE_GROUP_INSCRITAS_BACH` | `186093790595909010` | Ya documentado | ✅ |
 
 `MAILERLITE_API_KEY` ya existe (la usa `subscribe.js`).
 
@@ -91,10 +91,14 @@ Dashboard Stripe → Webhooks → tu endpoint → tab "Events". Cada evento mues
 
 | Error | Causa probable | Solución |
 |---|---|---|
-| `400 Invalid signature` | `STRIPE_WEBHOOK_SECRET` mal configurada o usaste el de modo test en producción | Re-copia el secret desde Stripe Dashboard |
-| `500 Webhook not configured` | Falta env var `STRIPE_WEBHOOK_SECRET` | Añadir en Netlify y re-deploy |
+| `400 invalid_signature` | `STRIPE_WEBHOOK_SECRET` mal configurada, secret de test en producción, o reloj del servidor desfasado >5 min | Re-copia el secret desde Stripe Dashboard. Si persiste con el secret correcto, abre incidencia con Netlify (clock drift) |
+| `500 config_missing` con `missing_env_vars: [...]` | Falta alguna env var requerida | Añadir las que indique el body de la respuesta y re-deploy |
+| `500 line_items_unavailable` (retriable) | Stripe API devolvió 5xx/429 al pedir line items, o timeout de red | Stripe reintenta automáticamente. Ver Netlify logs si persiste |
+| `200 ignored: line_items_unavailable` (no retriable) | Stripe API devolvió 4xx (auth fallida, sesión inválida) | Verifica `STRIPE_SECRET_KEY` |
 | `200 ignored: no_taller_match` | Compraste algo que NO es uno de los 2 talleres 720 € (deposit, otro producto). **Esperado.** | Ninguna, es la respuesta correcta |
-| `200 mailerlite_error: ...` | El email ya estaba en MailerLite con conflicto, o API key caducada | Ver mensaje exacto en log |
+| `500 mailerlite_retriable` | MailerLite devolvió 5xx/429 (rate limit, server error). Stripe reintenta | Si persiste, verificar status MailerLite |
+| `200 mailerlite_error: 4xx` | Email ya existía con conflicto / validación rechazada | Ver mensaje exacto en log; reproceso manual si hace falta |
+| `500 group_env_missing` con `missing_env_var: ...` | El price_id mapea a un grupo pero la env var del grupo no está | Añadir la env var indicada y re-deploy |
 
 ---
 
