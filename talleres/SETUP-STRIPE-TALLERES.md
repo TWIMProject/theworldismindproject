@@ -1,6 +1,8 @@
 # Checklist Stripe · Payment Links Talleres
 
 > **Para qué sirve:** crear los 2 productos en Stripe y obtener los Payment Links para que cada padre pueda reservar plaza con un solo clic, sin gestión manual tuya. Tiempo estimado: **15-20 min** total.
+>
+> ⚠️ **Estado a 29 abril 2026:** los 2 productos + precios + Payment Links **YA están creados vía API** (cuenta `acct_1Rbl1IFW3OLCwM3H`, livemode). Ver `PAYMENT-LINKS.md` con las URLs y los IDs. Lo único que queda manual es el **paso 3 (Limit number of payments = 6)** dentro del dashboard, que la API no expone. Este documento queda como referencia histórica.
 
 ---
 

@@ -19,7 +19,19 @@
 - `email-templates/talleres-tdah/` (4 emails)
 - `email-templates/talleres-bachillerato/` (4 emails)
 
-**Lo que NO se puede automatizar vía API y tienes que hacer tú en MailerLite:** crear los grupos extra, pegar los emails en plantillas, montar la automatización (workflow) que los envía con los retrasos correctos.
+✅ **Grupos `Inscritas` creados vía API (29 abril 2026):**
+- `Taller TDAH - Inscritas` → ID `186093787887437444`
+- `Taller Bachillerato - Inscritas` → ID `186093790595909010`
+
+✅ **Stripe Payment Links activos** (ver `talleres/PAYMENT-LINKS.md`):
+- TDAH 720 € → `https://buy.stripe.com/28E5kD5T45SZasP8jm2sM08`
+- Bach 720 € → `https://buy.stripe.com/3cI7sL2GS81758vgPS2sM09`
+
+⏳ **Pendiente que añadas en Netlify** (para el webhook futuro):
+- `MAILERLITE_GROUP_INSCRITAS_TDAH` = `186093787887437444`
+- `MAILERLITE_GROUP_INSCRITAS_BACH` = `186093790595909010`
+
+**Lo que sigue siendo manual en MailerLite:** pegar los 8 emails en plantillas y montar las 2 automatizaciones con condicionales (la API solo soporta `email` + `delay` — los pasos condicionales hay que añadirlos en el dashboard).
 
 ---
 
@@ -32,11 +44,11 @@ Ve a **Suscriptores → Grupos**. Confirma que existen:
 | **Padres Talleres TDAH** | Padres con interés en TDAH (form landing TDAH) | `MAILERLITE_GROUP_PADRES_TDAH` | ✅ |
 | **Padres Talleres Bachillerato** | Padres con interés en Bachillerato (form landing) | `MAILERLITE_GROUP_PADRES_BACH` | ✅ |
 | **Padres Talleres Adolescentes** | Form genérico de descarga PDF en homepage | `MAILERLITE_GROUP_PADRES_TALLERES` | ✅ |
-| **Taller TDAH - Inscritas** | Padres que YA han pagado plaza TDAH | — | ❓ Crear si no existe |
-| **Taller Bachillerato - Inscritas** | Padres que YA han pagado plaza Bachillerato | — | ❓ Crear si no existe |
+| **Taller TDAH - Inscritas** | Padres que YA han pagado plaza TDAH | `MAILERLITE_GROUP_INSCRITAS_TDAH` | ✅ creado vía API |
+| **Taller Bachillerato - Inscritas** | Padres que YA han pagado plaza Bachillerato | `MAILERLITE_GROUP_INSCRITAS_BACH` | ✅ creado vía API |
 | **Lista General TWIM** | Lista paraguas para newsletter | `MAILERLITE_GROUP_GENERAL` | ✅ |
 
-**Acción:** crea los dos grupos *"Inscritas"* si no existen. Servirán para:
+Los 2 grupos *"Inscritas"* sirven para:
 1. Cortar la secuencia automáticamente cuando el padre ya ha pagado.
 2. Mover al padre a una lista de comunicación post-inscripción.
 
@@ -76,9 +88,73 @@ Por cada uno de los 8 archivos HTML en `email-templates/talleres-*/`, crea un em
 
 ## 3 · Crear automatización TDAH (10 min)
 
-**Automatizaciones → Crear nueva → Cuando un suscriptor se une a un grupo**
+✅ **YA CREADA vía API (29 abril 2026 · en draft, sin activar):**
+- ID: `186094472462862106`
+- URL dashboard: https://dashboard.mailerlite.com/automations/186094472462862106
+- Trigger: `subscriber_joins_group` → `Padres Talleres TDAH` (`184266598608012376`)
+- Estructura creada: 4 emails + 3 delays de 3 días con asunto y contenido en plain text
 
-### Configuración general
+✅ **Conflicto resuelto (29 abril 2026):** la automation antigua `Taller TDAH · Nurturing guía` (`184339743593464945`) **fue eliminada vía API** tras audit comparativo. Razones:
+
+| Criterio | Antigua (eliminada) | Nueva (mantenida) |
+|---|---|---|
+| Coherencia con strategy actual | ❌ Caso "Marcos" descrito como "16 años, 2º Bachillerato" en flujo TDAH/ESO | ✅ Marcos = 3º-4º ESO con TDAH |
+| Match con `email-templates/talleres-tdah/` | ❌ Contenido distinto al canónico | ✅ Contenido idéntico |
+| Cadencia según runbook | ❌ 2-3-4 días | ✅ 3-3-3 días |
+| Asuntos según runbook | ❌ "Las notas no son el síntoma", etc. | ✅ "Lo que hay debajo de 'es que soy tonto'", etc. |
+| Stats / subscribers en queue | 0 / 0 (nunca disparó) | 0 / 0 |
+| Diseño HTML hecho | ✅ Sí (pero contenido desalineado) | ❌ No (Daniel lo pega) |
+
+El único activo de la antigua era el HTML diseñado, pero el contenido en sí estaba desalineado con el copy actual — Daniel tendría que reescribirlo entero igualmente. Coste de la decisión: 0 envíos perdidos (nunca disparó), Daniel pega el HTML una vez en lugar de dos.
+
+⏳ **Lo que aún tienes que hacer en el dashboard de la nueva:**
+1. **Diseño visual**: cada email lleva contenido en plain text (la API no expone el editor HTML rich). Ve a cada paso de email → editor → "Source / HTML" → pega el HTML completo desde `email-templates/talleres-tdah/email-N-*.html`. ~5 min por email × 4 = 20 min. **NOTA:** el HTML de `email-4-reserva-plaza.html` ya tiene el botón "Reservar entrevista · 40 €" apuntando al Payment Link Stripe del deposit.
+2. **Pasos condicionales**: la API solo soporta `email` + `delay`, no `if-then-exit`. Tras cada delay, añade un bloque `Condition: subscriber is in group "Taller TDAH - Inscritas"` → SÍ exit / NO continuar. 3 condicionales en total.
+3. **Acciones finales**: tras el email 4 + 1 día de espera, añade `Acción: Copy subscriber to "Lista General TWIM"` y `Acción: Remove from "Padres Talleres TDAH"`.
+4. **Sender**: confirma que el remitente del email (from name + email) está configurado correctamente.
+5. **Email 4 (subject + plain text fallback)**: la versión actual menciona "Reservar plaza" pero la estrategia ahora es deposit 40 €. Cambia:
+   - **Asunto:** `Reserva tu entrevista por 40 € (te los devuelvo si vienes)`
+   - **Plain text fallback:** sustituye el bloque final del email por la versión deposit (ver §3.1 abajo).
+
+### 3.1 · Plain text actualizado para email 4 TDAH (deposit)
+
+```
+Hola {$name},
+
+Este es el último email de la secuencia. Te paso los detalles concretos del taller para que puedas decidir con información.
+
+TALLER TDAH ADOLESCENTES · MÁS ALLÁ DEL TDAH
+
+· Adolescentes de 3º y 4º de ESO con TDAH
+· 16 sesiones · Presencial en Valencia
+· Grupo cerrado de 6 · Inicio septiembre 2026
+· Inversión taller: 720 €
+· Dirigido por Daniel Orozco · CV11515
+
+Qué se trabaja: autoestima más allá del rendimiento académico, regulación emocional, identidad adolescente, habilidades de organización reales (no las genéricas), y construcción de un grupo de pares con experiencias similares.
+
+Qué no es: no es una clase de repaso. No es reeducación psicopedagógica. No sustituye a la medicación ni al psiquiatra. Es un trabajo de fondo sobre quién es tu hijo cuando deja de mirarse solo a través de las notas.
+
+CÓMO SE ENTRA AL TALLER
+
+1. Reservas la entrevista informativa de 1h30 con un depósito de 40 € (link abajo).
+2. Si te presentas, te devuelvo los 40 € íntegros — la entrevista es gratuita en concepto.
+3. Si tras la reunión vemos que el formato encaja, te paso el enlace para pagar el taller (720 €).
+4. Si no encaja, te lo digo claro y te devuelvo el depósito.
+
+El depósito es solo el filtro para que la reunión vaya en serio (sin él, llega gente que cancela el día antes y nunca arrancamos).
+
+RESERVAR ENTREVISTA · 40 €
+https://buy.stripe.com/9B6dR9bdo95bfN99nq2sM0a
+
+O responde a este email directamente si prefieres preguntar antes de pagar.
+
+Un abrazo,
+Daniel Orozco
+Psicólogo General Sanitario · CV11515
+```
+
+### Configuración general (referencia histórica)
 - **Nombre interno:** `Secuencia Padres TDAH`
 - **Trigger:** `Cuando el suscriptor se une al grupo: Padres Talleres TDAH`
 
@@ -113,12 +189,20 @@ Por cada uno de los 8 archivos HTML en `email-templates/talleres-*/`, crea un em
 
 ## 4 · Crear automatización Bachillerato (5 min)
 
-Idéntica a la TDAH pero apuntando al grupo `Padres Talleres Bachillerato` y a las plantillas Bach. Reemplaza:
-- Trigger group: `Padres Talleres Bachillerato`
-- Condition group: `Taller Bachillerato - Inscritas`
-- 4 plantillas Bach en lugar de TDAH
+✅ **YA CREADA vía API (29 abril 2026 · en draft, sin activar):**
+- ID: `186094552519541764`
+- URL dashboard: https://dashboard.mailerlite.com/automations/186094552519541764
+- Trigger: `subscriber_joins_group` → `Padres Talleres Bachillerato` (`184266663513818179`)
+- Estructura creada: 4 emails + 3 delays de 3 días con asunto y contenido en plain text
 
-(Si MailerLite te deja duplicar el workflow TDAH, hazlo y solo cambia los grupos y plantillas — más rápido.)
+⏳ **Lo que aún tienes que hacer en el dashboard:**
+1. Pegar el HTML rico de `email-templates/talleres-bachillerato/email-N-*.html` en cada email (modo "Source / HTML"). **NOTA:** el HTML de `email-4-reserva-plaza.html` ya tiene el botón "Reservar entrevista · 40 €" apuntando al Payment Link Stripe del deposit Bach.
+2. Añadir los 3 condicionales `is in "Taller Bachillerato - Inscritas"` → SÍ exit / NO continuar
+3. Tras el email 4 + 1 día: `Copy to "Lista General TWIM"` + `Remove from "Padres Talleres Bachillerato"`
+4. Verificar sender
+5. **Email 4 (subject + plain text fallback)**:
+   - **Asunto:** `Reserva tu entrevista por 40 € (te los devuelvo si vienes)`
+   - **Plain text:** mismo bloque que TDAH §3.1 sustituyendo "TDAH adolescentes" → "Bachillerato", "3º y 4º de ESO con TDAH" → "1º y 2º de Bachillerato", y la URL final por `https://buy.stripe.com/28E7sLchsgxD58varu2sM0b`
 
 ---
 
