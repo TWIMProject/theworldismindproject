@@ -10,9 +10,9 @@
 
 | Fase | Herramienta | Coste | Cuándo |
 |---|---|---|---|
-| **Hoy (1 persona, 12 piezas/mes)** | Meta Business Suite | Gratis | Mayo–Julio 2026 |
-| **Cuando quieras preview del grid** | Metricool | ~12 €/mes | A partir de Junio si Meta Business Suite se queda corto |
-| **Cuando contrates VA** | Metricool (la VA programa, Daniel produce) | Mismo coste | Junio 2026 según doc CEO §7 |
+| **Hoy (1 persona, 12 piezas/mes)** | Meta Business Suite | Gratis | mayo–julio 2026 |
+| **Cuando quieras preview del grid** | Metricool | ~12 €/mes | a partir de junio si Meta Business Suite se queda corto |
+| **Cuando contrates VA** | Metricool (la VA programa, Daniel produce) | Mismo coste | junio 2026 según doc CEO §7 |
 | **Si abres LatAm con producto propio** | Metricool plan superior o Later | 25-50 €/mes | 2027+ |
 
 **Regla cardinal:** automatizar la *subida* (5 min/post) no resuelve el cuello de botella real, que es **producir 12 piezas/mes según sistema visual**. La automatización útil llega cuando hay batching mensual + asistente programando.
@@ -61,7 +61,7 @@ URL: https://later.com
 
 Caro (~99 $/mes), enterprise, overkill total para tu caso.
 
-### 1.6 · Make / Zapier / n8n + API Graph — NO recomendado todavía
+### 1.6 · Make / Zapier / n8n + Instagram Graph API — NO recomendado todavía
 
 Automatización avanzada vía API (publicación condicional, integración con Notion/Airtable, generación dinámica). Tiene sentido cuando:
 
@@ -90,7 +90,7 @@ Hoy no aplica. Volverá a aparecer en 2027 si TWIM crece según el supuesto ambi
 2. Verificar que la cuenta de Instagram @daniorozcopsicologo está conectada a la página de Facebook de TWIM Project.
 3. Ir a **Planificador** (icono calendario lateral).
 4. Subir las 12 piezas del mes desde la sesión de batching (ver §4).
-5. Programar cada pieza al horario óptimo (lunes 19:00, miércoles 19:00, viernes 19:00 — el calendario del doc IG §11.3).
+5. Programar cada pieza al horario óptimo (sugerido: lunes/miércoles/viernes a las 19:00; el calendario base está en `instagram-sistema-visual-marca.md` §11.3, sin horarios — los horarios se ajustan según analítica de tu audiencia).
 6. Caption pegada para cada pieza.
 7. Cover de reel subido manualmente (cuando aplique).
 
@@ -101,7 +101,7 @@ Hoy no aplica. Volverá a aparecer en 2027 si TWIM crece según el supuesto ambi
 3. Subir las piezas al **Planner** mensual.
 4. Usar la vista **Grid Preview** para confirmar que la cuadrícula mantiene el patrón A1/A2/Reel del sistema visual.
 5. Programar.
-6. Una vez al mes revisar la pestaña **Analytics** para los KPIs del doc IG §13.1 (saves, shares, conversión a bio link).
+6. Una vez al mes revisar la pestaña **Analytics** para los KPIs definidos en `instagram-sistema-visual-marca.md` §13.1 (saves, shares, conversión a bio link).
 
 ---
 
