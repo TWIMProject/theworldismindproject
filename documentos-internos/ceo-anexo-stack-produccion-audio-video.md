@@ -8,11 +8,11 @@
 
 ## Por qué este anexo existe
 
-El doc CEO original se escribió antes de saber que TWIM tiene:
+El doc CEO original se escribió sin incorporar este detalle actualizado sobre los activos ya existentes de TWIM y el stack hoy disponible:
 
-- **Canal YouTube @daniorozcopsicologo con 10,1K suscriptores.** Ya cumple criterios de monetización (1.000 subs + 4.000h watch o 10M Shorts views).
-- **TWIM Podcast · Psicología Aplicada** con 4 episodios publicados en Spotify y YouTube.
-- **Los Invitados · TWIM Podcast** con 15 episodios en formato entrevistas.
+- **Canal YouTube @daniorozcopsicologo con 10,1K suscriptores.** Ese volumen cambia por completo la evaluación de ROI frente a un canal arrancando desde cero, y además ya cumple criterios de monetización (1.000 subs + 4.000h watch o 10M Shorts views).
+- **TWIM Podcast · Psicología Aplicada** con 4 episodios ya publicados en Spotify y YouTube.
+- **Los Invitados · TWIM Podcast** con 15 episodios ya publicados en formato entrevistas.
 - **NotebookLM** disponible como herramienta de organización de fuentes y generación de estructura.
 - **ElevenLabs** como herramienta de clonación de voz (decisión confirmada por Daniel el 30-04-2026).
 
@@ -39,9 +39,9 @@ Sigue siendo válida la regla original sobre **no abrir un canal de YouTube nuev
 
 ## 2 · Adición a §6.3 — la cuarta palanca
 
-El doc CEO §6.3 listaba 5 palancas. Esta es la sexta (y conviene situarla como #4 por orden de impacto):
+El doc CEO §6.3 listaba 5 palancas. Aquí se añade una nueva palanca, que conviene situar como #4 por orden de impacto:
 
-### Palanca #4 nueva — Stack de producción audio + vídeo
+### Nueva palanca #4 — Stack de producción audio + vídeo
 
 Compuesta por cuatro herramientas que trabajan juntas:
 
