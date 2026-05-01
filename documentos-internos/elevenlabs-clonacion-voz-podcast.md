@@ -19,7 +19,7 @@
 
 ## 1 · Por qué ElevenLabs y no otro
 
-| Herramienta | Verdicto | Motivo |
+| Herramienta | Veredicto | Motivo |
 |---|---|---|
 | **ElevenLabs** | ✅ Recomendado | Mejor calidad de clonación, naturalidad, prosodia. ToS claro para uso comercial. |
 | Resemble.ai | ⚠️ Alternativa | Calidad sólida, plan empresarial, más caro a poco volumen. Útil como backup. |

@@ -132,7 +132,7 @@ Cada uno con su PR independiente. Como hicimos con los 5 PRs anteriores.
 - **Construir por bloques.** Empezar con `Write` esqueleto, luego ir añadiendo con `Edit`. Igual que se hizo con los docs de hoy. Evita timeout.
 - **Tono:** honesto, sin hype, con criterio de Daniel-CEO mirando al negocio. Igual que doc CEO + anexo + ElevenLabs.
 - **Decisiones cocidas:** las decisiones ya están tomadas en este TODO. NO volver a abrir debate sobre Opción 2 (ElevenLabs con disclosure), ritmo (1 cada 2 semanas), Audio Overviews directos (NO publicar). Documentar la decisión, no relitigar.
-- **Tras cada doc:** commit + push + crear PR. Misma rama `claude/seo-lead-funnel-AerVG`.
+- **Tras cada doc:** commit + push + crear PR. Reutilizar la rama de trabajo actual si sigue siendo la adecuada; si no, crear una nueva siguiendo la convención de ramas del repo.
 - **Borrar este archivo TODO-PENDIENTE.md después** de generar los 3 docs (para que no quede residual).
 
 ---
