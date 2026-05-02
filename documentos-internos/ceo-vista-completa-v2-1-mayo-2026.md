@@ -362,7 +362,7 @@ Cuatro tipos de actores:
 
 > *"Es un psicólogo de Valencia que escribe en serio y no dice tonterías motivacionales."*
 
-El trabajo de los próximos 12 meses no es cambiar este posicionamiento — es **amplificarlo sin diluirlo** cuando el embudo escale. Y ahora con el podcast y YouTube, también: *"y el que trae el psicoanálisis aplicado a la cotidiano sin ridiculizarlo"*.
+El trabajo de los próximos 12 meses no es cambiar este posicionamiento — es **amplificarlo sin diluirlo** cuando el embudo escale. Y ahora con el podcast y YouTube, también: *"y el que trae el psicoanálisis aplicado a lo cotidiano sin ridiculizarlo"*.
 
 ### 6.3 · Referentes de la categoría
 
@@ -416,7 +416,7 @@ A 30 abril 2027:
 - **TWIM Clinic**: 2-3 asociados (Sergio + especialista parejas + posiblemente trauma).
 - **Equipo**: 1 VA a tiempo parcial + posible diseñadora freelance puntual.
 
-### 7.3 · Las 5 palancas que mueven todo (actualizadas)
+### 7.3 · Las 6 palancas que mueven todo (actualizadas)
 
 1. **Volumen de la newsletter.** Cada suscriptor cualificado vale 5-50 € de LTV. Llegar a 2.000 suscriptores es la palanca #1.
 2. **Cierre del segundo programa monetizable** (probablemente burnout, dado el racimo editorial maduro).
@@ -491,7 +491,7 @@ A 30 abril 2027:
 
 ### 10.1 · Riesgo de seguridad / cumplimiento
 
-- **Token Netlify expuesto pendiente de rotar.** En CLAUDE.md está marcado: `nfp_Fe7FsD3Uv9UtsLmz9broLYSad2PKqh9E4d2e`. 5 minutos de tarea. Hacerlo esta semana.
+- **Token Netlify expuesto — pendiente de rotar inmediatamente.** El literal del token ha sido redactado del repo el 1-may-2026 (`nfp_***REDACTED***` en su lugar). Pero estuvo expuesto durante un periodo de tiempo: hay que asumir compromiso y rotarlo **ya**. Acción: ir a https://app.netlify.com/user/applications, revocar, generar nuevo, actualizar `.env.audit`. **5 minutos. Acción inmediata, no esta semana.**
 - **MFA (2FA) en Netlify desactivado.** 5 minutos.
 - **No hay copia de seguridad declarada de la lista de MailerLite.** Buena práctica: exportar CSV mensual + cifrar + Drive.
 - **Política de privacidad** (`privacy.html`) — revisar anualmente con texto actualizado para Pixel Meta + GA4 + ElevenLabs (cuando se active).

@@ -402,7 +402,7 @@ No son urgentes esta semana, pero conviene no perderlos de vista.
 
 ### 9.1 · Riesgo de seguridad / cumplimiento
 
-- **Token Netlify expuesto pendiente de rotar.** En CLAUDE.md está marcado: `nfp_Fe7FsD3Uv9UtsLmz9broLYSad2PKqh9E4d2e`. Cualquiera con ese token podría desplegar en tu site. Tarea de 5 minutos: ir a `https://app.netlify.com/user/applications`, revocar, generar uno nuevo, actualizar `.env.audit`.
+- **Token Netlify expuesto pendiente de rotar.** Literal eliminado del repo el 1-may-2026 (estaba marcado en CLAUDE.md como `nfp_***REDACTED***`). Cualquiera que tuviera ese token mientras estuvo en el repo podría desplegar en tu site. Tarea inmediata: ir a https://app.netlify.com/user/applications, revocar, generar uno nuevo, actualizar `.env.audit`.
 - **MFA (2FA) en Netlify desactivado.** Mismo nivel de prioridad. 5 minutos.
 - **No hay copia de seguridad declarada de la lista de MailerLite.** 30 suscriptores hoy; pronto serán 2.000. Cuando seas dependiente de esa lista, si pierdes acceso a la cuenta o ML cierra una funcionalidad, te quedas en cero. Buena práctica: exportar la lista a CSV una vez al mes y guardarla cifrada en una carpeta local + cloud.
 - **Posibles cuestiones LOPD/GDPR del Pixel + email marketing**. Tu política de privacidad existe (`privacy.html`) — vale la pena revisarla anualmente con un texto actualizado para Pixel de Meta + Google Analytics. No es urgente, pero pasa de "no urgente" a "muy urgente" el día que recibes una reclamación.
