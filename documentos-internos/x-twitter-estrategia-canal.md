@@ -24,7 +24,7 @@
 
 ### Branding del perfil
 
-✅ **Banner en marca TWIM.** Verde oscuro #173D30, tipografía editorial, tagline "Sobre la mente, el cansancio y lo que no se dice." con firma "Daniel Orozco Abia · Psicología profunda y aplicada · twimproject.com". Producido y guardado en `contenido-rrss/perfil-x/banner-x-editorial.png` y `banner-x-tagline.png`.
+✅ **Banner en marca TWIM.** Verde oscuro #173D30, tipografía editorial, tagline "Sobre la mente, el cansancio y lo que no se dice." con firma "Daniel Orozco Abia · Psicología profunda y aplicada · twimproject.com". Assets producidos en `contenido-rrss/perfil-x/banner-x-editorial.png` y `contenido-rrss/perfil-x/banner-x-tagline.png`.
 
 ✅ **Avatar coherente** con resto de canales (foto de Daniel sobre fondo verde).
 
@@ -81,7 +81,7 @@ Formato: 6-12 tweets numerados (1/x, 2/x...) que desarrollan un concepto clínic
 3. **Tweet final:** cierre + CTA suave (ej: "→ He escrito sobre esto largo en twimproject.com" o "→ Cada tanto envío una carta sobre esto: twimproject.com/newsletter").
 
 **Material ya producido en el repo (listos para publicar):**
-- `contenido-rrss/te-escribo-cansancio-psiquico/thread-x.txt` — programar para martes 5 mayo 19:00 CET (junto con Carta #1).
+- `contenido-rrss/te-escribo-cansancio-psiquico/thread-x.txt` — programar para martes 5 mayo 19:00 CEST (junto con Carta #1).
 - `contenido-rrss/te-escribo-saberlo-no-te-lo-quita/thread-x.txt` — programar para semana 2 (12 mayo).
 
 ### 4.2 · Single tweets contundentes (citas visuales)
@@ -128,19 +128,21 @@ X premia interacción genuina. Estrategia:
 
 ### 6.1 · Mes 1 (mayo 2026) — arranque
 
-- **3 hilos editoriales/semana** (martes, jueves, sábado).
-- **2 single tweets/semana** (lunes y viernes).
+- **2 hilos editoriales/semana** (martes y viernes).
+- **1 single tweet/semana** (intercalado, jueves).
 - **3-5 respuestas/día a cuentas de la categoría** (engagement).
 - **0 follows nuevos** durante 30 días para equilibrar el ratio.
+
+> Cadencia conservadora deliberada para arranque sin asistente. Sostenible para Daniel solo. Si se acelera el ritmo antes de tiempo, se rompe la consistencia que justamente X premia.
 
 ### 6.2 · Mes 2-3 — consolidación
 
 - **2 hilos editoriales/semana.**
-- **3 single tweets/semana.**
+- **2-3 single tweets/semana.**
 - **5-10 respuestas/día.**
 - **Follow selectivo** a cuentas de la categoría (no más de 5/semana).
 
-### 6.3 · Mes 4+ — sostenimiento
+### 6.3 · Mes 4+ — sostenimiento (con VA o sin ella)
 
 - **1-2 hilos/semana** (uno reciclado de podcast/IG, otro propio).
 - **3-5 single tweets/semana.**
@@ -148,17 +150,19 @@ X premia interacción genuina. Estrategia:
 
 ### 6.4 · Calendario piloto mayo 2026
 
+> Todas las horas en zona Europe/Madrid (CEST en mayo, UTC+2). Cadencia: 2 hilos + 1 single tweet por semana.
+
 | Fecha | Hora | Pieza | Estado |
 |---|---|---|---|
-| 5 mayo | 19:00 | Hilo "cansancio psíquico" (`te-escribo-cansancio-psiquico/thread-x.txt`) | ✅ Producido |
-| 7 mayo | 19:00 | Single tweet · cita Carta #1 | Pendiente redactar |
-| 9 mayo | 19:00 | Hilo reciclado de carrusel IG semana | Pendiente |
-| 12 mayo | 19:00 | Hilo "saberlo no te lo quita" | ✅ Producido |
-| 14 mayo | 19:00 | Single tweet · concepto del libro | Pendiente |
-| 16 mayo | 19:00 | Hilo reciclado de carrusel IG | Pendiente |
-| 19 mayo | 19:00 | Hilo extracto de Carta #2 "La voz que te juzga" | Pendiente |
-| 21 mayo | 19:00 | Single tweet · cita memorable | Pendiente |
-| 23 mayo | 19:00 | Hilo reciclado | Pendiente |
+| 5 mayo (martes) | 19:00 | Hilo "cansancio psíquico" (`te-escribo-cansancio-psiquico/thread-x.txt`) | ✅ Producido |
+| 8 mayo (viernes) | 19:00 | Hilo reciclado de carrusel IG semana | Pendiente |
+| 9 mayo (sábado) | 12:00 | Single tweet · cita Carta #1 | Pendiente redactar |
+| 12 mayo (martes) | 19:00 | Hilo "saberlo no te lo quita" | ✅ Producido |
+| 15 mayo (viernes) | 19:00 | Hilo reciclado de carrusel IG | Pendiente |
+| 16 mayo (sábado) | 12:00 | Single tweet · concepto del libro | Pendiente |
+| 19 mayo (martes) | 19:00 | Hilo extracto de Carta #2 "La voz que te juzga" | Pendiente |
+| 22 mayo (viernes) | 19:00 | Hilo reciclado de carrusel IG | Pendiente |
+| 23 mayo (sábado) | 12:00 | Single tweet · cita memorable | Pendiente |
 
 ---
 
