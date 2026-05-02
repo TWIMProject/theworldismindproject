@@ -1,0 +1,34 @@
+# CODEOWNERS · TWIM Project
+#
+# Define quién debe revisar cambios en cada parte del repositorio.
+# Cuando se abre un PR que toca estos archivos, GitHub asigna automáticamente
+# revisor a la persona/equipo indicado.
+#
+# Formato: <patrón>  @usuario_o_equipo
+# Doc oficial: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Por defecto: cualquier cambio lo aprueba Daniel
+*  @TWIMProject
+
+# Documentos legales y políticas — revisión obligatoria
+/privacy.html             @TWIMProject
+/cookies.html             @TWIMProject
+/aviso-legal.html         @TWIMProject
+/.github/SECURITY.md      @TWIMProject
+/.github/CODEOWNERS       @TWIMProject
+
+# Configuración crítica del repo
+/.github/                 @TWIMProject
+/.gitignore               @TWIMProject
+/CLAUDE.md                @TWIMProject
+/netlify.toml             @TWIMProject
+
+# Documentos estratégicos — el CEO los aprueba
+/documentos-internos/     @TWIMProject
+
+# Funciones serverless (procesan datos personales) — revisión obligatoria
+/netlify/functions/       @TWIMProject
+
+# Scripts de tracking y consentimiento
+/assets/twim-cookie-consent.js   @TWIMProject
+/assets/twim-legal-footer.js     @TWIMProject
