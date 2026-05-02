@@ -39,4 +39,4 @@
 
 ---
 
-🔗 https://claude.ai/code (si el PR fue generado o asistido por Claude)
+PR generado o asistido por Claude: https://claude.ai/code (si aplica)

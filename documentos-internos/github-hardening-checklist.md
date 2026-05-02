@@ -165,17 +165,29 @@ cp -r theworldismindproject theworldismindproject.backup
 brew install git-filter-repo  # macOS
 # o: pip install git-filter-repo
 
-# 3. Purgar el token del historial completo
-cd theworldismindproject
-git filter-repo --replace-text <(echo "nfp_Fe7FsD3Uv9UtsLmz9broLYSad2PKqh9E4d2e==>nfp_***REDACTED***")
+# 3. Crear archivo LOCAL con la regla de redacción
+#    NO commitear este archivo. Mejor en /tmp o fuera del repo.
+#    Formato: <secreto-real>==><PLACEHOLDER>
+#    Ejemplo de contenido (un secreto por línea):
+#       nfp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx==>nfp_***REDACTED***
+echo 'TU_TOKEN_REAL==>nfp_***REDACTED***' > /tmp/redact-rules.txt
 
-# 4. Force-push a remoto (REESCRIBE HISTORIAL — coordina con colaboradores antes)
+# 4. Purgar del historial completo usando el archivo
+cd theworldismindproject
+git filter-repo --replace-text /tmp/redact-rules.txt
+
+# 5. Borrar el archivo con el secreto real
+rm /tmp/redact-rules.txt
+
+# 6. Force-push a remoto (REESCRIBE HISTORIAL — coordina con colaboradores antes)
 git push --force --all
 git push --force --tags
 
-# 5. Pedir a GitHub que limpie cachés:
+# 7. Pedir a GitHub que limpie cachés:
 #    https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
 ```
+
+> **Nunca pongas el secreto literal en el comando ni en este documento.** El token real va en un archivo local temporal (`/tmp/redact-rules.txt`) que se borra inmediatamente después de ejecutar el filtro.
 
 > **Aviso:** force-push reescribe historial. Si hay PRs abiertos, se rompen. Si hay otros colaboradores, deben re-clonar. **Coordinar antes de ejecutar.**
 

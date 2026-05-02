@@ -13,15 +13,21 @@ updates:
       - "dependencies"
       - "github-actions"
 
-  - package-ecosystem: "npm"
-    directory: "/netlify/functions"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-    open-pull-requests-limit: 5
-    commit-message:
-      prefix: "deps"
-      include: "scope"
-    labels:
-      - "dependencies"
-      - "netlify-functions"
+# Nota: el bloque npm para /netlify/functions está intencionalmente omitido.
+# Las funciones serverless (subscribe.js, stripe-webhook.js) no tienen package.json
+# porque usan solo APIs nativas + el runtime de Netlify Functions.
+# Si en el futuro se añaden dependencias npm, crear package.json + lockfile
+# en /netlify/functions y descomentar:
+#
+#   - package-ecosystem: "npm"
+#     directory: "/netlify/functions"
+#     schedule:
+#       interval: "weekly"
+#       day: "monday"
+#     open-pull-requests-limit: 5
+#     commit-message:
+#       prefix: "deps"
+#       include: "scope"
+#     labels:
+#       - "dependencies"
+#       - "netlify-functions"
