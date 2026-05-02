@@ -31,4 +31,4 @@
 
 - Las credenciales sensibles van en `.env.audit` (gitignored, nunca se sube)
 - **No pegar tokens en el chat** — quedaron expuestos en sesión anterior y deben rotarse:
-  - Netlify token `nfp_Fe7FsD3Uv9UtsLmz9broLYSad2PKqh9E4d2e` → pendiente de revocar
+  - Netlify token `nfp_***REDACTED***` (literal eliminado del repo el 1-may-2026) → pendiente de revocar — acción inmediata en https://app.netlify.com/user/applications

@@ -139,7 +139,7 @@ Durante la sesión aparecieron en el chat dos credenciales que **deben rotarse**
 
 | Credencial | Estado |
 |-----------|--------|
-| Netlify token `nfp_Fe7FsD3Uv9UtsLmz9broLYSad2PKqh9E4d2e` | ⚠️ Pendiente de revocar y regenerar |
+| Netlify token `nfp_***REDACTED***` (literal eliminado del repo el 1-may-2026) | ⚠️ Pendiente de revocar y regenerar — acción inmediata |
 | Token MailerLite "Auditoría Claude" | ✅ Ya eliminado por Daniel |
 
 Para revocar el token Netlify: `https://app.netlify.com/user/applications` → Personal access tokens → revocar el actual → crear uno nuevo → actualizar `.env.audit`.

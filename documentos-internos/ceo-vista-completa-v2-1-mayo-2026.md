@@ -491,7 +491,7 @@ A 30 abril 2027:
 
 ### 10.1 · Riesgo de seguridad / cumplimiento
 
-- **Token Netlify expuesto pendiente de rotar.** En CLAUDE.md está marcado el token literal (no se repite aquí por seguridad). Acción: revocarlo en `https://app.netlify.com/user/applications`, generar nuevo, actualizar `.env.audit` y eliminar el literal de CLAUDE.md una vez rotado. 5 minutos. Hacerlo esta semana.
+- **Token Netlify expuesto — pendiente de rotar inmediatamente.** El literal del token ha sido redactado del repo el 1-may-2026 (`nfp_***REDACTED***` en su lugar). Pero estuvo expuesto durante un periodo de tiempo: hay que asumir compromiso y rotarlo **ya**. Acción: ir a https://app.netlify.com/user/applications, revocar, generar nuevo, actualizar `.env.audit`. **5 minutos. Acción inmediata, no esta semana.**
 - **MFA (2FA) en Netlify desactivado.** 5 minutos.
 - **No hay copia de seguridad declarada de la lista de MailerLite.** Buena práctica: exportar CSV mensual + cifrar + Drive.
 - **Política de privacidad** (`privacy.html`) — revisar anualmente con texto actualizado para Pixel Meta + GA4 + ElevenLabs (cuando se active).
