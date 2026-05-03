@@ -131,3 +131,13 @@ notebooklm/.env
 
 deploy.log
 .env.audit
+
+# ===== FACTURAS DE PACIENTES =====
+# Datos clínicos categoría especial art. 9 RGPD — NUNCA al repo.
+# La plantilla genérica (sin datos) sí va al repo en documentos-internos/plantillas/.
+facturas/
+facturas-pacientes/
+**/factura-F-*.pdf
+**/factura-F-*.html
+**/factura-2*.pdf
+**/factura-2*.html
