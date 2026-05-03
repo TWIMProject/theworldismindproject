@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Factura · TWIM Project</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    * { box-sizing: border-box; }
+    body { font-family: 'Century Gothic', 'Helvetica Neue', Arial, sans-serif; color: #2B2420; margin: 0; background: #FFFFFF; font-size: 13px; line-height: 1.55; }
+    .page { width: 210mm; min-height: 297mm; margin: 0 auto; background: #FFFFFF; padding: 28mm 22mm 22mm; position: relative; }
+
+    .logo { position: absolute; top: 22mm; right: 22mm; width: 80px; height: auto; }
+
+    h1.title { color: #265C4B; font-size: 38px; font-weight: 700; letter-spacing: 1px; margin: 0 0 18px; }
+    hr.rule { border: 0; border-top: 1.5px solid #C2D6CC; margin: 0 0 28px; }
+
+    .meta-row { display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px; margin-bottom: 22px; }
+    .meta-block .label { color: #265C4B; font-weight: 700; letter-spacing: 0.5px; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; }
+    .meta-block .value { color: #2B2420; font-size: 13px; line-height: 1.5; }
+    .meta-block.right { text-align: right; }
+
+    .professional-table { width: 100%; border-collapse: collapse; margin: 22px 0 8px; font-size: 13px; }
+    .professional-table th, .professional-table td { border: 1px solid #C2D6CC; padding: 10px 14px; text-align: left; }
+    .professional-table th { color: #265C4B; font-weight: 700; letter-spacing: 0.5px; font-size: 11px; text-transform: uppercase; background: #F2F7F4; }
+    .professional-table td { background: #FFFFFF; color: #2B2420; }
+
+    .services-table { width: 100%; border-collapse: collapse; margin: 22px 0 8px; font-size: 13px; }
+    .services-table th, .services-table td { border: 1px solid #C2D6CC; padding: 10px 14px; }
+    .services-table th { color: #265C4B; font-weight: 700; letter-spacing: 0.5px; font-size: 11px; text-transform: uppercase; background: #F2F7F4; text-align: left; }
+    .services-table th.num { text-align: center; width: 90px; }
+    .services-table th.amt { text-align: right; width: 130px; }
+    .services-table td { color: #2B2420; }
+    .services-table td.num { text-align: center; }
+    .services-table td.amt { text-align: right; font-weight: 600; }
+    .services-table tr.sessions td { background: #F2F7F4; font-style: italic; color: #5C6F66; }
+    .services-table tr.total td { font-weight: 700; color: #265C4B; background: #F2F7F4; text-transform: uppercase; letter-spacing: 0.5px; }
+    .services-table tr.total td.amt { font-size: 15px; }
+
+    .iva-note { font-size: 10.5px; color: #6B6258; font-style: italic; margin: 6px 0 36px; }
+
+    footer { border-top: 1.5px solid #265C4B; padding-top: 10px; margin-top: 30px; text-align: center; color: #265C4B; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+
+    @media print {
+      body { background: #FFFFFF; }
+      .page { padding: 22mm; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <img src="logo-mindworld.png" alt="Mind World Project" class="logo">
+
+    <h1 class="title">FACTURA</h1>
+    <hr class="rule">
+
+    <div class="meta-row">
+      <div class="meta-block">
+        <div class="label">Para:</div>
+        <div class="value">{{NOMBRE_PACIENTE}}</div>
+      </div>
+      <div class="meta-block right">
+        <div class="label">Fecha:</div>
+        <div class="value">{{FECHA_EMISION}}</div>
+      </div>
+    </div>
+
+    <div class="meta-row">
+      <div class="meta-block">
+        <div class="label">N.º de factura:</div>
+        <div class="value">{{NUMERO_FACTURA}}</div>
+      </div>
+      <div class="meta-block right">
+        <div class="label">DNI del paciente:</div>
+        <div class="value">{{DNI_PACIENTE}}</div>
+      </div>
+    </div>
+
+    <div class="meta-row">
+      <div class="meta-block">
+        <div class="label">CIF emisor:</div>
+        <div class="value">48442701D</div>
+      </div>
+      <div class="meta-block right">
+        <div class="label">Núm. colegiado:</div>
+        <div class="value">CV11515</div>
+      </div>
+    </div>
+
+    <table class="professional-table">
+      <thead>
+        <tr>
+          <th>Psicólogo General Sanitario</th>
+          <th>Trabajo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Daniel Orozco Abia</td>
+          <td>Tratamiento psicológico</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th>Descripción</th>
+          <th class="num">Sesiones</th>
+          <th class="amt">Honorarios</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Honorarios tratamiento psicológico</td>
+          <td class="num">{{NUM_SESIONES}}</td>
+          <td class="amt">{{IMPORTE}}</td>
+        </tr>
+        <tr class="sessions">
+          <td colspan="3">Sesiones {{MES}}: {{SESIONES_FECHAS}}</td>
+        </tr>
+        <tr class="total">
+          <td colspan="2">Total</td>
+          <td class="amt">{{IMPORTE}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="iva-note">* Servicio exento de IVA según art. 20.1.3º Ley 37/1992 (servicios de asistencia sanitaria).</p>
+
+    <footer>
+      Calle Embajador Vich 3-1B &nbsp;|&nbsp; Valencia, 46002 &nbsp;|&nbsp; Teléfono: 625 231 297
+    </footer>
+  </div>
+</body>
+</html>
