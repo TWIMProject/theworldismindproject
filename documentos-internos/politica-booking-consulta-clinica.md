@@ -31,34 +31,45 @@ La agenda clínica se gestiona **manualmente y caso a caso**, con conversación 
 
 ## Política aplicada en la web
 
-### CTA en landings SEO
+### CTA en landings SEO (header + hero)
 
-Sustituido en las 7 landings (4 may 2026):
+Sustituido en las landings (4 may 2026):
 
-- ❌ Antes: `Reservar consulta`
-- ✅ Ahora: `Escribir para empezar`
+- ❌ Antes: `Reservar consulta`, `Reservar primera consulta`, `Reservar primera sesión`, `Reservar primera entrevista` (variaba por página).
+- ✅ Ahora: **`Escribir para empezar`** (estándar único en todos los CTAs, header + hero).
 
-### Mailto subject
+### Headings (h2) de sección final
 
-Sustituido:
+- ❌ Antes: `Reservar primera consulta para tratar tu [X]`.
+- ✅ Ahora: `Empezar tu proceso para tratar tu [X]` / `Empezar terapia de pareja` / `Empezar primera sesión online`.
 
-- ❌ Antes: `?subject=Reservar%20consulta%20en%20Valencia`
-- ✅ Ahora: `?subject=Primera%20consulta%20en%20Valencia`
+### Mailto subject (no estándar único — se mantienen variantes contextuales)
+
+Cada landing tiene su subject específico para que Daniel identifique de dónde viene el email. Estandarizados:
+
+| Landing | Subject |
+|---|---|
+| `daniel-orozco-abia.html` (×2 botones) | `Primera consulta en Valencia` |
+| `psicologo-burnout-valencia.html` | `Consulta burnout Valencia` (hero) y `Primera consulta en Valencia` (header) |
+| `psicologo-dependencia-emocional-valencia.html` | `Consulta dependencia emocional Valencia` (hero) y `Primera consulta en Valencia` (header) |
+| `psicologo-adolescentes-valencia.html` | `Consulta adolescente Valencia` (hero) y `Primera consulta en Valencia` (header) |
+| `psicologo-online.html` | `Terapia online en español` (hero, CTA banner) y `Primera consulta online` (header) — sin "Valencia" porque es online global |
+| `terapia-pareja-valencia.html` | `Terapia pareja Valencia` (hero) y `Primera consulta en Valencia` (header) |
 
 ### Archivos afectados
 
-- `psicologo-adolescentes-valencia.html`
-- `psicologo-burnout-valencia.html`
-- `psicologo-dependencia-emocional-valencia.html`
-- `psicologo-online.html`
-- `terapia-pareja-valencia.html`
-- `daniel-orozco-abia.html` (×2 ocurrencias)
-- `index.html` ya tenía "Pedir cita" (mantener)
-- `insights/_template-insight.html` ya tenía "Pedir cita" (mantener)
+- `psicologo-adolescentes-valencia.html` — header + hero + CTA banner
+- `psicologo-burnout-valencia.html` — header + hero + h2 + CTA banner
+- `psicologo-dependencia-emocional-valencia.html` — header + hero + h2 + CTA banner
+- `psicologo-online.html` — header (subject específico online) + hero + h2
+- `terapia-pareja-valencia.html` — header + hero + h2 + CTA banner
+- `daniel-orozco-abia.html` — header + hero + CTA banner (3 ocurrencias homogeneizadas)
+- `index.html` — ya tenía `Pedir cita` (mantenido)
+- `insights/_template-insight.html` — ya tenía `Pedir cita` (mantenido)
 
 ---
 
-## Donde Cal.com SÍ se usa (sin tocar consulta privada)
+## Dónde Cal.com SÍ se usa (sin tocar consulta privada)
 
 | Uso | Estado | Notas |
 |---|---|---|

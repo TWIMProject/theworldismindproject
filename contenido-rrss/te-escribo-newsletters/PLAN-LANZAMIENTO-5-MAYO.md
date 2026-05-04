@@ -57,13 +57,15 @@ Hoy a las 19:00 sale la primera carta de "Te escribo".
 
 Sobre la mente, el cansancio y lo que no se dice.
 
-Link en bio para recibirla.
+Apúntate aquí.
 ```
 
-**Sticker "Link":**
+**Sticker "Link"** (Instagram lo muestra como botón clicable junto a la frase "Apúntate aquí"):
 ```
 https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=carta-1-manifesto
 ```
+
+> El sticker Link de IG funciona como botón de acción directo. No requiere actualizar el link de la bio del perfil. El usuario toca el sticker y va directo al newsletter.
 
 **Tipografía IG:** "Modern" o "Classic". Color crema/beige o blanco.
 
