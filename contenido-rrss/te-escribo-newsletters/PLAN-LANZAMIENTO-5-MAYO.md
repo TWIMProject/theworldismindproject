@@ -1,94 +1,127 @@
-# Plan de lanzamiento · Te escribo · Carta #1 + Carrusel #1
+# Plan de lanzamiento · Te escribo · Carta #1
 
-**Fecha de envío programada:** martes 5 mayo 2026, 19:00 CET (Europe/Madrid)
+**Fecha de envío programada:** martes 5 mayo 2026, 19:00 CEST (Europe/Madrid)
 
-**Estado:** Campaña programada en MailerLite. Falta coordinar publicación en redes el mismo día.
+**Estado al 4 mayo 2026:**
+- ✅ Carta #1 "Manifesto" programada en MailerLite (envío automático martes 5 mayo 19:00 CEST). Audiencia: 23 destinatarios (Lista General TWIM).
+- ✅ Carta #2 "La voz que te juzga" programada en MailerLite (envío automático martes 19 mayo 19:00 CEST).
+- ✅ **Carrusel #1 "Tu cansancio no es físico" YA PUBLICADO en Instagram** el 25 abril 2026 (descubierto el 4 mayo — se subió en una sesión anterior sin actualizar este plan).
+- ✅ **Hilo X "Tu cansancio no es físico" YA PUBLICADO en @DaniOrozcoPsico** ~28 abril 2026 (post fijado del perfil).
+- ✅ **PDF LinkedIn "Tu cansancio no es físico" YA PUBLICADO** en abril 2026.
 
----
-
-## Recordatorio: configura alertas YA
-
-- Calendario: evento "Lanzamiento Te escribo" lunes 4 mayo 18:00 con notificación 24h+1h antes
-- Móvil: alarma "Preparar lanzamiento" lunes 4 mayo 18:00 + martes 5 mayo 18:30
-- Gmail: email programado a uno mismo para lunes 4 mayo 18:00
-
-(Claude no puede avisarte autónomamente — la instancia no persiste entre conversaciones.)
+> **Lección aprendida (4 mayo):** las 3 piezas de redes del paquete "cansancio psíquico" se publicaron en una sesión paralela sin que quedase registrado aquí. Hay que actualizar este documento cada vez que se publique algo manualmente. Más detalle en §Lección al final.
 
 ---
 
-## Lunes 4 mayo (la tarde antes — preparación)
+## Lo que sale mañana 5 mayo automáticamente
 
-- Descargar carrusel #1 a la galería del móvil
-  - Carpeta repo: `contenido-rrss/te-escribo-cansancio-psiquico/`
-  - Archivos: `slide-01.png` … `slide-07.png` (7 slides 1080×1350)
-- Descargar PDF para LinkedIn
-  - Archivo: `te-escribo-cansancio-psiquico.pdf`
-- Copiar caption Instagram a notas
-  - Archivo: `caption-instagram.txt`
-- Copiar caption LinkedIn a notas
-  - Archivo: `caption-linkedin.txt`
-- Copiar hilo X a notas (7 tweets + PD)
-  - Archivo: `thread-x.txt`
+✉️ **Carta #1 "Manifesto"** desde MailerLite a las 19:00 CEST.
+- Audiencia: 23 destinatarios (Lista General TWIM consolidada).
+- Asunto: "Esto es lo que vas a recibir."
+- Remitente: Daniel Orozco - TWIMProject (danielorozco@twimproject.com).
+- Sin acción manual. Verificación posterior: revisar entrega y open rate en MailerLite a las 24h.
 
-## Martes 5 mayo · Día del lanzamiento
+---
 
-### 18:30 — Preparar todo
+## Lo que NO sale mañana (ya está publicado)
 
-- Instagram: cargar las 7 imágenes del carrusel en orden, pegar caption, programar para 19:30 (o publicar manualmente a las 19:00)
-- LinkedIn: subir el PDF como Document Post, título "Tu cansancio no es físico", pegar caption, publicar a las 19:00
-- X: tener el primer tweet del hilo listo para publicar a las 19:00
+❌ Carrusel "Cansancio psíquico" en IG → publicado 25 abril.
+❌ Hilo X "Cansancio psíquico" → publicado ~28 abril.
+❌ PDF "Cansancio psíquico" en LinkedIn → publicado en abril.
 
-### 19:00 — El lanzamiento
+---
 
-- ✉️ Sale automáticamente la Carta #1 (Manifesto) desde MailerLite a 24 suscriptores
-  - Audiencia: Reto + Lead Magnet + Lista General TWIM
-- 📱 Publicar carrusel en Instagram (si no estaba programado)
-- 💼 Publicar PDF en LinkedIn (si no estaba programado)
-- 🐦 Publicar primer tweet del hilo X
-  - Inmediatamente después: publicar tweet 2 como REPLY al tweet 1
-  - Continuar replys hasta tweet 7 + PD opcional
+## Plan de redes para mañana 19:00 (Opción B confirmada)
 
-### 19:00–22:00 — Vigilar e interactuar
+Para mantener sinergia "newsletter + redes" sin canibalizar contenido ya publicado, **una Story de Instagram** anunciando la salida de la Carta:
 
-- Responder comentarios en IG/LinkedIn/X
-- Responder mensajes directos
-- Responder a respuestas del email (si llegan)
+### Story IG (texto copiable)
 
-## Días siguientes (6-12 mayo)
+```
+Hoy a las 19:00 sale la primera carta de "Te escribo".
 
-- Mirar métricas en MailerLite a las 24h y 48h:
-  - Tasa de apertura: objetivo realista >35%
-  - Tasa de clics: objetivo >5%
-- Engagement en redes: saves, shares, comentarios
-- Si llegan suscripciones nuevas a Web - Newsletter Home, recibirán automáticamente la Carta #1 vía la automatización de bienvenida
+Sobre la mente, el cansancio y lo que no se dice.
 
-## En 10-14 días desde el envío de Carta #1 (mediados-fin de mayo)
+Si todavía no la recibes, link en bio.
+```
 
-- Crear y programar Campaña Carta #2 (Juez interno) en MailerLite
-  - Audiencia: Reto + Lead Magnet + Lista General + Web - Newsletter Home (esta vez SÍ incluyendo)
-  - Plantilla: misma base "Te escribo", solo cambiar contenido del cuerpo
-- Coordinar con publicación de carrusel #2 (Saberlo no te lo quita) en redes mismo día
+**Cómo publicarla:**
+1. Mañana 5 mayo a las 18:55 abre Instagram.
+2. Crear Story → fondo verde TWIM #173D30 (o foto sobria si lo tienes).
+3. Texto en blanco, tipografía sobria (no animaciones llamativas).
+4. Sticker "Link" → URL: `https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=carta-1-manifesto`
+5. Compartir → Story (24h visible).
+
+**Tiempo total mañana: 5 minutos.**
+
+---
+
+## Lo que sí queda manual el 5 mayo
+
+- 18:55–19:05: ventana de seguridad para verificar.
+  - Confirmar que la Carta #1 sale (notificación email "campaign sent" desde ML).
+  - Subir Story IG (5 min, ver arriba).
+- 19:00–22:00: vigilar e interactuar.
+  - Responder DMs y respuestas al email si llegan.
+  - Responder cualquier comentario en IG/LinkedIn/X que aparezca relacionado con la Carta.
+
+---
+
+## Calendario actualizado para mayo 2026
+
+| Fecha | Acción | Estado |
+|---|---|---|
+| **5 mayo (mar) 19:00 CEST** | Carta #1 "Manifesto" por email | ✅ programada |
+| 5 mayo 18:55 | Story IG anunciando la Carta | ⏳ manual mañana |
+| **12 mayo (mar) 19:00 CEST** | Carrusel #2 "Saberlo no te lo quita" en IG/LinkedIn + Hilo X #2 | ⏳ pendiente programar |
+| **19 mayo (mar) 19:00 CEST** | Carta #2 "La voz que te juzga" por email | ✅ programada |
+| 21 mayo (mié) | Gate Meta Ads (decisión según contador suscriptoras Newsletter Home) | ⏳ pendiente |
+
+---
+
+## Métricas a vigilar (lunes 11 mayo, +6 días desde envío)
+
+| Métrica | Fuente | Cota saludable | Cota objetivo |
+|---|---|---|---|
+| Tasa de apertura Carta #1 | MailerLite | ≥35 % | ≥45 % |
+| Tasa de clics Carta #1 → web | MailerLite | ≥5 % | ≥8 % |
+| Unsubscribes Carta #1 | MailerLite | <1 % | <0,5 % |
+| Suscriptores nuevos en grupo Web - Newsletter Home (vía Story IG) | MailerLite | +5/semana | +20/semana |
 
 ---
 
 ## Recursos en el repo
 
 ```
-contenido-rrss/te-escribo-cansancio-psiquico/
-  slide-01.png … slide-07.png    Carrusel IG (1080×1350)
-  te-escribo-cansancio-psiquico.pdf    LinkedIn document
-  caption-instagram.txt
-  caption-linkedin.txt
-  thread-x.txt
+contenido-rrss/te-escribo-cansancio-psiquico/    [PIEZAS YA PUBLICADAS]
+  slide-01.png … slide-07.png    Carrusel IG (publicado 25 abril)
+  te-escribo-cansancio-psiquico.pdf    LinkedIn (publicado abril)
+  caption-instagram.txt           [usado]
+  caption-linkedin.txt            [usado]
+  thread-x.txt                    [usado, post fijado en X]
 
-contenido-rrss/te-escribo-saberlo-no-te-lo-quita/
-  slide-01.png … slide-07.png    Carrusel #2
+contenido-rrss/te-escribo-saberlo-no-te-lo-quita/    [PIEZAS PENDIENTES PARA 12 MAYO]
+  slide-01.png … slide-07.png
   te-escribo-saberlo-no-te-lo-quita.pdf
   caption-instagram.txt
   caption-linkedin.txt
   thread-x.txt
 
 contenido-rrss/te-escribo-newsletters/
-  carta-01-esto-es-lo-que-vas-a-recibir.txt    Manifesto (= Carta #1)
-  carta-02-la-voz-que-te-juzga.txt    Juez interno (= Carta #2)
+  carta-01-esto-es-lo-que-vas-a-recibir.txt    Manifesto (= Carta #1, sale 5 mayo)
+  carta-02-la-voz-que-te-juzga.txt    Juez interno (= Carta #2, sale 19 mayo)
 ```
+
+---
+
+## Lección aprendida — registrar publicaciones manuales en el repo
+
+**Lo que ocurrió:** entre el 25 abril y el 28 abril se publicaron las 3 piezas del paquete "cansancio psíquico" en IG, X y LinkedIn. Probablemente en una sesión paralela donde se decidió adelantar el lanzamiento. Pero el plan documentado aquí seguía asumiendo que esas piezas se publicarían el 5 mayo, lo que llevó al equívoco descubierto el 4 mayo.
+
+**Regla a partir de ahora:** cada vez que se publique algo manualmente fuera del calendario documentado, **actualizar el plan en el repo el mismo día**. Bastan 2 líneas en el doc correspondiente: "[fecha]: publicado [pieza] en [canal] · URL [link al post]".
+
+Esto evita planificar a ciegas en sesiones posteriores y mantiene el repo como fuente de verdad operativa.
+
+---
+
+**Última actualización:** 4 mayo 2026 · estado real reconciliado tras descubrir publicaciones previas.
