@@ -21,7 +21,8 @@ Tiempo estimado total del setup: **45-90 min** una sola vez.
 - [ ] Acceso administrador a la página de FB de TWIM (si no existe la página, crearla antes — Meta Business Suite exige página FB vinculada).
 - [ ] Cuenta de Meta Business (gratis · `business.facebook.com`). Si Daniel no la tiene, crearla con cuenta de Meta primaria.
 - [ ] Logo TWIM y cover en formatos correctos (ya disponibles en repo).
-- [ ] Decisión sobre titularidad de la cuenta Business: ¿personal de Daniel o cuenta corporativa TWIM? (recomendado corporativa cuando se formalice; mientras tanto, personal con backup de credenciales).
+- [ ] Decisión sobre titularidad de la cuenta Business: ¿personal de Daniel o cuenta corporativa TWIM? (recomendado corporativa cuando se formalice; mientras tanto, personal).
+- [ ] **Credenciales gestionadas en gestor de contraseñas** (1Password, Bitwarden o equivalente). Usuario, contraseña y **códigos de recuperación 2FA** se guardan ahí. Coherente con `documentos-internos/github-hardening-checklist.md`. **No** se guardan credenciales en notas, email, mensajes ni en el repo.
 
 ---
 
@@ -74,9 +75,16 @@ Tiempo estimado total del setup: **45-90 min** una sola vez.
 |---|---|---|---|
 | Daniel Orozco | Admin | Admin | Admin |
 | VA (cuando entre) | Empleado | Editor | Editor |
-| Backup emergencia (persona de confianza) | Admin (segunda cuenta) | Admin | — |
+| Backup emergencia (persona de confianza) | Admin (segunda cuenta) | Admin | Admin |
 
-**Por qué backup:** si Daniel pierde acceso a su cuenta personal Meta, el negocio no debe quedar bloqueado. Tener una segunda cuenta admin (familiar de confianza, gestor) evita ese riesgo.
+**Por qué backup:** si Daniel pierde acceso a su cuenta personal Meta, el negocio no debe quedar bloqueado. Tener una segunda cuenta admin (familiar de confianza, gestor) evita ese riesgo. **El backup necesita rol Admin también en IG**, no solo en FB y Business Manager — sin acceso al asset de Instagram, en un incidente no podría recuperar la vinculación IG/MBS ni operar la cuenta de IG.
+
+### 4.3 · Asignar al backup acceso al asset de IG
+
+1. Configuración del negocio → **Cuentas** → **Cuentas de Instagram** → seleccionar `@daniorozcopsicologo`.
+2. Pestaña **Personas** → "Añadir personas" → invitar la segunda cuenta del backup → asignar rol **Admin de Instagram**.
+3. Confirmar invitación desde la cuenta del backup.
+4. Validar que el backup puede acceder a IG desde Business Manager con su segunda cuenta.
 
 > No dar rol Admin a la VA. Solo Editor — basta para programar y responder, no permite cambios estructurales.
 
@@ -113,10 +121,13 @@ Meta Business Suite permite arrastrar piezas a slots fijos. La plantilla TWIM:
 ### Test de validación
 
 1. Crear un Reel corto de prueba (10-15 s, contenido neutro tipo "Próximamente: TWIM Podcast E5").
-2. Programar para 2 horas más tarde desde Meta Business Suite.
-3. Esperar la hora programada.
-4. Verificar que aparece publicado en IG y que el cover-frame se ha respetado.
-5. Borrar el Reel de prueba tras validar.
+2. **Subir un cover branded** (no dejar que IG use frame automático) según el sistema visual del PR #94 — ver `documentos-internos/instagram-sistema-visual-marca.md` sobre "Cover obligatorio". El cover branded es el estándar TWIM y el test debe validar específicamente que la programación lo respeta.
+3. Programar para 2 horas más tarde desde Meta Business Suite.
+4. Esperar la hora programada.
+5. Verificar:
+   - Que aparece publicado en IG.
+   - Que el cover branded subido se mantiene **sin sustituirse por un frame automático**. Si MBS sustituye el cover, es un fallo bloqueante — activa Plan B.
+6. Borrar el Reel de prueba tras validar.
 
 ### Si la programación de Reels falla
 
