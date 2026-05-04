@@ -31,26 +31,49 @@
 
 ---
 
-## Plan de redes para mañana 19:00 (Opción B confirmada)
+## Plan de redes para mañana 19:00 (Opción C confirmada)
 
-Para mantener sinergia "newsletter + redes" sin canibalizar contenido ya publicado, **una Story de Instagram** anunciando la salida de la Carta:
+Daniel eligió Opción C el 4 mayo: dos Stories consecutivas que crean narrativa "lo que ya viste → invitación al newsletter". Mantiene sinergia "newsletter + redes" sin canibalizar el carrusel ya publicado el 25 abril.
 
-### Story IG (texto copiable)
+### Story 1 — Gancho visual (sin texto añadido)
+
+**Imagen:** `contenido-rrss/te-escribo-cansancio-psiquico/slide-01.png` (mismo que el primer slide del carrusel publicado el 25 abril).
+
+URL directa para descargar:
+```
+https://twimproject.com/contenido-rrss/te-escribo-cansancio-psiquico/slide-01.png
+```
+
+Subir tal cual. Sin texto, sin stickers. Que la imagen hable sola.
+
+### Story 2 — CTA con link
+
+**Fondo:** verde TWIM oscuro (equivalente a `#173D30`). En IG, cuando el selector de color no permite hex exacto, escoger el verde más oscuro de la paleta.
+
+**Texto centrado (copiable):**
 
 ```
 Hoy a las 19:00 sale la primera carta de "Te escribo".
 
 Sobre la mente, el cansancio y lo que no se dice.
 
-Si todavía no la recibes, link en bio.
+Apúntate aquí.
 ```
+
+**Sticker "Link"** (Instagram lo muestra como botón clicable junto a la frase "Apúntate aquí"):
+```
+https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=carta-1-manifesto
+```
+
+> El sticker Link de IG funciona como botón de acción directo. No requiere actualizar el link de la bio del perfil. El usuario toca el sticker y va directo al newsletter.
+
+**Tipografía IG:** "Modern" o "Classic". Color crema/beige o blanco.
 
 **Cómo publicarla:**
 1. Mañana 5 mayo a las 18:55 abre Instagram.
-2. Crear Story → fondo verde TWIM #173D30 (o foto sobria si lo tienes).
-3. Texto en blanco, tipografía sobria (no animaciones llamativas).
-4. Sticker "Link" → URL: `https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=carta-1-manifesto`
-5. Compartir → Story (24h visible).
+2. Crear Story → primero subir Story 1 (slide-01).
+3. Inmediatamente después → crear Story 2 (fondo verde con texto + sticker link).
+4. Ambas Stories consecutivas (24h visibles).
 
 **Tiempo total mañana: 5 minutos.**
 
