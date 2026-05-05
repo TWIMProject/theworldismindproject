@@ -141,6 +141,7 @@
         form.style.display = 'none';
         ok.style.display = 'block';
         if (window.gtag) gtag('event', 'newsletter_signup', { source: 'exit_intent', reason: reason, landing: location.pathname });
+        if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'Te escribo newsletter', source: 'exit_intent', reason: reason });
       } catch (ex) {
         btn.disabled = false;
         btn.textContent = label;
