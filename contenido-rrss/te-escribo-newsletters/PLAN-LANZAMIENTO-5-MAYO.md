@@ -113,6 +113,95 @@ https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_c
 
 ---
 
+## Métricas reales tras el envío
+
+> Sección que se va rellenando con cada checkpoint (+5h, +24h, +6 días).
+> Datos consolidados desde MailerLite app.
+
+### Checkpoint +5h · 5 mayo 2026 · 23:57 CEST
+
+> **Nota metodológica:** los datos correctos vienen de **Campaigns → Carta #1 (vista de campaña)**, no de Subscribers → Groups (que muestra acumulados históricos del grupo, no de esta campaña). Primera lectura confundió ambos; aquí queda registrada la lectura correcta.
+
+#### Carta #1 "Manifesto" · stats reales de la campaña
+
+Audiencia: 23 envíos (Reto 7 Días - Inscritas + Lista General TWIM).
+
+| Métrica | Valor real | Cota | Veredicto |
+|---|---|---|---|
+| Open rate | **26,09 %** (6 personas) | saludable ≥35 % · objetivo ≥45 % | ⚠️ por debajo de saludable |
+| Click rate | 4,35 % (1 persona) | saludable ≥5 % · objetivo ≥8 % | ⚠️ justo por debajo de saludable, cerca |
+| Click-to-open rate | 16,67 % | — | ✅ de quien abre, 1 de 6 hace clic — señal positiva |
+| Hard bounces (esta campaña) | 0 | <2 % | ✅ lista limpia tras desactivación previa |
+| Unsubscribed (esta campaña) | 0 | <1 % | ✅ ninguna baja por esta carta |
+| Spam complaints | 0 | — | ✅ sender reputation sano |
+
+#### Top email clients (sobre los 6 que abrieron)
+
+| Cliente | % | Implicación |
+|---|---|---|
+| Gmail Image Proxy | 71,43 % | Gmail descarga imágenes en sus servidores y dispara el píxel de tracking automáticamente — **infla aperturas** |
+| Unknown | 28,57 % | Probablemente Apple Mail Privacy Protection — también enmascara aperturas reales |
+
+> **Implicación:** el 26,09 % de open rate puede estar **inflado** por proxy/MPP. Las aperturas humanas reales pueden ser menos de 6. Estimación humana real: 15-20 %, claramente por debajo de saludable para una primera carta editorial.
+
+#### Detalle de los 5 bounces
+
+- 4 hard bounces de hotmail/gmail probablemente cuentas cerradas — MailerLite los desactivó automáticamente.
+- 1 caso recuperable: typo del dominio (escribió `hoymall` cuando lo correcto era `hotmail`). El identificador concreto del caso se gestiona en canal privado, no en el repo, por ser PII. Pendiente: contactar por otro canal si hay forma.
+
+#### Lista global tras envío
+
+| Indicador | Valor |
+|---|---|
+| Active subscribers | 27 |
+| Unsubscribed | 2 |
+| Bounced (auto-desactivados) | 5 |
+| All subscribers (total acumulado) | 34 |
+| Web - Newsletter Home (captación nueva post-cross-sell) | 4 |
+| Reto 7 Días - Inscritas | 1 |
+
+#### Engagement de la lista (todas las campañas)
+
+- Read often: **75 %** ✅ buena base de lectores recurrentes
+- Sometimes: 15,62 %
+- Never: 9,38 % (candidatos a limpiar tras 6 meses sin abrir)
+
+#### Reading environment
+
+- Webmail: 86,21 %
+- Mobile: 13,79 %
+
+> Caveat: Apple Mail Privacy Protection enmascara el cliente real, parte del "webmail" puede ser iPhone no detectado. Cifra orientativa.
+
+#### Lecturas honestas
+
+- **Open rate por debajo de saludable.** Posibles causas a investigar:
+  - Asunto "Esto es lo que vas a recibir." puede ser demasiado abstracto sin gancho claro.
+  - Lista heredada con engagement débil acumulado.
+  - Hora de envío (martes 19h) compite con otros emails comerciales y newsletters.
+- **Click rate 4,35 % con 1 click sobre 23 envíos** es estadísticamente irrelevante, pero el **click-to-open rate 16,67 %** es señal positiva: quien abre, encuentra valor.
+- **Cero bounces, cero unsubs y cero spam en la campaña** = sender reputation sano. Excelente señal para la Carta #2 del 19 mayo.
+- **A nivel lista global** (no de esta campaña) hay 5 bounces históricos auto-desactivados y 2 unsubs históricas. Ninguno atribuible a la Carta #1.
+
+#### Acciones derivadas (post-checkpoint +5h)
+
+- [ ] **Verificar double opt-in** en el formulario actual de newsletter. Si está desactivado, activarlo para evitar nuevos bounces y unconfirmed.
+- [ ] **Recuperar email correcto del bounce con typo** (`hoymall` → `hotmail`) si hay forma de contactar por otro canal. Identificador concreto en canal privado.
+- [ ] **Para la Carta #2** (19 mayo): considerar asunto más concreto y con gancho. Si MailerLite lo permite, test A/B sobre el asunto antes del envío masivo (mismo cuerpo, dos asuntos, ganan métricas reales del split). El asunto "La voz que te juzga" del HTML actual ya es más concreto que el de la Carta #1, pero conviene validar.
+- [ ] **Investigar si las 2 unsubscriptions históricas** son contactos muy antiguos (limpieza orgánica esperada) o recientes (problema de promesa/contenido).
+- [ ] **Revisar checkpoint +24h** mañana 6 mayo (open rate consolidado tras 24h).
+- [ ] **Revisar checkpoint +6 días** lunes 11 mayo (métricas finales de la Carta #1).
+
+### Checkpoint +24h · 6 mayo 2026
+
+(pendiente de rellenar tras revisión mañana)
+
+### Checkpoint +6 días · 11 mayo 2026
+
+(pendiente de rellenar tras revisión)
+
+---
+
 ## Recursos en el repo
 
 ```
@@ -147,4 +236,4 @@ Esto evita planificar a ciegas en sesiones posteriores y mantiene el repo como f
 
 ---
 
-**Última actualización:** 4 mayo 2026 · estado real reconciliado tras descubrir publicaciones previas.
+**Última actualización:** 5 mayo 2026 · 23:57 CEST · checkpoint +5h post-envío Carta #1 con métricas reales registradas.
