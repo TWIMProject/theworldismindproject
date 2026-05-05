@@ -187,7 +187,11 @@ Audiencia: 23 envíos (Reto 7 Días - Inscritas + Lista General TWIM).
 
 - [ ] **Verificar double opt-in** en el formulario actual de newsletter. Si está desactivado, activarlo para evitar nuevos bounces y unconfirmed.
 - [ ] **Recuperar email correcto del bounce con typo** (`hoymall` → `hotmail`) si hay forma de contactar por otro canal. Identificador concreto en canal privado.
-- [ ] **Para la Carta #2** (19 mayo): considerar asunto más concreto y con gancho. Si MailerLite lo permite, test A/B sobre el asunto antes del envío masivo (mismo cuerpo, dos asuntos, ganan métricas reales del split). El asunto "La voz que te juzga" del HTML actual ya es más concreto que el de la Carta #1, pero conviene validar.
+- [x] **Decisión Carta #2 cerrada el 6 mayo** tras revisión:
+  - Asunto: mantener "La voz que te juzga." sin cambios (ya es concreto y con gancho, evita el error de la Carta #1).
+  - **NO test A/B** del asunto: con 11-12 envíos por variante el resultado sería ruido estadístico (mínimo viable: 200+ por variante, esperar a Carta #4-5).
+  - **SÍ resend a non-openers** programado para domingo 24 mayo (5 días después del envío inicial), **solo a grupos engaged** (Newsletter Home + Reto 7 Días + Lead Magnet Dependencia), NO a Lista General TWIM. Asunto alternativo a redactar.
+  - **Lista General TWIM se mantiene** en el envío inicial del 19 mayo. Estándar email marketing: 3 cartas con bajo engagement antes de excluir un grupo. Reevaluar tras Carta #3 o #4.
 - [ ] **Investigar si las 2 unsubscriptions históricas** son contactos muy antiguos (limpieza orgánica esperada) o recientes (problema de promesa/contenido).
 - [ ] **Revisar checkpoint +24h** mañana 6 mayo (open rate consolidado tras 24h).
 - [ ] **Revisar checkpoint +6 días** lunes 11 mayo (métricas finales de la Carta #1).
