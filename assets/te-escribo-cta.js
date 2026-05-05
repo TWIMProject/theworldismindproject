@@ -35,6 +35,7 @@
           form.style.display = 'none';
           if (ok) ok.style.display = 'block';
           if (window.gtag) gtag('event', 'newsletter_signup', { source: 'cross_sell_seo', landing: location.pathname });
+          if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'Te escribo newsletter', source: 'cross_sell_seo' });
         } catch (ex) {
           btn.disabled = false;
           btn.textContent = label;
