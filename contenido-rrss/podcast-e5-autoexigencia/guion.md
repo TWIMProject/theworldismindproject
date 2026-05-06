@@ -11,7 +11,7 @@
 
 ## 0 · Intro (variante T1 humana, plantilla `intro-outro.md`)
 
-> **Duración total:** ~28-32 segundos (jingle + voz + pausas). Tono descriptivo, sin entusiasmo. Hablar despacio, con pausas reales entre bloques. La intro de E5 sienta patrón para todos los episodios siguientes — no improvisar variaciones que no estén aquí.
+> **Duración total:** ~33-37 segundos (jingle 2-3 s + ~54 palabras a 110-120 wpm ≈ 27-30 s + pausas explícitas ≈ 3,5-4 s). Tono descriptivo, sin entusiasmo. Hablar despacio, con pausas reales entre bloques. La intro de E5 sienta patrón para todos los episodios siguientes — no improvisar variaciones que no estén aquí.
 
 ### Guion (literal)
 
@@ -64,7 +64,7 @@ Autoexigencia, y la culpa de descansar.
 
 Estilo: **piano minimal o neo-classical, tono grave, sin percusión**. Cercano a Ólafur Arnalds, Nils Frahm o Max Richter — en versión royalty-free.
 
-**Tracks concretos recomendados (Pixabay Music · CC0 · descargables y usables en CapCut, YouTube y Spotify):**
+**Tracks concretos recomendados (Pixabay Music, [Pixabay Content License](https://pixabay.com/service/license-summary/) — uso comercial gratis, sin atribución obligatoria; verificar términos vigentes antes de publicar y guardar captura de la página de licencia del track elegido junto al máster del episodio):**
 
 | Track | Autor | Por qué |
 |-------|-------|---------|
@@ -74,7 +74,7 @@ Estilo: **piano minimal o neo-classical, tono grave, sin percusión**. Cercano a
 | *Calm* | Andrey Rossi | Piano lento, contemplativo. Más sobrio. |
 | *Patience* | Olexy | Emotional piano. Útil si la apertura del track tiene espacio respirable. |
 
-URL de búsqueda directa: `https://pixabay.com/music/search/<nombre-del-track>/` — descargas MP3 en CC0, atribución no obligatoria pero recomendable en show notes.
+URL de búsqueda directa: `https://pixabay.com/music/search/<nombre-del-track>/` — antes de publicar, **abrir la página del track**, leer la licencia que muestra Pixabay para ese archivo concreto (puede variar entre tracks) y **documentarla en show notes** (autor + URL del track + nombre de licencia). Si Spotify o YouTube marcan Content ID al subir, contactar al autor desde Pixabay o cambiar de track.
 
 **Cómo encontrarlos en CapCut (móvil o desktop):**
 1. Pestaña **Música** → buscador.
