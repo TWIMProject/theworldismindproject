@@ -4,7 +4,8 @@
 > **Título trabajo:** El mandato de no parar — autoexigencia y culpa de descansar
 > **Ventana publicación:** 12-18 mayo 2026 (idealmente martes 12 mayo, antes de la Carta #2 del 19 mayo)
 > **Modo grabación:** T1 humana (Daniel lee guion, no aparece en cámara)
-> **Duración objetivo:** 18-22 min hablados ≈ 2.700-3.300 palabras
+> **Duración objetivo (guion):** 18-22 min hablados ≈ 2.700-3.300 palabras
+> **Duración real tras edición:** 16 min 30 s · audio editado 6-may-2026 (Daniel ha dado OK al máster)
 > **Material editorial base reciclado:** `dejadeobligarte.html`, `insights/senales-vivir-en-obligacion.html`, `insights/del-deberia-al-quiero-ejercicios.html`, `insights/como-dejar-de-hacer-las-cosas-por-obligacion.html`, `insights/juez-interno-como-desactivar.html`.
 
 ---

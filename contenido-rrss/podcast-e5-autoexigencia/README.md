@@ -10,7 +10,7 @@
 
 | Archivo | Contenido | Estado |
 |---|---|---|
-| `guion.md` | Guion completo del episodio (~2.900 palabras, ~19 min hablados) | ✅ generado 5-may-2026 |
+| `guion.md` | Guion completo del episodio (~2.900 palabras, 16 min 30 s reales tras edición) | ✅ generado 5-may-2026 · grabado y editado 6-may-2026 |
 | `caption-youtube.md` | Título + descripción + capítulos + tags YouTube | ✅ generado 5-may-2026 |
 | `caption-spotify.md` | Título + descripción corta Spotify | ✅ generado 5-may-2026 |
 | `specs-portada.md` | Specs portada YouTube horizontal 1280×720 + Spotify 1:1 | ✅ generado 5-may-2026 |
