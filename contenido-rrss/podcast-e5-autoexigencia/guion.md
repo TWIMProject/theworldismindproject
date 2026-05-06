@@ -11,17 +11,84 @@
 
 ## 0 · Intro (variante T1 humana, plantilla `intro-outro.md`)
 
+> **Duración total:** ~28-32 segundos (jingle + voz + pausas). Tono descriptivo, sin entusiasmo. Hablar despacio, con pausas reales entre bloques. La intro de E5 sienta patrón para todos los episodios siguientes — no improvisar variaciones que no estén aquí.
+
+### Guion (literal)
+
 ```
-[Jingle corto · 2-3 s]
+[Jingle · 2-3 s · piano minimal grave en fade-out lento]
+
+
+[Cita clínica · pausa 0,5 s antes]
+
+«Sé que debería parar. Pero no puedo.»
+
+Esa frase la oigo cada semana.
+
+
+[Beat · 1 s]
+
 
 Esto es TWIM Podcast.
 
-Soy Daniel Orozco. Psicólogo en Valencia.
+Aquí no se diagnostica en quince segundos.
+Se piensa cómo funciona algo por dentro,
+para que deje de operar en automático.
 
-En este episodio, el mandato de no parar — autoexigencia y la culpa de descansar.
 
-[Transición · 1 s · entra el contenido]
+[Beat · 0,5 s]
+
+
+Yo soy Daniel Orozco.
+
+
+[Beat · 0,5 s]
+
+
+Hoy: el mandato de no parar.
+Autoexigencia, y la culpa de descansar.
+
+
+[Pausa 1 s · entra contenido]
 ```
+
+### Notas de delivery (críticas)
+
+- **La cita inicial** se dice como si fuera la voz del propio Daniel — sin marcarla verbalmente como cita ajena. Después de la frase «Esa frase la oigo cada semana» queda claro que es ajena. Esa estructura genera identificación inmediata: el oyente ya estaba dentro antes de saberlo.
+- **«Aquí no se diagnostica en quince segundos. Se piensa cómo funciona algo por dentro, para que deje de operar en automático.»** es eco literal de la promesa editorial de la Carta #1 de la newsletter. Coherencia transmedia. **No improvisar variaciones** — esta frase es la marca hablada del proyecto.
+- **«Yo soy Daniel Orozco.»** sin cargo profesional. La identidad clínica queda en la descripción del show de Spotify/YouTube, no en la voz de cada episodio. Decir "psicólogo" o "Valencia" rompería el tono editorial — el podcast no es una tarjeta de visita.
+- **Tema del episodio en 12 palabras exactas** (límite de la plantilla T1). Si en futuros episodios el tema necesita más, partirlo en dos frases dentro del límite.
+- **Cadencia general**: ~110-120 palabras por minuto. Más lento que el habla coloquial. Pausas marcadas entre bloques: el silencio es parte del posicionamiento.
+
+### Música · jingle de cabecera
+
+Estilo: **piano minimal o neo-classical, tono grave, sin percusión**. Cercano a Ólafur Arnalds, Nils Frahm o Max Richter — en versión royalty-free.
+
+**Tracks concretos recomendados (Pixabay Music · CC0 · descargables y usables en CapCut, YouTube y Spotify):**
+
+| Track | Autor | Por qué |
+|-------|-------|---------|
+| *Spirit of the Woods* | Aleksey Chistilin | Piano minimal cálido. Entrada limpia, ideal para los primeros 2-3 s. |
+| *Lonely Day* | RomanBelov | Neo-classical grave, denso. Da peso editorial. |
+| *Reflected Light* | Alex-Productions | Cello + piano, más cinematográfico. Si quieres textura más amplia. |
+| *Calm* | Andrey Rossi | Piano lento, contemplativo. Más sobrio. |
+| *Patience* | Olexy | Emotional piano. Útil si la apertura del track tiene espacio respirable. |
+
+URL de búsqueda directa: `https://pixabay.com/music/search/<nombre-del-track>/` — descargas MP3 en CC0, atribución no obligatoria pero recomendable en show notes.
+
+**Cómo encontrarlos en CapCut (móvil o desktop):**
+1. Pestaña **Música** → buscador.
+2. Buscar en **inglés** (filtra mejor): `minimal piano`, `neo classical`, `ambient slow`, `introspective piano`.
+3. Filtrar por mood: **Sad** o **Calm**. Filtrar por duración ≤ 1 min.
+4. Si no aparecen los nombres exactos: la biblioteca interna de CapCut tiene piezas equivalentes sin nombre de autor — buscar por mood "documentary" o "reflective".
+
+**Cómo recortar el jingle a 2-3 s:**
+- Coger los **primeros 2-3 segundos** del track (suelen ser entrada limpia, sin melodía todavía formada). O un sustain/drone del final.
+- **No usar la melodía principal** — entra directamente al tono emocional sin gastar identidad melódica.
+- Volumen jingle: **-6 a -3 dB** respecto a la voz. No debe opacar.
+- **Fade-out** de 0,3-0,5 s justo antes de la primera palabra.
+
+**Evitar:** géneros con etiquetas *uplifting*, *motivational*, *epic trailer*, *corporate*, *inspirational*, *adventure*. Cualquier pieza con percusión electrónica o build-up. Romperían el tono TWIM en los primeros 5 segundos.
 
 ---
 
