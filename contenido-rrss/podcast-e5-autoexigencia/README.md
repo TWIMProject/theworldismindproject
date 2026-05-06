@@ -10,14 +10,16 @@
 
 | Archivo | Contenido | Estado |
 |---|---|---|
-| `guion.md` | Guion completo del episodio (~2.900 palabras, ~19 min hablados) | ✅ generado 5-may-2026 |
+| `guion.md` | Guion completo del episodio (~2.900 palabras, 16 min 30 s reales tras edición) | ✅ generado 5-may-2026 · grabado y editado 6-may-2026 |
 | `caption-youtube.md` | Título + descripción + capítulos + tags YouTube | ✅ generado 5-may-2026 |
 | `caption-spotify.md` | Título + descripción corta Spotify | ✅ generado 5-may-2026 |
 | `specs-portada.md` | Specs portada YouTube horizontal 1280×720 + Spotify 1:1 | ✅ generado 5-may-2026 |
-| `cover-youtube.png` | Portada YouTube final | ⏳ pendiente diseño en Canva |
-| `cover-spotify.png` | Portada Spotify (si Opción B) o usar `podcast-cover.png` raíz | ⏳ pendiente decisión Daniel |
-| `audio-bruto.wav` | Grabación bruta del episodio | ⏳ pendiente grabación |
-| `audio-final.mp3` | Audio final con intro/outro y normalización | ⏳ pendiente edición |
+| `cover-youtube.png` | Portada YouTube 1280×720 (thumbnail) | ✅ generado 6-may-2026 vía `generar-portadas.py` |
+| `cover-spotify.png` | Portada Spotify 1400×1400 (Opción B, variante por episodio) | ✅ generado 6-may-2026 vía `generar-portadas.py` |
+| `video-fondo.png` | Pantalla estática 1920×1080 para reproducción YouTube (zona inferior libre para subtítulos) | ✅ generado 6-may-2026 vía `generar-portadas.py` |
+| `generar-portadas.py` | Script Pillow que recompone las 3 portadas a partir de `podcast-cover.png` raíz. Reusable en E6+ cambiando el bloque `CONTENIDO_EPISODIO`. | ✅ generado 6-may-2026 |
+| `audio-bruto.wav` | Grabación bruta del episodio | ✅ grabado 6-may-2026 |
+| `audio-final.mp3` | Audio final con intro/outro y normalización · 16 min 30 s | ✅ editado 6-may-2026 |
 
 ---
 

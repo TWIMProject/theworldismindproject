@@ -146,14 +146,16 @@ Argumentos a favor:
 
 ---
 
-## Recomendación para E5
+## Decisión final E5 (6-may-2026)
 
-**Ir con Opción A (cover canal estándar) para Spotify** y **producir portada YouTube horizontal específica del E5**.
+**Opción B para Spotify** + **portada YouTube específica** + **video-fondo 16:9 para reproducción**.
 
-Razones:
-- YouTube necesita thumbnail diferenciado por vídeo para el algoritmo (vídeos con thumbnail genérico tienen menor CTR).
-- Spotify en cambio asocia el episodio al cover canal sin penalización algorítmica si no hay variante.
-- En T1 (mayo-agosto) priorizamos velocidad de producción; las variantes Spotify por episodio pueden introducirse en T2.
+Las tres portadas se generan por código (Pillow) en `generar-portadas.py`, reutilizando el sillón y el logo MIND WORLD recortados del `podcast-cover.png` raíz. Esto garantiza:
+- Coherencia visual exacta con el cover canal en todos los episodios T1.
+- Coste 0 por episodio (cambia sólo el bloque `CONTENIDO_EPISODIO` del script).
+- Trazabilidad: el resultado es 100% reproducible desde el repo, sin pasos manuales en Canva.
+
+Diferencia con la recomendación previa (Opción A): el script hace que producir variante por episodio cueste lo mismo que reusar el cover canal — desaparece el argumento de "velocidad de producción" que justificaba A.
 
 ---
 
