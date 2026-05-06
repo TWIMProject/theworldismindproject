@@ -101,7 +101,7 @@ Plantilla: `[fecha]: publicado [pieza] en [canal] · URL [link]`.
 
 ```
 2026-05-06 ~21:00 CEST · publicado story-01-fragmento-carta1.png
-  · Canales: IG ✅ confirmado · FB / WhatsApp pendientes de confirmar por Daniel
+  · Canales: IG ✅ · FB ✅ · WhatsApp ✅ (confirmado por Daniel · 6-may 22:30 CEST)
   · Sticker link: https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=fragmento-d1
   · URL post IG: pendiente (las stories IG no exponen URL pública persistente; capturar con archivado de la story al expirar a las 21:00 del 7-may)
   · Métrica a leer 7-may 09:00 CEST: suscriptores nuevos en newsletter-home desde 6-may 21:00 (anotar en §6).
@@ -109,4 +109,4 @@ Plantilla: `[fecha]: publicado [pieza] en [canal] · URL [link]`.
 
 ---
 
-**Última actualización:** 6 mayo 2026, 22:15 CEST · Story 1 publicada (~21:00), log y horarios alineados con la plantilla simétrica CLAUDE.md.
+**Última actualización:** 6 mayo 2026, 22:30 CEST · Story 1 publicada en IG + FB + WhatsApp confirmado por Daniel.
