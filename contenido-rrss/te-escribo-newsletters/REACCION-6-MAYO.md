@@ -34,7 +34,7 @@ Tres stories en tres días, con tres ángulos distintos. Materiales gráficos ge
 - **Sin texto añadido sobre la imagen:** el diseño ya está cerrado.
 
 ### Story 2 — Mañana 7 mayo
-- **Pieza principal:** carrusel feed (5 slides, fragmento + CTA) — pendiente de producir mañana en sesión separada.
+- **Pieza principal:** carrusel feed (7 slides 1080×1350, fragmento Carta #1 condensado + CTA) — **producido el 6 mayo en `contenido-rrss/te-escribo-fragmento-carta1/`** y listo para programar. Caption Instagram, LinkedIn y hilo X también producidos.
 - **Imagen story:** `imagenes-stories/story-02-pointer-carrusel.png` apuntando al carrusel del feed.
 - **Canales:** Instagram, Facebook.
 - **Sticker link:** `https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=pointer-d2`
@@ -57,7 +57,7 @@ Tres stories en tres días, con tres ángulos distintos. Materiales gráficos ge
 | Fecha | Acción | Canal | Material |
 |-------|--------|-------|----------|
 | 6 mayo (mié) | Story 1 — fragmento Carta #1 | IG / FB / WhatsApp | `story-01-fragmento-carta1.png` |
-| 7 mayo (jue) | Carrusel feed (producir) + Story 2 pointer | IG / FB | `story-02-pointer-carrusel.png` |
+| 7 mayo (jue) | **Publicar** carrusel feed (ya producido) + Story 2 pointer | IG / FB | `te-escribo-fragmento-carta1/slide-01..07.png` + `story-02-pointer-carrusel.png` |
 | 8 mayo (vie) | — descanso — | — | — |
 | 8 mayo (vie) 22:00 | **Checkpoint reactivación** | — | ver §5 |
 | 9 mayo (sáb) | Story 3 — BTS Carta #2 | IG / FB / WhatsApp | `story-03-bts-escribiendo.png` |
