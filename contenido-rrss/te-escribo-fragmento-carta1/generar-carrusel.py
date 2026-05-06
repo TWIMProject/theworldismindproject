@@ -31,12 +31,13 @@ DESTINO = REPO / "contenido-rrss" / "te-escribo-fragmento-carta1"
 
 def _resolver_fuentes():
     """Devuelve el primer directorio existente que contenga las TTF
-    necesarias. Permite override via env var TWIM_FONTS_DIR; si no,
-    busca en ubicaciones convencionales por SO."""
+    necesarias. Permite override via env var TWIM_FONTS_DIR (con
+    expansion de `~`); si no, busca en ubicaciones convencionales
+    por SO."""
     import os
     candidatos = []
     if env := os.environ.get("TWIM_FONTS_DIR"):
-        candidatos.append(Path(env))
+        candidatos.append(Path(env).expanduser())
     candidatos += [
         Path.home() / ".local" / "share" / "fonts",            # Linux user
         Path.home() / "Library" / "Fonts",                      # macOS user
@@ -51,11 +52,16 @@ def _resolver_fuentes():
     for c in candidatos:
         if c.is_dir() and all((c / f).exists() for f in requeridas):
             return c
+    rutas_probadas = "\n  · ".join(str(c) for c in candidatos)
     raise FileNotFoundError(
-        "No se han encontrado las fuentes requeridas en ninguna ruta. "
-        f"Necesarias: {', '.join(requeridas)}. "
-        f"Define TWIM_FONTS_DIR o instala en ~/.local/share/fonts. "
-        f"Probadas: {[str(c) for c in candidatos]}"
+        "No se han encontrado las fuentes requeridas en ninguna de las "
+        "rutas probadas.\n"
+        f"Necesarias: {', '.join(requeridas)}.\n"
+        "Soluciones:\n"
+        "  · Definir TWIM_FONTS_DIR apuntando al directorio que contenga "
+        "las TTF (admite ~ y rutas absolutas).\n"
+        "  · O instalar las TTF en una de las rutas convencionales del SO:\n"
+        f"  · {rutas_probadas}"
     )
 
 
