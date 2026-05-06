@@ -40,7 +40,7 @@ Tres stories en tres días, con tres ángulos distintos. Materiales gráficos ge
 - **Sticker link:** `https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=pointer-d2`
 - **Acción complementaria:** fijar el carrusel en el perfil de IG para que "está fijado arriba ↑" sea literal.
 
-### Story 3 — Viernes 8 mayo
+### Story 3 — Sábado 9 mayo
 - **Imagen:** `imagenes-stories/story-03-bts-escribiendo.png`
 - **Concepto:** behind-the-scenes. Anuncio de que la Carta #2 ya está en escritura, sale el martes 19. Refuerza autoridad y crea ventana de incorporación previa al envío.
 - **Canales:** Instagram, Facebook, WhatsApp.
@@ -56,17 +56,17 @@ Tres stories en tres días, con tres ángulos distintos. Materiales gráficos ge
 
 | Fecha | Acción | Canal | Material |
 |-------|--------|-------|----------|
-| 6 mayo (mar) | Story 1 — fragmento Carta #1 | IG / FB / WhatsApp | `story-01-fragmento-carta1.png` |
-| 7 mayo (mié) | Carrusel feed (producir) + Story 2 pointer | IG / FB | `story-02-pointer-carrusel.png` |
-| 8 mayo (jue) | — descanso — | — | — |
-| 8 mayo (jue) 22:00 | **Checkpoint reactivación** | — | ver §5 |
-| 9 mayo (vie) | Story 3 — BTS Carta #2 | IG / FB / WhatsApp | `story-03-bts-escribiendo.png` |
+| 6 mayo (mié) | Story 1 — fragmento Carta #1 | IG / FB / WhatsApp | `story-01-fragmento-carta1.png` |
+| 7 mayo (jue) | Carrusel feed (producir) + Story 2 pointer | IG / FB | `story-02-pointer-carrusel.png` |
+| 8 mayo (vie) | — descanso — | — | — |
+| 8 mayo (vie) 22:00 | **Checkpoint reactivación** | — | ver §5 |
+| 9 mayo (sáb) | Story 3 — BTS Carta #2 | IG / FB / WhatsApp | `story-03-bts-escribiendo.png` |
 | 10-11 mayo | Descanso stories | — | — |
 | 12-18 mayo | Ventana grabación + publicación podcast E5 | YouTube + Spotify | `contenido-rrss/podcast-e5-autoexigencia/` |
 | 19 mayo (mar) | Carta #2 envío | Email | `carta-02-la-voz-que-te-juzga.html` |
 | 21 mayo (jue) 08:00 | **Gate Meta Ads condicional** | Ads Manager | `documentos-internos/setup-meta-ads-checklist.md` |
 
-## 5. Checkpoint reactivación · Viernes 8 mayo 22:00 CEST
+## 5. Checkpoint reactivación · viernes 8 mayo 22:00 CEST
 
 **Mirar:** contador de suscriptores en `newsletter-home` (MailerLite → Subscribers → filtro alta ≥ 5 mayo 19:00).
 
