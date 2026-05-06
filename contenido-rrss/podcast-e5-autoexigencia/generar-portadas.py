@@ -146,22 +146,26 @@ def cargar_logo_mindworld():
     return cover.crop((2200, 2380, 2880, 2880))
 
 
-def logo_blanco_translucido(logo_rgb, ancho, opacidad=140):
-    """Convierte el logo a una version casi-blanca semi-transparente
-    para superponer sobre la foto sin competir."""
+def logo_blanco_translucido(logo_rgb, ancho, opacidad_max=225):
+    """Convierte el logo a blanco semi-translucido preservando el
+    anti-aliasing original. El alpha de cada pixel es proporcional
+    a su distancia euclidea al verde oscuro de fondo del cover canal:
+    pixeles verdes -> alpha 0 (transparentes), pixeles beige -> alpha
+    cercano a opacidad_max. Asi se evita el halo blanco que produce
+    una binarizacion dura."""
     h = int(ancho * logo_rgb.height / logo_rgb.width)
     logo = logo_rgb.resize((ancho, h), Image.LANCZOS).convert("RGBA")
-    # Detectar el dibujo (lineas beige sobre verde) y convertirlo a blanco
     px = logo.load()
+    vr, vg, vb = 23, 61, 48  # verde oscuro #173D30 (fondo cover canal)
+    # Distancia de referencia: verde oscuro vs beige #C2A78B = ~226.
+    # Usamos 215 como techo para que el beige puro llegue casi al maximo.
+    dist_max = 215.0
     for y in range(h):
         for x in range(ancho):
             r, g, b, _ = px[x, y]
-            # zonas verdes oscuras = fondo, las hacemos transparentes
-            if g > r and g > b and g < 100:
-                px[x, y] = (255, 255, 255, 0)
-            else:
-                # zonas beige/clara = trazo, las hacemos blanco semi-transparente
-                px[x, y] = (255, 255, 255, opacidad)
+            dist = ((r - vr) ** 2 + (g - vg) ** 2 + (b - vb) ** 2) ** 0.5
+            t = min(1.0, dist / dist_max)
+            px[x, y] = (255, 255, 255, int(t * opacidad_max))
     return logo
 
 
