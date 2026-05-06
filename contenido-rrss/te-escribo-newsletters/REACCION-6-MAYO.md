@@ -25,7 +25,7 @@
 
 Tres stories en tres días, con tres ángulos distintos. Materiales gráficos generados y descargables desde este mismo directorio (`imagenes-stories/`).
 
-### Story 1 — HOY 6 mayo, tarde-noche (~19:00 CEST)
+### Story 1 — 6 mayo · publicada ~21:00 CEST (prevista originalmente ~19:00) ✅
 - **Imagen:** `imagenes-stories/story-01-fragmento-carta1.png` (1080×1920)
 - **Concepto:** la prueba. Un fragmento literal de la Carta #1 demostrando la promesa editorial ("vas a recibir mecanismo, no diagnósticos en quince segundos").
 - **Canales:** Instagram, Facebook, WhatsApp.
@@ -56,7 +56,7 @@ Tres stories en tres días, con tres ángulos distintos. Materiales gráficos ge
 
 | Fecha | Acción | Canal | Material |
 |-------|--------|-------|----------|
-| 6 mayo (mié) | Story 1 — fragmento Carta #1 | IG / FB / WhatsApp | `story-01-fragmento-carta1.png` |
+| 6 mayo (mié) ✅ | Story 1 — fragmento Carta #1 (publicada ~21:00 CEST) | IG / FB / WhatsApp | `story-01-fragmento-carta1.png` |
 | 7 mayo (jue) | **Publicar** carrusel feed (ya producido) + Story 2 pointer | IG / FB | `te-escribo-fragmento-carta1/slide-01..07.png` + `story-02-pointer-carrusel.png` |
 | 8 mayo (vie) | — descanso — | — | — |
 | 8 mayo (vie) 22:00 | **Checkpoint reactivación** | — | ver §5 |
@@ -95,6 +95,18 @@ Checkpoint 11 mayo 22:00 CEST · Suscriptores nuevos: __ (último antes de podca
 - **Tipografía:** Instrument Serif (titulares) + Barlow Condensed (microcopy). Coherente con `index.html`, `/newsletter/`, plantillas podcast.
 - **Paleta:** `#173D30` (verde oscuro), `#C2A78B` (beige), `#FDFCFA` (crema), `#6B6058` (gris medio). Coherente con `:root` del proyecto.
 
+## 8. Log de publicaciones (regla simétrica CLAUDE.md)
+
+Plantilla: `[fecha]: publicado [pieza] en [canal] · URL [link]`.
+
+```
+2026-05-06 ~21:00 CEST · publicado story-01-fragmento-carta1.png
+  · Canales: IG ✅ · FB ✅ · WhatsApp ✅ (confirmado por Daniel · 6-may 22:30 CEST)
+  · Sticker link: https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=fragmento-d1
+  · URL post IG: pendiente (las stories IG no exponen URL pública persistente; capturar con archivado de la story al expirar a las 21:00 del 7-may)
+  · Métrica a leer 7-may 09:00 CEST: suscriptores nuevos en newsletter-home desde 6-may 21:00 (anotar en §6).
+```
+
 ---
 
-**Última actualización:** 6 mayo 2026, 09:30 CEST · creado por reacción a baja conversión orgánica observada en stories del 5 mayo.
+**Última actualización:** 6 mayo 2026, 22:30 CEST · Story 1 publicada en IG + FB + WhatsApp confirmado por Daniel.
