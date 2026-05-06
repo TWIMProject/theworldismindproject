@@ -56,7 +56,7 @@ Tres stories en tres días, con tres ángulos distintos. Materiales gráficos ge
 
 | Fecha | Acción | Canal | Material |
 |-------|--------|-------|----------|
-| 6 mayo (mié) | Story 1 — fragmento Carta #1 | IG / FB / WhatsApp | `story-01-fragmento-carta1.png` |
+| 6 mayo (mié) ✅ | Story 1 — fragmento Carta #1 (publicada ~21:00 CEST) | IG / FB / WhatsApp | `story-01-fragmento-carta1.png` |
 | 7 mayo (jue) | **Publicar** carrusel feed (ya producido) + Story 2 pointer | IG / FB | `te-escribo-fragmento-carta1/slide-01..07.png` + `story-02-pointer-carrusel.png` |
 | 8 mayo (vie) | — descanso — | — | — |
 | 8 mayo (vie) 22:00 | **Checkpoint reactivación** | — | ver §5 |
@@ -95,6 +95,16 @@ Checkpoint 11 mayo 22:00 CEST · Suscriptores nuevos: __ (último antes de podca
 - **Tipografía:** Instrument Serif (titulares) + Barlow Condensed (microcopy). Coherente con `index.html`, `/newsletter/`, plantillas podcast.
 - **Paleta:** `#173D30` (verde oscuro), `#C2A78B` (beige), `#FDFCFA` (crema), `#6B6058` (gris medio). Coherente con `:root` del proyecto.
 
+## 8. Log de publicaciones (regla simétrica CLAUDE.md)
+
+```
+6-may-2026 ~21:00 CEST · Story 1 (story-01-fragmento-carta1.png) publicada
+  · Canales: IG / FB / WhatsApp (asumido según plan §2 Story 1)
+  · Sticker link: utm_campaign=fragmento-d1
+  · Métrica a leer mañana 7-may 09:00: suscriptores nuevos en
+    `newsletter-home` desde 6-may 21:00 (anotar en §6).
+```
+
 ---
 
-**Última actualización:** 6 mayo 2026, 09:30 CEST · creado por reacción a baja conversión orgánica observada en stories del 5 mayo.
+**Última actualización:** 6 mayo 2026, 21:30 CEST · Story 1 publicada, log añadido.
