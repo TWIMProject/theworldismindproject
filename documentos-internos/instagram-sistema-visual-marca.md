@@ -108,10 +108,14 @@ Texto sobre crema     #173D30   ← verde oscuro sobre fondo crema
 
 ### 3.2 · Tipografía de marca
 
-- **Display / títulos:** Barlow Condensed (Google Fonts) — la misma que usa la web. Pesos 600 (semibold) y 700 (bold).
-- **Body en imagen:** Barlow Condensed Regular o Lora Regular (serif clásica) según pieza.
+> **Actualización 6-may-2026 · alineamiento con verdad operativa.** El carrusel "Tu cansancio no es físico" publicado el 25 abril (referencia visual del feed) y el SVG de la story crema `story-01-fragmento-carta1.svg` usan **Instrument Serif** para titulares editoriales — incluyendo cursiva para cierres aforísticos como *"callándose"* o *"Y eso empieza por nombrarlo"*. El doc anterior prohibía cursiva por arrastre, pero la práctica establecida es otra. Esta sección refleja la práctica real.
+
 - **Kickers (etiquetas pequeñas):** Barlow Condensed Bold mayúsculas, letter-spacing 3-4 px, color beige.
-- **Prohibidas:** font Impact, Bebas Neue agresiva, Poppins, Montserrat, cualquier sans serif decorativa, cualquier cursiva. Cualquier tipografía que no sea Barlow Condensed o Lora rompe el sistema.
+- **Setup / body en sans:** Barlow Condensed Regular para frases de transición y subtítulos.
+- **Display / títulos editoriales:** **Instrument Serif Regular** (Google Fonts) — serif transitional con personalidad editorial alta. Tamaños 78-130 px en carruseles 1080×1350.
+- **Closer aforístico / cita íntima:** **Instrument Serif Italic** sobre beige `#C2A78B`. Reservada para frases-resumen de slide o cierres ("ni qué hacer con ello", "A veces solo entender ya mueve cosas"). NO se usa para cuerpo continuo, solo para el remate de un slide o pieza.
+- **Cuerpo largo en piezas que lo requieran:** Lora Regular como alternativa serif. En la práctica se usa muy poco — la mayor parte del cuerpo va en Instrument Serif Regular o Barlow Condensed.
+- **Prohibidas:** font Impact, Bebas Neue agresiva, Poppins, Montserrat, cualquier sans serif decorativa, cualquier serif distinta a Instrument Serif/Lora. La cursiva se usa SOLO en Instrument Serif Italic como acento aforístico, nunca en sans, nunca en cuerpo continuo.
 
 ### 3.3 · Las 3 categorías de contenido permitidas
 
@@ -148,18 +152,34 @@ Referencia interna ya existente en el feed: "Tu cansancio no es físico", "5 se�
 
 ### 3.4 · Plantillas — specs detallados para diseñador o asistente
 
-**Plantilla A1 · Carrusel verde dominante:**
+**Plantilla A1 · Carrusel verde dominante** (alineada con verdad operativa del 25 abril 2026):
+
 - Canvas 1080×1350.
 - Fondo: sólido #173D30.
 - Margen interior: 80 px en todos los lados.
-- Slide 1 hook:
-  - Kicker top: Barlow Condensed Bold 28 px, mayúsculas, letter-spacing 4 px, color #C2A78B. Posición: top-left con 80 px de margen.
-  - Título principal: Barlow Condensed Bold 78 px, color #FDFCFA, line-height 1.05, max-width 850 px. Posición: vertical centrado en el canvas.
-  - Footer: Barlow Condensed Regular 24 px, color #FDFCFA opacity 70 %, "@daniorozcopsicologo · twimproject.com". Bottom-left con 80 px de margen.
-- Slide N (CTA):
-  - Mismo header/kicker.
-  - Cuerpo: Lora Regular 42 px o Barlow Condensed Regular 48 px, color #FDFCFA, line-height 1.4.
-  - CTA destacado: Barlow Condensed Bold 36 px, color #C2A78B, en una caja con borde 2 px #C2A78B padding 24 px (opcional).
+
+- **Header (todas las slides):**
+  - Kicker top-left: Barlow Condensed Bold 26-28 px, mayúsculas, letter-spacing 4 px, color #C2A78B. Texto: nombre del carrusel/serie ("TWIM PROJECT", "TE ESCRIBO · CARTA #1", etc.).
+  - Paginación top-right: Barlow Condensed Regular 26 px, color #C2A78B, formato `0X / 0N`.
+
+- **Slide hook (slide 1):**
+  - Título principal en Instrument Serif Regular 90-130 px (según largo), color #FDFCFA, centrado horizontalmente, vertical en tercio superior-medio.
+  - Subtítulo opcional: Barlow Condensed Regular 40-50 px, color #C2A78B, centrado debajo del título principal.
+
+- **Slides cuerpo (2 a N-1):** patrón setup + punchline:
+  - Setup en Barlow Condensed Regular 40-46 px crema o beige, varias líneas centradas en tercio superior.
+  - Punchline en Instrument Serif Regular 90-130 px crema, centrado en tercio medio.
+  - Closer opcional en Instrument Serif Italic 80-100 px sobre beige `#C2A78B`, centrado en tercio inferior antes del footer (para cierres aforísticos).
+
+- **Slide CTA (slide final):**
+  - Título en Instrument Serif Regular 100-130 px crema.
+  - Subtítulo en Barlow Condensed Regular 40-44 px crema.
+  - URL destacada en Barlow Condensed Bold 44-52 px, color #C2A78B (sin caja).
+  - Pie en Instrument Serif Italic 44-52 px sobre beige (opcional, fecha o promesa concreta).
+
+- **Footer (todas las slides):** logo MIND WORLD PROJECT blanco sólido ~120-150 px de altura, centrado horizontalmente con base a ~200 px del borde inferior. Debajo, "@daniorozcopsicologo · twimproject.com" en Barlow Condensed Regular 24 px crema 100% opacidad, centrado a ~80 px del borde inferior.
+
+> **Nota:** la verdad operativa del 25 abril usa footer **centrado** (no bottom-left) con el logo MIND WORLD encima del handle. Esto sustituye la indicación previa de "bottom-left opacity 70%" que era desactualizada.
 
 **Plantilla A2 · Carrusel crema dominante:**
 - Canvas 1080×1350.
