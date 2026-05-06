@@ -27,7 +27,45 @@ from PIL import Image, ImageDraw, ImageFont
 
 REPO = Path(__file__).resolve().parent.parent.parent
 DESTINO = REPO / "contenido-rrss" / "te-escribo-fragmento-carta1"
-FUENTES = Path("/root/.local/share/fonts")
+
+
+def _resolver_fuentes():
+    """Devuelve el primer directorio existente que contenga las TTF
+    necesarias. Permite override via env var TWIM_FONTS_DIR (con
+    expansion de `~`); si no, busca en ubicaciones convencionales
+    por SO."""
+    import os
+    candidatos = []
+    if env := os.environ.get("TWIM_FONTS_DIR"):
+        candidatos.append(Path(env).expanduser())
+    candidatos += [
+        Path.home() / ".local" / "share" / "fonts",            # Linux user
+        Path.home() / "Library" / "Fonts",                      # macOS user
+        Path("/usr/local/share/fonts"),                         # Linux system
+        Path("/Library/Fonts"),                                 # macOS system
+        Path("C:/Windows/Fonts"),                               # Windows
+    ]
+    requeridas = [
+        "BarlowCondensed-Regular.ttf", "BarlowCondensed-Bold.ttf",
+        "InstrumentSerif-Regular.ttf", "InstrumentSerif-Italic.ttf",
+    ]
+    for c in candidatos:
+        if c.is_dir() and all((c / f).exists() for f in requeridas):
+            return c
+    rutas_probadas = "\n  · ".join(str(c) for c in candidatos)
+    raise FileNotFoundError(
+        "No se han encontrado las fuentes requeridas en ninguna de las "
+        "rutas probadas.\n"
+        f"Necesarias: {', '.join(requeridas)}.\n"
+        "Soluciones:\n"
+        "  · Definir TWIM_FONTS_DIR apuntando al directorio que contenga "
+        "las TTF (admite ~ y rutas absolutas).\n"
+        "  · O instalar las TTF en una de las rutas convencionales del SO:\n"
+        f"  · {rutas_probadas}"
+    )
+
+
+FUENTES = _resolver_fuentes()
 
 # --- Paleta TWIM (sistema visual IG) -----------------------------------------
 
@@ -331,10 +369,13 @@ def main():
     DESTINO.mkdir(parents=True, exist_ok=True)
     logo = cargar_logo_mindworld_blanco(140)
     print(f"Logo MIND WORLD blanco preparado: {logo.size}")
-    for fn in [slide_01, slide_02, slide_03, slide_04, slide_05, slide_06, slide_07]:
+    print(f"Fuentes: {FUENTES}")
+    funciones = [slide_01, slide_02, slide_03, slide_04,
+                 slide_05, slide_06, slide_07]
+    for i, fn in enumerate(funciones, start=1):
         fn(logo)
-        print(f"  OK {fn.__name__}.png")
-    print(f"Listo. 7 slides en {DESTINO.relative_to(REPO)}")
+        print(f"  OK slide-{i:02d}.png")
+    print(f"Listo. {len(funciones)} slides en {DESTINO.relative_to(REPO)}")
 
 
 if __name__ == "__main__":
