@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#FDFCFA"/>
+
+  <!-- Kicker top -->
+  <text x="540" y="240" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="32" letter-spacing="6" fill="#C2A78B">
+    TE ESCRIBO · CARTA #1
+  </text>
+  <line x1="440" y1="280" x2="640" y2="280" stroke="#C2A78B" stroke-width="1"/>
+
+  <!-- Opening quote mark -->
+  <text x="540" y="600" text-anchor="middle"
+        font-family="Instrument Serif" font-style="italic"
+        font-size="180" fill="#C2A78B" opacity="0.55">
+    &#8220;
+  </text>
+
+  <!-- Main quote -->
+  <text x="540" y="800" text-anchor="middle"
+        font-family="Instrument Serif" font-weight="400"
+        font-size="78" fill="#173D30" letter-spacing="0.5">
+    <tspan x="540" dy="0">Cómo funciona algo</tspan>
+    <tspan x="540" dy="100">por dentro, de dónde</tspan>
+    <tspan x="540" dy="100">viene, y qué puedes</tspan>
+    <tspan x="540" dy="100">hacer para que deje</tspan>
+    <tspan x="540" dy="100">de operar.</tspan>
+  </text>
+
+  <!-- Attribution -->
+  <text x="540" y="1370" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="300"
+        font-size="34" fill="#6B6058" letter-spacing="1">
+    — de la carta que envié ayer
+  </text>
+
+  <!-- Bottom block -->
+  <line x1="380" y1="1560" x2="700" y2="1560" stroke="#173D30" stroke-width="1" opacity="0.25"/>
+
+  <text x="540" y="1660" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="44" fill="#173D30" letter-spacing="0.5">
+    La próxima sale en dos semanas.
+  </text>
+
+  <text x="540" y="1740" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="300"
+        font-size="34" fill="#6B6058" letter-spacing="1">
+    Si la quieres recibir, link arriba ↑
+  </text>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#FDFCFA"/>
+
+  <!-- Subtle paper texture lines -->
+  <g opacity="0.06">
+    <line x1="0" y1="380" x2="1080" y2="380" stroke="#173D30" stroke-width="1"/>
+    <line x1="0" y1="520" x2="1080" y2="520" stroke="#173D30" stroke-width="1"/>
+    <line x1="0" y1="660" x2="1080" y2="660" stroke="#173D30" stroke-width="1"/>
+  </g>
+
+  <!-- Kicker top -->
+  <text x="540" y="240" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="32" letter-spacing="6" fill="#C2A78B">
+    TE ESCRIBO · CARTA #2
+  </text>
+  <line x1="440" y1="280" x2="640" y2="280" stroke="#C2A78B" stroke-width="1"/>
+
+  <!-- Main copy -->
+  <text x="540" y="780" text-anchor="middle"
+        font-family="Instrument Serif" font-weight="400"
+        font-size="86" fill="#173D30" letter-spacing="0.5">
+    <tspan x="540" dy="0">Hoy he empezado</tspan>
+    <tspan x="540" dy="110">a escribir</tspan>
+    <tspan x="540" dy="110">la siguiente.</tspan>
+  </text>
+
+  <!-- Date line -->
+  <text x="540" y="1300" text-anchor="middle"
+        font-family="Instrument Serif" font-style="italic"
+        font-size="52" fill="#265C4B" letter-spacing="0.5">
+    Sale el martes 19.
+  </text>
+
+  <!-- Separator -->
+  <line x1="430" y1="1500" x2="650" y2="1500" stroke="#173D30" stroke-width="1" opacity="0.25"/>
+
+  <!-- Bottom block -->
+  <text x="540" y="1620" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="44" fill="#173D30" letter-spacing="0.5">
+    Si te quieres apuntar antes,
+  </text>
+
+  <text x="540" y="1700" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="300"
+        font-size="36" fill="#6B6058" letter-spacing="1">
+    link arriba ↑
+  </text>
+</svg>

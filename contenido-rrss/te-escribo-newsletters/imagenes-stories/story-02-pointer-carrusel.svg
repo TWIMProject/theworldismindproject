@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#173D30"/>
+
+  <!-- Kicker top -->
+  <text x="540" y="280" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="32" letter-spacing="8" fill="#C2A78B">
+    EN MI FEED
+  </text>
+  <line x1="470" y1="320" x2="610" y2="320" stroke="#C2A78B" stroke-width="1"/>
+
+  <!-- Main copy -->
+  <text x="540" y="800" text-anchor="middle"
+        font-family="Instrument Serif" font-weight="400"
+        font-size="84" fill="#FDFCFA" letter-spacing="0.5">
+    <tspan x="540" dy="0">He sacado un</tspan>
+    <tspan x="540" dy="110">fragmento de la</tspan>
+    <tspan x="540" dy="110">primera carta.</tspan>
+  </text>
+
+  <!-- Italic line -->
+  <text x="540" y="1280" text-anchor="middle"
+        font-family="Instrument Serif" font-style="italic"
+        font-size="52" fill="#D4C4AE" letter-spacing="0.5">
+    Para que se vea entero.
+  </text>
+
+  <!-- Bottom block -->
+  <line x1="430" y1="1500" x2="650" y2="1500" stroke="#C2A78B" stroke-width="1" opacity="0.5"/>
+
+  <text x="540" y="1620" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="48" fill="#FDFCFA" letter-spacing="1">
+    Está fijado arriba ↑
+  </text>
+
+  <text x="540" y="1720" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="300"
+        font-size="32" fill="#9E907D" letter-spacing="2">
+    @twimproject
+  </text>
+</svg>
