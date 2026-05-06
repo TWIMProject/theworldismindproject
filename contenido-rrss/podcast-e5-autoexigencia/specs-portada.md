@@ -146,16 +146,22 @@ Argumentos a favor:
 
 ---
 
-## Decisión final E5 (6-may-2026)
+## Decisión final E5 (6-may-2026, revisada)
 
-**Opción B para Spotify** + **portada YouTube específica** + **video-fondo 16:9 para reproducción**.
+**Sistema visual heredado de NotebookLM (E1-E4): foto autor + Playfair Display serif.**
+**Tres formatos:** YouTube horizontal 1280×720, Spotify cuadrado 1400×1400, Story vertical 1080×1920.
 
-Las tres portadas se generan por código (Pillow) en `generar-portadas.py`, reutilizando el sillón y el logo MIND WORLD recortados del `podcast-cover.png` raíz. Esto garantiza:
-- Coherencia visual exacta con el cover canal en todos los episodios T1.
-- Coste 0 por episodio (cambia sólo el bloque `CONTENIDO_EPISODIO` del script).
-- Trazabilidad: el resultado es 100% reproducible desde el repo, sin pasos manuales en Canva.
+Generación por código (Pillow) en `generar-portadas.py`. El script:
+- Carga `daniel-orozco-sillon.jpg` (raíz del repo) como retrato — misma sesión de fotos del Ep.3 NotebookLM, asegura coherencia visual del canal en la transición a formato humano.
+- Recorta el logo MIND WORLD PROJECT del `podcast-cover.png` raíz y lo convierte en versión blanca semi-translúcida para superponerlo sobre la foto.
+- Aplica fade lateral (horizontal en cover-youtube y cover-spotify, vertical en story-vertical) para fundir la foto con el verde sólido.
+- Renderiza el bloque editorial: eyebrow Barlow Condensed Bold tracked + separador horizontal beige + título Playfair Display Bold (peso 700) + subtítulo paréntesis en Playfair Display Italic + pie Barlow Condensed Bold tracked.
 
-Diferencia con la recomendación previa (Opción A): el script hace que producir variante por episodio cueste lo mismo que reusar el cover canal — desaparece el argumento de "velocidad de producción" que justificaba A.
+**Tipografías**: Barlow Condensed (eyebrow + pie, ya en repo) + Playfair Display Variable Font (título + subtítulo paréntesis, descargada de google/fonts).
+
+**Coste por episodio nuevo**: cambiar el bloque `CONTENIDO_EPISODIO` (5 strings) y ejecutar el script. Si la foto del autor se mantiene la misma para toda T1, no hay coste de fotografía adicional. Si se rota foto por bloque temático, sustituir `FOTO_AUTOR` en el script.
+
+**Pendiente**: migrar `video-fondo.png` (pantalla durante reproducción YouTube) al nuevo sistema visual. Sigue funcional con el sistema anterior (sillones ilustrados sobre verde).
 
 ---
 

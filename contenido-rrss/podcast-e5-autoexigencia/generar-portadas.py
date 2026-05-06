@@ -1,65 +1,62 @@
-"""Genera las 3 portadas del E5 reutilizando los elementos visuales del cover canal.
+"""Genera las 3 portadas del E5 con el sistema visual establecido en la
+era NotebookLM (E1-E4) y heredado al formato humano: foto del autor +
+tipografia serif display + jerarquia editorial sobre verde oscuro.
 
-Reusa `podcast-cover.png` (raíz repo) como banco de elementos icónicos:
-los sillones y el logo MIND WORLD PROJECT. Compone tres lienzos nuevos
-(Spotify cuadrado, YouTube horizontal, video-fondo 16:9) con la jerarquía
-editorial que define `specs-portada.md`.
+Outputs (todos en `contenido-rrss/podcast-e5-autoexigencia/`):
+- cover-youtube.png   1280x720   horizontal (texto izq + foto der)
+- cover-spotify.png   1400x1400  cuadrado (texto izq + foto der vertical)
+- story-vertical.png  1080x1920  vertical (foto arriba + texto abajo)
 
-Uso: `python3 generar-portadas.py` desde la raíz del repo o desde la
-carpeta del episodio. Sobrescribe `cover-spotify.png`, `cover-youtube.png`
-y `video-fondo.png` en `contenido-rrss/podcast-e5-autoexigencia/`.
-
-Para episodios siguientes: copiar este script a la carpeta del nuevo
-episodio y cambiar el bloque CONTENIDO_EPISODIO de abajo.
+Reusa `daniel-orozco-sillon.jpg` (raiz repo) como retrato. Para episodios
+siguientes basta con cambiar el bloque CONTENIDO_EPISODIO.
 """
 
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-# --- Configuración del episodio ----------------------------------------------
+# --- Configuracion del episodio ----------------------------------------------
 
 CONTENIDO_EPISODIO = {
-    "numero": "E5",
-    "titulo_l1": "EL MANDATO",
-    "titulo_l2": "DE NO PARAR",
-    "subtitulo": "Autoexigencia y culpa de descansar",
-    "pie_corto": "Daniel Orozco Abia · CV11515",
-    "pie_largo": "Daniel Orozco Abia · Psicólogo CV11515 · Valencia",
+    "numero": "Ep.5",
+    "kicker": "Psicología Aplicada",
+    "titulo_lineas": ["EL MANDATO", "DE NO PARAR"],
+    "subtitulo_par": "(y la culpa que viene cuando lo intentas)",
+    "pie": "DANIEL OROZCO  ·  @daniorozcopsicologo",
 }
 
-# --- Paleta TWIM (CLAUDE.md) -------------------------------------------------
+# --- Paleta TWIM -------------------------------------------------------------
 
-VERDE_OSCURO = (23, 61, 48)
-VERDE_MEDIO = (38, 92, 75)
-BEIGE = (194, 167, 139)
-CREMA = (253, 252, 250)
-BLANCO_HUMO = (245, 242, 236)
+VERDE_OSCURO = (23, 61, 48)        # #173D30
+BEIGE = (194, 167, 139)            # #C2A78B
+BEIGE_CLARO = (212, 192, 170)
+CREMA = (245, 235, 220)            # casi blanco con calidez
+BLANCO = (250, 246, 240)
 
 # --- Paths -------------------------------------------------------------------
 
 REPO = Path(__file__).resolve().parent.parent.parent
-COVER_CANAL = REPO / "podcast-cover.png"
+FOTO_AUTOR = REPO / "daniel-orozco-sillon.jpg"
 DESTINO = REPO / "contenido-rrss" / "podcast-e5-autoexigencia"
 FUENTES = Path("/root/.local/share/fonts")
 
-# --- Carga de fuentes --------------------------------------------------------
+PLAYFAIR_VF = FUENTES / "PlayfairDisplay-VF.ttf"
+PLAYFAIR_ITALIC_VF = FUENTES / "PlayfairDisplay-Italic-VF.ttf"
 
-def font(weight, size):
-    archivo = FUENTES / f"BarlowCondensed-{weight}.ttf"
-    return ImageFont.truetype(str(archivo), size)
+# --- Fuentes -----------------------------------------------------------------
+
+def serif(size, weight=700, italic=False):
+    """Devuelve Playfair Display variable font con peso y estilo dados."""
+    archivo = PLAYFAIR_ITALIC_VF if italic else PLAYFAIR_VF
+    f = ImageFont.truetype(str(archivo), size)
+    try:
+        f.set_variation_by_axes([weight])
+    except Exception:
+        pass
+    return f
 
 
-# --- Recorte de elementos del cover canal ------------------------------------
-
-def cargar_elementos_canal():
-    """Recorta sillon y logo del cover canal 3000x3000."""
-    cover = Image.open(COVER_CANAL).convert("RGB")
-    # Coordenadas medidas sobre cover 3000x3000 (verde solido + dibujo a linea):
-    # sillon ocupa franja vertical aprox y=1180..2230, x=360..2640.
-    sillon = cover.crop((360, 1180, 2640, 2230))
-    # Logo MIND WORLD esquina inferior derecha aprox y=2380..2880, x=2200..2880.
-    logo = cover.crop((2200, 2380, 2880, 2880))
-    return sillon, logo
+def sans(weight, size):
+    return ImageFont.truetype(str(FUENTES / f"BarlowCondensed-{weight}.ttf"), size)
 
 
 # --- Helpers de texto --------------------------------------------------------
@@ -67,21 +64,6 @@ def cargar_elementos_canal():
 def medir(texto, fuente):
     bbox = fuente.getbbox(texto)
     return bbox[2] - bbox[0], bbox[3] - bbox[1]
-
-
-def dibujar_centrado(draw, texto, fuente, color, y, ancho_lienzo):
-    w, _ = medir(texto, fuente)
-    draw.text(((ancho_lienzo - w) // 2, y), texto, font=fuente, fill=color)
-
-
-def dibujar_tracked(draw, texto, fuente, color, x, y, tracking_px):
-    """Dibuja con letter-spacing manual (Pillow no lo trae nativo)."""
-    cursor = x
-    for ch in texto:
-        draw.text((cursor, y), ch, font=fuente, fill=color)
-        w, _ = medir(ch, fuente)
-        cursor += w + tracking_px
-    return cursor - x  # ancho total renderizado
 
 
 def medir_tracked(texto, fuente, tracking_px):
@@ -92,182 +74,318 @@ def medir_tracked(texto, fuente, tracking_px):
     return total - tracking_px
 
 
-def dibujar_tracked_centrado(draw, texto, fuente, color, y, ancho_lienzo, tracking_px):
-    w = medir_tracked(texto, fuente, tracking_px)
-    dibujar_tracked(draw, texto, fuente, color, (ancho_lienzo - w) // 2, y, tracking_px)
+def dibujar_tracked(draw, texto, fuente, color, x, y, tracking_px):
+    cursor = x
+    for ch in texto:
+        draw.text((cursor, y), ch, font=fuente, fill=color)
+        w, _ = medir(ch, fuente)
+        cursor += w + tracking_px
+    return cursor - x
 
 
-# --- Composición -------------------------------------------------------------
+# --- Foto: fade lateral hacia verde ------------------------------------------
 
-def lienzo(ancho, alto):
-    """Lienzo verde oscuro liso (sin gradiente fuerte; coherente con canal)."""
-    return Image.new("RGB", (ancho, alto), VERDE_OSCURO)
+def foto_con_fade_izq(foto, alto_destino, ancho_destino, fade_px):
+    """Recorta y escala la foto al tamano destino y aplica fade
+    horizontal en el borde izquierdo (de transparente a opaco)
+    sobre `fade_px` para fundirla con el lienzo verde."""
+    # Escalar a alto destino preservando ratio
+    ratio = alto_destino / foto.height
+    nuevo_ancho = int(foto.width * ratio)
+    foto_e = foto.resize((nuevo_ancho, alto_destino), Image.LANCZOS)
+
+    # Recortar centrado al ancho destino
+    if nuevo_ancho > ancho_destino:
+        izq = (nuevo_ancho - ancho_destino) // 2
+        foto_e = foto_e.crop((izq, 0, izq + ancho_destino, alto_destino))
+    else:
+        # Si la foto es mas estrecha, padear con verde
+        bg = Image.new("RGB", (ancho_destino, alto_destino), VERDE_OSCURO)
+        bg.paste(foto_e, ((ancho_destino - nuevo_ancho) // 2, 0))
+        foto_e = bg
+
+    # Mascara alpha: gradiente horizontal de 0 a 255 en los primeros fade_px
+    foto_rgba = foto_e.convert("RGBA")
+    mask = Image.new("L", (ancho_destino, alto_destino), 255)
+    md = ImageDraw.Draw(mask)
+    for x in range(fade_px):
+        alpha = int(255 * (x / fade_px))
+        md.line([(x, 0), (x, alto_destino)], fill=alpha)
+    foto_rgba.putalpha(mask)
+    return foto_rgba
 
 
-def pegar_redimensionado(base, elem, dest_w, dest_h, x, y):
-    """Pega un elemento del cover canal redimensionado en (x,y).
-    Como el cover canal tiene fondo verde igual al lienzo nuevo,
-    el blending es natural sin necesidad de transparencia."""
-    redim = elem.resize((dest_w, dest_h), Image.LANCZOS)
-    base.paste(redim, (x, y))
+def foto_con_fade_abajo(foto, alto_destino, ancho_destino, fade_px):
+    """Variante con fade en el borde inferior (para vertical donde
+    foto va arriba y texto abajo)."""
+    ratio_w = ancho_destino / foto.width
+    ratio_h = alto_destino / foto.height
+    ratio = max(ratio_w, ratio_h)
+    new_w, new_h = int(foto.width * ratio), int(foto.height * ratio)
+    foto_e = foto.resize((new_w, new_h), Image.LANCZOS)
+    # Recorte centrado
+    izq = (new_w - ancho_destino) // 2
+    arr = (new_h - alto_destino) // 2
+    foto_e = foto_e.crop((izq, arr, izq + ancho_destino, arr + alto_destino))
+
+    foto_rgba = foto_e.convert("RGBA")
+    mask = Image.new("L", (ancho_destino, alto_destino), 255)
+    md = ImageDraw.Draw(mask)
+    for y in range(fade_px):
+        alpha = int(255 * (1 - y / fade_px))
+        md.line([(0, alto_destino - fade_px + y),
+                 (ancho_destino, alto_destino - fade_px + y)], fill=alpha)
+    foto_rgba.putalpha(mask)
+    return foto_rgba
 
 
-# --- 1. Cover Spotify 1400x1400 ----------------------------------------------
+# --- Logo MIND WORLD recortado del cover canal --------------------------------
 
-def generar_spotify(sillon, logo):
-    W, H = 1400, 1400
-    img = lienzo(W, H)
+def cargar_logo_mindworld():
+    cover = Image.open(REPO / "podcast-cover.png").convert("RGB")
+    return cover.crop((2200, 2380, 2880, 2880))
+
+
+def logo_blanco_translucido(logo_rgb, ancho, opacidad=140):
+    """Convierte el logo a una version casi-blanca semi-transparente
+    para superponer sobre la foto sin competir."""
+    h = int(ancho * logo_rgb.height / logo_rgb.width)
+    logo = logo_rgb.resize((ancho, h), Image.LANCZOS).convert("RGBA")
+    # Detectar el dibujo (lineas beige sobre verde) y convertirlo a blanco
+    px = logo.load()
+    for y in range(h):
+        for x in range(ancho):
+            r, g, b, _ = px[x, y]
+            # zonas verdes oscuras = fondo, las hacemos transparentes
+            if g > r and g > b and g < 100:
+                px[x, y] = (255, 255, 255, 0)
+            else:
+                # zonas beige/clara = trazo, las hacemos blanco semi-transparente
+                px[x, y] = (255, 255, 255, opacidad)
+    return logo
+
+
+# --- Lienzo y separador ------------------------------------------------------
+
+def lienzo(w, h):
+    return Image.new("RGB", (w, h), VERDE_OSCURO)
+
+
+def separador_horizontal(draw, x, y, ancho, color, grosor=2):
+    draw.rectangle([(x, y), (x + ancho, y + grosor)], fill=color)
+
+
+# --- Bloque editorial reusable -----------------------------------------------
+
+def render_bloque_editorial(img, ep, x_izq, ancho_disp, y_centro,
+                            f_kicker, kicker_track, f_titulo, gap_titulo,
+                            f_subtitulo, separador_w, color_titulo, color_meta):
+    """Dibuja eyebrow + separador + titulo + subtitulo paréntesis
+    centrados verticalmente alrededor de y_centro. Devuelve el rect
+    dibujado para que la funcion llamante coloque pie debajo."""
     d = ImageDraw.Draw(img)
-    ep = CONTENIDO_EPISODIO
 
-    # Eyebrow superior: "TWIM PODCAST"
-    f_eyebrow = font("Medium", 52)
-    dibujar_tracked_centrado(d, "TWIM PODCAST", f_eyebrow, BEIGE, 110, W, 6)
+    # Calcular alto total del bloque para centrar
+    eyebrow_h = medir(ep["numero"] + ep["kicker"], f_kicker)[1]
+    titulo_alto_linea = medir("EM", f_titulo)[1] + gap_titulo
+    titulo_total = titulo_alto_linea * len(ep["titulo_lineas"]) - gap_titulo
+    sub_h = medir(ep["subtitulo_par"], f_subtitulo)[1]
+    espaciado_eyebrow_separador = 18
+    espaciado_separador_titulo = 60
+    espaciado_titulo_sub = 50
+    grosor_sep = 3
+    total = (eyebrow_h + espaciado_eyebrow_separador + grosor_sep
+             + espaciado_separador_titulo + titulo_total
+             + espaciado_titulo_sub + sub_h)
+    y_inicio = y_centro - total // 2
 
-    # Numero episodio grande pero sutil
-    f_ep = font("ExtraBold", 130)
-    ep_color = (BEIGE[0], BEIGE[1], BEIGE[2])
-    # Mas tenue: lo composito sobre el verde con menor opacidad via overlay manual
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ld = ImageDraw.Draw(layer)
-    ep_w, ep_h = medir(ep["numero"], f_ep)
-    ld.text(((W - ep_w) // 2, 175), ep["numero"], font=f_ep,
-            fill=(*ep_color, 100))  # ~40% opacidad
-    img = Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
-    d = ImageDraw.Draw(img)
+    # Eyebrow: TWIM PODCAST (linea 1) + Ep.X · Psicología (linea 2)
+    f_kicker_top = sans("Bold", f_kicker.size)
+    dibujar_tracked(d, "TWIM PODCAST", f_kicker_top, color_meta,
+                     x_izq, y_inicio, kicker_track)
+    y_eyebrow2 = y_inicio + medir("TWIM PODCAST", f_kicker_top)[1] + 8
+    sub_kicker = f"{ep['numero']} · {ep['kicker']}"
+    dibujar_tracked(d, sub_kicker, f_kicker, color_meta,
+                     x_izq, y_eyebrow2, max(2, kicker_track // 2))
 
-    # Titulo principal dos lineas
-    f_titulo = font("Bold", 130)
-    dibujar_centrado(d, ep["titulo_l1"], f_titulo, CREMA, 360, W)
-    dibujar_centrado(d, ep["titulo_l2"], f_titulo, CREMA, 360 + 125, W)
+    # Separador
+    y_sep = y_eyebrow2 + medir(sub_kicker, f_kicker)[1] + espaciado_eyebrow_separador
+    separador_horizontal(d, x_izq, y_sep, separador_w, color_meta, grosor_sep)
 
-    # Subtitulo
-    f_sub = font("Regular", 50)
-    dibujar_centrado(d, ep["subtitulo"], f_sub, BEIGE, 660, W)
+    # Titulo
+    y_titulo = y_sep + grosor_sep + espaciado_separador_titulo
+    for i, linea in enumerate(ep["titulo_lineas"]):
+        d.text((x_izq, y_titulo + i * titulo_alto_linea),
+               linea, font=f_titulo, fill=color_titulo)
 
-    # Sillones (recorte del canal) centrados
-    # Sillon original 2280x1050 -> escalar a ~860x395 para encajar
-    sw, sh = 860, int(860 * sillon.height / sillon.width)
-    pegar_redimensionado(img, sillon, sw, sh, (W - sw) // 2, 780)
+    # Subtitulo paréntesis (cursiva)
+    y_sub = y_titulo + titulo_total + espaciado_titulo_sub
+    d.text((x_izq, y_sub), ep["subtitulo_par"], font=f_subtitulo, fill=color_meta)
 
-    # Pie centrado abajo
-    f_pie = font("Regular", 32)
-    dibujar_centrado(d, ep["pie_largo"], f_pie, BEIGE, H - 130, W)
-
-    # Logo MIND WORLD abajo centrado-derecha pequeno
-    lw = 180
-    lh = int(lw * logo.height / logo.width)
-    img.paste(logo.resize((lw, lh), Image.LANCZOS),
-              (W - lw - 80, H - lh - 60))
-
-    salida = DESTINO / "cover-spotify.png"
-    img.save(salida, "PNG", optimize=True)
-    print(f"OK cover-spotify.png -> {salida.relative_to(REPO)} ({W}x{H})")
+    return y_sub + sub_h  # bottom y
 
 
-# --- 2. Cover YouTube 1280x720 -----------------------------------------------
+# --- 1. YouTube horizontal 1280x720 ------------------------------------------
 
-def generar_youtube(sillon, logo):
+def generar_youtube(foto_orig, logo_rgb):
     W, H = 1280, 720
     img = lienzo(W, H)
+
+    # Foto a la derecha ocupando ~50% con fade izq de 220px
+    foto_w = int(W * 0.55)
+    foto = foto_con_fade_izq(foto_orig, H, foto_w, fade_px=220)
+    img.paste(foto, (W - foto_w, 0), foto)
+
+    # Bloque editorial izquierda
+    x_izq = 70
+    ancho_disp = int(W * 0.45) - 70
+    f_kicker = sans("Medium", 22)
+    f_titulo = serif(78, weight=700)
+    f_sub = serif(28, weight=400, italic=True)
+    bottom = render_bloque_editorial(
+        img, CONTENIDO_EPISODIO, x_izq, ancho_disp, H // 2,
+        f_kicker=f_kicker, kicker_track=4,
+        f_titulo=f_titulo, gap_titulo=14,
+        f_subtitulo=f_sub, separador_w=70,
+        color_titulo=CREMA, color_meta=BEIGE)
+
+    # Pie inferior izquierda
     d = ImageDraw.Draw(img)
-    ep = CONTENIDO_EPISODIO
+    f_pie = sans("Bold", 18)
+    dibujar_tracked(d, CONTENIDO_EPISODIO["pie"], f_pie, BEIGE,
+                     x_izq, H - 50, 3)
 
-    # Sillones a la derecha (40% del ancho)
-    panel_d_x = int(W * 0.60)
-    panel_d_w = W - panel_d_x
-    sw = int(panel_d_w * 0.85)
-    sh = int(sw * sillon.height / sillon.width)
-    sx = panel_d_x + (panel_d_w - sw) // 2
-    sy = (H - sh) // 2 - 20
-    pegar_redimensionado(img, sillon, sw, sh, sx, sy)
-
-    # Texto a la izquierda (60% del ancho)
-    margen_x = 80
-    # Eyebrow
-    f_eyebrow = font("Medium", 30)
-    dibujar_tracked(d, "TWIM PODCAST · " + ep["numero"], f_eyebrow,
-                     BEIGE, margen_x, 100, 4)
-
-    # Titulo dos lineas
-    f_titulo = font("Bold", 105)
-    d.text((margen_x, 165), ep["titulo_l1"], font=f_titulo, fill=CREMA)
-    d.text((margen_x, 165 + 100), ep["titulo_l2"], font=f_titulo, fill=CREMA)
-
-    # Subtitulo
-    f_sub = font("Regular", 38)
-    d.text((margen_x, 165 + 100 + 115), ep["subtitulo"], font=f_sub, fill=BEIGE)
-
-    # Pie
-    f_pie = font("Regular", 24)
-    d.text((margen_x, H - 70), ep["pie_corto"], font=f_pie, fill=BEIGE)
-
-    # Logo MIND WORLD esquina inferior derecha pequeno
-    lw = 120
-    lh = int(lw * logo.height / logo.width)
-    img.paste(logo.resize((lw, lh), Image.LANCZOS),
-              (W - lw - 40, H - lh - 30))
+    # Logo MIND WORLD esquina inf derecha (sobre foto, blanco translucido)
+    logo = logo_blanco_translucido(logo_rgb, 130)
+    img.paste(logo, (W - 130 - 35, H - logo.height - 30), logo)
 
     salida = DESTINO / "cover-youtube.png"
     img.save(salida, "PNG", optimize=True)
-    print(f"OK cover-youtube.png -> {salida.relative_to(REPO)} ({W}x{H})")
+    print(f"OK cover-youtube.png    -> {salida.relative_to(REPO)} ({W}x{H})")
 
 
-# --- 3. Video-fondo 1920x1080 (pantalla durante reproduccion) ----------------
+# --- 2. Spotify cuadrado 1400x1400 -------------------------------------------
 
-def generar_video_fondo(sillon, logo):
-    W, H = 1920, 1080
+def generar_spotify(foto_orig, logo_rgb):
+    W, H = 1400, 1400
     img = lienzo(W, H)
+
+    # Foto a la derecha ocupando 50% con fade izq
+    foto_w = int(W * 0.50)
+    foto = foto_con_fade_izq(foto_orig, H, foto_w, fade_px=240)
+    img.paste(foto, (W - foto_w, 0), foto)
+
+    # Bloque editorial izquierda
+    x_izq = 90
+    ancho_disp = int(W * 0.50) - 90
+    f_kicker = sans("Medium", 28)
+    f_titulo = serif(105, weight=700)
+    f_sub = serif(36, weight=400, italic=True)
+    render_bloque_editorial(
+        img, CONTENIDO_EPISODIO, x_izq, ancho_disp, H // 2,
+        f_kicker=f_kicker, kicker_track=5,
+        f_titulo=f_titulo, gap_titulo=20,
+        f_subtitulo=f_sub, separador_w=90,
+        color_titulo=CREMA, color_meta=BEIGE)
+
+    # Pie inferior izquierda
+    d = ImageDraw.Draw(img)
+    f_pie = sans("Bold", 24)
+    dibujar_tracked(d, CONTENIDO_EPISODIO["pie"], f_pie, BEIGE,
+                     x_izq, H - 70, 4)
+
+    # Logo MIND WORLD esquina inf derecha
+    logo = logo_blanco_translucido(logo_rgb, 170)
+    img.paste(logo, (W - 170 - 50, H - logo.height - 50), logo)
+
+    salida = DESTINO / "cover-spotify.png"
+    img.save(salida, "PNG", optimize=True)
+    print(f"OK cover-spotify.png    -> {salida.relative_to(REPO)} ({W}x{H})")
+
+
+# --- 3. Story vertical 1080x1920 --------------------------------------------
+
+def generar_story(foto_orig, logo_rgb):
+    W, H = 1080, 1920
+    img = lienzo(W, H)
+
+    # Foto arriba ocupando ~58% con fade abajo
+    foto_h = int(H * 0.58)
+    foto = foto_con_fade_abajo(foto_orig, foto_h, W, fade_px=200)
+    img.paste(foto, (0, 0), foto)
+
+    # Bloque editorial CENTRADO en la mitad inferior (texto centrado)
+    x_izq = 90
+    ancho_disp = W - 180
+    y_centro_bloque = int(H * 0.78)
+    f_kicker = sans("Medium", 30)
+    f_titulo = serif(115, weight=700)
+    f_sub = serif(40, weight=400, italic=True)
+
+    # Para story: render centrado horizontalmente (no alineado izq como otros)
     d = ImageDraw.Draw(img)
     ep = CONTENIDO_EPISODIO
 
-    # Diseno: eyebrow+titulo en tercio superior, sillon en tercio medio,
-    # tercio inferior LIBRE para subtitulos (zona de seguridad ~y>720).
+    # Eyebrow centrado
+    f_kicker_top = sans("Bold", 32)
+    eyebrow1 = "TWIM PODCAST"
+    eyebrow2 = f"{ep['numero']} · {ep['kicker']}"
+    w1 = medir_tracked(eyebrow1, f_kicker_top, 6)
+    w2 = medir_tracked(eyebrow2, f_kicker, 4)
+    titulo_alto = medir("EM", f_titulo)[1] + 22
+    titulo_total = titulo_alto * len(ep["titulo_lineas"]) - 22
+    sub_h = medir(ep["subtitulo_par"], f_sub)[1]
+    eyebrow_h = medir(eyebrow1, f_kicker_top)[1] + 12 + medir(eyebrow2, f_kicker)[1]
+    grosor_sep = 4
+    total = eyebrow_h + 22 + grosor_sep + 65 + titulo_total + 55 + sub_h
+    y0 = y_centro_bloque - total // 2
 
-    # Eyebrow superior centrado
-    f_eyebrow = font("Medium", 40)
-    dibujar_tracked_centrado(d, "TWIM PODCAST · " + ep["numero"], f_eyebrow,
-                              BEIGE, 90, W, 5)
+    dibujar_tracked(d, eyebrow1, f_kicker_top, BEIGE,
+                     (W - w1) // 2, y0, 6)
+    y0_e2 = y0 + medir(eyebrow1, f_kicker_top)[1] + 12
+    dibujar_tracked(d, eyebrow2, f_kicker, BEIGE,
+                     (W - w2) // 2, y0_e2, 4)
 
-    # Titulo dos lineas centrado, mas pequeno que YouTube (no compite con subs)
-    f_titulo = font("Bold", 110)
-    dibujar_centrado(d, ep["titulo_l1"], f_titulo, CREMA, 165, W)
-    dibujar_centrado(d, ep["titulo_l2"], f_titulo, CREMA, 165 + 105, W)
+    y_sep = y0_e2 + medir(eyebrow2, f_kicker)[1] + 22
+    sep_w = 90
+    separador_horizontal(d, (W - sep_w) // 2, y_sep, sep_w, BEIGE, grosor_sep)
 
-    # Subtitulo
-    f_sub = font("Regular", 42)
-    dibujar_centrado(d, ep["subtitulo"], f_sub, BEIGE, 165 + 105 + 130, W)
+    y_titulo = y_sep + grosor_sep + 65
+    for i, linea in enumerate(ep["titulo_lineas"]):
+        wt = medir(linea, f_titulo)[0]
+        d.text(((W - wt) // 2, y_titulo + i * titulo_alto),
+               linea, font=f_titulo, fill=CREMA)
 
-    # Sillon centrado en tercio medio (sin invadir zona inferior)
-    sw = 720
-    sh = int(sw * sillon.height / sillon.width)
-    sx = (W - sw) // 2
-    sy = 575
-    pegar_redimensionado(img, sillon, sw, sh, sx, sy)
+    y_sub = y_titulo + titulo_total + 55
+    ws = medir(ep["subtitulo_par"], f_sub)[0]
+    d.text(((W - ws) // 2, y_sub), ep["subtitulo_par"], font=f_sub, fill=BEIGE)
 
-    # Logo MIND WORLD esquina inferior derecha (fuera de zona subs centrada)
-    lw = 130
-    lh = int(lw * logo.height / logo.width)
-    img.paste(logo.resize((lw, lh), Image.LANCZOS),
-              (W - lw - 60, H - lh - 50))
+    # Pie inferior centrado
+    f_pie = sans("Bold", 26)
+    pw = medir_tracked(ep["pie"], f_pie, 4)
+    dibujar_tracked(d, ep["pie"], f_pie, BEIGE,
+                     (W - pw) // 2, H - 90, 4)
 
-    # Marca de zona segura para subtitulos NO se dibuja (solo reservada visualmente)
+    # Logo MIND WORLD esquina inf derecha (mas chico que los otros)
+    logo = logo_blanco_translucido(logo_rgb, 130)
+    img.paste(logo, (W - 130 - 50, H - logo.height - 130), logo)
 
-    salida = DESTINO / "video-fondo.png"
+    salida = DESTINO / "story-vertical.png"
     img.save(salida, "PNG", optimize=True)
-    print(f"OK video-fondo.png -> {salida.relative_to(REPO)} ({W}x{H})")
+    print(f"OK story-vertical.png   -> {salida.relative_to(REPO)} ({W}x{H})")
 
 
 # --- Main --------------------------------------------------------------------
 
 def main():
-    print(f"Repo: {REPO}")
-    print(f"Cover canal: {COVER_CANAL}")
-    sillon, logo = cargar_elementos_canal()
-    print(f"Sillon recortado: {sillon.size}  ·  Logo: {logo.size}")
-    generar_spotify(sillon, logo)
-    generar_youtube(sillon, logo)
-    generar_video_fondo(sillon, logo)
+    foto = Image.open(FOTO_AUTOR).convert("RGB")
+    print(f"Foto autor: {FOTO_AUTOR.name} {foto.size}")
+    logo = cargar_logo_mindworld()
+    print(f"Logo MIND WORLD recortado: {logo.size}")
+    print()
+    generar_youtube(foto, logo)
+    generar_spotify(foto, logo)
+    generar_story(foto, logo)
     print("Listo.")
 
 
