@@ -20,6 +20,42 @@ El repo es **la fuente de verdad operativa de TWIM Project**. El bienestar del p
 
 ---
 
+## Regla inviolable · Cambios de infraestructura y routing
+
+> Esta regla nace de un incidente real (PR #133, 7 may 2026): un redirect con `force = true` en `netlify.toml` causó `ERR_TOO_MANY_REDIRECTS` en producción y rompió la web entera en un momento crítico del proyecto. No puede repetirse.
+
+Cualquier cambio que toque alguno de estos ficheros se considera **cambio de infraestructura**:
+
+- `netlify.toml`
+- `_redirects`
+- `_headers`
+- `robots.txt`, `sitemap.xml` (cuando afecten a indexación o canónicas)
+- `netlify/functions/*`
+- Cualquier fichero que controle routing, redirects, headers HTTP, CSP, CORS, edge functions o build.
+
+### Antes de mergear un cambio de infraestructura
+
+1. **Reproducir el síntoma exacto antes de proponer fix.** Si Daniel reporta un bug de URL/cache/navegador, primero entender qué URL falla, en qué navegador, con qué status HTTP. Nunca proponer fix por intuición.
+2. **Diagnosticar contra la config actual.** Leer `netlify.toml` completo, mirar qué hace Netlify por defecto (Pretty URLs, asset optimization, trailing slash policy), entender por qué falla antes de añadir reglas.
+3. **Justificar cada flag explícitamente.** Si una redirect lleva `force = true`, articular por qué es necesario y por qué no causa loops según las reglas de matching de Netlify. Si no se puede articular, no se usa.
+4. **Verificar el deploy preview en navegador antes de pedir merge.** Esperar al check verde de Netlify, abrir el preview URL (`https://deploy-preview-N--lighthearted-kitten-8aba94.netlify.app`) y probar como mínimo: la URL afectada por el cambio, la home, una URL de directorio (`/newsletter/`), una URL de archivo (`/insights/<slug>.html`).
+5. **Si no se puede verificar el preview**, decirlo explícitamente en el PR y **no recomendar merge** — Daniel decide.
+6. **Doble verificación en momentos críticos.** En lanzamientos, ventanas de tráfico o fechas señaladas, Daniel da el OK explícito antes del merge. Sin OK, no se mergea aunque los checks estén verdes.
+
+### Patrones prohibidos sin justificación documentada
+
+- `force = true` sobre paths que coinciden con un directorio existente (riesgo de loop).
+- Redirects circulares (A → B → A o A → A).
+- Catch-all (`/*`) sin ruta de escape para assets estáticos.
+- Cambios silenciosos al header CSP, CORS o cookies.
+- Subir secretos al repo (siempre `.env.audit` gitignored).
+
+### Si el incidente vuelve a ocurrir
+
+Revertir inmediatamente al `netlify.toml` previo (no parchear), abrir PR de revert con etiqueta urgente, comunicar a Daniel y solo después analizar la causa.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
