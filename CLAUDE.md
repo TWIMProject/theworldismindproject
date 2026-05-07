@@ -20,6 +20,14 @@ El repo es **la fuente de verdad operativa de TWIM Project**. El bienestar del p
 
 ---
 
+## Reglas al compartir URLs del proyecto
+
+- **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash daba error al pegarla en stories y mensajes; aunque ahora hay redirect 301 en `netlify.toml`, la convención canónica es la versión con `/` final.
+- **Formato canónico esperado para newsletter:** `https://twimproject.com/newsletter/`. Nunca pasar la versión sin barra ni en chat ni en copy publicado.
+- Las URLs a archivos `.html` concretos (`/insights/tdah-depresion-invisible-detras-diagnostico.html`, etc.) van **sin** barra final — solo aplica a directorios.
+
+---
+
 ## Reglas de generación de archivos HTML
 
 - **NUNCA crear un archivo HTML completo de una sola vez con `Write`** si supera ~150 líneas.
