@@ -418,7 +418,7 @@ El criterio único de éxito del canal es: **¿está alimentando el embudo TWIM 
 
 ## 13 · Apéndice 8 mayo 2026 · Formato vídeo-ensayo con b-roll editado
 
-> Decisión cerrada con Daniel el 8-may-2026. No reescribe el plan principal: lo extiende con una variante de formato visual para los episodios de TWIM Podcast monólogo.
+> Decisión cerrada con Daniel el 8 mayo 2026. No reescribe el plan principal: lo extiende con una variante de formato visual para los episodios de TWIM Podcast monólogo.
 
 ### 13.1 · Decisión
 
@@ -442,7 +442,7 @@ El referente visual no es un canal de psicología hablada. Es el registro de **T
 
 ### 13.4 · Sesión única de b-roll genérico (ahorro de cadencia)
 
-Filmar nuevo b-roll cada episodio a ritmo de 1/2 semanas no es sostenible. Solución acordada:
+Filmar nuevo b-roll cada episodio a ritmo de uno cada dos semanas no es sostenible. Solución acordada:
 
 - **Una sesión única de 2-3 horas** que produce **30-50 clips reutilizables**. Esa librería cubre **5-10 episodios** sin volver a filmar.
 - Cada toma debe filmarse durante **15-20 s mínimo** para permitir cortes y loops en edición.
@@ -464,11 +464,11 @@ Filmar nuevo b-roll cada episodio a ritmo de 1/2 semanas no es sostenible. Soluc
 | Plano de luz / textura / sombras | Sin Daniel, para usar como respiro entre frases |
 | Caminar por la consulta | Paso lento, paso pensativo, atravesando habitación |
 
-Equipo: la cámara que Daniel ya use + luz natural cuando sea posible. **No comprar gear nuevo** para esto. Si en la sesión de filming aparece una limitación de equipo recurrente, evaluarla en un anexo posterior y no en caliente.
+Equipo: la cámara que Daniel ya use + luz natural cuando sea posible. **No comprar equipo nuevo** para esto. Si en la sesión de rodaje aparece una limitación recurrente, evaluarla en un anexo posterior y no en caliente.
 
 ### 13.5 · B-roll específico por episodio
 
-Si el tema del episodio pide una toma concreta (p. ej. un libro citado, un objeto que aparece como ejemplo en el guion), filmar **1-2 tomas dedicadas** durante la propia sesión de grabación de voz. **Tope:** 30 minutos de filming específico por episodio. Más que eso rompe la cadencia.
+Si el tema del episodio pide una toma concreta (p. ej. un libro citado, un objeto que aparece como ejemplo en el guion), filmar **1-2 tomas dedicadas** durante la propia sesión de grabación de voz. **Tope:** 30 minutos de rodaje específico por episodio. Más que eso rompe la cadencia.
 
 ### 13.6 · Workflow integrado (encaja con doc #5 §3.1)
 
@@ -502,14 +502,14 @@ Para que «necesito el guion del episodio X» sea siempre una operación trivial
 ### 13.9 · Pendientes operativos derivados de este apéndice
 
 - [ ] **Agendar la sesión única de b-roll** (2-3 h, consulta de Daniel) antes de la grabación del E5.
-- [ ] **Lista cerrada de tomas** para esa sesión, basada en §13.4. Imprimible, marcable durante el filming.
+- [ ] **Lista cerrada de tomas** para esa sesión, basada en §13.4. Imprimible, marcable durante el rodaje.
 - [ ] **Estructura de almacenamiento** del b-roll: carpeta `contenido-rrss/b-roll-libreria/` con subcarpetas por tipología. Confirmar con Daniel si esta ubicación encaja o conviene otra (p. ej. fuera del repo si los archivos son pesados).
 - [ ] **Plantilla `guion.md`** estandarizada (encabezado, marcadores de pausa, cierre con disclaimer educativo). Crear como `contenido-rrss/_plantilla-guion.md` para que sirva de copia base.
 - [ ] **Revisar cronometraje del E5** con este formato y comparar contra la estimación 5-7 h. Si la edición visual desborda, ajustar §13.6 antes del E6.
 
 ---
 
-
+## Cierre
 
 YouTube + Podcast es la cuarta palanca del mapa TWIM (anexo CEO §2). Tiene la particularidad de ser la única que monetiza directamente el acto de consumir contenido — todas las demás (SEO, Newsletter, Meta Ads) monetizan al final del embudo. Eso no la convierte en la más importante, pero sí en la más eficiente por hora de producción una vez el sistema está montado.
 
