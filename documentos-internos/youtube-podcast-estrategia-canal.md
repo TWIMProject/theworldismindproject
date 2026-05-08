@@ -416,7 +416,100 @@ El criterio único de éxito del canal es: **¿está alimentando el embudo TWIM 
 
 ---
 
-## Cierre
+## 13 · Apéndice 8 mayo 2026 · Formato vídeo-ensayo con b-roll editado
+
+> Decisión cerrada con Daniel el 8-may-2026. No reescribe el plan principal: lo extiende con una variante de formato visual para los episodios de TWIM Podcast monólogo.
+
+### 13.1 · Decisión
+
+A partir del E5 (o del primer episodio donde sea operativamente posible), TWIM Podcast monólogo adopta el formato **vídeo-ensayo**: voz en off de Daniel sobre secuencias visuales construidas (Daniel en consulta leyendo, eligiendo un libro, recolocando objetos, escribiendo, de pie pensativo, etc.). El **talking head desaparece como recurso central**: aparece como mucho en cabecera o cierre breve, no como columna del episodio.
+
+El referente visual no es un canal de psicología hablada. Es el registro de **The School of Life**, **Like Stories of Old** o un Lex Fridman cuando edita ensayo: composición de plano cuidada, b-roll editorial, voz en off como conductor.
+
+### 13.2 · Por qué encaja con el plan existente
+
+- Duración objetivo TWIM Podcast monólogo (§3): **15-30 min**. La propuesta de 15 min cae dentro del rango.
+- Voz humana en T1 (§5 + §6 decisión 4-may opción B): la voz en off de Daniel cumple con T1 sin reescribir nada.
+- Posicionamiento Daniel-clínico (§2): el b-roll de consulta refuerza el registro clínico **mejor** que un talking head genérico, que es indistinguible de cualquier creator de psicología.
+- Reciclaje (§9 + doc #5): el b-roll genera material casi gratuito para Shorts (cualquier corte de 8 s sobre frase corta funciona como pieza autónoma).
+
+### 13.3 · Reglas duras del formato
+
+1. **Cada toma compuesta, no improvisada.** Encuadre pensado, iluminación pensada, sin cámara temblona ni zoom dramático. Si una toma no tendría sentido en un libro de fotografía editorial, fuera.
+2. **El guion sigue siendo la pieza central.** El b-roll es soporte, nunca protagonista. Si la voz en off cae 30 segundos sin frase, el b-roll no rescata el episodio.
+3. **El 70 % o más del tiempo de producción debe ir al guion.** Si Daniel se descubre dedicando más tiempo a editar plano que a pulir frase, hay que parar y revisar.
+4. **Vídeo-ensayo ≠ vlog.** Nunca «autenticidad casual», nunca cámara en mano improvisando, nunca «detrás de las cámaras de mi día». Eso desliza a registro influencer y rompe la promesa.
+
+### 13.4 · Sesión única de b-roll genérico (ahorro de cadencia)
+
+Filmar nuevo b-roll cada episodio a ritmo de 1/2 semanas no es sostenible. Solución acordada:
+
+- **Una sesión única de 2-3 horas** que produce **30-50 clips reutilizables**. Esa librería cubre **5-10 episodios** sin volver a filmar.
+- Cada toma debe filmarse durante **15-20 s mínimo** para permitir cortes y loops en edición.
+- Reposición: cuando la librería se haya usado en más del 70 % en episodios publicados, agendar nueva sesión.
+
+#### Tipologías mínimas a cubrir en la sesión
+
+| Tipología | Variantes a registrar |
+|---|---|
+| Daniel sentado leyendo un libro | 2-3 libros distintos, 2-3 ángulos por libro |
+| Daniel eligiendo un libro de la estantería | Frontal y perfil, mano alcanzando estante |
+| Daniel recolocando objetos / libros | Movimiento lento, distintos rincones de la consulta |
+| Daniel de pie pensativo | Junto a ventana mirando fuera, en el centro de la consulta, apoyado en estante |
+| Daniel escribiendo a mano | Cuaderno abierto, primer plano y plano medio |
+| Daniel escribiendo en ordenador | De espaldas, perfil, detalle de teclado |
+| Detalle de manos | Pasando páginas, escribiendo, sosteniendo gafas |
+| Detalle de objetos | Gafas sobre libro abierto, cuaderno, pluma, taza |
+| Plano general de la consulta vacía | Distintas horas, distintas luces |
+| Plano de luz / textura / sombras | Sin Daniel, para usar como respiro entre frases |
+| Caminar por la consulta | Paso lento, paso pensativo, atravesando habitación |
+
+Equipo: la cámara que Daniel ya use + luz natural cuando sea posible. **No comprar gear nuevo** para esto. Si en la sesión de filming aparece una limitación de equipo recurrente, evaluarla en un anexo posterior y no en caliente.
+
+### 13.5 · B-roll específico por episodio
+
+Si el tema del episodio pide una toma concreta (p. ej. un libro citado, un objeto que aparece como ejemplo en el guion), filmar **1-2 tomas dedicadas** durante la propia sesión de grabación de voz. **Tope:** 30 minutos de filming específico por episodio. Más que eso rompe la cadencia.
+
+### 13.6 · Workflow integrado (encaja con doc #5 §3.1)
+
+Orden de producción por episodio:
+
+1. **Guion editorial** (~3.000-3.500 palabras = ~15 min de voz en off). Vive en `contenido-rrss/podcast-eN-tema/guion.md`.
+2. **Grabación voz en off limpia.** Audio sin música ni ambiente, en bloque cerrado de 90 min ya reservado en agenda Daniel (§12).
+3. **Edición visual.** Montar b-roll de la librería sobre la voz, añadir 1-2 tomas específicas si aplica, intercalar plano de respiro entre bloques temáticos. Sin transiciones bruscas.
+4. **Master final.** 4-7 capítulos (§8.5), thumbnail según sistema visual TWIM (§8.4), descripción según plantilla (§8.2).
+
+Tiempo total estimado por episodio (revisar contra cronómetro real en doc `cronometraje-episodio-piloto-e5.md`): **5-7 h Daniel** en T1, igual que la estimación previa del workflow §3.1 del doc #5. La edición visual añade tiempo, pero la sesión única de b-roll evita filmar cada vez, así que el balance neto se mantiene.
+
+### 13.7 · Ubicación canónica de los guiones (acceso operativo)
+
+Para que «necesito el guion del episodio X» sea siempre una operación trivial:
+
+- Cada episodio tiene su propia carpeta: **`contenido-rrss/podcast-eN-tema/`** (patrón ya establecido por E5: `contenido-rrss/podcast-e5-autoexigencia/`).
+- El guion vive en: **`contenido-rrss/podcast-eN-tema/guion.md`**.
+- Junto al guion, en la misma carpeta, viven: thumbnail/cover del episodio, caption de YouTube, caption de Spotify, specs y portada.
+- Cuando se planifique un episodio nuevo, **el primer paso del workflow es crear esa carpeta + un `guion.md` vacío con la plantilla del repo**. Sin esa carpeta no hay episodio; con ella, todas las piezas (guion, captions, portadas, derivados) van al mismo sitio.
+
+### 13.8 · Tradeoffs aceptados
+
+| Tradeoff | Aceptado porque |
+|---|---|
+| Producción más compleja por episodio frente a talking head | Daniel disfruta editar — energía sostenible. El upgrade visual diferencia frente a competencia genérica. |
+| Riesgo de saturación visual (siempre la consulta) | Mitigado por variedad de tipologías en la sesión + b-roll específico ocasional + planos de luz/textura como respiro. |
+| Riesgo de que Daniel se desvíe a editar y descuide el guion | Mitigado por la regla 13.3.3 (70 %+ del tiempo de producción al guion). Revisar mensualmente en el cronometraje. |
+| Riesgo de que la sesión única no rinda 30-50 clips | Mitigado por planificar lista cerrada de tomas antes de la sesión y filmar 15-20 s por toma como mínimo. |
+
+### 13.9 · Pendientes operativos derivados de este apéndice
+
+- [ ] **Agendar la sesión única de b-roll** (2-3 h, consulta de Daniel) antes de la grabación del E5.
+- [ ] **Lista cerrada de tomas** para esa sesión, basada en §13.4. Imprimible, marcable durante el filming.
+- [ ] **Estructura de almacenamiento** del b-roll: carpeta `contenido-rrss/b-roll-libreria/` con subcarpetas por tipología. Confirmar con Daniel si esta ubicación encaja o conviene otra (p. ej. fuera del repo si los archivos son pesados).
+- [ ] **Plantilla `guion.md`** estandarizada (encabezado, marcadores de pausa, cierre con disclaimer educativo). Crear como `contenido-rrss/_plantilla-guion.md` para que sirva de copia base.
+- [ ] **Revisar cronometraje del E5** con este formato y comparar contra la estimación 5-7 h. Si la edición visual desborda, ajustar §13.6 antes del E6.
+
+---
+
+
 
 YouTube + Podcast es la cuarta palanca del mapa TWIM (anexo CEO §2). Tiene la particularidad de ser la única que monetiza directamente el acto de consumir contenido — todas las demás (SEO, Newsletter, Meta Ads) monetizan al final del embudo. Eso no la convierte en la más importante, pero sí en la más eficiente por hora de producción una vez el sistema está montado.
 
