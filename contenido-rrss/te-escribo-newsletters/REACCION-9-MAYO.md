@@ -134,14 +134,14 @@ Si los anuncios siguen activos hasta agotar los 65 € + presupuesto BSuite, el 
 - **Retención del reel del 9 may es baja** (10 s sobre 1:01). Los próximos reels editoriales necesitan abrir con gancho más fuerte en los primeros 2 s. Esto se puede testear en los Shorts derivados del vídeo-ensayo de YouTube (ver `contenido-rrss/youtube-dependencia-emocional-amor-vs-necesidad/guion.md` §Shorts).
 - **El promote del perfil tiene CPC bajo (0,18 €) pero embudo largo.** Si el objetivo es captar newsletter, el ad directo a LP es mejor uso de presupuesto. Sirve hablar con Daniel sobre si pausar el promote y reasignar al BSuite.
 - **49,39 € gastados en ads** sobre un grupo que sumaba 13 active el 8 may. Si la oleada no se sostiene (es decir, si el +7 es pico y no curva), el CPA real será peor.
-- **Sin trackeo UTM unificado**, la atribución de las 9 suscriptoras nuevas entre reel orgánico y ads es estimación, no medición. Para futuras campañas conviene cerrar UTMs distintos por canal y usar GA4 (event `newsletter_signup` con `source` ya existe — comprobar que se está disparando en cada formulario).
+- **Sin trackeo UTM unificado**, la atribución de las 9 suscriptoras nuevas entre reel orgánico y ads es estimación, no medición. Para futuras campañas conviene cerrar UTMs distintos por canal. **Estado real del tracking GA4 a 9 may** (verificado en `assets/te-escribo-cta.js` y `assets/te-escribo-exit-intent.js`): solo dos sources implementados — `cross_sell_seo` y `exit_intent`. **El formulario de `/newsletter/index.html` no dispara `gtag('event', 'newsletter_signup', …)` actualmente**, así que las suscripciones llegadas por la LP directa (que es el destino de los ads) no se están registrando en GA4. Esta es la pieza más urgente a cablear: sin ella, la atribución de los anuncios a `Web - Newsletter Home` seguirá siendo estimada.
 
 ### 5.3 · Acciones derivadas
 
 - [ ] **Vigilar +24h** (10 may): contar nuevas suscriptoras en `Web - Newsletter Home` para confirmar si la curva se sostiene o decae.
 - [ ] **Decidir el 11 may** (final del presupuesto del promote IG): pausar o repetir el formato BSuite con más presupuesto.
 - [ ] **Preparar Shorts del vídeo-ensayo de YouTube** con apertura más fuerte que el reel del 9 may, aprovechando lo aprendido.
-- [ ] **Confirmar tracking GA4** del evento `newsletter_signup` en próximas suscripciones (origen `cross_sell_seo` / `exit_intent` / `newsletter_home`). Si no se está disparando, la atribución de campañas seguirá siendo a ojo.
+- [ ] **Cablear `gtag('event','newsletter_signup', { source: 'newsletter_home', landing: '/newsletter/' })`** dentro del handler del formulario de `newsletter/index.html` (línea ~257, dentro del bloque `try` después del `fetch` exitoso). Hoy ese form no registra el evento — los sources implementados son solo `cross_sell_seo` (en `assets/te-escribo-cta.js`) y `exit_intent` (en `assets/te-escribo-exit-intent.js`). Sin esto, las suscripciones que entran por LP directa de los ads no se contabilizan en GA4.
 - [ ] **Actualizar `PLAN-CAPTACION-30D.md`** Semana 2 cuando se cierre el ciclo de los ads (12-13 may) con CPA final y decisión sobre semana 4 (gate Meta Ads).
 
 ---

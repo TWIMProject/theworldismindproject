@@ -204,6 +204,15 @@ Audiencia: 23 envíos (Reto 7 Días - Inscritas + Lista General TWIM).
 
 (pendiente de rellenar tras revisión)
 
+### Log de acciones manuales fuera del calendario
+
+> Regla simétrica del repo: lo publicado fuera del calendario se anota aquí el mismo día.
+
+- **9 may 2026:** Daniel publica reel orgánico «Apego ansioso; cómo se monta esa voz que te juzga» en IG + FB · 1:01 · 2.206 reproducciones a las ~22h · ver detalle en `REACCION-9-MAYO.md` §1.1 y §2.1.
+- **9 may 2026:** Daniel activa **Promote IG** sobre la publicación «La primera carta de Te...» · 65 € · 5 días · gasto a 9 may 27,94 € · ver detalle en `REACCION-9-MAYO.md` §1.2 y §2.2.
+- **7 may 2026:** Daniel activa **anuncio Business Suite** hacia `https://twimproject.com/newsletter/` · gasto a 9 may 21,45 € · ver detalle en `REACCION-9-MAYO.md` §1.3 y §2.3.
+- **Resultado neto medido (8 → 9 may):** +7 suscriptoras a `Web - Newsletter Home` (13 → 20), +2 al Reto 7 Días. CPA estimado 5-7 €. Datos contrastados vía MailerLite MCP.
+
 ---
 
 ## Recursos en el repo
