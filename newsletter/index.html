@@ -204,6 +204,15 @@
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1447483376992558&ev=PageView&noscript=1"/></noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- Google tag (gtag.js) — GA4 G-VMMZ1TKWZ0 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VMMZ1TKWZ0');
+  </script>
 </head>
 <body>
 
@@ -262,6 +271,7 @@
         if (!res.ok) throw new Error('Request failed');
         form.style.display = 'none';
         successDiv.style.display = 'block';
+        if (window.gtag) gtag('event', 'newsletter_signup', { source: 'newsletter_home', landing: location.pathname });
       } catch {
         btn.disabled = false;
         btn.textContent = originalLabel;
