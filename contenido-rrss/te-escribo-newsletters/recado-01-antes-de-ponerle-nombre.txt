@@ -1,0 +1,190 @@
+RECADO 01 — Antes de ponerle nombre
+
+═══════════════════════════════════
+ASUNTO
+═══════════════════════════════════
+
+un recado breve.
+
+
+═══════════════════════════════════
+PREVIEW TEXT
+═══════════════════════════════════
+
+Antes de ponerle nombre.
+
+
+═══════════════════════════════════
+REMITENTE
+═══════════════════════════════════
+
+Daniel Orozco · danielorozco@twimproject.com
+
+
+═══════════════════════════════════
+USO PREVISTO
+═══════════════════════════════════
+
+Campaña Regular MailerLite, envío URGENTE el 11 may 2026.
+
+Decisión editorial (11 may): se introduce el formato «Recado» como
+pieza editorial fuera del catálogo numerado de «Te escribo». Los
+Recados son piezas breves (~400-500 palabras), publicadas entre
+cartas, que sirven para sostener la presencia editorial sin esperar
+al siguiente envío programado.
+
+NO sustituye a la welcome (la Carta 1 «Manifesto» sigue como welcome
+de la automation Web - Newsletter Home).
+
+NO es Carta 1, 2, 3… (las cartas numeradas mantienen su cadencia
+cada 2-3 semanas).
+
+Resuelve la confusión reportada: varios suscriptores nuevos pensaron
+que «faltaba una carta por llegar». El Recado satisface esa
+expectativa con contenido editorial real, sin meterse en la serie
+numerada.
+
+
+═══════════════════════════════════
+AUDIENCIA RECOMENDADA
+═══════════════════════════════════
+
+Audiencia editorial completa (los 4 grupos que reciben las cartas
+numeradas):
+
+  · Web - Newsletter Home
+  · Reto 7 Días - Inscritas
+  · Lead Magnet - Dependencia Emocional
+  · Lista General TWIM
+
+EXCLUIR (consentimiento original distinto):
+
+  · Padres TDAH ESO
+  · Padres Bachillerato
+  · Padres Talleres Adolescentes
+
+
+═══════════════════════════════════
+NOTA EDITORIAL
+═══════════════════════════════════
+
+Tema NUEVO, no solapa con Carta 1 Manifesto («qué es Te escribo») ni
+con Carta 2 «La voz que te juzga» (autocrítica/superyó). El Recado
+trabaja la zona pre-clínica: la trampa de nombrar demasiado rápido
+lo que se siente. Es voz Daniel pura.
+
+Encabezado dentro del email recomendado:
+«TE ESCRIBO · Recado 01»
+en eyebrow beige sobre fondo crema. Sin numeración tipo «Carta».
+
+
+═══════════════════════════════════
+CUERPO DEL EMAIL  (plain text)
+═══════════════════════════════════
+
+Hola,
+
+Te dejo un recado breve. No es una carta entera; es algo que me apetecía pasarte mientras llega la próxima.
+
+A veces, cuando algo se mueve por dentro, lo primero que la mente intenta es ponerle un nombre.
+
+Te despiertas con un malestar que no se explica. Estás trabajando y aparece una sensación rara en el pecho. Una conversación cualquiera te deja con un peso que no sabes de dónde viene. Y la mente, casi inmediatamente, empieza a buscarle etiqueta: «es ansiedad», «es estrés», «es que dormí mal», «es porque no me llevo bien con esa persona».
+
+Eso parece útil. Y a veces lo es. Pero muchas otras veces no lo es: es un cierre prematuro. La mente, en cuanto encuentra una palabra que encaje a medias, deja de mirar lo que en realidad pasaba debajo.
+
+—
+
+Lo que pasa con esa palabra rápida es que tiene un efecto muy concreto: te tranquiliza. Si le pones nombre a algo, el sistema interpreta que está bajo control. La incomodidad ambigua es insoportable; la incomodidad nombrada es manejable. Y por eso elegimos el alivio del nombre, aunque sea inexacto, antes que la incomodidad de seguir mirando.
+
+El problema es que casi todo lo que merece la pena entender de uno mismo vive en esa zona ambigua. No en las palabras de manual («autoexigencia», «dependencia emocional», «ansiedad»), sino en la sensación concreta que aún no ha cuadrado en ningún cajón.
+
+Cuando le pones nombre demasiado pronto, le quitas la posibilidad de decirte algo más fino.
+
+—
+
+No te estoy pidiendo que renuncies a entender lo que sientes. Te estoy pidiendo que cuando aparezca, esperes un momento. Que antes de la palabra, pruebes a quedarte con la sensación.
+
+¿Dónde se nota en el cuerpo? ¿Qué textura tiene? ¿A qué se parece — no a una etiqueta clínica, a algo del mundo concreto? ¿Esa sensación de hace un rato la habías sentido antes? ¿En qué momento de tu vida vivía habitualmente?
+
+Esas preguntas son raras. La mente las contesta peor que un diagnóstico rápido. Pero las contesta más cerca de la verdad.
+
+—
+
+A veces lo que tienes dentro no necesita un nombre. Necesita un poco de espacio antes de tenerlo.
+
+Hasta la próxima carta.
+
+— Daniel
+
+PD: Este recado es educativo, no clínico. Si lo que sientes te paraliza, te impide funcionar o aparece junto a pensamientos peores, busca a alguien que pueda mirarlo contigo de cerca. Lo que te escribo aquí no sustituye eso.
+
+
+═══════════════════════════════════
+IMPLEMENTACIÓN EN MAILERLITE — URGENTE
+═══════════════════════════════════
+
+Pasos exactos para mandarlo HOY (10-15 minutos en el panel ML):
+
+1. Dashboard ML → Campaigns → Create campaign → Regular campaign.
+
+2. Datos de la campaña:
+   - Nombre interno: «Te escribo · Recado 01 · Antes de ponerle
+     nombre»
+   - Asunto: «un recado breve.»
+   - Preview text: «Antes de ponerle nombre.»
+   - Remitente: Daniel Orozco - TWIMProject
+     (danielorozco@twimproject.com)
+   - **IDIOMA: Español (es-ES)** — IMPORTANTE para que el plain_text
+     fallback salga en español, no en inglés (mismo problema que
+     tuvimos con Carta 2).
+
+3. Audiencia: marcar los 4 grupos editoriales (Web - Newsletter Home,
+   Reto 7 Días - Inscritas, Lead Magnet - Dependencia Emocional,
+   Lista General TWIM). Excluir Padres TDAH/Bach/Talleres.
+
+4. Editor:
+   - Tipo: **plain text** (no drag-and-drop, no plantilla HTML).
+   - Pegar el cuerpo del email tal cual está arriba.
+   - Mantener los guiones largos «—» como separadores entre bloques.
+
+5. Programar envío:
+   - Opción A (recomendada): «enviar inmediatamente».
+   - Opción B (si quieres maximizar open rate): programar para una
+     ventana saludable como martes/miércoles 08:00-09:00 o
+     18:00-20:00 CET. Pero dado que la urgencia es resolver la
+     confusión reportada, enviar ya tiene más sentido.
+
+6. Test antes de programar:
+   - Botón «Send test email» a danielorozco@twimproject.com.
+   - Verificar que el plain_text está en español (no inglés).
+   - Confirmar que los guiones largos se renderizan bien.
+
+7. Tras el envío:
+   - Anotar en `PLAN-LANZAMIENTO-5-MAYO.md` § «Log de acciones
+     manuales fuera del calendario» con fecha y URL/ID de la
+     campaña, según regla simétrica del repo.
+   - Vigilar +5h y +24h: open rate, click rate, respuestas. Si
+     siguen llegando mensajes de confusión, la confusión no era
+     solo de nomenclatura.
+
+
+═══════════════════════════════════
+PRÓXIMOS RECADOS (PLANTILLA MENTAL)
+═══════════════════════════════════
+
+Si el formato funciona y la audiencia lo recibe bien, queda
+abierta la opción de hacer Recados ocasionales entre cartas
+numeradas. Reglas tentativas para el formato:
+
+  · Extensión: 400-600 palabras (lectura 2-3 min).
+  · Tema: una observación clínica concreta, NO un tratado.
+  · Cadencia: irregular, sin promesa de frecuencia. Aparecen
+    cuando hay algo que decir.
+  · Asunto: en minúsculas, frase corta tipo «un recado breve.»
+  · Numeración: «Recado 01», «Recado 02»… separada de la serie
+    «Carta 1», «Carta 2»…
+  · Disclaimer educativo obligatorio al cierre (como en cartas
+    numeradas).
+
+NO es promesa formal — es opción. Daniel decide tras ver cómo
+funciona este primero.
