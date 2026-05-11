@@ -410,7 +410,7 @@ El criterio único de éxito del canal es: **¿está alimentando el embudo TWIM 
 - [ ] **Plantilla de descripción** del episodio en formato fijo (§8.2) guardada como bloque reutilizable.
 - [ ] **Plantilla de thumbnail** en Canva o herramienta equivalente, alineada al sistema visual TWIM.
 - [ ] **Cuenta Meta Business Suite** lista para programar derivados de IG + FB. Revisar permisos de la página de FB y validar que el calendario de IG del PR #94 se puede importar/programar desde ahí.
-- [ ] **Producir y publicar E5** (autoexigencia, ventana 12-18 mayo) como episodio piloto del nuevo formato T1.
+- [x] **Producir y publicar E5** como episodio piloto del nuevo formato T1. Reordenamiento confirmado el 11 may 2026 (ver §14): el E5 pasa a ser **«Tu valor no está en su mirada»** (dependencia emocional, vídeo-ensayo del libro homónimo en preparación), publicación 11 may 2026. El episodio que estaba previsto sobre autoexigencia se reasigna a **E6** y mantiene su contenido y assets en `contenido-rrss/podcast-e6-autoexigencia/`.
 - [ ] **Revisar el episodio piloto** con dos lectores beta (uno cercano, uno externo) antes de publicar el siguiente para ajustar duración, ritmo y estructura.
 - [ ] **Setup ElevenLabs Creator** en paralelo (no urgente, pero conviene tener el modelo entrenado en julio para poder activarlo en septiembre sin fricción). Tareas operativas en doc #2 §10.
 
@@ -506,6 +506,46 @@ Para que «necesito el guion del episodio X» sea siempre una operación trivial
 - [ ] **Estructura de almacenamiento** del b-roll: carpeta `contenido-rrss/b-roll-libreria/` con subcarpetas por tipología. Confirmar con Daniel si esta ubicación encaja o conviene otra (p. ej. fuera del repo si los archivos son pesados).
 - [ ] **Plantilla `guion.md`** estandarizada (encabezado, marcadores de pausa, cierre con disclaimer educativo). Crear como `contenido-rrss/_plantilla-guion.md` para que sirva de copia base.
 - [ ] **Revisar cronometraje del E5** con este formato y comparar contra la estimación 5-7 h. Si la edición visual desborda, ajustar §13.6 antes del E6.
+
+---
+
+## 14 · Apéndice 11 mayo 2026 · Reordenamiento E5 / E6
+
+> Decisión cerrada con Daniel el 11 mayo 2026, a publicar el mismo día. Cumple regla simétrica del repo.
+
+### 14.1 · Qué cambia
+
+Daniel decide subir como **Ep.5** del TWIM Podcast el vídeo-ensayo del libro **«Tu valor no está en su mirada»** (dependencia emocional, contenido alineado con el manuscrito que entró al repo el 11 may 2026 y con el guion de YouTube ya preparado en `contenido-rrss/youtube-dependencia-emocional-amor-vs-necesidad/guion.md`).
+
+El episodio que el plan §12 listaba como E5 (autoexigencia, «El mandato de no parar») **se reasigna a E6** y mantiene su contenido y assets, ahora en `contenido-rrss/podcast-e6-autoexigencia/` (carpeta renombrada de `podcast-e5-autoexigencia/`). La portada del E6 se regeneró el 11 may con `Ep.6` para que la numeración cuadre, conservando el resto del diseño.
+
+### 14.2 · Por qué el cambio
+
+- El reel orgánico del 9 may sobre el libro ha generado tracción real (+7 suscriptoras a Web - Newsletter Home en 24-48 h, ver `REACCION-9-MAYO.md`). Convertir esa tracción en un episodio largoformato del podcast aprovecha el momento.
+- El libro **«Tu valor no está en su mirada»** está en preparación con CoWork — sembrar el campo semántico en YouTube ahora es coherente con el lanzamiento futuro.
+- El cambio NO altera la cadencia 1 episodio cada 2 semanas (§5): solo invierte el orden de E5 y E6.
+
+### 14.3 · Lo que se actualiza en el repo
+
+- `contenido-rrss/podcast-e5-tu-valor-no-esta-en-su-mirada/` ← nueva carpeta del E5 con `generar-portadas.py` adaptado, `cover-youtube.png`, `cover-spotify.png`, `story-vertical.png`, `specs-portada.md` heredada, y guion (vive en su carpeta original `contenido-rrss/youtube-dependencia-emocional-amor-vs-necesidad/guion.md`, no se duplica).
+- `contenido-rrss/podcast-e6-autoexigencia/` ← carpeta renombrada (era `podcast-e5-autoexigencia/`). `Ep.5` reemplazado por `Ep.6` en el script + portadas regeneradas. Resto del contenido (guion, captions, README) intacto.
+- `documentos-internos/cronometraje-episodio-piloto-e5.md` ← documento operativo de cronometraje del piloto. **Pendiente de decidir**: o se renombra a `cronometraje-episodio-piloto-e6.md` (porque el contenido era para el episodio de autoexigencia ahora en E6) o se deja como histórico y se crea uno nuevo para el E5 actual. Por defecto se deja como está y se anota la confusión aquí; Daniel decide en próxima sesión si renombrar o crear paralelo.
+- `documentos-internos/youtube-podcast-estrategia-canal.md` §12 ← marcado el ítem E5 como hecho, con nota del reordenamiento.
+
+### 14.4 · Lo que NO cambia
+
+- Cadencia 1 episodio cada 2 semanas (§5).
+- Formato vídeo-ensayo (§13).
+- Ubicación canónica de guiones (§13.7).
+- Calendario y políticas del resto del plan.
+
+### 14.5 · Pendientes operativos derivados
+
+- [ ] **Subir el episodio E5 a YouTube** con la `cover-youtube.png` generada (1280×720) y los capítulos del guion.
+- [ ] **Subir el episodio E5 a Spotify** con la `cover-spotify.png` generada (1400×1400). Decidir antes si se mantiene la opción A (cover canal estándar) o se sube esta variante por episodio (opción B). El sistema visual de la nueva portada sigue la familia visual del canal — apta como variante B.
+- [ ] **Story de IG** con `story-vertical.png` (1080×1920) anunciando el episodio. Sticker «Link» a la URL del vídeo o al `/newsletter/` según decisión de Daniel.
+- [ ] **Decidir el destino del doc** `cronometraje-episodio-piloto-e5.md` (renombrar a E6 o crear paralelo para E5).
+- [ ] **Cuando se complete el ciclo** del E5 (24 h post-publicación), anotar métricas en `REACCION-9-MAYO.md` o crear un nuevo doc `REACCION-11-MAYO.md` según volumen.
 
 ---
 

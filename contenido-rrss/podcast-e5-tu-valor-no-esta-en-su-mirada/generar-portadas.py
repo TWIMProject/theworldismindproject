@@ -1,14 +1,14 @@
-"""Genera las 3 portadas del E5 con el sistema visual establecido en la
-era NotebookLM (E1-E4) y heredado al formato humano: foto del autor +
-tipografia serif display + jerarquia editorial sobre verde oscuro.
+"""Genera las 3 portadas del E5 «Tu valor no está en su mirada».
 
-Outputs (todos en `contenido-rrss/podcast-e5-autoexigencia/`):
+Hereda el sistema visual establecido en el E5 original (autoexigencia,
+ahora renumerado a E6 tras el reordenamiento del 11 may 2026) y en los
+episodios NotebookLM E1-E4: foto autor + tipografía serif display +
+jerarquía editorial sobre verde oscuro.
+
+Outputs (todos en `contenido-rrss/podcast-e5-tu-valor-no-esta-en-su-mirada/`):
 - cover-youtube.png   1280x720   horizontal (texto izq + foto der)
 - cover-spotify.png   1400x1400  cuadrado (texto izq + foto der vertical)
 - story-vertical.png  1080x1920  vertical (foto arriba + texto abajo)
-
-Reusa `daniel-orozco-sillon.jpg` (raiz repo) como retrato. Para episodios
-siguientes basta con cambiar el bloque CONTENIDO_EPISODIO.
 """
 
 from pathlib import Path
@@ -19,8 +19,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 CONTENIDO_EPISODIO = {
     "numero": "Ep.5",
     "kicker": "Psicología Aplicada",
-    "titulo_lineas": ["EL MANDATO", "DE NO PARAR"],
-    "subtitulo_par": "(y la culpa que viene cuando lo intentas)",
+    "titulo_lineas": ["TU VALOR NO ESTÁ", "EN SU MIRADA"],
+    "subtitulo_par": "(el alivio de dejar de confundir amor con necesidad)",
     "pie": "DANIEL OROZCO  ·  @daniorozcopsicologo",
 }
 
@@ -36,7 +36,7 @@ BLANCO = (250, 246, 240)
 
 REPO = Path(__file__).resolve().parent.parent.parent
 FOTO_AUTOR = REPO / "daniel-orozco-sillon.jpg"
-DESTINO = REPO / "contenido-rrss" / "podcast-e5-autoexigencia"
+DESTINO = REPO / "contenido-rrss" / "podcast-e5-tu-valor-no-esta-en-su-mirada"
 FUENTES = Path("/root/.local/share/fonts")
 
 PLAYFAIR_VF = FUENTES / "PlayfairDisplay-VF.ttf"
@@ -323,8 +323,8 @@ def generar_story(foto_orig, logo_rgb):
     ancho_disp = W - 180
     y_centro_bloque = int(H * 0.78)
     f_kicker = sans("Medium", 30)
-    f_titulo = serif(115, weight=700)
-    f_sub = serif(40, weight=400, italic=True)
+    f_titulo = serif(88, weight=700)  # reducido de 115 a 88 para que «TU VALOR NO ESTÁ» quepa en 1080
+    f_sub = serif(34, weight=400, italic=True)
 
     # Para story: render centrado horizontalmente (no alineado izq como otros)
     d = ImageDraw.Draw(img)
