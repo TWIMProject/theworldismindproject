@@ -37,7 +37,47 @@ BLANCO = (250, 246, 240)
 REPO = Path(__file__).resolve().parent.parent.parent
 FOTO_AUTOR = REPO / "daniel-orozco-sillon.jpg"
 DESTINO = REPO / "contenido-rrss" / "podcast-e5-tu-valor-no-esta-en-su-mirada"
-FUENTES = Path("/root/.local/share/fonts")
+
+
+def _resolver_fuentes_dir() -> Path:
+    """Devuelve el primer directorio que contenga las TTFs requeridas.
+
+    Orden de búsqueda:
+    1. Variable de entorno ``TWIM_FONTS_DIR`` si está definida.
+    2. ``/root/.local/share/fonts`` (entorno habitual de las sesiones Claude).
+    3. ``~/.local/share/fonts`` (Linux estándar para fuentes de usuario).
+
+    Si ningún directorio contiene las cinco TTFs, lanza ``FileNotFoundError``
+    con instrucciones de descarga.
+    """
+    import os
+    requeridas = {
+        "BarlowCondensed-Bold.ttf",
+        "BarlowCondensed-Medium.ttf",
+        "BarlowCondensed-Regular.ttf",
+        "PlayfairDisplay-VF.ttf",
+        "PlayfairDisplay-Italic-VF.ttf",
+    }
+    candidatos = []
+    if os.environ.get("TWIM_FONTS_DIR"):
+        candidatos.append(Path(os.environ["TWIM_FONTS_DIR"]))
+    candidatos.append(Path("/root/.local/share/fonts"))
+    candidatos.append(Path.home() / ".local" / "share" / "fonts")
+    for d in candidatos:
+        if d.is_dir() and requeridas.issubset({f.name for f in d.glob("*.ttf")}):
+            return d
+    raise FileNotFoundError(
+        "No se encontró un directorio con las 5 TTFs requeridas "
+        f"({', '.join(sorted(requeridas))}).\n"
+        "Define la variable de entorno TWIM_FONTS_DIR apuntando a la "
+        "carpeta donde tengas las fuentes, o copia las fuentes a "
+        f"alguno de estos paths: {', '.join(str(c) for c in candidatos)}.\n"
+        "Las fuentes se descargan del repo oficial google/fonts "
+        "(playfairdisplay) y jpt/barlow."
+    )
+
+
+FUENTES = _resolver_fuentes_dir()
 
 PLAYFAIR_VF = FUENTES / "PlayfairDisplay-VF.ttf"
 PLAYFAIR_ITALIC_VF = FUENTES / "PlayfairDisplay-Italic-VF.ttf"
@@ -131,8 +171,11 @@ def foto_con_fade_abajo(foto, alto_destino, ancho_destino, fade_px):
     foto_rgba = foto_e.convert("RGBA")
     mask = Image.new("L", (ancho_destino, alto_destino), 255)
     md = ImageDraw.Draw(mask)
+    # Denominador fade_px - 1 garantiza que la última iteración (y = fade_px - 1)
+    # produzca alpha = 0 (transparencia total) en lugar de ~1.
+    divisor = max(1, fade_px - 1)
     for y in range(fade_px):
-        alpha = int(255 * (1 - y / fade_px))
+        alpha = int(255 * (1 - y / divisor))
         md.line([(0, alto_destino - fade_px + y),
                  (ancho_destino, alto_destino - fade_px + y)], fill=alpha)
     foto_rgba.putalpha(mask)
@@ -189,8 +232,17 @@ def render_bloque_editorial(img, ep, x_izq, ancho_disp, y_centro,
     dibujado para que la funcion llamante coloque pie debajo."""
     d = ImageDraw.Draw(img)
 
+    # Eyebrow real: 2 líneas con gap. Pre-calculamos f_kicker_top y el alto real
+    # antes de centrar el bloque (antes este cálculo usaba `numero + kicker`
+    # en una sola línea y desajustaba el centrado vertical).
+    f_kicker_top = sans("Bold", f_kicker.size)
+    sub_kicker = f"{ep['numero']} · {ep['kicker']}"
+    gap_eyebrow_lineas = 8
+    eyebrow_h = (medir("TWIM PODCAST", f_kicker_top)[1]
+                 + gap_eyebrow_lineas
+                 + medir(sub_kicker, f_kicker)[1])
+
     # Calcular alto total del bloque para centrar
-    eyebrow_h = medir(ep["numero"] + ep["kicker"], f_kicker)[1]
     titulo_alto_linea = medir("EM", f_titulo)[1] + gap_titulo
     titulo_total = titulo_alto_linea * len(ep["titulo_lineas"]) - gap_titulo
     sub_h = medir(ep["subtitulo_par"], f_subtitulo)[1]
@@ -204,11 +256,9 @@ def render_bloque_editorial(img, ep, x_izq, ancho_disp, y_centro,
     y_inicio = y_centro - total // 2
 
     # Eyebrow: TWIM PODCAST (linea 1) + Ep.X · Psicología (linea 2)
-    f_kicker_top = sans("Bold", f_kicker.size)
     dibujar_tracked(d, "TWIM PODCAST", f_kicker_top, color_meta,
                      x_izq, y_inicio, kicker_track)
-    y_eyebrow2 = y_inicio + medir("TWIM PODCAST", f_kicker_top)[1] + 8
-    sub_kicker = f"{ep['numero']} · {ep['kicker']}"
+    y_eyebrow2 = y_inicio + medir("TWIM PODCAST", f_kicker_top)[1] + gap_eyebrow_lineas
     dibujar_tracked(d, sub_kicker, f_kicker, color_meta,
                      x_izq, y_eyebrow2, max(2, kicker_track // 2))
 

@@ -43,171 +43,59 @@ Sin emojis. Sin caras gritando. Sin flechas rojas, círculos amarillos ni efecto
 
 ---
 
-## Portada YouTube · horizontal 1280×720 (16:9)
+## Salidas y dimensiones
 
-| Atributo | Valor |
-|---|---|
-| Dimensiones | 1280 × 720 px |
-| Peso máximo | 2 MB |
-| Aspect ratio | 16:9 |
-| Color de fondo | Verde oscuro `#173D30` con sutil gradiente diagonal hacia verde medio `#265C4B` (135°, suave, no llamativo) |
-| Tipografía | Barlow Condensed Bold para título principal, Regular para metadatos |
-
-### Composición
-
-**Lado izquierdo (60% del ancho):**
-
-- **Eyebrow** (kicker arriba): `TWIM PODCAST · E5`
-  - Tamaño: 28-32 px
-  - Color: beige `#C2A78B`
-  - Letter-spacing: 2-3 px
-  - Mayúsculas
-
-- **Título principal** (4 palabras, dos líneas):
-  - Línea 1: `EL MANDATO`
-  - Línea 2: `DE NO PARAR`
-  - Tamaño: 90-110 px
-  - Color: beige `#C2A78B`
-  - Peso: Bold o ExtraBold
-  - Alineación: izquierda
-  - Line-height: 0.95 (líneas pegadas)
-
-- **Subtítulo descriptivo** (debajo del título principal):
-  - Texto: `Autoexigencia y culpa de descansar`
-  - Tamaño: 36-42 px
-  - Color: beige claro `#FDFCFA` con 70% opacidad o crema
-  - Peso: Regular
-  - Alineación: izquierda
-
-- **Pie inferior izquierda:**
-  - Texto: `Daniel Orozco Abia · CV11515`
-  - Tamaño: 22-26 px
-  - Color: beige `#C2A78B` con 60% opacidad
-
-**Lado derecho (40% del ancho):**
-
-- **Cover unificado del podcast** (`podcast-cover.png`) reescalado a ~520×520 px, centrado verticalmente, con un margen interno (no que toque los bordes del lienzo).
-- O alternativa: bloque visual minimalista — un trazo o forma geométrica en beige sobre el verde, sin elementos figurativos.
-
-### Test de legibilidad
-
-- Reducir el thumbnail al 30% de tamaño y verificar que `EL MANDATO DE NO PARAR` se sigue leyendo. Si no, simplificar a 3 palabras (`MANDATO DE NO PARAR`).
-- Verificar que el subtítulo "Autoexigencia y culpa de descansar" se lee al tamaño de smartphone vertical (~150 px de ancho).
+| Archivo | Formato | Dimensiones | Uso |
+|---|---|---|---|
+| `cover-youtube.png` | Horizontal | 1280 × 720 px (16:9) | Thumbnail YouTube. Subir vía YouTube Studio antes de publicar el vídeo. Peso ≤ 2 MB. |
+| `cover-spotify.png` | Cuadrado | 1400 × 1400 px (1:1) | Variante por episodio para Spotify for Podcasters. Si se decide usar el cover canal estándar (`podcast-cover.png`), este archivo se conserva como respaldo pero no se sube. Peso ≤ 5 MB. |
+| `story-vertical.png` | Vertical | 1080 × 1920 px (9:16) | Story de Instagram / Facebook anunciando el episodio. Acompañar con sticker «Link» a la URL del vídeo o a `/newsletter/` según objetivo del día. |
 
 ---
 
-## Portada Spotify · cuadrada 1400×1400 (1:1)
+## Composición
 
-> Spotify exige cover cuadrado mínimo 1400×1400 px (recomendado 3000×3000 para mantener calidad en pantallas retina). Si Daniel ya tiene un cover canal `podcast-cover.png` que cumple, **se puede mantener** ese sin variante por episodio (estrategia consistente del canal).
->
-> **Decisión a tomar por Daniel:** ¿usar el cover canal estándar o producir variante por episodio?
+Las tres portadas comparten estructura editorial:
 
-### Opción A · cover canal estándar (recomendada para T1)
+1. **Foto autor** (`daniel-orozco-sillon.jpg` de la raíz del repo) con fade lateral / inferior hacia el verde oscuro de fondo. La foto ocupa ~50-58 % del lienzo según orientación.
+2. **Eyebrow** en dos líneas:
+   - Línea 1: `TWIM PODCAST` (Barlow Condensed Bold, tracked).
+   - Línea 2: `Ep.X · Psicología Aplicada` (Barlow Condensed Medium, tracked menor).
+3. **Separador horizontal** corto en beige `#C2A78B`.
+4. **Título principal** en Playfair Display Bold (peso 700), 1-2 líneas, color crema, alineación izquierda en YouTube/Spotify y centrada en Story.
+5. **Subtítulo entre paréntesis** en Playfair Display Italic, color beige, debajo del título.
+6. **Pie inferior** con `DANIEL OROZCO  ·  @daniorozcopsicologo` en Barlow Condensed Bold tracked, beige.
+7. **Logo MIND WORLD** (recortado del cover canal) en blanco translúcido, esquina inferior derecha.
 
-Reusar `podcast-cover.png` para los 8 episodios T1 (mayo-agosto). Coste 0, máxima consistencia visual.
-
-Argumentos a favor:
-- Spotify y plataformas de hosting muestran el cover canal asociado al episodio si no hay artwork específico.
-- En T1 (mayo-agosto, 8 episodios) la consistencia visual ayuda al reconocimiento de marca.
-- Variantes por episodio se pueden introducir desde T2 (septiembre+) cuando el canal tenga más volumen.
-
-### Opción B · variante por episodio (si Daniel quiere diferenciar visualmente)
-
-| Atributo | Valor |
-|---|---|
-| Dimensiones | 1400 × 1400 px (mínimo) o 3000 × 3000 px (recomendado) |
-| Aspect ratio | 1:1 |
-| Color base | Verde oscuro `#173D30`, mismo de la portada YouTube (consistencia) |
-
-### Composición Opción B
-
-**Composición central, jerárquica vertical:**
-
-- **Eyebrow arriba:**
-  - Texto: `TWIM PODCAST`
-  - Tamaño: 60 px
-  - Color: beige `#C2A78B`
-  - Letter-spacing: 4 px
-  - Mayúsculas
-  - Posición: centro horizontal, ~150 px desde arriba
-
-- **Número de episodio:**
-  - Texto: `E5`
-  - Tamaño: 200 px
-  - Color: beige `#C2A78B` con 40% opacidad
-  - Peso: ExtraBold
-  - Posición: centrado, debajo del eyebrow
-
-- **Título principal** (centrado, dos líneas):
-  - Línea 1: `EL MANDATO`
-  - Línea 2: `DE NO PARAR`
-  - Tamaño: 120 px
-  - Color: beige `#C2A78B`
-  - Peso: Bold
-  - Line-height: 0.95
-
-- **Subtítulo:**
-  - Texto: `Autoexigencia y culpa de descansar`
-  - Tamaño: 50 px
-  - Color: beige claro / crema (70% opacidad)
-  - Peso: Regular
-
-- **Pie centrado:**
-  - Texto: `Daniel Orozco Abia · CV11515 · Valencia`
-  - Tamaño: 32 px
-  - Color: beige `#C2A78B` con 60% opacidad
-  - Posición: ~150 px desde abajo
-
-- **Logo TWIM** (`logo-mindworld.png`) abajo, centrado, ~80 px de altura.
-
-### Test de legibilidad Opción B
-
-- Reducir al 5% (cover en buscador Spotify) y verificar que al menos `E5` y `EL MANDATO` se distinguen.
-- Verificar contraste sobre fondo verde oscuro: el beige `#C2A78B` cumple WCAG AA sobre `#173D30`.
+El contenido editorial exacto del E5 está al inicio de este documento (sección «Contenido editorial usado en este episodio»). El ground truth visual es lo que produce `generar-portadas.py`.
 
 ---
 
-## Decisión final E5 (6-may-2026, revisada)
+## Flujo de generación
 
-**Sistema visual heredado de NotebookLM (E1-E4): foto autor + Playfair Display serif.**
-**Tres formatos:** YouTube horizontal 1280×720, Spotify cuadrado 1400×1400, Story vertical 1080×1920.
+Estas portadas se producen **por código** con Pillow (no en Canva, no a mano). El script `generar-portadas.py` de esta misma carpeta es la fuente única de verdad. Para producir o regenerar las portadas:
 
-Generación por código (Pillow) en `generar-portadas.py`. El script:
-- Carga `daniel-orozco-sillon.jpg` (raíz del repo) como retrato — misma sesión de fotos del Ep.3 NotebookLM, asegura coherencia visual del canal en la transición a formato humano.
-- Recorta el logo MIND WORLD PROJECT del `podcast-cover.png` raíz y lo convierte en versión blanca semi-translúcida para superponerlo sobre la foto.
-- Aplica fade lateral (horizontal en cover-youtube y cover-spotify, vertical en story-vertical) para fundir la foto con el verde sólido.
-- Renderiza el bloque editorial: eyebrow Barlow Condensed Bold tracked + separador horizontal beige + título Playfair Display Bold (peso 700) + subtítulo paréntesis en Playfair Display Italic + pie Barlow Condensed Bold tracked.
+```bash
+python3 contenido-rrss/podcast-e5-tu-valor-no-esta-en-su-mirada/generar-portadas.py
+```
 
-**Tipografías**: Barlow Condensed (eyebrow + pie, ya en repo) + Playfair Display Variable Font (título + subtítulo paréntesis, descargada de google/fonts).
+Para cambiar copy del episodio: editar el dict `CONTENIDO_EPISODIO` al principio del script y re-ejecutar. Sin Canva, sin export manual.
 
-**Coste por episodio nuevo**: cambiar el bloque `CONTENIDO_EPISODIO` (5 strings) y ejecutar el script. Si la foto del autor se mantiene la misma para toda T1, no hay coste de fotografía adicional. Si se rota foto por bloque temático, sustituir `FOTO_AUTOR` en el script.
-
-**Pendiente**: migrar `video-fondo.png` (pantalla durante reproducción YouTube) al nuevo sistema visual. Sigue funcional con el sistema anterior (sillones ilustrados sobre verde).
+Dependencias:
+- **Pillow**: `pip install Pillow`.
+- **Tipografías**: Barlow Condensed (Regular/Medium/Bold) + Playfair Display Variable (`PlayfairDisplay-VF.ttf`) + Playfair Display Italic Variable (`PlayfairDisplay-Italic-VF.ttf`). El script las busca en `$TWIM_FONTS_DIR` si está definido, después en `/root/.local/share/fonts/`, después en `~/.local/share/fonts/`. Si no encuentra alguna, falla con error claro. Descarga: repo oficial `google/fonts`.
+- **Foto autor**: `daniel-orozco-sillon.jpg` en la raíz del repo (ya presente).
 
 ---
 
 ## Verificación pre-publicación
 
-### Para portada YouTube
-
-- [ ] Archivo final 1280×720 px, peso ≤ 2 MB.
-- [ ] Test de legibilidad al 30% superado.
-- [ ] Paleta y tipografía coherentes con sistema visual TWIM.
-- [ ] Sin emojis, sin elementos prohibidos.
-- [ ] Subido a YouTube Studio antes de publicar el vídeo.
-
-### Para Spotify
-
-- [ ] Si Opción A: el cover canal `podcast-cover.png` se aplica automáticamente al episodio.
-- [ ] Si Opción B: archivo 3000×3000 px (o mínimo 1400×1400), peso ≤ 5 MB, formato JPG o PNG.
-- [ ] Subido al hosting (Spotify for Podcasters / Buzzsprout / equivalente).
-
----
-
-## Lo que sí queda manual fuera del repo
-
-- **Diseñar las portadas en Canva** o herramienta equivalente. El repo deja las specs textuales — el archivo visual final lo produce un humano (o diseñador externo cuando entre la VA en sept).
-- **Subir al sitio correspondiente** (YouTube Studio + Spotify for Podcasters).
+- [ ] Las 3 portadas existen en esta carpeta y se ven correctamente al abrirlas.
+- [ ] Test de legibilidad del thumbnail YouTube al 30 %: el título sigue siendo legible.
+- [ ] Sin emojis, sin caras gritando, sin flechas / círculos / zooms.
+- [ ] Paleta y tipografía coherentes con el resto del canal y con el sistema visual TWIM.
+- [ ] Story al 9:16 con el título completo dentro de los márgenes (no cortado por los bordes).
+- [ ] Subido a YouTube Studio + Spotify for Podcasters + IG Stories según corresponda.
 
 ---
 
