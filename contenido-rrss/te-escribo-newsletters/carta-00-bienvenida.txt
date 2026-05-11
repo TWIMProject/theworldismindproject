@@ -1,0 +1,180 @@
+CARTA 00 — Bienvenida a «Te escribo»
+
+═══════════════════════════════════
+ASUNTO
+═══════════════════════════════════
+
+antes de que te llegue la primera carta.
+
+
+═══════════════════════════════════
+PREVIEW TEXT
+═══════════════════════════════════
+
+Esto que estás leyendo no es ella. Te explico.
+
+
+═══════════════════════════════════
+REMITENTE
+═══════════════════════════════════
+
+Daniel Orozco · danielorozco@twimproject.com
+
+
+═══════════════════════════════════
+USO PREVISTO
+═══════════════════════════════════
+
+Email de bienvenida automática de la automation MailerLite
+«Web - Newsletter Home» (ID 185842047616288664).
+
+PROBLEMA QUE RESUELVE:
+Varios suscriptores nuevos pensaron que la welcome era «la 1bis»
+y que les faltaba la Carta 1 «por llegar». La confusión venía de
+que la welcome era literalmente la Carta 1 «Manifesto», sin contexto.
+
+CAMBIO OPERATIVO REQUERIDO EN MAILERLITE
+(ver detalle al final de este archivo en sección «Implementación»):
+
+1. Esta carta sustituye al email 1 de la automation Web - Newsletter
+   Home (que hoy es «Bienvenida — Carta 1»).
+2. La antigua Carta 1 Manifesto pasa a ser el email 2 de la
+   automation, con un delay de 3-5 días tras la bienvenida.
+3. Carta 2 «La voz que te juzga» sigue como campaña Regular del 19 may.
+
+
+═══════════════════════════════════
+NOTA EDITORIAL
+═══════════════════════════════════
+
+Esta carta NO compite con Carta 1 Manifesto. Cumple función operativa:
+explicar el sistema, marcar el tono y dejar claro qué va a llegar. Es
+deliberadamente más corta y menos «pieza editorial» que las cartas
+numeradas — para que cuando llegue la Carta 1 a los pocos días, se
+note el salto cualitativo y la lectora reconozca «ah, esto sí es una
+carta de las que prometía».
+
+Encabezado dentro del email recomendado: «TE ESCRIBO · Bienvenida»
+en eyebrow beige sobre fondo crema, sin numeración.
+
+Alternativas de etiqueta visual que Daniel puede elegir:
+- «Bienvenida» (recomendada).
+- «Carta 0».
+- «Antes de la primera carta».
+
+
+═══════════════════════════════════
+CUERPO DEL EMAIL  (plain text)
+═══════════════════════════════════
+
+Hola,
+
+Si estás leyendo esto, te acabas de apuntar a «Te escribo». Gracias por darme tu correo — no me lo tomo a la ligera.
+
+Antes de nada, quiero aclararte una cosa, porque varias personas me han escrito confundidas esta semana.
+
+Esto que estás leyendo no es la Carta 1.
+
+La Carta 1 se llama «Esto es lo que vas a recibir» y te llegará en unos días. Es la pieza fundacional de «Te escribo», donde explico de dónde nace esta newsletter, qué tipo de cosas leerás aquí y, sobre todo, qué no. Es una carta para guardar.
+
+Lo que estás leyendo ahora es algo distinto. Es la bienvenida.
+
+—
+
+Te explico el sistema, sin marketing:
+
+«Te escribo» es una carta editorial cada tanto. No es semanal. No es diaria. No te voy a llenar la bandeja. Sale cuando hay algo que merezca la pena escribir, y cuando hay tiempo para escribirlo en condiciones. La cadencia razonable es cada dos o tres semanas.
+
+Las cartas van numeradas para que lleves la cuenta y nunca te pierdas ninguna. La próxima — la Carta 1 — llega en unos días. Después la Carta 2, «La voz que te juzga», sobre la autocrítica que llevas dentro y que no se calla con razones. Y después seguirán otras.
+
+Cada carta es independiente. No hace falta leerlas en orden. Pero suelen referenciarse entre sí, así que merece la pena no perderlas.
+
+—
+
+Tres reglas que me he puesto a mí mismo con esta newsletter:
+
+No te voy a mandar correos motivacionales. Si quieres frases bonitas, hay sitios mejores que este.
+
+No te voy a vender cada vez. Algunas veces te contaré que hay un programa o un libro, sí, pero no es el motivo de la newsletter. Si lo fuera, ya lo habrías notado.
+
+No te voy a tratar como si no entendieras. Mi trabajo es traducir psicología profunda a palabras cotidianas, no diluirla.
+
+Si en algún momento alguna de estas tres reglas se rompe, escríbeme y dímelo. Estoy en este mismo correo.
+
+—
+
+Una cosa más, por si te sirve hoy.
+
+Si te has apuntado, probablemente hay algo dentro que está intentando hacerse escuchar. Algo que no se calma del todo aunque por fuera vaya todo bien. No tengo que saber qué es para decirte algo que sí sé:
+
+No te apresures a entenderlo.
+
+A veces, cuando algo se mueve por dentro, lo primero que la mente intenta es ponerle un nombre rápido. Encajarlo en una categoría conocida. Decidir si es ansiedad, autoexigencia, dependencia, cansancio. Y al ponerle un nombre antes de tiempo, lo cierras. Le quitas espacio para que te diga lo que realmente quería decir.
+
+A veces hace falta dejarlo respirar antes de nombrarlo.
+
+Eso es todo por hoy. La Carta 1 llega pronto.
+
+— Daniel
+
+PD: Si tienes curiosidad por el tipo de cosas que escribo, puedes echar un ojo a los artículos en twimproject.com/insights/. No hace falta para nada. Pero están ahí.
+
+PD2: Esta carta es educativa, no clínica. Si lo que sientes te paraliza, te impide funcionar o aparece junto a pensamientos peores, busca a alguien que pueda mirarlo contigo de cerca. Lo que te escribo aquí no sustituye eso.
+
+
+═══════════════════════════════════
+IMPLEMENTACIÓN EN MAILERLITE
+═══════════════════════════════════
+
+Pasos exactos para que Daniel deje la automation en condiciones
+(15-20 minutos en el panel):
+
+1. Dashboard ML → Automations → «Web - Newsletter Home»
+   (ID 185842047616288664).
+
+2. Pausar la automation. ATENCIÓN: pausar puede sacar a las 13 personas
+   que hay actualmente en cola del flujo. Si quieres minimizar el
+   impacto, hazlo en horario nocturno (menos trigger entrants).
+
+3. Editar el email 1 (actualmente «Bienvenida — Carta 1»):
+   - Nombre del correo: «Bienvenida»
+   - Asunto: «antes de que te llegue la primera carta.»
+   - Preview text: «Esto que estás leyendo no es ella. Te explico.»
+   - Pegar el cuerpo en plain text de este archivo (sin las cabeceras
+     de specs que aparecen arriba).
+
+4. Email 2 de la automation:
+   - Si actualmente está vacío o es otra cosa: añadir un nuevo email
+     llamado «Carta 1 — Manifesto», con el contenido de
+     `carta-01-esto-es-lo-que-vas-a-recibir.txt`.
+   - Si ya existía: dejarlo intacto.
+   - Delay sugerido entre email 1 (Bienvenida) y email 2 (Carta 1):
+     3-5 días.
+
+5. Email 3 de la automation: dejar como está si ya existe. Si no, se
+   puede plantear más adelante.
+
+6. Reactivar la automation. Los 13 que estaban en cola entrarán al
+   nuevo flujo desde el principio. Eso significa que recibirán la
+   Bienvenida nueva incluso si ya habían recibido Carta 1 Manifesto.
+   No es ideal pero es asumible — la Bienvenida no es contenido
+   editorial fuerte, así que recibirla por segunda vez no rompe la
+   experiencia.
+
+7. Verificación: enviar un test del email 1 a un correo personal
+   antes de reactivar la automation. Verificar que el plain_text
+   está en español (no inglés, problema conocido de MailerLite con
+   campañas marcadas como en-US).
+
+
+═══════════════════════════════════
+SIGUIENTES PASOS (POST-IMPLEMENTACIÓN)
+═══════════════════════════════════
+
+- Actualizar `PLAN-CAPTACION-30D.md` con el cambio en la welcome.
+- Vigilar +24h tras el cambio: ¿siguen llegando mensajes de
+  confusión? Si sí, el problema no era solo el nombre.
+- Considerar añadir en el form de `/newsletter/` un texto breve
+  («Recibirás primero una bienvenida, luego una carta editorial
+  cada 2-3 semanas») para gestionar expectativas desde antes de
+  suscribirse.
