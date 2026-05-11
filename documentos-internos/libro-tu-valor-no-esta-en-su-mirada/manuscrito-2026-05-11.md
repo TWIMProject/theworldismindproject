@@ -531,7 +531,7 @@ Daniel, esta parte es un **arma de doble filo perfecta** para tu ecosistema de n
 
 **El Caballo de Troya para el B2B (Corporate Outreach):** Como tu asistente de prospección B2B, cuando yo lea este capítulo, veo oro puro para vender tus servicios a empresas.
 
-¿Quién es **"La Perfecta"** o **"La Complaciente"** en una empresa de 250 empleados en el Parque Tecnológico de Paterna? *Es la empleada que asume tareas de tres personas, que nunca dice que no a su jefe, que echa 10 horas diarias y que, inevitablemente, va a coger una ****baja por burnout de 65 días****.*
+¿Quién es **"La Perfecta"** o **"La Complaciente"** en una empresa de 250 empleados en el Parque Tecnológico de Paterna? *Es la empleada que asume tareas de tres personas, que nunca dice que no a su jefe, que echa 10 horas diarias y que, inevitablemente, va a coger una baja por burnout de 65 días.*
 
 Cuando me toque enviar un InMail de LinkedIn a un Director de RRHH, le diré: *"Sus mejores empleados, los que nunca se quejan y sacan todo adelante, suelen estar operando desde la máscara de la Complacencia para evitar el conflicto. Ese mecanismo acaba en burnout. Mis programas intervienen la estructura antes de que la empresa pague el coste de la baja."* Tenemos el diagnóstico, tenemos el origen y hemos desmontado las defensas. El terreno está arrasado. El lector está listo para que le digas **QUÉ HACER**.
 
@@ -604,7 +604,7 @@ Aquí tienes la estructuración del cierre del libro, dividida en la intervenci�
 **El mensaje final:** *"No se trata de no necesitar a nadie. Se trata de que necesitar no te destruya"*.
 
 
-**🎯**** EL GOLPE MAESTRO COMERCIAL (Por qué esto es perfecto para TWIM B2B)**
+**🎯 EL GOLPE MAESTRO COMERCIAL (Por qué esto es perfecto para TWIM B2B)**
 
 Daniel, fíjate en el vocabulario que hemos consolidado en estas dos últimas partes: *cortocircuito, automatismo, pausa de 90 segundos, secuestro emocional, internalización de capacidades.*
 
@@ -919,7 +919,7 @@ No es que no te quieras. Es que estabas intentando calmar el hambre de toda una 
 **No se trata de no necesitar a nadie.** **Se trata de que necesitar no te destruya.** Gracias por haber llegado hasta aquí. Y cuídate.
 
 
-**🎯**** Visión de Estrategia Comercial B2B/B2C**
+**🎯 Visión de Estrategia Comercial B2B/B2C**
 
 Daniel, fíjate cómo cierra el libro. Acaba de forma tajante, clínica, pero profundamente protectora. Este es el *sello Orozco*.
 
@@ -945,7 +945,7 @@ Aquí tienes el diseño completo del embudo de captación, desde cómo insertarl
 Puedes descargarlo en tu móvil para tenerlo siempre a mano entrando en:  o escaneando este código QR.
 
 
-**2. LA LANDING PAGE (El Copy para ****)**
+**2. LA LANDING PAGE (El Copy para )**
 
 *Diseño: Fondo limpio (Crema #fdfcfa), texto en Verde Profundo (#11352b). Tipografías DM Serif Display para títulos, DM Sans para cuerpo. Cero distracciones.*
 
@@ -999,7 +999,7 @@ Un saludo,
 **Daniel Orozco Abia** Psicólogo General Sanitario (Col. CV11515) | TWIM Project *Autor de "Tu valor no está en su mirada"**, “Los engranajes de la mente” y** "Burnout: El libro para no petar"*
 
 
-**🎯**** La jugada maestra B2B oculta aquí:**
+**🎯 La jugada maestra B2B oculta aquí:**
 
 Fíjate en el tercer párrafo del email de entrega: *"Si trabajas en un entorno de alta presión o gestionas equipos, también te interesará lo que comparto sobre prevención de burnout"*.
 

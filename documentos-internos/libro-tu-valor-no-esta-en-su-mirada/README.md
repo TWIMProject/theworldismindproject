@@ -94,6 +94,9 @@ for p in body.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/mai
         lines.append(text)
 output = '\n\n'.join(lines)
 output = re.sub(r'\n{4,}', '\n\n\n', output)
+# Limpieza: eliminar pares bold-bold adyacentes (cierre + apertura redundantes)
+# que producen exactamente 4 asteriscos consecutivos. NO toca 3 (bold-italic) ni 5+.
+output = re.sub(r'(?<!\*)\*\*\*\*(?!\*)', '', output)
 print(output)
 " > <ruta-al-md>
 ```
@@ -105,8 +108,8 @@ print(output)
 ## Vínculos al ecosistema del libro
 
 - **Briefing CoWork (esencia, voz, tono, dos & don'ts):** [`../briefing-cowork-libro-tu-valor-no-esta-en-su-mirada.md`](../briefing-cowork-libro-tu-valor-no-esta-en-su-mirada.md). Lectura obligatoria antes de proponer cambios de fondo.
-- **Programa hermano del libro:** `dejadebuscarteenotros.html` (landing pública) + `BRIEFING-PROGRAMA-DEJADEBUSCARTE.md` (briefing operativo).
-- **Vídeo-ensayo de YouTube que siembra el campo semántico:** `contenido-rrss/youtube-dependencia-emocional-amor-vs-necesidad/guion.md` (publicación en mayo 2026, **no nombra el libro todavía**).
+- **Programa hermano del libro:** [`../../dejadebuscarteenotros.html`](../../dejadebuscarteenotros.html) (landing pública) + [`../../BRIEFING-PROGRAMA-DEJADEBUSCARTE.md`](../../BRIEFING-PROGRAMA-DEJADEBUSCARTE.md) (briefing operativo).
+- **Vídeo-ensayo de YouTube que siembra el campo semántico:** [`../../contenido-rrss/youtube-dependencia-emocional-amor-vs-necesidad/guion.md`](../../contenido-rrss/youtube-dependencia-emocional-amor-vs-necesidad/guion.md) (publicación en mayo 2026, **no nombra el libro todavía**).
 - **Reto 7 Días y newsletter «Te escribo»:** ambos forman parte del mismo universo. El libro es la pieza largoformato que cierra el círculo.
 
 ---
@@ -117,8 +120,17 @@ print(output)
 |---|---|---|
 | 7 may 2026 | Briefing CoWork redactado (`../briefing-cowork-libro-tu-valor-no-esta-en-su-mirada.md`) | Departamento CoWork situado en marca, voz, público y reglas editoriales. |
 | 11 may 2026 | Daniel sube primer manuscrito al repo (`manuscrito-2026-05-11.docx` + `.md`) | El libro queda accesible para todas las sesiones de Claude. |
+| 11 may 2026 | Script de extracción mejorado tras review de Copilot en PR #140 | `re.sub(r'(?<!\*)\*\*\*\*(?!\*)', '', output)` elimina artefactos `****` espurios del cierre + apertura bold adyacentes, sin tocar `***` (bold-italic) ni `*****` (bold-italic + bold). `.md` regenerado. |
 
 **Próximo paso operativo previsto:** iterar contenido del manuscrito. Daniel quiere perfeccionar el libro porque será fuente de ingresos cuando salga a la venta. Las propuestas concretas de iteración se anotarán aquí cuando se acuerden, junto con la versión a la que aplican.
+
+### Pendientes editoriales detectados al revisar la versión 2026-05-11
+
+Estos son puntos que **dependen de Daniel** — no se editan a tijeretazo desde Claude porque son contenido del libro, no artefactos de extracción. Aparecen aquí como recordatorio para la próxima sesión de iteración con Daniel:
+
+- **Línea 948 del `.md`:** «`**2. LA LANDING PAGE (El Copy para )**`» — falta el nombre o referencia de la landing tras «El Copy para». Probablemente quedó pendiente al escribir.
+- **Línea 433 del `.md`:** «`*****Self***** Hambriento`» con cinco asteriscos a cada lado del término *Self*. Posiblemente lo correcto era `***Self***` (bold italic, concepto clínico de Kohut) sin la negrita adicional. Revisar en Word y normalizar.
+- **Otras ocurrencias de huecos editoriales**, `[CTA]`, `[URL]` o similares: cuando Daniel suba una nueva versión, conviene barrerlas todas y completarlas o convertirlas en placeholders explícitos con corchetes.
 
 ---
 
