@@ -121,6 +121,7 @@ print(output)
 | 7 may 2026 | Briefing CoWork redactado (`../briefing-cowork-libro-tu-valor-no-esta-en-su-mirada.md`) | Departamento CoWork situado en marca, voz, público y reglas editoriales. |
 | 11 may 2026 | Daniel sube primer manuscrito al repo (`manuscrito-2026-05-11.docx` + `.md`) | El libro queda accesible para todas las sesiones de Claude. |
 | 11 may 2026 | Script de extracción mejorado tras review de Copilot en PR #140 | `re.sub(r'(?<!\*)\*\*\*\*(?!\*)', '', output)` elimina artefactos `****` espurios del cierre + apertura bold adyacentes, sin tocar `***` (bold-italic) ni `*****` (bold-italic + bold). `.md` regenerado. |
+| 11 may 2026 | Revisión específica del temario completada | Documento `revision-temario-2026-05-11.md` mapea los 16 capítulos reales, detecta inconsistencias entre índice anunciado y desarrollo, propone 4 acciones de prioridad alta y abre 5 decisiones editoriales que requieren conversación con Daniel. Veredicto: temario sólido conceptualmente, problemas son de gestión documental, no de fondo. |
 
 **Próximo paso operativo previsto:** iterar contenido del manuscrito. Daniel quiere perfeccionar el libro porque será fuente de ingresos cuando salga a la venta. Las propuestas concretas de iteración se anotarán aquí cuando se acuerden, junto con la versión a la que aplican.
 
