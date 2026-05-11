@@ -1,9 +1,11 @@
 # Hoja de cronometraje · Episodio piloto E5
 
-> Documento operativo · 4 mayo 2026
+> Documento operativo · 4 mayo 2026 · **revisado 11 mayo 2026**.
 > Paso 3/3 del checklist post-docs (§10 del doc #5).
-> Implementa el cronometraje del workflow §3.1 del doc #5 con el episodio piloto E5 (autoexigencia, ventana 12-18 mayo 2026).
+> Implementa el cronometraje del workflow §3.1 del doc #5 con el episodio piloto E5.
 > Objetivo: validar las estimaciones de tiempo del workflow con datos reales y ajustar plantillas si hay desviación.
+>
+> **Cambio del 11 may:** el pilar y la ventana planificados se sustituyen por los reales. E5 se publica **el 11 may**, no en la ventana 12-18 may, y trabaja el **pilar dependencia emocional**, no autoexigencia. Razón: alineación con el lanzamiento del libro y del programa Deja de Buscarte en Otros (mismo eje editorial). Se anota aquí para no perder la trazabilidad. La rotación entre pilares descrita en doc #5 §4.5 se ajustará en próximas iteraciones.
 
 ---
 
@@ -20,14 +22,43 @@
 
 ## Datos del episodio piloto
 
-| Campo | Valor |
-|---|---|
-| Episodio | E5 |
-| Pilar | Autoexigencia |
-| Material editorial base | Carrusel autoexigencia + carta #2 newsletter (según doc #3 §5.2) |
-| Ventana de publicación | 12-18 mayo 2026 |
-| Día publicación objetivo | (a fijar antes de empezar) ___________ |
-| Modo de grabación | T1 humana (Daniel lee guion, no aparece en cámara) |
+| Campo | Valor planificado (4 may) | Valor real (11 may) |
+|---|---|---|
+| Episodio | E5 | E5 ✓ |
+| Pilar | Autoexigencia | **Dependencia emocional** (cambio) |
+| Título | (sin fijar) | **«Tu valor no está en su mirada (el alivio de dejar de confundir amor con necesidad)»** |
+| Material editorial base | Carrusel autoexigencia + carta #2 newsletter | Briefing libro «Tu valor no está en su mirada» + ángulo programa Deja de Buscarte en Otros |
+| Ventana de publicación | 12-18 mayo 2026 | **11 mayo 2026** (un día antes de la ventana planificada) |
+| Día publicación real | — | 11 may, ~19:00 CEST YouTube · ~23:25 CEST Spotify (publicación cruzada con 4h 25min de gap entre ambas plataformas) |
+| Modo de grabación | T1 humana (Daniel lee guion, no aparece en cámara) | T1 humana ✓ — Daniel aparece en cámara con portada estática que muestra título + subtítulo + iconografía propia (foto en estudio con estantería + jersey verde + paleta marca) |
+| URL YouTube | — | https://youtu.be/VkL-E8uTmvI |
+| URL Spotify | — | https://open.spotify.com/episode/3pZq123ZiFVO5Y8pepH0zr |
+| Distribución redes | (planificada en §3.1 días 6-10) | Stories del episodio publicadas mismo día 11 may en IG + WhatsApp + LinkedIn + Facebook |
+
+### Sinopsis publicada (Spotify)
+
+> Hay una escena que probablemente reconoces. Mandas mensaje y la pantalla se queda como la dejaste. Dentro de ti han pasado treinta cosas. Si te reconoces, no eres demasiado intensa. Hay un mecanismo dentro de ti que aprendió hace mucho a regularse mirando al otro.
+>
+> En este episodio describo de dónde viene ese mecanismo (la función especular de Kohut), las cinco fases del ciclo de la dependencia emocional, las cinco máscaras con las que la dependencia se disfraza de virtud, y por qué «quiérete más» no funciona. El alivio no es dejar de necesitar a nadie. Es que necesitar deje de doler como duele.
+
+### Material referenciado en la descripción
+
+- Programa «Deja de Buscarte en Otros»: https://twimproject.com/dejadebuscarteenotros.html
+- Artículo «Por qué necesitas que te validen»: https://twimproject.com/insights/por-que-necesitas-que-te-validen.html
+- Artículo «Señales de dependencia que confundes con amor»: https://twimproject.com/insights/senales-dependencia-emocional-confundes-con-amor.html
+- Próxima carta «Te escribo»: martes 19 mayo, 19:00 CEST · «La voz que te juzga» (alineado con planificación)
+- CTA newsletter: https://twimproject.com/newsletter/
+- Disclaimer educativo no clínico
+
+### Coherencia editorial (decisión 11 may)
+
+El cambio de pilar de E5 (autoexigencia → dependencia emocional) **alinea tres piezas del proyecto en un mismo eje**:
+
+1. **Libro en preparación:** «Tu valor no está en su mirada» (ver `briefing-cowork-libro-tu-valor-no-esta-en-su-mirada.md`). El podcast E5 hereda el título literal del libro.
+2. **Programa de pago:** Deja de Buscarte en Otros, dirigido al mismo público y al mismo mecanismo psíquico.
+3. **Carrusel ya publicado:** «Señales de dependencia que confundes con amor» en IG (25 abril) y artículo en web.
+
+Trade-off: rompe la rotación entre pilares de doc #5 §4.5 («Mayo-agosto: 2 episodios por pilar alternando»). Justificación: la concentración alrededor del lanzamiento del libro/programa pesa más que la rotación. Doc #5 §4.5 contempla precisamente esta excepción: «lanzamiento de un programa nuevo o de un taller justifica concentrar 2-3 episodios consecutivos en su pilar».
 
 ---
 
