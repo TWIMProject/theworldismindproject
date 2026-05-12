@@ -22,7 +22,9 @@ Está todo en `documentos-internos/programa-deja-de-buscarte-en-otros/`:
 | Pieza | Archivo | Estado | Acción tuya |
 |---|---|---|---|
 | Currículo maestro | [`01-curriculo-maestro.md`](01-curriculo-maestro.md) | ✅ Completo | Revisar coherencia con tu visión |
-| **Módulo 1 · El Mapa** (script grabación) | [`modulos/01-el-mapa-script.md`](modulos/01-el-mapa-script.md) | ✅ Completo, ~3.000 palabras | Leer en voz alta. Ajustar matices. Grabar. |
+| **Módulo 1 · El Mapa** (script grabación con marcas `[▶ SLIDE N]`) | [`modulos/01-el-mapa-script.md`](modulos/01-el-mapa-script.md) | ✅ Completo, ~3.000 palabras + sincronización slides | Leer en voz alta junto a slides. Ajustar matices. Grabar. |
+| **Módulo 1 · Slides HTML** (22 diapositivas estética TWIM) | [`slides/modulo-01-el-mapa-slides.html`](slides/modulo-01-el-mapa-slides.html) | ✅ Listo · abrir en Chrome, F = pantalla completa, → siguiente | Revisar visualmente. No requieren maquetación adicional. |
+| **Setup grabación cara + slides** | [`slides/README-setup-grabacion.md`](slides/README-setup-grabacion.md) | ✅ Paso a paso con OBS + Chrome + alojamiento Vimeo | Seguir instrucciones cuando vayas a grabar (~30 min setup una vez) |
 | Módulo 2 · El Ciclo (esqueleto) | [`modulos/02-el-ciclo-script.md`](modulos/02-el-ciclo-script.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo completo en siguiente sesión |
 | Módulo 3 · La Trampa (esqueleto) | [`modulos/03-la-trampa-script.md`](modulos/03-la-trampa-script.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
 | Módulo 4 · El Corte (esqueleto) | [`modulos/04-el-corte-script.md`](modulos/04-el-corte-script.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
@@ -40,11 +42,17 @@ Está todo en `documentos-internos/programa-deja-de-buscarte-en-otros/`:
 
 ## 3 · Lo que SOLO tú puedes hacer (orden estricto)
 
-### Paso 1 · Decidir si avanzas o paras (5 min · HOY martes 14:30-14:35)
+### Paso 1 · Decidir si avanzas o paras (10 min · HOY al volver de consulta)
 
-Revisa el Módulo 1 script ([`modulos/01-el-mapa-script.md`](modulos/01-el-mapa-script.md)) y el Audio 1 ([`audios/01-pausa-90-segundos.md`](audios/01-pausa-90-segundos.md)). Son las piezas estrella: si la voz no es tu voz, todo el resto del programa tiene el problema en miniatura. Si la voz funciona, el resto del programa se construye en sesiones siguientes con el mismo patrón.
+Tres cosas que revisar como conjunto unitario:
 
-**Si la voz funciona → seguir.** Si no → me lo dices, ajustamos calibración antes de seguir produciendo.
+1. **Script Módulo 1** ([`modulos/01-el-mapa-script.md`](modulos/01-el-mapa-script.md)) — ¿es tu voz? ¿lo grabarías leyéndolo / improvisando alrededor?
+2. **Slides Módulo 1** ([`slides/modulo-01-el-mapa-slides.html`](slides/modulo-01-el-mapa-slides.html)) — abre en Chrome, pulsa F (pantalla completa), navega con flecha derecha por los 22 slides. ¿Estética coherente? ¿Conceptos bien anclados visualmente?
+3. **Audio 1** ([`audios/01-pausa-90-segundos.md`](audios/01-pausa-90-segundos.md)) — léelo mentalmente en voz baja imaginando que lo grabas. ¿Te suena natural? ¿Te suena tuyo?
+
+Estos tres elementos son la prueba completa de calibración: voz + visual + audio. Si los tres funcionan, el resto del programa se construye con el mismo patrón.
+
+**Si funcionan → seguir.** Si algo no → me lo dices con qué y dónde, ajustamos calibración antes de seguir produciendo.
 
 ### Paso 2 · Abrir Stripe + crear Payment Link (15 min · esta semana)
 
@@ -55,16 +63,20 @@ Sigue [`stripe-setup-instrucciones.md`](stripe-setup-instrucciones.md). Es liter
 - Email de confirmación post-pago configurado
 - Webhook al MailerLite (opcional, podemos hacerlo después)
 
-### Paso 3 · Grabar Módulo 1 + Audio 1 (1-2 sesiones de grabación · esta semana o la próxima)
+### Paso 3 · Grabar Módulo 1 + Audio 1 (1-2 sesiones · esta semana o la próxima)
 
-Una vez aprobada la voz, grabas las dos piezas estrella. Después podemos producir los esqueletos restantes con la calibración ya validada.
+Una vez aprobada la voz, grabas las dos piezas estrella **con tu cara + slides en pantalla simultáneamente** (decisión tomada hoy: grabación dual cámara + screen share para que el espectador se ponga con papel y boli).
 
-**Setup recomendado para grabación:**
-- Cámara: la que tienes
-- Audio: lavalier o micro USB. Que se entienda. NO uses el del móvil.
-- Fondo: tu estudio o pared lisa. No fondo virtual.
-- Iluminación: ventana o lámpara grande. Sin contraluz.
-- Duración real esperada: 25-30 min por módulo si lees el script (no recitar — leer dejándolo respirar, pausando para mirar a cámara). Si improvisas saltándote partes, puede ser 20-25 min.
+**Sigue el procedimiento exacto de** [`slides/README-setup-grabacion.md`](slides/README-setup-grabacion.md) — está paso a paso con OBS Studio (gratis), Chrome a pantalla completa, Vimeo Pro como alojamiento. ~30 min setup una sola vez, 25-35 min de grabación, 15-30 min de edición.
+
+**Resumen del flujo:**
+- OBS captura cámara (esquina) + pantalla con slides (resto)
+- Chrome en pantalla completa con `modulo-01-el-mapa-slides.html`
+- Lees el script siguiendo marcas `[▶ SLIDE N]` para pulsar flecha derecha y avanzar
+- El audio del Módulo 1 (video) se graba con tu micro USB
+- El Audio 1 (audio guiado «Pausa de 90 segundos») se graba aparte, solo voz, sin cámara
+
+Duración real esperada del Módulo 1: 25-30 min de video. Si improvisas saltándote partes, 20-25 min. La cámara debe estar en plano cerrado (de hombros para arriba), no plano americano.
 
 ### Paso 4 · Subir contenido a Drive/Vimeo (30 min · cuando tengas las grabaciones)
 
@@ -140,4 +152,4 @@ Cuando vuelvas dime: Stripe link cuando lo tengas, Vimeo o YouTube, y precio def
 
 ## 8 · Resumen de una sola línea
 
-**Tienes producido al 100% el Módulo 1, el Audio 1, el workbook, el protocolo 21 días, el email post-pago y las instrucciones Stripe. Esqueletos para los otros 4 módulos y 2 audios. Cuando me digas que la voz del Módulo 1 es la tuya, en próximas sesiones produzco el resto con el mismo estándar.**
+**Tienes producido al 100% el Módulo 1 (script + 22 slides HTML + setup grabación), el Audio 1, el workbook, el protocolo 21 días, el email post-pago y las instrucciones Stripe. Esqueletos para los otros 4 módulos y 2 audios. Cuando me digas que la voz + slides + audio del Módulo 1 son la calibración correcta, en próximas sesiones produzco el resto con el mismo estándar (incluidos slides de cada módulo).**

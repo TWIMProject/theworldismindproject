@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulo 1 · El Mapa | Deja de Buscarte en Otros</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #173D30;
+    --green-mid: #265C4B;
+    --beige: #C2A78B;
+    --cream: #FDFCFA;
+    --ink: #2B2420;
+    --gray: #6B6058;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100vh; width: 100vw; overflow: hidden;
+    background: var(--cream); color: var(--ink);
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 300;
+  }
+  .deck { position: relative; width: 100vw; height: 100vh; }
+  .slide {
+    position: absolute; inset: 0;
+    display: none; flex-direction: column; justify-content: center; align-items: center;
+    padding: 6vh 8vw; text-align: center;
+    opacity: 0; transition: opacity 0.4s ease;
+  }
+  .slide.active { display: flex; opacity: 1; }
+  .slide.dark { background: var(--green); color: var(--cream); }
+  .slide.dark .kicker { color: var(--beige); }
+  .slide.dark .body { color: rgba(253, 252, 250, 0.85); }
+
+  .kicker {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 500;
+    font-size: 1.1rem; letter-spacing: 0.3em; color: var(--beige);
+    text-transform: uppercase; margin-bottom: 2.5rem;
+  }
+  .kicker-line { width: 80px; height: 1px; background: var(--beige); margin: 1rem auto 0; }
+  h1 {
+    font-family: 'Playfair Display', serif; font-weight: 600;
+    font-size: clamp(3rem, 7vw, 5.5rem); color: var(--green);
+    line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 1rem;
+  }
+  .slide.dark h1 { color: var(--cream); }
+  h2 {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(2rem, 4.5vw, 3.5rem); color: var(--green);
+    line-height: 1.15; max-width: 22ch;
+  }
+  .slide.dark h2 { color: var(--cream); }
+  .subtitle {
+    font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400;
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem); color: var(--beige);
+    margin-top: 1.2rem; max-width: 28ch;
+  }
+  .body {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 300;
+    font-size: clamp(1.4rem, 2.4vw, 2rem); color: var(--gray);
+    line-height: 1.5; max-width: 32ch; margin-top: 1.5rem;
+  }
+  .quote {
+    font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic;
+    font-size: clamp(2.2rem, 5vw, 4rem); color: var(--green);
+    line-height: 1.25; max-width: 24ch; position: relative;
+  }
+  .quote::before {
+    content: "\201C"; font-size: 1.5em; color: var(--beige);
+    opacity: 0.4; position: absolute; top: -0.6em; left: -0.3em;
+  }
+  .slide.dark .quote { color: var(--cream); }
+  .big-number {
+    font-family: 'Playfair Display', serif; font-weight: 400; font-style: italic;
+    font-size: clamp(8rem, 18vw, 14rem); color: var(--beige);
+    opacity: 0.7; line-height: 1; margin-bottom: 1rem;
+  }
+  ul.steps {
+    list-style: none; max-width: 36ch; text-align: left; margin-top: 2rem;
+  }
+  ul.steps li {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 300;
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem); color: var(--gray);
+    padding: 0.7rem 0 0.7rem 2.5rem; position: relative; line-height: 1.4;
+  }
+  ul.steps li::before {
+    content: counter(step, decimal-leading-zero); counter-increment: step;
+    position: absolute; left: 0; top: 0.6rem;
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.4em; color: var(--beige); font-weight: 400;
+  }
+  ul.steps { counter-reset: step; }
+  .compare {
+    display: grid; grid-template-columns: 1fr 1px 1fr; gap: 0 3vw;
+    max-width: 1000px; width: 100%; margin-top: 2.5rem; text-align: left;
+  }
+  .compare .col { padding: 0 1.5rem; }
+  .compare .divider { background: var(--beige); opacity: 0.4; }
+  .compare h3 {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 500;
+    font-size: 1rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--beige); margin-bottom: 1.2rem;
+  }
+  .compare p {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(1.2rem, 2vw, 1.6rem); color: var(--green);
+    line-height: 1.4; margin-bottom: 0.6rem;
+  }
+  .footer {
+    position: absolute; bottom: 3vh; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 4vw;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--beige); opacity: 0.65;
+  }
+  .footer .brand { font-weight: 500; }
+  .slide.dark .footer { color: rgba(194, 167, 139, 0.7); }
+  .counter { font-variant-numeric: tabular-nums; }
+  .ex-card {
+    background: rgba(38, 92, 75, 0.06); border-left: 3px solid var(--green-mid);
+    padding: 2rem 2.5rem; max-width: 36rem; text-align: left;
+    margin-top: 2rem;
+  }
+  .ex-card h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.5rem;
+    color: var(--green); margin-bottom: 1rem; font-weight: 600;
+  }
+  .ex-card p {
+    font-size: 1.15rem; color: var(--ink); line-height: 1.55; margin-bottom: 0.6rem;
+  }
+  .ex-card .micro {
+    font-size: 0.95rem; color: var(--gray); margin-top: 1rem; font-style: italic;
+  }
+  .nav-hint {
+    position: absolute; bottom: 3vh; right: 4vw;
+    font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--beige); opacity: 0.4; font-weight: 400;
+  }
+  @media (max-width: 768px) {
+    .compare { grid-template-columns: 1fr; gap: 2rem; }
+    .compare .divider { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1 · PORTADA -->
+  <section class="slide active" data-slide="1">
+    <div class="kicker">TWIM Project · Programa</div>
+    <h1>Deja de Buscarte<br>en Otros</h1>
+    <p class="subtitle">Módulo 1 · El Mapa</p>
+    <p class="body" style="margin-top: 3rem; font-size: 1.1rem; color: var(--gray);">Daniel Orozco Abia · Psicólogo General Sanitario CV11515</p>
+    <div class="footer">
+      <span class="brand">TWIM Project</span>
+      <span class="counter">01 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 2 · DISCLAIMER -->
+  <section class="slide dark" data-slide="2">
+    <div class="kicker">Antes de empezar</div>
+    <h2 style="font-family: 'Playfair Display', serif; font-style: italic; max-width: 26ch;">Este programa es psicoeducativo.<br>No es terapia.</h2>
+    <p class="body" style="max-width: 38ch; margin-top: 2rem;">Si lo que sientes te paraliza, te impide funcionar o aparece junto a pensamientos peores, busca a alguien que pueda mirarlo contigo de cerca.</p>
+    <div class="footer">
+      <span class="brand">Disclaimer</span>
+      <span class="counter">02 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 3 · QUÉ VAMOS A VER -->
+  <section class="slide" data-slide="3">
+    <div class="kicker">Qué vamos a ver hoy</div>
+    <ul class="steps">
+      <li>De dónde viene esto que llamas «necesitar aprobación».</li>
+      <li>El vínculo temprano y el superyó.</li>
+      <li>Querer estar con alguien no es lo mismo que necesitar a alguien para existir.</li>
+    </ul>
+    <div class="footer">
+      <span class="brand">Módulo 1</span>
+      <span class="counter">03 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 4 · BLOQUE 1 (separador) -->
+  <section class="slide" data-slide="4">
+    <div class="big-number">01</div>
+    <h2 style="font-family: 'Playfair Display', serif; font-weight: 600;">El vínculo temprano</h2>
+    <div class="footer">
+      <span class="brand">Bloque 1</span>
+      <span class="counter">04 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 5 · CITA · UN NIÑO NO SABE -->
+  <section class="slide" data-slide="5">
+    <p class="quote">Un niño no sabe<br>cuánto vale.<br>Lo aprende.</p>
+    <p class="body" style="margin-top: 2rem; max-width: 30ch; font-style: italic; color: var(--beige);">Lo aprende por cómo le miran.</p>
+    <div class="footer">
+      <span class="brand">Bloque 1 · El vínculo temprano</span>
+      <span class="counter">05 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 6 · LA PREGUNTA -->
+  <section class="slide" data-slide="6">
+    <div class="kicker">La pregunta que llevas dentro</div>
+    <p class="quote" style="font-style: normal;">¿Estoy<br>haciéndolo bien?</p>
+    <p class="body" style="margin-top: 2rem; max-width: 36ch;">No es «¿estoy?». Es <em>«¿estoy haciéndolo bien?».</em><br>La presencia del otro está condicionada a un hacer.</p>
+    <div class="footer">
+      <span class="brand">Bloque 1 · El vínculo temprano</span>
+      <span class="counter">06 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 7 · FUNCIÓN DE ESPEJO (KOHUT) -->
+  <section class="slide" data-slide="7">
+    <div class="kicker">Función de espejo · Kohut</div>
+    <h2 style="max-width: 28ch; margin-bottom: 2rem;">El niño no se ve a sí mismo.<br>Se ve en la cara de quien le mira.</h2>
+    <div class="ex-card">
+      <p>Si la mirada dice <em>«aquí estás, eres bienvenido, lo que sientes tiene sentido»</em>, el niño aprende que existe.</p>
+      <p>Si la mirada está ausente, distraída o evaluadora, el niño aprende: <em>«para que me miren bien, tengo que estar de cierta manera».</em></p>
+    </div>
+    <div class="footer">
+      <span class="brand">Bloque 1 · El vínculo temprano</span>
+      <span class="counter">07 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 8 · EL RADAR -->
+  <section class="slide" data-slide="8">
+    <div class="kicker">Lo que se te instaló</div>
+    <h2 style="margin-bottom: 2rem;">Un radar permanente</h2>
+    <ul class="steps" style="max-width: 30ch;">
+      <li>¿Estoy bien?</li>
+      <li>¿Me ven?</li>
+      <li>¿Les estoy gustando?</li>
+      <li>¿Sigo siendo importante para esta persona?</li>
+    </ul>
+    <p class="body" style="margin-top: 2rem; max-width: 38ch; font-style: italic;">Encendido por defecto. Lo trajiste de la infancia.</p>
+    <div class="footer">
+      <span class="brand">Bloque 1 · El vínculo temprano</span>
+      <span class="counter">08 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 9 · BLOQUE 2 (separador) -->
+  <section class="slide" data-slide="9">
+    <div class="big-number">02</div>
+    <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; max-width: 24ch;">El superyó y la búsqueda del espejo</h2>
+    <div class="footer">
+      <span class="brand">Bloque 2</span>
+      <span class="counter">09 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 10 · EL SUPERYÓ -->
+  <section class="slide" data-slide="10">
+    <div class="kicker">Concepto clave</div>
+    <h1 style="font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 0.6rem;">El superyó</h1>
+    <p class="subtitle" style="margin-bottom: 2.5rem;">o como yo lo llamo en consulta:<br>el juez interno</p>
+    <div class="compare">
+      <div class="col">
+        <h3>Hace esto</h3>
+        <p>Te dice cómo deberías ser.</p>
+        <p>Cómo deberías estar.</p>
+        <p>Qué deberías sentir.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="col">
+        <h3>Y esto</h3>
+        <p>Te castiga<br>cuando no eres así.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="brand">Bloque 2 · El superyó</span>
+      <span class="counter">10 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 11 · EL CICLO DEL JUEZ -->
+  <section class="slide" data-slide="11">
+    <div class="kicker">Cómo enlaza con la dependencia</div>
+    <h2 style="margin-bottom: 2rem;">El ciclo</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 32rem; align-items: stretch;">
+      <div style="background: rgba(38, 92, 75, 0.06); padding: 1rem 1.5rem; border-left: 3px solid var(--green-mid); text-align: left;">
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green);">El juez aprieta por dentro.</p>
+      </div>
+      <div style="text-align: center; color: var(--beige); font-size: 1.5rem;">↓</div>
+      <div style="background: rgba(38, 92, 75, 0.06); padding: 1rem 1.5rem; border-left: 3px solid var(--green-mid); text-align: left;">
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green);">Busco fuera que me confirmen que estoy bien.</p>
+      </div>
+      <div style="text-align: center; color: var(--beige); font-size: 1.5rem;">↓</div>
+      <div style="background: rgba(38, 92, 75, 0.06); padding: 1rem 1.5rem; border-left: 3px solid var(--green-mid); text-align: left;">
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green);">Me calman un rato.</p>
+      </div>
+      <div style="text-align: center; color: var(--beige); font-size: 1.5rem;">↓</div>
+      <div style="background: rgba(38, 92, 75, 0.06); padding: 1rem 1.5rem; border-left: 3px solid var(--green-mid); text-align: left;">
+        <p style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green);">Vuelve. Otra vez. Y otra.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="brand">Bloque 2 · El superyó</span>
+      <span class="counter">11 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 12 · CITA -->
+  <section class="slide dark" data-slide="12">
+    <p class="quote">No es vanidad.<br>No es inseguridad superficial.</p>
+    <p class="subtitle" style="margin-top: 2rem; font-style: normal; color: var(--cream); font-family: 'Barlow Condensed', sans-serif; font-weight: 400; max-width: 38ch;">Es un sistema interno que aprendiste para regular tu malestar. Y como cualquier sistema, tiene una lógica que se puede entender.</p>
+    <div class="footer">
+      <span class="brand">Bloque 2 · El superyó</span>
+      <span class="counter">12 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 13 · BLOQUE 3 (separador) -->
+  <section class="slide" data-slide="13">
+    <div class="big-number">03</div>
+    <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; max-width: 22ch;">No es tu culpa.<br>Es tu responsabilidad.</h2>
+    <div class="footer">
+      <span class="brand">Bloque 3</span>
+      <span class="counter">13 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 14 · CULPA vs RESPONSABILIDAD -->
+  <section class="slide" data-slide="14">
+    <div class="kicker">Distinción importante</div>
+    <h2 style="margin-bottom: 2.5rem;">Culpa <span style="color: var(--beige);">vs</span> Responsabilidad</h2>
+    <div class="compare">
+      <div class="col">
+        <h3>Culpa</h3>
+        <p>Mira hacia atrás.</p>
+        <p style="font-style: italic; color: var(--gray); font-family: 'Barlow Condensed', sans-serif;">«¿Por qué soy así?»</p>
+        <p style="margin-top: 1.2rem; font-size: 1.1rem; color: var(--gray); font-family: 'Barlow Condensed', sans-serif;">Te deja paralizada.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="col">
+        <h3>Responsabilidad</h3>
+        <p>Mira hacia delante.</p>
+        <p style="font-style: italic; color: var(--gray); font-family: 'Barlow Condensed', sans-serif;">«¿Qué hago ahora que ya lo sé?»</p>
+        <p style="margin-top: 1.2rem; font-size: 1.1rem; color: var(--gray); font-family: 'Barlow Condensed', sans-serif;">Te devuelve margen.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="brand">Bloque 3 · Culpa vs Responsabilidad</span>
+      <span class="counter">14 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 15 · MARGEN -->
+  <section class="slide" data-slide="15">
+    <div class="kicker">Palabra clave del programa</div>
+    <h1 style="font-size: clamp(4rem, 10vw, 8rem); margin-bottom: 1.5rem;">Margen</h1>
+    <p class="quote" style="font-size: clamp(1.6rem, 3vw, 2.4rem); font-style: normal; max-width: 32ch;">La distancia entre lo que te pasa por dentro y lo que tú haces.</p>
+    <p class="body" style="margin-top: 2rem; max-width: 38ch;">El programa entero trabaja para darte más margen. No para que la duda no aparezca. Para que cuando aparezca, tengas dos segundos antes de actuar.</p>
+    <div class="footer">
+      <span class="brand">Bloque 3 · Margen</span>
+      <span class="counter">15 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 16 · BLOQUE 4 (separador) -->
+  <section class="slide" data-slide="16">
+    <div class="big-number">04</div>
+    <h2 style="font-family: 'Playfair Display', serif; font-weight: 600; max-width: 24ch;">Querer estar<br><span style="color: var(--beige); font-style: italic;">vs</span><br>Necesitar para existir</h2>
+    <div class="footer">
+      <span class="brand">Bloque 4</span>
+      <span class="counter">16 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 17 · TABLA QUERER / NECESITAR -->
+  <section class="slide" data-slide="17">
+    <div class="kicker">Dos cosas que no son lo mismo</div>
+    <div class="compare" style="margin-top: 2rem;">
+      <div class="col">
+        <h3>Querer estar con alguien</h3>
+        <p>Es una elección.</p>
+        <p>Estar con esa persona <em>suma</em>.</p>
+        <p>Si se va, te duele.</p>
+        <p style="font-weight: 600;">Pero sigues siendo tú.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="col">
+        <h3>Necesitar para existir</h3>
+        <p>Es una urgencia.</p>
+        <p>Sin esa persona, <em>te vacías</em>.</p>
+        <p>Si se va, no es que te entristezcas.</p>
+        <p style="font-weight: 600;">Es que se va una parte de ti.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="brand">Bloque 4 · Querer vs Necesitar</span>
+      <span class="counter">17 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 18 · COMPLETAR / COMPARTIR -->
+  <section class="slide" data-slide="18">
+    <div class="kicker">Otra distinción</div>
+    <div class="compare" style="margin-top: 2rem;">
+      <div class="col">
+        <h3>Completar</h3>
+        <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem;">«Sin ti no soy nada.<br>Contigo soy alguien.»</p>
+        <p style="margin-top: 1.5rem; color: var(--gray); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem;">Vive la dependencia emocional aquí.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="col">
+        <h3>Compartir</h3>
+        <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.5rem;">«Yo soy alguien.<br>Tú eres alguien.<br>Lo que hacemos juntos es algo más.»</p>
+        <p style="margin-top: 1.5rem; color: var(--gray); font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem;">Vive la relación sana aquí.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="brand">Bloque 4 · Completar vs Compartir</span>
+      <span class="counter">18 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 19 · CITA CIERRE -->
+  <section class="slide dark" data-slide="19">
+    <p class="quote" style="max-width: 22ch;">No se trata de no necesitar a nadie.</p>
+    <p class="subtitle" style="margin-top: 2.5rem; font-family: 'Playfair Display', serif; font-style: italic; color: var(--cream); font-size: clamp(1.6rem, 3vw, 2.2rem); max-width: 28ch;">Se trata de que necesitar no te destruya.</p>
+    <div class="footer">
+      <span class="brand">Cierre del módulo</span>
+      <span class="counter">19 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 20 · EJERCICIO · MAPA DE MI BÚSQUEDA -->
+  <section class="slide" data-slide="20">
+    <div class="kicker">Ejercicio del Módulo 1</div>
+    <h1 style="font-size: clamp(2.5rem, 5.5vw, 4rem); margin-bottom: 0.6rem;">Mapa de mi búsqueda</h1>
+    <p class="subtitle" style="margin-bottom: 2rem;">Ahora, papel y boli.</p>
+    <div class="ex-card" style="max-width: 42rem;">
+      <h3>Lo que vas a hacer</h3>
+      <p>Identifica <strong>tres situaciones frecuentes</strong> en las que buscas validación.</p>
+      <p>Para cada una, escribe brevemente:</p>
+      <ul style="list-style: none; margin-top: 0.6rem; padding-left: 0;">
+        <li style="padding: 0.3rem 0; font-family: 'Playfair Display', serif; font-style: italic; color: var(--green-mid);">— Qué hace tu cabeza</li>
+        <li style="padding: 0.3rem 0; font-family: 'Playfair Display', serif; font-style: italic; color: var(--green-mid);">— Qué hace tu cuerpo</li>
+        <li style="padding: 0.3rem 0; font-family: 'Playfair Display', serif; font-style: italic; color: var(--green-mid);">— Qué hiciste</li>
+      </ul>
+      <p class="micro">Plantilla en la página 2 del cuaderno de trabajo.<br>Sin prisa. Sin juzgarte. Describiendo, no evaluando.</p>
+    </div>
+    <div class="footer">
+      <span class="brand">Ejercicio · Cuaderno p. 2</span>
+      <span class="counter">20 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 21 · PRÓXIMO MÓDULO -->
+  <section class="slide" data-slide="21">
+    <div class="kicker">En el próximo módulo</div>
+    <h1 style="font-size: clamp(3rem, 7vw, 5rem); margin-bottom: 0.6rem;">Módulo 2 · El Ciclo</h1>
+    <p class="subtitle">Cómo entra, cómo se mantiene,<br>por qué se repite.</p>
+    <p class="body" style="margin-top: 2rem; max-width: 38ch;">Vamos a ver el mecanismo desde fuera, como la maquinaria de un reloj abierto. Ahí ya empezamos a tener herramientas.</p>
+    <div class="footer">
+      <span class="brand">Próximo módulo</span>
+      <span class="counter">21 / 22</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 22 · CIERRE -->
+  <section class="slide dark" data-slide="22">
+    <div class="kicker">Hasta entonces</div>
+    <h1 style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--cream); font-weight: 400; font-size: clamp(3rem, 6vw, 4.5rem);">Haz el ejercicio.</h1>
+    <p class="subtitle" style="margin-top: 1.5rem; max-width: 36ch;">No te lances al Módulo 2 hasta que tengas el Mapa de tu búsqueda escrito.</p>
+    <p class="body" style="margin-top: 3rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; color: rgba(253, 252, 250, 0.6); letter-spacing: 0.15em; text-transform: uppercase;">TWIM Project · Deja de Buscarte en Otros</p>
+    <div class="footer">
+      <span class="brand">Fin del Módulo 1</span>
+      <span class="counter">22 / 22</span>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  function show(i) {
+    if (i < 0 || i >= slides.length) return;
+    slides[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(current + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+    else if (e.key === 'Home') show(0);
+    else if (e.key === 'End') show(slides.length - 1);
+    else if (e.key === 'f' || e.key === 'F') {
+      if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+      else document.exitFullscreen();
+    }
+  });
+  document.addEventListener('click', e => {
+    if (e.target.closest('.footer, .nav-hint')) return;
+    show(current + 1);
+  });
+</script>
+</body>
+</html>
