@@ -51,7 +51,12 @@
 
 ### Semana 2 · 7 – 13 mayo · AMPLIFICACIÓN
 
-- Publicar **Carrusel #2** "saberlo no te lo quita" (ya producido en `/contenido-rrss/te-escribo-saberlo-no-te-lo-quita/`). Día sugerido: martes 12 mayo 19:00 CET. Mismo ritual que Carrusel #1.
+- ✅ **Carrusel #2 «Saberlo no te lo quita»** publicado **martes 12 mayo 2026** (mismo ritual que Carrusel #1). Distribución multicanal completa:
+  - X (publicado manual ~12:30 CEST): `https://x.com/DaniOrozcoPsico/status/2054126914877407275`
+  - Threads (publicado manual ~12:30 CEST, formato condensado 2 posts)
+  - Instagram + Facebook (programados 19:00 CEST vía Meta Business Suite, ambos como carrusel 7 slides)
+  - LinkedIn (programado 19:00 CEST, formato PDF con título «Saberlo no te lo quita. Aunque a veces lo creas.»)
+  - Story IG Recado 01 «Antes de ponerle nombre» (subida manual ~14:30 CEST, con sticker link a `/newsletter/`)
 - ✅ **Carta #2 "La voz que te juzga"** programada vía MCP MailerLite (ID `186162435789423797`) para martes **19 mayo 2026 19:00 CEST** (status `ready`). Audiencia: Newsletter Home + Reto + Lead Magnet Dependencia + Lista General. HTML editorial conservado en `contenido-rrss/te-escribo-newsletters/carta-02-la-voz-que-te-juzga.html`.
 
 ### Semana 3 · 14 – 20 mayo · UPSELL LEAD MAGNETS
@@ -173,3 +178,46 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 | Open rate Carta #1 | MailerLite | ≥ 35 % |
 | Click rate Carta #1 → /newsletter | MailerLite | ≥ 5 % |
 | Unsubscribe rate Carta #1 | MailerLite | < 1 % |
+
+---
+
+## 6 · Log de acciones manuales fuera del calendario
+
+> Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
+
+### 12 mayo 2026 (martes) — Tanda multicanal Carrusel #2 + Recado 01 story
+
+| Hora | Canal | Pieza | URL | Estado |
+|---|---|---|---|---|
+| ~12:30 CEST | X / Twitter | Hilo «Saberlo no te lo quita» (7 tweets + PD, slide-01 adjunto al Tweet 1) | `https://x.com/DaniOrozcoPsico/status/2054126914877407275` | ✅ Publicado |
+| ~12:30 CEST | Threads | Hilo condensado 2 posts (cierre del carrusel + PD newsletter) | URL pendiente de capturar | ✅ Publicado |
+| ~14:30 CEST | Instagram Story | Story Recado 01 «Antes de ponerle nombre» con sticker link a `/newsletter/` | Stories sin URL pública (caducan 24h) | ✅ Publicado |
+| 19:00 CEST | Instagram | Carrusel 7 slides + caption editorial | Pendiente publicación automática | 🟡 Programado vía Meta Business Suite |
+| 19:00 CEST | Facebook | Carrusel 7 slides + caption editorial | Pendiente publicación automática | 🟡 Programado vía Meta Business Suite |
+| 19:00 CEST | LinkedIn | PDF carrusel «Saberlo no te lo quita. Aunque a veces lo creas.» | Pendiente publicación automática | 🟡 Programado nativo LinkedIn |
+
+**Notas de la tanda:**
+
+- Carrusel #2 mantiene horario 19:00 CEST por **comparabilidad con Carrusel #1** (mismo control horario para poder leer diferencias de engagement). Decisión documentada: probar 20:00 CEST en Carrusel #3 (pico de actividad declarado por Meta para esta audiencia).
+- Hilo X publicado a las 12:30 fuera del ritual de 19:00 — decisión operativa de Daniel para tener engagement directo en la primera hora.
+- Threads se incorpora como canal nuevo (no estaba en el calendario documentado de `x-twitter-estrategia-canal.md`).
+- Recado 01 story sale con corrección temporal de última hora (atribución «envié hoy» → «envié ayer» + footer; marca de agua MindWorld añadida). Commit `87a1ffa`.
+
+### 11 mayo 2026 (lunes) — Recado 01 enviado vía MailerLite
+
+Ver `REACCION-9-MAYO.md` y commit `6646711` (log del envío urgente del Recado 01 a las 22:04 CEST).
+
+---
+
+## 7 · Baseline de audiencia IG (capturado 12 may 2026)
+
+> Datos extraídos del panel Audiencia de Instagram Insights de @daniorozcopsico. Primera medición documentada en el repo. Detalle completo en `documentos-internos/metricas-audiencia-ig-baseline-12-may-2026.md`.
+
+- **Sexo:** Mujeres 60,1 % · Hombres 39,9 % (audiencia más mixta de lo previsto: el promote del 9 may sesgó al 89% mujeres por el creativo)
+- **Edad dominante:** 25-34 (38 %) · 35-44 (24,7 %) · 45-54 (17,7 %) · 55-64 (8,9 %). Cohorte 25-44 concentra 62,7 %.
+- **Top ciudades:** Madrid 5,4 % · Barcelona 2,9 % · Valencia 1,6 % · Sevilla 1,4 %. Cuatro picos suman solo 11,3 % → alcance disperso fuera de grandes capitales.
+- **Hora pico declarada por Meta esta semana:** 20:00 CEST. Hipótesis para test deliberado en Carrusel #3.
+
+**Implicaciones para el plan:**
+- Audiencia más joven y mixta de lo asumido → no caricaturizar copy hacia «mujer 45 con dependencia». Mantener voz editorial transversal.
+- El pico 20:00 está a 1h de la ventana 19:00 actual: la diferencia es marginal pero medible. Carrusel #3 servirá para validar empíricamente.
