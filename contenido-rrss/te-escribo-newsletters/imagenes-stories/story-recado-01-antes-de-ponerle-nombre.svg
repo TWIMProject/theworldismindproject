@@ -32,7 +32,7 @@
   <text x="540" y="1370" text-anchor="middle"
         font-family="Barlow Condensed" font-weight="300"
         font-size="34" fill="#6B6058" letter-spacing="1">
-    — del recado que envié hoy
+    — del recado que envié ayer
   </text>
 
   <!-- Bottom block -->
@@ -41,7 +41,7 @@
   <text x="540" y="1660" text-anchor="middle"
         font-family="Barlow Condensed" font-weight="500"
         font-size="44" fill="#173D30" letter-spacing="0.5">
-    Lo escribí esta tarde para los suscriptores.
+    Lo escribí ayer para los suscriptores.
   </text>
 
   <text x="540" y="1740" text-anchor="middle"
@@ -49,4 +49,8 @@
         font-size="34" fill="#6B6058" letter-spacing="1">
     Si quieres, te sumas ↑
   </text>
+
+  <!-- Logo watermark · esquina inferior derecha · discreto -->
+  <image href="../../../assets/email/logo-twim-transparent.png"
+         x="900" y="1770" width="130" height="76" opacity="0.55"/>
 </svg>
