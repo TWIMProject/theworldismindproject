@@ -21,20 +21,20 @@ Está todo en `documentos-internos/programa-deja-de-buscarte-en-otros/`:
 
 | Pieza | Archivo | Estado | Acción tuya |
 |---|---|---|---|
-| Currículo maestro | `01-curriculo-maestro.md` | ✅ Completo | Revisar coherencia con tu visión |
-| **Módulo 1 · El Mapa** (script grabación) | `modulos/01-el-mapa-script.md` | ✅ Completo, ~3.000 palabras | Leer en voz alta. Ajustar matices. Grabar. |
-| Módulo 2 · El Ciclo (esqueleto) | `modulos/02-el-ciclo-script.md` | 🟡 Estructura + puntos clave | Pedirme desarrollo completo en siguiente sesión |
-| Módulo 3 · La Trampa (esqueleto) | `modulos/03-la-trampa-script.md` | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
-| Módulo 4 · El Corte (esqueleto) | `modulos/04-el-corte-script.md` | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
-| Módulo 5 · La Base (esqueleto) | `modulos/05-la-base-script.md` | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
-| **Audio 1 · Pausa de 90 segundos** | `audios/01-pausa-90-segundos.md` | ✅ Completo, ~8 min de lectura | Leer en voz alta. Grabar. |
-| Audio 2 · El espejo propio | `audios/02-el-espejo-propio.md` | 🟡 Estructura + puntos clave | Pedirme desarrollo |
-| Audio 3 · Cuando el juez aprieta | `audios/03-cuando-el-juez-aprieta.md` | 🟡 Estructura + puntos clave | Pedirme desarrollo |
-| **Workbook completo** | `workbook/workbook-completo.md` | ✅ Estructura + ejercicios todos los módulos | Maquetar en Canva/InDesign |
-| **Protocolo 21 días** | `protocolo-21-dias.md` | ✅ Completo, día a día | Revisar. Va dentro del workbook. |
-| **Email post-pago automático** | `email-confirmacion-compra.md` | ✅ Listo | Pegar en Stripe (campo confirmation email) |
-| **Instrucciones Stripe** | `stripe-setup-instrucciones.md` | ✅ Listo | Seguir paso a paso (15 min) |
-| Landing actualizada | `/dejadebuscarteenotros.html` | ✅ CTA Stripe placeholder | Reemplazar placeholder con URL Stripe real |
+| Currículo maestro | [`01-curriculo-maestro.md`](01-curriculo-maestro.md) | ✅ Completo | Revisar coherencia con tu visión |
+| **Módulo 1 · El Mapa** (script grabación) | [`modulos/01-el-mapa-script.md`](modulos/01-el-mapa-script.md) | ✅ Completo, ~3.000 palabras | Leer en voz alta. Ajustar matices. Grabar. |
+| Módulo 2 · El Ciclo (esqueleto) | [`modulos/02-el-ciclo-script.md`](modulos/02-el-ciclo-script.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo completo en siguiente sesión |
+| Módulo 3 · La Trampa (esqueleto) | [`modulos/03-la-trampa-script.md`](modulos/03-la-trampa-script.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
+| Módulo 4 · El Corte (esqueleto) | [`modulos/04-el-corte-script.md`](modulos/04-el-corte-script.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
+| Módulo 5 · La Base (esqueleto) | [`modulos/05-la-base-script.md`](modulos/05-la-base-script.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo completo |
+| **Audio 1 · Pausa de 90 segundos** | [`audios/01-pausa-90-segundos.md`](audios/01-pausa-90-segundos.md) | ✅ Completo, ~8 min de lectura | Leer en voz alta. Grabar. |
+| Audio 2 · El espejo propio | [`audios/02-el-espejo-propio.md`](audios/02-el-espejo-propio.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo |
+| Audio 3 · Cuando el juez aprieta | [`audios/03-cuando-el-juez-aprieta.md`](audios/03-cuando-el-juez-aprieta.md) | 🟡 Estructura + puntos clave | Pedirme desarrollo |
+| **Workbook completo** | [`workbook/workbook-completo.md`](workbook/workbook-completo.md) | ✅ Estructura + ejercicios todos los módulos | Maquetar en Canva/InDesign |
+| **Protocolo 21 días** | [`protocolo-21-dias.md`](protocolo-21-dias.md) | ✅ Completo, día a día | Revisar. Va dentro del workbook. |
+| **Email post-pago automático** | [`email-confirmacion-compra.md`](email-confirmacion-compra.md) | ✅ Listo | Pegar en Stripe (campo confirmation email) |
+| **Instrucciones Stripe** | [`stripe-setup-instrucciones.md`](stripe-setup-instrucciones.md) | ✅ Listo | Seguir paso a paso (15 min) |
+| Landing actualizada | [`/dejadebuscarteenotros.html`](../../dejadebuscarteenotros.html) | ✅ CTA Stripe placeholder | Reemplazar placeholder con URL Stripe real |
 
 ---
 
@@ -42,13 +42,13 @@ Está todo en `documentos-internos/programa-deja-de-buscarte-en-otros/`:
 
 ### Paso 1 · Decidir si avanzas o paras (5 min · HOY martes 14:30-14:35)
 
-Revisa el Módulo 1 script (`modulos/01-el-mapa-script.md`) y el Audio 1 (`audios/01-pausa-90-segundos.md`). Son las piezas estrella: si la voz no es tu voz, todo el resto del programa tiene el problema en miniatura. Si la voz funciona, el resto del programa se construye en sesiones siguientes con el mismo patrón.
+Revisa el Módulo 1 script ([`modulos/01-el-mapa-script.md`](modulos/01-el-mapa-script.md)) y el Audio 1 ([`audios/01-pausa-90-segundos.md`](audios/01-pausa-90-segundos.md)). Son las piezas estrella: si la voz no es tu voz, todo el resto del programa tiene el problema en miniatura. Si la voz funciona, el resto del programa se construye en sesiones siguientes con el mismo patrón.
 
 **Si la voz funciona → seguir.** Si no → me lo dices, ajustamos calibración antes de seguir produciendo.
 
 ### Paso 2 · Abrir Stripe + crear Payment Link (15 min · esta semana)
 
-Sigue `stripe-setup-instrucciones.md`. Es literal: paso por paso, captura por captura. Al final tendrás:
+Sigue [`stripe-setup-instrucciones.md`](stripe-setup-instrucciones.md). Es literal: paso por paso, captura por captura. Al final tendrás:
 - Cuenta Stripe activa
 - Producto «Deja de Buscarte en Otros» creado a 70 €
 - Payment Link generado (URL pegable en el HTML)
