@@ -25,9 +25,9 @@
 | 1 · Sprint editorial + lista de espera | 13 may → 14 jun | 32 días | Mantener inercia editorial del Cap III + Carta #2 + Carrusel #3 + abrir lista de espera (sin pago) del taller |
 | 2 · Grabación Deja de Buscarte en Otros | 15 jun → 28 jul | 44 días | Producción asíncrona del programa digital del mismo eje temático |
 | 3 · Vacaciones Daniel | 29 jul → 31 ago | 34 días | Silencio comercial absoluto. Daniel descansa. Solo evergreen automático en redes si lo hay |
-| 4 · Pre-venta dura + Meta Ads | 1 sep → 22 sep | 22 días | Apertura comercial del taller con prioridad lista de espera + Ads 13 €/día |
+| 4 · Pre-venta dura + Meta Ads | 1 sep → 22 sep | 22 días | Apertura comercial del taller con prioridad lista de espera + Ads 15 €/día (330 € totales, escalable a 660 €) |
 | 5 · Sesión individual previa | 23 sep → 29 sep | 7 días | Cribado y commitment final de las 8 inscritas con Daniel |
-| · S1 grupo | **30 sep 2026** | — | **Sesión 1 grupal · 20:00-21:30 CEST** |
+| · S1 grupo | **30 sep 2026** | — | **Sesión 1 grupal · 20:00-21:30 hora de Madrid (CEST)** |
 
 ---
 
@@ -122,11 +122,11 @@ Daniel descansa de verdad. Recupera energía para la 1ª edición del taller + l
 
 Llenar las 8 plazas del taller (mínimo viable 5).
 
-### Día 0 · martes 1 sep 2026
+### Día 1 · martes 1 sep 2026
 
 - Email a **lista de espera** con acceso prioritario 24 h antes del público general. Asunto: «Volver a Mí · primera edición · tu plaza está pre-asignada». Cuerpo: explicación + link a pago de reserva 100 €.
 - 24 h después (miércoles 2 sep): pre-venta abierta a Newsletter «Te escribo» general.
-- Activación de Meta Ads (10-13 €/día).
+- Activación de Meta Ads (15 €/día base, escalable a 30 €/día desde la semana 2 si CPL < 50 €).
 - Lanzamiento del programa **Deja de Buscarte en Otros** en paralelo (es producto distinto, no compite — uno es 79 €, otro 697 €).
 
 ### Embudo
@@ -164,8 +164,8 @@ Newsletter ──┘                                              ▼
 
 ### KPIs Fase 4
 
-- Día 7 (8 sep): **≥ 3 pre-reservas pagadas**.
-- Día 14 (15 sep): **≥ 6 pre-reservas**.
+- Día 8 (8 sep): **≥ 3 pre-reservas pagadas**.
+- Día 15 (15 sep): **≥ 6 pre-reservas**.
 - Día 22 (22 sep): **≥ 8 pre-reservas** o decisión plan B.
 
 ### Decisión en función de pre-reservas al 22 sep 23:59 CEST
@@ -183,25 +183,44 @@ Newsletter ──┘                                              ▼
 
 ### Objetivo
 
-Cribado clínico + commitment final de las 8 inscritas.
+Cribado clínico + commitment final de las inscritas confirmadas (5-10 según P14 + caso de saturación).
 
-### Operativa
+### Plan A · S1 confirmada al 30 sep (≥5 pre-reservas al 22 sep)
 
-- Cada inscrita reserva slot de **30 min en Calendly** entre el 23 y el 29 sep.
+- Las **sesiones 1on1 se reparten entre el 23 y el 27 sep** (5 días útiles antes del 28 sep), no hasta el 29 sep. Razón: el pago restante de 597 € debe llegar antes del 30 sep S1, y cada inscrita necesita 48 h hábiles tras su 1on1 para pagar.
+- **Capacidad máxima de 1on1 por Daniel**: ~3 sesiones de 30 min por día sin saturar (90 min de carga clínica adicional en jornadas que ya incluyen consulta). Con 5 días × 3 slots = **15 1on1 posibles**, más que suficiente para 8-10 plazas.
+- Cada inscrita reserva slot de **30 min en Calendly** entre **martes 22 sep (18:00-21:00)** y **domingo 27 sep (10:00-14:00)**. Daniel deja los fines de semana parcialmente abiertos para no saturar la semana laboral.
+- Si una inscrita necesita slot el 28 o 29 sep por agenda propia, **se le acepta solo si confirma pago inmediato al cierre de la 1on1** (no las 48 h habituales). Si no puede confirmar inmediato, se le ofrece entrar a la 2ª edición (Q1 2027) con la reserva preservada.
+
+### Plan B · S1 desplazada al 14 oct (3-4 pre-reservas al 22 sep)
+
+- Las 1on1 ya hechas entre 23-27 sep cuentan igual. Las pre-reservas nuevas captadas entre el 22 sep y el 5 oct hacen 1on1 entre **6-12 oct** (semana previa a S1 = 14 oct).
+- Pago restante de 597 € antes del 12 oct para todas las inscritas.
+
+### Operativa de cada 1on1
+
 - Daniel hace cada sesión 1on1 vía Zoom (mismo enlace base que después se usará para el grupo, para que ya esté familiarizada).
 - En la sesión:
   - Bienvenida (5 min).
   - Anamnesis breve (15 min): «¿qué te trae, qué buscas, qué te asusta?».
-  - Daniel decide si entra al grupo (10 min): si entra, paga 597 € restantes en las próximas 48 h. Si no entra (cuadro que excede el formato), Daniel deriva a consulta individual y devuelve la reserva.
+  - Daniel decide si entra al grupo (10 min): si entra, **paga los 597 € restantes en las 48 h siguientes**, salvo excepción del último día (ver Plan A arriba). Si Daniel decide no incorporarla por cuadro que excede el formato (ideación suicida activa, disociación severa, crisis borderline aguda según anexo 1 del guion), deriva a consulta individual y devuelve la reserva.
 
 ### Decisión clínica
 
-Si tras las 8 sesiones individuales, Daniel detecta que 1-2 inscritas excederían el formato (ideación suicida activa, disociación severa, crisis borderline aguda — anexo 1 del guion), las deriva sin presión y la plaza queda libre. Si hay lista de espera con candidatas listas, se ofrece la plaza al siguiente. Si no, se acepta empezar con 6-7.
+Si tras las 1on1, Daniel detecta que 1-2 inscritas excederían el formato, las deriva sin presión y la plaza queda libre. Si hay lista de espera con candidatas listas, se ofrece la plaza al siguiente. Si no, se acepta empezar con 6-7.
+
+### Caso de saturación: 9-10 pre-reservas
+
+Si al 22 sep hay 9 o 10 pre-reservas (cumple el techo flexible de P1):
+
+- Daniel hace las 9-10 1on1 entre el 22 y el 28 sep (con 1 slot extra el lunes 28 sep si hace falta).
+- Si tras las 1on1 todas pasan filtro, el grupo arranca con 9-10 (techo). Si alguna queda fuera, baja a 8 sin problema.
+- Si se llega al techo de 10 antes del 22 sep, **se cierran inscripciones nuevas** y se abre lista de espera explícita para la 2ª edición Q1 2027.
 
 ### KPIs Fase 5
 
-- 8 sesiones individuales completadas al 29 sep 23:59.
-- Pago restante de las 597 € confirmado en al menos **5 inscritas** al 29 sep (mínimo viable para arrancar grupo).
+- **Plan A**: todas las 1on1 completadas al 28 sep 23:59. Pago restante de los 597 € confirmado en ≥5 inscritas al 29 sep (mínimo viable para arrancar grupo).
+- **Plan B**: 1on1 completadas al 12 oct 23:59. Pago restante confirmado en ≥5 inscritas al 13 oct.
 
 ---
 
@@ -223,7 +242,7 @@ Si tras las 8 sesiones individuales, Daniel detecta que 1-2 inscritas excedería
 | Lista de espera < 30 al 14 jun → captación insuficiente para sep | Media-baja | Activar Meta Ads soft en julio (50 €/semana × 4 semanas = 200 €) dirigidos al lead magnet del taller |
 | Daniel no termina Deja de Buscarte para tope julio | Media | Si al 12 jul están <50 % de los módulos grabados, replantear: aceptar que se termine en sep tras vacaciones |
 | Pre-venta < 5 plazas al 22 sep | Media | Plan B documentado en §5 — posponer a 14 oct |
-| Una inscrita compra reserva pero no se presenta a sesión 1on1 | Alta (1-2 casos esperables de 8) | Política «commitment device»: reserva no se devuelve si no se presenta sin avisar con 48 h |
+| Una inscrita compra reserva pero no se presenta a sesión 1on1 sin avisar | Alta (1-2 casos esperables de 8) | **Política aclarada para evitar conflicto con devolución general:** la devolución total de 14 días (P9) **se aplica si la inscrita lo solicita activamente** dentro de la ventana de 14 días desde el pago. El **no-show sin aviso con ≥48 h de antelación** es excepción: la reserva no se devuelve aunque esté dentro de los 14 días, porque compensa el slot de Daniel reservado. Esto se comunica explícitamente en los términos de la pre-reserva en la landing. |
 | Cuadro clínico que excede formato detectado en sesión 1on1 | Media (1 caso esperable de 8) | Derivación individual sin presión + reembolso pre-reserva. Documentado en anexo 1 del guion |
 | Daniel atiende paciente en consulta + 1on1 + grupo en mismo día → saturación | Media-alta los miércoles del taller | Bloquear miércoles 17:00-22:00 en agenda de consulta clínica durante todo el taller |
 
@@ -231,12 +250,13 @@ Si tras las 8 sesiones individuales, Daniel detecta que 1-2 inscritas excedería
 
 ## 9 · Lo que Daniel sí tiene que decidir cuando vuelva
 
-Las 4 decisiones operativas pendientes para que este plan se ejecute al 100 %:
+Las 5 decisiones operativas pendientes para que este plan se ejecute al 100 %:
 
 1. **MailerLite API** — ejecutar paso 4.2 de `mailerlite-api-incidencia.md` cuando tenga 90 segundos libres.
 2. **Lead magnet específico del taller** — confirmar PDF «5 señales de hambre de mirada» (o variante) para producirlo en S22-S23.
 3. **Email contacto** — confirmar si `equipo@theworldismindproject.com` está activo, o usar `equipo@twimproject.com`.
 4. **Subir los 7 artefactos del taller** que tiene fuera del repo (PDFs preparatorios, landing HTML actual, logos, análisis, benchmarks, proyecciones, informe técnico previo).
+5. **Colega de cobertura clínica para vacaciones de agosto** — Daniel elige a quién derivar los DMs urgentes durante su descanso. Sin esto, la regla §4 fase 3 «cero respuesta a DMs» deja sin escalada los mensajes clínicos urgentes. Operativamente: ese colega da OK a aparecer como cobertura + Daniel le pasa contacto directo en el auto-responder.
 
 Con eso resuelto, el plan corre sin más bloqueos.
 

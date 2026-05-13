@@ -14,7 +14,7 @@
 | **P2** | Número de sesiones | **8** | Daniel | Coherente con la duración de elaboración mínima del marco kernbergiano en formato divulgativo |
 | **P3** | Duración por sesión | **90 min** | Daniel | Coincide con la duración estimada del propio guion de sesión 1 |
 | **P4** | Modalidad pública en landing | **Online (Zoom) por defecto · grupo presencial en Valencia opcional si hay ≥4 inscritas locales** | Code | Daniel quería preguntar preferencia en sesión 1 individual. Eso funciona, pero la landing necesita una modalidad base creíble. Online amplifica audiencia 100× respecto a Valencia (1,6% IG es Valencia según baseline) y no impide el grupo presencial si la demanda local lo pide |
-| **P5** | Día y hora | **Miércoles 20:00 a 21:30 CEST** | Code | Argumentación detallada en §2.1 |
+| **P5** | Día y hora | **Miércoles 20:00 a 21:30 hora de Madrid** (Europe/Madrid: CEST UTC+2 hasta el cambio horario del 25 oct, CET UTC+1 desde el 26 oct) | Code | Argumentación detallada en §2.1 |
 | **P5b** | Calendario sesiones | **S1=30 sep → S2=7 oct → S3=14 oct → S4=21 oct → S5=28 oct → S6=4 nov → S7=11 nov → S8=18 nov 2026** | Code (reprogramado el 13 may tras pregunta de Daniel sobre si verano era buena fecha) | Argumentación en §2.2. La fecha 8 jun del dossier original era lunes; la opción 17 jun caía en pleno arranque de verano (vacaciones target + caída industria coaching premium 30-50%); reprogramación a otoño aprovecha el «rentrée» como anclaje cultural del nombre «Volver a Mí» |
 | **P6** | Estructura temporal | **Semanal 8 semanas seguidas** | Code | Daniel quería ofrecer 2 opciones (intensiva fin de semana + semanal con pausas). Simplificar a una opción protege la honestidad clínica (elaboración requiere espacio entre sesiones — bloque 6 del guion) y evita confusión en la landing |
 | **P7** | Sesión individual previa | **Sí, 30 min, antes de S1, incluida en el precio total** | Daniel | Función: valorar perfil + confirmar entrada al grupo + acabar de comprometer compra |
@@ -24,7 +24,7 @@
 | **P11** | Email de contacto | **`equipo@twimproject.com`** | Code | Daniel propuso `equipo@theworldismindproject.com` pero el dominio principal activo es `twimproject.com`. Si Daniel confirma que `theworldismindproject.com` está activo y configurado para recibir correo, se cambia. Mientras tanto, usar el dominio que sí funciona |
 | **P12** | Segunda edición | **Anunciar en landing como 1ª edición · próxima en Q1 2027 (miércoles 20 ene o similar, momento «nueva versión de mí» post-Reyes)** | Daniel (eligió «recomendación estratégica») + Code (ajustada Q4→Q1 2027 tras reprogramación de la 1ª a sep 2026) | Crea urgencia sin agresividad. La cadencia natural pasa a ser «1ª edición sep-nov · 2ª edición ene-mar · 3ª edición sep» |
 | **P13** | Canales de captación | **Newsletter «Te escribo» · Instagram orgánico (carruseles + reels + stories) · Instagram Ads (Meta Ads)** | Daniel | Sin LinkedIn, sin email directo a no-suscriptores (RGPD), sin colaboraciones todavía |
-| **P13b** | Presupuesto Meta Ads | **Pre-pre-venta (jul): 0 € · Pre-venta dura (1-22 sep): 350 € totales (15 €/día durante 22 días), escalable a 700 € si CPL primera semana < 50 €. Stop-loss si CPL > 100 €** | Code | Argumentación en §2.3 |
+| **P13b** | Presupuesto Meta Ads | **Pre-pre-venta (jul): 0 € · Pre-venta dura (1-22 sep): 330 € totales (15 €/día durante 22 días), escalable a 660 € totales (30 €/día) si CPL primera semana < 50 €. Stop-loss si CPL > 100 €** | Code | Argumentación en §2.3 |
 | **P14** | Métricas objetivo | **Éxito 8 plazas · Mínimo viable 5 · Fecha de corte 22 sep 23:59 CEST** | Daniel (8/5) + Code (22 sep, 8 días antes de S1, ajustada tras reprogramación a otoño) | |
 | **P14b** | Decisión si <5 al 22 sep | **Posponer S1 a miércoles 14 oct (2 semanas extra de captación con visibilidad rentrée a tope), con calendario corrido S1-S8 sin pausas (14 oct → 2 dic). Mantener pre-ventas vivas + 50 € extra de descuento por molestia. Si al 5 oct siguen <5: cancelar y devolver. Si 0-2 al 22 sep: cancelar y devolver inmediatamente.** | Code | Argumentación en §2.4 |
 | **T1** | Tipografía | **Instrument Serif (titulares) + Barlow Condensed (kickers, body)** | Daniel | Coherente con `instagram-sistema-visual-marca.md` §3.2. DM Serif Display + DM Sans del dossier original descartados |
@@ -34,7 +34,7 @@
 
 ## 2 · Argumentaciones detalladas
 
-### 2.1 · Por qué miércoles 20:00 a 21:30 CEST (P5)
+### 2.1 · Por qué miércoles 20:00 a 21:30 hora de Madrid (P5)
 
 **Día:**
 - Lunes está descartado por «resaca laboral», jueves por «preparación weekend». Conversiones histórica de contenido editorial de psicología muestran martes-miércoles como días de máximo engagement.
@@ -45,7 +45,7 @@
 - 20:00 CEST es la hora pico declarada por Meta para la audiencia IG de Daniel esta semana (baseline IG §1.4).
 - 20:00 CEST = 14:00 Buenos Aires / 13:00 México DF → accesible para LatAm tarde laboral, no horario familia.
 - 20:00 a 21:30 (1h 30min) deja cierre antes de la rutina familiar/cena tardía.
-- → **20:00 a 21:30 CEST**.
+- → **20:00 a 21:30 hora de Madrid** (Europe/Madrid). Nota DST: las primeras 4 sesiones (S1-S4, 30 sep → 21 oct) son CEST (UTC+2); las últimas 4 (S5-S8, 28 oct → 18 nov) son CET (UTC+1), porque el cambio horario en España es el **domingo 25 oct 2026**. Para las inscritas en LatAm la hora local cambia una hora antes de S5; conviene mencionarlo en el email recordatorio de la semana del 22 oct.
 
 ### 2.2 · Por qué calendario sep-nov 2026 y no verano (P5b)
 
@@ -66,16 +66,17 @@
 
 **Calendario final 1ª edición:**
 
-| Sesión | Fecha (miércoles 20:00-21:30 CEST) |
-|---|---|
-| S1 | 30 sep 2026 |
-| S2 | 7 oct 2026 |
-| S3 | 14 oct 2026 |
-| S4 | 21 oct 2026 |
-| S5 | 28 oct 2026 |
-| S6 | 4 nov 2026 |
-| S7 | 11 nov 2026 |
-| S8 | 18 nov 2026 |
+| Sesión | Fecha (miércoles 20:00-21:30 hora de Madrid) | Huso horario |
+|---|---|---|
+| S1 | 30 sep 2026 | CEST (UTC+2) |
+| S2 | 7 oct 2026 | CEST |
+| S3 | 14 oct 2026 | CEST |
+| S4 | 21 oct 2026 | CEST |
+| — | (cambio horario 25 oct 2026) | — |
+| S5 | 28 oct 2026 | CET (UTC+1) |
+| S6 | 4 nov 2026 | CET |
+| S7 | 11 nov 2026 | CET |
+| S8 | 18 nov 2026 | CET |
 
 **Beneficio operativo colateral muy grande:**
 
@@ -83,7 +84,7 @@
 - Junio-julio se libera para **grabar el programa «Deja de Buscarte en Otros»** (asíncrono, 8 módulos × 3 h ≈ 24 h en 6 semanas = 4 h/semana). Era lo que Daniel quería tope agosto.
 - En Q4 2026 tendrás **dos productos vivos simultáneamente**: taller premium sincrónico + programa digital asíncrono.
 
-### 2.3 · Por qué 350 € de Meta Ads (P13b)
+### 2.3 · Por qué 330 € de Meta Ads en pre-venta dura (P13b)
 
 Cálculo:
 
@@ -91,12 +92,13 @@ Cálculo:
 - ROAS deseable mínimo para producto editorial premium = **3x** (benchmark industria psicología digital España).
 - Presupuesto Ads techo = 5.576 / 3 = **1.860 €**.
 - Para pre-venta inicial con audiencia chica, presupuesto seguro inicial = 15-20% del techo = **350-400 €**.
-- 350 € repartidos en 27 días = **13 €/día**.
+- Pre-venta dura: **22 días** (1-22 sep 2026, ambos inclusive).
+- Presupuesto base: **15 €/día × 22 días = 330 €**.
 
 Plan escalado:
-- Semana 1 (días 1-7): 13 €/día → 91 € invertidos. Medir CPL (Cost per Lead, donde Lead = pre-reserva pagada).
-- Si **CPL < 50 €** semana 1 → escalar a 700 € totales (25 €/día). Audiencia receptiva.
-- Si **CPL 50-100 €** semana 1 → mantener 13 €/día, ajustar creativos.
+- Semana 1 (1-7 sep, 7 días × 15 €): 105 € invertidos. Medir CPL (Cost per Lead, donde Lead = pre-reserva 100 € pagada).
+- Si **CPL < 50 €** semana 1 → escalar a 30 €/día durante 15 días restantes = 450 € más, total ~555 € (con margen, redondeando 660 € techo de seguridad).
+- Si **CPL 50-100 €** semana 1 → mantener 15 €/día, ajustar creativos.
 - Si **CPL > 100 €** semana 1 → pausar Ads, revisar copy del anuncio + landing, retomar tras corrección.
 
 CPL benchmark sano para producto premium psicología en España: 30-80 € (referencia genérica industria).
