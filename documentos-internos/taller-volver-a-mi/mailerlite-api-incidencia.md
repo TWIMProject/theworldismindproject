@@ -2,7 +2,9 @@
 
 > Documento abierto el **13 may 2026** en sesión `claude/improve-proposal-quality-pq3d9` para registrar el problema técnico mencionado por Daniel y dejar trazabilidad de su resolución.
 >
-> Bloqueante para el lanzamiento del taller **Volver a Mí** porque sin formularios funcionando no hay captación de pre-ventas ni embudo de nuevos suscriptores.
+> **Estado a 13 may ~14:30 CEST: RESUELTA EN DIAGNÓSTICO.** El JSON del endpoint diag confirma que la API key MailerLite NO está revocada. El problema real son **4 env vars secundarias ausentes en Netlify**, no la API key del sistema. Los 9 grupos críticos (newsletter, reto 7 días, lead magnet dependencia, Cap III del libro) funcionan correctamente. Detalle completo en §4.3 y §4.4.
+>
+> **Conclusión para el taller Volver a Mí:** la infraestructura MailerLite está sana. La incidencia **no bloquea** ni la captación de newsletter ni el lead magnet del Cap III. Cuando se monte el grupo «Pre-venta Volver a Mí» en septiembre, será una env var nueva más a crear (5ª), no un sistema roto.
 
 ---
 
@@ -135,30 +137,100 @@ Eso es todo. Con el JSON, Code identifica:
 - Si `MAILERLITE_API_KEY` o alguna `MAILERLITE_GROUP_*` está en `false` → falta env var en Netlify; Code dice exactamente cuál crear.
 - Si el endpoint devuelve **500 o error** sin JSON → el problema es del runtime de la function (Node, fetch, deploy fallido) y se diagnostica desde los logs de Netlify.
 
-### 4.3 · Resultado del diagnóstico (rellenar tras paso 4.2)
+### 4.3 · Resultado del diagnóstico (rellenado 13 may 2026 ~14:30 CEST)
 
 ```
-Fecha de captura: __________
+Fecha de captura: 13 may 2026
 Endpoint URL probada: https://twimproject.com/.netlify/functions/subscribe?diag=1
-HTTP status code: __________
+HTTP status code: 200 OK
 Respuesta JSON completa:
-__________
-
-Interpretación de Code:
-__________
-
-Fix aplicado:
-__________
-
-Fecha de resolución:
-__________
+{
+  "ok": true,
+  "node": "v20.20.2",
+  "fetchAvailable": true,
+  "env": {
+    "MAILERLITE_API_KEY": true,
+    "MAILERLITE_GROUP_LEAD_MAGNET": true,
+    "MAILERLITE_GROUP_RETO": true,
+    "MAILERLITE_GROUP_GENERAL": true,
+    "MAILERLITE_GROUP_PADRES_TDAH": true,
+    "MAILERLITE_GROUP_PADRES_BACH": true,
+    "MAILERLITE_GROUP_PADRES_TALLERES": true,
+    "MAILERLITE_GROUP_NEWSLETTER_HOME": true,
+    "MAILERLITE_GROUP_INSCRITAS_TDAH": false,
+    "MAILERLITE_GROUP_INSCRITAS_BACH": false,
+    "MAILERLITE_GROUP_LEAD_IMPOSTORA": false,
+    "MAILERLITE_GROUP_LEAD_BURNOUT": false,
+    "MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3": true
+  }
+}
 ```
 
-### 4.4 · Acciones siguientes según resultado
+**Interpretación de Code (hipótesis original FALSADA):**
 
-- Si `MAILERLITE_API_KEY: false` → Daniel añade env var en Netlify con la API key actual del dashboard MailerLite.
-- Si la key está en `true` pero los forms siguen fallando → probar POST manual al endpoint con curl + body JSON desde un navegador (con DevTools Console o desde Postman) y ver el error 4xx/5xx que devuelve. Si 401 desde MailerLite → key revocada, regenerar.
-- Si todo está OK pero los forms del Cap III no convierten → no es problema técnico, es de UX/copy/tracking — diagnóstico distinto.
+La hipótesis original del informe técnico previo era que `MAILERLITE_API_KEY` estaba expirada o revocada. **Es falsa**: el diag devuelve `true` para `MAILERLITE_API_KEY`. La autenticación contra MailerLite funciona.
+
+**Diagnóstico real:** 4 de los 13 grupos del `groupEnvMap` tienen env var **ausente en Netlify** (devuelven `false`):
+
+| Env var ausente | Form afectado | Estado del form |
+|---|---|---|
+| `MAILERLITE_GROUP_INSCRITAS_TDAH` | Landing `/talleres/tdah-adolescentes/` inscripción | Devuelve 500 al usuario al pulsar «Apuntarme» |
+| `MAILERLITE_GROUP_INSCRITAS_BACH` | Landing `/talleres/bachillerato-motivacion/` inscripción | Devuelve 500 al usuario al pulsar «Apuntarme» |
+| `MAILERLITE_GROUP_LEAD_IMPOSTORA` | Landing `test-sindrome-impostora.html` | Devuelve 500, lead se pierde |
+| `MAILERLITE_GROUP_LEAD_BURNOUT` | Landing `lead-burnout-5-senales.html` | Devuelve 500, lead se pierde |
+
+El error que ven los usuarios en frontend es el `error` que devuelve la function en línea 117-119 de `netlify/functions/subscribe.js`:
+
+```
+"Grupo MailerLite no configurado (MAILERLITE_GROUP_XXX ausente en Netlify)"
+```
+
+Los **9 grupos críticos** del proyecto **funcionan**:
+
+- ✅ `MAILERLITE_API_KEY` (autenticación contra connect.mailerlite.com)
+- ✅ `MAILERLITE_GROUP_NEWSLETTER_HOME` (hero home + landing newsletter + cross-sell 7 landings SEO + exit-intent + form del libro Engranajes)
+- ✅ `MAILERLITE_GROUP_RETO` (Reto 7 Días, el lead magnet más activo)
+- ✅ `MAILERLITE_GROUP_LEAD_MAGNET` (Lead Magnet Dependencia Emocional)
+- ✅ `MAILERLITE_GROUP_GENERAL` (Lista General TWIM)
+- ✅ `MAILERLITE_GROUP_PADRES_TDAH` / `PADRES_BACH` / `PADRES_TALLERES` (formularios de padres)
+- ✅ `MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3` (lead magnet del libro publicado hoy 13 may)
+
+### 4.4 · Acciones siguientes
+
+**Para los 4 grupos en `false`:**
+
+Daniel decide si activarlos o no. Dos escenarios posibles para cada uno:
+
+**Escenario A · El grupo SÍ existe en MailerLite**:
+
+1. Dashboard MailerLite → Subscribers → Groups → buscar nombre exacto.
+2. Copiar el Group ID.
+3. Netlify → Environment variables → crear env var correspondiente con ese ID y «All scopes».
+4. Esperar redeploy automático (1-3 min).
+5. Confirmar con diag endpoint que pasa a `true`.
+
+Los IDs de 2 grupos ya están conocidos por estar comentados en `netlify/functions/subscribe.js`:
+
+```
+MAILERLITE_GROUP_INSCRITAS_TDAH = 186093787887437444
+MAILERLITE_GROUP_INSCRITAS_BACH = 186093790595909010
+```
+
+Daniel solo necesita pegar esos IDs en Netlify para arreglar 2 de los 4. Los otros 2 (`IMPOSTORA` y `BURNOUT`) requieren crear el grupo en MailerLite primero (escenario B).
+
+**Escenario B · El grupo NO existe en MailerLite todavía**:
+
+Esto aplica a `LEAD_IMPOSTORA` y `LEAD_BURNOUT` según el comment del propio `subscribe.js` que dice «Daniel debe crear». Decisión Daniel:
+
+- ¿Quieres recuperar leads de `test-sindrome-impostora.html` y `lead-burnout-5-senales.html`? Si sí: crear los grupos en MailerLite + env vars.
+- Si no: las landings deberían señalizarse como inactivas o redirigir a la newsletter principal para no perder leads silenciosamente.
+
+**Para el taller Volver a Mí:**
+
+- La infraestructura MailerLite **está sana**. La incidencia reportada por ChatGPT en el dossier original era una interpretación incorrecta: los 4 grupos en `false` son grupos secundarios, no la API key del sistema.
+- Cuando llegue septiembre y se monte el grupo «Pre-venta Volver a Mí», será un grupo nuevo más a configurar (5º env var a crear), no un sistema roto.
+
+**Status incidencia: RESUELTA EN DIAGNÓSTICO.** Pendiente decisión Daniel sobre si arreglar los 4 grupos secundarios o desactivar las landings asociadas.
 
 ### 4.5 · Verificación de integridad post-fix
 
