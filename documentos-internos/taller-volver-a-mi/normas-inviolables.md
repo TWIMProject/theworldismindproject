@@ -51,7 +51,7 @@
 |---|---|
 | Paleta cromática **exacta** de twimproject.com: verde oscuro `#173D30`, verde medio `#265C4B`, beige `#C2A78B`, crema `#FDFCFA`, fondo blanco roto. No inventar otras paletas. | CLAUDE.md + `instagram-sistema-visual-marca.md` §3.1. |
 | Logo Mind World Project en tratamiento monocromático, versión clara y oscura ya procesadas. | §7 del dossier. Los .svg los tiene Daniel, falta subirlos al repo. |
-| **Tipografía pendiente de resolver.** Dossier dice DM Serif Display (títulos) + DM Sans (cuerpo). Repo dice Instrument Serif (titulares) + Barlow Condensed (kickers, body). Antes de maquetar la landing pública del taller, Daniel debe confirmar cuál es la pareja vigente. Ver `piezas-pendientes.md` T1. | Discrepancia documentada. |
+| **Tipografía:** **Instrument Serif** (titulares) + **Barlow Condensed** (kickers, body, URL). Confirmado por Daniel el 13 may en PR #151. La opción DM Serif Display + DM Sans del dossier original queda descartada. | Coherencia con `instagram-sistema-visual-marca.md` §3.2 y con todo el sistema TWIM ya desplegado. |
 | No usar font Impact, Bebas Neue, Poppins, Montserrat, ni cualquier sans serif decorativa. | `instagram-sistema-visual-marca.md` §3.2 «Prohibidas». |
 | Sin clickbait visual: banderas rojas, mayúsculas agresivas, exclamaciones múltiples, números reemplazando letras. | `instagram-sistema-visual-marca.md` §2.2. |
 
