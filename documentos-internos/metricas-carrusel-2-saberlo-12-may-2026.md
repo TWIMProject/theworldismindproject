@@ -56,13 +56,13 @@
 
 ---
 
-## 2 · Comparativa contra benchmark declarado (instagram-sistema-visual §13.1)
+## 2 · Comparativa contra benchmark declarado (`instagram-sistema-visual-marca.md` §13.1)
 
 | Métrica | Real Carrusel #2 | Cota mes 3 declarada | Cota mes 12 declarada | Brecha |
 |---|---|---|---|---|
 | Save rate (saves / impresiones) | 5/1.207 = **0,41 %** | **>2 %** en carruseles A | >4 % | **5× por debajo del mes 3** |
 | Share rate | 2/1.207 = **0,17 %** | **>1 %** | >2 % | **6× por debajo del mes 3** |
-| Conversión visitante perfil → click bio | 0 (sin attribución) | >5 % | >10 % | No medible este post |
+| Conversión visitante perfil → click bio | 0 (sin atribución) | >5 % | >10 % | No medible este post |
 | Suscriptores newsletter atribuibles a IG | 0 (sin UTM separable de stories) | +20/mes | +100/mes | No medible este post |
 | % contenido en marca (capa A1) | 100 % (pieza en marca) | >90 % | 100 % | ✅ cumple |
 
@@ -84,7 +84,7 @@
 | Saves | 1 | **5** | **Carrusel +400 %** ← única ventaja |
 | Follows atribuibles | n/d (combinado con ads) | **0** | — |
 
-**Lectura cruzada:** el carrusel rinde mejor donde un carrusel **debe** rendir mejor (saves: contenido archivable). Pero rinde peor donde un carrusel también debería competir contra reel (alcance, likes, comentarios). Como métrica primaria de los carruseles A1 declarada en `instagram-sistema-visual §13.2` es **saves+shares, no likes**, el carrusel #2 supera al reel en saves pero solo lo iguala en shares — y sigue 5× por debajo del benchmark propio en saves.
+**Lectura cruzada:** el carrusel rinde mejor donde un carrusel **debe** rendir mejor (saves: contenido archivable). Pero rinde peor donde un carrusel también debería competir contra reel (alcance, likes, comentarios). Como métrica primaria de los carruseles A1 declarada en `instagram-sistema-visual-marca.md` §13.2 es **saves+shares, no likes**, el carrusel #2 supera al reel en saves pero solo lo iguala en shares — y sigue 5× por debajo del benchmark propio en saves.
 
 **Conclusión honesta:** comparado con el reel anterior, el carrusel #2 no es desastre absoluto, es **infrarrendimiento del formato carrusel respecto a su techo declarado**. El problema no es que «los carruseles no funcionen», es que esta pieza concreta no activó la palanca específica del carrusel (saves a tope) ni la de reel (alcance/likes).
 
@@ -113,7 +113,7 @@ Comparativa entre los tres canales del mismo carrusel:
 | Canal | ¿Pregunta abierta de cierre? | ¿CTA a `/newsletter/`? | ¿Hashtags? |
 |---|---|---|---|
 | LinkedIn (caption-linkedin.txt) | ✅ «¿Te has visto en este punto alguna vez — sabiendo perfectamente lo que te pasa y aun así repitiendo el patrón?» | ❌ implícito en bio | 5 |
-| X (thread-x.txt, tweet 7) | ✅ + PD a newsletter explícita | ✅ `twimproject.com/newsletter` en PD | n/a |
+| X (thread-x.txt, tweet 7) | ✅ + PD a newsletter explícita | ⚠️ link a `twimproject.com/newsletter` en PD (sin trailing slash — incumple canon CLAUDE.md, debería ser `https://twimproject.com/newsletter/`) | n/a |
 | **Instagram (caption-instagram.txt)** | ❌ cierra con «Vivirlo, no leerlo. — Daniel» | ❌ ningún link a newsletter | **14** (demasiados) |
 
 **La caption IG está infra-utilizada respecto al material del que ya disponías.** El thread X y el LinkedIn cierran con pregunta + CTA; la caption IG no. Resultado coherente con la métrica: 0 comentarios y 0 follows.
@@ -165,7 +165,7 @@ Plantilla obligatoria para la caption del Carrusel #3:
 [Pregunta abierta · 1 frase, copia literal de la pregunta del LinkedIn]
 
 [CTA · 1 frase con URL completa]
-→ twimproject.com/newsletter
+→ https://twimproject.com/newsletter/
 
 — Daniel
 
@@ -180,7 +180,7 @@ Slide final del Carrusel #3 incluye:
 
 - Kicker beige: «TE ESCRIBO».
 - Frase central Instrument Serif: cierre aforístico (aquí sí, aforismo encaja).
-- URL destacada Barlow Condensed Bold beige: `twimproject.com/newsletter`.
+- URL destacada Barlow Condensed Bold beige: `twimproject.com/newsletter/` (con barra final, según canon CLAUDE.md).
 - Footer estándar: `@daniorozcopsicologo · twimproject.com`.
 
 Hoy el slide final del #2 cierra con «Comprender no es lo mismo que elaborar» sin URL al newsletter en la propia imagen — solo el handle. Pasa desapercibido.
@@ -191,7 +191,11 @@ Hoy el slide final del #2 cierra con «Comprender no es lo mismo que elaborar» 
 - **2 h antes** (martes 19 may ~18:00): story con slide 1 del Carrusel #3 + sticker recordatorio.
 - **30-60 min después de publicar**: story re-share del propio post con frase de invitación a comentar.
 
-Las 3 stories tienen sticker link a `/newsletter/` con UTMs separados (`utm_campaign=teaser-d-1`, `teaser-d0-pre`, `share-d0-post`).
+Las 3 stories tienen sticker link a `/newsletter/` con los mismos parámetros base que el resto de stories del repo (`utm_source=ig_story&utm_medium=organic`) y `utm_campaign` propio por story:
+
+- Teaser día -1: `https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=carrusel-3-teaser-d-1`
+- Teaser pre-publicación día 0: `https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=carrusel-3-teaser-d0-pre`
+- Re-share post-publicación: `https://twimproject.com/newsletter/?utm_source=ig_story&utm_medium=organic&utm_campaign=carrusel-3-share-d0-post`
 
 ### 6.5 · Test horario 20:00 CEST (cumplir hipótesis baseline §4)
 
