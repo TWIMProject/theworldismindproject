@@ -16,7 +16,7 @@
 | Tipo de producto | Taller grupal cerrado |
 | Tema | Dependencia emocional |
 | Precio | 697 € |
-| Fecha de lanzamiento | 8 de junio de 2026 |
+| Fecha de lanzamiento | ~~8 de junio de 2026~~ → **30 de septiembre de 2026** (reprogramado el 13 may tras análisis sobre temporalidad de verano; ver `decisiones-cerradas.md` §2.2) |
 | Modalidad | Grupo cerrado, sincrónico |
 | Autor / Director clínico | Daniel Orozco Abia, Col. CV11515 |
 | Marca asociada | The World Is Mind Project (TWIM Project) |
