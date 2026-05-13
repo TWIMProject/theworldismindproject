@@ -26,7 +26,7 @@
 | **P13** | Canales de captación | **Newsletter «Te escribo» · Instagram orgánico (carruseles + reels + stories) · Instagram Ads (Meta Ads)** | Daniel | Sin LinkedIn, sin email directo a no-suscriptores (RGPD), sin colaboraciones todavía |
 | **P13b** | Presupuesto Meta Ads | **350 € totales en pre-venta (13 €/día durante 27 días, 18 may → 13 jun). Escalable a 700 € si CPL primera semana < 50 €. Stop-loss si CPL > 100 €** | Code | Argumentación en §2.3 |
 | **P14** | Métricas objetivo | **Éxito 8 plazas · Mínimo viable 5 · Fecha de corte 1 jun 23:59 CEST** | Daniel | |
-| **P14b** | Decisión si <5 al 1 jun | **Posponer S1 a miércoles 9 jul (5 semanas extra de captación) manteniendo pre-ventas vivas + 50 € extra de descuento. Si al 25 jun siguen <5: posponer a miércoles 9 sep con campaña nueva. Si 0-2 al 1 jun: cancelar y devolver todas las pre-ventas.** | Code | Argumentación en §2.4 |
+| **P14b** | Decisión si <5 al 1 jun | **Posponer S1 a miércoles 8 jul (5 semanas extra de captación) con calendario partido por pausa estival: S1-S4 en julio (8, 15, 22, 29 jul) · pausa agosto entero · S5-S8 en septiembre (2, 9, 16, 23 sep). Mantener pre-ventas vivas + 50 € extra de descuento por molestia. Si al 25 jun siguen <5: cancelar y devolver todas las pre-ventas. Si 0-2 al 1 jun: cancelar y devolver inmediatamente.** | Code | Argumentación en §2.4 |
 | **T1** | Tipografía | **Instrument Serif (titulares) + Barlow Condensed (kickers, body)** | Daniel | Coherente con `instagram-sistema-visual-marca.md` §3.2. DM Serif Display + DM Sans del dossier original descartados |
 | **MA1** | Informe técnico MailerLite | **Code lo construye desde cero — diagnóstico inicial en `mailerlite-api-incidencia.md`** | Daniel | Hay un bloqueo de sandbox: `twimproject.com` no está en allowlist, por lo que Code no puede hacer curl al endpoint `?diag=1` directamente. Daniel debe ejecutar el paso 2 del doc desde navegador y compartir el JSON |
 
@@ -76,21 +76,37 @@ Plan escalado:
 
 CPL benchmark sano para producto premium psicología en España: 30-80 € (referencia genérica industria).
 
-### 2.4 · Por qué posponer a 9 jul si <5 al 1 jun (P14b)
+### 2.4 · Por qué posponer a 8 jul con pausa estival si <5 al 1 jun (P14b)
 
-Razones por las que **9 jul es mejor que cancelar o que esperar a septiembre**:
+Calendario plan B propuesto:
 
-1. **Mantiene la inercia editorial.** Cap III + Carta #2 + Carrusel #3 + Carta #3 (que tocará a finales de mayo o principios junio) son material caliente. Pasar todo eso a septiembre lo enfría.
+- S1 = miércoles 8 jul
+- S2 = miércoles 15 jul
+- S3 = miércoles 22 jul
+- S4 = miércoles 29 jul
+- **[Pausa: 1-31 ago — vacaciones de Daniel]**
+- S5 = miércoles 2 sep
+- S6 = miércoles 9 sep
+- S7 = miércoles 16 sep
+- S8 = miércoles 23 sep
+
+Razones por las que **este plan B es mejor que cancelar o que reprogramar entero a septiembre**:
+
+1. **Mantiene la inercia editorial.** Cap III + Carta #2 + Carrusel #3 + Carta #3 (que tocará a finales de mayo o principios junio) son material caliente. Reprogramar todo a septiembre lo enfría 12 semanas; este plan B mantiene el arranque solo 3 semanas más tarde.
 2. **5 semanas extras = 35 días.** Permite arreglar lo que haya fallado en captación: mejor copy de Ad, otro lead magnet, una colaboración cruzada, una entrevista en podcast ajeno. Suficiente para mover la aguja de 5 a 8.
-3. **Antes de vacaciones.** S1 = 9 jul → S8 = 27 ago. Daniel mencionó que tenía vacaciones agosto. Recalibrar calendario para que las últimas sesiones caigan en la primera mitad de agosto, donde aún hay actividad pre-vacacional.
-4. **Compensación a las pre-ventas existentes.** 50 € extra de descuento por la molestia del cambio de fecha = 647 € efectivo en lugar de 697 €. Eso fideliza y mantiene a las inscritas.
+3. **Respeta agosto vacaciones de Daniel.** Las 4 primeras sesiones (S1-S4) terminan el 29 jul; la pausa estival cubre agosto entero; las 4 últimas (S5-S8) reanudan el 2 sep. Daniel mantiene su descanso íntegro.
+4. **La pausa es clínicamente coherente.** En el guion sesión 1 bloque 6 ya se anticipa que «en los próximos días puede que aparezcan cosas — el sistema procesando». Una pausa estival de 5 semanas entre S4 y S5 da espacio real de elaboración entre el bloque introductorio y el de cierre, lo cual es psicoanalíticamente legítimo (no un parche).
+5. **Compensación a las pre-ventas existentes.** 50 € extra de descuento por la molestia del cambio = 647 € efectivo en lugar de 697 €. Eso fideliza y mantiene a las inscritas.
 
-Razones para **no cancelar directamente**:
+Razones para **no cancelar directamente al 1 jun con 3-4 inscritas**:
 
 - Cancelar con pre-ventas pagadas genera mala reputación. Si hay 1-4 inscritas, devolver pre-ventas vacía el embudo y la 1ª edición «fallida» se cuenta como antecedente negativo durante meses.
 - Posponer con honestidad («el grupo se llena mejor si esperamos 5 semanas más, te preservo tu plaza con descuento») mantiene la confianza.
 
-Solo se cancela si **0-2 al 1 jun**, porque por debajo de 3 inscritas el grupo no funciona ni clínica ni económicamente y posponer otra vez quema la marca.
+**Solo se cancela si:**
+
+- **0-2 al 1 jun** → cancelar inmediatamente y devolver. Por debajo de 3 inscritas el grupo no funciona ni clínica ni económicamente.
+- **<5 al 25 jun** (24 días después del corte y 14 días antes de S1 del plan B) → cancelar y devolver. Si la campaña reforzada de 24 días no añadió ni 1 plaza, posponer otra vez quema la marca. Mejor cancelar limpio y volver con campaña de Q4.
 
 ---
 

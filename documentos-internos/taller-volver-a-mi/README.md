@@ -2,7 +2,7 @@
 
 > Carpeta creada el **13 may 2026** en sesión `claude/improve-proposal-quality-pq3d9` a partir del dossier que Daniel pegó en chat el mismo día. Su función es **dejar la verdad operativa del taller en el repo** según la regla inviolable del CLAUDE.md, para que ninguna sesión futura (humana o IA) opere desde memoria de chat.
 >
-> Estado del taller: producción avanzada · lanzamiento previsto **8 jun 2026** · precio **697 €** · 12 piezas operativas pendientes de Daniel (ver §3).
+> Estado del taller: producción avanzada · lanzamiento previsto **miércoles 17 jun 2026** (movido desde el 8 jun original — era lunes) · precio **697 €** · decisiones operativas cerradas en `decisiones-cerradas.md` tras PR #151 y #152.
 
 ---
 
@@ -66,7 +66,7 @@ Resumen ejecutivo:
 - **Material post:** PDFs adicionales + comunidad cerrada. **No grabaciones**.
 - **Devolución total** durante 14 días desde el pago de reserva si S1 no ha empezado.
 - **2ª edición** anunciada para Q4 2026 (octubre).
-- **Métricas:** éxito 8 plazas · mínimo 5 · corte 1 jun. Plan B: si <5 → posponer a 9 jul (otra ronda de captación de 5 semanas); si <5 al 25 jun → posponer a 9 sep; si 0-2 al 1 jun → cancelar y devolver.
+- **Métricas:** éxito 8 plazas · mínimo 5 · corte 1 jun. Plan B si <5 al 1 jun: posponer S1 a **miércoles 8 jul** con calendario partido por pausa estival (S1-S4 julio · pausa agosto · S5-S8 septiembre) + 50 € extra de descuento por molestia. Si al 25 jun siguen <5 → cancelar y devolver. Si 0-2 al 1 jun → cancelar y devolver inmediatamente.
 - **Canales:** Newsletter «Te escribo» + IG orgánico + Meta Ads (350 € escalable a 700 €).
 - **Tipografía:** Instrument Serif + Barlow Condensed (sistema visual vigente del repo).
 - **Email contacto:** `equipo@twimproject.com` (`theworldismindproject.com` pendiente confirmar si está activo).

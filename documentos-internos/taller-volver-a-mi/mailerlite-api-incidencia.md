@@ -121,7 +121,7 @@ Si la API key está revocada, **todos los formularios anteriores devuelven 500**
 ### 4.1 · Intento de diagnóstico desde Code · 13 may ~13:35 CEST
 
 - ✅ Code intentó ejecutar paso 2 (`curl https://twimproject.com/.netlify/functions/subscribe?diag=1`) desde el sandbox.
-- ❌ **Bloqueado:** el sandbox de Claude Code devuelve `Host not in allowlist` para `twimproject.com` (regla declarada en CLAUDE.md: «`api.netlify.com` → host_not_allowed»). Este bloqueo aplica también al propio dominio público.
+- ❌ **Bloqueado:** el sandbox de Claude Code devuelve `Host not in allowlist` para `twimproject.com`. **Este bloqueo no está explícito en CLAUDE.md** — el doc solo cita `api.netlify.com` y `connect.mailerlite.com` como hosts bloqueados (sección «APIs bloqueadas en el sandbox»). El bloqueo del propio dominio público es restricción del sandbox no documentada hasta ahora. Acción de mejora pendiente: añadir `twimproject.com` a esa lista en CLAUDE.md o aclarar que el sandbox bloquea cualquier host externo por defecto.
 - 📋 Conclusión: Code no puede ejecutar el paso 2 ni los siguientes sin la ayuda de Daniel desde un navegador o un terminal externo al sandbox.
 
 ### 4.2 · Lo que Daniel debe hacer en 90 segundos (cuando tenga 1 min libre entre pacientes)
