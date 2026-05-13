@@ -203,6 +203,20 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 - Threads se incorpora como canal nuevo (no estaba en el calendario documentado de `x-twitter-estrategia-canal.md`).
 - Recado 01 story sale con corrección temporal de última hora (atribución «envié hoy» → «envié ayer» + footer; marca de agua MindWorld añadida). Commit `87a1ffa`.
 
+**Métricas a 24 h del Carrusel #2 (capturadas 13 may ~10:00 CEST):**
+
+| Canal | Visualizaciones | Alcance | Save rate | Share rate | Likes | Comentarios | Follows |
+|---|---|---|---|---|---|---|---|
+| Instagram | 1.207 | 625 | 0,41 % (5/1.207) | 0,17 % (2/1.207) | 12 | 0 | 0 |
+| Facebook | 3 | 3 | 0 | 33 % (1/3) | 0 | 0 | 0 |
+
+- Save rate IG **5× por debajo** del benchmark mes 3 declarado (`instagram-sistema-visual-marca.md §13.1`: ≥2 %).
+- Share rate IG **6× por debajo** del benchmark mes 3 (≥1 %).
+- Audiencia IG sesgada a 81,6 % mujeres (vs 60,1 % baseline orgánico del 12 may), franja 35-44 dominante (35 %).
+- FB con 3 views = sospecha de fallo técnico de cross-post, no bajo rendimiento orgánico.
+- Análisis completo, causas y plan de mejora para Carrusel #3 en `documentos-internos/metricas-carrusel-2-saberlo-12-may-2026.md`.
+- Revisión final a 7 días: 19 may ~10:00 CEST (rellenar §7 del doc anterior).
+
 ### 11 mayo 2026 (lunes) — Recado 01 enviado vía MailerLite
 
 Ver `REACCION-9-MAYO.md` y commit `6646711` (log del envío urgente del Recado 01 a las 22:04 CEST).

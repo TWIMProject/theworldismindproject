@@ -86,4 +86,4 @@ PD  (opcional, en reply al tweet 7)
 
 PD: escribo más largo sobre esto en mi newsletter.
 
-twimproject.com/newsletter
+https://twimproject.com/newsletter/
