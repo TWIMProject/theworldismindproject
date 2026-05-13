@@ -2,7 +2,7 @@
 
 > Carpeta creada el **13 may 2026** en sesión `claude/improve-proposal-quality-pq3d9` a partir del dossier que Daniel pegó en chat el mismo día. Su función es **dejar la verdad operativa del taller en el repo** según la regla inviolable del CLAUDE.md, para que ninguna sesión futura (humana o IA) opere desde memoria de chat.
 >
-> Estado del taller: producción avanzada · lanzamiento previsto **miércoles 17 jun 2026** (movido desde el 8 jun original — era lunes) · precio **697 €** · decisiones operativas cerradas en `decisiones-cerradas.md` tras PR #151 y #152.
+> Estado del taller: producción avanzada · lanzamiento **miércoles 30 sep 2026** (reprogramado desde 17 jun el 13 may tras análisis científico — verano era mala fecha por caída industria coaching premium 30-50%, vacaciones del target, incompatibilidad clínica con modo vacacional, y «Volver a Mí» encaja con narrativa de rentrée) · precio **697 €** · decisiones operativas cerradas en `decisiones-cerradas.md`.
 
 ---
 
@@ -18,6 +18,7 @@
 | `piezas-pendientes.md` | Las 14 preguntas operativas + decisiones — **respuestas de Daniel mergeadas en PR #151 el 13 may** | ✅ cerrado (ver `decisiones-cerradas.md`) |
 | `decisiones-cerradas.md` | Tabla maestra consolidada con las 18 decisiones tomadas (Daniel + Code) + argumentaciones detalladas | ✅ |
 | `mailerlite-api-incidencia.md` | Documentación del problema técnico que bloquea la captación vía formularios web | ⚠️ esperando que Daniel ejecute paso 2 (curl al endpoint diag desde navegador — sandbox no permite a Code hacerlo) |
+| `plan-captacion-verano-2026.md` | Cronograma operativo de las 20 semanas entre 13 may 2026 y S1 (30 sep 2026) en 5 fases: sprint editorial + lista de espera · grabación Deja de Buscarte · vacaciones Daniel · pre-venta dura + Meta Ads · sesiones individuales previas. Incluye KPIs, decisiones por escenarios al 22 sep, riesgos + mitigación, operativa día D. | ✅ |
 
 ---
 
@@ -59,17 +60,18 @@ Daniel contestó las 14 piezas pendientes en el PR #151 (mergeado el 13 may) y d
 
 Resumen ejecutivo:
 
-- **8 plazas** (mínimo viable 5) · **8 sesiones** semanales de **90 min** · **miércoles 20:00-21:30 CEST** · **online (Zoom) por defecto, presencial Valencia opcional si hay demanda local**.
-- Calendario: **S1 = miércoles 17 jun → S8 = miércoles 5 ago 2026** (la fecha 8 jun del dossier original era lunes; Code la mueve a 17 jun para mantener día de semana correcto y dar margen de pre-venta).
+- **8 plazas** (mínimo viable 5) · **8 sesiones** semanales de **90 min** · **miércoles 20:00-21:30 hora de Madrid** (S1-S4 en CEST UTC+2 · S5-S8 en CET UTC+1, cambio horario el último domingo de octubre 25 oct 2026) · **online (Zoom) por defecto, presencial Valencia opcional si hay demanda local**.
+- **Calendario 1ª edición:** S1 = **miércoles 30 sep 2026** → S2 = 7 oct → S3 = 14 oct → S4 = 21 oct → S5 = 28 oct → S6 = 4 nov → S7 = 11 nov → S8 = **18 nov 2026**.
 - **Precio 697 €** dividido en **reserva 100 € + restantes 597 € antes de S1**.
 - **Sesión individual previa con Daniel** (30 min) incluida en el precio — sirve como filtro de entrada y commitment.
 - **Material post:** PDFs adicionales + comunidad cerrada. **No grabaciones**.
 - **Devolución total** durante 14 días desde el pago de reserva si S1 no ha empezado.
-- **2ª edición** anunciada para Q4 2026 (octubre).
-- **Métricas:** éxito 8 plazas · mínimo 5 · corte 1 jun. Plan B si <5 al 1 jun: posponer S1 a **miércoles 8 jul** con calendario partido por pausa estival (S1-S4 julio · pausa agosto · S5-S8 septiembre) + 50 € extra de descuento por molestia. Si al 25 jun siguen <5 → cancelar y devolver. Si 0-2 al 1 jun → cancelar y devolver inmediatamente.
-- **Canales:** Newsletter «Te escribo» + IG orgánico + Meta Ads (350 € escalable a 700 €).
+- **2ª edición** anunciada para **Q1 2027** (enero, momento «nueva versión de mí» post-Reyes).
+- **Métricas:** éxito 8 plazas · mínimo 5 · corte **22 sep 2026 23:59 CEST**. Plan B si <5 al 22 sep: posponer S1 a **miércoles 14 oct** (calendario corrido S1-S8 hasta 2 dic) + 50 € extra de descuento. Si al 5 oct siguen <5 → cancelar y devolver. Si 0-2 al 22 sep → cancelar inmediatamente.
+- **Canales:** Newsletter «Te escribo» + IG orgánico + Meta Ads. Pre-pre-venta julio (lista de espera, 0 €) → pre-venta dura 1-22 sep (**330 € en Ads = 15 €/día × 22 días**, escalable a 660 € si CPL primera semana < 50 €).
 - **Tipografía:** Instrument Serif + Barlow Condensed (sistema visual vigente del repo).
 - **Email contacto:** `equipo@twimproject.com` (`theworldismindproject.com` pendiente confirmar si está activo).
+- **Cronograma completo 13 may → 30 sep** en `plan-captacion-verano-2026.md`.
 
 ---
 
@@ -104,8 +106,9 @@ Las dos discrepancias bloqueantes quedaron resueltas el 13 may con la confirmaci
 2. Code argumentó y cerró las decisiones delegadas (`decisiones-cerradas.md`).
 3. Discrepancia tipografía resuelta (Instrument Serif + Barlow Condensed).
 4. Discrepancia newsletter resuelta («Te escribo»).
-5. Calendario propuesto (S1 = miércoles 17 jun → S8 = 5 ago).
-6. Plan B si <5 plazas al 1 jun (posponer a 9 jul; si persiste, a 9 sep; si 0-2, cancelar).
+5. Calendario reprogramado a otoño: **S1 = miércoles 30 sep → S8 = 18 nov 2026** (tras pregunta de Daniel del 13 may sobre si verano era buena fecha → análisis científico → confirmación de reprogramación).
+6. Plan B si <5 plazas al 22 sep (posponer a 14 oct con calendario corrido hasta 2 dic; si <5 al 5 oct, cancelar; si 0-2 al 22 sep, cancelar inmediatamente).
+7. **Beneficio operativo colateral:** agosto de Daniel queda íntegro como vacaciones. Junio-julio se libera para grabar el programa «Deja de Buscarte en Otros» asíncrono. En Q4 2026 hay dos productos vivos simultáneamente.
 
 **Pendiente (⚠️):**
 
@@ -113,7 +116,7 @@ Las dos discrepancias bloqueantes quedaron resueltas el 13 may con la confirmaci
 2. **Subir al repo los 7 artefactos que Daniel tiene pero aún no están** (PDFs preparatorios, landing HTML existente del taller, logos procesados, análisis comparativo, benchmarks, proyecciones, informe técnico previo).
 3. **Confirmar dominio email** — `theworldismindproject.com` activo sí/no.
 4. **Decisión sobre lead magnet específico del taller** (PDF gratuito «Cómo saber si tienes hambre de mirada» como gancho de Ads, no marcado por Daniel pero recomendado por Code).
-5. **Decisión sobre calendario** — confirmar 17 jun o insistir en 8 jun (con cambio a lunes).
+5. **Elegir colega de cobertura clínica** para el autoresponder de vacaciones de Daniel (agosto). Sin esto, los DMs urgentes durante agosto no tienen escalada real (referencia: `plan-captacion-verano-2026.md` §4 reglas inviolables fase 3).
 
 **Cuando 1-4 estén resueltos**, el siguiente PR construye:
 

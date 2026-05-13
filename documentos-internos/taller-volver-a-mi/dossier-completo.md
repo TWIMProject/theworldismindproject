@@ -2,7 +2,7 @@
 
 > **Procedencia:** dossier generado por ChatGPT en sesión externa el 13 may 2026 y pegado por Daniel en la sesión de Claude Code `claude/improve-proposal-quality-pq3d9` el mismo día.
 >
-> Se guarda **verbatim** en el repo como fuente operativa de referencia. Si hay discrepancias con la verdad ya documentada en el repo (CLAUDE.md, manuscrito del libro, sistema visual Instagram, etc.), prevalece la verdad del repo. Las discrepancias detectadas están listadas en `README.md` §5.
+> Se guarda **verbatim** en el repo como fuente operativa de referencia, con la única excepción de filas o secciones explícitamente anotadas como amended tras decisiones posteriores (marcadas con ~~tachado~~ + corrección o con bloque «🔵 Discrepancia resuelta el [fecha]»). Si hay discrepancias con la verdad ya documentada en el repo (CLAUDE.md, manuscrito del libro, sistema visual Instagram, etc.), prevalece la verdad del repo. Las discrepancias detectadas están listadas en `README.md` §5; las decisiones que han modificado este dossier están registradas en `decisiones-cerradas.md`.
 >
 > Última actualización del dossier según el propio texto: 13 may 2026.
 
@@ -16,7 +16,7 @@
 | Tipo de producto | Taller grupal cerrado |
 | Tema | Dependencia emocional |
 | Precio | 697 € |
-| Fecha de lanzamiento | 8 de junio de 2026 |
+| Fecha de lanzamiento | ~~8 de junio de 2026~~ → **30 de septiembre de 2026** (reprogramado el 13 may tras análisis sobre temporalidad de verano; ver `decisiones-cerradas.md` §2.2) |
 | Modalidad | Grupo cerrado, sincrónico |
 | Autor / Director clínico | Daniel Orozco Abia, Col. CV11515 |
 | Marca asociada | The World Is Mind Project (TWIM Project) |
