@@ -78,13 +78,13 @@
 
 - **Kicker (top, beige mayúsculas):** TE ESCRIBO
 - **Título** (Instrument Serif Regular, crema):
-  > Cómo se monta esa voz, y qué la debilita.
+  > Cómo se monta esa voz y qué la debilita.
 - **Subtítulo** (Barlow Condensed Regular, crema):
   > Te lo cuento en la carta de esta semana. Despacio.
 - **URL destacada** (Barlow Condensed Bold, beige #C2A78B, sin caja, sobre el footer):
   > twimproject.com/newsletter/
 - **Pie** (Instrument Serif Italic, beige, opcional):
-  > martes 19 · 19:00 en tu correo
+  > Carta nueva esta semana.
 - **Paginación:** 07 / 07
 
 ---
