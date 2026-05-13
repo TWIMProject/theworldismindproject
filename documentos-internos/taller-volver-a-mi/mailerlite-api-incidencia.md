@@ -118,12 +118,56 @@ Si la API key está revocada, **todos los formularios anteriores devuelven 500**
 
 ## 4 · Acciones derivadas inmediatas
 
-- [ ] **13 may (Daniel):** pegar / subir el informe técnico previo si existe.
-- [ ] **13 may o 14 may (Daniel + Claude):** ejecutar paso 2 (diag endpoint) tras deploy completado.
-- [ ] **Si paso 2 devuelve algo en `false`:** corregir env vars en Netlify.
-- [ ] **Si paso 3 devuelve 401:** regenerar `MAILERLITE_API_KEY` y actualizar Netlify.
-- [ ] **Tras corrección:** repetir paso 2 + test E2E (paso 4) + verificar que las 51 suscriptoras al 9 may siguen en MailerLite (no se han perdido).
-- [ ] **Documentar resolución en este archivo** con fecha + qué falló + qué se hizo.
+### 4.1 · Intento de diagnóstico desde Code · 13 may ~13:35 CEST
+
+- ✅ Code intentó ejecutar paso 2 (`curl https://twimproject.com/.netlify/functions/subscribe?diag=1`) desde el sandbox.
+- ❌ **Bloqueado:** el sandbox de Claude Code devuelve `Host not in allowlist` para `twimproject.com`. **Este bloqueo no está explícito en CLAUDE.md** — el doc solo cita `api.netlify.com` y `connect.mailerlite.com` como hosts bloqueados (sección «APIs bloqueadas en el sandbox»). El bloqueo del propio dominio público es restricción del sandbox no documentada hasta ahora. Acción de mejora pendiente: añadir `twimproject.com` a esa lista en CLAUDE.md o aclarar que el sandbox bloquea cualquier host externo por defecto.
+- 📋 Conclusión: Code no puede ejecutar el paso 2 ni los siguientes sin la ayuda de Daniel desde un navegador o un terminal externo al sandbox.
+
+### 4.2 · Lo que Daniel debe hacer en 90 segundos (cuando tenga 1 min libre entre pacientes)
+
+1. Abrir en navegador (preferiblemente en modo incógnito para evitar caché): `https://twimproject.com/.netlify/functions/subscribe?diag=1`.
+2. Copiar el JSON completo de la respuesta y pegarlo en chat o en un PR a este archivo (sección 4.3).
+
+Eso es todo. Con el JSON, Code identifica:
+
+- Si todas las env vars están en `true` → la API key probablemente está OK; problema es otro y se diagnostica con un test E2E desde la propia landing del Cap III.
+- Si `MAILERLITE_API_KEY` o alguna `MAILERLITE_GROUP_*` está en `false` → falta env var en Netlify; Code dice exactamente cuál crear.
+- Si el endpoint devuelve **500 o error** sin JSON → el problema es del runtime de la function (Node, fetch, deploy fallido) y se diagnostica desde los logs de Netlify.
+
+### 4.3 · Resultado del diagnóstico (rellenar tras paso 4.2)
+
+```
+Fecha de captura: __________
+Endpoint URL probada: https://twimproject.com/.netlify/functions/subscribe?diag=1
+HTTP status code: __________
+Respuesta JSON completa:
+__________
+
+Interpretación de Code:
+__________
+
+Fix aplicado:
+__________
+
+Fecha de resolución:
+__________
+```
+
+### 4.4 · Acciones siguientes según resultado
+
+- Si `MAILERLITE_API_KEY: false` → Daniel añade env var en Netlify con la API key actual del dashboard MailerLite.
+- Si la key está en `true` pero los forms siguen fallando → probar POST manual al endpoint con curl + body JSON desde un navegador (con DevTools Console o desde Postman) y ver el error 4xx/5xx que devuelve. Si 401 desde MailerLite → key revocada, regenerar.
+- Si todo está OK pero los forms del Cap III no convierten → no es problema técnico, es de UX/copy/tracking — diagnóstico distinto.
+
+### 4.5 · Verificación de integridad post-fix
+
+Tras cualquier intervención en la API key o env vars:
+
+- Confirmar que las 51 suscriptoras al 9 may (REACCION-9-MAYO §3) siguen presentes en MailerLite.
+- Hacer test E2E desde `/libro/capitulo-3/` con email tuyo de prueba.
+- Confirmar que el email D0 «Aquí lo tienes» del lead magnet llega en <60s.
+- Confirmar que el suscriptor de prueba aparece en el grupo «Lectores · Engranajes Cap3».
 
 ---
 

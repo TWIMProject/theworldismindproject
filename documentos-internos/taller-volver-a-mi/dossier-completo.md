@@ -128,10 +128,7 @@ Las 12 decisiones operativas que faltan están en `piezas-pendientes.md`:
 
 ### Tipografía
 
-- Títulos: **DM Serif Display**
-- Cuerpo: **DM Sans**
-
-> ⚠️ **Discrepancia con el repo.** El `instagram-sistema-visual-marca.md` §3.2 declara como tipografía actual de TWIM **Instrument Serif (titulares) + Barlow Condensed (kickers, body, URL)**. DM Serif Display + DM Sans no aparece en el sistema visual documentado. Antes de maquetar la landing pública del taller hay que resolver con Daniel cuál es la pareja vigente. Documentado en `piezas-pendientes.md` punto T1.
+> 🔵 **Discrepancia resuelta el 13 may en PR #151.** El dossier proponía DM Serif Display (títulos) + DM Sans (cuerpo). Daniel confirmó que se usa el **sistema visual vigente** del repo: **Instrument Serif (titulares) + Barlow Condensed (kickers, body, URL)**. La pareja DM Serif Display + DM Sans queda descartada. Ver `decisiones-cerradas.md` T1.
 
 ### Logo
 
@@ -151,7 +148,7 @@ Mind World Project, tratamiento monocromático, ya procesado para fondos claros 
 - TWIM Podcast (Ep.4 publicado con artes y carrusel de Instagram sobre autosabotaje)
 - Newsletter TWIM **«Cartas desde el diván»** con pop-up de suscripción especificada para MailerLite
 
-> ⚠️ **Discrepancia con el repo.** La newsletter está oficialmente desplegada como **«Te escribo»** en este repo y en producción (`contenido-rrss/te-escribo-newsletters/`, hero de `index.html`, etc.). «Cartas desde el diván» **no existe en el repo** y probablemente es nombre antiguo o de otra sesión. Cualquier entregable del taller debe usar **«Te escribo»**.
+> 🔵 **Discrepancia resuelta el 13 may en PR #151.** Daniel confirmó que la newsletter es **«Te escribo»** (verdad operativa del repo). «Cartas desde el diván» queda descartado. Cualquier entregable del taller usa **«Te escribo»**.
 
 ---
 
