@@ -112,7 +112,7 @@ Las dos discrepancias bloqueantes quedaron resueltas el 13 may con la confirmaci
 
 **Pendiente (⚠️):**
 
-1. **MailerLite API** — Daniel debe ejecutar paso 2 del `mailerlite-api-incidencia.md` desde su navegador (Code no puede curl al endpoint por restricción de sandbox: `twimproject.com` no está en allowlist). Cuando Daniel pegue el JSON resultante, Code lo diagnostica y propone fix.
+1. ~~**MailerLite API**~~ ✅ **RESUELTO el 13 may ~14:30 CEST**. Daniel ejecutó paso 2 (diag endpoint), Code confirmó que la API key NO está revocada (hipótesis original falsada). Estado real: 4 env vars secundarias ausentes (`INSCRITAS_TDAH`, `INSCRITAS_BACH`, `LEAD_IMPOSTORA`, `LEAD_BURNOUT`) — **no bloquean el taller Volver a Mí ni la captación newsletter actual**. Detalle en `mailerlite-api-incidencia.md` §4.3-§4.4. Pendiente menor opcional: Daniel decide si activa los 4 forms secundarios o desactiva las landings asociadas (decisión no urgente).
 2. **Subir al repo los 7 artefactos que Daniel tiene pero aún no están** (PDFs preparatorios, landing HTML existente del taller, logos procesados, análisis comparativo, benchmarks, proyecciones, informe técnico previo).
 3. **Confirmar dominio email** — `theworldismindproject.com` activo sí/no.
 4. **Decisión sobre lead magnet específico del taller** (PDF gratuito «Cómo saber si tienes hambre de mirada» como gancho de Ads, no marcado por Daniel pero recomendado por Code).
