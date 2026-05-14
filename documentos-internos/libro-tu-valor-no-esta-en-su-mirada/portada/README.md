@@ -2,7 +2,9 @@
 
 > Carpeta creada el **14 may 2026** tras la decisión de Daniel de subir la portada/contraportada como PDF a Amazon KDP (no recurrir a Cover Creator).
 >
-> Esta es la **versión 1 (mock para revisión visual)**. La versión final para imprenta requiere ajustes con las fuentes oficiales del sistema visual TWIM cuando estén disponibles como TTF, y recalcular el lomo cuando se conozca el conteo final de páginas tras maquetación.
+> **Estado a 14 may 2026 (segundo movimiento del día):** v1 **descartada por Daniel** por ser demasiado editorial-académica (verde TWIM dominante + tipografía sobria · falta gancho dopaminérgico para el público objetivo concreto del libro). Tres conceptos alternativos v2 documentados en `conceptos-portada-v2.md` esperando decisión de Daniel.
+>
+> **Regla aplicable a partir de ahora:** las piezas de venta TWIM se diseñan bajo el criterio dopamina-comercial (`CLAUDE.md` + `documentos-internos/marca-twim-criterio-dopamina-comercial.md`).
 
 ---
 

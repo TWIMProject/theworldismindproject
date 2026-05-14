@@ -13,9 +13,11 @@ Produce dos PDFs:
 Diseño: Opción A del documento `propuestas-edicion-libro-2026-05-14.md` §4
 (verde dominante TWIM `#173D30`).
 
-Asunción de páginas: 250 (provisional). El ancho del lomo cambia cuando se
-conozca el conteo final tras maquetación. Para recalcular, modificar la
-constante NUM_PAGES y volver a ejecutar el script.
+Asunción de páginas: 185 (provisional, punto medio del rango 170-200
+estimado tras maquetación con Lora 11pt interlineado 1.4 + preliminares
++ apéndice 21 días). El ancho del lomo cambia cuando se conozca el conteo
+final tras maquetación. Para recalcular, modificar la constante NUM_PAGES
+al inicio y volver a ejecutar el script.
 
 Tipografía: Times-Roman + Helvetica como **aproximación built-in** a las
 fuentes oficiales del sistema visual TWIM (Instrument Serif + Barlow
@@ -36,7 +38,10 @@ from reportlab.pdfgen import canvas
 # CONFIGURACIÓN
 # ==============================================================================
 
-NUM_PAGES = 250  # provisional · recalcular cuando esté el conteo final
+NUM_PAGES = 185  # provisional (estimación tras maquetación Word: 170-200 págs
+                 # con Lora 11pt interlineado 1.4 + preliminares + apéndice).
+                 # Recalcular cuando Daniel termine la maquetación real en Word
+                 # y conozca el conteo exacto.
 
 # Paleta TWIM (sistema visual canónico)
 GREEN_DARK = HexColor("#173D30")

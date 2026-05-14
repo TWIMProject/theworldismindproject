@@ -56,6 +56,23 @@ Revertir inmediatamente al `netlify.toml` previo (no parchear), abrir PR de reve
 
 ---
 
+## Regla inviolable · Diseño de piezas visuales de venta · criterio dopamina-comercial
+
+> Regla declarada por Daniel el 14 may 2026. Detalle operativo completo en `documentos-internos/marca-twim-criterio-dopamina-comercial.md`.
+
+Toda pieza visual de venta del proyecto TWIM (portadas de libros, landings comerciales, anuncios Meta Ads, miniaturas YouTube, lead magnets cuando se diseñan para captar) debe estar orientada a **maximizar la respuesta dopaminérgica del público objetivo concreto** del producto. La marca atrae para que el cliente compre, reciba la ayuda real del producto y se cuide.
+
+**Distinción inviolable: seducir con la verdad, no con la mentira.** La regla dopamina-comercial no autoriza clickbait, falsa escasez, promesas imposibles, testimonios falsos ni estética que ridiculice al cliente. Sí autoriza estética premium contemporánea, promesa visible del beneficio real, imágenes que disparen identificación, paletas y tipografías propias del producto (más allá de la paleta TWIM editorial).
+
+**Convivencia con el resto de reglas TWIM:**
+
+- En activos editoriales puros (newsletter «Te escribo», cartas, carruseles editoriales A1/A2, podcast, libro Engranajes ya publicado) prevalecen las reglas previas (paleta TWIM `#173D30 / #265C4B / #C2A78B / #FDFCFA`, Instrument Serif + Barlow Condensed, anti-coaching, sin emojis, sin frases motivacionales).
+- En activos comerciales nuevos (portadas de libros nuevos, landings de venta, anuncios, miniaturas YouTube) prevalece el criterio dopamina-comercial con los límites éticos del §2 del doc operativo. Cada producto puede tener su propio mapa visual orientado a SU cliente objetivo.
+
+**Antes de producir cualquier pieza de venta nueva:** seguir el protocolo de 3 preguntas + benchmark obligatorio + test de validación documentados en el §3 del doc operativo.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
