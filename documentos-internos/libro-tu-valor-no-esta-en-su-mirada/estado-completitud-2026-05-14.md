@@ -93,50 +93,25 @@
 
 ## 3 · Lo que falta para mercado
 
-### 3.1 · Incoherencias internas que deben resolverse antes de imprenta
+### 3.1 · Incoherencias internas — TODAS RESUELTAS el 14 may
+
+> Daniel decidió las 4 inconsistencias el 14 may. Las ediciones concretas para incorporar al `.docx` están en `propuestas-edicion-libro-2026-05-14.md`.
 
 **A) Tres «Capítulos Nuevos» sin numeración definitiva**
 
-| Aparece como | Tema | Decisión necesaria |
-|---|---|---|
-| «CAPÍTULO NUEVO (PARTE III)» | Redes sociales como gimnasio del bucle | ¿Pasa a ser Cap 11 (recolocando los demás)? ¿Queda como «Intermedio» / «Tránsito»? |
-| «CAPÍTULO NUEVO (PARTE IV)» | Hablar de esto con tu pareja sin convertirlo en arma | Misma decisión |
-| «CAPÍTULO NUEVO (PARTE V)» | El reordenamiento de los vínculos | Misma decisión |
+✅ **Resuelto · Opción B** (Daniel · 14 may). Renombrar los 3 a «Intermedios» sin numeración, coherentes con el tránsito sobre el cuerpo de Parte I→II. La introducción no necesita cambios mayores (la cuenta de capítulos por parte se mantiene). Texto exacto del renombramiento y párrafos de entrada en `propuestas-edicion-libro-2026-05-14.md` §1.
 
-**Opciones para Daniel:**
-- **Opción A · numerar como capítulos plenos.** El libro pasa a tener **22 capítulos**. Renumerar cap 11→12, 12→13, etc. La introducción que ahora promete «cuatro capítulos en Parte III, cuatro en Parte IV, cuatro en Parte V» se mantiene si la Parte III pasa a 5 caps, Parte IV pasa a 5, Parte V pasa a 5. **Inconsistencia con la intro:** la intro actual dice 5+4+4 caps en III/IV/V. Si los nuevos pasan a numerados, hay que actualizar la intro a 6+5+5.
-- **Opción B · dejar como tránsitos sin numeración.** Renombrar a «Intermedio sobre redes sociales», «Intermedio sobre conversación con la pareja», «Intermedio sobre reordenamiento de vínculos». Quedan como piezas reflexivas entre capítulos pero sin entrar en la cuenta. Coherente con el tránsito ya existente entre Parte I y II.
-- **Recomendación:** **Opción B**, porque (1) la intro queda intacta, (2) la cadencia de capítulos numerados queda limpia, (3) los tres nuevos se parecen más a piezas reflexivas que a capítulos estructurales — son ampliaciones temáticas, no nuevos pilares del marco.
+**B) Promesa del «protocolo 21 días al final del libro»**
 
-**B) Promesa del «protocolo 21 días al final del libro» en la introducción**
-
-La introducción dice (línea 103): *«Un protocolo de tres semanas, al final del libro, para que lo que entiendes con la cabeza empiece a notarse en el cuerpo».*
-
-En la versión actual del manuscrito **el protocolo 21 días NO existe como pieza separada al final**. Lo que aparece es:
-- Herramientas y observaciones integradas al final de varios capítulos (las «*observaciones*» en cursiva).
-- Cap 17 · El espejo propio (que es el ejercicio diario clínico).
-- Cap 18 · El manual de recaídas.
-- Cap 19 · Cierre.
-
-**Inconsistencia. Decisión necesaria:**
-- **Opción A:** restaurar el protocolo 21 días como Apéndice al final del libro (estaba en la versión del 11 may con Semana 1 · Ver / Semana 2 · Interrumpir / Semana 3 · Construir).
-- **Opción B:** reescribir la introducción para no prometer un protocolo separado. Sustituir por algo tipo «las herramientas que aparecen al final de cada capítulo construyen, juntas, un proceso de unas semanas».
-- **Recomendación:** **Opción A**. El protocolo 21 días era una pieza muy fuerte como cierre — daba acción concreta al lector. Y ya estaba redactado en la v 11 may. Re-integrarlo cuesta poco esfuerzo.
+✅ **Resuelto · Recuperar** (Daniel · 14 may). Se restaura el «Apéndice práctico · 21 días de mapa de salida» entre el Capítulo 19 y la sección «Sobre este libro». Texto adaptado del manuscrito v 11 may, eliminando la «Hoja de Emergencia» (ya integrada en Cap 15) y la Nota final del autor (ya cumple esa función el Cap 19). Texto completo en `propuestas-edicion-libro-2026-05-14.md` §2.
 
 **C) Anexo · El audio de la pausa de noventa segundos**
 
-Estaba en la versión del 11 may con texto del puente, copy de landing y email automático de entrega. **No aparece en la versión del 14 may.**
-
-**Decisión necesaria:**
-- ¿Se incluye el anexo al final del libro? Si sí, hay que producir el audio + landing + automation antes de imprenta.
-- ¿Se elimina la mención al audio del libro? Entonces el cap 13 (pausa de 90 s) queda solo como técnica escrita sin recurso descargable.
-- **Recomendación:** **mantener anexo audio**. Es la pieza que convierte el libro en gancho hacia la newsletter y hacia el ecosistema digital TWIM. Quitarlo cierra el funnel.
+✅ **Resuelto · NO se incluye** (Daniel · 14 may). El libro es formato físico (Amazon KDP, posible Kindle). Sin audio descargable. Búsqueda exhaustiva confirma que el manuscrito v 14 may ya no contiene menciones al recurso descargable — solo escenas narrativas con la palabra «audio» (audio de WhatsApp, audio de pareja, etc.) que se conservan. Detalle en `propuestas-edicion-libro-2026-05-14.md` §5.
 
 **D) Contraportada**
 
-No aparece en la versión del 14 may. La v 11 may la tenía redactada.
-
-**Decisión necesaria:** restaurar contraportada o reescribirla con el nuevo enfoque (22 piezas en lugar de 16, etc.).
+✅ **Resuelto · Redactada** (Daniel · 14 may aprueba «portada y contraportada adecuadas»). Texto editorial de contraportada en `propuestas-edicion-libro-2026-05-14.md` §3 con notas de maquetación. Specs de portada delantera + lomo en §4 del mismo documento (formato 6×9", paleta TWIM, tipografías Instrument Serif + Barlow Condensed).
 
 ---
 
