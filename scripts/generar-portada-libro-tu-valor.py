@@ -25,8 +25,7 @@ correctas — esta es una v1 para revisión visual de Daniel.
 Reproducibilidad: `python3 scripts/generar-portada-libro-tu-valor.py`
 """
 
-import io
-import subprocess
+import random
 from pathlib import Path
 
 from reportlab.lib.colors import HexColor
@@ -226,7 +225,7 @@ def draw_spine(c):
     # Si el lomo es muy estrecho, mejor solo el título corto
 
     if SPINE_W >= 0.5 * inch:
-        # Lomo amplio: título arriba, autor abajo, logo centro
+        # Lomo amplio (≥ 0.5"): título completo arriba, autor abajo, logo centro.
         c.saveState()
         c.translate(spine_center_x, WRAP_H / 2)
         c.rotate(90)
@@ -259,6 +258,31 @@ def draw_spine(c):
         c.drawString(-tw / 2, -0.25 * inch, sello2)
 
         c.restoreState()
+    elif SPINE_W >= 0.25 * inch:
+        # Lomo estrecho (0.25"-0.5"): solo título corto en menor tamaño.
+        # KDP recomienda no poner texto en lomos < 0.25", así que aquí
+        # pintamos versión reducida con el título y nada más.
+        print(f"AVISO · lomo estrecho ({SPINE_W_IN:.3f}\" / {SPINE_W_IN * 25.4:.1f} mm) · "
+              "se dibuja versión reducida del lomo solo con título corto.")
+        c.saveState()
+        c.translate(spine_center_x, WRAP_H / 2)
+        c.rotate(90)
+
+        c.setFillColor(CREAM)
+        c.setFont("Times-Roman", 10)
+        titulo_corto = "Tu valor no está en su mirada"
+        tw = c.stringWidth(titulo_corto, "Times-Roman", 10)
+        c.drawString(-tw / 2, 0, titulo_corto)
+
+        c.restoreState()
+    else:
+        # Lomo demasiado estrecho (< 0.25"): KDP advierte que no se imprima
+        # texto. Avisar y dejar solo el fondo verde.
+        print(f"AVISO · lomo demasiado estrecho ({SPINE_W_IN:.3f}\" / "
+              f"{SPINE_W_IN * 25.4:.1f} mm) para imprimir texto según "
+              "recomendación KDP. Lomo se queda en verde sólido sin texto. "
+              "Considera aumentar el conteo de páginas (NUM_PAGES) o el "
+              "grosor del papel para tener más lomo.")
 
 
 # ==============================================================================
@@ -365,7 +389,6 @@ def draw_back(c):
     barcode_y = isbn_y + 0.08 * inch
     barcode_h = 0.22 * inch
     x_bar = isbn_x + 0.06 * inch
-    import random
     random.seed(42)
     while x_bar < isbn_x + 1.24 * inch:
         w = random.choice([0.4, 0.8, 1.2]) * 0.5
