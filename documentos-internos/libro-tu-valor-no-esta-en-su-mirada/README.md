@@ -16,7 +16,7 @@
 | `manuscrito-YYYY-MM-DD.md` | Misma versión extraída a markdown. Diffeable por git, legible por Claude sin herramientas externas. | Se genera automáticamente cada vez que entra una nueva `.docx`. |
 | `README.md` | Este archivo. Índice, estado, workflow. | Cuando cambie el estado del libro o el workflow. |
 
-**Versión actual:** `manuscrito-2026-05-11.docx` + `manuscrito-2026-05-11.md`.
+**Versión actual:** `manuscrito-2026-05-14.docx` + `manuscrito-2026-05-14.md`. **Estado: ~92 % completo** — manuscrito editorial redactado entero, pendientes 4 inconsistencias internas + 2 decisiones editoriales + producción técnica + integración ecosistema. Detalle en `estado-completitud-2026-05-14.md`.
 
 ---
 
@@ -123,6 +123,7 @@ print(output)
 | 11 may 2026 | Script de extracción mejorado tras review de Copilot en PR #140 | `re.sub(r'(?<!\*)\*\*\*\*(?!\*)', '', output)` elimina artefactos `****` espurios del cierre + apertura bold adyacentes, sin tocar `***` (bold-italic) ni `*****` (bold-italic + bold). `.md` regenerado. |
 | 11 may 2026 | Revisión específica del temario completada | Documento `revision-temario-2026-05-11.md` mapea los 16 capítulos reales, detecta inconsistencias entre índice anunciado y desarrollo, propone 4 acciones de prioridad alta y abre 5 decisiones editoriales que requieren conversación con Daniel. Veredicto: temario sólido conceptualmente, problemas son de gestión documental, no de fondo. |
 | 11 may 2026 | `manuscrito-limpio-2026-05-11.md` generado tras petición explícita de Daniel | Versión editorial limpia del manuscrito v1: índice actualizado a los 16 capítulos reales con las 5 máscaras correctas (Salvadora · Radar · Complaciente · Devota · Víctima), notas estratégicas del consultor IA eliminadas, disclaimer clínico añadido en intro, placeholders explícitos en los huecos del embudo del audio. **NO se redactó contenido nuevo** — los 15 capítulos en estado de esqueleto se conservan como esqueleto. La Introducción, cap 8, Epílogo + Apéndice 21 días + Rompe-cristales y Nota final están redactados completos. Decisiones tomadas: Kohut+Freud (sin apego), voz neutra, disclaimer sí, foco B2C. Pendiente: completar URL y nombre de la landing del audio antes de imprimir. |
+| **14 may 2026** | Daniel sube `manuscrito-2026-05-14.docx` (175 KB · ~2,5× la v anterior) tras 3 días de trabajo intenso de redacción | **Salto enorme**: 19 capítulos numerados redactados completos en prosa + 3 «Capítulos Nuevos» sin numeración final + 1 tránsito sobre el cuerpo entre Parte I y Parte II. La estructura pasa de 5 partes/16 caps (v 11 may) a 5 partes/22 piezas (v 14 may). Auditoría completa en `estado-completitud-2026-05-14.md` con mapa por capítulo, 4 inconsistencias internas detectadas (3 caps sin numerar · protocolo 21 días prometido pero ausente · anexo audio ausente · contraportada ausente), 2 decisiones editoriales aún abiertas, cronograma sugerido hasta lanzamiento KDP en julio 2026 sincronizado con el taller Volver a Mí. **Veredicto: ~92 % completo**. |
 
 **Próximo paso operativo previsto:** iterar contenido del manuscrito. Daniel quiere perfeccionar el libro porque será fuente de ingresos cuando salga a la venta. Las propuestas concretas de iteración se anotarán aquí cuando se acuerden, junto con la versión a la que aplican.
 
