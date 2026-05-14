@@ -115,14 +115,26 @@
 
 ---
 
-### 3.2 · Decisiones editoriales aún abiertas (de la `revision-temario-2026-05-11.md` §5)
+### 3.2 · Decisiones editoriales aún abiertas — TODAS RESUELTAS el 14 may
 
-Tres ya cerradas el 11 may (Kohut+Freud sin apego · voz neutra · disclaimer clínico sí). Dos pendientes:
+Tres ya cerradas el 11 may (Kohut+Freud sin apego · voz neutra · disclaimer clínico sí). Las dos restantes de la `revision-temario-2026-05-11.md` §5 se cierran el 14 may:
 
-| Decisión | Estado actual del manuscrito | Necesita |
+| Decisión | Estado tras 14 may |
+|---|---|
+| §5.3 · Cross-sell explícito del programa «Deja de Buscarte en Otros» en el cierre del libro | ✅ **NO** (Daniel · 14 may). Mantener el libro como pieza editorial autónoma, sin venta directa del programa en su cierre. El cross-sell se gestiona desde la web/newsletter, no desde el libro físico. Coherente con la voz Daniel anti-comercial. |
+| §5.5 · Refuerzo B2B con escenas adicionales | ✅ **SÍ** (Daniel · 14 may). Crear **2-3 escenas adicionales** distribuidas en distintos contextos vitales (no solo laborales · también pareja, amistad, familia) para que el lector se reconozca en planos distintos del cotidiano. Refuerza B2C (audiencia con múltiples vínculos activos) y abre B2B (escenas laborales utilizables para In-Company). |
+
+**Propuesta operativa para Daniel cuando vaya a redactar las escenas adicionales** (no se materializa en este PR · workflow del README dice que la redacción del manuscrito la hace Daniel en Word):
+
+| Capítulo candidato | Tipo de escena que aporta más | Por qué encaja |
 |---|---|---|
-| §5.3 · Mencionar explícitamente la diferencia libro ↔ programa «Deja de Buscarte en Otros» | El manuscrito v14 may **no menciona el programa** en el cierre. | Decisión Daniel · ¿añadir un párrafo en cap 19 o en «Sobre este libro» que invite al programa? Argumento a favor: cerrar el funnel. Argumento en contra: rompe la voz Daniel anti-comercial. |
-| §5.5 · Refuerzo B2B con escenas laborales | El manuscrito tiene **algunas** escenas laborales (cap 2 reunión, ejemplos de feedback en el trabajo) pero no explícitamente B2B. | Decisión Daniel · ¿añadir 2-3 escenas más laborales o mantener foco 100 % B2C? |
+| Cap 2 «Cuando el espejo falla» | Pareja (escenario «presencia intermitente») | Ancla el escenario en una relación adulta concreta, ahora algo abstracto. |
+| Cap 5 «El disparador» | Amistad (mensaje no contestado del grupo) | Demuestra que el bucle no se activa solo con pareja · diversifica contextos. |
+| Cap 6 «La búsqueda» o cap 12 | Laboral (evaluación de desempeño, email de jefa, reunión) | Refuerza B2B. Una sola escena potente, no convertir en libro de management. |
+| Cap 9 «La estafa de la buena persona» | Familiar (relación con madre · hermano · cuidado de progenitor) | Cubre el contexto familiar hoy poco representado. |
+| Cap 17 «El espejo propio» o cap intermedio Parte V | Amistad nueva (vínculos emergentes tras el trabajo) | Cierra con escenas sanas de vínculos sostenibles. |
+
+Recomendación: priorizar **3 escenas** entre las 5 candidatas (laboral + amistad + familiar). Pareja ya tiene mucho peso · no hace falta más.
 
 ---
 
