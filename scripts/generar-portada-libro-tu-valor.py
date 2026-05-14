@@ -36,7 +36,10 @@ from reportlab.pdfgen import canvas
 # CONFIGURACIÓN
 # ==============================================================================
 
-NUM_PAGES = 250  # provisional · recalcular cuando esté el conteo final
+NUM_PAGES = 185  # provisional (estimación tras maquetación Word: 170-200 págs
+                 # con Lora 11pt interlineado 1.4 + preliminares + apéndice).
+                 # Recalcular cuando Daniel termine la maquetación real en Word
+                 # y conozca el conteo exacto.
 
 # Paleta TWIM (sistema visual canónico)
 GREEN_DARK = HexColor("#173D30")
