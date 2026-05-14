@@ -2,36 +2,43 @@
 
 > Carpeta creada el **14 may 2026** tras la decisión de Daniel de subir la portada/contraportada como PDF a Amazon KDP (no recurrir a Cover Creator).
 >
-> **Estado a 14 may 2026 (segundo movimiento del día):** v1 **descartada por Daniel** por ser demasiado editorial-académica (verde TWIM dominante + tipografía sobria · falta gancho dopaminérgico para el público objetivo concreto del libro). Tres conceptos alternativos v2 documentados en `conceptos-portada-v2.md` esperando decisión de Daniel.
+> **Estado a 14 may 2026 (tercer movimiento del día):**
+> - v1 (verde TWIM dominante) **descartada por Daniel** por no cumplir el criterio dopamina-comercial.
+> - v2 con tres conceptos alternativos (A · ojo · B · cuerda · C · llave) documentados en `conceptos-portada-v2.md`.
+> - **Daniel elige el Concepto C «La llave dentro»** (paleta crema + verde botella + acentos dorados + ilustración minimalista de llave).
+> - Maqueta tipográfica y compositiva regenerada en `portada-front-preview.pdf` y `portada-wraparound-kdp.pdf` con la paleta del Concepto C y **placeholder** centrado para la ilustración real de la llave (que produce diseñador o flujo IA generativa).
 >
-> **Regla aplicable a partir de ahora:** las piezas de venta TWIM se diseñan bajo el criterio dopamina-comercial (`CLAUDE.md` + `documentos-internos/marca-twim-criterio-dopamina-comercial.md`).
+> **Regla aplicable:** las piezas de venta TWIM se diseñan bajo el criterio dopamina-comercial (`CLAUDE.md` + `documentos-internos/marca-twim-criterio-dopamina-comercial.md`).
 
 ---
 
 ## 1 · Archivos en esta carpeta
 
-| Archivo | Función |
-|---|---|
-| `portada-front-preview.pdf` | Solo la portada delantera (6.25 × 9.25" con sangrado). Para previews, mockups de redes y maquetación de la landing pública del libro. |
-| `portada-wraparound-kdp.pdf` | Portada completa (back cover + lomo + front cover) en el formato que pide Amazon KDP para tapa blanda 6×9". Es el archivo que se sube como `Book cover` en el flujo de publicación KDP. |
-| `README.md` | Este documento. |
+| Archivo | Función | Estado |
+|---|---|---|
+| `portada-front-preview.pdf` | Maqueta de la portada delantera (6.25 × 9.25" con sangrado) en Concepto C · paleta crema + texto verde botella + placeholder centrado de la llave. | v2 con placeholder |
+| `portada-wraparound-kdp.pdf` | Maqueta wraparound back+spine+front en el formato KDP. | v2 con placeholder · **NO subir a KDP hasta integrar la ilustración real de la llave** |
+| `conceptos-portada-v2.md` | Los 3 conceptos visuales propuestos tras descarte de v1 (A·ojo · B·cuerda · C·llave) + comparativa + recomendación. | ✅ |
+| `brief-diseno-portada-v2-concepto-c.md` | Dirección artística completa para producir la ilustración de la llave (diseñador humano o IA generativa) + prompts sugeridos + checklist de validación + integración técnica con el script. | ✅ |
+| `README.md` | Este documento. | ✅ |
 
 El script reproducible que genera ambos PDFs vive en `scripts/generar-portada-libro-tu-valor.py`.
 
 ---
 
-## 2 · Parámetros de la versión 1
+## 2 · Parámetros de la versión 2 (Concepto C)
 
 | Parámetro | Valor | Notas |
 |---|---|---|
 | Formato | Tapa blanda Amazon KDP | El más vendido para no-ficción en español. |
 | Trim size | 6 × 9 pulgadas (15,24 × 22,86 cm) | Estándar KDP. |
 | Sangrado | 0,125 pulgadas (3,175 mm) cada lado | Obligatorio KDP. |
-| Páginas asumidas | **250** | **Provisional**. Recalcular cuando esté el conteo final tras maquetación. |
-| Ancho de lomo | 0,563 pulgadas (14,3 mm) | Calculado con fórmula KDP papel blanco/crema: páginas × 0,002252". |
-| Wraparound total | 12,813 × 9,25 pulgadas | Back + spine + front + sangrados. |
-| Paleta | Verde TWIM oscuro dominante `#173D30` con beige `#C2A78B` y crema `#FDFCFA` | Opción A de las 3 propuestas en `propuestas-edicion-libro-2026-05-14.md` §4.3. |
+| Páginas asumidas | **185** | **Provisional · punto medio del rango 170-200 estimado**. Recalcular cuando Daniel termine la maquetación y conozca el conteo real. |
+| Ancho de lomo | 0,417 pulgadas (10,6 mm) | Calculado con fórmula KDP papel blanco/crema: páginas × 0,002252". Por estar entre 0.25" y 0.5", el script imprime versión reducida del lomo solo con título corto (sin autor ni sello rotados). |
+| Wraparound total | 12,667 × 9,25 pulgadas | Back + spine + front + sangrados. |
+| Paleta | Fondo crema cálido `#F4EDE0` · texto verde botella `#1F4A3A` · acentos dorados `#C19E5A` · cuerpo en negro suave `#3D3530` | Concepto C de `conceptos-portada-v2.md`. |
 | Tipografía | Times-Roman + Times-Italic + Helvetica · **placeholders built-in** | La versión final debe usar **Instrument Serif** (titulares) + **Barlow Condensed** (kickers, body). Las built-ins son aproximación visual razonable para que Daniel revise composición y peso. |
+| Ilustración central | **Placeholder** rectangular 1.5 × 1.5" centrado | El diseñador o flujo IA generativa produce la ilustración real según `brief-diseno-portada-v2-concepto-c.md`. |
 
 ---
 
