@@ -94,10 +94,14 @@ SAFE_MARGIN = 0.5 * inch
 
 def draw_wrapped(c, text, x, y, max_width, font_name, font_size,
                  leading, fill=None, align="left"):
-    # default fill: TEXT_SOFT (definido en la sección de paleta arriba)
+    """Texto con line-wrap manual. Devuelve y final tras el último renglón.
+
+    Si `fill` es None, usa TEXT_SOFT (negro suave editorial) como color por
+    defecto. Se evita poner TEXT_SOFT como valor por defecto en la firma
+    para no acoplar la firma a una constante global del módulo.
+    """
     if fill is None:
         fill = TEXT_SOFT
-    """Texto con line-wrap manual. Devuelve y final tras el último renglón."""
     c.setFillColor(fill)
     c.setFont(font_name, font_size)
     words = text.split()
