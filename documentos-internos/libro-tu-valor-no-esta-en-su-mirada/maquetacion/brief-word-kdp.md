@@ -78,8 +78,8 @@ Modificar el estilo «Título 1»:
 - **Alineación:** Centrada
 - **Espacio antes:** 144 pt (≈ 5 cm, para empujar al centro de la página)
 - **Espacio después:** 36 pt
-- **Salto de página antes:** Activado (cada Parte empieza en página nueva)
-- **Pagina recto:** activar «Inicio de sección · Página impar» (Word: pestaña Diseño → Saltos → Inicio de sección → Página impar)
+- **Salto de página antes:** activado en el propio estilo (cada Parte empieza en página nueva).
+- **Página recto (impar):** esto **no** se configura en el estilo · es un tipo de salto que se inserta manualmente justo antes de cada Heading 1. Pasos en Word: situar el cursor justo antes del título de Parte → pestaña Disposición → Saltos → en el bloque «Saltos de sección», elegir **«Página impar»**. Word automáticamente inserta una página en blanco si la página actual está en par, para que la Parte siempre empiece en página impar (lado derecho del libro abierto).
 
 ### 2.2 · Título 2 · Capítulos («Capítulo 1», «Capítulo 2»…)
 
@@ -91,9 +91,9 @@ Modificar el estilo «Título 2»:
 - **Alineación:** Centrada
 - **Espacio antes:** 96 pt
 - **Espacio después:** 24 pt
-- **Salto de página antes:** Activado
-- **Página recto:** activar
-- **Mantener con el siguiente:** activado
+- **Salto de página antes:** activado en el propio estilo.
+- **Página recto (impar):** igual que con Heading 1 · se inserta manualmente un salto de sección «Página impar» antes de cada Heading 2 (Disposición → Saltos → Página impar). Word automáticamente añade página en blanco si hace falta.
+- **Mantener con el siguiente:** activado.
 
 ### 2.3 · Título 3 · Subapartados internos del capítulo
 
@@ -113,7 +113,7 @@ Modificar el estilo «Normal» o crear «Cuerpo libro»:
 
 - **Fuente:** Lora Regular
 - **Tamaño:** 11 pt
-- **Color:** negro estándar (no usar `#000000` puro · mejor `#1a1a1a` que se ve más suave en imprenta)
+- **Color:** **no usar el negro puro `#000000`**. Mejor un negro suave editorial · `#1a1a1a` (en Word: Color de fuente → Más colores → Personalizado → introducir RGB **26 · 26 · 26**). Se ve más cálido en imprenta KDP y reduce fatiga lectora.
 - **Alineación:** Justificada
 - **Interlineado:** Múltiple, 1,4
 - **Sangría de primera línea:** 0,25" (0,635 cm) — pero **no** en la primera línea tras un Heading
@@ -505,7 +505,7 @@ Si haces sustitución, hazla en todos los Heading 1, Heading 2 y Heading 3 + en 
 ### 8.3 · Subida de archivos
 
 - **Manuscrito (interior):** subir `manuscrito-maquetado-v1-interior.pdf`. Esperar a que KDP procese y verifique.
-- **Portada:** subir `portada-wraparound-kdp.pdf` (del repo). KDP recalcula y muestra preview.
+- **Portada:** subir el PDF wraparound de la **v2 final** del libro (concepto A, B o C de `portada/conceptos-portada-v2.md` ya implementado por Code tras decisión de Daniel + ilustrado por diseñador + recalculado con el conteo real de páginas tras maquetación). **NO subir `portada-wraparound-kdp.pdf` actual** · ese archivo es la v1 descartada el 14 may por no cumplir el criterio dopamina-comercial. Si por error está aún en el repo, será sustituido cuando Daniel elija concepto v2 y Code regenere. KDP recalcula y muestra preview tras la subida.
 
 ### 8.4 · Previsualización
 
