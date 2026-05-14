@@ -94,7 +94,7 @@ SAFE_MARGIN = 0.5 * inch
 
 def draw_wrapped(c, text, x, y, max_width, font_name, font_size,
                  leading, fill=None, align="left"):
-    """Texto con line-wrap manual. Devuelve y final tras el último renglón.
+    """Texto con line-wrap manual. Devuelve la coordenada `y` final tras el último renglón.
 
     Si `fill` es None, usa TEXT_SOFT (negro suave editorial) como color por
     defecto. Se evita poner TEXT_SOFT como valor por defecto en la firma
