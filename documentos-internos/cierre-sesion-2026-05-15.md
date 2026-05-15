@@ -42,7 +42,7 @@
 | **#158** | 14 may | Regla inviolable dopamina-comercial + descarte v1 + 3 conceptos v2 + brief Word→KDP | ✅ |
 | **#159** | 14 may | Escenas adicionales (laboral · amistad · familia) + portada v2 concepto C con placeholder de llave | ✅ |
 | **#160** | 14 may | Fix docstring `draw_wrapped` post-merge #159 | ✅ |
-| **#161** | 15 may | **Llave vectorial integrada en portada + ISBN/EAN-13 eliminado** | ⏳ ABIERTO (esperando Gitleaks) |
+| **#161** | 15 may | **Llave vectorial integrada en portada + ISBN/EAN-13 eliminado + este documento de cierre** | ✅ MERGEADO 15 may |
 
 ---
 
@@ -110,20 +110,18 @@ Cuando vuelva a sesión, lo primero que conviene preguntarle:
 
 ## 5 · Estado del PR #161 al cierre de sesión
 
-PR #161 (`feat(portada): integra ilustración vectorial de la llave en concepto C`) está **abierto y aprobado visualmente por Daniel** al cierre de la sesión 15 may.
+PR #161 (`feat(portada): integra ilustración vectorial de la llave en concepto C`) fue **aprobado visualmente por Daniel y MERGEADO a `main` el 15 may** (squash, commit `ab48397`). Todo su contenido ya está en `main` — no queda nada pendiente de integrar.
 
-Contenido del PR:
+Contenido del PR (ya en `main`):
 - Llave vectorial integrada en la portada (front + wraparound) reemplazando el placeholder rectangular.
 - ISBN + EAN-13 eliminados de la contraportada (Amazon KDP los añade en su flujo).
 - Fix de docstring `draw_wrapped` (continuación del PR #160).
 - Este documento de cierre de sesión.
 - README actualizado del libro con la última iteración.
 
-**Estado de checks al cierre:**
-- Netlify Header/Pages/Redirect · neutral (no afectan).
-- Gitleaks · pendiente al cerrar la sesión.
+**Incidencia Gitleaks (resuelta):** la primera ejecución del check Gitleaks se quedó atascada en `queued` ~8 min por congestión de runners de GitHub Actions y la primera notificación llegó como `failure` (fallo de infraestructura, **no** un secreto). Se reprodujo localmente con `gitleaks v8.21.2` el escaneo completo (485 commits, todo el historial + el rango del PR) → **0 hallazgos, repo limpio**. Un commit vacío de re-trigger (`4f2b538`) lanzó una ejecución nueva que pasó en verde (`conclusion: success`, run 25907219313). No se añadió ningún allowlist ni `.gitleaks.toml` porque no había nada que silenciar: el repo no contiene secretos. El workflow `secret-scan.yml` sigue intacto.
 
-**La próxima sesión** debe verificar si el PR #161 fue mergeado por Daniel (en cuyo caso todo lo descrito aquí ya está en `main`) o si quedó pendiente y debe mergearse al volver. Si Daniel dejó comentarios de review en el PR, atenderlos primero.
+**Para la próxima sesión:** todo lo de esta sesión está en `main`. No hay PRs abiertos de esta línea de trabajo. Empezar por el §6 (orden de lectura) y el §4 (pendientes de Daniel).
 
 ---
 
@@ -162,4 +160,4 @@ La próxima sesión leerá este documento, sabrá qué se ha hecho, qué decisio
 
 ---
 
-**Cierre de sesión:** 15 may 2026 · sesión `claude/improve-proposal-quality-pq3d9` · 12 PRs mergeados + 1 abierto pendiente (#161). Nos vemos en la próxima.
+**Cierre de sesión:** 15 may 2026 · sesión `claude/improve-proposal-quality-pq3d9` · 13 PRs mergeados (#145 → #161, todo en `main`, sin PRs abiertos). Nos vemos en la próxima.
