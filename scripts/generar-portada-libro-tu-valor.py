@@ -549,33 +549,12 @@ def draw_back(c):
     y = draw_wrapped(c, bio, text_x, y, text_width,
                      "Times-Roman", 8, 11, fill=TEXT_SOFT)
 
-    # ---------- ISBN · código de barras placeholder ----------
-    isbn_x = BACK_X + TRIM_W - 1.7 * inch
-    isbn_y = BLEED + 0.45 * inch
-
-    # Caja blanca para ISBN (KDP requiere fondo blanco para el código de barras)
-    c.setFillColor(HexColor("#FFFFFF"))
-    c.rect(isbn_x, isbn_y, 1.3 * inch, 0.55 * inch, fill=1, stroke=0)
-
-    c.setFillColor(TEXT_SOFT)
-    c.setFont("Helvetica", 6)
-    c.drawString(isbn_x + 0.06 * inch, isbn_y + 0.46 * inch, "ISBN")
-    c.setFont("Helvetica-Bold", 7)
-    c.drawString(isbn_x + 0.06 * inch, isbn_y + 0.36 * inch,
-                 "[generado por KDP]")
-
-    # Líneas verticales del código de barras (placeholder)
-    c.setStrokeColor(TEXT_SOFT)
-    c.setLineWidth(0.5)
-    barcode_y = isbn_y + 0.08 * inch
-    barcode_h = 0.22 * inch
-    x_bar = isbn_x + 0.06 * inch
-    random.seed(42)
-    while x_bar < isbn_x + 1.24 * inch:
-        w = random.choice([0.4, 0.8, 1.2]) * 0.5
-        c.setLineWidth(w)
-        c.line(x_bar, barcode_y, x_bar, barcode_y + barcode_h)
-        x_bar += 1.2
+    # ---------- ISBN / código de barras ----------
+    # Eliminado por decisión de Daniel (15 may 2026): Amazon KDP genera y
+    # coloca automáticamente el bloque ISBN + código de barras EAN-13 al
+    # subir la portada en el flujo de publicación. Reservar espacio aquí
+    # ya no es necesario · KDP usa la zona inferior derecha de la
+    # contraportada por defecto.
 
     # ---------- Footer · sello + web ----------
     c.setFillColor(GREEN_BOTELLA)
