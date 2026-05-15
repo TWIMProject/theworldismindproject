@@ -22,16 +22,17 @@ Traducción operativa: **«vender más» = meter tráfico cualificado al capítu
 | PDF lead magnet Cap III (23 págs) | ✅ en repo | §5 |
 | Landing `/libro/capitulo-3/` + función Netlify + GA4 `cap3_lead_capture` | ✅ desplegado (PR #149) | §5 · cierre §2 |
 | Copy de los 3 emails (D0/D3/D7) | ✅ escrito **verbatim** en el repo | §3.1-§3.3 |
-| Grupo MailerLite + env var | (según Daniel) en curso | §1 |
-| **Secuencia de 3 emails activada** | ❌ **NO — confirmado por Daniel 15 may** | — |
+| Grupo MailerLite | ✅ creado y renombrado `Lead · Libro Engranajes · Cap 3 gratis` (id `187351536193505006`) | MCP 15 may |
+| Automation 3 emails (`Secuencia · Lectores Cap 3 Engranajes`, id `187569220715808525`) | ✅ creada vía MCP, copy dentro · `enabled: false` | MCP 15 may |
+| **Activación + env var Netlify** | ❌ pendiente solo de Daniel (1 clic Activar + env var) | — |
 
-**Consecuencia:** mientras la secuencia no esté activada, **el motor de venta del libro está apagado**. Quien descarga el Cap III gratis no recibe el D7 que vende el libro. Cualquier tráfico que mandes ahora se desperdicia. Por eso la Palanca 0 precede a todo.
+**Consecuencia:** la automation ya existe con todo el copy dentro, pero `enabled: false`. Hasta que Daniel pulse **Activar** y la env var Netlify apunte al id del grupo, **el motor sigue apagado**: quien descarga el Cap III no recibe el D7 que vende el libro. Por eso la Palanca 0 precede a todo.
 
 ---
 
 ## 2 · Palanca 0 · Encender el motor (bloquea todo lo demás)
 
-Activar la secuencia de 3 emails. **No hay que redactar nada**: el copy está verbatim en `mailerlite-automation-lectores-engranajes-cap3.md` §3.1 (D0, trigger inmediato), §3.2 (D3, +3 días), §3.3 (D7, +7 días, con el link Amazon). Pasos en §2 de ese mismo doc. Test E2E en §2.4. Tiempo estimado declarado: 60-90 min, casi todo pegar copy.
+La automation `Secuencia · Lectores Cap 3 Engranajes` (id `187569220715808525`) ya está **creada vía MCP con los 3 emails dentro** (D0 inmediato · +3 d · D3 · +4 d · D7, copy verbatim, D7 con 2 caminos). Falta solo, y solo Daniel puede: (1) abrir el dashboard y pulsar **Activar**; (2) env var Netlify `MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3` = `187351536193505006`; (3) test E2E (`…engranajes-cap3.md` §2.4). 10-15 min, no 60-90.
 
 Hasta que el test E2E (§2.4) dé verde —email D0 en <60 s, suscriptor en el grupo, evento GA4— **no escalar tráfico**.
 
