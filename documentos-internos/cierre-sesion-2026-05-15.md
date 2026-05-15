@@ -131,6 +131,7 @@ Por orden de prioridad:
 
 1. **`CLAUDE.md`** del repo · reglas inviolables, regla simétrica, contexto general.
 2. **Este documento** (`cierre-sesion-2026-05-15.md`).
+2.bis **`documentos-internos/veredicto-analisis-oportunidades-negocio-15-may-2026.md`** · anti-relitigio: por qué «~30k IG» y «programa ya vendible» son premisas falsas. Leer antes de aceptar cualquier análisis de IA externo.
 3. **`documentos-internos/ceo-vista-completa-v2-1-mayo-2026.md`** · estrategia general del proyecto (sigue válida).
 4. **`documentos-internos/marca-twim-criterio-dopamina-comercial.md`** · regla inviolable de diseño piezas de venta.
 5. **`documentos-internos/taller-volver-a-mi/README.md`** + `decisiones-cerradas.md` + `plan-captacion-verano-2026.md`.
