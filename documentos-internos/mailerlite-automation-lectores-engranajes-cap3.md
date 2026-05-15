@@ -8,6 +8,13 @@
 
 ## 1 · TL;DR — qué falta por tu lado
 
+> **Actualización 15 may 2026 (sesión `claude/improve-proposal-quality-pq3d9`) · sustituye a la lista de abajo:**
+> - ✅ Grupo creado y renombrado → **`Lead · Libro Engranajes · Cap 3 gratis`** · id `187351536193505006`.
+> - ✅ Automation creada vía MCP → **`Secuencia · Lectores Cap 3 Engranajes`** · id `187569220715808525` · 5 pasos (D0 inmediato · +3 d · D3 · +4 d · D7) · copy verbatim ya dentro · `enabled: false`.
+> - ❌ Pendiente, solo tú y **solo desde ordenador**: (a) en Automatizaciones abrir cada uno de los 3 emails en el editor y marcarlo **Hecho**, luego pulsar **Activar**; (b) env var Netlify `MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3` = `187351536193505006` (esto sí desde móvil).
+> - **Restricción dura verificada 15 may (no reintentar por API):** el MCP/API NO puede activar ni marcar emails «completos» (`update_automation_email` devuelve `complete:false` y tiene tope de 1000 chars; no hay endpoint enable). MailerLite bloquea toda edición desde móvil (app + navegador). El toggle Status final es **exclusivamente editor de escritorio**. Lo demás (trigger, copy íntegro, remitente, esperas 3/4 d) está verificado OK por `dry_run`.
+> - El D7 va con **2 caminos** (newsletter + libro Amazon). El camino 3 al programa «Deja de Buscarte en Otros» se quitó: no es producto vendible aún (ver `veredicto-analisis-oportunidades-negocio-15-may-2026.md`). Reañadir cuando exista link público.
+
 Después del merge del PR, **tres cosas manuales** que solo tú puedes hacer (yo no tengo acceso al dashboard MailerLite ni a las env vars de Netlify):
 
 1. **Crear el grupo** «Lectores · Engranajes Cap3» en MailerLite. Apuntar el ID.
@@ -23,7 +30,7 @@ Tiempo total estimado: 60-90 min (la mayor parte es pegar el copy de los 3 email
 ### 2.1 · Crear el grupo en MailerLite
 
 - Dashboard MailerLite → **Subscribers** → **Groups** → **Create group**.
-- Nombre: `Lectores · Engranajes Cap3`.
+- Nombre real (creado 13 may, renombrado 15 may): `Lead · Libro Engranajes · Cap 3 gratis` · id `187351536193505006`.
 - Descripción interna: *«Suscriptores que descargaron el Capítulo III gratuito desde `/libro/capitulo-3/`. Entrada al embudo del libro Engranajes y a la newsletter Te escribo.»*
 - Guardar y copiar el **Group ID** (formato `185xxxxxxxxxxxxxxx`).
 
@@ -142,16 +149,13 @@ Elaborar es del cuerpo, del afecto, del dolor concreto que decidiste no sentir c
 
 Si has leído el Capítulo III y te has reconocido en la voz que te juzga, ya estás del lado del «comprender». Esa parte está hecha.
 
-La parte de «elaborar» —dejar de obedecer a esa voz en automático— es un trabajo más largo. Tres caminos honestos, según lo que necesites:
+La parte de «elaborar» —dejar de obedecer a esa voz en automático— es un trabajo más largo. Dos caminos honestos, según lo que necesites:
 
 1) Si lo que quieres es seguir leyendo despacio, sin ruido y sin nada que comprar: Te escribo. Una carta cada tanto, sobre la mente, el cansancio y lo que no se dice.
    → https://twimproject.com/newsletter/
 
 2) Si lo que quieres es el libro completo (hay otros cinco capítulos como el que has leído):
    → https://www.amazon.es/dp/B0FR8PSQT3
-
-3) Si lo que quieres es trabajar el patrón en concreto — dejar de buscarte en otros, dejar de obedecer al juez, dejar de validarte por fuera — tengo un programa autoguiado pensado para eso. 79 €, sin terapeuta de por medio. Lo trabajas a tu ritmo en un mes.
-   → [LINK al programa Deja de Buscarte en Otros · pendiente de añadir cuando el link público esté listo]
 
 No tienes que elegir hoy. Lo que sí: no dejes que el capítulo se quede en «interesante». Algo del orden de las decisiones tiene que mover.
 
