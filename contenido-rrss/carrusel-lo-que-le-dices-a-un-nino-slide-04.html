@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrusel «Lo que le dices a un niño» — Slide 04/04</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a1a; color: #fff; font-family: 'Barlow Condensed', sans-serif; padding: 40px 20px; text-align: center; }
+  h1.t { font-size: 26px; margin-bottom: 8px; letter-spacing: 1px; }
+  .instructions { color: #999; font-size: 14px; margin-bottom: 36px; }
+  .download-btn {
+    margin-top: 16px; padding: 11px 30px; background: #C2A78B; color: #173D30;
+    border: none; border-radius: 8px; font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+  }
+  .download-btn:hover { background: #d4b89e; }
+
+  .slide {
+    width: 1080px; height: 1350px; position: relative; overflow: hidden;
+    background: #FDFCFA; padding: 96px 100px; display: flex; flex-direction: column;
+    justify-content: center; flex-shrink: 0; text-align: left;
+  }
+  .topbar { position: absolute; top: 96px; left: 100px; width: 64px; height: 3px; background: #C2A78B; border-radius: 2px; }
+  .pager {
+    position: absolute; top: 92px; right: 100px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 600;
+    letter-spacing: 6px; color: rgba(23,61,48,0.35);
+  }
+  .kicker {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 25px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 5px; color: #C2A78B; margin-bottom: 40px;
+  }
+  .head {
+    font-family: 'Instrument Serif', serif; font-weight: 400; color: #C2A78B;
+    font-size: 100px; line-height: 1.04; letter-spacing: -0.5px; margin-bottom: 56px;
+  }
+  .head .it { display: block; font-style: italic; color: #C2A78B; }
+  .body p {
+    font-family: 'Barlow Condensed', sans-serif; font-size: 38px; font-weight: 400;
+    color: #173D30; line-height: 1.5; max-width: 840px; margin-bottom: 26px;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .handle {
+    position: absolute; bottom: 92px; left: 100px;
+    font-family: 'Barlow Condensed', sans-serif; font-size: 23px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 4px; color: rgba(23,61,48,0.45);
+  }
+  .logo {
+    position: absolute; bottom: 78px; right: 100px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .logo .lk {
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 21px;
+    line-height: 1.04; letter-spacing: 5px; color: rgba(23,61,48,0.6); text-align: right;
+  }
+  .logo .gl {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 2.5px solid rgba(23,61,48,0.55); position: relative;
+  }
+  .logo .gl::before { content:""; position:absolute; top:50%; left:-2.5px; right:-2.5px; height:2.5px; background:rgba(23,61,48,0.55); transform:translateY(-50%); }
+  .logo .gl::after { content:""; position:absolute; left:50%; top:-2.5px; bottom:-2.5px; width:2.5px; background:rgba(23,61,48,0.55); transform:translateX(-50%); border-radius:50%; }
+
+  @media (max-width: 1200px) {
+    .slide { transform: scale(0.42); transform-origin: top center; margin-bottom: -785px; }
+  }
+</style>
+</head>
+<body>
+
+<h1 class="t">Carrusel «Lo que le dices a un niño» — Slide 04 / 04</h1>
+<p class="instructions">Pulsa «Descargar PNG». Sale a 1080×1350 px listo para Instagram.</p>
+
+<div style="display:flex;flex-direction:column;align-items:center;">
+  <div class="slide" id="slide04">
+    <div class="topbar"></div>
+    <div class="pager">04 / 04</div>
+    <div class="kicker">Los engranajes de la mente · libro</div>
+    <div class="head">Y un día,<span class="it">ese niño eres tú.</span></div>
+    <div class="body">
+      <p>La dependencia emocional del adulto rara vez empieza en una relación. Empieza en una voz que se instaló mucho antes.</p>
+      <p>La que mide, la que pide permiso, la que necesita aprobación para calmarse: se aprendió de niño y hoy decide por ti sin que la oigas.</p>
+      <p>De cómo se monta ese mecanismo —y de cómo empezar a verlo— trata Los engranajes de la mente.</p>
+    </div>
+    <div class="handle">@daniorozcopsicologo</div>
+    <div class="logo">
+      <div class="lk">MIND<br>WORLD<br>PROJECT</div>
+      <div class="gl"></div>
+    </div>
+  </div>
+  <button class="download-btn" onclick="downloadSlide('slide04', 'carrusel-nino-slide-04')">Descargar PNG</button>
+</div>
+
+<script>
+function downloadSlide(id, filename) {
+  const el = document.getElementById(id);
+  const btn = el.parentElement.querySelector('.download-btn');
+  btn.textContent = 'Generando...'; btn.disabled = true;
+  html2canvas(el, { width: 1080, height: 1350, scale: 1, useCORS: true, backgroundColor: null })
+    .then(canvas => {
+      const link = document.createElement('a');
+      link.download = filename + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      btn.textContent = 'Descargar PNG'; btn.disabled = false;
+    }).catch(err => { btn.textContent = 'Error - reintentar'; btn.disabled = false; console.error(err); });
+}
+</script>
+
+</body>
+</html>
