@@ -138,6 +138,7 @@ Por orden de prioridad:
 7. **`documentos-internos/libro-tu-valor-no-esta-en-su-mirada/README.md`** + `estado-completitud-2026-05-14.md` + `propuestas-edicion-libro-2026-05-14.md` + `escenas-adicionales-2026-05-14.md` + `maquetacion/brief-word-kdp.md` + `portada/README.md` + `portada/brief-diseno-portada-v2-concepto-c.md`.
 8. **`documentos-internos/metricas-carrusel-2-saberlo-12-may-2026.md`** + **`documentos-internos/metricas-gbp-daniel-orozco-q1-2026.md`** · contexto de métricas.
 9. **`contenido-rrss/te-escribo-voz-que-te-juzga/BRIEFING.md`** · Carrusel #3 listo para publicar martes 19 may si no se ha hecho ya.
+10. **`documentos-internos/palancas-venta-libro-engranajes-15-may-2026.md`** · (operativo, no orientación) playbook de venta del libro. Palanca 0 = activar la secuencia de 3 emails Cap III (motor apagado a 15 may). Incluye decisión pendiente Amazon-nativo.
 
 ---
 
