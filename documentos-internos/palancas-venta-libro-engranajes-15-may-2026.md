@@ -34,6 +34,8 @@ Traducción operativa: **«vender más» = meter tráfico cualificado al capítu
 
 La automation `Secuencia · Lectores Cap 3 Engranajes` (id `187569220715808525`) ya está **creada vía MCP con los 3 emails dentro** (D0 inmediato · +3 d · D3 · +4 d · D7, copy verbatim, D7 con 2 caminos). Falta solo, y **solo desde ordenador** (MailerLite bloquea edición móvil app+navegador; MCP/API no puede activar ni marcar completo — verificado 15 may, no reintentar por API): (1) marcar los 3 emails como **Hecho** en el editor y pulsar **Activar**; (2) env var Netlify `MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3` = `187351536193505006` (esto sí desde móvil); (3) test E2E (`…engranajes-cap3.md` §2.4). Lo demás verificado OK por dry_run; el toggle Status es 2 min en escritorio.
 
+**Programado:** Daniel lo hace el **sábado 16 may 2026** desde ordenador. Si una sesión posterior a esa fecha ve la automation aún en `enabled: false`, preguntar a Daniel antes de asumir nada.
+
 Hasta que el test E2E (§2.4) dé verde —email D0 en <60 s, suscriptor en el grupo, evento GA4— **no escalar tráfico**.
 
 ---
