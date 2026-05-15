@@ -59,7 +59,7 @@
 <body>
 
 <h1 class="t">Carrusel «Lo que le dices a un niño» — 4 slides</h1>
-<p class="instructions">Pulsa «Descargar PNG» en cada slide. Sale a 1080×1350 px listo para Instagram.</p>
+<p class="instructions">Pulsa «Descargar JPG» en cada slide. Sale a 1080×1350 px listo para Instagram.</p>
 
 <div class="slide-label">Slide 1 / 4 — Gancho</div>
 <div style="display:flex;flex-direction:column;align-items:center;">
@@ -75,7 +75,7 @@
     <div class="handle">@daniorozcopsicologo</div>
     <div class="logo"></div>
   </div>
-  <button class="download-btn" onclick="downloadSlide('slide01','carrusel-nino-01')">Descargar PNG</button>
+  <button class="download-btn" onclick="downloadSlide('slide01','carrusel-nino-01')">Descargar JPG</button>
 </div>
 
 <div class="slide-label">Slide 2 / 4 — Etiquetas</div>
@@ -92,7 +92,7 @@
     <div class="handle">@daniorozcopsicologo</div>
     <div class="logo"></div>
   </div>
-  <button class="download-btn" onclick="downloadSlide('slide02','carrusel-nino-02')">Descargar PNG</button>
+  <button class="download-btn" onclick="downloadSlide('slide02','carrusel-nino-02')">Descargar JPG</button>
 </div>
 
 <div class="slide-label">Slide 3 / 4 — Confianza</div>
@@ -109,7 +109,7 @@
     <div class="handle">@daniorozcopsicologo</div>
     <div class="logo"></div>
   </div>
-  <button class="download-btn" onclick="downloadSlide('slide03','carrusel-nino-03')">Descargar PNG</button>
+  <button class="download-btn" onclick="downloadSlide('slide03','carrusel-nino-03')">Descargar JPG</button>
 </div>
 
 <div class="slide-label">Slide 4 / 4 — Cierre · dependencia + libro</div>
@@ -127,7 +127,7 @@
     <div class="handle">@daniorozcopsicologo</div>
     <div class="logo"></div>
   </div>
-  <button class="download-btn" onclick="downloadSlide('slide04','carrusel-nino-04')">Descargar PNG</button>
+  <button class="download-btn" onclick="downloadSlide('slide04','carrusel-nino-04')">Descargar JPG</button>
 </div>
 
 <script>
@@ -135,13 +135,13 @@ function downloadSlide(id, filename) {
   const el = document.getElementById(id);
   const btn = el.parentElement.querySelector('.download-btn');
   btn.textContent = 'Generando...'; btn.disabled = true;
-  html2canvas(el, { width: 1080, height: 1350, scale: 1, useCORS: true, backgroundColor: null })
+  html2canvas(el, { width: 1080, height: 1350, scale: 1, useCORS: true, backgroundColor: '#FDFCFA' })
     .then(canvas => {
       const link = document.createElement('a');
-      link.download = filename + '.png';
-      link.href = canvas.toDataURL('image/png');
+      link.download = filename + '.jpg';
+      link.href = canvas.toDataURL('image/jpeg', 0.95);
       link.click();
-      btn.textContent = 'Descargar PNG'; btn.disabled = false;
+      btn.textContent = 'Descargar JPG'; btn.disabled = false;
     }).catch(err => { btn.textContent = 'Error - reintentar'; btn.disabled = false; console.error(err); });
 }
 </script>
