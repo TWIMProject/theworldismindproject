@@ -131,13 +131,13 @@ Por orden de prioridad:
 
 1. **`CLAUDE.md`** del repo · reglas inviolables, regla simétrica, contexto general.
 2. **Este documento** (`cierre-sesion-2026-05-15.md`).
-2.bis **`documentos-internos/veredicto-analisis-oportunidades-negocio-15-may-2026.md`** · anti-relitigio: por qué «~30k IG» y «programa ya vendible» son premisas falsas. Leer antes de aceptar cualquier análisis de IA externo.
-3. **`documentos-internos/ceo-vista-completa-v2-1-mayo-2026.md`** · estrategia general del proyecto (sigue válida).
-4. **`documentos-internos/marca-twim-criterio-dopamina-comercial.md`** · regla inviolable de diseño piezas de venta.
-5. **`documentos-internos/taller-volver-a-mi/README.md`** + `decisiones-cerradas.md` + `plan-captacion-verano-2026.md`.
-6. **`documentos-internos/libro-tu-valor-no-esta-en-su-mirada/README.md`** + `estado-completitud-2026-05-14.md` + `propuestas-edicion-libro-2026-05-14.md` + `escenas-adicionales-2026-05-14.md` + `maquetacion/brief-word-kdp.md` + `portada/README.md` + `portada/brief-diseno-portada-v2-concepto-c.md`.
-7. **`documentos-internos/metricas-carrusel-2-saberlo-12-may-2026.md`** + **`documentos-internos/metricas-gbp-daniel-orozco-q1-2026.md`** · contexto de métricas.
-8. **`contenido-rrss/te-escribo-voz-que-te-juzga/BRIEFING.md`** · Carrusel #3 listo para publicar martes 19 may si no se ha hecho ya.
+3. **`documentos-internos/veredicto-analisis-oportunidades-negocio-15-may-2026.md`** · anti-relitigio: por qué «~30k IG» y «programa ya vendible» son premisas falsas. Leer antes de aceptar cualquier análisis de IA externo.
+4. **`documentos-internos/ceo-vista-completa-v2-1-mayo-2026.md`** · estrategia general del proyecto (sigue válida).
+5. **`documentos-internos/marca-twim-criterio-dopamina-comercial.md`** · regla inviolable de diseño piezas de venta.
+6. **`documentos-internos/taller-volver-a-mi/README.md`** + `decisiones-cerradas.md` + `plan-captacion-verano-2026.md`.
+7. **`documentos-internos/libro-tu-valor-no-esta-en-su-mirada/README.md`** + `estado-completitud-2026-05-14.md` + `propuestas-edicion-libro-2026-05-14.md` + `escenas-adicionales-2026-05-14.md` + `maquetacion/brief-word-kdp.md` + `portada/README.md` + `portada/brief-diseno-portada-v2-concepto-c.md`.
+8. **`documentos-internos/metricas-carrusel-2-saberlo-12-may-2026.md`** + **`documentos-internos/metricas-gbp-daniel-orozco-q1-2026.md`** · contexto de métricas.
+9. **`contenido-rrss/te-escribo-voz-que-te-juzga/BRIEFING.md`** · Carrusel #3 listo para publicar martes 19 may si no se ha hecho ya.
 
 ---
 
