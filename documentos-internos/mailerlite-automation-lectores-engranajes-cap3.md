@@ -11,7 +11,7 @@
 > **Actualización 15 may 2026 (sesión `claude/improve-proposal-quality-pq3d9`) · sustituye a la lista de abajo:**
 > - ✅ Grupo creado y renombrado → **`Lead · Libro Engranajes · Cap 3 gratis`** · id `187351536193505006`.
 > - ✅ Automation creada vía MCP → **`Secuencia · Lectores Cap 3 Engranajes`** · id `187569220715808525` · 5 pasos (D0 inmediato · +3 d · D3 · +4 d · D7) · copy verbatim ya dentro · `enabled: false`.
-> - ❌ Pendiente, solo tú: (a) abrir el dashboard y pulsar **Activar** (el MCP no expone esa acción); (b) env var Netlify `MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3` = `187351536193505006`.
+> - ❌ Pendiente, solo tú: (a) en Automatizaciones abrir cada uno de los 3 emails en el editor y marcarlo **Hecho**, luego pulsar **Activar** (dry_run 15 may: trigger OK no roto, remitente OK, 3 emails con contenido; solo faltaba «marcar completo». El MCP no expone Activar); (b) env var Netlify `MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3` = `187351536193505006`.
 > - El D7 va con **2 caminos** (newsletter + libro Amazon). El camino 3 al programa «Deja de Buscarte en Otros» se quitó: no es producto vendible aún (ver `veredicto-analisis-oportunidades-negocio-15-may-2026.md`). Reañadir cuando exista link público.
 
 Después del merge del PR, **tres cosas manuales** que solo tú puedes hacer (yo no tengo acceso al dashboard MailerLite ni a las env vars de Netlify):
