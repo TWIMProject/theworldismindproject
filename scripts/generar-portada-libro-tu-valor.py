@@ -131,6 +131,127 @@ def draw_wrapped(c, text, x, y, max_width, font_name, font_size,
 
 
 # ==============================================================================
+# ILUSTRACIÓN DE LA LLAVE (v1 vectorial procedural)
+# ==============================================================================
+
+
+def draw_key(c, box_x, box_y, box_size):
+    """Dibuja una llave vertical estilizada con cordel dentro de un cuadrado.
+
+    Coherente con `brief-diseno-portada-v2-concepto-c.md` §4 · anatomía
+    cabeza · tija · paletón, trazo verde botella, relleno dorado mate.
+
+    Composición:
+      - Cabeza circular en la parte superior del cuadrado (aprox 40% de
+        altura). Anillo interior (hueco) por donde pasa el cordel.
+      - Cordel saliendo del anillo, cayendo a la izquierda en curva bezier
+        suave.
+      - Tija vertical estrecha bajando desde la base de la cabeza.
+      - Paletón con dos dientes geométricos asomando a la derecha de la
+        base de la tija.
+
+    Args:
+        c: canvas reportlab.
+        box_x, box_y: esquina inferior-izquierda del cuadrado contenedor.
+        box_size: lado del cuadrado (la llave se inscribe centrada).
+    """
+    # Centro horizontal del cuadrado (eje vertical de la llave)
+    cx = box_x + box_size / 2
+
+    # Cabeza · círculo dorado con borde verde botella, anillo interior vacío.
+    head_radius = box_size * 0.20
+    head_cy = box_y + box_size * 0.72        # cabeza alta dentro del cuadrado
+    ring_radius = head_radius * 0.46         # hueco proporcional
+
+    # Sombra muy sutil de la cabeza (da volumen sin convertir en realismo)
+    c.saveState()
+    c.setFillColor(HexColor("#000000"))
+    c.setFillAlpha(0.06)
+    c.circle(cx + 1.2, head_cy - 1.2, head_radius + 0.5, fill=1, stroke=0)
+    c.restoreState()
+
+    # Cabeza (relleno dorado mate con borde verde botella)
+    c.setFillColor(GOLD)
+    c.setStrokeColor(GREEN_BOTELLA)
+    c.setLineWidth(1.6)
+    c.circle(cx, head_cy, head_radius, fill=1, stroke=1)
+
+    # Anillo interior (hueco · se rellena con el color de fondo para «vaciar»)
+    c.setFillColor(CREAM_BG)
+    c.setStrokeColor(GREEN_BOTELLA)
+    c.setLineWidth(1.2)
+    c.circle(cx, head_cy, ring_radius, fill=1, stroke=1)
+
+    # Tija · rectángulo vertical desde la base de la cabeza hacia abajo.
+    # Conecta visualmente con la cabeza (solapa unos puntos).
+    tija_w = head_radius * 0.32              # ancho de la tija
+    tija_top = head_cy - head_radius + 2     # solapa con la cabeza
+    tija_bottom = box_y + box_size * 0.18    # llega cerca del fondo del cuadrado
+    tija_h = tija_top - tija_bottom
+
+    c.setFillColor(GOLD)
+    c.setStrokeColor(GREEN_BOTELLA)
+    c.setLineWidth(1.4)
+    c.rect(cx - tija_w / 2, tija_bottom, tija_w, tija_h,
+           fill=1, stroke=1)
+
+    # Paletón · dos dientes rectangulares asomando a la derecha de la tija.
+    # Diente 1 (el más bajo, más cercano a la punta de la tija)
+    tooth_h = tija_w * 1.1
+    tooth_w = head_radius * 0.55
+    tooth_x = cx + tija_w / 2 - 0.5          # arranca pegado a la tija
+    tooth1_y = tija_bottom + tooth_h * 0.4
+
+    c.setFillColor(GOLD)
+    c.setStrokeColor(GREEN_BOTELLA)
+    c.setLineWidth(1.3)
+    c.rect(tooth_x, tooth1_y, tooth_w, tooth_h,
+           fill=1, stroke=1)
+
+    # Diente 2 (más arriba, ligeramente más estrecho)
+    tooth2_y = tooth1_y + tooth_h * 2.3
+    tooth2_w = tooth_w * 0.75
+    c.rect(tooth_x, tooth2_y, tooth2_w, tooth_h,
+           fill=1, stroke=1)
+
+    # Cordel · curva bezier que sale del anillo de la cabeza por arriba
+    # y cae a la izquierda formando un arco suave. Sin nudo barroco · línea
+    # limpia que sugiere movimiento natural.
+    c.saveState()
+    c.setStrokeColor(BEIGE_TWIM)             # cordel beige cálido
+    c.setLineWidth(1.3)
+    c.setLineCap(1)                          # extremos redondeados
+
+    # Punto de salida del cordel: parte superior del anillo
+    rope_start_x = cx - ring_radius * 0.4
+    rope_start_y = head_cy + ring_radius - 0.8
+
+    # Control 1 (sale hacia arriba-izquierda)
+    rope_c1_x = cx - head_radius * 1.6
+    rope_c1_y = head_cy + head_radius * 1.4
+
+    # Control 2 (curva de bajada)
+    rope_c2_x = cx - head_radius * 2.4
+    rope_c2_y = head_cy + head_radius * 0.3
+
+    # Punto final (cae unos puntos por debajo del lado izquierdo de la cabeza)
+    rope_end_x = cx - head_radius * 1.8
+    rope_end_y = head_cy - head_radius * 0.6
+
+    c.bezier(rope_start_x, rope_start_y,
+             rope_c1_x, rope_c1_y,
+             rope_c2_x, rope_c2_y,
+             rope_end_x, rope_end_y)
+
+    # Pequeño remate al final del cordel (un punto/nudo simple)
+    c.setFillColor(BEIGE_TWIM)
+    c.setStrokeColor(BEIGE_TWIM)
+    c.circle(rope_end_x, rope_end_y, 1.6, fill=1, stroke=0)
+
+    c.restoreState()
+
+
+# ==============================================================================
 # DIBUJO DE PORTADA DELANTERA (front cover)
 # ==============================================================================
 
@@ -184,47 +305,18 @@ def draw_front(c, x_offset, y_offset):
     c.line(x_offset + TRIM_W / 2 - 0.35 * inch, rule_y,
            x_offset + TRIM_W / 2 + 0.35 * inch, rule_y)
 
-    # ---------- Bloque 2 · Placeholder de la ILUSTRACIÓN DE LA LLAVE ----------
-    # Centrada verticalmente en la zona alta-media de la portada.
-    # El diseñador (o flujo IA generativa) sustituye este placeholder por
-    # la ilustración real de la llave dorada con cordel (specs en
-    # brief-diseno-portada-v2-concepto-c.md).
-    illust_size = 1.5 * inch  # 38mm aprox
+    # ---------- Bloque 2 · ILUSTRACIÓN DE LA LLAVE (v1 vectorial) ----------
+    # Dibujada vectorialmente con primitivas reportlab (sin imagen externa).
+    # Estilo: minimalista editorial · trazo verde botella + relleno dorado
+    # mate · llave vertical con cordel cayendo a la izquierda. Coherente con
+    # las specs del brief en `brief-diseno-portada-v2-concepto-c.md` §4.
+    # Esta v1 es un primer trazo procedural · si Daniel quiere refinarla,
+    # se itera ajustando proporciones o se sustituye por PNG real de
+    # diseñador/IA generativa (instrucciones en brief §8).
+    illust_size = 1.5 * inch
     illust_x = x_offset + (TRIM_W - illust_size) / 2
-    illust_y = y_offset + TRIM_H * 0.50  # centro-alto
-
-    # Rectángulo punteado que marca la zona
-    c.saveState()
-    c.setDash(2, 2)
-    c.setStrokeColor(GREEN_BOTELLA)
-    c.setStrokeAlpha(0.5)
-    c.setLineWidth(0.6)
-    c.rect(illust_x, illust_y, illust_size, illust_size,
-           fill=0, stroke=1)
-    c.restoreState()
-
-    # Cruz de centrado (orientación al diseñador)
-    c.setStrokeColor(GREEN_BOTELLA)
-    c.setStrokeAlpha(0.3)
-    c.setLineWidth(0.3)
-    center_x = illust_x + illust_size / 2
-    center_y = illust_y + illust_size / 2
-    c.line(center_x - 6, center_y, center_x + 6, center_y)
-    c.line(center_x, center_y - 6, center_x, center_y + 6)
-    c.setStrokeAlpha(1.0)
-
-    # Etiqueta del placeholder
-    c.setFillColor(GREEN_BOTELLA)
-    c.setFont("Helvetica", 7)
-    label1 = "[ ilustración de la llave ]"
-    label2 = "ver brief-diseno-portada-v2-concepto-c.md"
-    lw1 = c.stringWidth(label1, "Helvetica", 7)
-    lw2 = c.stringWidth(label2, "Helvetica", 7)
-    c.drawString(illust_x + (illust_size - lw1) / 2,
-                 illust_y - 14, label1)
-    c.setFont("Helvetica-Oblique", 6)
-    c.drawString(illust_x + (illust_size - lw2) / 2,
-                 illust_y - 23, label2)
+    illust_y = y_offset + TRIM_H * 0.50
+    draw_key(c, illust_x, illust_y, illust_size)
 
     # ---------- Bloque 3 · Título (debajo del placeholder) ----------
     # Título grande en Times-Roman (mock de serif clásico verde botella)
