@@ -61,6 +61,11 @@ Una vez desplegado, abrir `https://twimproject.com/.netlify/functions/subscribe?
 ## 3 · La secuencia · 3 emails
 
 > Todos los emails firmados como Daniel Orozco · `danielorozco@twimproject.com`. Sin imágenes pesadas, en HTML simple (mismo estilo que las Cartas «Te escribo»). Plain text version recomendable.
+>
+> **Reglas de montaje en el editor (verificado 16 may, no repetir errores):**
+> - **Personalización:** NO teclear `{{name}}` ni similares — MailerLite no usa esa sintaxis y sale literal. Dejar `Hola,` a secas, o insertar el nombre SOLO con el botón de Personalización del editor (con fallback), y solo si el formulario captura nombre.
+> - **Enlaces:** la línea descriptiva (p. ej. «Descargar el Capítulo III (PDF, 21 páginas):») se selecciona y se enlaza con el icono de enlace del editor a la URL de la línea siguiente. No pegar marcadores tipo `[BOTÓN]` ni dejar la URL cruda como texto si se puede enlazar.
+> - **Entregabilidad (evitar pestaña Promociones de Gmail):** prioridad 1 = autenticar dominio `twimproject.com` en MailerLite (SPF/DKIM) — pendiente, no estaba documentado. Prioridad 2 = email plano y personal (sin cabecera de imagen, pocos enlaces). Prioridad 3 = valorar quitar «Seguimiento de aperturas» + «Etiquetas UTM» en el D0 (mejora bandeja, pero pierde el open-rate del D0 que mide §4); mantener tracking en D3/D7.
 
 ### 3.1 · Email D0 — entrega inmediata · «Aquí lo tienes»
 
@@ -73,11 +78,12 @@ Una vez desplegado, abrir `https://twimproject.com/.netlify/functions/subscribe?
 **Cuerpo:**
 
 ```
-Hola, {{name|"hola"}}.
+Hola,
 
 Aquí tienes el Capítulo III de Los Engranajes de la Mente.
 
-[BOTÓN] Descargar el PDF (21 páginas) → https://twimproject.com/libro-engranajes-mente/lead-magnet/capitulo-3-superyo.pdf
+Descargar el Capítulo III (PDF, 21 páginas):
+https://twimproject.com/libro-engranajes-mente/lead-magnet/capitulo-3-superyo.pdf
 
 Es el capítulo sobre la voz interna que te dice «no es suficiente», «esto te ha quedado regular», «otros lo habrían hecho mejor».
 
@@ -103,7 +109,7 @@ PD: Si el PDF no te llega o se te ha colado a promociones, escríbeme respondien
 **Cuerpo:**
 
 ```
-Hola, {{name|"hola"}}.
+Hola,
 
 ¿Has tenido tiempo de leerlo?
 
@@ -137,7 +143,7 @@ De eso te escribo en unos días.
 **Cuerpo:**
 
 ```
-Hola, {{name|"hola"}}.
+Hola,
 
 Hay una distinción que casi nadie hace y que es la base de todo lo que escribo:
 
