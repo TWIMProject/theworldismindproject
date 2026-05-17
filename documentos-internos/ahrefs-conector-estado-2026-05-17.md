@@ -2,7 +2,8 @@
 
 > Documento operativo · 17 may 2026 · sesión `claude/improve-proposal-quality-pq3d9`.
 > Daniel pidió lanzar la primera pasada de Ahrefs (rank tracking keywords Valencia + estado de backlinks + Brand Radar de visibilidad en IA) y dejar un baseline escrito para disparar la v3 del doc CEO.
-> Este documento deja escrito **por qué ese baseline no se pudo generar hoy y qué hace falta exactamente para que sea posible**, para que ninguna sesión futura vuelva a quemar turnos intentándolo a ciegas.
+> Este documento deja escrito **por qué ese baseline no se pudo generar hoy**, para que ninguna sesión futura vuelva a quemar turnos intentándolo a ciegas.
+> **Actualización 17-may (ver §0): la decisión final es NO invertir en Ahrefs.** El baseline ya **no** es un objetivo activo; todo lo de abajo queda archivado como referencia por si Daniel reabre el tema explícitamente.
 
 ---
 
@@ -30,7 +31,7 @@
   - `site-explorer-backlinks-stats` (`twimproject.com`, mode=subdomains, 2026-05-17) → **Insufficient plan**.
 - El esquema de las herramientas (`doc`) **sí** responde: el bloqueo es de **nivel de plan/suscripción**, no de cuota de unidades agotada ni de credencial caída ni de fallo transitorio. Reintentar no lo resuelve.
 - **No se ha fabricado ningún baseline.** Inventar números de DR/backlinks/keywords sin dato real es exactamente el patrón que `veredicto-analisis-oportunidades-negocio-15-may-2026.md` §2.1 prohíbe ("la tabla cuelga de un número inventado").
-- **Impacto en el doc CEO:** el `ceo-vista-completa-v2-1-mayo-2026.md` cierre línea 638 pone "Ahrefs disponible" como uno de los triggers para generar la v3. **Ese trigger NO está cumplido — y además queda anulado por la decisión de Daniel del 17-may (ver §0): no se invierte.** El caveat de §6 ("Datos de Ahrefs no disponibles esta sesión por límite de plan; cifras son aproximaciones del sector") **sigue vigente** — no es un problema de esa sesión concreta, es el estado estructural del plan.
+- **Impacto en el doc CEO:** el `ceo-vista-completa-v2-1-mayo-2026.md`, en su sección **«Cierre»** (nota técnica final), lista *«Cuando aparezca dato nuevo importante (Ahrefs disponible…), generar v3»* como uno de los triggers para generar la v3. **Ese trigger NO está cumplido — y además queda anulado por la decisión de Daniel del 17-may (ver §0): no se invierte.** El caveat de §6 ("Datos de Ahrefs no disponibles esta sesión por límite de plan; cifras son aproximaciones del sector") **sigue vigente** — no es un problema de esa sesión concreta, es el estado estructural del plan.
 
 ---
 
