@@ -61,6 +61,11 @@ Una vez desplegado, abrir `https://twimproject.com/.netlify/functions/subscribe?
 ## 3 · La secuencia · 3 emails
 
 > Todos los emails firmados como Daniel Orozco · `danielorozco@twimproject.com`. Sin imágenes pesadas, en HTML simple (mismo estilo que las Cartas «Te escribo»). Plain text version recomendable.
+>
+> **Reglas de montaje en el editor (verificado 16 may, no repetir errores):**
+> - **Personalización:** NO teclear `{{name}}` ni similares — MailerLite no usa esa sintaxis y sale literal. Dejar `Hola,` a secas, o insertar el nombre SOLO con el botón de Personalización del editor (con fallback), y solo si el formulario captura nombre.
+> - **Enlaces:** los cuerpos de abajo NO contienen URLs a propósito (para no volver a pegar la URL cruda). Cada email lleva debajo un bloque «Enlaces a aplicar»: seleccionar en el editor el texto indicado y enlazarlo con el icono de enlace a la URL correspondiente. Nunca pegar `[BOTÓN]` ni una URL cruda dentro del cuerpo. La versión plain-text que MailerLite genera ya expande el enlace; la URL queda como referencia solo en ese bloque.
+> - **Entregabilidad (evitar pestaña Promociones de Gmail):** prioridad 1 = autenticar dominio `twimproject.com` en MailerLite (SPF/DKIM) — pendiente, no estaba documentado. Prioridad 2 = email plano y personal (sin cabecera de imagen, pocos enlaces). Prioridad 3 = valorar quitar «Seguimiento de aperturas» + «Etiquetas UTM» en el D0 (mejora bandeja, pero pierde el open-rate del D0 que mide §4); mantener tracking en D3/D7.
 
 ### 3.1 · Email D0 — entrega inmediata · «Aquí lo tienes»
 
@@ -73,11 +78,11 @@ Una vez desplegado, abrir `https://twimproject.com/.netlify/functions/subscribe?
 **Cuerpo:**
 
 ```
-Hola, {{name|"hola"}}.
+Hola,
 
 Aquí tienes el Capítulo III de Los Engranajes de la Mente.
 
-[BOTÓN] Descargar el PDF (21 páginas) → https://twimproject.com/libro-engranajes-mente/lead-magnet/capitulo-3-superyo.pdf
+Descargar el Capítulo III (PDF, 21 páginas)
 
 Es el capítulo sobre la voz interna que te dice «no es suficiente», «esto te ha quedado regular», «otros lo habrían hecho mejor».
 
@@ -92,6 +97,8 @@ Si al cerrarlo te has visto en alguna escena, te escribo en unos días con una p
 PD: Si el PDF no te llega o se te ha colado a promociones, escríbeme respondiendo a este correo y te lo paso por aquí.
 ```
 
+**Enlace a aplicar:** seleccionar «Descargar el Capítulo III (PDF, 21 páginas)» y enlazarlo a `https://twimproject.com/libro-engranajes-mente/lead-magnet/capitulo-3-superyo.pdf`
+
 ### 3.2 · Email D3 — reflexión · «¿Te has visto en alguna escena?»
 
 **Asunto:** ¿Te ha movido algo el capítulo?
@@ -103,7 +110,7 @@ PD: Si el PDF no te llega o se te ha colado a promociones, escríbeme respondien
 **Cuerpo:**
 
 ```
-Hola, {{name|"hola"}}.
+Hola,
 
 ¿Has tenido tiempo de leerlo?
 
@@ -111,9 +118,7 @@ Si te ha llegado, lo más probable es que te hayas reconocido en alguna de las f
 
 Si te apetece contestarme, lo leo personalmente.
 
-Si todavía no has tenido tiempo, no pasa nada. El PDF sigue ahí, no caduca:
-
-→ https://twimproject.com/libro-engranajes-mente/lead-magnet/capitulo-3-superyo.pdf
+Si todavía no has tenido tiempo, no pasa nada. Tienes el PDF aquí, no caduca.
 
 Una cosa más, que viene en el capítulo y que conviene subrayar:
 
@@ -126,6 +131,8 @@ De eso te escribo en unos días.
 — Daniel
 ```
 
+**Enlace a aplicar:** seleccionar «Tienes el PDF aquí» y enlazarlo a `https://twimproject.com/libro-engranajes-mente/lead-magnet/capitulo-3-superyo.pdf`
+
 ### 3.3 · Email D7 — puente al programa / a la newsletter · «Si te ha llegado, hay sitio donde seguir»
 
 **Asunto:** Cuando ya has leído pero sigues haciendo lo mismo
@@ -137,7 +144,7 @@ De eso te escribo en unos días.
 **Cuerpo:**
 
 ```
-Hola, {{name|"hola"}}.
+Hola,
 
 Hay una distinción que casi nadie hace y que es la base de todo lo que escribo:
 
@@ -152,10 +159,8 @@ Si has leído el Capítulo III y te has reconocido en la voz que te juzga, ya es
 La parte de «elaborar» —dejar de obedecer a esa voz en automático— es un trabajo más largo. Dos caminos honestos, según lo que necesites:
 
 1) Si lo que quieres es seguir leyendo despacio, sin ruido y sin nada que comprar: Te escribo. Una carta cada tanto, sobre la mente, el cansancio y lo que no se dice.
-   → https://twimproject.com/newsletter/
 
-2) Si lo que quieres es el libro completo (hay otros cinco capítulos como el que has leído):
-   → https://www.amazon.es/dp/B0FR8PSQT3
+2) Si lo que quieres es el libro completo: hay otros cinco capítulos como el que has leído.
 
 No tienes que elegir hoy. Lo que sí: no dejes que el capítulo se quede en «interesante». Algo del orden de las decisiones tiene que mover.
 
@@ -165,6 +170,10 @@ Daniel Orozco Abia
 Psicólogo General Sanitario · CV11515
 twimproject.com
 ```
+
+**Enlaces a aplicar:**
+- «Te escribo» (punto 1) → `https://twimproject.com/newsletter/`
+- «el libro completo» (punto 2) → `https://www.amazon.es/dp/B0FR8PSQT3`
 
 ---
 
