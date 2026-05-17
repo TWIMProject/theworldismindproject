@@ -80,7 +80,7 @@ El sandbox no puede subir el plan. Acción manual de Daniel:
 
 - ❌ "Genera el baseline Ahrefs / dispara la v3 del CEO doc porque Ahrefs ya está" → **falso mientras este documento no se haya actualizado con una verificación OK**. El gate es de plan, no transitorio.
 - ✅ Antes de reintentar la pasada Ahrefs, hacer **una** llamada barata de sondeo (`site-explorer-domain-rating` sobre `twimproject.com`). Si devuelve `Insufficient plan`, **parar**, no encadenar más llamadas, y solo actualizar la fecha de este doc. Si devuelve datos, ejecutar el mapa del §3 y entonces sí generar el baseline + disparar v3 del CEO doc.
-- Regla operativa confirmada (coherente con `veredicto-…-15-may-2026.md` §5): ante "haz la pasada de la herramienta X", **verificar disponibilidad real antes de prometer output**; un hallazgo negativo bien escrito vale más que un baseline inventado.
+- Regla operativa confirmada (coherente con `veredicto-analisis-oportunidades-negocio-15-may-2026.md` §5): ante "haz la pasada de la herramienta X", **verificar disponibilidad real antes de prometer output**; un hallazgo negativo bien escrito vale más que un baseline inventado.
 
 ---
 
