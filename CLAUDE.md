@@ -73,6 +73,14 @@ Toda pieza visual de venta del proyecto TWIM (portadas de libros, landings comer
 
 ---
 
+## Regla inviolable · Idioma de comunicación con Daniel
+
+> Regla declarada por Daniel el 17 may 2026.
+
+**Toda comunicación con Daniel —respuestas de chat, resúmenes, preguntas, explicaciones, avisos— va SIEMPRE en castellano.** Sin excepción y sin que haga falta pedirlo cada sesión. Aunque la petición, un log, un error de herramienta o un documento llegue en otro idioma, la respuesta a Daniel es en castellano. Esto no cambia el idioma de artefactos técnicos que ya tienen su convención (nombres de fichero, identificadores de código); afecta a lo que Daniel lee de vuelta.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
