@@ -193,17 +193,23 @@ Te sigo escribiendo.
 ### 8.3 · Checklist de activación (clics de Daniel, ~20 min)
 
 ```
-[ ] Formulario 187662502229706033: cambiar a opt-in SIMPLE + diseñar (campo email,
-    paleta marca, titular y éxito de §3.1).
-[ ] Automation 187662509833979144: diseñar el email E1 en el editor (texto plano
-    estilo «Te escribo», enlaces desde el icono) y ACTIVAR.
-[ ] Crear Meet en Google Calendar y verificar que el enlace fijo es
-    https://meet.google.com/fsu-scrz-res (plan Flexible activo = sin corte 60 min).
+ORDEN ESTRICTO (override, ver §9.4): primero captación, DESPUÉS programar.
+No se puede programar E2-E5 con el grupo vacío (MailerLite lo impide).
+
+FASE A · abrir captación (ya):
+[ ] Formulario 187662502229706033: opt-in SIMPLE + diseñar (campo email,
+    paleta marca, titular y éxito de §3.1) + ACTIVAR.
+[ ] Automation 187662509833979144: diseñar E1 + idioma ES + Prueba + ACTIVAR.
+[ ] Crear/confirmar Meet (enlace fijo https://meet.google.com/fsu-scrz-res,
+    plan Flexible = sin corte 60 min).
+[ ] Pegar el enlace del FORMULARIO en los canales (§5.4) → el grupo empieza
+    a llenarse.
+
+FASE B · programar (SOLO con inscritos en el grupo, ~5-6 jun):
 [ ] Campaña E2 al grupo 187662493483533365, programada sáb 7 jun 19:00.
 [ ] Campaña E3 programada dom 8 jun 10:00.
 [ ] Campaña E4 programada dom 8 jun 18:00.
 [ ] Campaña E5 programada lun 9 jun 10:00 (revisar enlace de grabación tras grabar).
-[ ] Pegar el enlace del FORMULARIO en los canales (§5.4) para abrir captación.
 ```
 
 ---
