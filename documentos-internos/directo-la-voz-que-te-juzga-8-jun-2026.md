@@ -205,3 +205,32 @@ Te sigo escribiendo.
 [ ] Campaña E5 programada lun 9 jun 10:00 (revisar enlace de grabación tras grabar).
 [ ] Pegar el enlace del FORMULARIO en los canales (§5.4) para abrir captación.
 ```
+
+---
+
+## 9 · Ejecución 18-may vía conector MailerLite · estado real + aprendizajes
+
+> Sesión `claude/improve-proposal-quality-pq3d9`, 18-may 2026. Code ejecutó por el conector MCP lo que la API permite. Regla simétrica + inoculación de futuras sesiones contra las aristas del conector (precedente: `veredicto-…-15-may` §5).
+
+### 9.1 · Hecho por Code (verificado)
+
+- **E1** (automation `187662509833979144`, step 0): `update_automation_email` → asunto + texto en español cargados. Falta que Daniel lo «diseñe» y **Active** en el editor (no hay API para eso).
+- **E2–E5**: campañas creadas en **borrador** con diseño de marca «Te escribo» (plantilla replicada de `contenido-rrss/te-escribo-newsletters/carta-02-la-voz-que-te-juzga.html`: kicker beige, H1 `#173D30`, footer CV11515 + twimproject.com + baja en español), remitente verificado `danielorozco@twimproject.com` / «Daniel Orozco - TWIM Project», **grupo `187662493483533365`** (Lead · Directo). IDs vigentes (los primeros se borraron, ver 9.2.2):
+  - E2 `187809525929084347` · E3 `187809536941229345` · E4 `187809546704520781` · E5 `187809557833058027`
+
+### 9.2 · Aristas del conector — NO repetir estos errores
+
+1. **`create_campaign` nace en `language_id` en-US** y no hay endpoint para cambiar idioma. El bloque legal que MailerLite inyecta puede salir en inglés. Mitigación: footer propio en el HTML, en español. Arreglo definitivo **solo en panel** (Configuración del email → idioma Español). Verificar SIEMPRE el idioma antes de programar.
+2. **`update_campaign` NO acepta `groups` y resetea el destinatario a `all_active_subscribers` (toda la lista).** Ocurrió: tras `update_campaign`, las 4 apuntaban a 51 (toda la base) en vez del grupo del Directo. Corregido borrando y recreando con `create_campaign` pasando `content` + `groups` **juntos**. Regla: nunca cambiar el contenido de una campaña con grupo vía `update_campaign`; recrear con `create_campaign(content, groups)` y verificar `filter` / `recipients_count` después.
+3. **`update_form` solo cambia el nombre.** `double_optin` y el diseño visual del formulario no son API.
+4. **No hay endpoint para activar una automation** (`enabled` false→true).
+
+### 9.3 · Lo que queda en Daniel (lo que el conector no permite)
+
+- 4 campañas: idioma → Español (panel). Diseño/copy/remitente/grupo ya correctos.
+- Automation E1: diseñar email + idioma Español + **Activar**.
+- Formulario: opt-in simple + diseñar + activar.
+- Pegar enlace del formulario en canales (§5.4).
+- **Programación de E2–E5 pendiente:** la hace Daniel en panel tras poner idioma, o avisa a Code y Code la programa por API **verificando el `scheduled_for` resultante** (hora de Madrid; riesgo de desfase si no se verifica).
+
+— Actualizado 18-may 2026 con el estado real de ejecución por conector.
