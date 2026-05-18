@@ -51,10 +51,11 @@ def _resolver_fuentes():
 
 FUENTES = _resolver_fuentes()
 
-VERDE = (23, 61, 48)
-BEIGE = (194, 167, 139)
-CREMA = (253, 252, 250)
+VERDE_OSCURO = (23, 61, 48)        # #173D30
+BEIGE = (194, 167, 139)            # #C2A78B
+CREMA = (253, 252, 250)            # #FDFCFA
 W, H, MARGEN, TOTAL = 1080, 1350, 80, 7
+LOGO_TOP = H - 210                 # Y de pegado del logo (coherente base()/render())
 
 
 def sans(weight, size):
@@ -100,7 +101,7 @@ def cargar_logo(ancho):
 
 
 def base(numero, kicker, logo):
-    img = Image.new("RGB", (W, H), VERDE)
+    img = Image.new("RGB", (W, H), VERDE_OSCURO)
     d = ImageDraw.Draw(img)
     fk = sans("Bold", 26)
     cur = MARGEN
@@ -112,7 +113,7 @@ def base(numero, kicker, logo):
     pw, _ = medir(pag, fp)
     d.text((W - MARGEN - pw, MARGEN + 6), pag, font=fp, fill=BEIGE)
     rgba = img.convert("RGBA")
-    rgba.paste(logo, ((W - logo.width) // 2, H - 210), logo)
+    rgba.paste(logo, ((W - logo.width) // 2, LOGO_TOP), logo)
     img = rgba.convert("RGB")
     d = ImageDraw.Draw(img)
     centrado(d, "@daniorozcopsicologo  ·  twimproject.com",
@@ -125,12 +126,21 @@ def render(numero, kicker, bloques, logo):
     Se centran verticalmente en la banda entre header y footer."""
     img, d = base(numero, kicker, logo)
     GAP_BLOQUE = 54
+    # Banda segura derivada del layout real (no constantes mágicas):
+    # bajo el header (kicker/paginación) y por encima del logo.
+    HEADER_BOTTOM = MARGEN + 60
+    BANDA_TOP = HEADER_BOTTOM + 110
+    BANDA_BOT = LOGO_TOP - 60
     alturas = []
     for lineas, f, _c, gap in bloques:
         lh = medir("Hg", f)[1] + gap
         alturas.append(lh * len(lineas) - gap)
     total = sum(alturas) + GAP_BLOQUE * (len(bloques) - 1)
-    y = (300 + (H - 320)) // 2 - total // 2
+    if total > BANDA_BOT - BANDA_TOP:
+        raise ValueError(
+            f"slide-{numero:02d}: el contenido ({total}px) no cabe en la "
+            f"banda segura ({BANDA_BOT - BANDA_TOP}px). Acorta texto o baja tamaño.")
+    y = (BANDA_TOP + BANDA_BOT) // 2 - total // 2
     for (lineas, f, c, gap), alto in zip(bloques, alturas):
         lh = medir("Hg", f)[1] + gap
         for i, ln in enumerate(lineas):
@@ -170,7 +180,8 @@ def main():
 
     render(5, "TWIM PROJECT", [
         (["Y las dos últimas, casi a la vez:"], sans("Regular", 42), CREMA, 12),
-        (["«No estás siendo bastante.»", "«¿Y eso es todo lo que", "vas a hacer hoy?»"], serif(64), CREMA, 12),
+        (["«No estás siendo bastante.»", "«¿Y eso es todo lo que vas a hacer hoy?»"],
+         fit(["«¿Y eso es todo lo que vas a hacer hoy?»"], lambda s: serif(s), 90), CREMA, 16),
         (["ninguna es tu voz.", "todas las aprendiste."], serif(60, italic=True), BEIGE, 10),
     ], logo)
 
