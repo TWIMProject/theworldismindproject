@@ -24,7 +24,14 @@
 
 ## 2 · Lo que NO está aquí todavía (se sube cuando Daniel lo pase)
 
-Estos artefactos los tiene Daniel pero aún no están en el repo:
+> **Actualización 18-may 2026 (reparto cerrado con Daniel):**
+> - **Logo / identidad:** NO se crea nada nuevo. Se usa la identidad TWIM ya en el repo (`logo-mindworld.png`, `assets/logo-mindworld-transparent.png`, paleta `#173D30 / #265C4B / #C2A78B / #FDFCFA`, Instrument Serif + Barlow Condensed). Crear sub-marca propia sería dispersión (sistema visual §4 «Consolidación TWIM»). Suficiente para producir landing y PDFs sin assets de Daniel.
+> - **3 PDFs preparatorios:** los redacta Code desde `marco-conceptual.md` + `guion-sesion-01.md` + `dossier-completo.md`.
+> - **Análisis comparativo / benchmarks de precio / proyecciones de conversión:** los redacta Code desde el repo (`decisiones-cerradas.md`, `plan-captacion-verano-2026.md`), marcando qué es dato documentado y qué estimación. **No se delegan a ChatGPT**: hay dos precedentes en el repo de dossiers de ChatGPT con cifras/decisiones erróneas que hubo que corregir (veredicto §5; este README §5). ChatGPT inventaría números.
+> - **Informe técnico incidencia MailerLite:** ya resuelto el 13 may (era hipótesis falsada), documentado en `mailerlite-api-incidencia.md`. No es un artefacto pendiente.
+> - **Landing HTML:** la produce Code (§3 ya cerrado + dominio/lead magnet/cobertura agosto confirmados 18-may). Desbloqueada.
+
+Lista original (estado previo al 18-may). Estos artefactos los tiene Daniel pero aún no están en el repo:
 
 - **Landing HTML completa** del taller (mencionada en el dossier §6).
 - **3 PDFs preparatorios** con diseño de marca, organizados por bloques temáticos.
@@ -70,7 +77,7 @@ Resumen ejecutivo:
 - **Métricas:** éxito 8 plazas · mínimo 5 · corte **22 sep 2026 23:59 CEST**. Plan B si <5 al 22 sep: posponer S1 a **miércoles 14 oct** (calendario corrido S1-S8 hasta 2 dic) + 50 € extra de descuento. Si al 5 oct siguen <5 → cancelar y devolver. Si 0-2 al 22 sep → cancelar inmediatamente.
 - **Canales:** Newsletter «Te escribo» + IG orgánico + Meta Ads. Pre-pre-venta julio (lista de espera, 0 €) → pre-venta dura 1-22 sep (**330 € en Ads = 15 €/día × 22 días**, escalable a 660 € si CPL primera semana < 50 €).
 - **Tipografía:** Instrument Serif + Barlow Condensed (sistema visual vigente del repo).
-- **Email contacto:** `equipo@twimproject.com` (`theworldismindproject.com` pendiente confirmar si está activo).
+- **Email contacto:** `equipo@theworldismindproject.com` — **confirmado por Daniel el 18-may** (sustituye al fallback `equipo@twimproject.com`).
 - **Cronograma completo 13 may → 30 sep** en `plan-captacion-verano-2026.md`.
 
 ---
@@ -113,10 +120,10 @@ Las dos discrepancias bloqueantes quedaron resueltas el 13 may con la confirmaci
 **Pendiente (⚠️):**
 
 1. ~~**MailerLite API**~~ ✅ **RESUELTO el 13 may ~14:30 CEST**. Daniel ejecutó paso 2 (diag endpoint), Code confirmó que la API key NO está revocada (hipótesis original falsada). Estado real: 4 env vars secundarias ausentes (`INSCRITAS_TDAH`, `INSCRITAS_BACH`, `LEAD_IMPOSTORA`, `LEAD_BURNOUT`) — **no bloquean el taller Volver a Mí ni la captación newsletter actual**. Detalle en `mailerlite-api-incidencia.md` §4.3-§4.4. Pendiente menor opcional: Daniel decide si activa los 4 forms secundarios o desactiva las landings asociadas (decisión no urgente).
-2. **Subir al repo los 7 artefactos que Daniel tiene pero aún no están** (PDFs preparatorios, landing HTML existente del taller, logos procesados, análisis comparativo, benchmarks, proyecciones, informe técnico previo).
-3. **Confirmar dominio email** — `theworldismindproject.com` activo sí/no.
-4. **Decisión sobre lead magnet específico del taller** (PDF gratuito «Cómo saber si tienes hambre de mirada» como gancho de Ads, no marcado por Daniel pero recomendado por Code).
-5. **Elegir colega de cobertura clínica** para el autoresponder de vacaciones de Daniel (agosto). Sin esto, los DMs urgentes durante agosto no tienen escalada real (referencia: `plan-captacion-verano-2026.md` §4 reglas inviolables fase 3).
+2. **Artefactos** — reparto cerrado el 18-may (ver §2): los produce Code (PDFs, análisis, benchmarks, proyecciones, landing); identidad = la existente del repo; informe técnico MailerLite ya resuelto. Ya no se espera que Daniel los pase.
+3. ~~**Confirmar dominio email**~~ ✅ **RESUELTO 18-may**: `equipo@theworldismindproject.com` confirmado por Daniel.
+4. ~~**Decisión lead magnet del taller**~~ ✅ **RESUELTO 18-may**: Daniel da OK al lead magnet «5 señales de hambre de mirada». Desbloquea su producción.
+5. ~~**Colega de cobertura clínica agosto**~~ ✅ **RESUELTO 18-may**: NO hay colega. **Decisión de Daniel:** en agosto él NO abre consulta, así que tendrá hueco y **responde personalmente los emails** (las respuestas pueden tardar algo más, sin escalada a tercero). El autoresponder de agosto refleja esto, no deriva a nadie. Actualizar en consecuencia `plan-captacion-verano-2026.md` §4 fase 3.
 
 **Cuando 1-4 estén resueltos**, el siguiente PR construye:
 
