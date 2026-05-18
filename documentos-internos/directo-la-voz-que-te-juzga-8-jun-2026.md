@@ -20,9 +20,9 @@
 
 ### Pasos manuales de Daniel (solo escritorio, ~15 min — mismo patrón que Cap III)
 
-1. **Formulario** (`dashboard.mailerlite.com/forms/187662502229706033/overview`): diseñar — solo campo **email**, paleta de marca (`#173D30 / #C2A78B / #FDFCFA`), titular y mensaje de éxito (copys en §3). Decisión: el formulario está con **doble opt-in**; para un evento conviene **opt-in simple** (no perder registros tras un clic de confirmación) — cambiar en ajustes del formulario si se acepta esa postura GDPR.
+1. **Formulario** (`dashboard.mailerlite.com/forms/187662502229706033/overview`): diseñar — solo campo **email**, paleta de marca (`#173D30 / #C2A78B / #FDFCFA`), titular y mensaje de éxito (copys en §3). Decisión **DECIDIDA 18-may: opt-in simple** (no doble) — un evento no debe perder registros tras un clic de confirmación. Cambiar en ajustes del formulario a opt-in simple.
 2. **Automation** (`dashboard.mailerlite.com/automations/187662509833979144`): el email de confirmación ya tiene el copy cargado; diseñarlo en el editor (texto plano estilo «Te escribo», sin `{{name}}` ni `[BOTÓN]`, enlaces desde el icono — reglas de `mailerlite-automation-lectores-engranajes-cap3.md` §3) y **Activar**.
-3. **Plataforma del directo (DECISIÓN PENDIENTE, no documentada en el repo):** Zoom (Pro para >40 min), Google Meet, o YouTube Live oculto. Hasta decidirla no se puede mandar el enlace de acceso. Recomendación: YouTube Live oculto (sin límite de tiempo ni de aforo, link estable) o Zoom Pro si se quiere interacción/cámara cerrada.
+3. **Plataforma del directo — DECIDIDO 18-may: Google Meet.** Enlace de acceso: `https://meet.google.com/fsu-scrz-res` (enlace limpio; **no** usar el `?authuser=0` que da Google en el navegador de Daniel — fuerza su cuenta y puede fallar a otros). Daniel contrata el **plan de pago Flexible (16,20 €)**, lo que **elimina el corte de 60 min** del Meet gratuito → el directo puede durar los 60 min completos del guion §4 sin riesgo de corte.
 4. **Recordatorio del día 8 jun:** crear una **campaña** a ese grupo, programada para el 8 jun ~10:00 con el enlace de acceso (copy en §3). Una segunda campaña 1 h antes (18:00) opcional.
 
 ## 3 · Copys (verbatim, listos)
@@ -120,9 +120,88 @@ Pegar el enlace del **formulario de registro** mientras dure la promo; tras el d
 - La grabación se recicla (pipeline `reciclaje-contenido-pipeline.md`) → entra en el embudo Cap III como evergreen durante meses.
 - Compuerta: nada de Meta Ads hasta que el orgánico demuestre que el registro convierte (CEO §7 Decisión 2).
 
-## 7 · Decisiones abiertas para Daniel (no rellenar de intuición)
+## 7 · Decisiones — CERRADAS el 18-may 2026
 
-1. Plataforma del directo (§2.3) — bloquea el enlace de acceso.
-2. Doble opt-in vs simple en el formulario (§2.1).
-3. Objetivo numérico de registros (para medir éxito sin inventarlo).
-4. ¿Se reutiliza este mismo formato como 1 directo/4-6 semanas si funciona, o queda como pieza única? (Por defecto: única, hasta newsletter >1.000 y con asistente — CEO §8.)
+1. **Plataforma:** Google Meet · enlace `https://meet.google.com/fsu-scrz-res` · plan Flexible de pago (sin corte 60 min). ✅
+2. **Opt-in:** simple (no doble). ✅
+3. **Objetivo de registros:** 30-60 (suelo 30 = aceptable, 60 = bueno para una cuenta de este tamaño). ✅
+4. **Formato:** pieza **única** (no recurrente), por defecto del repo hasta newsletter >1.000 + asistente (CEO §8). ✅
+5. **Grabación post-directo:** sí se entrega a los registrados que no asistan (coherente con §1 «evergreen» y el mensaje de éxito §3.1). ✅
+
+---
+
+## 8 · Propuesta final cerrada · secuencia para inscritos (18-may)
+
+> Patrón del repo (igual que Cap III): Code deja todo especificado y montado hasta donde la API permite; **Daniel da los clics finales de diseño/activación en el editor de MailerLite** (el render visual no se toca a ciegas por API). Tiempo estimado de Daniel: ~20 min.
+
+### 8.1 · Calendario de envíos (qué recibe un inscrito)
+
+| # | Cuándo | Tipo MailerLite | Contenido |
+|---|---|---|---|
+| E1 | Inmediato al registrarse | Automation `187662509833979144`, paso 1 (copy ya cargado) | «Estás dentro» (§3.2) |
+| E2 | sáb 7 jun ~19:00 | Campaña programada al grupo `187662493483533365` | Recordatorio víspera + enlace Meet |
+| E3 | dom 8 jun ~10:00 | Campaña programada | «Hoy 19:00 — el enlace para entrar» (§3.3) |
+| E4 | dom 8 jun ~18:00 | Campaña programada (opcional pero recomendada) | «En 1 hora» + enlace |
+| E5 | lun 9 jun ~10:00 | Campaña | Gracias + Capítulo III gratuito + grabación → puente al embudo Cap III |
+
+Enlace Meet a insertar como hipervínculo sobre el texto «Entrar aquí» (nunca pegar la URL cruda — regla `…cap3.md` §3): `https://meet.google.com/fsu-scrz-res`
+
+### 8.2 · Copys nuevos (E2, E4, E5) — verbatim, voz «Te escribo»
+
+**E2 · víspera (7 jun ~19:00) · asunto:** Mañana, 19:00 — te dejo ya el enlace
+```
+Hola,
+
+Mañana domingo, a las 19:00 (hora de España), es el directo: una hora sobre la voz que te dice «no es suficiente».
+
+Te dejo ya el enlace para no buscarlo a última hora: Entrar aquí.
+
+Si mañana no puedes en directo, no pasa nada: a quienes os registrasteis os dejo después el material.
+
+Nos vemos mañana.
+
+— Daniel
+```
+
+**E4 · 8 jun ~18:00 · asunto:** En una hora
+```
+Hola,
+
+En una hora, a las 19:00, empezamos. Una hora, sin prisa, sobre la voz que te juzga.
+
+Entrar aquí.
+
+— Daniel
+```
+
+**E5 · post-directo (9 jun ~10:00) · asunto:** Lo de ayer, por escrito
+```
+Hola,
+
+Ayer estuvimos una hora con la voz que te juzga: de dónde sale, por qué no se calla con razones, y qué empieza a debilitarla.
+
+Si quieres seguir, esto está escrito y ampliado en el Capítulo III, gratuito: Leerlo aquí.
+
+Y si te lo perdiste en directo, aquí tienes la grabación: Verla aquí.
+
+Te sigo escribiendo.
+
+— Daniel
+```
+(E1 y E3 ya están redactados en §3.2 y §3.3.)
+
+### 8.3 · Checklist de activación (clics de Daniel, ~20 min)
+
+```
+[ ] Formulario 187662502229706033: cambiar a opt-in SIMPLE + diseñar (campo email,
+    paleta marca, titular y éxito de §3.1).
+[ ] Automation 187662509833979144: diseñar el email E1 en el editor (texto plano
+    estilo «Te escribo», enlaces desde el icono) y ACTIVAR.
+[ ] Crear Meet en Google Calendar y verificar que el enlace fijo es
+    https://meet.google.com/fsu-scrz-res (plan Flexible activo = sin corte 60 min).
+[ ] Campaña E2 al grupo 187662493483533365, programada sáb 7 jun 19:00.
+[ ] Campaña E3 programada dom 8 jun 10:00.
+[ ] Campaña E4 programada dom 8 jun 18:00.
+[ ] Campaña E5 programada lun 9 jun 10:00 (revisar enlace de grabación tras grabar).
+[ ] Pegar el enlace del FORMULARIO en los canales (§5.4) para abrir captación.
+```
