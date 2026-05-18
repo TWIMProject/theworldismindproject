@@ -81,6 +81,24 @@ Toda pieza visual de venta del proyecto TWIM (portadas de libros, landings comer
 
 ---
 
+## Regla inviolable · Formato de entregables visuales para Daniel
+
+> Regla declarada por Daniel el 18 may 2026.
+
+**Todo cuadro, calendario, dashboard, resumen visual o panel operativo que se le pase a Daniel para visualizar va SIEMPRE en este formato.** Sin excepción y sin que haga falta pedirlo. Nada de CSV crudo ni tablas planas abrumadoras como entregable visual (el CSV solo vale como dato secundario si además se entrega la versión visual).
+
+Especificación reproducible:
+
+- **Soporte:** un archivo **HTML autónomo** (abre en navegador, imprimible a PDF con `@media print` sin cortar tarjetas). Descargable; **no se versiona en el repo** salvo que Daniel lo pida.
+- **Paleta TWIM exacta:** fondo crema `#FDFCFA`, texto verde oscuro `#173D30`, verde medio `#265C4B`, beige `#C2A78B`. Ningún color ajeno.
+- **Tipografía:** Instrument Serif (titulares) + Barlow Condensed (texto), vía Google Fonts.
+- **Estructura:** organizado por **bloques temáticos/temporales**, cada ítem en **tarjeta** con jerarquía clara (fecha/etiqueta destacada · título en serif · una línea de «qué falta» · pasos en gris pequeño y discreto). **Código de color por estado** con leyenda (borde/píldora: verde oscuro = urgente/clave, beige = pendiente, contorno tenue = automático, verde medio = espera OK).
+- **Sin emojis.** Sobrio, premium, editorial. La claridad y el escaneo rápido priman sobre la densidad.
+
+**Convivencia:** esta regla rige los entregables **internos/operativos para Daniel**. No sustituye el criterio dopamina-comercial (piezas de venta) ni las reglas editoriales públicas; las refuerza aplicando la estética TWIM a las herramientas internas. Plantilla de referencia: el calendario operativo entregado el 18 may 2026.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
