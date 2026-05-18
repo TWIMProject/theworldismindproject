@@ -12,6 +12,19 @@ TWIM Project deja de ser "consulta privada de Daniel Orozco" y empieza a ser **u
 
 Este documento ordena el modelo, lo blinda jurídicamente, define el SLA de supervisión y traza el camino de escalado a 3-5 psicólogos asociados en 12 meses.
 
+---
+
+## 0 · Decisiones cerradas por Daniel · 18 may 2026 (prevalecen sobre el cuerpo)
+
+> Regla simétrica de `CLAUDE.md`. El cuerpo de abajo es el modelo propuesto/histórico; estas decisiones son la verdad operativa vigente.
+
+- **Pricing:** la tarifa de **80 €/sesión** se aplica **solo a pacientes nuevos** que entren a partir de ahora (Sergio 50 € → Daniel 30 € de margen). Los pacientes ya en curso siguen a 70 €. No hay subida retroactiva.
+- **Talleres adolescencia con Sergio: NO.** Queda **descartada** la «oportunidad inmediata» de §9 / CEO §11.4. No se monta el taller TDAH/bachillerato con Sergio como responsable.
+- **SLA de supervisión: on-demand.** No hay calendario fijo de supervisión todavía. Se activa **cuando Daniel tenga casos concretos que derivar a Sergio**, con las condiciones de supervisión del §6. Hasta entonces el modelo queda **latente** (no se acelera captación para Sergio).
+- **Lectura:** TWIM Clinic no es foco activo ahora; es capacidad disponible que se activa por caso. Coherente con concentración (CEO Camino A) — no abrir frentes sin demanda real.
+
+---
+
 ## Índice
 
 1. Qué es esto realmente
