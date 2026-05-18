@@ -233,4 +233,14 @@ Te sigo escribiendo.
 - Pegar enlace del formulario en canales (§5.4).
 - **Programación de E2–E5 pendiente:** la hace Daniel en panel tras poner idioma, o avisa a Code y Code la programa por API **verificando el `scheduled_for` resultante** (hora de Madrid; riesgo de desfase si no se verifica).
 
-— Actualizado 18-may 2026 con el estado real de ejecución por conector.
+### 9.4 · Orden inviolable: captación ANTES de programar (aprendido 18-may)
+
+MailerLite **no deja programar ni enviar una campaña a un grupo con 0 destinatarios** (aviso: «por favor añadir más destinatarios»). El grupo `187662493483533365` está vacío hasta que alguien se registra. Por tanto el orden del checklist §8.3 es **estricto**:
+
+1. **Primero abrir captación:** formulario (opt-in simple + diseño + **activar**) → automation E1 (diseñar + idioma ES + **Activar**) → **pegar el enlace del formulario en los canales** (§5.4).
+2. La gente se registra y entra al grupo.
+3. **Solo entonces** (idealmente 5-6 jun, con inscritos en el grupo) se programan E2–E5 (precabecera + «Enviar después» + fecha/hora §8.1).
+
+E2–E5 quedan completas en **borrador** (diseño de marca, copy, remitente, grupo, idioma); lo único pendiente es el clic de programar, que **no es posible hasta que el grupo tenga inscritos**. Ninguna sesión futura debe intentar programarlas con el grupo vacío: es esperado, no un fallo.
+
+— Actualizado 18-may 2026: estado de ejecución por conector + orden captación-antes-de-programar.
