@@ -255,4 +255,23 @@ Política simétrica del CLAUDE.md aplicada a incidencias técnicas, no solo a p
 
 ---
 
-**Última actualización:** 13 may 2026 · sesión `claude/improve-proposal-quality-pq3d9` · pendiente del informe técnico previo de Daniel y de la verificación del paso 2 una vez Netlify haya completado el deploy del PR #149.
+## 6 · Decisión 18-may 2026 · los 4 forms secundarios (cerrada)
+
+> Decisión de Daniel del 18-may; criterio analizado y recomendado por Code, aprobado por delegación expresa de Daniel.
+
+**Ninguno de los 4 forms secundarios recibe env var.** Los 4 (`INSCRITAS_TDAH`, `INSCRITAS_BACH`, `LEAD_IMPOSTORA`, `LEAD_BURNOUT`) **no** se conectan a MailerLite.
+
+Razonamiento (fundamentado en el repo, no intuición):
+
+- **Concentración Camino A** (CEO §3.2): el foco es autoexigencia/dependencia, no abrir embudos laterales.
+- **TDAH / Bachillerato:** cluster editorial más débil **y** los talleres adolescencia con Sergio quedaron **descartados** el 18-may (`twim-clinic-modelo-derivacion.md` §0). Sin producto detrás, conectar el form no tiene sentido.
+- **Burnout:** racimo sólido pero el CEO lo mantiene en **SEO pasivo** bajo concentración.
+- **Impostora:** subtema de autoexigencia ya cubierto por el embudo Reto/dependencia activo.
+
+**Acción decidida:** los 4 forms dejan de intentar suscribir (causa de los 500) y muestran un **mensaje de contacto**: invitar a escribir a `equipo@theworldismindproject.com` para solicitar información / resolver dudas. Sin captura de email rota, sin landing muerta.
+
+**Estado de implementación:** decisión **cerrada**; el cambio en las landings/forms (editar varias páginas públicas) queda **pendiente de OK explícito de Daniel** para ejecutarse en un PR propio — no se toca contenido público de varias páginas sin confirmación (blast radius medio). Code tiene el criterio listo; espera el «adelante».
+
+---
+
+**Última actualización:** 18 may 2026 · sesión `claude/improve-proposal-quality-pq3d9` · §6 añadida (decisión 4 forms). La incidencia técnica original quedó resuelta el 13 may (era hipótesis falsada); este doc ahora documenta además la decisión de producto sobre esos 4 forms.
