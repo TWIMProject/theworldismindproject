@@ -113,6 +113,24 @@ Pegar el enlace del **formulario de registro** mientras dure la promo; tras el d
 - Firma de email.
 - Cross-link en las 7 landings SEO.
 
+### 5.5 · Naming del enlace en canales (propuesta 19-may — pendiente OK Daniel)
+
+> Daniel preguntó (19-may) con qué nombre etiquetar el Share URL del formulario en IG / LinkedIn / Facebook / YouTube para que se entienda de un vistazo. Coherente con el botón del formulario «Reservar mi plaza» (§3.1), el caption (§5.2) y el highlight «DIRECTO» (§5.4).
+
+**Fórmula:** qué (directo gratuito) + tema («La voz que te juzga») + cuándo (dom 8 jun, 19:00) + acción (reservar plaza). Sin emojis (activo editorial puro, §1).
+
+| Canal | Dónde | Nombre/etiqueta del enlace |
+|---|---|---|
+| Instagram | Link en bio | `Directo gratis «La voz que te juzga» · dom 8 jun 19h → reservar` |
+| Instagram | Sticker historia / cover highlight | Sticker: `Reservar plaza` · Highlight: `DIRECTO` |
+| LinkedIn | Featured / post | Título: `Directo: La voz que te juzga` · Desc.: `Domingo 8 jun, 19:00 (España). Gratuito, con registro. Reserva tu plaza.` |
+| Facebook | Post / botón de página | `Reservar plaza — Directo «La voz que te juzga» (dom 8 jun, 19:00)` |
+| YouTube | Comentario fijado / descripción | `Directo gratuito «La voz que te juzga» — domingo 8 jun, 19:00 (España). Reserva tu plaza:` |
+
+**Universal corto** (cuando solo cabe una línea): `Directo gratuito · «La voz que te juzga» · dom 8 jun 19:00 — Reservar plaza`
+
+**Aviso de URL:** difundir la **Share URL pública** del formulario (panel MailerLite → formulario `187662502229706033` → Compartir / página de suscripción). **No** difundir la URL `preview.mailerlite.io/...` — es la vista previa del editor, no la pública estable. Verificar antes de pegar en canales.
+
 ## 6 · Cómo encaja en el plan (no rompe Fase 1, la acelera)
 
 - KPIs Fase 1 (`plan-captacion-verano-2026` §2): newsletter ≥120 y lista de espera taller ≥30 al 14 jun. Cada registro al directo entra al grupo y alimenta esos números.
