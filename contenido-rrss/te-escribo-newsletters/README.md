@@ -47,7 +47,27 @@ EXCLUIR (consentimiento original distinto):
 4. Editor: **plain text** (no drag-and-drop). El tono "carta" se rompe con
    plantillas HTML decoradas.
 5. Pegar el cuerpo del email
-6. Programar para el día/hora elegidos
+6. **Verificar `Idioma = Español`** (ver regla inviolable abajo) y programar
+   para el día/hora elegidos
+
+## Regla inviolable · idioma de campaña (aprendido 19-may-2026)
+
+En esta cuenta MailerLite **toda campaña/carta nace con `Idioma: English`
+por defecto** (no solo las creadas por API; también las hechas a mano). Si
+no se corrige, el **bloque legal automático del pie** sale en inglés
+(«You received this email because you signed up…») a una lista española.
+
+- **Antes de programar CUALQUIER carta/campaña:** abrir sus ajustes
+  («Asunto y remitente» / Configuración del email) y poner **Idioma =
+  Español**. En la pantalla «Revisar» el idioma solo se *muestra*; para
+  cambiarlo hay que editar la campaña (si está programada, «Cancelar
+  envío» la devuelve a Borradores sin perder nada → editar → reprogramar).
+- **Verificar siempre en el preview** que el pie legal sale en español.
+- **Precedente (no repetir):** la **Carta #2 (19-may-2026)** salió con esa
+  línea legal en inglés. Decisión consciente de Daniel (B): no se canceló
+  el envío para no arriesgar la pieza editorial del día por una línea de
+  pie. El cuerpo, asunto y pie propio iban en español. A futuro: idioma
+  Español comprobado en cada carta **al crearla**, no al final.
 
 ## Decisiones de voz (resumen del audit)
 
