@@ -141,6 +141,8 @@ Esa es la **Compartir URL** oficial que MailerLite da para este formulario integ
 - El conector MCP devuelve `active:false` para este formulario: es una **pista falsa** en formularios integrados (no bloquea la Compartir URL). El panel es la fuente de verdad y muestra el formulario correcto, opt-in simple (double opt-in OFF) y grupo asignado.
 - Grupo `187662493483533365` a 0 suscriptores hasta que alguien se registra: **esperado** (§9.4), no un fallo. Se llena al difundir.
 
+**Portada del enlace en redes (1080×1080, generada 19-may, sistema A1 verde):** `portada-rrss-directo-la-voz-que-te-juzga.png` (raíz del repo). Paleta y tipografía de marca (Instrument Serif + Barlow Condensed), sin emojis. Reto 7 días tiene su par A2 crema: `portada-rrss-reto-7-dias-deja-de-buscarte.png`.
+
 ## 6 · Cómo encaja en el plan (no rompe Fase 1, la acelera)
 
 - KPIs Fase 1 (`plan-captacion-verano-2026` §2): newsletter ≥120 y lista de espera taller ≥30 al 14 jun. Cada registro al directo entra al grupo y alimenta esos números.
