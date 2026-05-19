@@ -185,6 +185,20 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 19 mayo 2026 (martes) — Carrusel #3 «La voz que te juzga»
+
+| Hora | Canal | Pieza | URL | Estado |
+|---|---|---|---|---|
+| Manual (no 20:00 programado) | Instagram | Carrusel #3 «5 frases del juez interno» (7 slides) | URL pendiente de capturar | ✅ Publicado manualmente |
+| — | LinkedIn | PDF carrusel «La voz que te juzga» | `contenido-rrss/te-escribo-voz-que-te-juzga/te-escribo-voz-que-te-juzga.pdf` (en repo desde hoy) | 🟡 Pendiente de subir |
+| — | Facebook | Carrusel #3 | — | 🟡 Pendiente |
+
+**Notas de la tanda:**
+
+- Daniel publicó el Carrusel #3 en Instagram **manualmente, sin programar** (la programación desde escritorio no se lo permitió). Decisión consciente; impacto sobre el objetivo considerado no drástico por Daniel.
+- **Consecuencia para el test de horario:** la hipótesis del Carrusel #3 era publicar a las **20:00 CEST** para validar el pico declarado por Meta vs. las 19:00 de los #1/#2 (`metricas-carrusel-2-saberlo-12-may-2026.md` §6, `plan-captacion-verano-2026` S20). Al salir manual fuera de esa franja, **el A/B de horario 19:00 vs 20:00 queda invalidado para esta serie**. El doc de métricas del 26 may (`metricas-carrusel-3-voz-que-te-juzga-19-may-2026.md`) debe leer el #3 como dato de packaging, no de horario.
+- **Pendiente de Daniel:** capturar la URL del post de Instagram y pegarla aquí; subir el PDF a LinkedIn; valorar Facebook.
+
 ### 12 mayo 2026 (martes) — Tanda multicanal Carrusel #2 + Recado 01 story
 
 | Hora | Canal | Pieza | URL | Estado |
