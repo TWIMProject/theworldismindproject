@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#FDFCFA"/>
+
+  <!-- Kicker top -->
+  <text x="540" y="240" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="32" letter-spacing="6" fill="#C2A78B">
+    TE ESCRIBO · CARTA #2
+  </text>
+  <line x1="440" y1="280" x2="640" y2="280" stroke="#C2A78B" stroke-width="1"/>
+
+  <!-- Opening quote mark -->
+  <text x="540" y="560" text-anchor="middle"
+        font-family="Instrument Serif" font-style="italic"
+        font-size="180" fill="#C2A78B" opacity="0.55">
+    &#8220;
+  </text>
+
+  <!-- Main quote -->
+  <text x="540" y="760" text-anchor="middle"
+        font-family="Instrument Serif" font-weight="400"
+        font-size="78" fill="#173D30" letter-spacing="0.5">
+    <tspan x="540" dy="0">No parece que esté</tspan>
+    <tspan x="540" dy="98">hablando alguien.</tspan>
+    <tspan x="540" dy="98">Parece que estás</tspan>
+    <tspan x="540" dy="98">pensando.</tspan>
+    <tspan x="540" dy="98">Pero está hablando</tspan>
+    <tspan x="540" dy="98">una grabación.</tspan>
+  </text>
+
+  <!-- Attribution -->
+  <text x="540" y="1420" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="300"
+        font-size="34" fill="#6B6058" letter-spacing="1">
+    — de la carta «La voz que te juzga»
+  </text>
+
+  <!-- Bottom block -->
+  <line x1="380" y1="1560" x2="700" y2="1560" stroke="#173D30" stroke-width="1" opacity="0.25"/>
+
+  <text x="540" y="1660" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="500"
+        font-size="44" fill="#173D30" letter-spacing="0.5">
+    La carta entera está en la newsletter.
+  </text>
+
+  <text x="540" y="1740" text-anchor="middle"
+        font-family="Barlow Condensed" font-weight="300"
+        font-size="34" fill="#6B6058" letter-spacing="1">
+    Si la quieres recibir, el link está arriba
+  </text>
+
+  <!-- Up arrow (vector, font-independent) -->
+  <g stroke="#6B6058" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="540" y1="1792" x2="540" y2="1840"/>
+    <polyline points="522,1810 540,1792 558,1810"/>
+  </g>
+</svg>
