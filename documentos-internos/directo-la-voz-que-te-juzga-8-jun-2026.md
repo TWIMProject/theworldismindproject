@@ -113,7 +113,7 @@ Pegar el enlace del **formulario de registro** mientras dure la promo; tras el d
 - Firma de email.
 - Cross-link en las 7 landings SEO.
 
-### 5.5 · Naming del enlace en canales (propuesta 19-may — pendiente OK Daniel)
+### 5.5 · Naming del enlace en canales (confirmado 19-may por Daniel)
 
 > Daniel preguntó (19-may) con qué nombre etiquetar el Share URL del formulario en IG / LinkedIn / Facebook / YouTube para que se entienda de un vistazo. Coherente con el botón del formulario «Reservar mi plaza» (§3.1), el caption (§5.2) y el highlight «DIRECTO» (§5.4).
 
@@ -129,7 +129,17 @@ Pegar el enlace del **formulario de registro** mientras dure la promo; tras el d
 
 **Universal corto** (cuando solo cabe una línea): `Directo gratuito · «La voz que te juzga» · dom 8 jun 19:00 — Reservar plaza`
 
-**Aviso de URL:** difundir la **Share URL pública** del formulario (panel MailerLite → formulario `187662502229706033` → Compartir / página de suscripción). **No** difundir la URL `preview.mailerlite.io/...` — es la vista previa del editor, no la pública estable. Verificar antes de pegar en canales.
+**URL a difundir (VERIFICADA 19-may, panel + conector):**
+
+```
+https://preview.mailerlite.io/forms/2232121/187662502229706033/share
+```
+
+Esa es la **Compartir URL** oficial que MailerLite da para este formulario integrado (panel: Formularios → «Registro · Directo «La voz que te juzga» · 8 jun» → campo «Compartir URL»). Es la buena para redes; **se difunde tal cual**.
+
+- Corrección de una nota previa errónea: en formularios *integrados* de MailerLite el dominio `preview.mailerlite.io/.../share` **ES** la página pública para compartir, no una vista previa del editor. No buscar otra URL «más pública»: no existe.
+- El conector MCP devuelve `active:false` para este formulario: es una **pista falsa** en formularios integrados (no bloquea la Compartir URL). El panel es la fuente de verdad y muestra el formulario correcto, opt-in simple (double opt-in OFF) y grupo asignado.
+- Grupo `187662493483533365` a 0 suscriptores hasta que alguien se registra: **esperado** (§9.4), no un fallo. Se llena al difundir.
 
 ## 6 · Cómo encaja en el plan (no rompe Fase 1, la acelera)
 
@@ -271,7 +281,7 @@ E2–E5 quedan completas en **borrador** (diseño de marca, copy, remitente, gru
 
 Ejecutado en vivo con Daniel:
 
-- **Formulario** `187662502229706033`: diseñado con paleta de marca (crema/verde/beige, Helvetica como fallback de Barlow), textos §3.1, reCAPTCHA y política de privacidad activados, **opt-in simple** (double opt-in OFF, es por-formulario, no afecta a otros), grupo correcto. **ACTIVO/publicado.** Share URL disponible.
+- **Formulario** `187662502229706033`: diseñado con paleta de marca (crema/verde/beige, Helvetica como fallback de Barlow), textos §3.1, reCAPTCHA y política de privacidad activados, **opt-in simple** (double opt-in OFF, es por-formulario, no afecta a otros), grupo correcto. **ACTIVO/publicado.** Compartir URL (verificada 19-may): `https://preview.mailerlite.io/forms/2232121/187662502229706033/share` — es la URL pública oficial, ver §5.5 (el `active:false` del conector es pista falsa en formularios integrados).
 - **Automation E1** `187662509833979144`: email rediseñado de marca (kicker «TE ESCRIBO · DIRECTO», «Estás dentro.» en verde, Barlow Condensed, crema), idioma ES. **ACTIVA** (verificado en panel: estado «Activo»).
 - **Pie global de cuenta**: limpiado del copy informal con emoji → «Recibes este correo porque te registraste en TWIM Project.» + «Darte de baja» (Configuración de la cuenta → Detalles de empresa). Pendiente de confirmar que Daniel guardó con las 3 casillas «Forzar la actualización» (afecta retroactivamente a Carta #2, automations y borradores).
 - **Campañas E2–E5**: en borrador, diseño de marca, grupo correcto. Sin programar (Fase B, §9.4).
