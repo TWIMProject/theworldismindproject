@@ -50,7 +50,7 @@ EXCLUIR (consentimiento original distinto):
 6. **Verificar `Idioma = Español`** (ver regla inviolable abajo) y programar
    para el día/hora elegidos
 
-## Regla inviolable · idioma de campaña (aprendido 19-may 2026)
+## Regla inviolable · idioma de campaña (aprendido 19-may-2026)
 
 En esta cuenta MailerLite **toda campaña/carta nace con `Idioma: English`
 por defecto** (no solo las creadas por API; también las hechas a mano). Si
