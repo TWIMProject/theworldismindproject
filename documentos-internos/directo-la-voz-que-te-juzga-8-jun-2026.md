@@ -249,4 +249,15 @@ MailerLite **no deja programar ni enviar una campaña a un grupo con 0 destinata
 
 E2–E5 quedan completas en **borrador** (diseño de marca, copy, remitente, grupo, idioma); lo único pendiente es el clic de programar, que **no es posible hasta que el grupo tenga inscritos**. Ninguna sesión futura debe intentar programarlas con el grupo vacío: es esperado, no un fallo.
 
-— Actualizado 18-may 2026: estado de ejecución por conector + orden captación-antes-de-programar.
+### 9.5 · Estado del embudo al cierre del 18-may (activado)
+
+Ejecutado en vivo con Daniel:
+
+- **Formulario** `187662502229706033`: diseñado con paleta de marca (crema/verde/beige, Helvética como fallback de Barlow), textos §3.1, reCAPTCHA y política de privacidad activados, **opt-in simple** (double opt-in OFF, es por-formulario, no afecta a otros), grupo correcto. **ACTIVO/publicado.** Share URL disponible.
+- **Automation E1** `187662509833979144`: email rediseñado de marca (kicker «TE ESCRIBO · DIRECTO», «Estás dentro.» en verde, Barlow Condensed, crema), idioma ES. **ACTIVA** (verificado en panel: estado «Activo»).
+- **Pie global de cuenta**: limpiado del copy informal con emoji → «Recibes este correo porque te registraste en TWIM Project.» + «Darte de baja» (Configuración de la cuenta → Detalles de empresa). Pendiente de confirmar que Daniel guardó con las 3 casillas «Forzar la actualización» (afecta retroactivamente a Carta #2, automations y borradores).
+- **Campañas E2–E5**: en borrador, diseño de marca, grupo correcto. Sin programar (Fase B, §9.4).
+
+**Único pendiente de Daniel para captar:** difundir el Share URL del formulario en canales (§5.4). Sin difusión, la automation activa no recibe a nadie.
+
+— Actualizado 18-may 2026: embudo del Directo montado y activado; solo falta difusión del enlace + programar E2-E5 en junio con inscritos.
