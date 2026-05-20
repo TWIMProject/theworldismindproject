@@ -21,6 +21,16 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent default denied antes de cualquier config · twim-cookie-consent.js
+  // (que va con defer) actualiza a granted cuando el usuario acepta cookies.
+  // Cumplimiento RGPD + Consent Mode v2 de Google.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
   gtag('js', new Date());
   gtag('config', 'G-VMMZ1TKWZ0');
 </script>
@@ -156,7 +166,7 @@ footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; }
       <p style="margin:0;">Psicólogo General Sanitario · Col. CV11515 · Valencia</p>
     </div>
     <div>
-      <p style="margin:0;"><a href="/">Inicio</a> · <a href="/newsletter/">Te escribo</a> · <a href="/privacidad.html">Privacidad</a></p>
+      <p style="margin:0;"><a href="/">Inicio</a> · <a href="/newsletter/">Te escribo</a> · <a href="/privacy.html">Privacidad</a> · <a href="/cookies.html">Cookies</a> · <a href="/aviso-legal.html">Aviso legal</a></p>
     </div>
   </div>
 </footer>
