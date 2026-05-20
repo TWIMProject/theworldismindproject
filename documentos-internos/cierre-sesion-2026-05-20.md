@@ -20,7 +20,7 @@
 | **Programa «Deja de Obligarte»** | Sin vídeos, sin Stripe. Convertido a placeholder lista de espera con landing dedicada `dejadeobligarte-preventa.html` (PR #196). Daniel decide más adelante si recupera (opción B · audio+texto) o lo elimina (opción D). | (1) Crear grupo «Lista espera DDO» en MailerLite + env var `MAILERLITE_GROUP_LISTA_ESPERA_DDO` · (2) Decidir A/B/C/D del producto final (mi recomendación firme · A) | Ninguno hasta que Daniel decida |
 | **Homepage** | Limpieza completada en PRs #194 + #195 · Cap 3 destacado en sección 2, Volver a Mí prioritario en sección 5, DDBEO + DDO en placeholder, Conferencias fuera con landing dedicada en `/conferencias/`. Nav y GA4 consent arreglados. | Verificar preview del PR #196 antes de merge | Ninguno · home estable hasta nueva orden |
 | **X (@DaniOrozcoPsico)** | Bio v2 actualizada (PR #186) · ahora incluye Col. CV11515 + CTA «Te escribo» + sin «conferencias y formaciones». | Pegar la bio nueva en X (si aún no lo hizo) y verificar que el link del perfil apunta a `/newsletter/` con barra final | Ninguno hasta análisis tras primer mes de publicación |
-| **4 forms migrados a contacto** | Burnout, Impostora, TDAH adolescentes, Bachillerato motivación → todos pasan a contacto puro vía Formspree (PR #190). Forms estaban operativamente rotos o sin captación. | Verificar que Formspree mpwrqplb manda a `equipo@twimproject.com` y hacer sumisión de prueba desde cada uno | Ninguno · arreglo concluido |
+| **4 forms migrados a contacto** | Burnout, Impostora, TDAH adolescentes, Bachillerato motivación → todos pasan a contacto puro vía Formspree (PR #190). Forms estaban operativamente rotos o sin captación. | Verificar que Formspree mpwrqplb está redirigiendo a `equipo@theworldismindproject.com` (panel Formspree) y hacer sumisión de prueba | Ninguno · arreglo concluido |
 
 ---
 
@@ -66,7 +66,7 @@
 - **4 forms (Burnout, Impostora, TDAH, Bachillerato) → contacto puro vía Formspree.** Captación a MailerLite eliminada de esos 4 endpoints.
 - **subscribe.js endurecido:** fallback silencioso `MAILERLITE_GROUP_LEAD_MAGNET` sustituido por 400 fail-loud cuando el `group` no existe en el map.
 - **Homepage refactor:** Cap 3 destacado (era Reto), Volver a Mí prioritario (era TDAH+Bach), DDBEO + DDO en placeholder, Conferencias fuera con landing dedicada en `/conferencias/`.
-- **Conferencias separación de dominios:** Daniel confirma `theworldismindproject.com` activo. Email de conferencias = `equipo@theworldismindproject.com` (separado del `equipo@twimproject.com` clínico/editorial).
+- **Email de contacto unificado en `equipo@theworldismindproject.com`** (decisión nueva 20-may tarde · Daniel confirma que `equipo@twimproject.com` NO existe y `equipo@theworldismindproject.com` SÍ está activo). La separación de dominios prevista en P11 del taller queda en suspenso · mientras Daniel sea un solo Daniel revisando bandeja, una sola bandeja. Aplicado find&replace global el 20-may: las 8 landings y email destinos que referenciaban `equipo@twimproject.com` ahora apuntan a `equipo@theworldismindproject.com`. Formspree mpwrqplb sigue manteniendo su panel · Daniel debe verificar que está redirigiendo a `equipo@theworldismindproject.com` (panel Formspree).
 - **«Deja de Obligarte» decisión cerrada A · placeholder lista de espera.** El producto no tiene vídeos ni Stripe · sale del catálogo activo hasta nueva orden.
 
 ---
