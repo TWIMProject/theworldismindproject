@@ -9,9 +9,15 @@
 //   MAILERLITE_GROUP_INSCRITAS_TDAH → ID del grupo "Taller TDAH - Inscritas" (186093787887437444)
 //   MAILERLITE_GROUP_INSCRITAS_BACH → ID del grupo "Taller Bachillerato - Inscritas" (186093790595909010)
 //   MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3 → ID del grupo "Lectores · Engranajes Cap3"
-//   MAILERLITE_GROUP_PRE_VENTA_VOLVER_A_MI → ID del grupo "Pre-venta Volver a Mí" (Daniel debe crear en MailerLite cuando abra la lista de espera del taller, plan-captacion-verano-2026 S22-S23)
-//   MAILERLITE_GROUP_LISTA_ESPERA_DDBEO → ID del grupo "Lista espera · Deja de Buscarte en Otros" (Daniel debe crear)
-//   MAILERLITE_GROUP_LISTA_ESPERA_DDO   → ID del grupo "Lista espera · Deja de Obligarte" (Daniel debe crear)
+//   MAILERLITE_GROUP_PRE_VENTA_VOLVER_A_MI → ID 188015567896052961 · grupo "Lead · Pre-venta Volver a Mí" (creado 20-may-2026 via MCP, env var configurada)
+//   MAILERLITE_GROUP_LISTA_ESPERA_DDBEO → ID 188015570570970973 · grupo "Lead · Lista espera · Deja de Buscarte en Otros" (creado 20-may-2026 via MCP, env var configurada)
+//   MAILERLITE_GROUP_LISTA_ESPERA_DDO   → ID 188015573363328332 · grupo "Lead · Lista espera · Deja de Obligarte" (creado 20-may-2026 via MCP, env var configurada)
+//
+// Automations asociadas (creadas 20-may-2026 via MCP, en borrador hasta que Daniel
+// las diseñe + active en panel · arista conocida del conector):
+//   - Lead magnet 5 señales + lista taller (automation 188015660948784728)
+//   - Lista espera DDBEO (automation 188015669577516322)
+//   - Lista espera DDO (automation 188015675634091134)
 //
 // Eliminados el 20-may-2026 (commit migración 4 forms a contacto, analisis-benchmarks
 // del taller §4): MAILERLITE_GROUP_PADRES_TDAH, MAILERLITE_GROUP_PADRES_BACH,
