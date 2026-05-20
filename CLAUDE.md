@@ -99,6 +99,27 @@ Especificación reproducible:
 
 ---
 
+## Regla inviolable · Autoauditoría tras libertad de acción
+
+> Regla declarada por Daniel el 20 may 2026.
+
+**Siempre que Daniel haya dado «libertad de acción» (frases tipo «sigue», «empuja todo lo que veas necesario», «hazlo tú», «como tus otros compañeros», «si me equivoco insiste»), al cerrar la tarda hay que ejecutar una autoauditoría antes de pasar la pelota al usuario.** La autoauditoría se hace en el mismo turno en que se entrega el trabajo (no en un turno futuro) y se reporta lo encontrado · lo que está bien queda confirmado, lo que está mal o incompleto se arregla en el acto si es trivial o se reporta explícitamente si requiere decisión.
+
+**Qué cubre la autoauditoría:**
+
+- **Find & replaces** · verificar que no quedan referencias residuales en docs, captions, txt, scripts.
+- **Archivos nuevos creados** · verificar que están enlazados desde algún sitio (no son archivos huérfanos), que el sitemap los incluye si son públicos, y que su sintaxis es válida.
+- **APIs externas (MailerLite, Netlify, Stripe, etc.)** · verificar que la operación ejecutada realmente se completó (ej. env var creada existe en el panel; grupo aparece en list_resources; automation tiene los IDs correctos).
+- **Cambios de copy en piezas con CTAs** · verificar coherencia con el resto del copy de la pieza (no contradicciones internas tipo «exclusivo para X» mientras se dice «general para Y»).
+- **Documentos cierre-sesion y log** · verificar que reflejan la verdad real al cierre del turno (no la del inicio).
+- **PRs abiertos vs cambios en branch** · si hay commits posteriores al último PR abierto, abrir nuevo PR o mencionar explícitamente.
+
+**Por qué importa:** la libertad de acción de Daniel implica que él NO está revisando paso a paso. Sin autoauditoría, los errores caen en producción sin que nadie los vea. La autoauditoría es la forma de honrar la confianza sin pedirle a Daniel que verifique cada cosa.
+
+**Formato del reporte de autoauditoría:** lista breve · qué se verificó, qué resultado dio, qué quedó arreglado en el acto, qué se reporta como pendiente. Sobrio, sin inflación, fiel a lo que realmente se ejecutó.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
