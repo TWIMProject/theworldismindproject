@@ -1,15 +1,33 @@
 /**
  * TWIM Project · Cookie Consent Banner
- * v1.0 · 1 mayo 2026
+ * v1.0 · 1 mayo 2026 · doc actualizada 20 may 2026 a Consent Mode v2
  *
- * Banner GDPR/LSSI-CE-compliant. Requiere consentimiento previo antes de cargar
- * cookies analíticas (GA4) y publicitarias (Meta Pixel, Google Ads).
+ * Banner GDPR/LSSI-CE-compliant. Bloquea las cookies analíticas (GA4) y
+ * publicitarias (Meta Pixel, Google Ads) hasta que el usuario otorga
+ * consentimiento explícito.
  *
- * Uso en cada landing:
- *   <script src="/assets/twim-cookie-consent.js" defer></script>
+ * Uso en cada landing (patrón Google Consent Mode v2):
+ *   1. Cargar el script gtag.js de Google + inicializar dataLayer.
+ *   2. Llamar a gtag('consent','default',{ ad_storage:'denied',
+ *      analytics_storage:'denied', ad_user_data:'denied',
+ *      ad_personalization:'denied', wait_for_update:500 }) ANTES de
+ *      cualquier gtag('config', ...).
+ *   3. Cargar este script con defer:
+ *        <script src="/assets/twim-cookie-consent.js" defer></script>
  *
- * No carga ni GA ni Pixel hasta que el usuario acepta. Si rechaza, solo cookies
- * técnicas (las del propio banner). El consentimiento se almacena 12 meses.
+ * Comportamiento: el script gtag se carga al render (1 request a Google
+ * sin cookies, permitido bajo Consent Mode v2). NO se graban cookies ni
+ * se envían eventos de tracking hasta que este banner llama a
+ * gtag('consent','update',{ analytics_storage:'granted', ... }) tras el
+ * clic del usuario. Si rechaza, las cookies analíticas/publicitarias
+ * quedan denegadas y solo se almacenan cookies técnicas del propio
+ * banner (consentimiento persistido 12 meses).
+ *
+ * NOTA HISTÓRICA: la doc previa decía «No carga ni GA ni Pixel hasta
+ * que el usuario acepta» (patrón v1 anterior a Consent Mode v2). Eso
+ * implicaba inyectar gtag dinámicamente, lo cual no se llegó a
+ * implementar; el contrato real desde v1 es el patrón Consent Mode v2
+ * descrito arriba, que sí cumple LSSI-CE y RGPD.
  *
  * window.twimReopenCookies() reabre el modal para reconfigurar.
  */
