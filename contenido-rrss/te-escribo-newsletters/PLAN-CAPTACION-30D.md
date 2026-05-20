@@ -186,6 +186,25 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 20 mayo 2026 (miércoles) — Día de limpieza editorial y embudo
+
+| Tipo | Acción | Estado |
+|---|---|---|
+| Email | Carta promo del Directo 8 jun programada vía MCP MailerLite (ID `187974522939377362`) para mié 3 jun 19:00 CEST | ✅ Programada (pendiente Daniel cambiar idioma a Español en panel) |
+| Repo | 17 PRs cerrados en la sesión `claude/social-media-link-naming-tcIUA`. Resumen completo en `documentos-internos/cierre-sesion-2026-05-20.md` | ✅ |
+| Web | Homepage refactorizada: Cap 3 destacado, Volver a Mí prioritario, DDBEO + DDO en placeholders reales (con landings dedicadas de captación), Conferencias fuera con landing propia en `/conferencias/`, nav y GA4 consent arreglados | ✅ (PRs #194, #195, #196) |
+| Web | Forms TDAH/Bachillerato/Burnout/Impostora migrados a contacto puro vía Formspree (captación a MailerLite eliminada · grupos a 0 active_count) | ✅ (PR #190) |
+| Embudo | Cap 3 Engranajes lead magnet: embudo verificado end-to-end por Daniel (smoke test OK · form, MailerLite, email). Problema confirmado: tráfico, no embudo. Promo orgánica preparada (story IG + hilo X + Threads) en PR #193 · pendiente publicación manual de Daniel | 🟡 pieza lista para difundir |
+
+**Métricas a 24 h del Carrusel #3 (recapturadas 20 may ~21:00 desde la captura inicial a ~17 h, ya en doc):**
+
+- Capturadas a tiempo ~24 h reales por Daniel después de las 17:07. (Si las captura, anotar aquí.)
+
+**Notas de la jornada:**
+
+- Decisión meta nueva de Daniel (regla 4 del CLAUDE.md): «aunque me limites en presupuesto o enfoque, es imprescindible que me busques convencer de tu visión si claramente me estoy equivocando.»
+- Embudo de lead generation operativo para los 3 productos (Volver a Mí, DDBEO, DDO). Daniel pendiente de crear los 3 grupos MailerLite + env vars en Netlify.
+
 ### 19 mayo 2026 (martes) — Carrusel #3 «La voz que te juzga»
 
 | Hora | Canal | Pieza | URL | Estado |

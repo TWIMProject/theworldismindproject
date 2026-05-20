@@ -1,0 +1,78 @@
+Post LinkedIn · Daniel Orozco Abia · Promoción orgánica del Capítulo III gratis del libro «Los Engranajes de la Mente»
+
+Creado el 20-may-2026 como adaptación del hilo X (`hilo-x-cap3-juez-interno.txt`) para LinkedIn. LinkedIn requiere voz más profesional · texto continuo, no hilo de tweets · longitud confortable hasta 1.300 caracteres antes del «...ver más». Tono editorial pero alineado con perfil profesional/RR. HH./directivos adyacentes al público del taller Volver a Mí.
+
+URL canónica (CLAUDE.md): https://twimproject.com/libro/capitulo-3/
+
+----------
+
+TEXTO PRINCIPAL (1.247 caracteres · entra entero sin truncar en «...ver más»)
+
+Lo más curioso del juez interno es que la mayoría de personas funcionales no lo identifican como una voz aparte. Lo experimentan como si fueran ellas mismas pensando.
+
+«No has hecho nada que valga la pena hoy.»
+«Esto te ha quedado regular.»
+«Otros lo habrían hecho mejor.»
+«No estás siendo bastante.»
+
+Si te suenan esas frases por dentro, no son tuyas. Es una voz que se montó hace mucho · tomó prestada la entonación, las exigencias y los gestos de las figuras que te educaron, y se quedó dentro funcionando sola.
+
+Freud le puso nombre técnico (superyó). Da igual el nombre. Lo importante es entender que no se calla con razones, no se calla con motivación, y la voluntad apenas lo roza.
+
+Lo que sí lo debilita es algo muy concreto · empezar a verlo como lo que es. No discutirlo. Verlo. Como cuando descubres que la voz que oyes en la radio es una grabación y deja de tener autoridad sobre ti.
+
+Lo desarrollo entero en el Capítulo III de mi libro «Los Engranajes de la Mente».
+
+Lo regalo en PDF, sin secuencia agresiva, sin embudo de venta · solo el capítulo.
+
+twimproject.com/libro/capitulo-3/
+
+Daniel Orozco Abia · Psicólogo General Sanitario (Col. CV11515) · Valencia · psicoanálisis aplicado a la vida cotidiana y al rendimiento profesional.
+
+----------
+
+VERSIÓN CORTA (para reaprovechar como introducción de carrusel LinkedIn o post breve · 484 caracteres)
+
+El juez interno no se reconoce como voz aparte · se experimenta como pensar.
+
+«No estás siendo bastante.» «Esto te ha quedado regular.»
+
+Si te suenan, no son tuyas. Son la entonación de quien te educó, instalada dentro y funcionando sola.
+
+Freud lo llamó superyó. El nombre da igual. Lo que importa es que no se calla con razones · pero sí se debilita cuando lo ves como lo que es.
+
+Lo desarrollo en el Capítulo III gratis: twimproject.com/libro/capitulo-3/
+
+----------
+
+Hashtags sugeridos (4 max · LinkedIn penaliza el spam de hashtags)
+
+#psicologiaaplicada #psicoanalisis #autoexigencia #liderazgo
+
+(O bien · #psicologiaprofunda #autoestima #rendimientoprofesional #liderazgo)
+
+Daniel decide según el ángulo que quiera enfatizar · si más clínico-editorial usa los primeros · si más B2B/directivo usa los segundos.
+
+----------
+
+Instrucciones para publicar (Daniel)
+
+1. Pegar el TEXTO PRINCIPAL en LinkedIn como post nativo (no como artículo · genera más alcance). Sin imagen al principio · LinkedIn los textos sin imagen suelen tener mejor alcance orgánico que con imagen (contraintuitivo pero documentado).
+
+2. Si quieres añadir imagen, usa la `story-05-cap3-juez-interno.png` ya producida en PR #193 · pero entonces el algoritmo trata el post como visual y los hashtags pesan más. Decisión tuya.
+
+3. Publicar entre martes y jueves · martes-jueves 9-11 hora de Madrid es la ventana de máximo alcance para perfiles psicología/RR.HH. en España según Hootsuite Spain.
+
+4. Tras publicar, anotar URL del post en `contenido-rrss/te-escribo-newsletters/PLAN-CAPTACION-30D.md` §6 (regla simétrica).
+
+5. NO publicar el mismo día que el hilo X o la story IG · espaciar 24-48 h para que cada canal traiga su tipo de tráfico al Cap 3 sin parecer campaña agresiva.
+
+----------
+
+Notas editoriales
+
+- LinkedIn tolera (incluso premia) tono editorial cuidado · puedes ser más literario que en X.
+- La frase de apertura («Lo más curioso del juez interno es que la mayoría de personas funcionales no lo identifican como una voz aparte») está pensada como hook para captar al lector LinkedIn que escanea posts en feed. Si no engancha en los primeros 200 caracteres, el post no se expande.
+- El bloque profesional al final (CV11515 + psicología profunda + rendimiento profesional) es el ángulo que diferencia LinkedIn de X · refuerza autoridad sin caer en LinkedIn-influencer tono.
+- Sin emojis · sin clickbait · sin frases motivacionales (CLAUDE.md).
+- Sin dos puntos salvo gramaticalmente imprescindibles (normas-inviolables del taller §3, aplicable a toda voz TWIM). Uso «·» como cesura.
