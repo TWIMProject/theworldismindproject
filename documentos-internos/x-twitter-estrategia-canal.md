@@ -13,7 +13,7 @@
 | **Handle** | @DaniOrozcoPsico |
 | **URL** | https://x.com/DaniOrozcoPsico |
 | **Nombre** | Daniel Orozco Abia |
-| **Bio** | Consulta clínica en Valencia desde 2012 · Psicología profunda y aplicada · Conferencias y formaciones para empresas · Autor de Los engranajes y Burnout |
+| **Bio** | Psicólogo · Col. CV11515 · Valencia, 2012. Psicología profunda y aplicada. Sobre la mente, el cansancio y lo que no se dice. «Te escribo» cada semana ↓ |
 | **Categoría** | Psicólogo(a) |
 | **Ubicación** | Valencia, Spain |
 | **Web** | twimproject.com |
@@ -28,7 +28,7 @@
 
 ✅ **Avatar coherente** con resto de canales (foto de Daniel sobre fondo verde).
 
-✅ **Bio precisa.** Identifica posicionamiento, ubicación, dos productos editoriales (libros) y servicios (consulta + formación empresas).
+✅ **Bio (v2, 19-may-2026).** Sustituye la versión del 1-may para alinear con tres principios documentados: (1) ancla de autoridad **CV11515 visible** (§3 de este doc + CEO doc §2 + sistema visual IG §1.3 punto 2, que cita literalmente al CEO doc); (2) CTA explícita a la newsletter «Te escribo» (el embudo principal del proyecto); (3) elimina «conferencias y formaciones para empresas» de la bio — vive en la web, no compite por los 160 chars de una cuenta arrancando. Voz alineada con el banner. Bio link recomendado: `https://twimproject.com/newsletter/` (no la home), coherente con la flecha ↓ y con la regla de trailing slash de CLAUDE.md.
 
 ✅ **Post fijado en marca.** Carrusel "Tu cansancio no es físico" + caption editorial coherente con voz TWIM.
 
