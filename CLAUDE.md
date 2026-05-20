@@ -103,7 +103,7 @@ Especificación reproducible:
 
 > Regla declarada por Daniel el 20 may 2026.
 
-**Siempre que Daniel haya dado «libertad de acción» (frases tipo «sigue», «empuja todo lo que veas necesario», «hazlo tú», «como tus otros compañeros», «si me equivoco insiste»), al cerrar la tarda hay que ejecutar una autoauditoría antes de pasar la pelota al usuario.** La autoauditoría se hace en el mismo turno en que se entrega el trabajo (no en un turno futuro) y se reporta lo encontrado · lo que está bien queda confirmado, lo que está mal o incompleto se arregla en el acto si es trivial o se reporta explícitamente si requiere decisión.
+**Siempre que Daniel haya dado «libertad de acción» (frases tipo «sigue», «empuja todo lo que veas necesario», «hazlo tú», «como tus otros compañeros», «si me equivoco insiste»), al cerrar la tarea hay que ejecutar una autoauditoría antes de pasar la pelota al usuario.** La autoauditoría se hace en el mismo turno en que se entrega el trabajo (no en un turno futuro) y se reporta lo encontrado · lo que está bien queda confirmado, lo que está mal o incompleto se arregla en el acto si es trivial o se reporta explícitamente si requiere decisión.
 
 **Qué cubre la autoauditoría:**
 

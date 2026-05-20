@@ -103,13 +103,13 @@ Estas siguen activas. Cualquier sesión futura las respeta.
 
 ## 6 · Corrección post-autoauditoría (20-may 21:00)
 
-> Regla inviolable nueva declarada por Daniel («Autoauditate cuando te de libertad de acción»). Aplicada en el cierre del turno · cazó un bug crítico.
+> Regla inviolable nueva declarada por Daniel («Autoauditate cuando te dé libertad de acción»). Aplicada en el cierre del turno · cazó un bug crítico.
 
-**Bug detectado y corregido:** las 3 env vars de Netlify creadas via MCP (`MAILERLITE_GROUP_PRE_VENTA_VOLVER_A_MI`, `MAILERLITE_GROUP_LISTA_ESPERA_DDBEO`, `MAILERLITE_GROUP_LISTA_ESPERA_DDO`) se crearon con scope `["functions"]` solo, mientras el resto del proyecto las tiene con scope completo `["builds","functions","post_processing","runtime"]`. El connector devolvió `"Environment variable upserted"` 3 veces pero las env vars **no aparecían en `getAllEnvVars`** del Netlify, lo cual implica que **no estaban realmente expuestas al runtime** de las functions. Resultado · los 4 forms (lead magnet 5 señales + lista espera Volver a Mí + DDBEO + DDO) habrían devuelto 500 silenciosamente en producción tras merge.
+**Bug detectado y corregido:** las 3 env vars de Netlify creadas vía MCP (`MAILERLITE_GROUP_PRE_VENTA_VOLVER_A_MI`, `MAILERLITE_GROUP_LISTA_ESPERA_DDBEO`, `MAILERLITE_GROUP_LISTA_ESPERA_DDO`) se crearon con scope `["functions"]` solo, mientras el resto del proyecto las tiene con scope completo `["builds","functions","post_processing","runtime"]`. El connector devolvió `"Environment variable upserted"` 3 veces pero las env vars **no aparecían en `getAllEnvVars`** del Netlify, lo cual implica que **no estaban realmente expuestas al runtime** de las functions. Resultado · los 4 forms (lead magnet 5 señales + lista espera Volver a Mí + DDBEO + DDO) habrían devuelto 500 silenciosamente en producción tras merge.
 
 **Corrección aplicada:** reintento de las 3 env vars con `newVarScopes: ["builds","functions","post_processing","runtime"]`. Verificado en `getAllEnvVars` · las 3 aparecen ahora correctamente expuestas con `updated_at: 2026-05-20T19:47`.
 
-**Aprendizaje para sesiones futuras:** al crear env vars Netlify vía MCP, usar **siempre scope completo** (`["builds","functions","post_processing","runtime"]`) para coincidir con el patrón del proyecto. El default `["all"]` o `["functions"]` solo no funciona como cabe esperar. La diferencia entre el upsert "successful" del MCP y la visibilidad real en `getAllEnvVars` no la detecta el responseroot del propio MCP · solo se ve auditando.
+**Aprendizaje para sesiones futuras:** al crear env vars Netlify vía MCP, usar **siempre scope completo** (`["builds","functions","post_processing","runtime"]`) para coincidir con el patrón del proyecto. El default `["all"]` o `["functions"]` solo no funciona como cabe esperar. La diferencia entre el upsert "successful" del MCP y la visibilidad real en `getAllEnvVars` no la detecta la respuesta del propio conector MCP · solo se ve auditando.
 
 **Última actualización:** 20 may 2026 · sesión `claude/social-media-link-naming-tcIUA` · cierre del día con autoauditoría aplicada y bug crítico corregido en el acto.
 
