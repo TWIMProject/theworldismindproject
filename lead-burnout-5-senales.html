@@ -101,6 +101,15 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Consent default denied antes de cualquier config (Consent Mode v2 · RGPD).
+    // twim-cookie-consent.js (defer) actualiza a granted cuando el usuario acepta.
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-VMMZ1TKWZ0');
   </script>
