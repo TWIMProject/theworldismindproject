@@ -1,0 +1,96 @@
+Hilo X · @DaniOrozcoPsico · Promoción orgánica del Capítulo III gratis del libro «Los Engranajes de la Mente»
+
+Creado el 20-may-2026 para promocionar el lead magnet Cap 3 (form en libro/capitulo-3/index.html, automation MailerLite «Secuencia · Lectores Cap 3 Engranajes» activa con 0 completados a fecha). Patrón: doc x-twitter-estrategia-canal.md §4.1 (5-12 tweets, 1/x, sin emoji, peso clínico, keywords primer tweet).
+
+URL canónica (CLAUDE.md): https://twimproject.com/libro/capitulo-3/
+
+----------
+
+T1 (hook · 173 char)
+
+«No has hecho nada que valga la pena hoy.» «Esto te ha quedado regular.» «No estás siendo bastante.»
+
+Si te suenan esas frases por dentro, no son tuyas. Es el juez interno.
+
+1/5
+
+----------
+
+T2 (mecanismo · 156 char)
+
+Se montó hace mucho. Tomó prestada la entonación, las exigencias y los gestos de las figuras que te educaron. Y después se quedó dentro funcionando sola.
+
+2/5
+
+----------
+
+T3 (anclaje teórico · 165 char)
+
+Freud le puso nombre técnico · superyó. Da igual el nombre.
+
+Lo importante es entender que no se calla con razones, no se calla con motivación, y la voluntad apenas lo roza.
+
+3/5
+
+----------
+
+T4 (qué sí lo debilita · 173 char)
+
+Lo que sí lo debilita es algo muy concreto · empezar a verlo como lo que es.
+
+No discutirlo. Verlo.
+
+Como cuando descubres que la voz que oyes en la radio es una grabación y deja de tener autoridad sobre ti.
+
+4/5
+
+----------
+
+T5 (CTA al Cap 3 gratis · 168 char)
+
+Lo desarrollo entero en el Capítulo III de Los Engranajes de la Mente.
+
+PDF gratis, sin secuencia agresiva, solo el capítulo · twimproject.com/libro/capitulo-3/
+
+5/5
+
+----------
+
+VERSIÓN CONDENSADA · Threads (2 posts)
+
+Post 1:
+«No has hecho nada que valga la pena hoy.» «Esto te ha quedado regular.» «No estás siendo bastante.»
+
+Si te suenan esas frases por dentro, no son tuyas.
+
+Es el juez interno. Tomó prestada la entonación de las figuras que te educaron y se quedó dentro funcionando sola. Freud lo llamó superyó, pero el nombre da igual.
+
+Lo importante · no se calla con razones, no se calla con motivación. Lo que sí lo debilita es algo muy concreto · empezar a verlo como lo que es.
+
+Post 2:
+Lo desarrollo entero en el Capítulo III de mi libro «Los Engranajes de la Mente».
+
+Lo regalo en PDF, sin secuencia agresiva, sin embudo de venta · solo el capítulo.
+
+twimproject.com/libro/capitulo-3/
+
+----------
+
+Instrucciones para publicar (Daniel):
+
+1. X · publicar como hilo nativo (no como tweet único largo). Pegar T1 → publicar → responder con T2 → responder con T3 ... hasta T5. Anclar T1 al perfil 24-48 h tras publicación si el T5 mueve algo de tráfico.
+
+2. Threads · publicar Post 1 → responder con Post 2. Menos formal que X · no hace falta numerar.
+
+3. Tras publicar, anotar URL del hilo y de Threads en `contenido-rrss/te-escribo-newsletters/PLAN-CAPTACION-30D.md` §6 (regla simétrica · cada publicación manual se registra el mismo día).
+
+4. NO publicar X + Threads + IG story el mismo día. Espaciado mínimo · X hoy, story IG mañana, Threads pasado. Permite que cada canal traiga su tipo de tráfico al Cap 3 sin que parezca campaña.
+
+----------
+
+Notas editoriales
+
+- Cuatro citas verbatim del juez interno son las mismas que ya están en la landing del Cap 3 (línea 140) y en el carrusel #3 IG · coherencia editorial.
+- No mencionar precio del libro completo · el hilo es regalo, no venta. Si alguien pregunta, ahí entra el cross-sell honesto.
+- No usar dos puntos salvo gramaticalmente imprescindibles (regla normas-inviolables.md §3 del taller, aplicable a toda voz TWIM). Uso «·» como cesura.
+- Sin emojis · sin clickbait · sin frases motivacionales.
