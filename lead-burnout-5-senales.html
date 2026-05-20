@@ -72,7 +72,8 @@
     .lead-form-box ul li::before { content: '✓'; position: absolute; left: 0; color: var(--beige-light, #D4C4AE); font-weight: 600; }
     .lead-form-box form { max-width: 460px; }
     .lead-form-box input { width: 100%; padding: .85rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.96); color: var(--text); font-family: inherit; font-size: 1rem; margin-bottom: .65rem; box-sizing: border-box; }
-    .lead-form-box input:focus { outline:none; border-color: var(--beige); }
+    .lead-form-box textarea { width: 100%; padding: .85rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.96); color: var(--text); font-family: inherit; font-size: 1rem; margin-bottom: .65rem; box-sizing: border-box; min-height: 100px; resize: vertical; line-height: 1.5; }
+    .lead-form-box input:focus, .lead-form-box textarea:focus { outline:none; border-color: var(--beige); }
     .lead-form-box button { width: 100%; padding: 1rem; background: var(--beige); color:#fff; border:none; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; font-family: inherit; transition: background .2s; }
     .lead-form-box button:hover:not(:disabled) { background: var(--beige-dark); }
     .lead-form-box button:disabled { opacity: .65; cursor: not-allowed; }

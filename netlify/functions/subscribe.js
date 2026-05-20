@@ -111,7 +111,18 @@ exports.handler = async (event) => {
       return json(400, headers, { error: "Email inválido o ausente" });
     }
 
-    const groupEnvKey = groupEnvMap[group] || "MAILERLITE_GROUP_LEAD_MAGNET";
+    // Fail-loud: si el grupo no está en el map permitido, devolvemos 400 en vez
+    // de hacer fallback silencioso a un grupo arbitrario (riesgo de mezclar
+    // segmentos sin que falle la request). Endurecimiento aplicado el 20-may-2026
+    // tras la migración de los 4 forms a contacto (PR forms→contacto, review Copilot).
+    const groupEnvKey = groupEnvMap[group];
+    if (!groupEnvKey) {
+      console.error(`Grupo desconocido recibido: '${group}'`);
+      return json(400, headers, {
+        error: `Grupo desconocido: '${group}'`,
+        allowed: Object.keys(groupEnvMap),
+      });
+    }
     const groupId = process.env[groupEnvKey];
 
     if (!groupId) {
