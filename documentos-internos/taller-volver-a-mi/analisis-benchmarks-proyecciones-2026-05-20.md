@@ -48,6 +48,7 @@ El §3 de `decisiones-cerradas.md` dejó esta decisión como «Pendiente decisi�
 - **Lead magnet del taller** = PDF gratuito gancho de Meta Ads, captura email a la lista de espera. Para personas que aún NO conocen el taller.
 
 **Decisión Code 20-may: SÍ producir lead magnet del taller, en Fase 2 (no antes).**
+> ⚙️ **Actualización 20-may (tarde):** producción **adelantada** a Fase 1 tras autorización explícita de Daniel («empuja todo lo que veas necesario, dame saltos de calidad y nos acerque a monetizar»). El lead magnet ya existe en `talleres/volver-a-mi/pdfs/lead-magnet-5-senales-hambre-de-mirada.html` (documento editorial de ~10 páginas) + landing pública en `lead-volver-a-mi-5-senales.html` con form que captura a grupo `pre-venta-volver-a-mi`. La razón original del «Fase 2» era la dispersión del sprint editorial de Daniel; al producirlo Code sin carga para Daniel, esa razón ya no aplica. Beneficio operativo · Meta Ads de Fase 4 (sep) tiene gancho desde el día 1.
 
 - **Título:** «5 señales de que tienes hambre de mirada» (consistente con el copy del taller y con el carrusel anuncio que el `plan-captacion-verano-2026.md` §5 ya menciona como creativa principal de Ads).
 - **Formato:** 12-16 páginas, paleta y tipografía TWIM, voz editorial sobria. No ejercicios, no «test». Las 5 señales descritas + un cierre que invita a la lista de espera sin presionar.
