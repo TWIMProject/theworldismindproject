@@ -72,7 +72,8 @@
     .lead-form-box ul li::before { content: '✓'; position: absolute; left: 0; color: var(--beige-light, #D4C4AE); font-weight: 600; }
     .lead-form-box form { max-width: 460px; }
     .lead-form-box input { width: 100%; padding: .85rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.96); color: var(--text); font-family: inherit; font-size: 1rem; margin-bottom: .65rem; box-sizing: border-box; }
-    .lead-form-box input:focus { outline:none; border-color: var(--beige); }
+    .lead-form-box textarea { width: 100%; padding: .85rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.96); color: var(--text); font-family: inherit; font-size: 1rem; margin-bottom: .65rem; box-sizing: border-box; min-height: 100px; resize: vertical; line-height: 1.5; }
+    .lead-form-box input:focus, .lead-form-box textarea:focus { outline:none; border-color: var(--beige); }
     .lead-form-box button { width: 100%; padding: 1rem; background: var(--beige); color:#fff; border:none; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; font-family: inherit; transition: background .2s; }
     .lead-form-box button:hover:not(:disabled) { background: var(--beige-dark); }
     .lead-form-box button:disabled { opacity: .65; cursor: not-allowed; }
@@ -172,23 +173,22 @@
         </div>
       </article>
       <section class="lead-form-box" id="lead-form-section">
-        <h2>Si te has reconocido, hay un siguiente paso</h2>
-        <p>Te mando por email un material extra que no he publicado en la web:</p>
-        <ul>
-          <li>Un caso clínico anonimizado completo (Marta, 41 años) — cómo reconoció estas 5 señales y qué hizo</li>
-          <li>Un protocolo de 7 días para empezar a desactivar el patrón antes de que pida más</li>
-          <li>Avisos honestos sobre cuándo la lectura no basta y conviene hablar con alguien</li>
-        </ul>
-        <form id="burnout-lead-form" novalidate>
-          <input type="text" name="name" placeholder="Tu nombre" required autocomplete="name">
+        <h2>Si te has reconocido, escríbeme</h2>
+        <p>Si alguna de las 5 señales te ha tocado de cerca y quieres mirarlo con alguien, escríbeme un mensaje corto contándome qué te ha pasado al leerlo. Te leo y te contesto yo mismo en pocos días.</p>
+        <form id="burnout-contact-form" action="https://formspree.io/f/mpwrqplb" method="POST" novalidate>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="Consulta · Burnout · 5 señales">
+          <input type="hidden" name="motivo" value="lead-burnout-5-senales">
+          <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name">
           <input type="email" name="email" placeholder="Tu email" required autocomplete="email">
-          <button type="submit" id="burnout-submit-btn">Quiero recibirlo por email</button>
+          <textarea name="mensaje" placeholder="Cuéntame brevemente qué te ha tocado o qué te gustaría preguntar (opcional)" rows="4"></textarea>
+          <button type="submit" id="burnout-submit-btn">Enviar mensaje</button>
           <div class="form-error" id="burnout-error"></div>
         </form>
         <div class="form-success" id="burnout-success">
-          <p><strong>Hecho.</strong> Te he escrito al correo. Mira tu bandeja (y revisa spam si no la ves).</p>
+          <p><strong>Mensaje recibido.</strong> Te leo personalmente y te contesto al correo en los próximos días.</p>
         </div>
-        <p class="form-fine">Sin spam. Te puedes salir de un clic en cualquier email.</p>
+        <p class="form-fine">Lo lee Daniel. No es una secuencia automática.</p>
       </section>
       <div class="cross-grid">
         <div class="cross-card">
@@ -214,7 +214,7 @@
 
   <script>
   (function(){
-    const form = document.getElementById('burnout-lead-form');
+    const form = document.getElementById('burnout-contact-form');
     if (!form) return;
     const error = document.getElementById('burnout-error');
     const success = document.getElementById('burnout-success');
@@ -223,9 +223,14 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = form.querySelector('input[name=email]').value.trim();
-      const name = form.querySelector('input[name=name]').value.trim();
+      const nombre = form.querySelector('input[name=nombre]').value.trim();
       if (!email || !email.includes('@')) {
         error.textContent = 'Introduce un email válido.';
+        error.style.display = 'block';
+        return;
+      }
+      if (!nombre) {
+        error.textContent = 'Introduce tu nombre.';
         error.style.display = 'block';
         return;
       }
@@ -234,15 +239,15 @@
       btn.textContent = 'Enviando...';
       error.style.display = 'none';
       try {
-        const res = await fetch('/.netlify/functions/subscribe', {
+        const res = await fetch(form.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, name, group: 'lead-magnet-burnout' }),
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form),
         });
         if (!res.ok) throw new Error('Request failed');
         form.style.display = 'none';
         success.style.display = 'block';
-        if (typeof gtag === 'function') gtag('event', 'burnout_lead_signup');
+        if (typeof gtag === 'function') gtag('event', 'burnout_contact_submit');
       } catch {
         btn.disabled = false;
         btn.textContent = original;

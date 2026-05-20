@@ -721,14 +721,15 @@
     });
   </script>
 
-<!-- Lead magnet forms: AJAX submit to Formspree + MailerLite, then redirect -->
+<!-- Lead magnet forms: AJAX submit to Formspree, then redirect.
+     Captación paralela a MailerLite eliminada el 20-may-2026: los grupos
+     "padres-talleres-tdah" y "padres-talleres-bachillerato" tenían
+     0 active_count tras meses. Form queda como contacto puro vía Formspree,
+     alineado con la Decisión 1 del CEO doc (concentración, no dispersión)
+     y con la migración de los 4 forms documentada en
+     documentos-internos/taller-volver-a-mi/analisis-benchmarks-proyecciones-2026-05-20.md §4. -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const mailerLiteGroups = {
-      'Guía Padres TDAH ESO': 'padres-talleres-tdah',
-      'Guía Padres Bachillerato': 'padres-talleres-bachillerato',
-    };
-
     document.querySelectorAll('.lead-magnet form').forEach(form => {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -738,27 +739,6 @@
 
         const nextInput = form.querySelector('input[name="_next"]');
         const redirectUrl = nextInput ? nextInput.value : 'https://twimproject.com/soluciones/';
-
-        // MailerLite subscription (parallel, fire-and-forget)
-        const producto = form.querySelector('input[name="producto"]');
-        if (producto) {
-          const group = mailerLiteGroups[producto.value];
-          if (group) {
-            const email = form.querySelector('input[name="email"]');
-            const nombre = form.querySelector('input[name="nombre"]');
-            if (email && email.value) {
-              fetch('/.netlify/functions/subscribe', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  email: email.value.trim(),
-                  name: nombre ? nombre.value.trim() : '',
-                  group: group,
-                }),
-              }).catch(() => {});
-            }
-          }
-        }
 
         // Formspree AJAX submit — then redirect manually
         fetch(form.action, {

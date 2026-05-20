@@ -266,19 +266,24 @@
         <p class="interp" id="result-interp">—</p>
 
         <div class="result-form" id="result-form-wrap">
-          <h3>¿Quieres un análisis personalizado por email?</h3>
-          <p style="color:rgba(255,255,255,.85); font-size:.95rem; margin-bottom:1rem;">Te mando una lectura más profunda de lo que indica tu puntuación, qué hay debajo del patrón, y por dónde se trabaja desde la psicología profunda. Sin spam, sin venta agresiva.</p>
-          <form id="lead-form" novalidate>
-            <input type="text" name="name" placeholder="Tu nombre" required autocomplete="name">
+          <h3>¿Quieres escribirme sobre lo que te ha salido?</h3>
+          <p style="color:rgba(255,255,255,.85); font-size:.95rem; margin-bottom:1rem;">Si lo que ha aparecido en el test te resuena y quieres comentarlo conmigo, escríbeme un mensaje corto. Te leo y te contesto yo mismo en pocos días.</p>
+          <form id="lead-form" action="https://formspree.io/f/mpwrqplb" method="POST" novalidate>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Consulta · Síndrome Impostora">
+            <input type="hidden" name="motivo" value="test-sindrome-impostora">
+            <input type="hidden" name="test_score" id="impostor-test-score" value="">
+            <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name">
             <input type="email" name="email" placeholder="Tu email" required autocomplete="email">
-            <button type="submit" id="lead-submit-btn">Enviarme el análisis</button>
+            <textarea name="mensaje" placeholder="Cuéntame brevemente qué te ha pasado al hacer el test (opcional)" rows="4" style="width:100%;padding:.6rem;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-family:inherit;margin-bottom:.6rem;"></textarea>
+            <button type="submit" id="lead-submit-btn">Enviar mensaje</button>
             <div class="form-error" id="lead-error"></div>
           </form>
-          <p class="form-fine">Sin spam. Te puedes salir de un clic en cualquier email.</p>
+          <p class="form-fine">Lo lee Daniel. No es una secuencia automática.</p>
         </div>
 
         <div class="form-success" id="form-success">
-          <p style="color:#fff; margin: 0;"><strong>Hecho.</strong> Te he escrito al correo. Mira tu bandeja (y revisa spam si no la ves).</p>
+          <p style="color:#fff; margin: 0;"><strong>Mensaje recibido.</strong> Te leo personalmente y te contesto al correo en los próximos días.</p>
         </div>
       </section>
       <article class="cross-card">
@@ -362,9 +367,14 @@
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = leadForm.querySelector('input[name=email]').value.trim();
-      const name = leadForm.querySelector('input[name=name]').value.trim();
+      const nombre = leadForm.querySelector('input[name=nombre]').value.trim();
       if (!email || !email.includes('@')) {
         leadError.textContent = 'Introduce un email válido.';
+        leadError.style.display = 'block';
+        return;
+      }
+      if (!nombre) {
+        leadError.textContent = 'Introduce tu nombre.';
         leadError.style.display = 'block';
         return;
       }
@@ -374,15 +384,17 @@
       leadError.style.display = 'none';
       try {
         const score = parseInt(scoreNum.textContent, 10) || 0;
-        const res = await fetch('/.netlify/functions/subscribe', {
+        const scoreInput = document.getElementById('impostor-test-score');
+        if (scoreInput) scoreInput.value = String(score);
+        const res = await fetch(leadForm.action, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, name, group: 'lead-magnet-impostora', meta: { test_score: score } }),
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(leadForm),
         });
         if (!res.ok) throw new Error('Request failed');
         leadFormWrap.style.display = 'none';
         formSuccess.style.display = 'block';
-        if (typeof gtag === 'function') gtag('event', 'impostor_lead_signup', { score });
+        if (typeof gtag === 'function') gtag('event', 'impostor_contact_submit', { score });
       } catch {
         leadSubmitBtn.disabled = false;
         leadSubmitBtn.textContent = originalLabel;
