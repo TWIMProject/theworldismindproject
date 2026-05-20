@@ -9,6 +9,7 @@
 //   MAILERLITE_GROUP_INSCRITAS_TDAH → ID del grupo "Taller TDAH - Inscritas" (186093787887437444)
 //   MAILERLITE_GROUP_INSCRITAS_BACH → ID del grupo "Taller Bachillerato - Inscritas" (186093790595909010)
 //   MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3 → ID del grupo "Lectores · Engranajes Cap3"
+//   MAILERLITE_GROUP_PRE_VENTA_VOLVER_A_MI → ID del grupo "Pre-venta Volver a Mí" (Daniel debe crear en MailerLite cuando abra la lista de espera del taller, plan-captacion-verano-2026 S22-S23)
 //
 // Eliminados el 20-may-2026 (commit migración 4 forms a contacto, analisis-benchmarks
 // del taller §4): MAILERLITE_GROUP_PADRES_TDAH, MAILERLITE_GROUP_PADRES_BACH,
@@ -37,6 +38,7 @@ const groupEnvMap = {
   "inscritas-tdah": "MAILERLITE_GROUP_INSCRITAS_TDAH",
   "inscritas-bachillerato": "MAILERLITE_GROUP_INSCRITAS_BACH",
   "lead-magnet-engranajes-cap3": "MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3",
+  "pre-venta-volver-a-mi": "MAILERLITE_GROUP_PRE_VENTA_VOLVER_A_MI",
 };
 
 function buildHeaders(event) {
