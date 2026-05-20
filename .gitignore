@@ -132,6 +132,10 @@ notebooklm/.env
 deploy.log
 .env.audit
 
+# ===== CLAUDE CODE =====
+# Personal overrides (cada compañero los suyos)
+.claude/settings.local.json
+
 # ===== FACTURAS DE PACIENTES =====
 # Datos clínicos categoría especial art. 9 RGPD — NUNCA al repo.
 # La plantilla genérica (sin datos) sí va al repo en documentos-internos/plantillas/.
