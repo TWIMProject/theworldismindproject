@@ -87,7 +87,7 @@ footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; margin:0
 <section class="section">
   <div class="container">
     <h2>Estoy grabándolo ahora</h2>
-    <p>Te explico con honestidad qué hay y qué no hay. El programa «Deja de Buscarte en Otros» está en producción · cinco módulos en vídeo, cuaderno PDF, tres audios guiados, protocolo de 21 días. Lo estoy grabando entre el 15 de junio y el 28 de julio de 2026. La pre-venta dura abre a finales del verano · agosto-septiembre, dependiendo de cuándo termine la edición final.</p>
+    <p>Te explico con honestidad qué hay y qué no hay. El programa «Deja de Buscarte en Otros» está en producción · cinco módulos en vídeo, cuaderno PDF, tres audios guiados, protocolo de 21 días. Lo estoy grabando entre el 15 de junio y el 28 de julio de 2026. La pre-venta dura se abre a finales del verano · agosto-septiembre, dependiendo de cuándo termine la edición final.</p>
     <p>Hasta entonces no quiero ponerlo a la venta · te llevarías un producto a medias y eso rompe lo que el programa intenta enseñar. La honestidad clínica es parte del trabajo · empieza antes de comprar.</p>
     <p>Si te lo dejo guardado en la lista de espera, te llega un email cuando se abra la pre-venta. Antes que al público general. Sin pago todavía · solo dejas el email y el nombre.</p>
 
@@ -101,13 +101,13 @@ footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; margin:0
     </ul>
 
     <div class="lead-form">
-      <form id="ddbeo-form" novalidate>
-        <h3>Lista de espera · Deja de Buscarte en Otros</h3>
+      <form id="ddbeo-form" novalidate aria-labelledby="ddbeo-form-title">
+        <h3 id="ddbeo-form-title">Lista de espera · Deja de Buscarte en Otros</h3>
         <p>Te aviso por email cuando se abra la pre-venta. Sin pago todavía.</p>
-        <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name">
-        <input type="email" name="email" placeholder="Tu email" required autocomplete="email">
+        <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name" aria-label="Tu nombre">
+        <input type="email" name="email" placeholder="Tu email" required autocomplete="email" aria-label="Tu email">
         <button type="submit" id="ddbeo-submit">Apuntarme a la lista</button>
-        <div class="form-error" id="ddbeo-error"></div>
+        <div class="form-error" id="ddbeo-error" role="alert" aria-live="polite"></div>
         <div class="form-success" id="ddbeo-success">
           <p style="margin:0;"><strong>Hecho.</strong> Te he añadido a la lista. Cuando se abra la pre-venta, te aviso por email con prioridad sobre el público general.</p>
         </div>
