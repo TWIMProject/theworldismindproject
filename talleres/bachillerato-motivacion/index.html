@@ -341,7 +341,7 @@
         <div class="cta-box">
           <h2>¿Quieres explorar si este taller es adecuado para tu hijo o hija?</h2>
           <p>El primer paso es una reunión informativa conmigo y tu pareja, o contigo si eres familia monoparental, donde os explico el taller en detalle, resuelvo vuestras dudas y evaluamos juntos si encaja con la situación de vuestro hijo o hija. Sin compromiso.</p>
-          <form action="https://formspree.io/f/mpwrqplb" method="POST" class="cta-form" id="taller-form" data-mailerlite-group="padres-talleres-bachillerato">
+          <form action="https://formspree.io/f/mpwrqplb" method="POST" class="cta-form" id="taller-form">
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
             <input type="hidden" name="motivo" value="taller-bachillerato-motivacion">
             <div class="cta-form__row">
@@ -425,7 +425,10 @@
       });
     }
 
-    // Form híbrido: Formspree (notificación rica a Daniel) + MailerLite (alta + secuencia automática)
+    // Form de contacto: Formspree (notificación a Daniel · equipo@twimproject.com).
+    // Captación a MailerLite eliminada el 20-may-2026: el grupo «Padres Talleres Bachillerato»
+    // tenía 0 active_count tras meses; el form pasa a ser puro mensaje de contacto
+    // alineado con la decisión Decisión 1 del CEO doc (concentración, no dispersión).
     const tallerForm = document.getElementById('taller-form');
     const tallerSuccess = document.getElementById('taller-success');
     const tallerError = document.getElementById('taller-error');
@@ -435,8 +438,6 @@
         e.preventDefault();
         const formData = new FormData(tallerForm);
         const email = (formData.get('email') || '').trim();
-        const name = (formData.get('nombre_padre') || '').trim();
-        const group = tallerForm.dataset.mailerliteGroup;
         if (!email || !email.includes('@')) {
           tallerError.textContent = 'Introduce un email válido.';
           tallerError.style.display = 'block';
@@ -446,26 +447,19 @@
         tallerSubmit.disabled = true;
         tallerSubmit.textContent = 'Enviando...';
         tallerError.style.display = 'none';
-        const formspreePromise = fetch(tallerForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' },
-        });
-        const subscribePromise = fetch('/.netlify/functions/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, name, group }),
-        });
-        const [formspreeRes, subscribeRes] = await Promise.allSettled([formspreePromise, subscribePromise]);
-        const formspreeOk = formspreeRes.status === 'fulfilled' && formspreeRes.value.ok;
-        const subscribeOk = subscribeRes.status === 'fulfilled' && subscribeRes.value.ok;
-        if (formspreeOk || subscribeOk) {
+        try {
+          const res = await fetch(tallerForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' },
+          });
+          if (!res.ok) throw new Error('Request failed');
           tallerForm.style.display = 'none';
           tallerSuccess.style.display = 'block';
           if (typeof gtag === 'function') {
-            gtag('event', 'taller_lead', { taller: 'bachillerato-motivacion' });
+            gtag('event', 'taller_contact', { taller: 'bachillerato-motivacion' });
           }
-        } else {
+        } catch {
           tallerSubmit.disabled = false;
           tallerSubmit.textContent = originalLabel;
           tallerError.textContent = 'No se pudo enviar. Inténtalo en un momento o escríbeme por WhatsApp.';

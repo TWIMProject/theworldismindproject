@@ -4,15 +4,19 @@
 //   MAILERLITE_GROUP_RETO           → ID del grupo "Reto 7 Días - Inscritas"
 //   MAILERLITE_GROUP_LEAD_MAGNET    → ID del grupo "Lead Magnet - Dependencia Emocional"
 //   MAILERLITE_GROUP_GENERAL        → ID del grupo "Lista General TWIM"
-//   MAILERLITE_GROUP_PADRES_TDAH    → ID del grupo "Padres TDAH ESO"
-//   MAILERLITE_GROUP_PADRES_BACH    → ID del grupo "Padres Bachillerato"
 //   MAILERLITE_GROUP_PADRES_TALLERES→ ID del grupo "Padres Talleres Adolescentes"
 //   MAILERLITE_GROUP_NEWSLETTER_HOME→ ID del grupo "Web - Newsletter Home"
 //   MAILERLITE_GROUP_INSCRITAS_TDAH → ID del grupo "Taller TDAH - Inscritas" (186093787887437444)
 //   MAILERLITE_GROUP_INSCRITAS_BACH → ID del grupo "Taller Bachillerato - Inscritas" (186093790595909010)
-//   MAILERLITE_GROUP_LEAD_IMPOSTORA → ID del grupo "Lead Magnet - Síndrome Impostora" (Daniel debe crear)
-//   MAILERLITE_GROUP_LEAD_BURNOUT   → ID del grupo "Lead Magnet - Burnout 5 señales" (Daniel debe crear)
-//   MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3 → ID del grupo "Lectores · Engranajes Cap3" (Daniel debe crear)
+//   MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3 → ID del grupo "Lectores · Engranajes Cap3"
+//
+// Eliminados el 20-may-2026 (commit migración 4 forms a contacto, analisis-benchmarks
+// del taller §4): MAILERLITE_GROUP_PADRES_TDAH, MAILERLITE_GROUP_PADRES_BACH,
+// MAILERLITE_GROUP_LEAD_IMPOSTORA, MAILERLITE_GROUP_LEAD_BURNOUT. Los 4 grupos
+// asociados estaban a 0 active_count (TDAH/Bachillerato) o nunca se crearon en
+// MailerLite (Burnout/Impostora). Los forms correspondientes ahora son contacto
+// puro vía Formspree (decisión §4 del doc analisis-benchmarks-proyecciones-2026-05-20).
+// Daniel puede borrar las 4 env vars en panel Netlify cuando quiera (no afecta).
 //
 // Diagnóstico: GET /.netlify/functions/subscribe?diag=1 devuelve qué env vars están
 // configuradas (sin exponer valores) y la versión de Node del runtime.
@@ -28,14 +32,10 @@ const groupEnvMap = {
   "lead-magnet-dependencia": "MAILERLITE_GROUP_LEAD_MAGNET",
   "reto-7-dias": "MAILERLITE_GROUP_RETO",
   "lista-general": "MAILERLITE_GROUP_GENERAL",
-  "padres-talleres-tdah": "MAILERLITE_GROUP_PADRES_TDAH",
-  "padres-talleres-bachillerato": "MAILERLITE_GROUP_PADRES_BACH",
   "padres-talleres-adolescentes": "MAILERLITE_GROUP_PADRES_TALLERES",
   "newsletter-home": "MAILERLITE_GROUP_NEWSLETTER_HOME",
   "inscritas-tdah": "MAILERLITE_GROUP_INSCRITAS_TDAH",
   "inscritas-bachillerato": "MAILERLITE_GROUP_INSCRITAS_BACH",
-  "lead-magnet-impostora": "MAILERLITE_GROUP_LEAD_IMPOSTORA",
-  "lead-magnet-burnout": "MAILERLITE_GROUP_LEAD_BURNOUT",
   "lead-magnet-engranajes-cap3": "MAILERLITE_GROUP_LEAD_ENGRANAJES_CAP3",
 };
 
