@@ -199,7 +199,9 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 - **Consecuencia para el test de horario:** la hipótesis del Carrusel #3 era publicar a las **20:00 CEST** para validar el pico declarado por Meta vs. las 19:00 de los #1/#2 (`metricas-carrusel-2-saberlo-12-may-2026.md` §6, `plan-captacion-verano-2026` S20). Al salir manual fuera de esa franja, **el A/B de horario 19:00 vs 20:00 queda invalidado para esta serie**. El doc de métricas del 26 may (`metricas-carrusel-3-voz-que-te-juzga-19-may-2026.md`) debe leer el #3 como dato de packaging, no de horario.
 - **Pendiente de Daniel:** capturar la URL del post de Instagram y pegarla aquí; subir el PDF a LinkedIn; valorar Facebook.
 
-**Métricas a 24 h del Carrusel #3 (capturadas 20 may ~10:30 CEST, IG publicado 19 may 17:07):**
+**Métricas a ~17 h del Carrusel #3 (capturadas 20 may ~10:30 CEST, IG publicado 19 may 17:07):**
+
+> Nota: las comparaciones contra el #2 «a 24 h» son aproximadas — el #3 está medido **~7 h antes** dentro de su ventana, por lo que las cifras en bruto del #3 deberían suavemente subir antes de cumplir 24 h reales (capturar de nuevo a partir de las 17:07 del 20 may para tener punto comparable estricto).
 
 | Canal | Visualizaciones | Alcance | Likes | Comentarios | Shares | Saves | Interacciones |
 |---|---|---|---|---|---|---|---|
@@ -208,10 +210,10 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 | Facebook | ~0 | — | — | — | — | — | — |
 | X | 0 (recién subido) | — | — | — | — | — | — |
 
-- **Vs «habitual» propia de la cuenta IG (línea gris ~3.000 a 1d 6h):** ~29 % de la curva habitual — **peor que el #2 a 24 h** (~40-50 % de su habitual, doc #2 §1.2).
+- **Vs «habitual» propia de la cuenta IG:** a ~17 h, el blue de esta publicación (861) está claramente por debajo de la curva gris habitual de la cuenta a esa misma marca temporal — proporción aproximada similar al techo del #2 (~30-50 % de su habitual; doc #2 §1.2). Lectura cualitativa, no estricta hasta capturar a 24 h reales.
 - **Save rate IG**: 0/861 = **0,00 %** (benchmark mes 3 declarado en `instagram-sistema-visual-marca.md` §13.1: ≥2 %). El #2 estaba en 0,41 %, ya 5× por debajo.
 - **Saves+shares a 24 h = 0.** El **umbral declarado a 7 días para confirmar la hipótesis del packaging es ≥11-16** (BRIEFING §6.7 + métricas #2 §8). Arranque muy por debajo; quedan 6 días pero la señal a 24 h es débil.
-- **Señal positiva:** **4 comentarios** (vs 0 del #2 a 24 h). El contenido **sí está tocando** cualitativamente (ej. `_pointofdrew`: «Ninguna es tu voz. Todas las aprendiste»). El comentario en inglés (`heal_.unity`: «Wow, can we repost it, Send me this post DM») es un repost-grabber externo — no repostear sin auditar la cuenta.
+- **Señal positiva:** **4 comentarios** ya a ~17 h (el #2 tenía 0 a 24 h). El contenido **sí está tocando** cualitativamente (ej. `_pointofdrew`: «Ninguna es tu voz. Todas las aprendiste»). El comentario en inglés (`heal_.unity`: «Wow, can we repost it, Send me this post DM») es un repost-grabber externo — no repostear sin auditar la cuenta.
 - **Sesgo de audiencia se repite:** 67,3 % mujeres / 32,7 % hombres, pico 35-44. Mismo patrón que el #2 (+21 pp mujeres / +10 pp 35-44 vs baseline orgánico). El algoritmo sigue distribuyendo al subcluster «mujer 35-44 emocional» independientemente del packaging — esto refuerza la lectura del doc #2 §1.3: **la causa del techo de alcance es señales agregadas históricas de la cuenta, no solo packaging de la pieza**.
 - **Facebook:** cero, coherente con el diagnóstico del #2 (cross-post FB roto a nivel cuenta).
 - **Acción operativa pendiente hoy (margen hasta 14:00 CEST):** re-share del propio post en Stories (el doc #2 §3 documenta que el alcance depende mucho de esa señal en las primeras 2 h post-publicación; **mejor tarde que nunca**), responder a comentarios.
