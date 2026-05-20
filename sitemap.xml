@@ -134,6 +134,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://twimproject.com/conferencias/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://twimproject.com/reto-7-dias.html</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
