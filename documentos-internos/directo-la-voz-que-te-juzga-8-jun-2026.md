@@ -71,6 +71,8 @@ Tono: descriptivo del mecanismo, anti-coaching, sin «tú puedes». Psicología 
 
 ### 5.1 · Carta de promoción (newsletter «Te escribo», ~3-5 días antes)
 
+> ✅ **Programada el 20-may-2026** vía MCP MailerLite. ID campaña `187974522939377362`, status `ready`, `scheduled_for: 2026-06-03 17:00 UTC` (= miércoles **3 jun 19:00 CEST**, 5 días antes del directo). HTML en `contenido-rrss/te-escribo-newsletters/carta-promo-directo-8-jun-voz-que-te-juzga.html`. Audiencia: 4 grupos editoriales (Newsletter Home + Reto + Lead Magnet Dependencia + Lista General · 49 destinatarios). **Pendiente Daniel en panel:** cambiar idioma de la campaña a Español antes del envío (arista #1 del conector, §9.2).
+
 ```
 Asunto: Te invito a una hora, en directo, sobre la voz que te juzga
 
