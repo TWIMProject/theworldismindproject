@@ -37,12 +37,15 @@
 <style>
 :root { --green-dark:#173D30; --green:#265C4B; --beige:#C2A78B; --beige-dark:#a88a6a; --cream:#FDFCFA; --ink:#1f1810; --muted:#6b6058; --text:#2B2420; }
 * { box-sizing:border-box; }
-html,body { margin:0; padding:0; background:var(--cream); color:var(--text); font-family:'Barlow Condensed',Helvetica,Arial,sans-serif; font-size:18px; line-height:1.65; font-weight:300; }
+html,body { margin:0; padding:0; background:#f5f0e7; color:var(--text); font-family:'Barlow Condensed',Helvetica,Arial,sans-serif; font-size:18px; line-height:1.65; font-weight:300; }
+main { padding:48px 0; }
+.copy-card { background:#fff; border:1px solid #ece6dc; border-radius:14px; padding:clamp(28px,4vw,44px); box-shadow:0 8px 24px rgba(23,61,48,.06); }
 a { color:var(--green-dark); } a:hover { color:var(--green); }
 .container { max-width:720px; margin:0 auto; padding:0 24px; }
 header.site { background:var(--cream); border-bottom:1px solid #ece6dc; padding:14px 0; }
 header.site .container { display:flex; align-items:center; justify-content:space-between; max-width:980px; }
-header.site .brand { font-family:'Instrument Serif',serif; font-size:22px; color:var(--green-dark); text-decoration:none; }
+header.site .brand { display:inline-flex; align-items:center; text-decoration:none; }
+header.site .brand img { height:42px; width:auto; display:block; }
 header.site nav a { text-decoration:none; color:var(--green-dark); font-size:14px; letter-spacing:.04em; margin-left:20px; font-weight:500; text-transform:uppercase; }
 .hero { background:linear-gradient(180deg,var(--green-dark) 0%, #122f25 100%); color:var(--cream); padding:80px 0 60px; text-align:center; }
 .hero .kicker { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--beige); margin:0 0 22px; font-weight:500; }
@@ -63,6 +66,7 @@ header.site nav a { text-decoration:none; color:var(--green-dark); font-size:14p
 .lead-form .form-fine { font-size:13px; color:rgba(255,255,255,.6); text-align:center; margin:14px 0 0; }
 .lead-form .form-error { display:none; padding:10px 12px; background:#fbe6e6; color:#8a2a2a; border-radius:6px; font-size:14px; margin:8px 0 0; }
 .lead-form .form-success { display:none; padding:18px 16px; background:rgba(255,255,255,.95); color:var(--green-dark); border-radius:8px; margin-top:12px; text-align:center; }
+.lead-form .form-success p { color:var(--green-dark); font-size:15px; margin:0; }
 footer.site { background:var(--green-dark); color:rgba(253,252,250,.75); padding:36px 0 24px; font-size:14px; text-align:center; }
 footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; margin:0 6px; }
 </style>
@@ -70,7 +74,7 @@ footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; margin:0
 <body>
 <header class="site">
   <div class="container">
-    <a href="/" class="brand">TWIM Project</a>
+    <a href="/" class="brand" aria-label="TWIM Project · ir a inicio"><img src="/assets/logo-mindworld-transparent.png" alt="TWIM Project"></a>
     <nav><a href="/">Inicio</a><a href="/newsletter/">Te escribo</a></nav>
   </div>
 </header>
@@ -84,8 +88,8 @@ footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; margin:0
 </section>
 
 <main>
-<section class="section">
-  <div class="container">
+<div class="container">
+  <div class="copy-card">
     <h2>Estoy grabándolo ahora</h2>
     <p>Te explico con honestidad qué hay y qué no hay. El programa «Deja de Buscarte en Otros» está en producción · cinco módulos en vídeo, cuaderno PDF, tres audios guiados, protocolo de 21 días. Lo estoy grabando entre el 15 de junio y el 28 de julio de 2026. La pre-venta dura se abre a finales del verano · agosto-septiembre, dependiendo de cuándo termine la edición final.</p>
     <p>Hasta entonces no quiero ponerlo a la venta · te llevarías un producto a medias y eso rompe lo que el programa intenta enseñar. La honestidad clínica es parte del trabajo · empieza antes de comprar.</p>
@@ -117,7 +121,7 @@ footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; margin:0
 
     <p style="font-size:15px; color:var(--muted); font-style:italic;">Mientras esperas el programa, hay material relacionado disponible · el <a href="/libro/capitulo-3/">Capítulo III del libro «Los Engranajes de la Mente»</a> trata el juez interno, una de las tres piezas centrales del cuadro. Es gratis y entra exactamente en el mismo cuadro psíquico que este programa.</p>
   </div>
-</section>
+</div>
 </main>
 
 <footer class="site">
