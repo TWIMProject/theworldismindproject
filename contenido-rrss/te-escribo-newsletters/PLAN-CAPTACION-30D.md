@@ -186,6 +186,50 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 21 mayo 2026 (jueves) — Autoauditoría completa del embudo (vía MCP MailerLite + Netlify)
+
+Daniel da libertad de acción («Adelante. Tienes todos los conectores habilitados con permitir siempre»). Aplico regla 4 + regla autoauditoría: auditoría completa del estado real del embudo.
+
+**Métricas reales hoy 21-may ~09:00 CEST:**
+
+| Grupo MailerLite | active_count | open_rate |
+|---|---|---|
+| Web - Newsletter Home | **25** | 68,47 % |
+| Lista General TWIM | **27** | 62,72 % |
+| Lead · Libro Engranajes · Cap 3 gratis | **0** | — |
+| Lead · Directo · La voz que te juzga (8 jun) | **0** | — |
+| Lead · Pre-venta Volver a Mí | 0 | — |
+| Lead · Lista espera DDBEO | 0 | — |
+| Lead · Lista espera DDO | 0 | — |
+| Lead Magnet · Dependencia Emocional | 0 | — |
+| Reto 7 Días | 0 (active) · 2 unsub · 4 bounced | — |
+| Padres TDAH / Bach / Talleres | 0 / 0 / 0 | — |
+
+**Zona gate Meta Ads:** Newsletter Home 25 < 100 → según §2 Semana 4 del plan, activar Meta a **5 €/día × 7 días = 35 € test**. Daniel decidió «olvídate del presupuesto» el 20-may pero recomendación claudemed sigue siendo orgánico-primero hasta tener métrica de canal (regla 4: pushing my view).
+
+**Hallazgo crítico nº 1 · Hilo X 20-may = 203K impresiones, 0 conversiones**
+
+El hilo «5 frases del juez interno» del 20-may con Boost activo hizo 203K imp / 28 likes / 1 RT, pero el grupo `Lead · Cap 3 Engranajes` sigue a 0 active_count. Embudo técnico OK (env vars verificadas, automation Cap 3 activa con 5 steps). Causa probable: link en T5, audiencia X se va tras T1. **Aprendizaje añadido al doc `x-twitter-estrategia-canal.md` §4.1**: cuando un hilo tenga objetivo de conversión + Boost, el link va en T1 o T2.
+
+**Hallazgo crítico nº 2 · `language_id: 4` (en-US) en 2 campañas**
+
+- **Carta #2 «La voz que te juzga»** ya enviada el 19-may a 51 destinatarios (52,94 % open · 0 % click · 1 unsub · 1 hard bounce) salió con footer legal en inglés. Daño ya hecho, no recuperable.
+- **Promo Directo 3-jun** sigue en `language_id: 4` con `status: ready` y `scheduled_for: 2026-06-03 17:00 UTC` (=19:00 CEST). Daniel debe cambiar a Español en panel antes del 3-jun. Confirmado que **`update_campaign` del MCP NO expone `language_id`** → arista del conector, no puede automatizarse.
+
+**Hallazgo nº 3 · Carta #2 con 0 % click rate es por diseño**
+
+Auditado el HTML (`carta-02-la-voz-que-te-juzga.html`): solo 3 links · libro Engranajes en PD2, twimproject.com en footer, `{$unsubscribe}`. Sin CTA fuerte. **No es bug**, es decisión editorial de carta que consolida voz, no que convierte.
+
+**Hallazgo nº 4 · Env vars Netlify**
+
+Las 11 vars `MAILERLITE_GROUP_*` activas tienen **scope completo** `["builds","functions","post_processing","runtime"]` y context `all`. Confirma que el fix del PR #199 (autoauditoría caza-bug del 20-may) sigue estable. Las 3 vars creadas el 20-may (`PRE_VENTA_VOLVER_A_MI`, `LISTA_ESPERA_DDBEO`, `LISTA_ESPERA_DDO`) están bien expuestas.
+
+**Pendiente Daniel (no automatizable vía MCP):**
+
+1. Cambiar idioma de Promo Directo 3-jun a Español en panel MailerLite **antes del 3-jun**.
+2. Activar las 3 automations en draft: DDBEO, DDO, Pre-venta Volver a Mí (todas `enabled: false`).
+3. Valorar eliminar 2 automations huérfanas Padres TDAH/Bach (forms migrados a Formspree el 20-may, secuencias ya no se disparan).
+
 ### 21 mayo 2026 (jueves) — Inventario perfil X capturado por Daniel
 
 Daniel comparte capturas del perfil `@DaniOrozcoPsico` (17 posts totales al cierre del día). Registro los posts X que faltaban en el log:

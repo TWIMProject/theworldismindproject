@@ -80,6 +80,8 @@ Formato: 6-12 tweets numerados (1/x, 2/x...) que desarrollan un concepto clínic
 2. **Tweets 2-N:** desarrollar el concepto, una idea por tweet. Sin emoji. Sin clickbait. Lenguaje accesible pero con peso clínico.
 3. **Tweet final:** cierre + CTA suave (ej: "→ He escrito sobre esto largo en twimproject.com" o "→ Cada tanto envío una carta sobre esto: twimproject.com/newsletter").
 
+> **Corrección de aprendizaje · 21 may 2026.** El hilo «5 frases del juez interno» publicado el 20-may con Boost activo hizo **203K impresiones / 28 likes / 1 RT** pero **0 suscriptores nuevos al grupo `Lead · Cap 3 Engranajes`** (auditado vía MailerLite el 21-may 09:00 CEST). El embudo técnico está sano (smoke test Daniel 20-may + env vars Netlify confirmadas), por tanto el problema es de UX del hilo: la audiencia X consume el T1 + imagen y se va sin llegar al T5 donde estaba el link. **Cambio operativo a partir del 21-may:** en hilos cuyo objetivo sea conversión a landing (lead magnet, lista de espera, evento), **incluir la URL en T1 o T2**, no solo en T_final. En hilos puramente editoriales (construcción de autoridad, sin objetivo de conversión inmediata), seguir poniendo el link al final como CTA suave. Cuando se pague Boost, **siempre formato con conversión** porque la inversión presiona a captar, no a construir.
+
 **Material ya producido en el repo (listos para publicar):**
 - `contenido-rrss/te-escribo-cansancio-psiquico/thread-x.txt` — programar para martes 5 mayo 19:00 CEST (junto con Carta #1).
 - `contenido-rrss/te-escribo-saberlo-no-te-lo-quita/thread-x.txt` — programar para semana 2 (12 mayo).
