@@ -186,6 +186,24 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 21 mayo 2026 (jueves) — Inventario perfil X capturado por Daniel
+
+Daniel comparte capturas del perfil `@DaniOrozcoPsico` (17 posts totales al cierre del día). Registro los posts X que faltaban en el log:
+
+| Fecha | Pieza | Métricas visibles en captura | Boost | URL |
+|---|---|---|---|---|
+| 25 abr 2026 | Post fijado «Tu cansancio no es físico» (slide-01 carrusel cansancio psíquico + caption «Llevo desde 2012 escuchando a personas que duermen bien y se levantan agotadas…») | 5.4K impresiones | ✅ Boosting activo | pendiente capturar |
+| 9 may 2026 | Vídeo + caption «La voz que te juzga · Apego ansioso · Dependencia Emocional · Vacío Existencial · Te Escribo · twimproject.com/newsletter/ #psicología #dependenciaemocional» (vídeo 0:55, plano interior, imagen «LAS ETIQUETAS DAN ALIV…») | 6-9 impresiones | — | pendiente capturar |
+| 20 may 2026 | Hilo «5 frases del juez interno» con slide-01 del carrusel «La voz que te juzga» adjunto al T1 («Hay cinco frases que escuchas dentro de ti todo el día y crees que son tu propio criterio. No lo son.») | 203K impresiones · 28 likes · 1 RT · 1 reply · 4.1K en otra métrica del hilo | ✅ Boosting activo | pendiente capturar |
+
+**Lecturas inmediatas:**
+
+- **Hilo 20 may es el mayor pico orgánico del canal a fecha** · 203K impresiones con Boost es señal de que el algoritmo respondió al concepto «juez interno» + carrusel visual en T1. Replicable como patrón para próximos hilos.
+- **Vídeo 9 may con 6-9 impresiones** · contraste enorme vs el hilo del 20 may. Hipótesis · el formato vídeo selfie + hashtags en una cuenta con 17 posts no tiene historial suficiente para que el algoritmo lo distribuya; el hilo numerado con slide editorial sí.
+- **Post fijado 25 abr a 5.4K** es coherente con su rol de pinned + Boost · alimenta el primer contacto de cualquier visita al perfil.
+
+**Pendiente Daniel:** abrir cada uno de los 3 posts y copiar la URL desde el navegador para sustituir los «pendiente capturar». Sin la URL no se puede tracking de clicks → newsletter, ni se puede medir tasa de conversión por post.
+
 ### 20 mayo 2026 (miércoles) — Día de limpieza editorial y embudo
 
 | Tipo | Acción | Estado |
