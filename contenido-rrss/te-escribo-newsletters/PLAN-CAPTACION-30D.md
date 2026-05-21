@@ -192,9 +192,9 @@ Daniel comparte capturas del perfil `@DaniOrozcoPsico` (17 posts totales al cier
 
 | Fecha | Pieza | Métricas visibles en captura | Boost | URL |
 |---|---|---|---|---|
-| 25 abr 2026 | Post fijado «Tu cansancio no es físico» (slide-01 carrusel cansancio psíquico + caption «Llevo desde 2012 escuchando a personas que duermen bien y se levantan agotadas…») | 5.4K impresiones | ✅ Boosting activo | pendiente capturar |
-| 9 may 2026 | Vídeo + caption «La voz que te juzga · Apego ansioso · Dependencia Emocional · Vacío Existencial · Te Escribo · twimproject.com/newsletter/ #psicología #dependenciaemocional» (vídeo 0:55, plano interior, imagen «LAS ETIQUETAS DAN ALIV…») | 6-9 impresiones | — | pendiente capturar |
-| 20 may 2026 | Hilo «5 frases del juez interno» con slide-01 del carrusel «La voz que te juzga» adjunto al T1 («Hay cinco frases que escuchas dentro de ti todo el día y crees que son tu propio criterio. No lo son.») | 203K impresiones · 28 likes · 1 RT · 1 reply · 4.1K en otra métrica del hilo | ✅ Boosting activo | pendiente capturar |
+| 25 abr 2026 | Post fijado «Tu cansancio no es físico» (slide-01 carrusel cansancio psíquico + caption «Llevo desde 2012 escuchando a personas que duermen bien y se levantan agotadas…») | 5.4K impresiones | ✅ Boosting activo | `https://x.com/DaniOrozcoPsico/status/2048138262607204550` |
+| 9 may 2026 | Vídeo + caption «La voz que te juzga · Apego ansioso · Dependencia Emocional · Vacío Existencial · Te Escribo · twimproject.com/newsletter/ #psicología #dependenciaemocional» (vídeo 0:55, plano interior, imagen «LAS ETIQUETAS DAN ALIV…») | 6-9 impresiones | — | `https://x.com/DaniOrozcoPsico/status/2053185807465259405` |
+| 20 may 2026 | Hilo «5 frases del juez interno» con slide-01 del carrusel «La voz que te juzga» adjunto al T1 («Hay cinco frases que escuchas dentro de ti todo el día y crees que son tu propio criterio. No lo son.») | 203K impresiones · 28 likes · 1 RT · 1 reply · 4.1K en otra métrica del hilo | ✅ Boosting activo | `https://x.com/DaniOrozcoPsico/status/2056994205692580348` |
 
 **Lecturas inmediatas:**
 
