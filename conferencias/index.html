@@ -45,7 +45,8 @@ a { color:var(--green-dark); }
 .container { max-width:980px; margin:0 auto; padding:0 24px; }
 header.site { background:var(--cream); border-bottom:1px solid #ece6dc; padding:14px 0; position:sticky; top:0; z-index:50; }
 header.site .container { display:flex; align-items:center; justify-content:space-between; }
-header.site .brand { font-family:'Instrument Serif',serif; font-size:22px; color:var(--green-dark); text-decoration:none; }
+header.site .brand { display:inline-flex; align-items:center; text-decoration:none; }
+header.site .brand img { height:42px; width:auto; display:block; }
 header.site nav a { text-decoration:none; color:var(--green-dark); font-size:14px; letter-spacing:.04em; margin-left:20px; font-weight:500; text-transform:uppercase; }
 .hero { background:linear-gradient(180deg,var(--green-dark) 0%, #122f25 100%); color:var(--cream); padding:80px 0 90px; text-align:center; }
 .hero .kicker { font-size:11px; letter-spacing:.35em; text-transform:uppercase; color:var(--beige); margin:0 0 22px; font-weight:500; }
@@ -73,7 +74,7 @@ footer.site a { color:rgba(253,252,250,.85); text-decoration:underline; }
 <body>
 <header class="site">
   <div class="container">
-    <a href="/" class="brand">TWIM Project</a>
+    <a href="/" class="brand" aria-label="TWIM Project · ir a inicio"><img src="/logo-mindworld.png" alt="TWIM Project"></a>
     <nav><a href="/">Inicio</a><a href="/newsletter/">Te escribo</a><a href="#contacto">Contacto</a></nav>
   </div>
 </header>
