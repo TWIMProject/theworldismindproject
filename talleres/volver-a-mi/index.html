@@ -151,7 +151,8 @@ header.site nav a:hover { color:var(--green); }
 /* Author */
 .author { display:grid; grid-template-columns:1fr 2fr; gap:36px; align-items:start; padding:24px 0; }
 @media (max-width:760px) { .author { grid-template-columns:1fr; } }
-.author .avatar { width:100%; max-width:240px; height:240px; border-radius:8px; background:linear-gradient(135deg,var(--green),var(--green-dark)); display:flex; align-items:center; justify-content:center; color:var(--beige); font-family:'Instrument Serif',serif; font-size:96px; }
+.author .avatar { width:100%; max-width:240px; height:240px; border-radius:8px; overflow:hidden; }
+.author .avatar img { width:100%; height:100%; object-fit:cover; display:block; }
 .author .bio h3 { font-family:'Instrument Serif',serif; font-weight:400; font-size:30px; color:var(--green-dark); margin:0 0 10px; }
 .author .bio .sub { color:var(--green); font-size:14px; letter-spacing:.08em; text-transform:uppercase; margin:0 0 18px; font-family:'Barlow Condensed',sans-serif; font-weight:500; }
 
@@ -328,13 +329,18 @@ footer.site a:hover { color:#fff; }
   <div class="container">
     <h2>Quién lo conduce</h2>
     <div class="author">
-      <div class="avatar">DO</div>
+      <div class="avatar">
+        <picture>
+          <source srcset="/daniel-orozco-sillon.webp" type="image/webp">
+          <img src="/daniel-orozco-sillon.jpg" alt="Daniel Orozco Abia, psicólogo, en consulta">
+        </picture>
+      </div>
       <div class="bio">
         <h3>Daniel Orozco Abia</h3>
         <p class="sub">Psicólogo General Sanitario · Col. CV11515</p>
         <p>En consulta privada en Valencia desde septiembre de 2012. Formado en psicoanálisis, psicología del self, psicología profunda y psicología aplicada. Autor de «Los Engranajes de la Mente — Comprendiendo el Yo, el Ello y el Superyó» y «Burnout — El libro para no petar». CEO de The World Is Mind Project.</p>
         <p>Divulgo lo mismo que trabajo en consulta. Lo que vas a leer en mis cartas, escuchar en mis podcasts o ver en este taller es exactamente la misma persona que llevas más de una década dentro de un despacho. Sin doble cara · sin influencer · solo psicólogo.</p>
-        <p>Coordino TWIM Project con el principio rector de que las cartas, el libro «Tu valor no está en su mirada» y este taller comparten cuadro psíquico común · superyó / Juez Interno + hambre de mirada. Si llegas a este taller habiendo leído alguna de esas cosas, el camino ya está medio hecho.</p>
+        <p>Coordino TWIM Project con el principio rector de que las cartas y este taller comparten cuadro psíquico común · superyó / Juez Interno + hambre de mirada. Si llegas a este taller habiendo leído alguna de esas cosas, el camino ya está medio hecho.</p>
       </div>
     </div>
   </div>
@@ -357,7 +363,7 @@ footer.site a:hover { color:#fff; }
 <section class="section alt" id="lista-espera">
   <div class="container" style="max-width:720px; text-align:center;">
     <h2 style="text-align:center;">Apuntarme a la lista de espera</h2>
-    <p style="text-align:center; font-size:19px;">Sin pago, sin compromiso. Te escribo en septiembre cuando se abra la pre-venta, con prioridad sobre el público general y 50 € de descuento por reserva temprana.</p>
+    <p style="text-align:center; font-size:19px;">Sin pago, sin compromiso. Te escribo en septiembre cuando se abra la pre-venta, con prioridad sobre el público general.</p>
     <form id="taller-form" class="lead-form" novalidate>
       <h3>Lista de espera · Volver a Mí</h3>
       <p>Primera edición · 30 sep al 18 nov 2026</p>
