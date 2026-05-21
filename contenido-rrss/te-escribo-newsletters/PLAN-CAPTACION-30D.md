@@ -227,8 +227,14 @@ Las 11 vars `MAILERLITE_GROUP_*` activas tienen **scope completo** `["builds","f
 **Pendiente Daniel (no automatizable vía MCP):**
 
 1. Cambiar idioma de Promo Directo 3-jun a Español en panel MailerLite **antes del 3-jun**.
-2. Activar las 3 automations en draft: DDBEO, DDO, Pre-venta Volver a Mí (todas `enabled: false`).
+2. ~~Activar las 3 automations en draft: DDBEO, DDO, Pre-venta Volver a Mí (todas `enabled: false`).~~ ✅ **Hecho 21-may** · las 3 con `enabled: true` verificado vía MCP. Daniel pegó los 3 cuerpos editoriales + 3 banners masthead generados (`banner-volver-a-mi.png`, `banner-deja-de-buscarte.png`, `banner-deja-de-obligarte.png` · patrón v5 validado · Instrument Serif Regular + Barlow Condensed con letter-spacing). Idioma cambiado a Español en las 3. Plain_text precargado vía MCP `update_automation_email`.
 3. Valorar eliminar 2 automations huérfanas Padres TDAH/Bach (forms migrados a Formspree el 20-may, secuencias ya no se disparan).
+
+**Test end-to-end pendiente Daniel · suscripción de prueba en las 3 landings para verificar entrega:**
+
+- `https://twimproject.com/lead-volver-a-mi-5-senales.html`
+- `https://twimproject.com/dejadebuscarteenotros-preventa.html`
+- `https://twimproject.com/dejadeobligarte-preventa.html`
 
 ### 21 mayo 2026 (jueves) — Inventario perfil X capturado por Daniel
 
