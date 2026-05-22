@@ -186,6 +186,14 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 22 mayo 2026 (viernes) — Anuncio Meta «Lo que le dices a un niño» cancelado
+
+Daniel lanzó por su cuenta un anuncio de Instagram (carrusel 4 slides «Lo que le dices a un niño») con presupuesto 75 €. A 3 días, gasto 48,05 €, resultado · 13.361 visualizaciones, 63 seguidores, **solo 2 toques en el enlace externo** (24 €/clic externo · inviable).
+
+Causa raíz · objetivo «Combinación optimizada» optimiza interacción dentro de Instagram, no tráfico externo. El anuncio no permitía editar destino ni objetivo a mitad de campaña (solo días y presupuesto) · Daniel lo canceló.
+
+Análisis completo, eficiencia y 6 aprendizajes para el próximo anuncio en `documentos-internos/metricas-meta-ads-anuncio-nino-22-may-2026.md`. Lección transversal (cruce con hilo X 20-may) · la exposición no convierte si el formato no se diseña para conversión desde el inicio.
+
 ### 21 mayo 2026 (jueves) — Autoauditoría completa del embudo (vía MCP MailerLite + Netlify)
 
 Daniel da libertad de acción («Adelante. Tienes todos los conectores habilitados con permitir siempre»). Aplico regla 4 + regla autoauditoría: auditoría completa del estado real del embudo.
