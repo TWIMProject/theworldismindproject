@@ -16,8 +16,8 @@ from docx.oxml import OxmlElement
 # ---- Paleta TWIM ----
 GREEN_DARK = "173D30"
 BEIGE      = "C2A78B"
-CREAM      = "FDFCFA"
-WARM       = "F5EFE3"   # crema cálido · fondo de página
+CREAM      = "FFFFFF"   # tarjetas y filas de datos · blanco puro para contraste sutil
+WARM       = "FDFCFA"   # crema suave TWIM (casi blanco) · fondo de página
 INK        = "2B2420"
 MUTED      = "6B6258"
 BORDER     = "E3DAC9"
