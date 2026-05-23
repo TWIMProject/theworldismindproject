@@ -186,6 +186,25 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 23 mayo 2026 (sábado, tarde) — 2 hilos X publicados + claridad de vocabulario
+
+**Hilo Directo «La voz que te juzga»** (siguiendo `contenido-rrss/perfil-x/hilo-x-directo-8-jun.txt` v2 con link en T1, frase tatuable T3 y «venga va» en T5 · imagen del directo adjunta al T1):
+
+- T1 anchor · `https://x.com/DaniOrozcoPsico/status/2058249444194471967`
+
+**Hilo «Deja de Buscarte en Otros»** (publicado por Daniel · contenido editorial de DDBEO):
+
+- T1 anchor · `https://x.com/DaniOrozcoPsico/status/2058198121079865373`
+
+**Mejora editorial inviolable declarada (regla persistida en CLAUDE.md):**
+
+Daniel detecta que la frase de DDBEO «sin necesitar que nadie se lo confirme» (8 archivos públicos) tiene la palabra clave «confirme» ambigua · no se entiende a la primera. Cambio aplicado en cascada:
+
+- Antes · «para mujeres que quieren sentir que valen sin necesitar que nadie se lo confirme»
+- Después · «para mujeres que quieren sentir que valen sin depender de la mirada del otro»
+
+Archivos actualizados · DDBEO preventa + soluciones/guia-deja-de-buscarte + soluciones/index + insights/index + 4 insights cross-link. Persistido como regla inviolable «Claridad de un vistazo en copy público» en CLAUDE.md · términos clínicos estándar (validación, apego ansioso) sí valen en SEO/meta, pero NO en copy editorial donde la audiencia lee escaneando.
+
 ### 23 mayo 2026 (sábado) — Página dedicada Directo 8-jun · baseline form preview MailerLite
 
 Salto de calidad del embudo del Directo (PR #221) · creada página dedicada `https://twimproject.com/directo-la-voz-que-te-juzga/` con OG editorial + Schema.org Event + form propio embebido. Sustituye la URL `preview.mailerlite.io/forms/2232121/187662502229706033/share` en 10 archivos públicos (index + 8 landings SEO + HTML carta promo). Env var `MAILERLITE_GROUP_DIRECTO_8JUN=187662493483533365` creada en Netlify vía MCP con scope completo (lección PR #199 aplicada y verificada).
