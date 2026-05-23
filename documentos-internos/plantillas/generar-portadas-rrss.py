@@ -125,7 +125,7 @@ draw_centered(draw, 'TWIM PROJECT · LIBRO', 95,
               font('BarlowCondensed-Medium.ttf', 24), BEIGE, letter_spacing=4)
 
 # Hook · habla al público que ya consumió autoayuda y no le sirve
-draw_centered(draw, 'Para quien ya está cansada', 150,
+draw_centered(draw, 'Para quien ya está cansado', 150,
               font('InstrumentSerif-Regular.ttf', 56), WHITE)
 draw_centered(draw, 'del coaching.', 215,
               font('InstrumentSerif-Italic.ttf', 56), BEIGE)
@@ -156,9 +156,9 @@ draw_centered(draw, 'twimproject.com/libro/capitulo-3/', cta_y + 32,
 draw_centered(draw, 'Libro completo · disponible en Amazon', cta_y + 78,
               font('BarlowCondensed-Medium.ttf', 24), WHITE)
 
-# Footer
-hline(draw, H - 70, BEIGE)
-draw_centered(draw, 'Daniel Orozco Abia · Psicólogo CV11515 · @daniorozcopsicologo', H - 55,
+# Footer · línea separadora con margen claro respecto al texto
+hline(draw, H - 100, BEIGE)
+draw_centered(draw, 'Daniel Orozco Abia · Psicólogo CV11515 · @daniorozcopsicologo', H - 75,
               font('BarlowCondensed-Regular.ttf', 17), WHITE, letter_spacing=1)
 
 canvas.save('portada-rrss-libro-engranajes-mente.png', optimize=True)
