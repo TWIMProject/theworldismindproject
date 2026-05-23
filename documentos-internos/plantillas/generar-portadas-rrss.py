@@ -176,10 +176,11 @@ build_book_cover(
 )
 
 # v2 · para LinkedIn (hook profesional · evita atacar disciplina · mantiene
-# diferenciación clínica sin cerrar puertas con coaches / RRHH)
+# diferenciación clínica sin cerrar puertas con coaches / RRHH · subtítulo
+# pulido para descargar culpa y validar la lectura del lector culto)
 build_book_cover(
-    'Para entender el aparato',
-    'que llevas dentro.',
-    'Yo, Ello, Superyó · sin etiquetas, como mecanismos.',
+    '¿Por qué entender',
+    'no termina de cambiarte?',
+    'No es motivación lo que te falta. Son los engranajes entre lo que ya ves.',
     'portada-rrss-libro-engranajes-mente-linkedin.png',
 )
