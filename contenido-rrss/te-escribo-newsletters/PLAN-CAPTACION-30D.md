@@ -186,6 +186,20 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 23 mayo 2026 (sábado) — Página dedicada Directo 8-jun · baseline form preview MailerLite
+
+Salto de calidad del embudo del Directo (PR #221) · creada página dedicada `https://twimproject.com/directo-la-voz-que-te-juzga/` con OG editorial + Schema.org Event + form propio embebido. Sustituye la URL `preview.mailerlite.io/forms/2232121/187662502229706033/share` en 10 archivos públicos (index + 8 landings SEO + HTML carta promo). Env var `MAILERLITE_GROUP_DIRECTO_8JUN=187662493483533365` creada en Netlify vía MCP con scope completo (lección PR #199 aplicada y verificada).
+
+**Baseline de captación pre-página-dedicada (form preview MailerLite a 17-23 may, ~6 días):**
+
+| Métrica | Valor |
+|---|---|
+| Visitantes al form | 23 |
+| Suscripciones recolectadas | 2 (1 real + 1 prueba Daniel no eliminable) |
+| **Conversión real** | **~4,3 % (1/23)** · o 8,7 % bruto incluyendo prueba |
+
+Las nuevas suscripciones desde `/directo-la-voz-que-te-juzga/` aterrizan en el **mismo grupo** (`187662493483533365`) · el contador sigue sumando sin pérdida. A 7-14 días tras el despliegue de la página dedicada se podrá medir si la conversión sube (hipótesis · sí, gracias a la URL editorial confiable + OG previews bonitos + Schema.org rich snippet).
+
 ### 22 mayo 2026 (viernes) — Anuncio Meta «Lo que le dices a un niño» cancelado
 
 Daniel lanzó por su cuenta un anuncio de Instagram (carrusel 4 slides «Lo que le dices a un niño») con presupuesto 75 €. A 3 días, gasto 48,05 €, resultado · 13.361 visualizaciones, 63 seguidores, **solo 2 toques en el enlace externo** (24 €/clic externo · inviable).
