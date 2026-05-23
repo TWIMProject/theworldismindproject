@@ -132,6 +132,33 @@ Especificación reproducible:
 
 ---
 
+## Regla inviolable · Claridad de un vistazo en copy público
+
+> Regla declarada por Daniel el 23 may 2026 tras detectar en `dejadebuscarteenotros-preventa.html` la frase «sin necesitar que nadie se lo confirme» · la palabra «confirme» no se entiende a la primera, se refería a «la mirada de aprobación de los demás».
+
+**Toda pieza pública de copy (landings, hero, lede, taglines, captions, hilos, emails)** debe pasar el test inviolable de **«palabras clave entendidas de un vistazo»** · si una persona escanea el texto en 2 segundos sin contexto previo, debe captar el concepto central sin recurrir a inferencia abstracta.
+
+**Patrones que rompen la regla y hay que evitar:**
+
+- Verbos abstractos genéricos · `confirmar`, `validar` (en sentido emocional · no clínico SEO), `aprobar` (en sentido genérico) sin objeto concreto. → sustituir por verbos sensoriales/concretos · `mirar`, `decir que estás bien`, `dar la aprobación con la mirada`.
+- Sustantivos abstractos sin imagen · `confirmación`, `aprobación externa abstracta`. → sustituir por imagen concreta · `mirada del otro`, `aprobación con la mirada`.
+- Construcciones reflexivas confusas · «sin que nadie se lo confirme» (¿qué es «lo»?). → sustituir por frase directa · «sin depender de la mirada del otro».
+
+**Cuándo SÍ vale término técnico abstracto:**
+
+- En **meta description, keywords, schema.org**, alt text · términos clínicos estándar (`necesidad de validación`, `apego ansioso`, `regulación emocional`) son correctos · la audiencia que busca esos términos en Google sí los conoce. El público SEO clínico es distinto del público lector de copy.
+
+**Ejemplo verificado del cambio aplicado (23 may 2026):**
+
+- ❌ «para mujeres que quieren sentir que valen sin necesitar que nadie se lo confirme»
+- ✅ «para mujeres que quieren sentir que valen sin depender de la mirada del otro»
+
+8 archivos actualizados de un golpe (DDBEO preventa + 7 insights/soluciones).
+
+**Antes de mergear cualquier pieza pública nueva**, escanear el copy con el ojo de «alguien que entra por primera vez sin contexto» · si hay verbos abstractos sin objeto concreto, reformular antes de publicar.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
