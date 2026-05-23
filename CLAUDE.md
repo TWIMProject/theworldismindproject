@@ -120,6 +120,18 @@ Especificación reproducible:
 
 ---
 
+## Regla inviolable · Auto-merge de PRs
+
+> Regla declarada por Daniel el 23 may 2026.
+
+**Siempre que un PR esté con CI verde (o con checks neutrales informativos tipo Netlify deploy preview) y los review comments hayan sido atendidos, Claude lo mergea directamente sin esperar a que Daniel lo haga manualmente.** Esto incluye los PRs autoabiertos para fixes urgentes, autoauditorías y trabajo de libertad de acción. Si Claude tiene duda sobre si el PR está listo (cambio arriesgado o sin validación visual de Daniel cuando es UI), pregunta antes de mergear. En el resto de casos, mergea.
+
+**Por qué importa:** Daniel no es un revisor que aprueba cada PR · es el CEO que decide rumbo. Los PRs son artefactos operativos que Claude debe cerrar. La cadena «abrir → esperar → recordar a Daniel → Daniel mergea» introduce fricción y descoordinación. La cadena correcta es «abrir → CI verde → Claude mergea → Daniel ve resultado en producción».
+
+**No aplica cuando:** el PR es de un cambio infraestructural (regla §2 sobre netlify.toml etc.), un lanzamiento crítico, o un cambio visual que Daniel pidió revisar antes. En esos casos Claude pide OK explícito.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
