@@ -121,17 +121,20 @@ draw = ImageDraw.Draw(canvas)
 draw.rectangle([(40, 40), (W-40, H-40)], outline=BEIGE, width=2)
 
 # Kicker
-draw_centered(draw, 'TWIM PROJECT · LIBRO', 95,
+draw_centered(draw, 'TWIM PROJECT · LIBRO', 85,
               font('BarlowCondensed-Medium.ttf', 24), BEIGE, letter_spacing=4)
 
 # Hook · habla al público que ya consumió autoayuda y no le sirve
-draw_centered(draw, 'Para quien ya está cansado', 150,
+draw_centered(draw, 'Para quien ya está cansado', 140,
               font('InstrumentSerif-Regular.ttf', 56), WHITE)
-draw_centered(draw, 'del coaching.', 215,
+draw_centered(draw, 'del coaching.', 205,
               font('InstrumentSerif-Italic.ttf', 56), BEIGE)
 
-# Mockup del libro con sombra (drop shadow). Target 300x463 deja margen
-# vertical suficiente para el CTA y el footer sin solapes.
+# Subtítulo · cebo de curiosidad · espejo simétrico del hook
+draw_centered(draw, 'Lo que el coaching no te explica.', 285,
+              font('InstrumentSerif-Italic.ttf', 28), CREAM)
+
+# Mockup del libro con sombra (drop shadow). Target 300x463
 book = Image.open('portadalosengranajes.jpg').convert('RGBA')
 target_w = 300
 target_h = int(book.height * target_w / book.width)
@@ -143,22 +146,22 @@ sh_draw.rectangle([(30, 30), (30 + target_w, 30 + target_h)], fill=(0, 0, 0, 140
 shadow = shadow.filter(ImageFilter.GaussianBlur(radius=18))
 
 book_x = (W - target_w) // 2
-book_y = 300
+book_y = 330
 canvas.paste(shadow, (book_x - 30, book_y - 15), shadow)
 canvas.paste(book, (book_x, book_y), book)
 
 # CTA dual (palancas-venta §3.1 · Cap III gratis preferente)
-cta_y = book_y + target_h + 30   # 300 + 463 + 30 = 793
+cta_y = book_y + target_h + 25   # 330 + 463 + 25 = 818
 draw_centered(draw, 'Capítulo III gratis · sin spam, sin embudo raro', cta_y,
               font('BarlowCondensed-Medium.ttf', 24), WHITE)
 draw_centered(draw, 'twimproject.com/libro/capitulo-3/', cta_y + 32,
               font('BarlowCondensed-Regular.ttf', 20), BEIGE)
-draw_centered(draw, 'Libro completo · disponible en Amazon', cta_y + 78,
+draw_centered(draw, 'Libro completo · disponible en Amazon', cta_y + 75,
               font('BarlowCondensed-Medium.ttf', 24), WHITE)
 
 # Footer · línea separadora con margen claro respecto al texto
-hline(draw, H - 100, BEIGE)
-draw_centered(draw, 'Daniel Orozco Abia · Psicólogo CV11515 · @daniorozcopsicologo', H - 75,
+hline(draw, H - 75, BEIGE)
+draw_centered(draw, 'Daniel Orozco Abia · Psicólogo CV11515 · @daniorozcopsicologo', H - 55,
               font('BarlowCondensed-Regular.ttf', 17), WHITE, letter_spacing=1)
 
 canvas.save('portada-rrss-libro-engranajes-mente.png', optimize=True)
