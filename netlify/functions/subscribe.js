@@ -49,6 +49,7 @@ const groupEnvMap = {
   "pre-venta-volver-a-mi": "MAILERLITE_GROUP_PRE_VENTA_VOLVER_A_MI",
   "lista-espera-deja-buscarte": "MAILERLITE_GROUP_LISTA_ESPERA_DDBEO",
   "lista-espera-deja-obligarte": "MAILERLITE_GROUP_LISTA_ESPERA_DDO",
+  "directo-voz-que-te-juzga": "MAILERLITE_GROUP_DIRECTO_8JUN",
 };
 
 function buildHeaders(event) {
