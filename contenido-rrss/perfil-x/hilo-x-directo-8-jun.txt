@@ -1,0 +1,98 @@
+Hilo X · @DaniOrozcoPsico · Promoción del Directo «La voz que te juzga» · 8 jun 2026
+
+Creado el 23-may-2026 tras la pieza «La voz que te juzga» (hilo viral 20-may con 203K imp pero 0 conversiones). Patrón v2 aplicando los aprendizajes acumulados:
+
+- Link en T1 (no T5) · aprendizaje persistido en `documentos-internos/x-twitter-estrategia-canal.md` §4.1.
+- Imagen mental concreta por tweet · sin enumeraciones planas.
+- Frases tatuables distribuidas (candidatas a quote tweet espontáneo de psicólogos serios o periodistas).
+- T5 con «venga va» que desactiva las 3 fricciones (precio, fecha, sospecha de venta).
+
+URL canónica (CLAUDE.md): https://twimproject.com/directo-la-voz-que-te-juzga/
+
+----------
+
+T1 (hook con paradoja + 3 citas verbatim + link)
+
+Llevas toda la vida confundiendo una voz con tu propio criterio. Y no es tuya.
+
+«No es suficiente.»
+«Otros lo habrían hecho mejor.»
+«No estás siendo bastante.»
+
+Dom 8 jun, 19h (España) · una hora en directo, gratis, para verla.
+
+→ twimproject.com/directo-la-voz-que-te-juzga/
+
+1/5
+
+----------
+
+T2 (mecanismo de origen · imagen mental concreta)
+
+Esa voz se montó cuando eras niño. No tenías cómo defenderte de lo que oías · y para no perder el vínculo, empezaste a adelantarte al juicio.
+
+Si te lo dices tú primero, ya no te sorprende cuando viene de fuera.
+
+Esa anticipación se quedó dentro y sigue funcionando sola.
+
+2/5
+
+----------
+
+T3 (frase tatuable · diferenciación anti-coaching)
+
+Por eso no se calla con razones. Aunque sepas exactamente cómo se montó, la voz sigue ahí.
+
+«Sé positivo» y «tú puedes» no la callan · la disfrazan. Sigue siendo ella exigiendo, solo que ahora suena a coach.
+
+3/5
+
+----------
+
+T4 (promesa concreta + blindaje anti-coaching anticipado)
+
+El domingo te enseño dónde se montó, por qué no se calla con razones · y una cosa concreta que sí empieza a aflojarla (sin convertirla en otro ejercicio de coaching).
+
+No es terapia. No es clase magistral. Es lectura clínica en voz alta, una hora.
+
+4/5
+
+----------
+
+T5 (VENGA VA · 3 fricciones desactivadas)
+
+Es gratis. 60 min. Vía Meet · el enlace te llega al registrarte.
+
+Si no puedes ese domingo en directo, te dejo después el material.
+
+Sin venta. Sin embudo. Sin trampa de marketing.
+
+Plaza directa → twimproject.com/directo-la-voz-que-te-juzga/
+
+5/5
+
+----------
+
+Instrucciones para publicar (Daniel):
+
+1. X · publicar como hilo nativo (no como tweet único largo). Pegar T1 → publicar → responder con T2 → T3 → T4 → T5. SIN ESPERAR entre tweets (el algoritmo X penaliza si tardas más de 5 min entre tweets de un hilo).
+
+2. ADJUNTAR al T1 la imagen `contenido-rrss/te-escribo-voz-que-te-juzga/slide-01.png` (la portada del Carrusel #3 con la cita verbatim del juez interno) · reconocimiento cruzado con quien ya vio el carrusel o el hilo del 20-may.
+
+3. Anclar el T1 al perfil durante 24-48h tras publicación (ya tienes el pinned «Tu cansancio no es físico» del 25-abr · valora si lo desanclas temporalmente para que este sea el pinned hasta el 8 jun).
+
+4. Si quieres maximizar tráfico al embudo: meter Boost a T1 después de 1-2 horas de orgánico (similar al del hilo del 20-may, que llegó a 203K impresiones).
+
+5. Tras publicar, anotar URL del hilo en `contenido-rrss/te-escribo-newsletters/PLAN-CAPTACION-30D.md` §6 (regla simétrica).
+
+----------
+
+Notas editoriales del hilo
+
+- 3 citas verbatim del juez interno (T1) coherentes con las del Cap III, carrusel #3 y lead magnet del taller. Quien las haya leído antes activa reconocimiento cruzado.
+- T2 propone una explicación de origen accesible (anti-jerga) sin perder rigor clínico.
+- T3 contiene la frase candidata a quote tweet: «la motivación no la calla, la disfraza · suena a coach».
+- T4 promete UNA intervención concreta · concreta sin desvelar el contenido del directo (esto es la palanca de inscripción).
+- T5 cierra con frases cortas en ritmo periodístico para empujar la acción · «Sin venta. Sin embudo. Sin trampa de marketing.»
+- Sin emojis · sin clickbait · sin frases motivacionales.
+- Coherente con el guion teórico del directo (`documentos-internos/directo-8-jun-2026-guion-teorico.html`).
