@@ -130,8 +130,8 @@ draw_centered(draw, 'Para quien ya está cansado', 140,
 draw_centered(draw, 'del coaching.', 205,
               font('InstrumentSerif-Italic.ttf', 56), BEIGE)
 
-# Subtítulo · cebo de curiosidad · espejo simétrico del hook
-draw_centered(draw, 'Lo que el coaching no te explica.', 285,
+# Subtítulo · cebo de curiosidad · sin repetir «coaching» del hook
+draw_centered(draw, 'Lo que el «tú puedes» no te cuenta.', 285,
               font('InstrumentSerif-Italic.ttf', 28), CREAM)
 
 # Mockup del libro con sombra (drop shadow). Target 300x463
@@ -159,9 +159,9 @@ draw_centered(draw, 'twimproject.com/libro/capitulo-3/', cta_y + 32,
 draw_centered(draw, 'Libro completo · disponible en Amazon', cta_y + 75,
               font('BarlowCondensed-Medium.ttf', 24), WHITE)
 
-# Footer · línea separadora con margen claro respecto al texto
-hline(draw, H - 75, BEIGE)
-draw_centered(draw, 'Daniel Orozco Abia · Psicólogo CV11515 · @daniorozcopsicologo', H - 55,
+# Footer · línea separadora subida + texto con margen al borde inferior
+hline(draw, H - 95, BEIGE)
+draw_centered(draw, 'Daniel Orozco Abia · Psicólogo CV11515 · @daniorozcopsicologo', H - 72,
               font('BarlowCondensed-Regular.ttf', 17), WHITE, letter_spacing=1)
 
 canvas.save('portada-rrss-libro-engranajes-mente.png', optimize=True)
