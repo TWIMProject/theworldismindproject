@@ -10,14 +10,14 @@
 
 | # | Nombre | Precio | Categoría | Creado | Veredicto |
 |---|---|---|---|---|---|
-| 1 | Reserva entrevista informativa - Taller Bachillerato | 40 € | Training | 29 abr 2026 | **REVISAR** — solo mantener si hay nueva edición programada |
-| 2 | Reserva entrevista informativa - Taller TDAH adolescentes | 40 € | Training | 29 abr 2026 | **REVISAR** — solo mantener si hay nueva edición programada |
-| 3 | Taller Bachillerato — Encontrar el rumbo | 720 € | Predefinido: Formación | 29 abr 2026 | **REVISAR** — idem |
-| 4 | Taller TDAH adolescentes — Más allá del TDAH | 720 € | Predefinido: Formación | 29 abr 2026 | **REVISAR** — idem |
-| 5 | Taller 'No puedo parar' - 30 marzo 2026 | 19 € | Predefinido: Formación | 12 mar 2026 | **ARCHIVAR** — fecha pasada, ya no se vende |
-| 6 | Guía Anti-Burnout | 2 precios | Training | 27 jun 2025 | **REVISAR** — confirmar si sigue activo el funnel |
+| 1 | Reserva entrevista informativa - Taller Bachillerato | 40 € | Training | 29 abr 2026 | **MANTENER** — landing `/talleres/bachillerato-motivacion/` viva en sitemap, edición sept 2026 confirmada en HTML (`startDate: "2026-09"`) |
+| 2 | Reserva entrevista informativa - Taller TDAH adolescentes | 40 € | Training | 29 abr 2026 | **MANTENER** — landing `/talleres/tdah-adolescentes/` viva en sitemap, edición sept 2026 confirmada |
+| 3 | Taller Bachillerato — Encontrar el rumbo | 720 € | Predefinido: Formación | 29 abr 2026 | **MANTENER** — funnel comercial activo |
+| 4 | Taller TDAH adolescentes — Más allá del TDAH | 720 € | Predefinido: Formación | 29 abr 2026 | **MANTENER** — idem |
+| 5 | Taller 'No puedo parar' - 30 marzo 2026 | 19 € | Predefinido: Formación | 12 mar 2026 | **ARCHIVAR** — fecha pasada · landing `/nopuedoparar-taller.html` también obsoleta (precio 99 € allí, 19 € en Stripe, fecha 30-mar) · ver acción adicional sobre la landing |
+| 6 | Guía Anti-Burnout | 2 precios | Training | 27 jun 2025 | **DECIDIR DANIEL** — 0 referencias en HTML público del repo. Probable infoproducto sin landing actual. Si no se promueve activamente, archivar. |
 | 7 | Programa In-Company «Ansiedad Laboral → Ventaja Competitiva» | 2.450 € | Training Services - Live Virtual | 20 jun 2025 | **MANTENER** — útil para B2B + `/conferencias/` |
-| 8 | TWIMGroup Online · Ansiedad Laboral & Sentido Profesional | 2 precios | Training Services - Live Virtual | 19 jun 2025 | **REVISAR** — confirmar si sigue activo |
+| 8 | TWIMGroup Online · Ansiedad Laboral & Sentido Profesional | 2 precios | Training Services - Live Virtual | 19 jun 2025 | **DECIDIR DANIEL** — `Grupo_Online_Info.html` existe pero `noindex,nofollow` (info privada para participantes, no captación). Si ya no hay nueva edición del grupo, archivar. |
 
 ### Productos ARCHIVADOS (4)
 
@@ -72,11 +72,27 @@ Por tanto, mi criterio por defecto:
 
 > El MCP de Stripe está desconectado en esta sesión (OAuth pendiente de reautorizar). Todo lo siguiente se ejecuta manualmente desde el dashboard de Stripe.
 
-### Bloque A · Limpieza (15 min, hoy mismo)
+### Bloque A · Limpieza (corrección 25-may post-verificación landings)
 
-1. **Archivar** `Taller 'No puedo parar' - 30 marzo 2026 (19 €)` · dashboard → producto → `Más` → `Archivar`.
-2. **Decidir** sobre los 4 productos de talleres adolescentes (Bachillerato + TDAH × deposit + taller). Si NO hay edición nueva confirmada para otoño 2026 → archivar los 4.
-3. **Decidir** sobre Guía Anti-Burnout y TWIMGroup Online. Mantener si se venden, archivar si no.
+> Tras verificar `talleres/bachillerato-motivacion/index.html`, `talleres/tdah-adolescentes/index.html` y `nopuedoparar-taller.html` contra el sitemap, los 4 productos de talleres adolescentes se MANTIENEN (sept 2026 confirmado). Solo se archiva un producto con certeza.
+
+1. **Archivar** `Taller 'No puedo parar' - 30 marzo 2026 (19 €)` · dashboard → producto → `Más` → `Archivar`. Fecha pasada · landing además obsoleta (referencia adicional abajo).
+2. **Decidir Daniel** sobre `Guía Anti-Burnout` (2 precios) · 0 referencias en HTML público del repo. Si NO se promueve activamente → archivar.
+3. **Decidir Daniel** sobre `TWIMGroup Online · Ansiedad Laboral & Sentido Profesional` (2 precios) · `Grupo_Online_Info.html` es noindex, no es landing comercial. Si NO hay nueva edición prevista del grupo → archivar.
+
+### Bloque A bis · Acción adicional descubierta · landing obsoleta en sitemap
+
+La landing `nopuedoparar-taller.html` está en el sitemap (twimproject.com/nopuedoparar-taller.html) y referenciada desde:
+- `daniel-orozco-abia.html`
+- `lead-burnout-5-senales.html`
+- `psicologo-burnout-valencia.html`
+
+Pero el contenido es del taller del 30 mar 2026 (pasado), precio 99 € (no coincide con el producto Stripe a 19 €) y sin Payment Link funcional. **Opciones (Daniel decide):**
+
+a) **Si quedó grabación del taller que se vende evergreen** → rehacer la landing como producto evergreen, nuevo precio, nuevo Payment Link en Stripe (categoría `Infoproductos`).
+b) **Si no hay material a la venta** → quitar del sitemap + añadir `301 redirect` a `/soluciones/` o `/psicologo-burnout-valencia/` en `_redirects` de Netlify · limpiar los 3 enlaces internos (`daniel-orozco-abia.html`, `lead-burnout-5-senales.html`, `psicologo-burnout-valencia.html`).
+
+Mi recomendación: **opción (b)** salvo que tengas la grabación lista para evergreen.
 
 ### Bloque B · Estandarización de naming (10 min)
 
