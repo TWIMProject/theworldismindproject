@@ -204,6 +204,15 @@ footer.site a{color:rgba(253,252,250,.85);text-decoration:underline;margin:0 6px
   const error = document.getElementById('directo-error');
   const success = document.getElementById('directo-success');
   const btn = document.getElementById('directo-submit');
+
+  // Captura UTMs del URL al cargar (atribución por canal en GA4)
+  const params = new URLSearchParams(window.location.search);
+  const utm = {
+    utm_source: params.get('utm_source') || 'direct',
+    utm_medium: params.get('utm_medium') || 'none',
+    utm_campaign: params.get('utm_campaign') || 'none',
+  };
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = form.querySelector('input[name=email]').value.trim();
@@ -223,7 +232,7 @@ footer.site a{color:rgba(253,252,250,.85);text-decoration:underline;margin:0 6px
       form.querySelector('input[name=email]').style.display='none';
       btn.style.display='none';
       success.style.display='block';
-      if (typeof gtag === 'function') gtag('event', 'directo_reservar_plaza');
+      if (typeof gtag === 'function') gtag('event', 'directo_reservar_plaza', utm);
     } catch {
       btn.disabled = false; btn.textContent = original;
       error.textContent='Algo no ha ido bien. Prueba en un momento o escríbeme a equipo@theworldismindproject.com';
