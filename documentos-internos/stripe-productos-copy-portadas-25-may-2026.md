@@ -152,11 +152,17 @@ Conducido por Daniel Orozco Abia, Psicólogo General Sanitario CV11515. Contacto
 
 ---
 
-## 6 · Volver a Mí · 2 productos (pendiente de crear)
+## 6 · Volver a Mí · 2 productos (CREADOS EN ARCHIVADO · activar en julio-ago 2026)
 
-Setup completo paso a paso ya documentado en `documentos-internos/taller-volver-a-mi/stripe-setup-volver-a-mi.md`. Resumen:
+> Creados vía Stripe API el 25-may-2026 en estado `active: false` para evitar venta accidental antes de la pre-venta dura del 1-sep. Cuando esté el momento, restablecer en `Archivados → Restablecer producto`, subir portada, y pedir a Claude que cree los Payment Links vía API.
 
 ### 6.1 · Reserva · Volver a Mí · Grupo cerrado otoño 2026 (100 €)
+
+- **Product ID:** `prod_UaB5q1ltsU9AWT`
+- **Price ID:** `price_1Tb0jdFW3OLCwM3HSTAxzHef` · 100 € EUR · pago único
+- **Metadata:** `taller_id=volver-a-mi`, `edicion=otono-2026`, `funcion=reserva`
+- **Tax code:** `txcd_20030000`
+- **Portada (pendiente subir manual):** `assets/stripe-portadas/06-reserva-volver-a-mi.png`
 
 **Descripción editorial (verbatim, lista para pegar):**
 
@@ -171,6 +177,12 @@ Para mujeres adultas que llevan años sosteniéndose en la mirada del otro y qui
 **Portada:** generar cuando esté lista la identidad visual del taller (pendiente). Mientras tanto, se puede usar `logo-mindworld.png` o subir la portada Reserva genérica como placeholder.
 
 ### 6.2 · Resto · Volver a Mí · Grupo cerrado otoño 2026 (597 €)
+
+- **Product ID:** `prod_UaB5KRdkycWI6O`
+- **Price ID:** `price_1Tb0jgFW3OLCwM3HemUWSWK2` · 597 € EUR · pago único
+- **Metadata:** `taller_id=volver-a-mi`, `edicion=otono-2026`, `funcion=resto`
+- **Tax code:** `txcd_20030000`
+- **Portada (pendiente subir manual):** `assets/stripe-portadas/07-resto-volver-a-mi.png`
 
 **Descripción editorial (verbatim):**
 
