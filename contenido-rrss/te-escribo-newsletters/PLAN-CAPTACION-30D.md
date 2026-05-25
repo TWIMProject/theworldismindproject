@@ -186,6 +186,32 @@ URL destino: igual que 4.2 con `utm_content=reel-b`.
 
 > Regla simétrica CLAUDE.md: cada publicación manual se registra el mismo día.
 
+### 25 mayo 2026 (domingo) — CORRECCIÓN DE FECHA del Directo «La voz que te juzga»
+
+🚨 Bug detectado por un amigo de Daniel · el directo se anunció para «domingo 8 jun» pero **el 8 de junio de 2026 es LUNES**. Domingo más cercano hacia atrás = 7 jun.
+
+**Decisión Daniel** · mantener «domingo» (mejor audiencia que lunes) y mover fecha a **domingo 7 de junio · 19:00 CEST**. Solo 1 día de diferencia · impacto mínimo (1 sola suscrita real al hacer el cambio).
+
+**Cambios aplicados en cascada (25-may):**
+
+- Web · 10 archivos públicos actualizados (página dedicada `/directo-la-voz-que-te-juzga/`, home announcement, 8 landings SEO, captions IG, hilo X, carta promo HTML).
+- Portada PNG `portada-rrss-directo-la-voz-que-te-juzga.png` regenerada vía script con «Domingo 7 de junio».
+- Schema.org Event `startDate` actualizado a `2026-06-07T19:00:00+02:00`.
+- Hook calendario `.claude/scripts/hitos-calendario.js` actualizado.
+- MailerLite vía MCP · automation `187662509833979144` (Secuencia · Directo 8 jun) · email de bienvenida actualizado con nueva fecha + cross-link Cap III. Grupo `187662493483533365` renombrado a «Lead · Directo · La voz que te juzga (7 jun)».
+
+**Pendiente Daniel (no automatizable vía MCP):**
+
+1. **Campaña promo `187974522939377362` en MailerLite** · status `ready` (programada para 3-jun 19:00 CEST) bloquea edición vía API. En panel · descartar schedule → status draft → actualizar HTML del email (HTML corregido ya disponible en `contenido-rrss/te-escribo-newsletters/carta-promo-directo-8-jun-voz-que-te-juzga.html`) → reprogramar para 3-jun 19:00 CEST. + cambiar idioma a Español si todavía no se hizo.
+2. **Google Calendar** · actualizar evento del directo a domingo 7 jun 19:00 (link Meet `https://meet.google.com/fsu-scrz-res` se mantiene).
+3. **Quote-tweet de corrección** en X · el hilo `2058249444194471967` del 23-may dice «8 jun» y no se puede editar tweet ya publicado. Texto sugerido · *«Pequeña corrección · el directo es el domingo 7 de junio, no 8 (error de día de la semana). Misma hora, mismo enlace. Plaza directa twimproject.com/directo-la-voz-que-te-juzga/»*.
+4. **Email manual** a la 1 suscrita real avisando del cambio.
+5. **Lección añadida al protocolo** · antes de publicar fecha + día semana, verificar contra calendario real.
+
+Nombres de archivos del repo que mencionan «8-jun-2026» (doc operativo, captions, hilo, guion teórico, portada-rrss) **se mantienen** por trazabilidad histórica · no renombrar.
+
+
+
 ### 23 mayo 2026 (sábado, tarde) — 2 hilos X publicados + claridad de vocabulario
 
 **Hilo Directo «La voz que te juzga»** (siguiendo `contenido-rrss/perfil-x/hilo-x-directo-8-jun.txt` v2 con link en T1, frase tatuable T3 y «venga va» en T5 · imagen del directo adjunta al T1):

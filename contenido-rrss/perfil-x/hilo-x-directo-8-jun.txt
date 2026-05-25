@@ -19,7 +19,7 @@ Llevas toda la vida confundiendo una voz con tu propio criterio. Y no es tuya.
 «Otros lo habrían hecho mejor.»
 «No estás siendo bastante.»
 
-Dom 8 jun, 19h (España) · una hora en directo, gratis, para verla.
+Dom 7 jun, 19h (España) · una hora en directo, gratis, para verla.
 
 → twimproject.com/directo-la-voz-que-te-juzga/
 
@@ -77,7 +77,7 @@ Instrucciones para publicar (Daniel):
 
 1. X · publicar como hilo nativo (no como tweet único largo). Pegar T1 → publicar → responder con T2 → T3 → T4 → T5. SIN ESPERAR entre tweets (el algoritmo X penaliza si tardas más de 5 min entre tweets de un hilo).
 
-2. ADJUNTAR al T1 la imagen `portada-rrss-directo-la-voz-que-te-juzga.png` (raíz del repo · 1080×1080 sistema A1 verde con fecha 8 jun · 19h, tagline «La voz que te dice "no es suficiente"» y CTA visible «EN DIRECTO · GRATUITO · CON REGISTRO»). Es la portada editorial específica del Directo · no usar la del Carrusel #3 (que era para el carrusel del 19-may).
+2. ADJUNTAR al T1 la imagen `portada-rrss-directo-la-voz-que-te-juzga.png` (raíz del repo · 1080×1080 sistema A1 verde con fecha 7 jun · 19h, tagline «La voz que te dice "no es suficiente"» y CTA visible «EN DIRECTO · GRATUITO · CON REGISTRO»). Es la portada editorial específica del Directo · no usar la del Carrusel #3 (que era para el carrusel del 19-may).
 
 3. Anclar el T1 al perfil durante 24-48h tras publicación (ya tienes el pinned «Tu cansancio no es físico» del 25-abr · valora si lo desanclas temporalmente para que este sea el pinned hasta el 8 jun).
 

@@ -44,9 +44,9 @@
 | Semana | Fechas | Acciones |
 |---|---|---|
 | **S20** | 13-19 may | Cap III lead magnet live ✅ · Carta #2 sale 19 may 19:00 · Carrusel #3 sale 19 may 20:00 · resolver MailerLite API |
-| **S21** | 20-26 may | Carta #3 «hambre de mirada» (introducir concepto del taller con honestidad — sin presión de venta todavía) · Carrusel #4 derivado · abrir registro del **Directo «La voz que te juzga» (dom 8 jun 19:00)** y empezar promo |
+| **S21** | 20-26 may | Carta #3 «hambre de mirada» (introducir concepto del taller con honestidad — sin presión de venta todavía) · Carrusel #4 derivado · abrir registro del **Directo «La voz que te juzga» (dom 7 jun 19:00)** y empezar promo |
 | **S22** | 27 may - 2 jun | Decisión sobre lead magnet específico taller: PDF «5 señales de que tienes hambre de mirada» (15-20 págs, gancho de Ads) · promo del directo en marcha |
-| **S23** | 3-9 jun | Producción del lead magnet del taller + landing pública mínima del taller (sin botón comprar todavía, solo «Apúntate a la lista de espera») · **Directo único dom 8 jun 19:00** (kit: `documentos-internos/directo-la-voz-que-te-juzga-8-jun-2026.md`) → registros alimentan newsletter + lista de espera; grabación se recicla a evergreen Cap III |
+| **S23** | 3-9 jun | Producción del lead magnet del taller + landing pública mínima del taller (sin botón comprar todavía, solo «Apúntate a la lista de espera») · **Directo único dom 7 jun 19:00** (kit: `documentos-internos/directo-la-voz-que-te-juzga-8-jun-2026.md`) → registros alimentan newsletter + lista de espera; grabación se recicla a evergreen Cap III |
 | **S24** | 10-14 jun | Anuncio soft de la lista de espera en Newsletter + IG. Pieza editorial sobre Kernberg/introyecciones (cruce con tu marco) |
 
 ### KPIs Fase 1

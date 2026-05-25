@@ -63,7 +63,7 @@ draw_centered(draw, 'La voz interior que siempre te pone un pero.', 670,
               font('InstrumentSerif-Italic.ttf', 38), BEIGE)
 
 # Fecha
-draw_centered(draw, 'Domingo 8 de junio · 19:00 (España)', 780,
+draw_centered(draw, 'Domingo 7 de junio · 19:00 (España)', 780,
               font('BarlowCondensed-Medium.ttf', 36), WHITE)
 
 # Caption
