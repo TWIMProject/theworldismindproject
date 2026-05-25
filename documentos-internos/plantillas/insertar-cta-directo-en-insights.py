@@ -1,27 +1,38 @@
 #!/usr/bin/env python3
 """
-Añade un bloque CTA al Directo «La voz que te juzga» (7 jun 2026 19:00)
-al final de cada insight HTML, justo antes del cierre `</article>`.
+Inserta o reemplaza el bloque CTA al Directo + Newsletter en cada insight HTML.
 
-Idempotente · si el insight ya contiene el bloque (detectado por el ID
-`cta-directo-7-jun`), lo salta. Si tiene un `article-cta` obsoleto que
-menciona la Carta #2 del 19 mayo (fecha pasada), lo reemplaza por uno
-limpio + el nuevo CTA al Directo.
+Versión actual del bloque (v2) · ofrece DOS pasos:
+  · CTA primario · Directo «La voz que te juzga» (domingo 7 junio)
+  · CTA secundario · Newsletter Te escribo (evergreen)
 
-Conservador: solo modifica si encuentra exactamente un `</article>`.
+Estrategia post-7-jun (para futuro · NO automático):
+Ejecutar este mismo script con `MODE = 'newsletter_only'` para reemplazar
+el bloque por una versión solo Newsletter (sin el Directo, que ya habrá pasado).
+
+Idempotente · si existe `id="cta-directo-7-jun"` (v1 o v2), lo reemplaza
+con la versión actual. Si NO existe, lo inserta antes de `</article>` o
+`<footer>` (lo que aparezca primero).
+
+Anclas conocidas que necesitan insertion alternativa:
+- 24 insights cierran con `</article>` → insertion estándar
+- 1 insight (`elegir-es-perder-psicologia-decision.html`) cierra con `</div>`
+  antes de `<footer>` → insertion antes de `<footer>`
 """
 import os
 import re
 import sys
 
 INSIGHTS_DIR = '/home/user/theworldismindproject/insights'
-CTA_MARKER = 'id="cta-directo-7-jun"'
+CTA_ID = 'cta-directo-7-jun'
 
+# Bloque actual (v2) · Directo + Newsletter
 CTA_HTML = '''<aside id="cta-directo-7-jun" style="margin:2.5rem auto 1.5rem;padding:1.6rem 1.8rem;background:#173D30;color:#FDFCFA;border-radius:8px;max-width:720px;font-family:'Barlow Condensed',system-ui,sans-serif;">
   <p style="margin:0 0 .4rem;font-size:.8rem;text-transform:uppercase;letter-spacing:3px;color:#C2A78B;font-weight:500;">Directo gratuito · domingo 7 junio · 19:00 (España)</p>
   <h3 style="margin:0 0 .7rem;font-family:'Instrument Serif',Georgia,serif;font-size:1.7rem;font-weight:400;color:#FDFCFA;letter-spacing:.3px;">La voz que te juzga</h3>
   <p style="margin:0 0 1.2rem;font-size:1rem;color:#FDFCFA;opacity:.92;line-height:1.55;">Una hora en directo sobre la voz interior que siempre te pone un pero · de dónde sale, por qué no se calla con razones, y qué empieza a aflojarla. Sin coaching, sin venta, sin embudo raro.</p>
   <a href="/directo-la-voz-que-te-juzga/" style="display:inline-block;padding:.75rem 1.5rem;background:#C2A78B;color:#173D30;text-decoration:none;border-radius:5px;font-weight:600;font-size:.95rem;letter-spacing:.3px;">Reservar plaza gratuita →</a>
+  <p style="margin:1.2rem 0 0;padding-top:1rem;border-top:1px solid rgba(194,167,139,.25);font-size:.9rem;color:#FDFCFA;opacity:.75;line-height:1.55;">¿No te encaja el directo? Suscríbete a <a href="/newsletter/" style="color:#C2A78B;text-decoration:underline;text-decoration-color:rgba(194,167,139,.5);text-underline-offset:3px;">Te escribo</a> · cartas editoriales sobre la mente, el cansancio y lo que no se dice. Sin frecuencia obligada · sin spam.</p>
 </aside>'''
 
 
@@ -29,34 +40,41 @@ def process(path):
     with open(path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Idempotencia: si ya tiene el bloque, skip
-    if CTA_MARKER in content:
-        return 'skip-idempotent'
+    # Si ya tiene el bloque (cualquier versión) · REEMPLAZAR
+    if CTA_ID in content:
+        # Match el aside entero por su id
+        pattern = re.compile(
+            r'\s*<aside id="cta-directo-7-jun"[^>]*>.*?</aside>',
+            re.DOTALL
+        )
+        new_content = pattern.sub(f'\n    {CTA_HTML}', content, count=1)
+        if new_content == content:
+            return 'skip-no-match'
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        return 'replaced'
 
-    # Detectar y limpiar bloque article-cta obsoleto (Carta #2 19 mayo)
-    article_cta_obsolete = re.compile(
-        r'<div class="article-cta">.*?</div>\s*',
-        re.DOTALL
-    )
-    if 'Carta #2' in content or '19 de mayo' in content:
-        # Hay copy obsoleto · reemplazar bloque article-cta entero
-        # SOLO si es el bloque exacto del article-cta
-        if '<div class="article-cta">' in content:
-            content = article_cta_obsolete.sub('', content, count=1)
+    # Si NO tiene · insertar antes de </article> (preferente) o <footer>
+    if '</article>' in content:
+        new_content = content.replace(
+            '</article>',
+            f'    {CTA_HTML}\n  </article>',
+            1
+        )
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        return 'inserted-article'
+    if '<footer>' in content:
+        new_content = content.replace(
+            '<footer>',
+            f'    {CTA_HTML}\n\n<footer>',
+            1
+        )
+        with open(path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        return 'inserted-footer'
 
-    # Insertar el CTA antes del primer </article>
-    if content.count('</article>') != 1:
-        return 'skip-no-article'
-
-    new_content = content.replace(
-        '</article>',
-        f'    {CTA_HTML}\n  </article>',
-        1
-    )
-
-    with open(path, 'w', encoding='utf-8') as f:
-        f.write(new_content)
-    return 'ok'
+    return 'skip-no-anchor'
 
 
 def main():
@@ -64,7 +82,8 @@ def main():
         print(f'ERROR · directorio no existe: {INSIGHTS_DIR}')
         sys.exit(1)
 
-    results = {'ok': [], 'skip-idempotent': [], 'skip-no-article': []}
+    results = {'replaced': [], 'inserted-article': [], 'inserted-footer': [],
+               'skip-no-anchor': [], 'skip-no-match': []}
 
     for fname in sorted(os.listdir(INSIGHTS_DIR)):
         if not fname.endswith('.html'):
@@ -75,14 +94,14 @@ def main():
         status = process(path)
         results[status].append(fname)
 
-    print(f'== Resumen ==')
-    print(f'OK procesados ............ {len(results["ok"])}')
-    print(f'Skip idempotente (ya tienen) {len(results["skip-idempotent"])}')
-    print(f'Skip sin </article> ........ {len(results["skip-no-article"])}')
-    if results['skip-no-article']:
-        print('Avisar Daniel · sin </article>:')
-        for f in results['skip-no-article']:
-            print(f'  - {f}')
+    print('== Resumen ==')
+    for key, items in results.items():
+        if items:
+            print(f'{key} ({len(items)}):')
+            for f in items[:3]:
+                print(f'  - {f}')
+            if len(items) > 3:
+                print(f'  ... +{len(items) - 3} más')
 
 
 if __name__ == '__main__':
