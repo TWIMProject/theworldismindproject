@@ -1,4 +1,6 @@
-# Directo «La voz que te juzga» · domingo 8 jun 2026 · 19:00
+# Directo «La voz que te juzga» · domingo 7 jun 2026 · 19:00
+
+> **🚨 CORRECCIÓN DE FECHA · 25 may 2026.** El directo se anunció inicialmente para «domingo 8 jun» pero **el 8 de junio de 2026 es LUNES**, no domingo (detectado por un amigo de Daniel). Domingo más cercano hacia atrás = **7 jun**. Decisión Daniel · mantener «domingo» (audiencia óptima) y mover fecha al 7 jun · solo 1 día de diferencia, mínimo impacto (1 sola suscrita real al hacer el cambio). Cambios aplicados en cascada el 25-may en repo + MailerLite (automation registro `187662509833979144` actualizada vía MCP, grupo `187662493483533365` renombrado a `(7 jun)`). Pendiente Daniel · editar campaña promo `187974522939377362` en panel (status `ready` bloqueada vía API) + Google Calendar + quote-tweet correcc en X. El **nombre del archivo se mantiene `*-8-jun-2026.md`** por trazabilidad histórica · no renombrar.
 
 > Creado el 16 may 2026, sesión `claude/improve-proposal-quality-pq3d9`. Kit completo del directo único de captación. Fundamentado en `plan-captacion-verano-2026.md` (Fase 1), `palancas-venta-libro-engranajes-15-may-2026.md`, CEO doc §6.2/§8 y `mailerlite-automation-lectores-engranajes-cap3.md` §4.
 
@@ -6,9 +8,9 @@
 
 ## 1 · Qué es y qué NO es (líneas rojas del repo)
 
-- **Es:** un directo gratuito **único** (no recurrente), 60 min, domingo 8 jun 19:00 (hora España). Captación editorial pura: el registro por email es la entrada al embudo (newsletter + Cap III). Se graba → queda como evergreen que sigue trayendo gente meses.
+- **Es:** un directo gratuito **único** (no recurrente), 60 min, domingo 7 jun 19:00 (hora España). Captación editorial pura: el registro por email es la entrada al embudo (newsletter + Cap III). Se graba → queda como evergreen que sigue trayendo gente meses.
 - **NO es:** una venta, ni un compromiso recurrente (CEO §8: horario fijo recurrente roba tiempo de escribir; concentración sobre dispersión), ni vídeo largo de YouTube como formato sostenido. No se vende nada en directo.
-- **Por qué 8 jun 19:00 (objetivo):** último domingo entero dentro de Fase 1 antes del bloque de grabación del 15 jun → 3 semanas de promoción (Carta #2 ya salió, Carta #3 «hambre de mirada» S21, Carrusel #3, carrusel «niño»). 19:00 acaba ~20:00: respeta familia y que el lunes es consulta.
+- **Por qué 7 jun 19:00 (objetivo):** último domingo entero dentro de Fase 1 antes del bloque de grabación del 15 jun → 3 semanas de promoción (Carta #2 ya salió, Carta #3 «hambre de mirada» S21, Carrusel #3, carrusel «niño»). 19:00 acaba ~20:00: respeta familia y que el lunes es consulta.
 
 ## 2 · Estado del montaje (16 may)
 
@@ -30,13 +32,13 @@
 ### 3.1 · Formulario — titular + éxito
 
 - **Titular:** Un domingo, una hora: la voz que te juzga.
-- **Subtítulo:** Domingo 8 de junio, 19:00 (hora de España). En directo, gratuito. Déjame tu email y te mando el acceso.
+- **Subtítulo:** Domingo 7 de junio, 19:00 (hora de España). En directo, gratuito. Déjame tu email y te mando el acceso.
 - **Botón:** Reservar mi plaza
 - **Mensaje de éxito:** Hecho. Tienes la plaza reservada. Te escribo el mismo domingo con el enlace de acceso (y un recordatorio una hora antes). Si ese día no puedes en directo, igual te dejo después el material.
 
 ### 3.2 · Email de confirmación
 
-Ya cargado en la automation `187662509833979144` (asunto «Estás dentro — Directo «La voz que te juzga» (domingo 8 jun, 19:00)»). Solo diseñarlo y activarlo.
+Ya cargado en la automation `187662509833979144` (asunto «Estás dentro — Directo «La voz que te juzga» (domingo 7 jun, 19:00)»). Solo diseñarlo y activarlo.
 
 ### 3.3 · Campaña recordatorio (8 jun ~10:00)
 
@@ -78,7 +80,7 @@ Asunto: Te invito a una hora, en directo, sobre la voz que te juzga
 
 Hola,
 
-El domingo 8 de junio, a las 19:00, voy a hacer algo que no suelo: una hora en directo.
+El domingo 7 de junio, a las 19:00, voy a hacer algo que no suelo: una hora en directo.
 
 No es un curso ni una clase motivacional. Es lo que hago en las cartas, pero en voz alta y de una sentada: desmontar la voz interna que te dice «no es suficiente» — de dónde sale, por qué no se calla con razones, y qué empieza a debilitarla.
 
@@ -95,14 +97,14 @@ Enlace «Reservar mi plaza» → URL del formulario de registro.
 ### 5.2 · Caption IG / LinkedIn
 
 ```
-El domingo 8 de junio, 19:00 (hora España), una hora en directo: la voz interna que te dice «no es suficiente». De dónde viene, por qué no se calla con razones, y qué empieza a debilitarla. Gratuito, con registro. Link para reservar en la bio.
+El domingo 7 de junio, 19:00 (hora España), una hora en directo: la voz interna que te dice «no es suficiente». De dónde viene, por qué no se calla con razones, y qué empieza a debilitarla. Gratuito, con registro. Link para reservar en la bio.
 ```
 
 ### 5.3 · Carrusel anuncio (3 slides, sistema A2 — reutilizar plantilla del repo)
 
 - S1: «Un domingo. Una hora. / La voz que te juzga.» (mismo estilo que el carrusel «niño»).
 - S2: Qué es / qué no es (3 líneas: no es coaching · no es motivación · es leer el mecanismo en voz alta).
-- S3: «Domingo 8 jun · 19:00 · gratuito / Reserva en la bio» + logo.
+- S3: «Domingo 7 jun · 19:00 · gratuito / Reserva en la bio» + logo.
 
 ### 5.4 · CTA kit canales propios (capa 1 del plan Cap III — hacer esta semana)
 
@@ -119,17 +121,17 @@ Pegar el enlace del **formulario de registro** mientras dure la promo; tras el d
 
 > Daniel preguntó (19-may) con qué nombre etiquetar el Share URL del formulario en IG / LinkedIn / Facebook / YouTube para que se entienda de un vistazo. Coherente con el botón del formulario «Reservar mi plaza» (§3.1), el caption (§5.2) y el highlight «DIRECTO» (§5.4).
 
-**Fórmula:** qué (directo gratuito) + tema («La voz que te juzga») + cuándo (dom 8 jun, 19:00) + acción (reservar plaza). Sin emojis (activo editorial puro, §1).
+**Fórmula:** qué (directo gratuito) + tema («La voz que te juzga») + cuándo (dom 7 jun, 19:00) + acción (reservar plaza). Sin emojis (activo editorial puro, §1).
 
 | Canal | Dónde | Nombre/etiqueta del enlace |
 |---|---|---|
-| Instagram | Link en bio | `Directo gratis «La voz que te juzga» · dom 8 jun 19h → reservar` |
+| Instagram | Link en bio | `Directo gratis «La voz que te juzga» · dom 7 jun 19h → reservar` |
 | Instagram | Sticker historia / cover highlight | Sticker: `Reservar plaza` · Highlight: `DIRECTO` |
-| LinkedIn | Featured / post | Título: `Directo: La voz que te juzga` · Desc.: `Domingo 8 jun, 19:00 (España). Gratuito, con registro. Reserva tu plaza.` |
-| Facebook | Post / botón de página | `Reservar plaza — Directo «La voz que te juzga» (dom 8 jun, 19:00)` |
-| YouTube | Comentario fijado / descripción | `Directo gratuito «La voz que te juzga» — domingo 8 jun, 19:00 (España). Reserva tu plaza:` |
+| LinkedIn | Featured / post | Título: `Directo: La voz que te juzga` · Desc.: `Domingo 7 jun, 19:00 (España). Gratuito, con registro. Reserva tu plaza.` |
+| Facebook | Post / botón de página | `Reservar plaza — Directo «La voz que te juzga» (dom 7 jun, 19:00)` |
+| YouTube | Comentario fijado / descripción | `Directo gratuito «La voz que te juzga» — domingo 7 jun, 19:00 (España). Reserva tu plaza:` |
 
-**Universal corto** (cuando solo cabe una línea): `Directo gratuito · «La voz que te juzga» · dom 8 jun 19:00 — Reservar plaza`
+**Universal corto** (cuando solo cabe una línea): `Directo gratuito · «La voz que te juzga» · dom 7 jun 19:00 — Reservar plaza`
 
 **URL a difundir (VERIFICADA 19-may, panel + conector):**
 
@@ -172,8 +174,8 @@ Esa es la **Compartir URL** oficial que MailerLite da para este formulario integ
 |---|---|---|---|
 | E1 | Inmediato al registrarse | Automation `187662509833979144`, paso 1 (copy ya cargado) | «Estás dentro» (§3.2) |
 | E2 | sáb 7 jun ~19:00 | Campaña programada al grupo `187662493483533365` | Recordatorio víspera + enlace Meet |
-| E3 | dom 8 jun ~10:00 | Campaña programada | «Hoy 19:00 — el enlace para entrar» (§3.3) |
-| E4 | dom 8 jun ~18:00 | Campaña programada (opcional pero recomendada) | «En 1 hora» + enlace |
+| E3 | dom 7 jun ~10:00 | Campaña programada | «Hoy 19:00 — el enlace para entrar» (§3.3) |
+| E4 | dom 7 jun ~18:00 | Campaña programada (opcional pero recomendada) | «En 1 hora» + enlace |
 | E5 | lun 9 jun ~10:00 | Campaña | Gracias + Capítulo III gratuito + grabación → puente al embudo Cap III |
 
 Enlace Meet a insertar como hipervínculo sobre el texto «Entrar aquí» (nunca pegar la URL cruda — regla `…cap3.md` §3): `https://meet.google.com/fsu-scrz-res`
@@ -239,8 +241,8 @@ FASE A · abrir captación (ya):
 
 FASE B · programar (SOLO con inscritos en el grupo, ~5-6 jun):
 [ ] Campaña E2 al grupo 187662493483533365, programada sáb 7 jun 19:00.
-[ ] Campaña E3 programada dom 8 jun 10:00.
-[ ] Campaña E4 programada dom 8 jun 18:00.
+[ ] Campaña E3 programada dom 7 jun 10:00.
+[ ] Campaña E4 programada dom 7 jun 18:00.
 [ ] Campaña E5 programada lun 9 jun 10:00 (revisar enlace de grabación tras grabar).
 ```
 

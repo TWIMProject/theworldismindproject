@@ -13,7 +13,7 @@
 const items = [
   ["2026-05-26", "crear doc métricas Carrusel #3 a 7 días"],
   ["2026-06-03", "carta promo Directo · verificar idioma a Español en panel MailerLite antes del envío 19:00 CEST"],
-  ["2026-06-08", "Directo «La voz que te juzga» 19:00 CEST vía Meet"],
+  ["2026-06-07", "Directo «La voz que te juzga» 19:00 CEST vía Meet"],
   ["2026-06-15", "inicio ventana grabación «Deja de Buscarte en Otros»"],
   ["2026-07-28", "cierre ventana grabación DDBEO (tope agosto)"],
   ["2026-09-01", "apertura pre-venta dura del taller «Volver a Mí» + Meta Ads"],
