@@ -215,3 +215,29 @@ Daniel Orozco Abia, Psicólogo General Sanitario CV11515.
 ---
 
 **Última actualización:** 25 may 2026 · Claude (sesión `claude/social-media-link-naming-tcIUA`).
+
+---
+
+## 8 · Statement descriptors aplicados vía API (25-may-2026)
+
+Lo que el cliente ve en su extracto bancario tras pagar. Sustituye al genérico `STRIPE*TWIMPROJECT` por algo identificable que reduce disputas y mejora marca:
+
+| Producto | Statement descriptor |
+|---|---|
+| Reserva Bachillerato | `RESERVA BACH TWIM` |
+| Reserva TDAH | `RESERVA TDAH TWIM` |
+| Taller Bachillerato 720 € | `TALLER BACH TWIM` |
+| Taller TDAH 720 € | `TALLER TDAH TWIM` |
+| Programa In-Company 2.450 € | `IN-COMPANY TWIM` |
+| Reserva Volver a Mí 100 € | `RESERVA VAM TWIM` |
+| Resto Volver a Mí 597 € | `RESTO VAM TWIM` |
+
+Límite Stripe: 22 caracteres ASCII (sin acentos · sin `·` · sin `«»`). Por eso son cortos y mayúsculas.
+
+---
+
+## 9 · Mejoras Stripe que SOLO Daniel puede hacer (UI con MFA)
+
+1. **Activar Stripe Tax** (`Configuración → Impuestos`) · 0,5 % del volumen · calcula IVA automático según país del cliente. Crítico antes del 1-sept (pre-venta Volver a Mí, posibles inscritas internacionales).
+2. **Activar Bizum método de pago Stripe** (`Configuración → Métodos de pago`) · sube conversión 5-10 % en tickets bajos para audiencia española. NO interfiere con Bizum personal Bankinter de Daniel (P2P pacientes).
+3. **Statement descriptor genérico de cuenta** (`Configuración → Datos públicos`) · asegurar `TWIMPROJECT` legible · solo aplica a charges sin `statement_descriptor` propio en el producto.
