@@ -148,6 +148,26 @@ Especificación reproducible:
 
 - En **meta description, keywords, schema.org**, alt text · términos clínicos estándar (`necesidad de validación`, `apego ansioso`, `regulación emocional`) son correctos · la audiencia que busca esos términos en Google sí los conoce. El público SEO clínico es distinto del público lector de copy.
 
+---
+
+## Regla inviolable · Naming de productos Stripe
+
+> Regla persistida el 25 may 2026 tras auditoría completa del catálogo Stripe (`documentos-internos/auditoria-stripe-2026-05-25.md`). Detectada inconsistencia · 3 separadores distintos (`—`, `-`, `·`), comillas mezcladas (`"…"` y sin), categorías sin estandarizar (`Training`, `Predefinido: Formación`, `Training Services - Live Virtual`).
+
+**Todo producto NUEVO en Stripe sigue esta regla. Productos existentes se actualizan progresivamente al pasar por ellos.**
+
+- **Separador interno:** `·` (punto medio U+00B7) — nunca `—`, `-`, `|`, `:`.
+- **Comillas:** `«…»` (latinas) — nunca `"…"` ni `'…'`.
+- **Estructura del nombre:** `[Tipo] · [Nombre del producto] · [Subtítulo opcional]`.
+  - Ejemplos: `Taller TDAH adolescentes · Más allá del TDAH`, `Reserva · Volver a Mí · Grupo cerrado otoño 2026`, `Programa In-Company · Ansiedad Laboral · Ventaja Competitiva`.
+- **Mayúsculas:** solo en el nombre real del taller/programa y en la palabra del tipo de oferta (`Taller`, `Reserva`, `Programa`, `Guía`). Conectivos en minúsculas.
+- **Fechas en nombre** (solo si el producto tiene fecha única fija): `30 sep 2026` no `30/09/2026` ni `30 septiembre 2026`. Mes abreviado 3 letras minúsculas.
+- **Categorías Stripe** (consolidación progresiva):
+  - `Talleres en vivo` — productos con fecha de inicio fija y modalidad sincrónica.
+  - `Infoproductos` — guías, ebooks, audios, contenido evergreen autoservicio.
+  - `Servicios profesionales` — In-Company, conferencias, supervisión.
+- **Metadata obligatoria** en cada producto nuevo: `taller_id`, `edicion` (si aplica), `funcion` (`reserva` / `resto` / `producto-unico` / `infoproducto`).
+
 **Ejemplo verificado del cambio aplicado (23 may 2026):**
 
 - ❌ «para mujeres que quieren sentir que valen sin necesitar que nadie se lo confirme»
