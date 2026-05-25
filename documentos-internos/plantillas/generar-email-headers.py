@@ -25,7 +25,7 @@ canvas = Image.new('RGB', (W, H), GREEN_DARK)
 draw = ImageDraw.Draw(canvas)
 
 # ---- Logo MIND/WORLD a la izquierda ----
-logo = Image.open('/home/user/theworldismindproject/logo-mindworld.png').convert('RGBA')
+logo = Image.open('/home/user/theworldismindproject/assets/logo-mindworld-on-dark.png').convert('RGBA')
 logo_target_h = 150
 logo_target_w = int(logo.width * logo_target_h / logo.height)
 logo = logo.resize((logo_target_w, logo_target_h), Image.LANCZOS)
