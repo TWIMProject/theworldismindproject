@@ -1,7 +1,7 @@
 # Guion narrativo · Primera sesión del taller «Volver a Mí»
 
 **Para Daniel Orozco Abia · Psicólogo Col. CV11515 · TWIM Project**
-**Duración estimada 75-90 minutos · Grupo cerrado · Lanzamiento 8 de junio de 2026**
+**Duración estimada 75-90 minutos · Grupo cerrado · Lanzamiento 30 de septiembre de 2026** *(reprogramado el 13-may-2026; original era 8-jun, antes de detectar que 8 jun es lunes; ver `dossier-completo.md` §1 y `decisiones-cerradas.md` §2.2)*
 
 > Procedencia: guion generado por ChatGPT el 13 may 2026 y pegado por Daniel en chat de Claude Code el mismo día. Se guarda **verbatim** en el repo como fuente operativa. Las indicaciones para Daniel, las marcas de pausa y las notas técnicas del autor del guion se conservan intactas.
 
