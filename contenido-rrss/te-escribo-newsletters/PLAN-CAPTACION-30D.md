@@ -212,6 +212,42 @@ Nombres de archivos del repo que mencionan «8-jun-2026» (doc operativo, captio
 
 
 
+### 25 mayo 2026 (domingo) — Meta Ads campaña «5 señales de que buscas validación» COMPLETADA · 7 días
+
+**Pieza:** carrusel de 8 slides (fuente `contenido-rrss/carrusel-reto-7-dias-señales-validacion.md`). Sistema visual A1 verde oscuro · contenido del Reto 7 Días.
+
+**Configuración:**
+- Objetivo Meta: **Visitas al sitio web** (lección aplicada del anuncio «niño» cancelado 22-may)
+- Audiencia: España · mujeres 25-50 · Advantage+ activo · intereses psicología
+- Presupuesto: 20 €/día · 7 días · método pago PayPal
+
+**Resultados (impactantes):**
+
+| Métrica | Valor | Lectura |
+|---|---|---|
+| Gasto total | 139,93 € | Presupuesto completo agotado |
+| Alcance | 85.966 personas | España, target perfecto |
+| Visualizaciones | 116.600 | Frecuencia 1,36 |
+| Clics al enlace | 15.027 | **CTR 12,89 %** |
+| Visitas al sitio web | **7.172** | Tasa finalización 47,7 % |
+| **Coste por visita web** | **0,02 €** | Benchmark sector 0,30-1,50 € → x30-150 mejor |
+
+**Lectura honesta:** rendimiento muy por encima de benchmark sectorial. CR final (visita → suscriptor) pendiente de verificar contra MailerLite en próxima sesión.
+
+**Aprendizajes (persistidos en `documentos-internos/metricas-meta-ads-carrusel-validacion-25-may-2026.md`):**
+- Objetivo Meta «Visitas al sitio web» = la palanca individual más importante (vs «combinación optimizada» del anuncio niño que dio 2 clics totales)
+- Carrusel ≥6 slides con frases tatuables verbatim sube CTR brutalmente (12,89 % vs 1-3 % benchmark)
+- Sistema visual A1 verde oscuro funciona mejor que A2 crema sobre feed Meta
+- Audiencia Advantage+ + intereses base bien definidos = nichos baratos
+- Presupuesto 20 €/día × 7 días = buen tamaño de test inicial
+
+**Próximos pasos:**
+1. Cruzar suscriptores nuevos en grupo MailerLite del Reto durante 18-25 may → cerrar lectura económica con CPL real
+2. Si CPL < 2 € → iteración con presupuesto 30-50 €/día durante 10-14 días
+3. Aplicar mismo objetivo + pattern de copy en primer anuncio Meta pre-venta Volver a Mí (1 sept)
+
+---
+
 ### 23 mayo 2026 (sábado, tarde) — 2 hilos X publicados + claridad de vocabulario
 
 **Hilo Directo «La voz que te juzga»** (siguiendo `contenido-rrss/perfil-x/hilo-x-directo-8-jun.txt` v2 con link en T1, frase tatuable T3 y «venga va» en T5 · imagen del directo adjunta al T1):
