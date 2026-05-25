@@ -135,5 +135,25 @@ build(
     footer_meta='Formación para equipos · 6 sesiones · presencial u online',
 )
 
+# 6 · Reserva · Volver a Mí · Grupo cerrado otoño 2026 (100 €)
+build(
+    filename='06-reserva-volver-a-mi.png',
+    kicker='TWIM PROJECT · RESERVA',
+    title_l1='Volver',
+    title_l2='a Mí.',
+    subtitle_italic='Grupo cerrado de 8 mujeres · 8 miércoles, sept-nov 2026.',
+    footer_meta='Reserva 100 € · sesión individual previa de encaje',
+)
+
+# 7 · Resto · Volver a Mí · Grupo cerrado otoño 2026 (597 €)
+build(
+    filename='07-resto-volver-a-mi.png',
+    kicker='TWIM PROJECT · INSCRIPCIÓN',
+    title_l1='Volver',
+    title_l2='a Mí.',
+    subtitle_italic='Resto del taller tras encaje confirmado · 597 €.',
+    footer_meta='8 sesiones online · miércoles 20:00 hora Madrid',
+)
+
 print('---')
-print(f'5 portadas Stripe generadas en {OUT}')
+print(f'7 portadas Stripe generadas en {OUT}')
