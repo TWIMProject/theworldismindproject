@@ -19,6 +19,7 @@
 | `decisiones-cerradas.md` | Tabla maestra consolidada con las 18 decisiones tomadas (Daniel + Code) + argumentaciones detalladas | ✅ |
 | `mailerlite-api-incidencia.md` | Documentación del problema técnico que bloquea la captación vía formularios web | ⚠️ esperando que Daniel ejecute paso 2 (curl al endpoint diag desde navegador — sandbox no permite a Code hacerlo) |
 | `plan-captacion-verano-2026.md` | Cronograma operativo de las 20 semanas entre 13 may 2026 y S1 (30 sep 2026) en 5 fases: sprint editorial + lista de espera · grabación Deja de Buscarte · vacaciones Daniel · pre-venta dura + Meta Ads · sesiones individuales previas. Incluye KPIs, decisiones por escenarios al 22 sep, riesgos + mitigación, operativa día D. | ✅ |
+| `stripe-setup-volver-a-mi.md` | Setup paso a paso de los 2 productos Stripe (Reserva 100 € + Resto 597 €) listo para copy-paste por Daniel · incluye integración MailerLite, automations, URLs gracias-* y checklist final pre-1-sept. Coherente con `decisiones-cerradas.md`. | ✅ creado 25-may-2026 |
 
 ---
 
