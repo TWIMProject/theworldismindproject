@@ -1,0 +1,14 @@
+# Netlify redirects · TWIM Project
+#
+# Sintaxis: <origen> <destino> <status>
+# 301 = redirección permanente (preferido para SEO)
+# 302 = redirección temporal
+#
+# NO usar force = true sin justificar explícitamente (regla §2 inviolable CLAUDE.md).
+
+# Landing taller «No puedo parar» 30-mar-2026 · taller único y pasado, sin material
+# evergreen ni nueva edición programada. 301 a la página de soluciones generales
+# para que el SEO acumulado no se pierda (sigue conservando relevancia temática
+# burnout / sobrepensar / cansancio psíquico).
+# Decisión Daniel 25-may-2026. Archivo HTML eliminado en mismo commit.
+/nopuedoparar-taller.html   /soluciones/   301
