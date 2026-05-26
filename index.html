@@ -1509,6 +1509,15 @@
         });
         form.style.display = 'none';
         linksDiv.style.display = 'block';
+        if (typeof gtag === 'function') {
+          const _p = new URLSearchParams(window.location.search);
+          gtag('event', 'padres_talleres_signup', {
+            source: 'home_padres_block',
+            utm_source: _p.get('utm_source') || 'direct',
+            utm_medium: _p.get('utm_medium') || 'none',
+            utm_campaign: _p.get('utm_campaign') || 'none'
+          });
+        }
       } catch {
         form.style.display = 'none';
         linksDiv.style.display = 'block';
@@ -1546,6 +1555,16 @@
         if (!res.ok) throw new Error('Request failed');
         form.style.display = 'none';
         successDiv.style.display = 'block';
+        if (typeof gtag === 'function') {
+          const _p = new URLSearchParams(window.location.search);
+          gtag('event', 'newsletter_signup', {
+            source: 'home_main_form',
+            landing: location.pathname,
+            utm_source: _p.get('utm_source') || 'direct',
+            utm_medium: _p.get('utm_medium') || 'none',
+            utm_campaign: _p.get('utm_campaign') || 'none'
+          });
+        }
       } catch {
         btn.disabled = false;
         btn.textContent = originalLabel;
