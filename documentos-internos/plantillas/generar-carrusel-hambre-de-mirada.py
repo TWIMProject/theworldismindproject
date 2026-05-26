@@ -145,11 +145,11 @@ else:
     print('OK · placeholder (foto IA pendiente)')
 
 # Layout texto · zona crema 900→1350 (450 px) sin solapes
-# y=945  kicker «3 ESCENAS DE»            32 px (alto ~36)
-# y=1005 título «Hambre de mirada.»      105 px (alto ~125)  → cabe 1 línea
-# y=1255 paginación                       22 px (alto ~26)
-# y=1295 handle                           19 px (alto ~23)
-# Gaps de aire: 32 (kicker→título), 125 (título→paginación), 14 (pag→handle)
+# y=945  kicker «3 ESCENAS DE»            32 px
+# y=1005 título «Hambre de mirada.»      105 px (1 línea)
+# y=1170 aforismo italic                  30 px
+# y=1245 paginación                       22 px
+# y=1290 handle                           19 px
 
 centered(d, '3 ESCENAS DE', 945,
          font('BarlowCondensed-Medium.ttf', 32), BEIGE, ls=8)
@@ -157,9 +157,12 @@ centered(d, '3 ESCENAS DE', 945,
 centered(d, 'Hambre de mirada.', 1005,
          font('InstrumentSerif-Regular.ttf', 105), TEXT_DARK)
 
-centered(d, '01 / 08  ·  DESLIZA', 1255,
+centered(d, 'No las habrás nombrado · pero pasan a diario.', 1170,
+         font('InstrumentSerif-Italic.ttf', 30), BEIGE)
+
+centered(d, '01 / 08  ·  DESLIZA', 1245,
          font('BarlowCondensed-Medium.ttf', 22), KICKER_GREEN, ls=3)
-centered(d, '@daniorozcopsicologo · twimproject.com', 1295,
+centered(d, '@daniorozcopsicologo · twimproject.com', 1290,
          font('BarlowCondensed-Regular.ttf', 19), TEXT_DARK, ls=2)
 
 c.save(f'{OUT}/slide-1-hook.png', optimize=True)
