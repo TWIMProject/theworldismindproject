@@ -95,8 +95,8 @@ def footer(d, idx, total=8):
 c = Image.new('RGB', (W, H), BG_CREAM)
 d = ImageDraw.Draw(c)
 
-# Zona de foto · 1080×860 desde y=0 a y=860 (~64 % del canvas, ratio áureo)
-FOTO_H = 860
+# Zona de foto · 1080×900 desde y=0 a y=900 (~66 %, cinemática limpia)
+FOTO_H = 900
 foto_paths = [
     os.path.join(OUT, 'foto-hook.jpg'),
     os.path.join(OUT, 'foto-hook.jpeg'),
@@ -144,24 +144,24 @@ else:
     c.paste(placeholder, (0, 0))
     print('OK · placeholder (foto IA pendiente)')
 
-# Hairline editorial muy fina (no banda) · marca la zona de texto sin agredir
-d.line([(W // 2 - 80, FOTO_H + 50), (W // 2 + 80, FOTO_H + 50)],
-       fill=BEIGE, width=1)
+# Layout texto · zona crema 900→1350 (450 px) sin solapes
+# y=945  kicker «3 ESCENAS DE»            32 px (alto ~36)
+# y=1005 título «Hambre de mirada.»      105 px (alto ~125)  → cabe 1 línea
+# y=1255 paginación                       22 px (alto ~26)
+# y=1295 handle                           19 px (alto ~23)
+# Gaps de aire: 32 (kicker→título), 125 (título→paginación), 14 (pag→handle)
 
-# Título principal · 2 líneas dominantes en Instrument Serif
-title_f = font('InstrumentSerif-Regular.ttf', 140)
-centered(d, '3 escenas de',    FOTO_H + 90,  title_f, TEXT_DARK)
-centered(d, 'hambre de mirada.', FOTO_H + 230, title_f, TEXT_DARK)
+centered(d, '3 ESCENAS DE', 945,
+         font('BarlowCondensed-Medium.ttf', 32), BEIGE, ls=8)
 
-# Aforismo italic discreto debajo
-centered(d, 'No las habrás nombrado · pero pasan a diario.', FOTO_H + 400,
-         font('InstrumentSerif-Italic.ttf', 34), BEIGE)
+centered(d, 'Hambre de mirada.', 1005,
+         font('InstrumentSerif-Regular.ttf', 105), TEXT_DARK)
 
-# Footer · paginación + handle (sobre crema, color suave)
-centered(d, '01 / 08  ·  DESLIZA', H - 95,
+centered(d, '01 / 08  ·  DESLIZA', 1255,
          font('BarlowCondensed-Medium.ttf', 22), KICKER_GREEN, ls=3)
-centered(d, '@daniorozcopsicologo · twimproject.com', H - 55,
+centered(d, '@daniorozcopsicologo · twimproject.com', 1295,
          font('BarlowCondensed-Regular.ttf', 19), TEXT_DARK, ls=2)
+
 c.save(f'{OUT}/slide-1-hook.png', optimize=True)
 print('OK · slide 1')
 
