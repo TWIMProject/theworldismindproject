@@ -175,6 +175,26 @@ Especificación reproducible:
 
 8 archivos actualizados de un golpe (DDBEO preventa + 7 insights/soluciones).
 
+---
+
+## Regla inviolable · Handoff de sesión · continuidad sin pérdida
+
+> Regla declarada por Daniel el 26 may 2026 al final de una sesión larga · «Recuerda que lo que hagas para cuando se acabe esta conversación porque está el chat lleno, otro pueda seguir desde donde nos hemos quedado y entienda cómo hablo y cómo soy como persona, guardar en el repo de GitHub, todo. Es una regla inviolable. No se puede corromper si no soy yo el okay.»
+
+**Cada sesión termina con dos artefactos en el repo, sin excepción:**
+
+1. **`documentos-internos/cierre-sesion-YYYY-MM-DD.md`** · diario operativo verbatim del día · PRs cerrados, acciones MCP, hallazgos, tareas manuales priorizadas, estado emocional CEO al cierre. Permite que la siguiente sesión sepa qué pasó concretamente y por qué.
+
+2. **`documentos-internos/perfil-daniel-handoff-sesiones.md`** · perfil vivo de Daniel · cómo habla, cómo decide, qué valora, qué rechaza, contexto vital relevante. Se actualiza solo cuando aparece info nueva relevante. Permite que la siguiente sesión hable con Daniel como Daniel · sin tener que re-aprender su estilo desde cero.
+
+**Inviolabilidad del perfil:**
+
+- El archivo `perfil-daniel-handoff-sesiones.md` **NO se modifica ni borra sin OK explícito de Daniel en la sesión que lo toque**. Otras sesiones pueden añadir información verificada (con cita verbatim de Daniel y fecha) pero no pueden contradecir o eliminar lo previo sin que Daniel lo apruebe explícitamente.
+- Si una sesión detecta contradicción interna del perfil, debe **señalarla a Daniel** y esperar OK antes de tocar.
+- Si una sesión termina sin haber actualizado los 2 artefactos · ha fallado la regla. Antes de cerrar turno, comprobar.
+
+**Por qué importa:** las sesiones de Claude tienen límite de contexto. Cuando el chat se llena, la siguiente sesión arranca de cero. Sin estos 2 artefactos, la siguiente sesión re-aprende el estilo de Daniel preguntando o equivocándose · cuesta tiempo, fricción y errores editoriales. Con los 2 artefactos, la siguiente sesión opera desde el primer turno como si llevara meses con Daniel. La continuidad del proyecto generacional depende de esto.
+
 **Antes de mergear cualquier pieza pública nueva**, escanear el copy con el ojo de «alguien que entra por primera vez sin contexto» · si hay verbos abstractos sin objeto concreto, reformular antes de publicar.
 
 ---
