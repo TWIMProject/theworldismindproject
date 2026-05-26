@@ -123,3 +123,69 @@ En X fue el link en T5 (no se alcanza). En Meta fue el objetivo «Combinación o
 ---
 
 — Documento de cierre creado el 22-may-2026. El anuncio quedó cancelado. Próximo anuncio · aplicar §5 íntegro.
+
+---
+
+## 7 · Cola residual orgánica post-cancelación (capturado 26 may 21:09 CEST · 10 días desde publicación, 4 días desde cancelación)
+
+> Bloque añadido el 26-may al cerrar la auditoría a 7 días del Carrusel #3. Daniel pasó capturas del panel Insights del post · permite ver qué siguió haciendo el creativo orgánicamente tras detener el gasto.
+
+### 7.1 · Métricas a 10 días vs cierre del anuncio (22-may)
+
+| Métrica | 22-may (cierre Ads) | 26-may (10 d total) | Δ orgánico residual |
+|---|---|---|---|
+| Reproducciones | 13.361 | **13.795** | +434 |
+| Alcance | 11.199 | **11.958** | +759 |
+| Likes | 98 | **124** | +26 |
+| Saves | 92 | **114** | +22 |
+| Comentarios | 1 | **5** | +4 |
+| Republicaciones | 13 (compartidos) | 3 (RT) · cifras no comparables · ver §7.2 | — |
+| Visitas perfil | 356 | **427** | +71 |
+| Seguidores nuevos | 63 | **64** | +1 |
+| Toques enlace externo | 2 | 2 | = |
+
+**Lectura:** tras cancelar la inversión Meta Ads el 22-may, el post siguió generando engagement orgánico durante 4 días más sin gasto adicional · +434 reproducciones, +759 alcance, +22 saves, +26 likes, +1 seguidor nuevo, +71 visitas perfil. Es un **eco orgánico significativo** que valida la calidad del creativo (no del objetivo de campaña).
+
+### 7.2 · Diferencia métrica «Compartidos» (anuncio) vs «Republicaciones» (orgánico)
+
+Meta Business Suite expone dos métricas distintas:
+
+- **«Veces compartido»** (Ads, 22-may) = 13 · clicks en el icono share del post.
+- **«Republicaciones»** (Insights orgánico, 26-may) = 3 · número de cuentas que efectivamente compartieron en su feed.
+
+No son comparables linealmente. La cifra a tomar como referencia es la orgánica final (3 republicaciones reales · cuentas que amplificaron).
+
+### 7.3 · Like rate por slide (4 slides A2 crema)
+
+| Slide | Likes individuales | Retención vs slide anterior |
+|---|---|---|
+| 01 «Lo que le dices a un niño él se lo cree.» | **71** | — |
+| 02 «Ten cuidado con las etiquetas.» | **38** | 53,5 % |
+| 03 «Tú construyes su confianza.» | **4** | 10,5 % |
+| 04 «Y un día, ese niño eres tú.» | **11** | 275 % · recuperación por giro narrativo |
+
+**Lectura editorial:** retención slide 1 → slide 2 del 53,5 % (vs Carrusel #3 con 28,6 %). La caída en slide 3 es fuerte (de 38 a 4) pero el slide 4 recupera (de 4 a 11) por el giro narrativo «y un día, ese niño eres tú». Patrón opuesto al Carrusel #3 que cae monotónicamente sin recuperación.
+
+### 7.4 · Audiencia orgánica residual a 10 días vs audiencia del anuncio
+
+| Dimensión | Anuncio 22-may (audiencia segmentada) | Orgánico residual 26-may (público amplio) |
+|---|---|---|
+| **Mujeres** | 82,5 % | 77,4 % |
+| **Hombres** | 16,4 % | 22,6 % |
+| **Edad 18-24** | 1,9 % | 3,9 % |
+| **Edad 25-34** | 10,9 % | 16,9 % |
+| **Edad 35-44** | 27,2 % | 39,4 % |
+| **Edad 45-54** | 26,9 % | 24,0 % |
+| **Edad 55-64** | 19,3 % | 10,7 % |
+| **Edad 65+** | 13,9 % | 5,1 % |
+| **España** | (no expuesto en el bloque Ads) | **95,6 %** |
+
+**Lectura:** el orgánico residual atrae **público más joven** (25-44 sube +18 pp combinados, 55+ baja -18 pp). Coherente · sin segmentación pagada, el orgánico se distribuye por afinidad con el contenido de la cuenta (audiencia natural de Daniel: 35-44 emocional). El sesgo España 95,6 % se mantiene porque la cuenta tiene baseline nacional muy fuerte.
+
+### 7.5 · Aprendizaje editorial añadido al §5
+
+El **creativo del niño funciona en orgánico puro post-pago** · valida la regla §5 punto 1 (objetivo correcto multiplica el resultado del mismo creativo). El próximo anuncio con este creativo + objetivo «Tráfico» + destino landing Cap 3 + audiencia M 28-52 debería capturar buena parte de esos 71 perfiles que llegaron orgánicamente sin haberlos pagado.
+
+---
+
+— Cola residual añadida el 26-may. Las cifras a fecha de cierre permanecen como referencia del cierre del anuncio (§2-§6 sin tocar). El doc queda vivo hasta que el próximo anuncio cierre su propia ventana.
