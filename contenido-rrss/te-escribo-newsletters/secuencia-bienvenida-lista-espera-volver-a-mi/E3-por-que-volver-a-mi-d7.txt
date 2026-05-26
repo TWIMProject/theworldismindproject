@@ -1,0 +1,156 @@
+EMAIL 3 — Secuencia bienvenida lista espera Volver a Mí
+
+═══════════════════════════════════
+ENVÍO
+═══════════════════════════════════
+
+Cuándo: D+7 (7 días después del E1, ~4 días después del E2)
+Trigger: paso 3 de la automation MailerLite
+
+
+═══════════════════════════════════
+ASUNTO
+═══════════════════════════════════
+
+Por qué Volver a Mí encaja con lo que llevas dentro
+
+
+═══════════════════════════════════
+PREVIEW TEXT
+═══════════════════════════════════
+
+Lo que el grupo hace que la sesión individual no, y por qué este encaja
+con tu forma de querer.
+
+
+═══════════════════════════════════
+REMITENTE
+═══════════════════════════════════
+
+Daniel Orozco · danielorozco@twimproject.com
+
+
+═══════════════════════════════════
+CUERPO  (plain text)
+═══════════════════════════════════
+
+Hola,
+
+Esta es la última carta de la secuencia de bienvenida. Después dejo que
+pase el verano y te escribo en septiembre con los detalles de la pre-venta.
+
+Lo que quiero contarte hoy es por qué este taller — y no consulta
+individual conmigo, o un curso grabado, o un manual de autoayuda — puede
+ser la mejor opción para lo que reconoces dentro de ti.
+
+Te lo cuento en cuatro frentes.
+
+—
+
+Primero — qué se hace ahí, sin spoilers.
+
+Volver a Mí trabaja sobre tres conceptos que llevan años en mi consulta:
+hambre de mirada, self hambriento y juez interno. No te los voy a desarrollar
+aquí porque parte del trabajo del taller es llegar a ellos despacio.
+Pero la estructura general es esta:
+
+Las dos primeras sesiones se dedican a nombrar la forma de querer que has
+estado operando — la observas con palabras nuevas, en grupo. Las cuatro
+del medio bajan al mecanismo: de dónde viene, cómo se monta, qué la
+sostiene viva. Las dos últimas hablan de qué hacer con la información que
+ya tienes — incluida la sesión 7, que se dedica específicamente a cómo
+hablar de esto con la persona que tienes al lado, si la tienes.
+
+No hay ejercicios de cuaderno. No hay homework agotador. Hay observación
+guiada, una hora y media por semana, en compañía de otras siete mujeres
+que están en el mismo punto que tú.
+
+—
+
+Segundo — por qué grupo cerrado, no sesión individual.
+
+Si tienes hambre de mirada, la sesión individual conmigo se va a convertir,
+sin que tú quieras, en otra relación donde estás midiendo cómo te mira el
+otro. Es inevitable. Y aunque eso también se trabaja en consulta, ocupa
+tiempo y energía que no puedes dedicar a otras cosas.
+
+En grupo el espejo se multiplica. No es solo Daniel mirándote — son siete
+mujeres más, y el espejo deja de ser personal. Lo que ves en las otras
+(la forma en que ellas se exigen, el momento en que ellas piden perdón sin
+haber hecho nada, la cara con la que ellas entran a casa los lunes) es
+información directa sobre ti misma. Sin mediación, sin interpretación mía
+forzada, sin que dependa de mi mirada.
+
+Eso es lo que el grupo cerrado hace que la sesión individual no puede
+hacer. Tiene que ser cerrado (mismas personas las ocho semanas) porque la
+confianza que se necesita para hablar en serio no se construye con grupos
+abiertos.
+
+—
+
+Tercero — por qué este taller, no un curso grabado.
+
+Porque hambre de mirada no se trabaja viendo vídeos. Se trabaja en
+relación. El vídeo es información — y la información, en este patrón,
+no soluciona casi nada. Tú probablemente ya sabes mucho de lo que te
+pasa por dentro. El problema no es de saber, es de hacer otro movimiento
+cuando aparece el viejo automático.
+
+Eso necesita presencia, testigos y un conductor clínico marcando ritmo.
+Es por eso que el taller se hace en vivo, no se graba, y tiene plaza
+limitada a ocho.
+
+—
+
+Cuarto — qué pasa si no encaja.
+
+Si tras la sesión individual previa conmigo (30 min) cualquiera de los
+dos decidimos que no es momento, devuelvo los 100 € de la reserva.
+Íntegro. Sin preguntas. Sin penalización. Si yo veo que necesitas otra
+cosa (consulta individual de mayor frecuencia, un trabajo más largo, otra
+modalidad), te lo digo en esa sesión. No me sirve tener a alguien en el
+grupo de ocho que no encaja — ni a ella, ni al resto.
+
+Si después decides no continuar tú, la reserva no se devuelve. Es la
+única regla del proceso de selección, y es para que la inscripción la
+hagas con la cabeza clara, no con la urgencia del momento.
+
+—
+
+No te pido nada hoy. Solo que sepas, antes de que llegue septiembre, qué
+es exactamente esto que vas a tener delante.
+
+Si entre hoy y septiembre cambia algo dentro de ti que te haga decidir
+que no quieres seguir en la lista de espera, te bajas con el enlace de
+abajo y no pasa nada. Si por el contrario te asienta más la idea, el
+email de pre-venta te llegará en la primera semana de septiembre.
+
+Mientras tanto, te van a llegar las cartas editoriales que voy escribiendo
+sobre estos temas. Las puedes leer o no — son secundarias respecto al
+asunto principal, que es Volver a Mí.
+
+Hasta septiembre.
+
+— Daniel
+Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · Valencia
+
+PD. Si te apetece adelantar una hora de exposición a cómo trabajo en
+directo, el domingo 7 de junio a las 19:00 (hora Madrid) hago un directo
+gratuito de una hora sobre la voz que te juzga — que es una pieza concreta
+dentro del mismo mapa que trabaja el taller. Plaza directa:
+twimproject.com/directo-la-voz-que-te-juzga/
+
+
+═══════════════════════════════════
+NOTAS PRODUCCIÓN
+═══════════════════════════════════
+
+- Email más largo de la secuencia · cierre persuasivo suave, no urgente.
+- 4 frentes estructurados (qué se hace · por qué grupo · por qué este
+  taller no un curso · qué pasa si no encaja) responden las 4 preguntas
+  más comunes en este tipo de prospect.
+- Sin presión final · «no te pido nada hoy».
+- PD funcional · puente al Directo del 7 jun para quien quiera adelantar
+  exposición. Si la suscripción llega después del 7 jun, mejor borrar
+  ese PD antes de programar la automation (o que la automation use
+  condicionales si se llega a hacer en versión avanzada).

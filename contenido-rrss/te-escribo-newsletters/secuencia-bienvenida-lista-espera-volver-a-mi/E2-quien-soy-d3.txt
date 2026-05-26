@@ -1,0 +1,123 @@
+EMAIL 2 — Secuencia bienvenida lista espera Volver a Mí
+
+═══════════════════════════════════
+ENVÍO
+═══════════════════════════════════
+
+Cuándo: D+3 (3 días después del E1)
+Trigger: paso 2 de la automation MailerLite
+
+
+═══════════════════════════════════
+ASUNTO
+═══════════════════════════════════
+
+Quién soy · y por qué hago esto
+
+
+═══════════════════════════════════
+PREVIEW TEXT
+═══════════════════════════════════
+
+Útil para que decidas, cuando llegue septiembre, si entras al grupo o no.
+
+
+═══════════════════════════════════
+REMITENTE
+═══════════════════════════════════
+
+Daniel Orozco · danielorozco@twimproject.com
+
+
+═══════════════════════════════════
+CUERPO  (plain text)
+═══════════════════════════════════
+
+Hola otra vez,
+
+Te escribo desde Valencia. Soy Daniel Orozco Abia, Psicólogo General
+Sanitario, colegiado CV11515. Llevo años en consulta privada con un perfil
+de pacientes bastante repetido: mujeres adultas (la mayoría entre 28 y 50)
+que llegan agotadas no del trabajo, sino de una forma de querer que les
+deja sin reservas.
+
+No suelen llegar con el síntoma de manual. No traen ansiedad nombrada, ni
+depresión clínica diagnosticada, ni una crisis abierta. Lo que traen es
+una sensación más difícil de describir: que están constantemente
+escaneando la cara del otro, que releen sus propios mensajes tres veces
+antes de enviarlos, que se sienten responsables del estado de ánimo de
+quien tienen al lado, y que en algún momento del día se preguntan,
+literalmente, «¿estoy bien yo, o estoy bien porque ellos están bien?».
+
+Cuando empecé a ver el patrón con claridad, le puse nombre operativo en
+consulta — hambre de mirada. No es una categoría clínica oficial. Es una
+descripción funcional, útil para mirarse, no para diagnosticarse.
+
+—
+
+¿Por qué este trabajo, y no otros?
+
+Porque vengo de la tradición psicoanalítica aplicada. Eso significa que
+no creo en arreglos rápidos del síntoma. Cuando uno trabaja con hambre
+de mirada, no se trata de «pensar en positivo», ni de hacer afirmaciones,
+ni de poner límites con frases hechas. Se trata de mirar despacio, durante
+semanas, cómo se montó esa forma de querer dentro — porque ahí está la
+información, no en el manual.
+
+Eso me ha llevado a posiciones que no me hacen popular en el sector:
+
+— No hago coaching motivacional. Me parece, en serio, que hace daño a la
+  gente con este patrón. Le pone una capa más de exigencia («tienes que
+  pensar en positivo») encima de lo que ya está roto debajo.
+
+— No vendo retos de 21 días para resolver vínculos de quince años.
+
+— No prometo transformación. Lo que sí puedo decir, con honestidad, es
+  que el trabajo serio cambia cosas concretas — observables, lentas,
+  duraderas.
+
+— No grabo las sesiones de los grupos. Ninguna. Por nadie. Es la única
+  manera de que se pueda decir, en serio, lo que hay que decir.
+
+—
+
+Como referencia editorial sigo a Massimo Recalcati (psicoanalista
+italiano), Anabel González (Madrid, psicotraumatóloga), Lori Gottlieb
+(EE.UU., terapeuta y autora). Lo que tienen en común estos tres es que su
+trabajo clínico es restringido — pocos pacientes, trato cuidado — y su
+obra editorial es expansiva — libros, ensayos, divulgación honesta. Esa
+es la forma del proyecto que estoy construyendo aquí.
+
+He publicado un libro técnico (Los engranajes de la mente, en Amazon).
+Estoy terminando un segundo libro divulgativo sobre dependencia emocional
+y self hambriento (Tu valor no está en su mirada). Mantengo un proyecto
+editorial vivo con cartas, podcast, insights, talleres. Y desde otoño de
+2026 abro los grupos cerrados.
+
+Volver a Mí es el primer grupo. No es el más fácil ni el más comercial —
+es el que más me importaba abrir primero.
+
+—
+
+En el próximo email te cuento por qué este taller en concreto, en lugar
+de seguir trabajando solo en consulta individual. Es la pregunta más
+honesta que se puede hacer alguien que se plantea apuntarse a algo en
+grupo: «¿qué me aporta el grupo que no me aporta una sesión a sesión con
+él?».
+
+Te lo cuento en cuatro o cinco días.
+
+— Daniel
+Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · Valencia
+
+
+═══════════════════════════════════
+NOTAS PRODUCCIÓN
+═══════════════════════════════════
+
+- Carga clínica + autoridad sobria. Aquí se construye confianza.
+- Tres referentes citados (Recalcati, González, Gottlieb) refuerzan
+  marco sin nombrar autores «motivacionales».
+- Tono honesto: «no me hace popular», «no es el más comercial» · pone
+  distancia con coaching sin atacar directamente · resta agresividad.
+- Cierre puente al E3 con pregunta operativa real («¿qué aporta el grupo?»).

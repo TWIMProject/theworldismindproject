@@ -1,0 +1,119 @@
+EMAIL 1 — Secuencia bienvenida lista espera Volver a Mí
+
+═══════════════════════════════════
+ENVÍO
+═══════════════════════════════════
+
+Cuándo: INMEDIATO al apuntarse (D+0, automation MailerLite)
+Trigger: nueva suscripción al grupo `Lead · Pre-venta Volver a Mí`
+Automation ID: 188015660948784728 (creada vía MCP 20-may-2026, pendiente
+diseñar y activar).
+
+
+═══════════════════════════════════
+ASUNTO
+═══════════════════════════════════
+
+Estás dentro · esto es lo que te he prometido (y lo que NO)
+
+
+═══════════════════════════════════
+PREVIEW TEXT
+═══════════════════════════════════
+
+Cero spam. Lo que sí: la pre-venta cuando llegue, y mientras tanto las
+cartas que escribo sobre el tema.
+
+
+═══════════════════════════════════
+REMITENTE
+═══════════════════════════════════
+
+Daniel Orozco · danielorozco@twimproject.com
+
+
+═══════════════════════════════════
+CUERPO  (plain text)
+═══════════════════════════════════
+
+Hola,
+
+Te has apuntado a la lista de espera de Volver a Mí. Lo primero que quiero
+que sepas es que tu correo está a salvo. No te voy a inundar la bandeja, no
+te voy a vender el taller con urgencias inventadas, y no te voy a mandar
+emails que te hagan sentir que tienes algo mal por dentro que se arregla
+pagando.
+
+Lo segundo es contarte qué es esto.
+
+—
+
+TWIM Project — The World Is Mind Project — es un proyecto editorial que
+llevo desde Valencia. Nace de mi consulta clínica como Psicólogo General
+Sanitario (Col. CV11515) y de los años que he pasado escuchando lo mismo
+en personas que aparentemente no tienen nada en común: una sensación
+sostenida de que «no es suficiente», de tener que ganarse la mirada del
+otro todos los días, de mirar la cara de quien tienen al lado para saber
+si están bien.
+
+El proyecto reúne consulta privada, libros, cartas editoriales, podcast,
+talleres y, ahora, grupos cerrados. La consulta y los grupos son el sitio
+donde se trabaja en serio. El resto del proyecto es la voz pública del
+mismo trabajo.
+
+Volver a Mí es el primer grupo cerrado del proyecto. Empieza el miércoles
+30 de septiembre de 2026 y termina el 18 de noviembre. Ocho mujeres, ocho
+sesiones, online los miércoles a las 20:00 hora de Madrid. Inscripción
+filtrada con reserva de 100 € + sesión individual conmigo antes de entrar.
+
+—
+
+Lo que vas a recibir en estos próximos meses, ordenado por importancia:
+
+1. En septiembre — un email cuando se abra la pre-venta del taller, con
+   los detalles operativos completos y prioridad sobre el público general.
+
+2. Mientras tanto, las cartas editoriales que voy escribiendo. Suelen
+   tratar sobre dependencia emocional, hambre de mirada, voz interna,
+   autoexigencia y cansancio psíquico. Cuando hay algo que merezca tu
+   tiempo, te llegan. Cuando no, no.
+
+3. De forma puntual, avisos de piezas relevantes (un directo gratuito,
+   un capítulo de podcast, un PDF). Nunca como ráfaga, nunca como spam.
+
+Lo que NO vas a recibir:
+
+— Emails todos los días.
+— Promesas de transformación en plazos cortos.
+— Frases motivacionales tipo «tú puedes».
+— Productos secundarios pegados al taller que no estén alineados con el
+  trabajo clínico real.
+— Presión de venta cuando se abra la pre-venta. Si no te encaja, no te
+  encaja, y se acaba ahí.
+
+—
+
+En el próximo email te cuento quién soy y por qué este trabajo, en lugar
+de otros que están de moda ahora. No es relleno biográfico — es información
+útil para que decidas, cuando llegue septiembre, si entras o no al grupo.
+
+Llega en unos tres días.
+
+Hasta entonces.
+
+— Daniel
+Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · Valencia
+
+PD. Si esto te ha llegado pero no recuerdas haberte apuntado, baja
+sin culpa y sin pestañear con el enlace de abajo. No pasa nada.
+
+
+═══════════════════════════════════
+NOTAS PRODUCCIÓN
+═══════════════════════════════════
+
+- Carga emocional baja en este primer email. Es contención + expectativa
+  + diferenciación anti-spam. No vender taller en el E1.
+- Mencionar TWIM Project como proyecto editorial, no como marca de
+  «empresa». Coherente con doc CEO §2 (Daniel-clínico no Daniel-influencer).
+- Cierre puente al E2 (quién es Daniel) en tono operativo, no comercial.
