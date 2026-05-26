@@ -71,6 +71,46 @@ Pendiente captura del panel Audiencia de Instagram Insights al 26-may. Compararl
 
 Hipótesis: el sesgo «mujer 35-44 emocional» se mantiene a 7 días · es señal acumulada de la cuenta, no del packaging concreto (ya documentado en plan §6 del 20-may).
 
+### 1.6 · Conversión real MailerLite (auditado vía MCP el 26-may 18:30 CEST)
+
+> Datos cerrados a la ventana 19-may 17:07 → 26-may 18:13 (7 días reales desde publicación IG). Capturados por Claude vía MCP MailerLite, no por Daniel. Esta es la única capa de conversión real verificable hoy · IG/LinkedIn/X no exponen métricas vía MCP en este entorno.
+
+#### Altas únicas en ventana (9 suscriptores)
+
+| Grupo destino | Altas en ventana | Suscriptores · fecha alta |
+|---|---|---|
+| Lead · Directo · La voz que te juzga (7 jun) | **3** | `ospean@hotmail.com` (21-may 21:53, source webform) · `sam.panesy@gmail.com` (24-may 04:17, source api) · `rsaiz@redyley.com` Remedios (25-may 14:13, source api) |
+| Lead · Libro Engranajes · Cap 3 gratis | **2** | `jloria7310@gmail.com` Javier (25-may 14:47) · `nataliadiazangeles1427@gmail.com` (25-may 15:30) |
+| Reto 7 Dias - Inscritas | **1** | `idopastor@yahoo.es` Idoia (24-may 07:35) |
+| Web - Newsletter Home | **3** | `marichecal@gmail.com` MCheca (20-may 21:03) · `rocimart@pm.me` (21-may 10:34) · `amartinezsj7@yahoo.es` Ana (21-may 14:23) |
+| Lista General TWIM | **0** | — (última alta del grupo fue el 13-may, fuera de ventana) |
+
+#### Atribución probable por destino
+
+- **Lead Directo (3 altas)** · todas post-Carrusel #3. La del 21-may webform es la única con `source: webform` (rastro directo desde formulario web) · probable atribución al CTA Directo en insights (PR #240, 25-may) o a la propia landing del Directo. Las 2 con `source: api` (24 y 25-may) llegan vía automation/MailerLite API.
+- **Lead Cap 3 (2 altas)** · este es el lead magnet apuntado por el hilo X del 20-may «5 frases del juez interno» con Boost (203K impresiones). Las altas son del 25-may (5 días post-Boost). Atribución probable mixta: hilo X tardío + tráfico SEO desde insights con CTA al Cap 3.
+- **Reto 7 días (1 alta)** · `idopastor` el 24-may. Lead magnet del reto vive en home + cross-sell de landings SEO; atribución probable al funnel SEO orgánico, no directamente al Carrusel #3.
+- **Web Newsletter (3 altas)** · 20-21 may. Inmediatamente post-Carrusel #3 (publicado 19-may 17:07). Atribución probable al pico de tráfico generado por el Carrusel #3 + perfil IG → click bio → newsletter.
+
+#### Hallazgo que CORRIGE la auditoría del 21-may
+
+El doc en §1.4 marcaba **«0 conversiones al grupo Lead Cap 3»** del hilo X 20-may con 203K impresiones (auditado 21-may, 1 día post-hilo). **A 7 días (26-may), hay 2 altas en Lead Cap 3.** No es 0 absoluto · es conversión tardía mínima.
+
+- Tasa de conversión a 7 días · 2 / 203.000 = **0,001 %** (1 cada 100.000 impresiones).
+- Esto sigue siendo prácticamente cero efectivo y **confirma el diagnóstico** ya persistido en `x-twitter-estrategia-canal.md` §4.1: el Boost X con link en T5 no convierte. Solo refina la cifra de «0» a «~0,001 %».
+- **No cambia la decisión operativa** ya tomada el 21-may (link en T1/T2 en hilos con objetivo de conversión).
+
+#### Conversión orgánica total atribuible al Carrusel #3 a 7 días
+
+- **Atribución directa fuerte (forms post-IG):** Lead Directo (3) + Cap 3 (2) + Newsletter (3) = **8 altas en 7 días**.
+- Si se aísla solo lo que un Carrusel IG puede generar de modo natural (Newsletter home vía click bio + Lead Directo): **6 altas**.
+- Si se compara contra el Carrusel #2 (carta enviada el 19-may a 28 destinatarios con 19 interacciones · base distinta, no comparable directo): pendiente cruzar con métricas Carta #2 cuando se documenten.
+
+#### Lo que NO se puede concluir desde MailerLite
+
+- Cuántas de estas altas vinieron exactamente del Carrusel #3 vs otros canales (X, SEO, directo). MailerLite no guarda UTM source por suscriptor en este plan.
+- A partir del 25-may (PR #242 + #243) sí hay UTM tracking en todos los forms → las próximas altas SÍ tendrán atribución por canal en GA4. La ventana de este Carrusel #3 queda con atribución mixta cualitativa.
+
 ---
 
 ## 2 · Comparativa contra benchmark declarado (`instagram-sistema-visual-marca.md` §13.1)
