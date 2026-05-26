@@ -110,6 +110,8 @@ La conclusión no es «el creativo es malo». Es «el creativo bueno se usó con
 5. **Verificar ANTES de lanzar** que el objetivo elegido permite editar destino y audiencia a mitad de campaña · «Combinación optimizada» no lo permite.
 6. **Compuerta del CEO doc §7 Decisión 2** · nada de Meta Ads hasta que el orgánico demuestre que el registro convierte. Este anuncio refuerza esa regla · el embudo de captación por email debe estar afinado antes de pagar tráfico.
 
+   > **Actualización 26-may 2026** · La compuerta se mantiene como regla general (no Meta Ads sin orgánico que convierta). Se abre **excepción acotada para Ads de calentamiento de lista** cuando se cumplen los 6 criterios del §1.2 del doc `setup-meta-ads-carrusel-4-hambre-de-mirada.md` (embudo verificado · creativo rompe expectativa · destino coherente con creativo · presupuesto bajo cap · KPI de captación no de venta · fecha de revisión binaria). Esta excepción **NO autoriza** Ads de venta antes de la pre-venta dura del **1 sep 2026**.
+
 ---
 
 ## 6 · Patrón recurrente detectado (cruce con el hilo X del 20-may)

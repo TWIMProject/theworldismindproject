@@ -161,4 +161,41 @@ Todas son citables y obligatorias. Si una sesión nueva contradice una, Daniel s
 
 ---
 
-**Última actualización:** 26 may 2026 · sesión `claude/social-media-link-naming-tcIUA`.
+## 11 · Actualizaciones verificadas posteriores
+
+### 26 may 2026 · sesión noche `claude/twimproject-repo-review-IoYha`
+
+Información nueva verificada con cita verbatim · se añade SIN modificar las secciones previas.
+
+**Capacidad de delegar la decisión a Claude cuando confía**
+
+- «Qué es lo mejor?» (26 may 22:00 · respondiendo a pregunta sobre compuerta Meta Ads)
+- «Auto audítate y haz lo que mejor vaya siempre. Adelante» (26 may 22:30 · al cierre del briefing Meta Ads)
+
+Implicación operativa · cuando Daniel delega así, ejecutar con criterio + autoauditoría exhaustiva al cierre. No pedir confirmaciones intermedias triviales.
+
+**Exigencia editorial visual sostenida sin enfadarse al iterar**
+
+- «La veo fea. Se puede mejorar eh!!! Esta muy floja la edición del slide 1» (26 may 22:15 sobre v1)
+- «Se ve mal aún. Superpuestos abajo de palabras» (26 may 22:25 sobre v2)
+- Aceptó v4 implícitamente al pedir crear briefing «después»
+
+Implicación operativa · cuando rechaza una pieza visual, NO defenderla · iterar inmediatamente con cambio sustancial (no cosmético). Validar con preview antes de commit cuando el feedback es estético.
+
+**Convención implícita · capturas iPhone con UUID**
+
+Cuando Daniel sube archivos al repo desde iPhone, llegan con nombre tipo `04B7BB0D-FB23-4C0E-ABCC-26A7B04C7966.png` (UUID iOS). Renombrar siempre a un nombre semántico antes de procesar (en este caso · `foto-hook.png`).
+
+**Acepta levantar reglas inviolables con criterio acotado**
+
+Daniel aceptó abrir excepción a la compuerta «no Meta Ads sin orgánico que convierta» del doc del niño · para Ads de calentamiento de lista con 6 criterios documentados. La compuerta no se borra, se evoluciona con persistencia inline en el doc origen + en el doc nuevo.
+
+Implicación operativa · cuando Daniel pide algo que choca con una regla inviolable, **señalárselo con cita textual del repo** + ofrecer alternativa coherente. Si insiste, registrar la evolución de la regla en TODOS los docs donde aplique, sin borrar la regla original.
+
+**Pidió que entregables operativos PDF se le pasen también por chat**
+
+«Pásamelo por aquí en PDF» (26 may 22:30 sobre briefing Meta Ads). Implicación · cuando se genera un briefing operativo, enviar PDF por `SendUserFile` además de tener el HTML/MD en repo. La regla §5 inviolable de no versionar PDFs aplica a calendarios/dashboards visuales · briefings operativos PDF SÍ se versionan (consistencia con otros PDFs ya en `documentos-internos/`).
+
+---
+
+**Última actualización:** 26 may 2026 noche · sesión `claude/twimproject-repo-review-IoYha`.

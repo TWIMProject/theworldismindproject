@@ -95,8 +95,8 @@ def footer(d, idx, total=8):
 c = Image.new('RGB', (W, H), BG_CREAM)
 d = ImageDraw.Draw(c)
 
-# Zona de foto: 1080×700 desde y=0 a y=700
-FOTO_BOX = (0, 0, W, 720)
+# Zona de foto · 1080×900 desde y=0 a y=900 (~66 %, cinemática limpia)
+FOTO_H = 900
 foto_paths = [
     os.path.join(OUT, 'foto-hook.jpg'),
     os.path.join(OUT, 'foto-hook.jpeg'),
@@ -108,7 +108,7 @@ foto_path = next((p for p in foto_paths if os.path.exists(p)), None)
 if foto_path:
     foto = Image.open(foto_path).convert('RGB')
     # Recorte tipo cover · mantener proporción y centrar
-    target_w, target_h = W, 720
+    target_w, target_h = W, FOTO_H
     src_ratio = foto.width / foto.height
     tgt_ratio = target_w / target_h
     if src_ratio > tgt_ratio:
@@ -121,39 +121,50 @@ if foto_path:
     left = (new_w - target_w) // 2
     top = (new_h - target_h) // 2
     foto = foto.crop((left, top, left + target_w, top + target_h))
-    c.paste(foto, (0, 0))
+
+    # Degradado de salida · últimos 110 px de la foto se difuminan en crema
+    foto_rgba = foto.convert('RGBA')
+    fade_h = 110
+    fade = Image.new('RGBA', (W, fade_h), BG_CREAM + (0,))
+    fade_draw = ImageDraw.Draw(fade)
+    for y in range(fade_h):
+        alpha = int(255 * (y / fade_h) ** 1.8)  # curva suave (gamma)
+        fade_draw.line([(0, y), (W, y)], fill=BG_CREAM + (alpha,))
+    foto_rgba.paste(fade, (0, FOTO_H - fade_h), fade)
+    c.paste(foto_rgba.convert('RGB'), (0, 0))
     print(f'OK · foto IA cargada desde {os.path.basename(foto_path)}')
 else:
-    # Placeholder: gradiente cálido apagado
-    placeholder = Image.new('RGB', (W, 720), PLACEHOLDER)
+    # Placeholder: tono cálido apagado
+    placeholder = Image.new('RGB', (W, FOTO_H), PLACEHOLDER)
     pdraw = ImageDraw.Draw(placeholder)
-    pdraw.text((W // 2 - 220, 320), '[ foto IA · slide 1 ]',
+    pdraw.text((W // 2 - 220, FOTO_H // 2 - 20), '[ foto IA · slide 1 ]',
                fill=TEXT_DARK, font=font('BarlowCondensed-Medium.ttf', 32))
-    pdraw.text((W // 2 - 280, 365), 'ver README.md para prompt DALL-E',
+    pdraw.text((W // 2 - 280, FOTO_H // 2 + 25), 'ver README.md para prompt DALL-E',
                fill=KICKER_GREEN, font=font('BarlowCondensed-Regular.ttf', 22))
     c.paste(placeholder, (0, 0))
     print('OK · placeholder (foto IA pendiente)')
 
-# Banda separadora sutil entre foto y zona tipográfica
-d.rectangle([(0, 720), (W, 723)], fill=BEIGE)
+# Layout texto · zona crema 900→1350 (450 px) sin solapes
+# y=945  kicker «3 ESCENAS DE»            32 px
+# y=1005 título «Hambre de mirada.»      105 px (1 línea)
+# y=1170 aforismo italic                  30 px
+# y=1245 paginación                       22 px
+# y=1290 handle                           19 px
 
-# Kicker sobre crema
-centered(d, 'TWIM PROJECT · CARRUSEL', 770,
-         font('BarlowCondensed-Medium.ttf', 26), KICKER_GREEN, ls=4)
-hline(d, 815, BEIGE)
+centered(d, '3 ESCENAS DE', 945,
+         font('BarlowCondensed-Medium.ttf', 32), BEIGE, ls=8)
 
-# Título principal · 3 líneas en Instrument Serif
-centered(d, '3 escenas', 860, font('InstrumentSerif-Regular.ttf', 110), TEXT_DARK)
-centered(d, 'de hambre', 980, font('InstrumentSerif-Regular.ttf', 110), TEXT_DARK)
-centered(d, 'de mirada.', 1100, font('InstrumentSerif-Regular.ttf', 110), TEXT_DARK)
+centered(d, 'Hambre de mirada.', 1005,
+         font('InstrumentSerif-Regular.ttf', 105), TEXT_DARK)
 
-# Cierre aforístico italic beige
-centered(d, 'No las habrás nombrado · pero pasan a diario.', 1245,
-         font('InstrumentSerif-Italic.ttf', 36), BEIGE)
+centered(d, 'No las habrás nombrado · pero pasan a diario.', 1170,
+         font('InstrumentSerif-Italic.ttf', 30), BEIGE)
 
-# Footer minimal (sin paginación, slide 1 es portada)
-centered(d, '01 / 08  ·  DESLIZA', 1295,
+centered(d, '01 / 08  ·  DESLIZA', 1245,
          font('BarlowCondensed-Medium.ttf', 22), KICKER_GREEN, ls=3)
+centered(d, '@daniorozcopsicologo · twimproject.com', 1290,
+         font('BarlowCondensed-Regular.ttf', 19), TEXT_DARK, ls=2)
+
 c.save(f'{OUT}/slide-1-hook.png', optimize=True)
 print('OK · slide 1')
 
