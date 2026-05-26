@@ -1,10 +1,10 @@
-# Métricas Carrusel #4 «Hambre de mirada» · XX may 2026
+# Métricas Carrusel #4 «Hambre de mirada» · 27 may 2026
 
-> **Esqueleto creado el 26 may 2026** (anticipando auditoría a 7 días desde la publicación). Función · pre-cargar la estructura para que la lectura a 7 días reales se haga sobre la misma plantilla que el doc del Carrusel #3, sin reinventar metodología.
+> **Esqueleto creado el 26 may 2026** · publicación confirmada por Daniel para **mié 27 may 2026 · 19:00 hora Madrid** (programado en Meta Business Suite el 26 may noche). Función · pre-cargar la estructura para que la lectura a 7 días reales se haga sobre la misma plantilla que el doc del Carrusel #3, sin reinventar metodología.
 >
-> **Cambios estructurales respecto al #2 y #3:** este es el primer carrusel del sistema visual **A2 crema + foto IA** (decisión Daniel 26 may 22:00 tras detectar 94,3 % seguidores en el #3 · hipótesis B dominante · cuenta en distribución cerrada). Es también el primero acompañado de **Meta Ads de calentamiento de lista** (50 € / 5 días / objetivo Tráfico / destino landing taller Volver a Mí · ver `setup-meta-ads-carrusel-4-hambre-de-mirada.md`).
+> **Auditoría a 7 días reales:** mar 3 jun 2026 ~19:00 hora Madrid (justo después de la salida automática de la promo del Directo a las 19:00 ese mismo día).
 >
-> Renombrar este archivo el día de publicación con la fecha real (`metricas-carrusel-4-hambre-de-mirada-DD-may-2026.md`).
+> **Cambios estructurales respecto al #2 y #3:** este es el primer carrusel del sistema visual **A2 crema + foto IA** (decisión Daniel 26 may 22:00 tras detectar 94,3 % seguidores en el #3 · hipótesis B dominante · cuenta en distribución cerrada). El acompañamiento Meta Ads (50 € / 5 días / objetivo Tráfico · ver `setup-meta-ads-carrusel-4-hambre-de-mirada.md`) queda **pendiente de OK explícito de Daniel** tras evaluar baseline orgánica de las primeras 12-24 h.
 
 ---
 
