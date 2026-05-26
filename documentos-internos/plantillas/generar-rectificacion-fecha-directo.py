@@ -80,40 +80,40 @@ W, H = 1080, 1080
 c, d = base(W, H)
 
 # Header pequeño · etiqueta «RECTIFICACIÓN»
-centered(d, 'RECTIFICACIÓN', 115,
+centered(d, 'RECTIFICACIÓN', 105,
          font('BarlowCondensed-Medium.ttf', 30), RED_SOFT, W, ls=6)
-hline(d, 170, BEIGE, W)
+hline(d, 160, BEIGE, W)
 
 # Bloque tachado: «8 JUNIO» grande, tachado en rojo
-f_strike = font('InstrumentSerif-Regular.ttf', 150)
+f_strike = font('InstrumentSerif-Regular.ttf', 140)
 strike_txt = '8 JUNIO'
 sw = text_width(d, strike_txt, f_strike)
 sx = (W - sw) // 2
-draw_strike_text(d, strike_txt, sx, 240, f_strike,
+draw_strike_text(d, strike_txt, sx, 215, f_strike,
                  text_color=BEIGE, strike_color=RED, strike_w=10)
 
 # Subtexto pequeño «era»
-centered(d, 'era', 425,
+centered(d, 'era', 385,
          font('InstrumentSerif-Italic.ttf', 38), CREAM, W)
 
 # Bloque correcto · MUCHO más grande, en blanco
-centered(d, 'DOMINGO', 490,
-         font('BarlowCondensed-Medium.ttf', 60), CREAM, W, ls=8)
-centered(d, '7 JUNIO', 560,
-         font('InstrumentSerif-Regular.ttf', 200), WHITE, W)
+centered(d, 'DOMINGO', 450,
+         font('BarlowCondensed-Medium.ttf', 58), CREAM, W, ls=8)
+centered(d, '7 JUNIO', 520,
+         font('InstrumentSerif-Regular.ttf', 180), WHITE, W)
 
-hline(d, 800, BEIGE, W, half=80)
+hline(d, 745, BEIGE, W, half=80)
 
 # Datos del directo
-centered(d, 'LA VOZ QUE TE JUZGA',  840,
+centered(d, 'LA VOZ QUE TE JUZGA',  785,
          font('BarlowCondensed-Medium.ttf', 34), BEIGE, W, ls=5)
-centered(d, 'Directo gratuito · 19:00 hora Madrid',  885,
+centered(d, 'Directo gratuito · 19:00 hora Madrid',  830,
          font('InstrumentSerif-Italic.ttf', 32), CREAM, W)
 
 # Footer URL
-centered(d, 'twimproject.com/directo-la-voz-que-te-juzga/', 985,
+centered(d, 'twimproject.com/directo-la-voz-que-te-juzga/', 940,
          font('BarlowCondensed-Regular.ttf', 26), BEIGE, W, ls=2)
-centered(d, '@daniorozcopsicologo', 1025,
+centered(d, '@daniorozcopsicologo', 985,
          font('BarlowCondensed-Regular.ttf', 22), WHITE, W, ls=2)
 
 c.save(f'{OUT}/rectificacion-feed-1080.png', optimize=True)
