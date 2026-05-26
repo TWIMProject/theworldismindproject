@@ -804,7 +804,14 @@
                 successDiv.style.display = 'block';
                 // GA4 conversión
                 if (typeof gtag === 'function') {
-                    gtag('event', 'sign_up', { method: 'reto-7-dias', source: formId });
+                    const _p = new URLSearchParams(window.location.search);
+                    gtag('event', 'sign_up', {
+                        method: 'reto-7-dias',
+                        source: formId,
+                        utm_source: _p.get('utm_source') || 'direct',
+                        utm_medium: _p.get('utm_medium') || 'none',
+                        utm_campaign: _p.get('utm_campaign') || 'none'
+                    });
                 }
                 // Meta Pixel conversión (solo si está activado en el <head>)
                 if (typeof fbq === 'function') {

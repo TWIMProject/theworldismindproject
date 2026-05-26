@@ -24,6 +24,14 @@
   var fired = false;
   var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
+  // UTMs del URL una vez (atribución por canal en GA4 + Meta Pixel)
+  var _p = new URLSearchParams(window.location.search);
+  var utm = {
+    utm_source: _p.get('utm_source') || 'direct',
+    utm_medium: _p.get('utm_medium') || 'none',
+    utm_campaign: _p.get('utm_campaign') || 'none'
+  };
+
   function arm() {
     if (armed) return;
     armed = true;
@@ -140,8 +148,8 @@
         if (!res.ok) throw new Error('req_failed');
         form.style.display = 'none';
         ok.style.display = 'block';
-        if (window.gtag) gtag('event', 'newsletter_signup', { source: 'exit_intent', reason: reason, landing: location.pathname });
-        if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'Te escribo newsletter', source: 'exit_intent', reason: reason });
+        if (window.gtag) gtag('event', 'newsletter_signup', { source: 'exit_intent', reason: reason, landing: location.pathname, utm_source: utm.utm_source, utm_medium: utm.utm_medium, utm_campaign: utm.utm_campaign });
+        if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'Te escribo newsletter', source: 'exit_intent', reason: reason, utm_source: utm.utm_source, utm_medium: utm.utm_medium, utm_campaign: utm.utm_campaign });
       } catch (ex) {
         btn.disabled = false;
         btn.textContent = label;
@@ -150,7 +158,7 @@
       }
     });
 
-    if (window.gtag) gtag('event', 'newsletter_modal_shown', { source: 'exit_intent', reason: reason, landing: location.pathname });
+    if (window.gtag) gtag('event', 'newsletter_modal_shown', { source: 'exit_intent', reason: reason, landing: location.pathname, utm_source: utm.utm_source, utm_medium: utm.utm_medium, utm_campaign: utm.utm_campaign });
   }
 
   if (document.readyState === 'loading') {
