@@ -6,9 +6,11 @@ sobre verde oscuro. Originalmente era el E5; tras el reordenamiento del
 11 may 2026 (ver §14 de youtube-podcast-estrategia-canal.md) pasa a E6.
 
 Outputs (todos en `contenido-rrss/podcast-e6-autoexigencia/`):
-- cover-youtube.png   1280x720   horizontal (texto izq + foto der)
+- cover-youtube.png   1280x720   horizontal (texto izq + foto der) · thumbnail YouTube
 - cover-spotify.png   1400x1400  cuadrado (texto izq + foto der vertical)
 - story-vertical.png  1080x1920  vertical (foto arriba + texto abajo)
+- video-fondo.png     1920x1080  full HD horizontal · pantalla estática para subir
+                                  el audio a YouTube como vídeo (16 min)
 """
 
 from pathlib import Path
@@ -429,6 +431,51 @@ def generar_story(foto_orig, logo_rgb):
     print(f"OK story-vertical.png   -> {salida.relative_to(REPO)} ({W}x{H})")
 
 
+# --- 4. Video fondo Full HD 1920x1080 (pantalla estática YouTube) -----------
+
+def generar_video_fondo(foto_orig, logo_rgb):
+    """Pantalla estática 1920x1080 que se sube como vídeo a YouTube con el
+    audio del episodio encima. Misma composición que cover-youtube pero
+    escalada a Full HD, con más respiración tipográfica y zona inferior
+    libre para subtítulos automáticos."""
+    W, H = 1920, 1080
+    img = lienzo(W, H)
+
+    # Foto a la derecha ocupando ~55% con fade izq más amplio (proporcional)
+    foto_w = int(W * 0.55)
+    foto = foto_con_fade_izq(foto_orig, H, foto_w, fade_px=330)
+    img.paste(foto, (W - foto_w, 0), foto)
+
+    # Bloque editorial izquierda · más grande que cover-youtube por más espacio
+    x_izq = 110
+    ancho_disp = int(W * 0.45) - 110
+    f_kicker = sans("Medium", 32)
+    f_titulo = serif(120, weight=700)
+    f_sub = serif(42, weight=400, italic=True)
+    # Centramos un pelín por encima del centro vertical para dejar respiración
+    # inferior (zona donde YouTube puede dibujar subtítulos automáticos).
+    bottom = render_bloque_editorial(
+        img, CONTENIDO_EPISODIO, x_izq, ancho_disp, int(H * 0.46),
+        f_kicker=f_kicker, kicker_track=5,
+        f_titulo=f_titulo, gap_titulo=20,
+        f_subtitulo=f_sub, separador_w=100,
+        color_titulo=CREMA, color_meta=BEIGE)
+
+    # Pie inferior izquierda
+    d = ImageDraw.Draw(img)
+    f_pie = sans("Bold", 24)
+    dibujar_tracked(d, CONTENIDO_EPISODIO["pie"], f_pie, BEIGE,
+                     x_izq, H - 70, 4)
+
+    # Logo MIND WORLD esquina inf derecha
+    logo = logo_blanco_translucido(logo_rgb, 180)
+    img.paste(logo, (W - 180 - 60, H - logo.height - 50), logo)
+
+    salida = DESTINO / "video-fondo.png"
+    img.save(salida, "PNG", optimize=True)
+    print(f"OK video-fondo.png      -> {salida.relative_to(REPO)} ({W}x{H})")
+
+
 # --- Main --------------------------------------------------------------------
 
 def main():
@@ -440,6 +487,7 @@ def main():
     generar_youtube(foto, logo)
     generar_spotify(foto, logo)
     generar_story(foto, logo)
+    generar_video_fondo(foto, logo)
     print("Listo.")
 
 

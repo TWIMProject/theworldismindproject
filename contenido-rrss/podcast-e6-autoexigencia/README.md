@@ -21,7 +21,7 @@
 | `cover-youtube.png` | Portada YouTube 1280×720 (thumbnail) — sistema visual heredado de NotebookLM (E1-E4): foto autor + Playfair Display serif | ✅ regenerado 6-may-2026 vía `generar-portadas.py` |
 | `cover-spotify.png` | Portada Spotify 1400×1400 — mismo sistema visual que cover-youtube | ✅ regenerado 6-may-2026 vía `generar-portadas.py` |
 | `story-vertical.png` | Story Instagram 1080×1920 — foto arriba + bloque editorial centrado abajo | ✅ generado 6-may-2026 vía `generar-portadas.py` |
-| `video-fondo.png` | Pantalla estática 1920×1080 para reproducción YouTube (zona inferior libre para subtítulos). **Pendiente migrar al nuevo sistema visual** (foto + serif) | ⚠️ generado 6-may-2026 con sistema visual antiguo (sillones ilustrados) |
+| `video-fondo.png` | Pantalla estática 1920×1080 Full HD para subir el audio a YouTube como vídeo (16 min). Misma composición que cover-youtube escalada · respiración inferior para subtítulos automáticos | ✅ regenerado 27-may-2026 con el sistema visual coherente (foto + Playfair serif) |
 | `generar-portadas.py` | Script Pillow que recompone las portadas a partir de `daniel-orozco-sillon.jpg` raíz + recorte logo MIND WORLD del cover canal. Reusable en E6+ cambiando `CONTENIDO_EPISODIO`. | ✅ reescrito 6-may-2026 con nuevo sistema visual |
 | `audio-bruto.wav` | Grabación bruta del episodio | ✅ grabado 6-may-2026 |
 | `audio-final.mp3` | Audio final con intro/outro y normalización · 16 min 30 s | ✅ editado 6-may-2026 |
