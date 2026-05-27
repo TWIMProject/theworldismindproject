@@ -1,4 +1,4 @@
-# Caption / Descripción Spotify · TWIM Podcast E5
+# Caption / Descripción Spotify · TWIM Podcast E6
 
 > Plantilla base: `documentos-internos/plantillas/podcast/descripcion-youtube-spotify.md` (versión corta).
 > Spotify recorta visualmente sobre los 200 caracteres iniciales en el feed — escribir lo importante al principio.
@@ -8,7 +8,7 @@
 ## Título del episodio
 
 ```
-E5 · El mandato de no parar — autoexigencia y culpa de descansar
+E6 · El mandato de no parar — autoexigencia y culpa de descansar
 ```
 
 ---

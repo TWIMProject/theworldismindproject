@@ -373,7 +373,7 @@ def generar_story(foto_orig, logo_rgb):
     ancho_disp = W - 180
     y_centro_bloque = int(H * 0.78)
     f_kicker = sans("Medium", 30)
-    f_titulo = serif(88, weight=700)  # reducido de 115 a 88 para que «TU VALOR NO ESTÁ» quepa en 1080
+    f_titulo = serif(88, weight=700)  # tamaño calibrado para que titulares de hasta 16 caracteres por línea quepan en 1080
     f_sub = serif(34, weight=400, italic=True)
 
     # Para story: render centrado horizontalmente (no alineado izq como otros)

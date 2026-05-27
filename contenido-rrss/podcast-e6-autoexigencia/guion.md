@@ -1,8 +1,8 @@
-# Guion · TWIM Podcast E5
+# Guion · TWIM Podcast E6
 
 > **Pilar:** Autoexigencia
 > **Título trabajo:** El mandato de no parar — autoexigencia y culpa de descansar
-> **Ventana publicación:** 12-18 mayo 2026 (idealmente martes 12 mayo, antes de la Carta #2 del 19 mayo)
+> **Ventana publicación:** 27 may 2026 (re-programado · ver §14 `youtube-podcast-estrategia-canal.md` · reordenamiento del 11 may de E5 → E6)
 > **Modo grabación:** T1 humana (Daniel lee guion, no aparece en cámara)
 > **Duración objetivo (guion):** 18-22 min hablados ≈ 2.700-3.300 palabras
 > **Duración real tras edición:** 16 min 30 s · audio editado 6-may-2026 (Daniel ha dado OK al máster)
@@ -12,7 +12,7 @@
 
 ## 0 · Intro (variante T1 humana, plantilla `intro-outro.md`)
 
-> **Duración total:** ~33-37 segundos (jingle 2-3 s + ~54 palabras a 110-120 wpm ≈ 27-30 s + pausas explícitas ≈ 3,5-4 s). Tono descriptivo, sin entusiasmo. Hablar despacio, con pausas reales entre bloques. La intro de E5 sienta patrón para todos los episodios siguientes — no improvisar variaciones que no estén aquí.
+> **Duración total:** ~33-37 segundos (jingle 2-3 s + ~54 palabras a 110-120 wpm ≈ 27-30 s + pausas explícitas ≈ 3,5-4 s). Tono descriptivo, sin entusiasmo. Hablar despacio, con pausas reales entre bloques. La intro de E6 sienta patrón para todos los episodios siguientes — no improvisar variaciones que no estén aquí.
 
 ### Guion (literal)
 
@@ -352,7 +352,7 @@ Si te equivocas, no rebobines. Re-graba la frase entera y luego se monta en edic
 - Edición (limpieza, intro, outro, normalización): ≤20 min.
 - **Total ventana de producción:** 75-90 min.
 
-Si superas 2h producción, algo está fallando — revisar la hoja de cronometraje (`documentos-internos/cronometraje-episodio-piloto-e5.md`).
+Si superas 2h producción, algo está fallando. (La hoja de cronometraje `documentos-internos/cronometraje-episodio-piloto-e5.md` corresponde al otro episodio piloto «Tu valor no está en su mirada» · no aplica directamente a E6, pero su plantilla sí es referencia útil.)
 
 ---
 

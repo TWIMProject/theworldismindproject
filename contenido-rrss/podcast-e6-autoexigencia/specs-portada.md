@@ -1,4 +1,4 @@
-# Specs portada · TWIM Podcast E5
+# Specs portada · TWIM Podcast E6
 
 > Specs visuales para producir en Canva o herramienta equivalente.
 > Plantilla base: `documentos-internos/plantillas/podcast/specs-visuales.md`.
@@ -36,7 +36,7 @@ Sin emojis. Sin caras gritando. Sin flechas rojas, círculos amarillos ni efecto
 
 **Lado izquierdo (60% del ancho):**
 
-- **Eyebrow** (kicker arriba): `TWIM PODCAST · E5`
+- **Eyebrow** (kicker arriba): `TWIM PODCAST · E6`
   - Tamaño: 28-32 px
   - Color: beige `#C2A78B`
   - Letter-spacing: 2-3 px
@@ -111,7 +111,7 @@ Argumentos a favor:
   - Posición: centro horizontal, ~150 px desde arriba
 
 - **Número de episodio:**
-  - Texto: `E5`
+  - Texto: `E6`
   - Tamaño: 200 px
   - Color: beige `#C2A78B` con 40% opacidad
   - Peso: ExtraBold
@@ -141,12 +141,12 @@ Argumentos a favor:
 
 ### Test de legibilidad Opción B
 
-- Reducir al 5% (cover en buscador Spotify) y verificar que al menos `E5` y `EL MANDATO` se distinguen.
+- Reducir al 5% (cover en buscador Spotify) y verificar que al menos `E6` y `EL MANDATO` se distinguen.
 - Verificar contraste sobre fondo verde oscuro: el beige `#C2A78B` cumple WCAG AA sobre `#173D30`.
 
 ---
 
-## Decisión final E5 (6-may-2026, revisada)
+## Decisión final E6 (6-may-2026, revisada · originalmente etiquetada E5)
 
 **Sistema visual heredado de NotebookLM (E1-E4): foto autor + Playfair Display serif.**
 **Tres formatos:** YouTube horizontal 1280×720, Spotify cuadrado 1400×1400, Story vertical 1080×1920.
