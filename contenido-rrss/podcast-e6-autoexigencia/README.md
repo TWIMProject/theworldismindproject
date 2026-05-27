@@ -44,7 +44,8 @@ Para que cualquier compañero futuro pueda verificar la trazabilidad sin re-inve
 
 | Fecha | Pieza | Pilar | Estado |
 |---|---|---|---|
-| (re-programado) | **E6 podcast (este episodio)** | Autoexigencia | ✅ guion + portadas listas · pendiente subir a YT/Spotify |
+| (re-programado) | **E6 podcast (este episodio)** | Autoexigencia | ✅ programado por Daniel para **jue 28 may 2026 · 08:30 hora Madrid** en Spotify + YouTube (decisión 27 may · ver `youtube-podcast-estrategia-canal.md` §15 sobre ventana óptima mañana para podcast vs tarde) |
+| 28 may ~09:00-09:30 | **Recado 02 «Cuando descansar no descansa»** (newsletter) | Autoexigencia complementario | ✅ borrador listo en `recado-02-cuando-descansar-no-descansa.txt` · pendiente sustituir URLs reales y programar en MailerLite |
 | 19 mayo 19:00 | Carta #2 "La voz que te juzga" (newsletter) | Autoexigencia (juez interno) | ✅ enviada |
 
 El E6 trata el **mandato de autoexigencia como estructura general**. La Carta #2 del 19 mayo profundiza una pieza concreta dentro de esa estructura: **el juez interno**. Por eso el cierre del E6 (Sección 6) anuncia explícitamente la Carta #2 del 19 mayo como continuación natural.
