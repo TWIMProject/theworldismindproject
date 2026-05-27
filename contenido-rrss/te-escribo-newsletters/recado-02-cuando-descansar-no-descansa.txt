@@ -1,0 +1,183 @@
+RECADO 02 — Cuando descansar no descansa
+
+═══════════════════════════════════
+ASUNTO
+═══════════════════════════════════
+
+cuando descansar no descansa.
+
+
+═══════════════════════════════════
+PREVIEW TEXT
+═══════════════════════════════════
+
+Un silencio que no llega cuando paras. Y un episodio nuevo del podcast.
+
+
+═══════════════════════════════════
+REMITENTE
+═══════════════════════════════════
+
+Daniel Orozco · danielorozco@twimproject.com
+
+
+═══════════════════════════════════
+USO PREVISTO
+═══════════════════════════════════
+
+Campaña Regular MailerLite, envío sugerido el **jueves 28 may 2026
+~09:00-09:30 hora Madrid** (justo después de la publicación del Podcast
+E6 «Autoexigencia» a las 08:30 en Spotify + YouTube).
+
+Decisión editorial (27 may 2026): se introduce este Recado FUERA del
+catálogo numerado de cartas «Te escribo», acompañando el lanzamiento
+del Podcast E6. Mismo formato que el Recado 01 del 11 may. NO sustituye
+ni canibaliza la Carta #3 «Hambre de mirada» pendiente de programar ·
+ese envío sigue su cadencia normal y se programa después.
+
+El Recado abre un ángulo concreto que el episodio del podcast NO
+desarrolla por tiempo: qué pasa cuando intentas descansar y descubres
+que el descanso también está colonizado por el mandato. Sirve como
+puente afectivo al podcast sin repetirlo.
+
+
+═══════════════════════════════════
+AUDIENCIA RECOMENDADA
+═══════════════════════════════════
+
+Audiencia editorial completa (los 4 grupos que reciben las cartas
+numeradas):
+
+  · Web - Newsletter Home
+  · Reto 7 Días - Inscritas
+  · Lead Magnet - Dependencia Emocional
+  · Lista General TWIM
+
+EXCLUIR (consentimiento original distinto):
+
+  · Padres TDAH ESO
+  · Padres Bachillerato
+  · Padres Talleres Adolescentes
+
+
+═══════════════════════════════════
+NOTA EDITORIAL
+═══════════════════════════════════
+
+Tema complementario al Podcast E6 «Autoexigencia · el mandato de no
+parar». El episodio describe el mecanismo entero (9 señales, ciclo
+disparador-urgencia-alivio, debería vs quiero, gesto mínimo). Este
+Recado se mete por un costado distinto · la experiencia concreta de
+intentar descansar y notar que descansar también se ha vuelto tarea.
+
+Encabezado dentro del email recomendado:
+«TE ESCRIBO · Recado 02»
+en eyebrow beige sobre fondo crema. Sin numeración tipo «Carta».
+
+
+═══════════════════════════════════
+CUERPO DEL EMAIL  (plain text)
+═══════════════════════════════════
+
+Hola,
+
+Te dejo un recado breve. La carta numerada que toca llega los próximos días — esto es algo aparte, que me apetecía pasarte ahora.
+
+Hay una experiencia que conoce muy bien quien arrastra autoexigencia desde hace tiempo, y que se nombra poco.
+
+Llega el fin de semana. O las vacaciones. O simplemente la tarde libre. Te has prometido descansar. Quizá llevas semanas diciéndote que necesitas parar.
+
+Y paras.
+
+Y por dentro no para nada.
+
+—
+
+La voz sigue ahí, solo que sin tarea. Ahora dice cosas distintas. Dice «aprovecha». Dice «estás perdiendo el tiempo». Dice «deberías estar disfrutando esto, ¿por qué no lo estás disfrutando?». Dice «mira a tus amigos, ellos sí saben descansar».
+
+El descanso, que pensabas que era el remedio, se ha convertido en otra tarea. Ahora tienes que descansar bien. Tienes que aprovechar. Tienes que estar tranquila ya. Tienes que sentir que mereces esto.
+
+Y todo eso es exactamente la misma estructura de antes. La voz no se calló cuando paraste. Solo cambió de consigna.
+
+—
+
+Esto es importante porque la mayoría de la gente, cuando descubre que descansar tampoco le quita el peso, concluye lo equivocado. Concluye «entonces es que tengo que trabajar más, porque al menos cuando trabajo la voz tiene de qué hablar». O concluye «entonces es que descanso mal, voy a aprender a descansar bien». Las dos conclusiones devuelven a la misma estructura. La voz, otra vez, manda.
+
+Lo que pasa en realidad es otra cosa. No es que descanses mal. Es que el sistema que llevas dentro lleva tantos años funcionando con un combustible — el mandato — que cuando le quitas el combustible empieza a chillar pidiendo más. No porque lo necesites. Porque está acostumbrado.
+
+El silencio que no llega cuando paras no es señal de que estés haciendo algo mal. Es señal de que el sistema está pasando síndrome de abstinencia del mandato.
+
+—
+
+Eso no se arregla descansando «mejor», ni aprendiendo técnicas de mindfulness para soltar, ni decidiendo que esta vez sí vas a permitirte. Se arregla repitiendo, durante mucho tiempo, micro-elecciones pequeñas en las que el sistema aprende que no obedecer no tiene la consecuencia catastrófica que la voz anuncia.
+
+Es lento. Es repetitivo. No es épico.
+
+Y funciona.
+
+—
+
+Hoy he publicado un episodio nuevo del podcast sobre esto · cómo se reconoce esa autoexigencia, por qué se mantiene, y por qué cambiar un mandato por otro («deberías trabajar» → «deberías descansar») no resuelve nada.
+
+Dura unos 16 minutos. Si te encaja escucharlo de camino a algún sitio, o mientras haces algo con las manos, te dejo los enlaces aquí abajo.
+
+YouTube · {URL_YOUTUBE}
+Spotify · {URL_SPOTIFY}
+
+Hasta la próxima carta.
+
+— Daniel
+
+PD: Este recado es educativo, no clínico. Si lo que sientes te paraliza, te impide funcionar o aparece junto a pensamientos peores, busca a alguien que pueda mirarlo contigo de cerca. Lo que te escribo aquí no sustituye eso.
+
+
+═══════════════════════════════════
+IMPLEMENTACIÓN EN MAILERLITE
+═══════════════════════════════════
+
+Pasos exactos para mandarlo el 28 may ~09:00-09:30 hora Madrid:
+
+1. Dashboard ML → Campaigns → Create campaign → Regular campaign.
+
+2. Datos de la campaña:
+   - Nombre interno: «Te escribo · Recado 02 · Cuando descansar
+     no descansa»
+   - Asunto: «cuando descansar no descansa.»
+   - Preview text: «Un silencio que no llega cuando paras. Y un episodio nuevo del podcast.»
+   - Remitente: Daniel Orozco - TWIMProject
+     (danielorozco@twimproject.com)
+   - **IDIOMA: Español (es-ES)** — IMPORTANTE para que el plain_text
+     fallback salga en español, no en inglés (mismo problema que
+     tuvimos con Carta 2 y luego con la campaña promo Directo).
+
+3. Audiencia: marcar los 4 grupos editoriales (Web - Newsletter Home,
+   Reto 7 Días - Inscritas, Lead Magnet - Dependencia Emocional,
+   Lista General TWIM). Excluir Padres TDAH/Bach/Talleres.
+
+4. Editor:
+   - Tipo: **plain text** (no drag-and-drop, no plantilla HTML ·
+     coherente con Recado 01).
+   - Pegar el cuerpo del email tal cual está arriba.
+   - **ANTES de enviar** · sustituir `{URL_YOUTUBE}` y `{URL_SPOTIFY}`
+     por los enlaces reales del podcast E6 ya publicado.
+   - Mantener los guiones largos «—» como separadores entre bloques.
+
+5. Programar envío:
+   - Opción A (recomendada): programar a **jue 28 may 09:00 o
+     09:30 hora Madrid**, después de que el podcast esté en línea.
+   - Opción B (si quieres maximizar coordinación): enviar manualmente
+     justo después de verificar que YouTube y Spotify están sirviendo
+     el episodio sin errores.
+
+6. Test antes de programar:
+   - Botón «Send test email» a danielorozco@twimproject.com.
+   - **Verificar que las URLs del podcast son las reales** (no
+     placeholders).
+   - Verificar que el plain_text está en español.
+   - Confirmar que los guiones largos se renderizan bien.
+
+7. Tras el envío:
+   - Anotar en `PLAN-LANZAMIENTO-5-MAYO.md` § «Log de acciones
+     manuales fuera del calendario» con fecha + ID de la campaña.
+   - Vigilar +5h y +24h: open rate, click rate (atribución indirecta
+     al podcast), respuestas.

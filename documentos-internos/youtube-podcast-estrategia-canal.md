@@ -549,6 +549,20 @@ El episodio que el plan §12 listaba como E5 (autoexigencia, «El mandato de no 
 
 ---
 
+## 16 · Apéndice 27 mayo 2026 (segunda decisión) · Ventana óptima de publicación · mañana para podcast
+
+Decisión Daniel (27 may 2026): publicar el Podcast E6 «Autoexigencia» **mañana jue 28 may a las 08:30 hora Madrid** en Spotify + YouTube (en vez de 19:00 hora Madrid como sugería el primer plan).
+
+**Razón operativa verificada:**
+
+Spotify es plataforma drive-time (auriculares en coche/transporte público/gimnasio · pico mañana 08:00-10:00). YouTube no es horario-crítico a 10K subs (la mayoría de views vienen de SEO posterior, no del primer impulso). Como la prioridad del podcast es Spotify-nativo, gana la lógica matinal.
+
+**Ventana óptima recomendada para próximos episodios:** 08:30-09:30 hora Madrid. NO 07:30 (demasiado temprano para audiencia objetivo mujeres 35-44 con responsabilidades familiares · prisas matinales). El hueco 08:30-09:30 captura primer café del trabajo, post-cole, ejercicio matutino, comute calmo.
+
+Regla persistida · próximas sesiones que recomienden horario de publicación de podcast usan 08:30-09:30 hora Madrid como ventana por defecto, no 19:00.
+
+---
+
 ## 15 · Apéndice 27 mayo 2026 · Práctica de vídeo propio en YouTube
 
 Daniel confirma verbatim (27 may 2026) que **para YouTube graba vídeo propio** del episodio · NO usa la pantalla estática `video-fondo.png` como fondo del audio. Evidencia operativa propia · «el último podcast ha ido mucho mejor que el resto en YouTube» (verbatim 27 may), atribuido a que ese episodio sí tuvo vídeo propio.
