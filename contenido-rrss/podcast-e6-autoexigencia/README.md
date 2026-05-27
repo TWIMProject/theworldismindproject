@@ -21,7 +21,7 @@
 | `cover-youtube.png` | Portada YouTube 1280×720 (thumbnail) — sistema visual heredado de NotebookLM (E1-E4): foto autor + Playfair Display serif | ✅ regenerado 6-may-2026 vía `generar-portadas.py` |
 | `cover-spotify.png` | Portada Spotify 1400×1400 — mismo sistema visual que cover-youtube | ✅ regenerado 6-may-2026 vía `generar-portadas.py` |
 | `story-vertical.png` | Story Instagram 1080×1920 — foto arriba + bloque editorial centrado abajo | ✅ generado 6-may-2026 vía `generar-portadas.py` |
-| `video-fondo.png` | Pantalla estática 1920×1080 Full HD para subir el audio a YouTube como vídeo (16 min). Misma composición que cover-youtube escalada · respiración inferior para subtítulos automáticos | ✅ regenerado 27-may-2026 con el sistema visual coherente (foto + Playfair serif) |
+| `video-fondo.png` | Pantalla estática 1920×1080 Full HD · **FALLBACK** para casos en los que el episodio NO tenga video propio grabado. **Práctica habitual de Daniel · graba video propio para YouTube** (mucho mejor retención que pantalla estática · verificado en episodios anteriores). Si el episodio tiene video propio, este archivo NO se usa. | ✅ regenerado 27-may-2026 con sistema visual coherente (mantener como fallback) |
 | `generar-portadas.py` | Script Pillow que recompone las portadas a partir de `daniel-orozco-sillon.jpg` raíz + recorte logo MIND WORLD del cover canal. Reusable en E6+ cambiando `CONTENIDO_EPISODIO`. | ✅ reescrito 6-may-2026 con nuevo sistema visual |
 | `audio-bruto.wav` | Grabación bruta del episodio | ✅ grabado 6-may-2026 |
 | `audio-final.mp3` | Audio final con intro/outro y normalización · 16 min 30 s | ✅ editado 6-may-2026 |
@@ -58,6 +58,14 @@ El E6 trata el **mandato de autoexigencia como estructura general**. La Carta #2
 - Workflow §3.1 del doc #5 (`reciclaje-contenido-pipeline.md`).
 - Plantilla de cronometraje de referencia: `documentos-internos/cronometraje-episodio-piloto-e5.md` (corresponde al otro piloto «Tu valor», pero la estructura es reutilizable para E6).
 - Plantillas: `documentos-internos/plantillas/podcast/`.
+
+---
+
+## Práctica de publicación verificada (Daniel · 27 may 2026)
+
+Para YouTube, Daniel **graba video propio** del episodio (cámara apuntándole hablando o tomas suyas grabadas) y lo sube como vídeo · NO usa la pantalla estática `video-fondo.png` como fondo. Evidencia · «el último podcast ha ido mucho mejor que el resto en YouTube» (verbatim 27 may). Confirmado · video propio mejora retención significativamente vs imagen estática.
+
+Por tanto · el `video-fondo.png` queda como fallback técnico (por si alguna vez no hay video propio). No es la opción por defecto.
 
 ---
 
