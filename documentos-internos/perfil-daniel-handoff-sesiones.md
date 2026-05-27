@@ -196,6 +196,23 @@ Implicación operativa · cuando Daniel pide algo que choca con una regla inviol
 
 «Pásamelo por aquí en PDF» (26 may 22:30 sobre briefing Meta Ads). Implicación · cuando se genera un briefing operativo, enviar PDF por `SendUserFile` además de tener el HTML/MD en repo. La regla §5 inviolable de no versionar PDFs aplica a calendarios/dashboards visuales · briefings operativos PDF SÍ se versionan (consistencia con otros PDFs ya en `documentos-internos/`).
 
+### 27 may 2026 · sesión tarde-noche
+
+**Canales de distribución · decisiones tomadas**
+
+WhatsApp Channels · **aparcado, no abrir ahora** (decisión 27 may tarde tras consultar pros/contras). Razones declaradas:
+
+- Cuello de botella actual es producción, no canales.
+- Solapamiento alto con newsletter (mismos suscriptores comprometidos).
+- Cadencia incompatible con voz Te escribo («cuando tengo algo que decir», no cadencia diaria).
+- Coste de oportunidad alto vs Reels (que sí captan no-seguidores, el hueco real con la cuenta IG en distribución cerrada al 5,7 % externos).
+
+Revisar la decisión en agosto-septiembre 2026 como **canal de campaña con fecha de cierre** durante la pre-venta dura del taller Volver a Mí (1-30 sept). NO como canal permanente.
+
+Daniel verbatim 27 may · «Perfecto aparcamos».
+
+Implicación operativa para próximas sesiones · NO proponer abrir canal WhatsApp ni Telegram desde cero · la decisión está tomada hasta agosto 2026. Si la lectura cambia (por ej. tras analizar métricas del Carrusel #4 a 7 días, si Reels no captan), revisar aquí antes de re-proponer.
+
 ---
 
-**Última actualización:** 26 may 2026 noche · sesión `claude/twimproject-repo-review-IoYha`.
+**Última actualización:** 27 may 2026 tarde · sesión `claude/decision-canal-whatsapp-aparcado`.
