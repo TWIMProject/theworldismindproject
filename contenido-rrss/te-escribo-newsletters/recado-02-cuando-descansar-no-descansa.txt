@@ -119,10 +119,10 @@ Y funciona.
 
 Hoy he publicado un episodio nuevo del podcast sobre esto · cómo se reconoce esa autoexigencia, por qué se mantiene, y por qué cambiar un mandato por otro («deberías trabajar» → «deberías descansar») no resuelve nada.
 
-Dura unos 16 minutos. Si te encaja escucharlo de camino a algún sitio, o mientras haces algo con las manos, te dejo los enlaces aquí abajo.
+Dura unos 16 minutos. Si te encaja escucharlo de camino a algún sitio, o mientras haces algo con las manos, te dejo el enlace de YouTube aquí abajo. También está en Spotify, buscando «TWIM Podcast».
 
-YouTube · {URL_YOUTUBE}
-Spotify · {URL_SPOTIFY}
+YouTube → https://youtu.be/7evXR7p0wg4
+Spotify → busca «TWIM Podcast» en la app
 
 Hasta la próxima carta.
 
@@ -158,8 +158,9 @@ Pasos exactos para mandarlo el 28 may ~09:00-09:30 hora Madrid:
    - Tipo: **plain text** (no drag-and-drop, no plantilla HTML ·
      coherente con Recado 01).
    - Pegar el cuerpo del email tal cual está arriba.
-   - **ANTES de enviar** · sustituir `{URL_YOUTUBE}` y `{URL_SPOTIFY}`
-     por los enlaces reales del podcast E6 ya publicado.
+   - URL YouTube ya integrada · `https://youtu.be/7evXR7p0wg4`
+     (Decisión Daniel 27 may · no incluir URL Spotify específica,
+     mencionar solo «busca TWIM Podcast en la app»).
    - Mantener los guiones largos «—» como separadores entre bloques.
 
 5. Programar envío:
