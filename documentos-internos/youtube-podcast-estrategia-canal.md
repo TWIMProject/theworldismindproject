@@ -549,6 +549,21 @@ El episodio que el plan §12 listaba como E5 (autoexigencia, «El mandato de no 
 
 ---
 
+## 15 · Apéndice 27 mayo 2026 · Práctica de vídeo propio en YouTube
+
+Daniel confirma verbatim (27 may 2026) que **para YouTube graba vídeo propio** del episodio · NO usa la pantalla estática `video-fondo.png` como fondo del audio. Evidencia operativa propia · «el último podcast ha ido mucho mejor que el resto en YouTube» (verbatim 27 may), atribuido a que ese episodio sí tuvo vídeo propio.
+
+**Implicación operativa para próximos episodios y sesiones futuras:**
+
+- Por defecto, cada episodio del podcast subido a YouTube **lleva vídeo propio grabado** (cámara apuntando a Daniel hablando, o tomas suyas) sincronizado con el audio.
+- El archivo `video-fondo.png` generado por `generar-portadas.py` queda como **fallback técnico** solo para episodios donde no haya tiempo o capacidad de grabar vídeo propio. No es la opción por defecto.
+- La recomendación ingenua «sube audio + pantalla estática» es subóptima · genera menor retención y peor rendimiento en YouTube. Cualquier sesión futura debe evitar recomendarla sin matizar.
+- Spotify usa solo audio (no necesita vídeo). La portada `cover-spotify.png` se aplica automáticamente.
+
+Esta sección registra la práctica para que ninguna sesión futura olvide la verdad operativa y empuje a Daniel a usar el fallback como si fuera la opción principal.
+
+---
+
 ## Cierre
 
 YouTube + Podcast es la cuarta palanca del mapa TWIM (anexo CEO §2). Tiene la particularidad de ser la única que monetiza directamente el acto de consumir contenido — todas las demás (SEO, Newsletter, Meta Ads) monetizan al final del embudo. Eso no la convierte en la más importante, pero sí en la más eficiente por hora de producción una vez el sistema está montado.

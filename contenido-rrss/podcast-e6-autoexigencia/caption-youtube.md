@@ -1,4 +1,4 @@
-# Caption / Descripción YouTube · TWIM Podcast E5
+# Caption / Descripción YouTube · TWIM Podcast E6
 
 > Plantilla base: `documentos-internos/plantillas/podcast/descripcion-youtube-spotify.md` §1.
 > Verificar `{...}` rellenados y eliminar comentarios `<!-- -->` antes de publicar.
@@ -8,7 +8,7 @@
 ## Título del vídeo (campo título YouTube)
 
 ```
-El mandato de no parar — autoexigencia y culpa de descansar | TWIM Podcast E5
+El mandato de no parar — autoexigencia y culpa de descansar | TWIM Podcast E6
 ```
 
 55 caracteres antes del separador. Dentro del rango óptimo (55-65) según doc #3 §8.1.

@@ -1,8 +1,9 @@
-# TWIM Podcast E5 · Autoexigencia
+# TWIM Podcast E6 · Autoexigencia
 
-> Carpeta del episodio piloto T1 (primer episodio del nuevo formato grabación humana).
+> Episodio del nuevo formato grabación humana (T1).
 > Pilar: Autoexigencia.
-> Ventana publicación: 12-18 mayo 2026 (idealmente martes 12 mayo, antes de la Carta #2 del 19 mayo).
+> **Reordenamiento del 11 may 2026:** este episodio era originalmente el E5 piloto, pero se reordenó a E6 para alinear el E5 con el libro «Tu valor no está en su mirada» (dependencia emocional). Ver §14 `youtube-podcast-estrategia-canal.md`.
+> Ventana publicación: re-programada al cierre del lanzamiento Directo / Carrusel #4 (mayo-junio 2026).
 
 ---
 
@@ -11,13 +12,16 @@
 | Archivo | Contenido | Estado |
 |---|---|---|
 | `guion.md` | Guion completo del episodio (~2.900 palabras, 16 min 30 s reales tras edición) | ✅ generado 5-may-2026 · grabado y editado 6-may-2026 |
-| `caption-youtube.md` | Título + descripción + capítulos + tags YouTube | ✅ generado 5-may-2026 |
-| `caption-spotify.md` | Título + descripción corta Spotify | ✅ generado 5-may-2026 |
+| `caption-youtube.md` | Título + descripción + capítulos + tags YouTube | ✅ generado 5-may-2026 · rectificado E5→E6 el 27-may |
+| `caption-spotify.md` | Título + descripción corta Spotify | ✅ generado 5-may-2026 · rectificado E5→E6 el 27-may |
+| `caption-instagram.md` | Caption post feed Instagram con URLs placeholder | ✅ generado 27-may-2026 |
+| `caption-linkedin.md` | Post LinkedIn editorial con URLs placeholder | ✅ generado 27-may-2026 |
+| `caption-x.md` | Hilo X de 6 tweets · link en T1 y T6 (regla inviolable) | ✅ generado 27-may-2026 |
 | `specs-portada.md` | Specs portada YouTube horizontal 1280×720 + Spotify 1:1 | ✅ generado 5-may-2026 |
 | `cover-youtube.png` | Portada YouTube 1280×720 (thumbnail) — sistema visual heredado de NotebookLM (E1-E4): foto autor + Playfair Display serif | ✅ regenerado 6-may-2026 vía `generar-portadas.py` |
 | `cover-spotify.png` | Portada Spotify 1400×1400 — mismo sistema visual que cover-youtube | ✅ regenerado 6-may-2026 vía `generar-portadas.py` |
 | `story-vertical.png` | Story Instagram 1080×1920 — foto arriba + bloque editorial centrado abajo | ✅ generado 6-may-2026 vía `generar-portadas.py` |
-| `video-fondo.png` | Pantalla estática 1920×1080 para reproducción YouTube (zona inferior libre para subtítulos). **Pendiente migrar al nuevo sistema visual** (foto + serif) | ⚠️ generado 6-may-2026 con sistema visual antiguo (sillones ilustrados) |
+| `video-fondo.png` | Pantalla estática 1920×1080 Full HD · **FALLBACK** para casos en los que el episodio NO tenga video propio grabado. **Práctica habitual de Daniel · graba video propio para YouTube** (mucho mejor retención que pantalla estática · verificado en episodios anteriores). Si el episodio tiene video propio, este archivo NO se usa. | ✅ regenerado 27-may-2026 con sistema visual coherente (mantener como fallback) |
 | `generar-portadas.py` | Script Pillow que recompone las portadas a partir de `daniel-orozco-sillon.jpg` raíz + recorte logo MIND WORLD del cover canal. Reusable en E6+ cambiando `CONTENIDO_EPISODIO`. | ✅ reescrito 6-may-2026 con nuevo sistema visual |
 | `audio-bruto.wav` | Grabación bruta del episodio | ✅ grabado 6-may-2026 |
 | `audio-final.mp3` | Audio final con intro/outro y normalización · 16 min 30 s | ✅ editado 6-may-2026 |
@@ -40,10 +44,10 @@ Para que cualquier compañero futuro pueda verificar la trazabilidad sin re-inve
 
 | Fecha | Pieza | Pilar | Estado |
 |---|---|---|---|
-| 12-18 mayo (ventana) | **E5 podcast (este episodio)** | Autoexigencia | ⏳ pendiente grabación |
-| 19 mayo 19:00 | Carta #2 "La voz que te juzga" (newsletter) | Autoexigencia (juez interno) | ✅ programada en MailerLite |
+| (re-programado) | **E6 podcast (este episodio)** | Autoexigencia | ✅ guion + portadas listas · pendiente subir a YT/Spotify |
+| 19 mayo 19:00 | Carta #2 "La voz que te juzga" (newsletter) | Autoexigencia (juez interno) | ✅ enviada |
 
-El E5 trata el **mandato de autoexigencia como estructura general**. La Carta #2 del 19 mayo profundiza una pieza concreta dentro de esa estructura: **el juez interno**. Por eso el cierre del E5 (Sección 6) anuncia explícitamente la Carta #2 del 19 mayo como continuación natural.
+El E6 trata el **mandato de autoexigencia como estructura general**. La Carta #2 del 19 mayo profundiza una pieza concreta dentro de esa estructura: **el juez interno**. Por eso el cierre del E6 (Sección 6) anuncia explícitamente la Carta #2 del 19 mayo como continuación natural.
 
 > **Nota editorial:** la Carta #2 es deliberadamente DISTINTA al podcast — los suscriptores de "Te escribo" reciben contenido exclusivo, no derivado. Coherencia con la nota editorial de `carta-02-la-voz-que-te-juzga.txt`.
 
@@ -52,15 +56,23 @@ El E5 trata el **mandato de autoexigencia como estructura general**. La Carta #2
 ## Workflow de producción referenciado
 
 - Workflow §3.1 del doc #5 (`reciclaje-contenido-pipeline.md`).
-- Hoja de cronometraje E5: `documentos-internos/cronometraje-episodio-piloto-e5.md` (rellenar mientras grabas).
+- Plantilla de cronometraje de referencia: `documentos-internos/cronometraje-episodio-piloto-e5.md` (corresponde al otro piloto «Tu valor», pero la estructura es reutilizable para E6).
 - Plantillas: `documentos-internos/plantillas/podcast/`.
+
+---
+
+## Práctica de publicación verificada (Daniel · 27 may 2026)
+
+Para YouTube, Daniel **graba video propio** del episodio (cámara apuntándole hablando o tomas suyas grabadas) y lo sube como vídeo · NO usa la pantalla estática `video-fondo.png` como fondo. Evidencia · «el último podcast ha ido mucho mejor que el resto en YouTube» (verbatim 27 may). Confirmado · video propio mejora retención significativamente vs imagen estática.
+
+Por tanto · el `video-fondo.png` queda como fallback técnico (por si alguna vez no hay video propio). No es la opción por defecto.
 
 ---
 
 ## Próximos pasos operativos (lado Daniel)
 
 1. **Leer el guion completo en voz alta** una vez antes de grabar. Marcar palabras donde tropieces para regrabar después.
-2. **Cronometrar** la lectura completa con la hoja `cronometraje-episodio-piloto-e5.md` abierta. Si pasa de 22 min, recortar; si baja de 16 min, expandir secciones cortas.
+2. **Cronometrar** la lectura completa (referencia · misma plantilla que `cronometraje-episodio-piloto-e5.md` del otro piloto). Si pasa de 22 min, recortar; si baja de 16 min, expandir secciones cortas.
 3. **Diseñar portada YouTube** en Canva siguiendo `specs-portada.md`. Decidir si Spotify reusa `podcast-cover.png` (Opción A recomendada) o produce variante (Opción B).
 4. **Grabar** en bloque único o por secciones (5 secciones independientes encajan bien). No re-grabar a media frase: re-grabar la frase completa y limpiar en Audacity.
 5. **Edición rápida** según workflow §3.1 paso 5 (Audacity: limpieza + normalización + intro + outro).
