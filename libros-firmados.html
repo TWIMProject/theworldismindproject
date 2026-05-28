@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libros firmados · Daniel Orozco Abia · TWIM Project</title>
+<meta name="description" content="Ejemplares físicos firmados de Los Engranajes de la Mente y Burnout. Tiradas limitadas con dedicatoria personalizada. Envío desde Valencia.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://twimproject.com/libros-firmados">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap">
+<style>
+:root{
+  --verde-oscuro:#173D30;
+  --verde-medio:#265C4B;
+  --beige:#C2A78B;
+  --crema:#FDFCFA;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow Condensed',sans-serif;
+  background:var(--crema);
+  color:var(--verde-oscuro);
+  font-weight:400;
+  font-size:18px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+a{color:var(--verde-medio);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+a:hover{border-color:var(--verde-medio)}
+
+/* HEADER */
+header.top{
+  padding:28px 0 16px;
+  border-bottom:1px solid rgba(23,61,48,.1);
+}
+.top-inner{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.brand{font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:.5px}
+.brand a{color:var(--verde-oscuro);border:none}
+.nav-back{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:var(--verde-medio)}
+
+/* HERO */
+.hero{padding:80px 0 56px;text-align:left;border-bottom:1px solid rgba(23,61,48,.1)}
+.hero-eyebrow{
+  font-size:13px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--beige);font-weight:500;margin-bottom:20px;
+}
+.hero h1{
+  font-family:'Instrument Serif',serif;
+  font-weight:400;font-size:64px;line-height:1.05;
+  color:var(--verde-oscuro);margin-bottom:24px;letter-spacing:-.5px;
+}
+.hero h1 em{font-style:italic;color:var(--verde-medio)}
+.hero-lede{
+  font-size:21px;line-height:1.55;max-width:680px;color:var(--verde-oscuro);
+  font-weight:300;
+}
+.hero-meta{
+  margin-top:32px;display:flex;gap:32px;flex-wrap:wrap;
+  font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--verde-medio);
+}
+.hero-meta span::before{content:"·  ";color:var(--beige)}
+.hero-meta span:first-child::before{content:""}
+
+/* SECCIÓN COMÚN */
+section{padding:72px 0;border-bottom:1px solid rgba(23,61,48,.08)}
+.section-title{
+  font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:38px;line-height:1.15;margin-bottom:14px;color:var(--verde-oscuro);
+}
+.section-eyebrow{
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--beige);font-weight:500;margin-bottom:14px;
+}
+.section-intro{font-size:18px;max-width:720px;color:var(--verde-oscuro);font-weight:300;margin-bottom:48px}
+
+/* CATÁLOGO */
+.catalogo{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:760px){.catalogo{grid-template-columns:1fr 1fr}}
+
+.book-card{
+  background:#fff;
+  border:1px solid rgba(23,61,48,.12);
+  padding:36px 32px;
+  display:flex;flex-direction:column;gap:18px;
+  position:relative;
+  transition:border-color .2s,transform .2s;
+}
+.book-card:hover{border-color:var(--verde-medio)}
+.book-card.featured{
+  border:1px solid var(--verde-oscuro);
+  background:linear-gradient(180deg,#fff 0%,rgba(194,167,139,.06) 100%);
+}
+.book-card.featured::before{
+  content:"Edición especial";
+  position:absolute;top:-12px;left:32px;
+  background:var(--verde-oscuro);color:var(--crema);
+  font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
+  padding:5px 12px;font-weight:500;
+}
+
+.book-cover{
+  width:100%;aspect-ratio:3/4;
+  background:var(--crema);
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(23,61,48,.08);
+  overflow:hidden;
+}
+.book-cover img{width:100%;height:100%;object-fit:cover;object-position:center}
+.book-cover-placeholder{
+  width:100%;height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(180deg,rgba(38,92,75,.08) 0%,rgba(194,167,139,.12) 100%);
+  padding:24px;
+}
+.book-cover-placeholder .ph-title{
+  font-family:'Instrument Serif',serif;font-size:24px;
+  color:var(--verde-oscuro);line-height:1.1;
+}
+.book-cover-placeholder .ph-sub{
+  font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--beige);margin-top:14px;
+}
+
+.book-title{
+  font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:30px;line-height:1.15;color:var(--verde-oscuro);
+}
+.book-format{
+  font-size:13px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--verde-medio);font-weight:500;
+}
+.book-desc{font-size:16.5px;line-height:1.6;color:var(--verde-oscuro);font-weight:300}
+
+.book-price-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  border-top:1px solid rgba(23,61,48,.1);padding-top:18px;margin-top:auto;
+}
+.book-price{
+  font-family:'Instrument Serif',serif;font-size:36px;color:var(--verde-oscuro);
+}
+.book-price small{font-size:18px;color:var(--beige);font-style:italic}
+.book-stock{
+  font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--verde-medio);
+}
+.book-stock.last{color:var(--verde-oscuro);font-weight:600}
+
+.btn-buy{
+  display:inline-block;width:100%;text-align:center;
+  background:var(--verde-oscuro);color:var(--crema);
+  padding:18px 24px;font-size:15px;letter-spacing:2.5px;
+  text-transform:uppercase;font-weight:500;
+  border:1px solid var(--verde-oscuro);
+  transition:background .15s,color .15s;
+  margin-top:6px;
+}
+.btn-buy:hover{background:var(--verde-medio);color:var(--crema);border-color:var(--verde-medio)}
+.btn-buy.sold-out{
+  background:transparent;color:var(--beige);
+  border:1px dashed var(--beige);cursor:not-allowed;
+  pointer-events:none;
+}
+
+/* INCLUYE */
+.incluye-grid{display:grid;gap:32px;grid-template-columns:1fr}
+@media(min-width:760px){.incluye-grid{grid-template-columns:1fr 1fr 1fr}}
+.incluye-item{
+  background:transparent;
+  border-left:2px solid var(--beige);
+  padding:8px 0 8px 24px;
+}
+.incluye-item h3{
+  font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:24px;color:var(--verde-oscuro);margin-bottom:10px;
+}
+.incluye-item p{font-size:16px;line-height:1.6;font-weight:300}
+
+/* FAQ */
+.faq-item{
+  padding:24px 0;border-bottom:1px solid rgba(23,61,48,.1);
+}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{
+  font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:22px;color:var(--verde-oscuro);margin-bottom:8px;
+}
+.faq-item p{font-size:16.5px;line-height:1.6;font-weight:300;color:var(--verde-oscuro)}
+
+/* CIERRE */
+.cierre{
+  background:var(--verde-oscuro);color:var(--crema);
+  padding:80px 0;text-align:left;border:none;
+}
+.cierre h2{
+  font-family:'Instrument Serif',serif;font-weight:400;
+  font-size:42px;line-height:1.15;color:var(--crema);margin-bottom:18px;
+}
+.cierre h2 em{font-style:italic;color:var(--beige)}
+.cierre p{font-size:18px;font-weight:300;max-width:620px;color:rgba(253,252,250,.85);margin-bottom:30px}
+.cierre .firma{
+  font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;
+  color:var(--beige);margin-top:8px;
+}
+
+/* FOOTER */
+footer{padding:48px 0 60px;font-size:14px;letter-spacing:1px;color:var(--verde-medio)}
+footer .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
+footer a{color:var(--verde-medio)}
+
+@media(max-width:560px){
+  .hero{padding:56px 0 40px}
+  .hero h1{font-size:46px}
+  .hero-lede{font-size:18px}
+  .section-title{font-size:32px}
+  section{padding:56px 0}
+  .book-card{padding:28px 22px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="brand"><a href="/">TWIM Project</a></div>
+    <a class="nav-back" href="/">Volver al inicio</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="border-bottom:1px solid rgba(23,61,48,.1)">
+  <div class="wrap">
+    <div class="hero-eyebrow">Tirada limitada · Firmados a mano</div>
+    <h1>Libros firmados<br><em>desde mi consulta en Valencia</em></h1>
+    <p class="hero-lede">Quedan pocos ejemplares físicos de <em>Los Engranajes de la Mente</em> y <em>Burnout</em>, incluidas dos ediciones especiales que no se reimprimirán. Los envío firmados, con dedicatoria personal y un extra dentro que solo recibe quien compra aquí.</p>
+    <div class="hero-meta">
+      <span>Stock real · 12 ejemplares</span>
+      <span>Envío desde Valencia</span>
+      <span>Pago seguro · Stripe</span>
+    </div>
+  </div>
+</section>
+
+<!-- EDICIONES ESPECIALES -->
+<section id="ediciones-especiales">
+  <div class="wrap">
+    <div class="section-eyebrow">Únicas · No se reimprimirán</div>
+    <h2 class="section-title">Ediciones especiales <em style="font-style:italic;color:var(--verde-medio)">de Los Engranajes</em></h2>
+    <p class="section-intro">Dos copias que conservaba de la primera tirada. Tapa dura interior en blanco y negro, y una tapa blanda con papel grueso y figuras a color. No las podrás encontrar en Amazon ni se reimprimirán.</p>
+
+    <div class="catalogo">
+
+      <!-- EE TAPA DURA B/N -->
+      <article class="book-card featured">
+        <div class="book-cover">
+          <img src="/portadalosengranajes.webp" alt="Los Engranajes de la Mente · Edición especial tapa dura B/N · firmado por Daniel Orozco">
+        </div>
+        <div class="book-format">Edición especial · Tapa dura · interior B/N</div>
+        <h3 class="book-title">Los Engranajes de la Mente</h3>
+        <p class="book-desc">Edición única conservada de la primera tirada. Tapa dura, interior íntegramente en blanco y negro. Firmado a mano, con dedicatoria personalizada y un extra dentro que solo va con esta edición.</p>
+        <div class="book-price-row">
+          <div class="book-price">65€ <small>· IVA incl.</small></div>
+          <div class="book-stock last">1 ejemplar</div>
+        </div>
+        <a class="btn-buy" href="https://buy.stripe.com/00w3cv3KW6X30SffLO2sM0c" target="_blank" rel="noopener">Comprar ahora</a>
+      </article>
+
+      <!-- EE TAPA BLANDA COLOR -->
+      <article class="book-card featured">
+        <div class="book-cover">
+          <img src="/portadalosengranajes.webp" alt="Los Engranajes de la Mente · Edición especial tapa blanda color · firmado por Daniel Orozco">
+        </div>
+        <div class="book-format">Edición especial · Tapa blanda · papel grueso a color</div>
+        <h3 class="book-title">Los Engranajes de la Mente</h3>
+        <p class="book-desc">Edición única en tapa blanda con papel grueso y figuras del libro reproducidas a todo color. Una experiencia de lectura distinta a la versión comercial. Firmado, dedicado y con extra dentro.</p>
+        <div class="book-price-row">
+          <div class="book-price">55€ <small>· IVA incl.</small></div>
+          <div class="book-stock last">1 ejemplar</div>
+        </div>
+        <a class="btn-buy" href="https://buy.stripe.com/cNiaEXepA4OV8kH8jm2sM0d" target="_blank" rel="noopener">Comprar ahora</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ENGRANAJES FIRMADOS -->
+<section id="engranajes-firmados">
+  <div class="wrap">
+    <div class="section-eyebrow">Ejemplares firmados a mano</div>
+    <h2 class="section-title">Los Engranajes de la Mente <em style="font-style:italic;color:var(--verde-medio)">edición habitual</em></h2>
+    <p class="section-intro">Mismo libro que en Amazon, pero firmado, dedicado a quien me indiques y con el extra que va dentro. Ideal para regalar o tener en casa la versión con mi letra.</p>
+
+    <div class="catalogo">
+
+      <!-- ENGRANAJES TAPA DURA -->
+      <article class="book-card">
+        <div class="book-cover">
+          <img src="/portadalosengranajes.webp" alt="Los Engranajes de la Mente · tapa dura · firmado">
+        </div>
+        <div class="book-format">Tapa dura · firmado</div>
+        <h3 class="book-title">Los Engranajes de la Mente</h3>
+        <p class="book-desc">Tapa dura. Lo firmo a mano, con dedicatoria personalizada para quien me indiques en el formulario de pago. Va con un extra dentro del libro que no se incluye en la versión de Amazon.</p>
+        <div class="book-price-row">
+          <div class="book-price">30€ <small>· IVA incl.</small></div>
+          <div class="book-stock">3 ejemplares</div>
+        </div>
+        <a class="btn-buy" href="https://buy.stripe.com/5kQeVd5T42GN58vbvy2sM0e" target="_blank" rel="noopener">Comprar ahora</a>
+      </article>
+
+      <!-- ENGRANAJES TAPA BLANDA -->
+      <article class="book-card">
+        <div class="book-cover">
+          <img src="/portadalosengranajes.webp" alt="Los Engranajes de la Mente · tapa blanda · firmado">
+        </div>
+        <div class="book-format">Tapa blanda · firmado</div>
+        <h3 class="book-title">Los Engranajes de la Mente</h3>
+        <p class="book-desc">Tapa blanda, también firmado a mano con dedicatoria personal y el extra dentro. La opción más ligera para llevar contigo o regalar sin que pese.</p>
+        <div class="book-price-row">
+          <div class="book-price">20€ <small>· IVA incl.</small></div>
+          <div class="book-stock">2 ejemplares</div>
+        </div>
+        <a class="btn-buy" href="https://buy.stripe.com/8x2aEXa9k4OV8kH9nq2sM0f" target="_blank" rel="noopener">Comprar ahora</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- BURNOUT FIRMADO -->
+<section id="burnout-firmado">
+  <div class="wrap">
+    <div class="section-eyebrow">El otro libro de la serie</div>
+    <h2 class="section-title">Burnout <em style="font-style:italic;color:var(--verde-medio)">tapa blanda firmado</em></h2>
+    <p class="section-intro">Mi segundo libro, dedicado a la fatiga que no se ve. Quedan cuatro ejemplares en físico, firmados a mano y con la misma dedicatoria personalizada.</p>
+
+    <div class="catalogo" style="grid-template-columns:1fr 1fr">
+
+      <article class="book-card" style="grid-column:1/-1;max-width:540px">
+        <div class="book-cover" style="aspect-ratio:3/4">
+          <img src="/portada-burnout.webp" alt="Burnout · tapa blanda · firmado por Daniel Orozco">
+        </div>
+        <div class="book-format">Tapa blanda · firmado</div>
+        <h3 class="book-title">Burnout</h3>
+        <p class="book-desc">El cansancio crónico de quien ha confundido valer con producir. Tapa blanda, firmado a mano, dedicado a quien me indiques, con el mismo extra dentro que el resto.</p>
+        <div class="book-price-row">
+          <div class="book-price">18€ <small>· IVA incl.</small></div>
+          <div class="book-stock">4 ejemplares</div>
+        </div>
+        <a class="btn-buy" href="https://buy.stripe.com/14AfZha9k1CJgRd1UY2sM0g" target="_blank" rel="noopener">Comprar ahora</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section id="incluye">
+  <div class="wrap">
+    <div class="section-eyebrow">Qué va dentro del paquete</div>
+    <h2 class="section-title">No es solo el libro</h2>
+    <p class="section-intro">Cada ejemplar sale de mi consulta envuelto a mano. Esto es lo que recibe quien compra aquí y no recibe quien compra en Amazon:</p>
+
+    <div class="incluye-grid">
+      <div class="incluye-item">
+        <h3>Firma a mano</h3>
+        <p>Cada libro firmado por mí, en bolígrafo negro, con la fecha. Lo firmo el mismo día que lo preparo para enviar.</p>
+      </div>
+      <div class="incluye-item">
+        <h3>Dedicatoria personal</h3>
+        <p>En el proceso de pago de Stripe me indicas el nombre y, si quieres, una línea concreta. Si lo dejas en blanco, la dedicatoria queda neutra y va dirigida al lector.</p>
+      </div>
+      <div class="incluye-item">
+        <h3>Extra dentro del libro</h3>
+        <p>Una tarjeta impresa con un texto inédito mío, distinto en cada libro, que no aparece en la edición de Amazon ni en ninguna otra parte. Solo va con los ejemplares de esta tienda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-eyebrow">Preguntas frecuentes</div>
+    <h2 class="section-title">Antes de comprar</h2>
+
+    <div class="faq-item">
+      <h3>¿En cuánto tiempo me llega?</h3>
+      <p>Preparo el envío en 48-72h desde que recibo el pago. Desde Valencia, dentro de España suelen tardar 3-5 días laborables vía Correos / SEUR estándar. Cuando lo envío te llega un email con el número de seguimiento.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Envías fuera de España?</h3>
+      <p>Sí. La unión postal cubre Europa, América y el resto del mundo. El precio del envío internacional se calcula caso a caso · escríbeme a <a href="mailto:danielorozco@theworldismindproject.com">danielorozco@theworldismindproject.com</a> antes de comprar y te confirmo el coste real del envío a tu país.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Puedo pedir una dedicatoria específica?</h3>
+      <p>Sí. En el formulario de pago de Stripe verás un campo de notas. Escribe ahí el nombre y, si quieres, una frase corta concreta. Si te dejas el campo vacío, la dedicatoria queda neutra dirigida al lector.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Las ediciones especiales se reimprimirán?</h3>
+      <p>No. Son ejemplares únicos que conservé de la primera tirada. Cuando se acaben, no habrá más copias con ese papel, ese acabado y ese formato. La edición habitual sí sigue disponible en Amazon en tapa dura y tapa blanda.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Puedo pagar con otro método que no sea tarjeta?</h3>
+      <p>Stripe acepta tarjeta, Apple Pay, Google Pay y Bizum (este último activado para España). Si necesitas otra vía (transferencia, factura empresa), escríbeme directamente y lo gestionamos.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Y si quiero el libro firmado pero ya no queda stock aquí?</h3>
+      <p>Esta tienda solo refleja los ejemplares físicos que tengo en mi consulta de Valencia. Cuando se agoten, no habrá más libros firmados a la venta hasta una nueva tirada. La edición sin firma sigue siempre disponible en Amazon.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="cierre">
+  <div class="wrap">
+    <h2>Lo que firmo <em>no es un autógrafo</em>. Es un recordatorio de que el libro pasó por mis manos antes que por las tuyas.</h2>
+    <p>Si llega a alguien que lo necesita, ha cumplido su trabajo. Si llega a ti como regalo, espero que la dedicatoria diga lo que querías decir y no encontrabas cómo.</p>
+    <div class="firma">Daniel Orozco Abia</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <div>© 2026 TWIM Project · Daniel Orozco Abia · CV11515</div>
+    <div><a href="/aviso-legal.html">Aviso legal</a> · <a href="/">Inicio</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
