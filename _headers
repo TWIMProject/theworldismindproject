@@ -1,0 +1,5 @@
+# Audios privados · solo accesibles con la URL exacta del QR
+# Evitar indexación en buscadores (refuerza el meta noindex de la página)
+/audios-firmados/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: private, max-age=0, no-cache
