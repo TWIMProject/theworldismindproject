@@ -4,7 +4,7 @@
 
 ## Reglas de impresión
 
-- **Formato sugerido:** tarjeta 100 × 148 mm (A6) · papel 250-300 g · acabado mate o satinado · una cara impresa.
+- **Formato sugerido:** tarjeta A6 · **105 × 148 mm** (los PNG están a 1181 × 1748 px a 300 dpi, equivalencia exacta) · pedir 3 mm de sangrado a la imprenta · papel estucado mate 250-300 g · acabado mate o satinado, sin laminado · una cara impresa, reverso en blanco · RGB a convertir a CMYK al imprimir.
 - **Tipografía:** Instrument Serif (titular) + Barlow Condensed (cuerpo).
 - **Paleta:** texto verde oscuro `#173D30` sobre crema `#FDFCFA`. Filete inferior beige `#C2A78B`.
 - **Pie de tarjeta:** «Daniel Orozco Abia · Ejemplar firmado · TWIM Project».
