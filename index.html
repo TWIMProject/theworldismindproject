@@ -48,7 +48,7 @@
   <link rel="dns-prefetch" href="https://www.linkedin.com">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600&display=swap" as="style">
   <link rel="preload" href="daniel-orozco-sillon.webp" as="image" type="image/webp">
-  <link rel="preload" href="hero-bg.webp" as="image" type="image/webp">
+  <link rel="preload" href="hero-bg-mindworld.webp" as="image" type="image/webp">
 
   <!-- ========== FONTS & ICONS ========== -->
 
@@ -534,14 +534,18 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: url('hero-bg.jpg') center/cover no-repeat;
-      filter: blur(3px) brightness(0.45);
+      background: url('hero-bg-mindworld.jpg') center/cover no-repeat;
+      background-image: image-set(
+        url('hero-bg-mindworld.webp') type('image/webp'),
+        url('hero-bg-mindworld.jpg') type('image/jpeg')
+      );
+      filter: brightness(0.78);
       z-index: 0;
     }
     .hero__overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(160deg, rgba(23,61,48,.55) 0%, rgba(38,92,75,.35) 100%);
+      background: linear-gradient(160deg, rgba(23,61,48,.35) 0%, rgba(23,61,48,.15) 60%, rgba(23,61,48,.45) 100%);
       z-index: 1;
     }
     .hero__content {
