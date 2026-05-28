@@ -184,4 +184,89 @@ Daniel pidió cambiar el hero-bg actual de la home (rotulador negro trazando lí
 
 ---
 
-**Cierre Claude · 2026-05-28**
+## 7 · Adenda · trabajo de la tarde (mismo día, sesión continua)
+
+Tras el handoff de mañana, Daniel siguió con frente de cierre del día. Bloque completo de UI/UX y product details ejecutado en tarde-noche.
+
+### 7.1 · PRs mergeados (orden cronológico)
+
+| PR | Título | Resumen |
+|---|---|---|
+| #256 | Tarjetas firmadas con sangrado + portadas físicas EE + tienda enlazada desde home | 11 tarjetas A6 1311×1819 a 300 dpi listas para imprenta + portadas físicas reales EE en tienda + «Firmados» en menú |
+| #258 | Hero home · imagen ChatGPT Images cinemática «MIND WORLD PROJECT + ventana» | Sustitución del hero rotulador por la versión 09:02:44 con logo · webp 56 KB + jpg 147 KB fallback · alternativas en `/assets/hero-bg-alternativas/` |
+| #260 | Portada y contraportada retro libro Engranajes · sustitución en toda la web | **Error de interpretación** · sustituí portada general por la retro, asumiendo que era la nueva portada oficial |
+| #261 | Banner reducido a 2 anuncios + «Ediciones limitadas» en menú | Banner home pasa de 5 a 2 anuncios · «Firmados» renombrado «Ediciones limitadas» |
+| #262 | Fix · portadaretro solo en la EE tapa blanda color (no portada general) | Revert PR #260 · portadaretro es portada de la EE tapa blanda papel grueso color únicamente |
+| #263 | EE tapa blanda papel grueso a color · 75€ + copy con historia del prototipo | Precio 55€ → 75€ · copy nuevo cuenta que es «el primer ejemplar físico que existió, prototipo del autor antes de cerrar formato final» |
+| #266 | Tapa dura habitual + autoauditoría completa | Cambio inicial · tapadurapixelada en tienda tapa dura. Autoauditoría detecta inconsistencias · amplía a sitio entero + limpia 14 MB huérfanos |
+
+PR #255 cerrado sin mergear (5 archivos con nombres feos · las imágenes ya estaban en main con nombres limpios tras PR #258).
+
+### 7.2 · Estado final de la tienda firmados al cierre
+
+| Producto | Stripe Product | Price | Pago | Stock | Portada |
+|---|---|---|---|---|---|
+| EE tapa dura B/N | `prod_UbE1gkAaO211Fs` | `price_1Tc1ZtFW3OLCwM3HS2NV36Hs` (65€) | `https://buy.stripe.com/00w3cv3KW6X30SffLO2sM0c` | 1 | `libro-ee-tapa-dura-bn-portada.png` (kraft + engranajes) |
+| EE tapa blanda papel grueso color | `prod_UbE1eMyz4kOIGq` | **`price_1Tc5wFFW3OLCwM3HANjYxCq5` (75€)** | **`https://buy.stripe.com/dRm4gz4P0dlrbwT7fi2sM0h`** | 1 | `portadaretro.jpg` (sepia con perfil + título grande) |
+| Engranajes tapa dura firmado | `prod_UbE1FeSVTlMQuA` | `price_1Tc1ZvFW3OLCwM3HkeCNEB7Z` (30€) | `https://buy.stripe.com/5kQeVd5T42GN58vbvy2sM0e` | 3 | `tapadurapixelada.webp` (sepia con perfil) |
+| Engranajes tapa blanda firmado | `prod_UbE1Oo3neyKrzX` | `price_1Tc1ZwFW3OLCwM3HLoCVcAaW` (20€) | `https://buy.stripe.com/8x2aEXa9k4OV8kH9nq2sM0f` | 2 | `tapadurapixelada.webp` (misma portada que tapa dura) |
+| Burnout tapa blanda firmado | `prod_UbE1HafgLl1GfY` | `price_1Tc1ZwFW3OLCwM3HOXRdeBDd` (18€) | `https://buy.stripe.com/14AfZha9k1CJgRd1UY2sM0g` | 4 | `portada-burnout.webp` |
+
+**Stripe legacy:** EE tapa blanda color precio viejo `price_1Tc1ZtFW3OLCwM3Hb8wjXL0B` (55€) y Payment Link viejo `plink_1Tc1dXFW3OLCwM3HTgkigIjc` quedan inactivos en la web pero retenidos en Stripe por trazabilidad.
+
+### 7.3 · Mapa visual de portadas en el sitio (al cierre)
+
+- **`tapadurapixelada.webp`** · portada oficial del libro publicado (sepia + perfil) → home sección Libros, Schema.org, libros-firmados tapa dura/blanda habituales, libro-engranajes-mente, capítulo 3, todas las landings de servicios, talleres adolescentes, sitemap.
+- **`contraportadadurapixelada.webp/png`** · contraportada oficial → home `<details>` (única).
+- **`portadaretro.jpg`** · prototipo único · solo en EE tapa blanda papel grueso color (75€) en libros-firmados.
+- **`libro-ee-tapa-dura-bn-portada.png`** · solo en EE tapa dura B/N (65€) en libros-firmados.
+- **`portada-burnout.webp`** · home sección Libros + libros-firmados Burnout + lead-burnout-5-senales.
+- **Hero home** · `hero-bg-mindworld.webp/.jpg` (ChatGPT Images con logo «MIND WORLD PROJECT»).
+
+### 7.4 · Archivos eliminados del repo (≈14 MB liberados)
+
+- `1C538333-F22F-4C33-B05C-97773ED4F64B.png` (2.5 MB · duplicado de tapadurapixelada)
+- `D8E00DD5-1B01-4429-AE97-F5CE24D7D92D.png` (2.5 MB · duplicado de contraportadadurapixelada)
+- `EC7E14DC-6923-4B60-86F1-94ACC12A1E57.png` (2 MB · duplicado de contraportada EE tapa dura B/N)
+- `F4854E8A-7B55-4823-8D57-459062879A3F.png` (2.5 MB · duplicado de libro-ee-tapa-dura-bn-portada)
+- `libro-ee-tapa-blanda-color-portada.png` (2.5 MB · era 1C538333 renombrado, obsoleto)
+- `libro-ee-tapa-blanda-color-contraportada.png` (2.5 MB · era D8E00DD5 renombrado, obsoleto)
+- `libro-ee-tapa-dura-bn-contraportada.png` (2 MB · ya no se sirve desde HTML)
+
+### 7.5 · Decisiones editoriales clave registradas
+
+- **Tarjetas inéditas:** 11 textos · uno por ejemplar físico · paleta TWIM · Instrument Serif + Barlow Condensed · A6 105×148 mm con 3 mm sangrado y cropmarks · briefing imprenta completo en `documentos-internos/tarjetas-libros-firmados.md`.
+- **Precio EE tapa blanda papel grueso color** 55€ → **75€** justificado por unicidad (prototipo del autor, primer ejemplar físico que existió, antes de cerrar formato final).
+- **Banner home** · pasa de 5 a 2 anuncios prioritarios (Directo 7 jun + lista de espera Volver a Mí).
+- **Hero home** · imagen cinematográfica «ventana + libro abierto + plantas» con logo MIND WORLD PROJECT como variante elegida (versiones sin logo / ultrawide guardadas en `/assets/hero-bg-alternativas/`).
+- **Menú principal:** «Firmados» → «Ediciones limitadas». Sigue siendo enlace directo a `/libros-firmados.html`.
+
+### 7.6 · Autoauditoría adicional (regla §6) · resultado
+
+| Frente | Verificado | Resultado | Acción |
+|---|---|---|---|
+| Stripe products + prices + payment links | Sí | OK · price `price_1Tc5wFFW3OLCwM3HANjYxCq5` y payment link nuevos para 75€ | Nada pendiente |
+| Naming Stripe regla §9 | Sí | OK · sigue `·` y `«…»` | Nada pendiente |
+| Imágenes referenciadas en HTML coherentes | Sí · cada portada apunta donde debe | OK | Nada pendiente |
+| Archivos huérfanos | Sí · detectados 7 archivos sin referencias | OK · borrados, 14 MB liberados | Nada pendiente |
+| `portadalosengranajes.webp/.jpg` (versión Amazon) | Sí · ya no referenciado | Mantenido en repo por trazabilidad histórica | Nada pendiente |
+| Sitemap | Sí · actualizado con `tapadurapixelada.webp` | OK | Nada pendiente |
+| Banner home limpio | Sí · 2 anuncios | OK | Nada pendiente |
+| Menú home | Sí · «Ediciones limitadas» activo | OK | Nada pendiente |
+| Hero home | Sí · ChatGPT Images en producción | OK | Nada pendiente |
+| Coherencia tapa dura/blanda habitual en tienda | Sí · ambas con `tapadurapixelada.webp` | OK · misma portada (es el mismo libro, distinto formato cubierta) | Nada pendiente |
+| `perfil-daniel-handoff-sesiones.md` | NO TOCADO (regla §10 inviolable, sin OK explícito de Daniel) | OK | Nada pendiente |
+| Métricas Carrusel #3 a 7 días (hito vencido 26-may) | Sí · doc existe `metricas-carrusel-3-voz-que-te-juzga-19-may-2026.md` desde 19-may | OK · cubre baseline + evolución a 7 días | Nada pendiente |
+| PRs abiertos | Sí | PR #266 abierto, esperando CI verde para auto-merge | En curso |
+
+### 7.7 · Pendiente para siguiente sesión
+
+- **Verificar deploy en producción** tras merge de PR #266 · home + tienda + landings deben mostrar `tapadurapixelada` y contraportada nueva.
+- **Imprimir 11 tarjetas** · Daniel las lleva en pen a la imprenta del barrio. Briefing en `documentos-internos/tarjetas-libros-firmados.md`.
+- **Captura baseline orgánica Carrusel #4** mañana 29-may 07:00 (tarea Daniel).
+- **3-jun** · Daniel verifica idioma campaña Directo en MailerLite antes del envío 19:00 CEST.
+- **7-jun 19:00 CEST** · Directo «La voz que te juzga».
+
+---
+
+**Cierre Claude · 2026-05-28 (turno tarde-noche cerrado)**
