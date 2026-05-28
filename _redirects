@@ -12,3 +12,7 @@
 # burnout / sobrepensar / cansancio psíquico).
 # Decisión Daniel 25-may-2026. Archivo HTML eliminado en mismo commit.
 /nopuedoparar-taller.html   /soluciones/   301
+
+# Tienda libros físicos firmados (28-may-2026) · alias amigables a la página real.
+/tienda    /libros-firmados.html   301
+/libros    /libros-firmados.html   301
