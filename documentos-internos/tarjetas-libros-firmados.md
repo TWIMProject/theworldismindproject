@@ -4,7 +4,12 @@
 
 ## Reglas de impresión
 
-- **Formato sugerido:** tarjeta A6 · **105 × 148 mm** (los PNG están a 1181 × 1748 px a 300 dpi, equivalencia exacta) · pedir 3 mm de sangrado a la imprenta · papel estucado mate 250-300 g · acabado mate o satinado, sin laminado · una cara impresa, reverso en blanco · RGB a convertir a CMYK al imprimir.
+- **Formato:** A6 final **105 × 148 mm** · sangrado **3 mm por lado ya incluido** en los PNG · lienzo total 111 × 154 mm · resolución **1311 × 1819 px a 300 dpi**.
+- **Cropmarks:** marcas de corte discretas en las 4 esquinas, fuera del área A6 · indican a la imprenta dónde cortar.
+- **Papel:** estucado mate **250-300 g** · acabado mate o satinado · sin laminado plástico.
+- **Color:** PNG en RGB · pedir conversión a CMYK al imprimir (la imprenta lo hace de oficio).
+- **Cara:** una sola cara impresa · reverso en blanco.
+- **Mensaje exacto para la imprenta:** «A6 con sangrado de 3 mm ya incluido, cortar por las marcas de las esquinas. Papel estucado mate 250-300 g. Una cara, sin laminado. Una unidad por archivo (sobrantes según mínimo de tirada de la imprenta)».
 - **Tipografía:** Instrument Serif (titular) + Barlow Condensed (cuerpo).
 - **Paleta:** texto verde oscuro `#173D30` sobre crema `#FDFCFA`. Filete inferior beige `#C2A78B`.
 - **Pie de tarjeta:** «Daniel Orozco Abia · Ejemplar firmado · TWIM Project».
