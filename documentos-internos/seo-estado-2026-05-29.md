@@ -54,7 +54,7 @@ Todas aditivas, sin riesgo de routing. CI/deploy preview de Netlify debe quedar 
    - Añadido `canonical` autorreferenciado (`/reto-7-dias.html`), `author`, `robots`.
    - OG completo: `og:url`, `og:image` (`portada-rrss-reto-7-dias-deja-de-buscarte.png`, tarjeta ya existente), `og:image:alt`, `og:site_name`, `og:locale`.
    - Twitter Card `summary_large_image` con título/descr/imagen.
-   - **Copy (regla inviolable «claridad de un vistazo»):** H1 «por qué necesitas que te **confirmen** para sentirte bien» → «por qué necesitas que los demás te **digan** que estás bien». Mismo cambio en `og:description`. (La meta description mantiene «necesidad de validación» — término clínico válido en SEO según la propia regla.)
+   - **Copy (regla inviolable «claridad de un vistazo»):** H1 «por qué necesitas que te **confirmen** para sentirte bien» → «por qué **dependes** de la mirada de los demás para estar en paz» (redacción elegida por Daniel el 29-may entre 3 opciones; usa la imagen concreta «la mirada del otro» de la propia regla). `og:description` y `twitter:description` alineados a la misma imagen. (La meta description mantiene «necesidad de validación» — término clínico válido en SEO según la propia regla.)
 
 2. **`libros-firmados.html`**
    - Canonical corregido a `/libros-firmados.html` (coherente con sitemap + enlaces internos + convención `.html` del resto del sitio).
