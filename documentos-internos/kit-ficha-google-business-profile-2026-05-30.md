@@ -152,6 +152,43 @@ Tono editorial TWIM. Cada uno ≤ 1.500 caracteres, con imagen + enlace.
 
 > Objetivo realista (`metricas-gbp` §5.1): **5 reseñas a 31 ago 2026** mínimo; con 8-12 el efecto en queries categóricas es notable.
 
+### 7.4 · Calendario de goteo (decidido con Daniel · 30 may 2026)
+
+> Decisión Daniel: NO entregar decenas de reseñas «listas para pegar con nombre» (patrón que Google penaliza/borra sobre una base de 0-2 reseñas, riesgo de suspensión de ficha). En su lugar: **goteo lento de ~12 reseñas finales** + el resto como **semillas que cada persona reescribe**. Prioridad a lectores/asistentes/suscriptores; familia directa (hermanas, hermano, sobrina) con cautela y al final (Google marca reseñas de familiares). Daniel avisa a cada persona cuándo publicar.
+
+**Tanda 1 · HOY**
+1. Me leí *Los Engranajes de la Mente* casi de una sentada. Por fin alguien explica eso de no parar de darle vueltas a todo sin ponerse místico. Se entiende todo y se aplica.
+2. Estuve en una charla suya y se me pasó el tiempo volando. Tiene una forma de estar en el escenario que engancha, en ningún momento se hace pesado.
+3. Lo que más me llega es la naturalidad con la que explica. No parece que te suelte una clase, parece que te habla a ti directamente.
+
+**Tanda 2 · MAÑANA**
+4. Sigo su newsletter desde hace meses y es de lo poco que abro siempre. Habla de salud mental sin frases vacías de autoayuda; se nota el rigor que hay detrás.
+5. Se nota que le apasiona lo que hace. Lo transmite en cada palabra y se te contagia. Ojalá más profesionales tuvieran esas ganas.
+6. En sus charlas se crea un ambiente de mucha confianza. Te sientes cómodo hasta para levantar la mano y preguntar, que a mí normalmente me da corte.
+
+**Tanda A · semana siguiente**
+7. *Los Engranajes de la Mente* es de esos libros que acabas subrayando entero. Escribe igual que habla: claro y sin venderte humo.
+8. He ido a un par de conferencias suyas y siempre salgo con la cabeza llena de ideas. Sabe llegar a la gente de todas las edades.
+9. Tiene un don para explicar. Cosas complicadas de la mente te las deja claras sin que te sientas tonto por preguntar.
+
+**Tanda B · semana siguiente**
+10. Su newsletter es una pequeña dosis de cordura cada semana. Temas profundos contados de forma que los entiendes y los usas.
+11. Hay quien trabaja y quien disfruta lo que hace. Daniel es de los segundos, se le nota en cómo lo cuenta todo.
+12. Consigue que un grupo de desconocidos en una charla acabe sintiéndose casi en familia. Esa cercanía no es fácil de lograr.
+
+### 7.5 · Semillas (punto de partida, NO texto final · para el resto de personas)
+
+No se copian tal cual: se entregan como chispa y **cada persona escribe la suya** con un detalle propio (qué capítulo le marcó, qué charla, etc.). Así ninguna se repite y suenan reales.
+
+- **Libro:** «Cuenta qué te aportó *Los Engranajes de la Mente* y a quién se lo recomendarías.»
+- **Newsletter:** «Di por qué abres sus cartas y qué te llevas de ellas.»
+- **Conferencia:** «Recuerda una charla suya concreta y qué te llevaste de ella.»
+- **Naturalidad/cercanía:** «Describe cómo se siente escucharle explicar y por qué da confianza.»
+- **Pasión/vocación:** «Habla de lo que transmite cuando habla de su trabajo.»
+- **Mix:** «Junta dos cosas que conozcas de él (libro + charla, newsletter + cómo es) en un par de frases.»
+
+> Reparto sano: una por persona y solo a quien lo vivió de verdad (lector → libro; asistente → charla). Goteo 3 hoy + 3 mañana + 3+3 la semana siguiente, nunca de golpe. Cada uno desde su móvil/cuenta. Familia directa al final y muy espaciada.
+
 ---
 
 ## 8 · Qué NO hacer (protege la ficha)
