@@ -27,7 +27,7 @@ Link en bio.
 **Hashtags (publicar en el primer comentario, no en la caption · estética limpia + mismo efecto algorítmico):**
 
 ```
-#psicologia #ansiedad #autoexigencia #dependenciaemocional #criticointerior #vozinterior #psicoanalisisaplicado #psicologavalencia #charlasdepsicologia #twimproject
+#psicologia #ansiedad #autoexigencia #dependenciaemocional #criticointerior #psicoanalisisaplicado #psicologavalencia #twimproject
 ```
 
 | Hashtag | Tier | Función |
@@ -37,11 +37,11 @@ Link en bio.
 | #autoexigencia | Medio (~200K) | Audiencia específica tuya |
 | #dependenciaemocional | Medio (~400K) | Cruce con Volver a Mí |
 | #criticointerior | Medio/nicho (~80K) | Concepto exacto del directo |
-| #vozinterior | Medio (~150K) | Reformulación del tema |
 | #psicoanalisisaplicado | Nicho (<10K) | Diferenciador editorial TWIM |
 | #psicologavalencia | Nicho (~30K) | Geo · SEO local + consulta |
-| #charlasdepsicologia | Nicho (~20K) | Búsqueda específica formato |
 | #twimproject | Branded | Construir marca personal IG |
+
+> Estándar repo · 6-8 hashtags máx por caption IG (ref `documentos-internos/metricas-carrusel-2-saberlo-12-may-2026.md:172` + `contenido-rrss/te-escribo-voz-que-te-juzga/BRIEFING.md:115`). Set ajustado a 8 · se quitaron `#vozinterior` (superposición con `#criticointerior`) y `#charlasdepsicologia` (nicho sustituible).
 
 ---
 
@@ -72,7 +72,7 @@ el 7 de junio te leo en voz alta.
 una hora. un domingo. gratuito.
 sobre la voz interna que te dice «no es suficiente».
 
-→ twimproject.com/directo-la-voz-que-te-juzga
+→ twimproject.com/directo-la-voz-que-te-juzga/
 ```
 
 ```
@@ -98,7 +98,7 @@ si ese domingo no puedes, regístrate igual · te dejo después el material.
 domingo 7 de junio · 19:00 hora españa · vía meet
 
 reservar plaza ↓
-twimproject.com/directo-la-voz-que-te-juzga
+twimproject.com/directo-la-voz-que-te-juzga/
 ```
 
 ---
@@ -116,4 +116,4 @@ twimproject.com/directo-la-voz-que-te-juzga
 
 - **Story IG con countdown sticker** (acción C de la propuesta original · queda pendiente si Daniel la activa).
 - **Captura métrica del carrusel** al día 1, 3 y 7 (para tener datos del impacto del push).
-- **Actualizar `documentos-internos/cierre-sesion-2026-05-29.md`** con resultados a 24h del Directo.
+- **Actualizar `documentos-internos/cierre-sesion-2026-05-31.md`** (cierre del día siguiente a la publicación) con resultados a 24h del carrusel y conteo de registros nuevos al Directo.
