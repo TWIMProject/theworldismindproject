@@ -22,9 +22,26 @@ Si ese domingo no puedes, regístrate igual · a quienes os apuntáis os dejo de
 
 Plaza con tu email.
 Link en bio.
-
-#psicologia #ansiedad #autoexigencia #valencia #directo
 ```
+
+**Hashtags (publicar en el primer comentario, no en la caption · estética limpia + mismo efecto algorítmico):**
+
+```
+#psicologia #ansiedad #autoexigencia #dependenciaemocional #criticointerior #vozinterior #psicoanalisisaplicado #psicologavalencia #charlasdepsicologia #twimproject
+```
+
+| Hashtag | Tier | Función |
+|---|---|---|
+| #psicologia | Alto (>5M) | Paraguas alcance |
+| #ansiedad | Alto (~3M) | Tema directo · audiencia caliente |
+| #autoexigencia | Medio (~200K) | Audiencia específica tuya |
+| #dependenciaemocional | Medio (~400K) | Cruce con Volver a Mí |
+| #criticointerior | Medio/nicho (~80K) | Concepto exacto del directo |
+| #vozinterior | Medio (~150K) | Reformulación del tema |
+| #psicoanalisisaplicado | Nicho (<10K) | Diferenciador editorial TWIM |
+| #psicologavalencia | Nicho (~30K) | Geo · SEO local + consulta |
+| #charlasdepsicologia | Nicho (~20K) | Búsqueda específica formato |
+| #twimproject | Branded | Construir marca personal IG |
 
 ---
 
