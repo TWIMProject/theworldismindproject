@@ -73,7 +73,12 @@ Tono: descriptivo del mecanismo, anti-coaching, sin «tú puedes». Psicología 
 
 ### 5.1 · Carta de promoción (newsletter «Te escribo», ~3-5 días antes)
 
-> ✅ **Programada el 20-may-2026** vía MCP MailerLite. ID campaña `187974522939377362`, status `ready`, `scheduled_for: 2026-06-03 17:00 UTC` (= miércoles **3 jun 19:00 CEST**, 5 días antes del directo). HTML en `contenido-rrss/te-escribo-newsletters/carta-promo-directo-8-jun-voz-que-te-juzga.html`. Audiencia: 4 grupos editoriales (Newsletter Home + Reto + Lead Magnet Dependencia + Lista General · 49 destinatarios). **Pendiente Daniel en panel:** cambiar idioma de la campaña a Español antes del envío (arista #1 del conector, §9.2).
+> ✅ **Programada el 20-may-2026** vía MCP MailerLite. ID campaña `187974522939377362`, status `ready`, `scheduled_for: 2026-06-03 17:00 UTC` (= miércoles **3 jun 19:00 CEST**, 5 días antes del directo). HTML en `contenido-rrss/te-escribo-newsletters/carta-promo-directo-8-jun-voz-que-te-juzga.html`.
+>
+> **Actualización 30-may-2026 (verificado en panel + API por Daniel y Code):**
+> - **Audiencia real: `all_active_subscribers` = TODOS los suscriptores activos · 57 destinatarios** (no los 4 grupos / 49 que se anotaron al programar; la campaña quedó configurada a «todos los activos»). Decisión Daniel · mantener envío amplio (captación). Asunto, remitente verificado (`danielorozco@twimproject.com` / «Daniel Orozco - TWIM Project»), HTML español y CTA a `twimproject.com/directo-la-voz-que-te-juzga/` confirmados correctos.
+> - **Idioma de la campaña → Español: CORREGIDO por Daniel el 30-may** en el panel (Configuración del email). Resuelta la arista #1 del conector (`language_id` nacía en `en-US` por API y no era editable desde MCP). Pendiente del envío: que el badge siga en «Español» al programar y que el pie legal salga en español (verificar con «Enviar una prueba»).
+> - **Reprogramación final:** Daniel reprograma vía panel con «Enviar después» → **3 jun 19:00 (zona Europe/Madrid)**. Verificar que la zona horaria mostrada sea Madrid/CEST y no UTC.
 
 ```
 Asunto: Te invito a una hora, en directo, sobre la voz que te juzga
