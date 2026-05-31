@@ -15,13 +15,13 @@
 1. Abre la **invitación de Meet** del evento (`https://meet.google.com/fsu-scrz-res`) desde tu cuenta de organizador.
 2. Entra como organizador y verifica que tienes los **Controles de organizador** activos · icono del escudo abajo a la derecha de la pantalla.
 3. **Activa estas opciones del organizador** (todas accesibles desde el escudo):
-   - **«Acceso rápido»: DESACTIVADO** · obliga a que tú apruebes manualmente a quien entra. Sin sorpresas.
+   - **«Acceso rápido»: DESACTIVADO** · con esta opción desactivada, los asistentes tendrán que **pedirte acceso** uno a uno y tú apruebas manualmente. Sin sorpresas. (Con Acceso rápido ACTIVADO, los invitados del calendario entrarían sin que tú apruebes · que es lo contrario de lo que queremos.)
    - **«Compartir pantalla»: solo el organizador** · nadie más puede compartir su pantalla por error.
    - **«Enviar mensajes en el chat»: solo el organizador** · esto te lo recomiendo así durante los primeros 10 min de la charla, lo puedes abrir después si quieres recibir preguntas en chat. (Si no quieres preguntas escritas durante la hora, déjalo así toda la sesión.)
    - **«Activar audio y vídeo»: solo el organizador** · CRÍTICO. Los asistentes no podrán activar su cámara ni su micrófono. Tú sales en cámara, ellos no.
 4. Verifica el **fondo virtual** o el fondo real desde la propia ventana de previsualización antes de entrar. Si vas a usar fondo real, mira que detrás de ti no haya nada que distraiga.
-5. **Prueba el audio** · auriculares con micro (mejor que el del portátil). Si grabas, ajusta para que la entrada de voz no satura.
-6. **Activa la grabación local** desde el botón de tres puntos del menú de Meet · queda guardada automáticamente en tu Drive vinculado tras la sesión.
+5. **Prueba el audio** · auriculares con micro (mejor que el del portátil). Si grabas, ajusta para que la entrada de voz no sature.
+6. **Activa la grabación en la nube** desde el botón de tres puntos del menú de Meet (requiere plan Workspace Business Standard+, Individual o Meet Premium · el plan Flexible 16,20€ que contrataste **no** incluye grabación nativa, comprueba antes del directo y si no está disponible, usa OBS o QuickTime como grabación local de pantalla). La grabación en la nube se guarda en tu Drive en la carpeta «Meet Recordings» y **tarda varios minutos en aparecer** después de cerrar la sesión · no es instantáneo.
 
 ### 1.2 · El mismo día, una hora antes (do 7 jun 18:00 CEST)
 
@@ -35,8 +35,8 @@
 
 - Permite la entrada de los inscritos a la sala (uno a uno, según pidan acceso).
 - Como sus cámaras y micros están bloqueados por organizador, entrarán automáticamente en modo «espectador» · solo verán y oirán a Daniel.
-- Inicia la grabación local.
-- Verifica que tu cámara y tu micro están activos solo tú.
+- Inicia la grabación (en la nube si tu plan lo permite · si no, OBS/QuickTime aparte).
+- Verifica que el único con cámara y micrófono activos eres tú.
 
 ### 1.4 · Si alguien tiene problemas técnicos
 
@@ -146,6 +146,7 @@
 ## 4 · Después del Directo
 
 - Detén la grabación de Meet.
-- Pasa el archivo de Drive a una carpeta local (la sesión queda en evergreen).
+- Espera unos minutos a que aparezca el archivo en la carpeta «Meet Recordings» de tu Drive (la grabación en la nube no es instantánea). Si grabaste con OBS/QuickTime, el archivo local ya está disponible.
+- Pasa el archivo a una carpeta local de backup (la sesión queda en evergreen).
 - Envía email de agradecimiento a los inscritos (un breve recado con el link al Cap III + la grabación si la quieres compartir).
 - Actualiza `documentos-internos/cierre-sesion-2026-06-07.md` con asistencia real, sensación general, preguntas del chat si abriste chat, y qué iría distinto en una próxima edición.
