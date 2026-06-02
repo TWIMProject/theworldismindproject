@@ -215,4 +215,20 @@ Implicación operativa para próximas sesiones · NO proponer abrir canal WhatsA
 
 ---
 
-**Última actualización:** 27 may 2026 tarde · sesión `claude/decision-canal-whatsapp-aparcado`.
+### 2 jun 2026 · sesión `claude/blissful-lovelace-VPbaj`
+
+Información nueva verificada con cita verbatim · se añade SIN modificar las secciones previas.
+
+**Regla de glosa · jerga en copy público largo**
+
+- «para la web, artículos y demás siempre utilizar lenguaje sin jerga o con jerga pero siempre luego explicando esa palabra o palabras desde un lenguaje sin jerga» (2 jun 2026).
+
+Implicación operativa · persistida en `CLAUDE.md` §8 (Claridad de un vistazo) como complemento. En artículos/insights/cuerpo web largo SÍ vale jerga clínica si se glosa en llano acto seguido. En piezas cortas/escaneables (hero, lede, taglines, captions, asuntos, hilos) y en formatos hablados (directo, podcast) sigue rigiendo cero jerga sin glosa · ir directo a la imagen concreta.
+
+**Aprovecha contenido editorial externo como insumo para sus piezas**
+
+- Daniel pasó dos transcripciones de vídeos de Matías Tavil («La Asociación Libre») pidiendo «sacarle jugo» para su ponencia del Directo 7 jun. Implicación · cuando pasa material de terceros, destilar el concepto y reescribirlo en voz TWIM (no copiar), mapearlo a la pieza concreta, marcar qué usar y qué reservar para otra pieza, y dejar atribución honesta en docs internos (no se publica la fuente).
+
+---
+
+**Última actualización:** 2 jun 2026 · sesión `claude/blissful-lovelace-VPbaj`.
