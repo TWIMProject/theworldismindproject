@@ -36,6 +36,7 @@ El PDF ensamblado es el **producto de pago**. Si se sube al repo, Netlify lo ser
 - ✅ `netlify/functions/package.json` — dependencia `@netlify/blobs`.
 
 ### Falta (ejecutar con OK + verificación · en este orden)
+0. **Proteger `documentos-internos/` del acceso público** (HALLAZGO verificado 2 jun: no hay regla y `publish="."` → hoy el extra/cuaderno serían accesibles por URL, aunque con `noindex`). Antes de mergear el material de pago, añadir en `_redirects` una regla tipo `/documentos-internos/* /404.html 404` (o equivalente) y **verificar en el deploy preview con un navegador real** (el bot de WebFetch recibe 403 de Netlify y no sirve para comprobarlo). Es cambio de routing = infraestructura §2.
 1. **Verificar el deploy preview del PR**: que el build de funciones pasa con el nuevo `package.json` y que **el webhook de talleres (cobra 720 € reales) sigue intacto**. Crítico antes de cualquier merge.
 2. **Extender `stripe-webhook.js`** (cirugía mínima, sin tocar la rama de talleres): si un line item coincide con `PRICE_LIBRO_DIGITAL`, firmar token (`signDownloadToken`, ttl 7 días, productKey `engranajes-digital`), construir `https://twimproject.com/.netlify/functions/descarga-libro?t=<token>` y dar de alta al comprador en MailerLite con el campo `download_url` + grupo comprador. La lógica de talleres queda igual.
 3. **Subir el PDF a Netlify Blobs** (store `productos`, clave `engranajes-edicion-digital.pdf`) con un script o la CLI de Netlify. El PDF se genera con `scripts/montar-pdf-engranajes-digital.py`. NO al repo.
