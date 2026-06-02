@@ -53,7 +53,24 @@ El domingo, una hora en directo: la voz que te dice «no es suficiente» — de 
 
 ---
 
+## B-bis · Versión LEAD ADS (la que clava más registros — usar esta)
+
+El usuario deja el email **sin salir de Instagram** → mucha más conversión que mandarlo a una landing.
+
+- **Objetivo de campaña:** «Clientes potenciales» (Lead generation).
+- **Formulario instantáneo:**
+  - Titular: `Directo gratuito · La voz que te juzga`
+  - Descripción: `Domingo 7 jun, 19:00 (hora de España). Una hora sobre la voz que te dice «no es suficiente». Déjame tu email y te mando el acceso.`
+  - **Campos: solo Email** (cuantos menos, más conversión; nombre opcional).
+  - Privacidad: enlace a tu política de privacidad (`twimproject.com/privacy` o la que uses).
+  - Pantalla final: `Hecho. Te llega el enlace de acceso por email antes del directo.` + botón a `twimproject.com`.
+- **Público / creatividad:** igual que en la sección B.
+- **Presupuesto para pelear los 50:** **50 €/día × 4 días (mié 3 – sáb 6)** ≈ 200 €. A ~4 €/lead = ~50 registros. Si el coste/lead sube de ~6 €, ajustar público; si baja, mejor.
+
+> **IMPORTANTE · los leads de Meta NO entran solos en MailerLite.** Cada día (o al cierre) descarga el CSV de leads desde Meta y pásamelo: **yo los importo al grupo del Directo (`187662493483533365`)** vía MCP, y así reciben E2/E3/E4 ya programados. (Mejor aún si antes dejamos lista la automation de confirmación.)
+
 ## Orden sugerido
-1. **Hoy:** post de Comunidad de YouTube + comentarios fijados (gratis, tu activo grande).
-2. **Hoy/mañana:** monta la campaña Meta (80-100 €) y déjala corriendo 4 días.
-3. Mantén las stories del kit de difusión en paralelo.
+1. **Mañana a primera hora (no esta noche):** monta la campaña **Lead Ads** (50 €/día, 4 días) y publícala. Cada día sin correr es alcance perdido.
+2. **Mañana:** post de Comunidad de YouTube + comentarios fijados (suma, aunque el alcance sea menor).
+3. **En paralelo toda la semana:** stories del kit + la carta promo (sale sola el 3 jun 19:00).
+4. **A diario:** me pasas el CSV de leads de Meta y los importo al grupo del Directo.
