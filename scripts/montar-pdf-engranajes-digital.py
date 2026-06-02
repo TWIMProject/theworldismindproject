@@ -18,6 +18,7 @@ solo vía la función de descarga tras la compra. Este script SÍ es versionable
 Salida: /tmp/LEDLM-edicion-digital.pdf
 Reproducir: python3 scripts/montar-pdf-engranajes-digital.py
 """
+import os
 from pathlib import Path
 import fitz  # PyMuPDF
 from weasyprint import HTML, CSS
@@ -29,7 +30,7 @@ PORTADA = ROOT / "documentos-internos" / "producto-engranajes-digital" / "portad
 CONTRA = ROOT / "contraportadaretro.jpg"
 OUT = Path("/tmp/LEDLM-edicion-digital.pdf")
 
-FONT_DIR = Path("/mnt/skills/examples/canvas-design/canvas-fonts")
+FONT_DIR = Path(os.environ.get("TWIM_FONTS_DIR", "/mnt/skills/examples/canvas-design/canvas-fonts")).expanduser()
 CREAM = (251/255, 228/255, 187/255)
 
 # tamaño de página del interior

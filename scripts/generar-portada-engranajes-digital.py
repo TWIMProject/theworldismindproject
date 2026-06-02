@@ -17,6 +17,7 @@ Salida: documentos-internos/producto-engranajes-digital/portada-edicion-digital-
 Reproducir: python3 scripts/generar-portada-engranajes-digital.py
 """
 import math
+import os
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
@@ -25,7 +26,9 @@ OUT_DIR = ROOT / "documentos-internos" / "producto-engranajes-digital"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT = OUT_DIR / "portada-edicion-digital-twim.jpg"
 
-FONT_DIR = Path("/mnt/skills/examples/canvas-design/canvas-fonts")
+# Fuentes de marca (Instrument Serif). Override por env var TWIM_FONTS_DIR para
+# reproducibilidad en otras máquinas; fallback a la ruta del entorno del agente.
+FONT_DIR = Path(os.environ.get("TWIM_FONTS_DIR", "/mnt/skills/examples/canvas-design/canvas-fonts")).expanduser()
 FR = str(FONT_DIR / "InstrumentSerif-Regular.ttf")
 FI = str(FONT_DIR / "InstrumentSerif-Italic.ttf")
 

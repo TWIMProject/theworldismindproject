@@ -28,10 +28,14 @@ function signDownloadToken({ email, productKey, ttlSeconds, secret }) {
 
 // Devuelve { ok:true, payload } | { ok:false, reason }
 function verifyDownloadToken(token, secret) {
-  if (!token || typeof token !== "string" || !token.includes(".")) {
+  if (!token || typeof token !== "string") {
     return { ok: false, reason: "malformed" };
   }
-  const [body, sig] = token.split(".");
+  const parts = token.split(".");
+  if (parts.length !== 2 || !parts[0] || !parts[1]) {
+    return { ok: false, reason: "malformed" }; // exactamente 2 segmentos no vacíos
+  }
+  const [body, sig] = parts;
   const expected = crypto.createHmac("sha256", secret).update(body).digest();
   const given = b64urlDecode(sig || "");
   if (given.length !== expected.length || !crypto.timingSafeEqual(given, expected)) {
