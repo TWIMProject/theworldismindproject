@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>La mirada del otro · Cuaderno TWIM</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cuaderno TWIM · dejar de necesitar que te validen para sentir que vales. Producto de pago, uso del comprador.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --green-dark:#173D30; --green:#265C4B; --beige:#C2A78B; --cream:#FDFCFA; --ink:#1f1810; --muted:#6b6058; }
+*{box-sizing:border-box;}
+html,body { background:#e9e4dc; color:var(--ink); margin:0; padding:0; font-family:'Lora',Georgia,serif; font-size:11.5pt; line-height:1.7; }
+/* Cada .sheet simula una página A4 en pantalla; en impresión se ajusta a la hoja */
+.sheet { background:var(--cream); max-width:720px; margin:24px auto; padding:64px 64px 72px; box-shadow:0 2px 18px rgba(23,61,48,.10); position:relative; }
+.kicker { font-family:'Barlow Condensed',sans-serif; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--beige); font-size:9.5pt; margin:0 0 18px; }
+h1 { font-family:'Instrument Serif',serif; font-weight:400; font-size:32pt; line-height:1.1; color:var(--green-dark); margin:0 0 12px; letter-spacing:-.01em; }
+h2 { font-family:'Instrument Serif',serif; font-weight:400; font-size:22pt; line-height:1.18; color:var(--green-dark); margin:34px 0 6px; }
+.h2-meta { font-family:'Barlow Condensed',sans-serif; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--beige); font-size:9pt; margin:0 0 20px; }
+h3 { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:12.5pt; letter-spacing:.05em; text-transform:uppercase; color:var(--green); margin:26px 0 8px; }
+p { margin:0 0 14px; }
+ul,ol { margin:0 0 16px; padding-left:22px; } li { margin:0 0 8px; }
+.subtitle { font-family:'Instrument Serif',serif; font-style:italic; color:var(--green); font-size:15pt; line-height:1.4; margin:0 0 8px; }
+.quote { font-family:'Instrument Serif',serif; font-style:italic; font-size:13.5pt; line-height:1.45; color:var(--green); border-left:2px solid var(--beige); padding:8px 0 8px 20px; margin:24px 0; }
+.note { font-size:10pt; color:var(--muted); font-style:italic; }
+.box { background:rgba(194,167,139,.12); border-radius:8px; padding:18px 22px; margin:20px 0; }
+.box h3 { margin-top:0; }
+.signal { background:#fff; border:1px solid #ece6dc; border-radius:8px; padding:16px 20px; margin:16px 0; }
+.exercise { border:1.5px solid var(--green); border-radius:8px; padding:20px 24px; margin:24px 0; }
+.exercise .tag { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--green); font-size:9.5pt; }
+.write-line { border-bottom:1px solid #d8d0c5; height:26px; margin:10px 0; }
+/* Portada */
+.cover { min-height:78vh; display:flex; flex-direction:column; justify-content:center; text-align:center; }
+.cover .brand { font-family:'Barlow Condensed',sans-serif; letter-spacing:.32em; text-transform:uppercase; color:var(--beige); font-size:11pt; margin:0 0 40px; }
+.cover h1 { font-size:46pt; margin:0 0 10px; }
+.cover .sub { font-family:'Instrument Serif',serif; font-style:italic; font-size:18pt; color:var(--green); margin:0 0 48px; }
+.cover .author { font-family:'Barlow Condensed',sans-serif; letter-spacing:.06em; color:var(--muted); font-size:11pt; line-height:1.6; }
+.toc li { font-family:'Barlow Condensed',sans-serif; font-size:13pt; letter-spacing:.02em; margin:0 0 12px; }
+.toc .n { color:var(--beige); font-weight:600; margin-right:10px; }
+.foot { text-align:center; margin-top:48px; padding-top:16px; border-top:1px solid #e6dfd6; font-family:'Barlow Condensed',sans-serif; font-size:9pt; letter-spacing:.06em; color:var(--muted); }
+@page { size:A4; margin:18mm 18mm 20mm; }
+@media print {
+  html,body{ background:#fff; }
+  .sheet{ box-shadow:none; margin:0; max-width:none; padding:0; page-break-after:always; }
+  .sheet:last-child{ page-break-after:auto; }
+  .quote,.box,.exercise,.signal{ page-break-inside:avoid; }
+  h2{ page-break-after:avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<section class="sheet cover">
+  <p class="brand">TWIM Project · Cuaderno</p>
+  <h1>La mirada del otro</h1>
+  <p class="sub">Dejar de necesitar que te validen para sentir que vales.</p>
+  <p class="author">Daniel Orozco Abia<br>Psicólogo General Sanitario · Col. CV11515 · Valencia</p>
+</section>
+
+<!-- CÓMO USAR -->
+<section class="sheet">
+  <p class="kicker">Antes de empezar</p>
+  <h2>Cómo usar este cuaderno</h2>
+  <p class="h2-meta">Léelo despacio · una parte por vez</p>
+  <p>Esto no es un curso ni un manual de autoayuda. No vas a encontrar aquí «diez pasos para quererte más». Es un <strong>mapa</strong> de algo que probablemente llevas haciendo desde muy pronto, casi sin darte cuenta: buscar en la mirada del otro la señal de que estás bien.</p>
+  <p>Está pensado para leerse en orden. Primero entender el mecanismo —qué es, cómo se reconoce, de dónde viene—; después, una parte que casi nadie te cuenta; y al final, una práctica concreta para empezar a notarlo en tu día. No para apagarlo de golpe (no se puede), sino para empezar a verlo.</p>
+  <div class="box">
+    <h3>Una advertencia honesta</h3>
+    <p style="margin:0;">Esto es material educativo, no clínico. Si algo de lo que leas te sacude, es normal. Pero si te paraliza, te roba el sueño o te lleva a sitios oscuros, busca a alguien que pueda mirarlo contigo de cerca. Un cuaderno no sustituye eso.</p>
+  </div>
+</section>
+
+<!-- INTRO · HAMBRE DE MIRADA -->
+<section class="sheet">
+  <p class="kicker">El punto de partida</p>
+  <h2>Hambre de mirada</h2>
+  <p class="h2-meta">No es lo que crees que es</p>
+  <p>Hay personas que necesitan ser miradas para saber que están. Lo digo casi literalmente: la mirada del otro funciona como un espejo. Si te miran, existes. Si te aprueban, vales. Si se alejan, te disuelves un poco.</p>
+  <p>A eso, en consulta, lo llamo <strong>hambre de mirada</strong>.</p>
+  <p>No es necesidad de atención. La atención es ruido y caduca rápido. Hambre de mirada es algo más íntimo: la sensación de que, sin alguien mirándote y diciéndote —con palabras o sin ellas— que estás bien, te quedas en un sitio incómodo del que necesitas salir cuanto antes.</p>
+  <div class="quote">No te falta amor propio. Aprendiste, muy pronto, que sin la mirada del otro no se podía estar tranquila. Y eso se queda.</div>
+  <p>Este cuaderno va sobre eso: sobre por qué te pasa, cómo se nota, y qué empieza a cambiar cuando dejas de pelearte con ello y empiezas a verlo.</p>
+</section>
+
+<!-- ÍNDICE -->
+<section class="sheet">
+  <p class="kicker">Lo que vas a recorrer</p>
+  <h2>Índice</h2>
+  <ol class="toc" style="list-style:none;padding-left:0;margin-top:24px;">
+    <li><span class="n">01</span> El mapa · qué es de verdad depender de la mirada del otro</li>
+    <li><span class="n">02</span> Cómo se reconoce · las señales (con autotest)</li>
+    <li><span class="n">03</span> De dónde viene · la mirada que fue condicional</li>
+    <li><span class="n">04</span> El nudo que nadie te cuenta · lo que la mirada esconde</li>
+    <li><span class="n">05</span> Práctica · empezar a notarlo sin pelearte</li>
+    <li><span class="n">06</span> El siguiente paso</li>
+  </ol>
+  <p class="note" style="margin-top:32px;">Cuaderno TWIM · primera edición · 2026. Uso personal del comprador. No se redistribuye.</p>
+</section>
+
+<!-- [SECCIONES 01-06 SE AÑADEN EN BLOQUES SUCESIVOS] -->
+
+</body>
+</html>
