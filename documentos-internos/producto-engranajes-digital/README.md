@@ -26,15 +26,28 @@ El PDF ensamblado es el **producto de pago**. Si se sube al repo, Netlify lo ser
 - **Nunca** añadir el PDF (ni el `LEDLM.pdf` interior como producto) a una ruta pública servida por Netlify.
 - Pendiente con OK de Daniel: mover también el extra HTML y el cuaderno fuera de `documentos-internos/` público, o bloquearlos, al montar la entrega.
 
-## Plan de entrega segura (para ejecutar CON OK de Daniel · toca `netlify/functions` = infraestructura, regla §2)
+## Entrega segura · arquitectura y estado (regla §2 · cobro = dinero, máximo cuidado)
 
-1. **Producto Stripe** «Infoproducto · Los engranajes de la mente · Edición digital ampliada», 9,90 €, Stripe Checkout (no Payment Link estático).
-2. **Webhook** (`netlify/functions/stripe-webhook.js`, ya existe): al evento `checkout.session.completed`, generar un **token de descarga firmado** (JWT con caducidad ~72 h y nº de descargas limitado) y enviarlo al email del comprador.
-3. **Función de descarga** (`netlify/functions/descarga-libro.js`, nueva): valida el token y sirve el PDF desde una ubicación **no pública** (bundle de la función o storage privado). Sin token válido → 403.
-4. **Marca de agua** con el email del comprador en cada PDF entregado (disuade el reenvío). Se aplica al vuelo en la función o pre-generando por compra.
-5. Verificar en deploy preview antes de mergear. **No mergear a producción sin OK explícito de Daniel** (precedente PR #133).
+**Diseño:** Stripe Checkout (pago) → `stripe-webhook.js` (ya verifica firma) detecta el price del libro → firma un **token HMAC caducable** → mete al comprador en MailerLite con el enlace de descarga en un campo → una automation le envía el email → la función `descarga-libro.js` valida el token y sirve el PDF desde **Netlify Blobs (privado)**. El PDF nunca está en una ruta pública.
 
-Límite honesto asumido: un PDF, una vez descargado, es reenviable; sin DRM (no compensa a 9,90 €). Se blinda el **acceso** (solo el comprador recibe el enlace único) y se disuade con marca de agua. Esto cumple el «solo el comprador, si no nada» que pidió Daniel.
+### Ya construido en la rama (inerte hasta activar · no rompe nada existente)
+- ✅ `netlify/functions/_lib-token.js` — firma/verifica token HMAC (caducidad). Compartido.
+- ✅ `netlify/functions/descarga-libro.js` — sirve el PDF desde Blobs solo con token válido (403 si no). `noindex`.
+- ✅ `netlify/functions/package.json` — dependencia `@netlify/blobs`.
+
+### Falta (ejecutar con OK + verificación · en este orden)
+1. **Verificar el deploy preview del PR**: que el build de funciones pasa con el nuevo `package.json` y que **el webhook de talleres (cobra 720 € reales) sigue intacto**. Crítico antes de cualquier merge.
+2. **Extender `stripe-webhook.js`** (cirugía mínima, sin tocar la rama de talleres): si un line item coincide con `PRICE_LIBRO_DIGITAL`, firmar token (`signDownloadToken`, ttl 7 días, productKey `engranajes-digital`), construir `https://twimproject.com/.netlify/functions/descarga-libro?t=<token>` y dar de alta al comprador en MailerLite con el campo `download_url` + grupo comprador. La lógica de talleres queda igual.
+3. **Subir el PDF a Netlify Blobs** (store `productos`, clave `engranajes-edicion-digital.pdf`) con un script o la CLI de Netlify. El PDF se genera con `scripts/montar-pdf-engranajes-digital.py`. NO al repo.
+4. **Env vars Netlify** (nuevas): `DOWNLOAD_TOKEN_SECRET` (aleatorio largo), `PRICE_LIBRO_DIGITAL` (price_id del producto), `MAILERLITE_GROUP_COMPRADORES_LIBRO` (id del grupo).
+5. **Stripe**: crear producto «Infoproducto · Los engranajes de la mente · Edición digital ampliada» a 9,90 € + Payment Link. (Sin MCP de Stripe en esta sesión → lo crea Daniel en panel, o vía API con la secret key.)
+6. **MailerLite**: crear campo `download_url`, grupo comprador y automation de entrega (email con `{{download_url}}`, voz «Te escribo»).
+7. **PRUEBA EN MODO TEST de Stripe end-to-end** (pago de prueba → llega email → descarga funciona → token caduca) **antes de pasar a live**. No se cobra de verdad hasta que la prueba pase.
+8. Solo entonces, con OK de Daniel, mergear a producción.
+
+**Marca de agua** con el email del comprador en el PDF · mejora v2 (disuade reenvío). v1 sale sin ella: el token caducable + Blobs privado ya cumple «solo el comprador» en el acceso.
+
+Límite honesto: un PDF descargado es reenviable; sin DRM (no compensa a 9,90 €). Se blinda el acceso, no la copia. La marca de agua (v2) es el disuasor proporcional.
 
 ## Reproducir
 
