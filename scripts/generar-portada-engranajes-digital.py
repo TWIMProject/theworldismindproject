@@ -1,69 +1,77 @@
 #!/usr/bin/env python3
 """
-Genera la portada de la EDICIÓN DIGITAL TWIM de «Los engranajes de la mente».
+Portada de la EDICIÓN DIGITAL TWIM de «Los engranajes de la mente».
 
-Decidido el 2 jun 2026 (sesión claude/blissful-lovelace-VPbaj). Daniel pidió una
-portada "más marca TWIM y con novedad" para la venta directa digital, distinta de
-la de Amazon. En vez de rediseñar de cero (sin ilustración quedaría sosa), se parte
-de la portada existente y se le da sello TWIM:
+Decidida el 2 jun 2026 (sesión claude/blissful-lovelace-VPbaj). Daniel descartó el
+recoloreo de la portada de Amazon ("combinación horrenda") y pidió una de cero, más
+marca TWIM, que hiciera familia con la contraportada elegida (`contraportadaretro.jpg`,
+line-art sepia sobre crema). Resultado aprobado por Daniel ("así genial"):
 
-  1. Duotono cálido sobre `portadalosengranajes.jpg` para igualar los tonos a la
-     contraportada elegida (`contraportadaretro.jpg`) y eliminar el verde original.
-  2. Banda inferior verde TWIM (#173D30) con el logo MIND WORLD PROJECT, el nombre
-     del autor y el colegiado correctos (se elimina el alias "Psicólogo Random").
+  - Fondo crema muestreado de la contraportada (para que casen exactos).
+  - Engranajes a trazo (dientes trapezoidales reales, no estrellas), sepia.
+  - Tipografía de marca (Instrument Serif), título en verde TWIM.
+  - Doble filete (marco) verde + sepia: estructura y rompe el plano beige.
+  - Logo MIND WORLD PROJECT + autor y colegiado correctos (sin "Psicólogo Random").
 
 Salida: documentos-internos/producto-engranajes-digital/portada-edicion-digital-twim.jpg
 Reproducir: python3 scripts/generar-portada-engranajes-digital.py
 """
+import math
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageEnhance
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "documentos-internos" / "producto-engranajes-digital"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 OUT = OUT_DIR / "portada-edicion-digital-twim.jpg"
 
-GREEN = "#173D30"; BEIGE = "#C2A78B"; CREAM = "#FDFCFA"
-# Fuente de marca (Instrument Serif). Ruta del entorno; ajustar si se ejecuta en otro.
 FONT_DIR = Path("/mnt/skills/examples/canvas-design/canvas-fonts")
-F_REG = str(FONT_DIR / "InstrumentSerif-Regular.ttf")
-F_ITA = str(FONT_DIR / "InstrumentSerif-Italic.ttf")
+FR = str(FONT_DIR / "InstrumentSerif-Regular.ttf")
+FI = str(FONT_DIR / "InstrumentSerif-Italic.ttf")
 
-# 1 · DUOTONO: igualar tonos a la contraportada retro
-base = Image.open(ROOT / "portadalosengranajes.jpg").convert("RGB")
 ref = Image.open(ROOT / "contraportadaretro.jpg").convert("RGB")
-cream = ref.getpixel((15, 15))
-mid = ref.getpixel((ref.size[0] // 2, int(ref.size[1] * 0.45)))
-dark = (52, 40, 28)
-g = ImageEnhance.Contrast(base.convert("L")).enhance(1.08)
-img = ImageOps.colorize(g, black=dark, mid=mid, white=cream)
+CREAM = ref.getpixel((15, 15))
+SEPIA = (120, 92, 56); GREEN = (23, 61, 48); BEIGE = (150, 120, 80)
 
-# 2 · BANDA TWIM con logo + autor
-W, H = img.size
+W, H = 1000, 1500
+img = Image.new("RGB", (W, H), CREAM)
 d = ImageDraw.Draw(img)
-band_top = int(H * 0.78)
-d.rectangle([0, band_top, W, H], fill=GREEN)
-d.rectangle([0, band_top, W, band_top + 4], fill=BEIGE)
-band_h = H - band_top
 
-logo = Image.open(ROOT / "assets" / "logo-mindworld-on-dark.png").convert("RGBA")
-lw = int(W * 0.21); lh = int(lw * logo.height / logo.width)
-logo = logo.resize((lw, lh))
+# marco doble editorial
+d.rectangle([38, 38, W - 38, H - 38], outline=GREEN, width=4)
+d.rectangle([52, 52, W - 52, H - 52], outline=SEPIA, width=2)
 
-f_name = ImageFont.truetype(F_REG, 52)
-f_role = ImageFont.truetype(F_REG, 26)  # recta (no italic): el colegiado CV11515 debe leerse claro
-name = "Daniel Orozco Abia"
-role = "Psicólogo General Sanitario · CV11515"
-na = f_name.getbbox(name); nh = na[3] - na[1]
-ra = f_role.getbbox(role); rh = ra[3] - ra[1]
-gap1 = int(band_h * 0.10); gap2 = int(band_h * 0.13)
-block = lh + gap1 + nh + gap2 + rh
-start = band_top + (band_h - block) // 2
-img.paste(logo, ((W - lw) // 2, start), logo)
-tw = d.textlength(name, font=f_name)
-d.text(((W - tw) // 2, start + lh + gap1 - na[1]), name, font=f_name, fill=CREAM)
-rw = d.textlength(role, font=f_role)
-d.text(((W - rw) // 2, start + lh + gap1 + nh + gap2 - ra[1]), role, font=f_role, fill=BEIGE)
+def gear(cx, cy, r_out, r_in, teeth, width, col):
+    pts = []; step = 2 * math.pi / teeth
+    frac = [(0.00, r_in), (0.28, r_in), (0.36, r_out), (0.64, r_out), (0.72, r_in)]
+    for i in range(teeth):
+        base = step * i
+        for f, r in frac:
+            a = base + step * f
+            pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
+    pts.append(pts[0])
+    d.line(pts, fill=col, width=width, joint="curve")
+    d.ellipse([cx - r_in * 0.34, cy - r_in * 0.34, cx + r_in * 0.34, cy + r_in * 0.34],
+              outline=col, width=width)
+
+cx, cy = W // 2, int(H * 0.50)
+gear(cx - 92, cy - 52, 152, 120, 13, 6, SEPIA)
+gear(cx + 120, cy + 80, 110, 86, 11, 6, SEPIA)
+
+def ctext(y, txt, f, col):
+    w = d.textlength(txt, font=f); d.text(((W - w) // 2, y), txt, font=f, fill=col)
+
+ctext(165, "Los engranajes", ImageFont.truetype(FR, 96), GREEN)
+ctext(260, "de la mente", ImageFont.truetype(FR, 96), GREEN)
+d.line([(W * 0.32, 388), (W * 0.68, 388)], fill=BEIGE, width=2)
+ctext(408, "Comprendiendo el Yo, el Ello y el Superyó", ImageFont.truetype(FR, 40), SEPIA)
+ctext(458, "Un viaje psicoanalítico hacia el conocimiento del ser", ImageFont.truetype(FI, 30), BEIGE)
+
+logo = Image.open(ROOT / "assets" / "logo-mindworld-transparent.png").convert("RGBA")
+lw = int(W * 0.205); lh = int(lw * logo.height / logo.width); logo = logo.resize((lw, lh))
+ly = int(H * 0.785); img.paste(logo, ((W - lw) // 2, ly), logo)
+ctext(ly + lh + 28, "Daniel Orozco Abia", ImageFont.truetype(FR, 46), GREEN)
+ctext(ly + lh + 90, "Psicólogo General Sanitario · CV11515", ImageFont.truetype(FR, 26), SEPIA)
 
 img.save(OUT, quality=93)
 print("Portada generada:", OUT, img.size)
