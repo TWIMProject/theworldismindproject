@@ -62,4 +62,36 @@ Energía alta y confianza · «adelante, las grandes ideas siempre se ejecutan :
 
 ---
 
-**Última actualización:** 2 jun 2026 · sesión `claude/blissful-lovelace-VPbaj`.
+## 6 · Continuación (tarde-noche 2 jun) · más trabajo de libertad de acción
+
+### Google Ads tag
+- Instalado `gtag('config','G-8PCYMX2NDX')` junto al GA4 en los 58 HTML (PR #285, mergeado). Para medición de conversiones de Google Ads. Sin tocar CSP.
+
+### Producto nuevo · «Los engranajes de la mente» · EDICIÓN DIGITAL (venta directa)
+Carpeta `documentos-internos/producto-engranajes-digital/` (ver su `README.md`).
+- **Portada nueva TWIM** de cero (Daniel descartó recolorear la de Amazon, «horrenda»). Crema + engranajes a trazo + doble filete + logo + autor/colegiado correctos (sin «Psicólogo Random»). Aprobada «así genial». Script `scripts/generar-portada-engranajes-digital.py`.
+- **Extra exclusivo** «De los engranajes a tu día» (`extra-...html`): baja Yo/Ello/Superyó a la vida del lector + juego defensivo + síntoma como intento + equilibrio sano + «qué puedes hacer hoy» + cierre con «Wo Es war, soll Ich werden». Fiel al libro, jerga+glosa, anti-coaching. Validado «ahora sí».
+- **PDF completo ensamblado**: portada + 186 interior + extra (10 págs) + contraportada = **198 págs**. Script `scripts/montar-pdf-engranajes-digital.py` (WeasyPrint + PyMuPDF). **El PDF NO se commitea** (producto de pago; gitignored; se genera en /tmp). Enviado a Daniel por chat.
+- **Precio**: 9,90 € (edición ampliada; Amazon está a 7,68 €).
+
+### Cuaderno «La mirada del otro» (infoproducto dependencia, sesión de mañana)
+- Añadido el **logo** en portada (Daniel lo pidió). Precio 8,90 €. Falta: portada con más fuerza (opcional), Stripe, entrega, landing.
+
+### PENDIENTE · requiere OK de Daniel (NO ejecutado · regla §2 infraestructura)
+- **Entrega segura** de ambos productos: Stripe Checkout + webhook (`stripe-webhook.js` ya existe) → enlace de descarga firmado (caduca, nº descargas) al email + función `descarga` que sirve el PDF desde ubicación no pública + marca de agua con email del comprador. Plan detallado en `producto-engranajes-digital/README.md`. **No mergear a producción sin OK** (precedente PR #133).
+- **Landings de venta** (libro + cuaderno): pendientes; dependen del cobro.
+- Mover el extra/cuaderno HTML fuera de `documentos-internos/` público (o bloquear) al montar la entrega.
+
+### Decisiones tomadas (Daniel)
+- vA→portada de cero (de las candidatas, eligió portada 1 + contraportada 4, luego pidió de cero).
+- Idioma carta promo Directo: **ya en castellano** (confirmado, resuelto).
+- Quiere venta directa de Los Engranajes; PDF interior estaba en repo (`LEDLM.pdf`).
+
+### Autoauditoría continuación
+- Portada: 2 errores corregidos en el acto (banda corta / colegiado en cursiva ilegible) + ruta del logo del cuaderno (../../). 
+- Hallazgo que evitó error: el libro YA tiene glosario y apéndice teórico → el extra se replanteó para no duplicar.
+- PDF protegido de exposición pública (gitignore). Infra intacta. Commits pusheados, working tree limpio.
+
+---
+
+**Última actualización:** 2 jun 2026 noche · sesión `claude/blissful-lovelace-VPbaj`.
