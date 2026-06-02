@@ -4,7 +4,7 @@
 > 1. **Configuración Meet** para que solo Daniel esté en cámara (presencia asimétrica · él habla a un público invisible).
 > 2. **5 tarjetas de bolsillo A6** · una por bloque del guion · idea-eje + 3 anclas teóricas + frase ancla · para tener al lado de la cámara durante la charla.
 
-> Referencias previas en el repo · `directo-la-voz-que-te-juzga-8-jun-2026.md` §4 (esqueleto 60 min) + `directo-8-jun-2026-guion-teorico.html/.pdf` (213 líneas de teoría profunda por bloque) + `directo-7jun-anexo-goce-y-mirada.html` (anexo · el goce de la falla y el fantasma del rechazo · profundiza el bloque 4-5; destilado de dos vídeos de «La Asociación Libre» en voz TWIM).
+> Referencias previas en el repo · `directo-la-voz-que-te-juzga-8-jun-2026.md` §4 (esqueleto 60 min) + `directo-8-jun-2026-guion-teorico.html/.pdf` (213 líneas de teoría profunda por bloque) + `directo-7jun-anexo-inseguridad-y-miedo-al-rechazo.html` (anexo · el goce de la falla y el fantasma del rechazo · profundiza el bloque 4-5; destilado de dos vídeos de «La Asociación Libre» en voz TWIM. Nombre con keywords SEO de cara al reciclaje a insight público).
 
 ---
 
