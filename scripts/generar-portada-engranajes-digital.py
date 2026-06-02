@@ -51,7 +51,7 @@ lw = int(W * 0.21); lh = int(lw * logo.height / logo.width)
 logo = logo.resize((lw, lh))
 
 f_name = ImageFont.truetype(F_REG, 52)
-f_role = ImageFont.truetype(F_ITA, 28)
+f_role = ImageFont.truetype(F_REG, 26)  # recta (no italic): el colegiado CV11515 debe leerse claro
 name = "Daniel Orozco Abia"
 role = "Psicólogo General Sanitario · CV11515"
 na = f_name.getbbox(name); nh = na[3] - na[1]
