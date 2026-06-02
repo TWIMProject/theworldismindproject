@@ -148,6 +148,15 @@ Especificación reproducible:
 
 - En **meta description, keywords, schema.org**, alt text · términos clínicos estándar (`necesidad de validación`, `apego ansioso`, `regulación emocional`) son correctos · la audiencia que busca esos términos en Google sí los conoce. El público SEO clínico es distinto del público lector de copy.
 
+**Regla de glosa · jerga en artículos y formatos largos (declarada por Daniel el 2 jun 2026):**
+
+> Cita verbatim de Daniel · «para la web, artículos y demás siempre utilizar lenguaje sin jerga o con jerga pero siempre luego explicando esa palabra o palabras desde un lenguaje sin jerga».
+
+- En **artículos, posts de blog, insights, páginas largas y cuerpo de texto web** donde hay espacio para explicar, **SÍ** se puede usar jerga clínica/psicoanalítica (`superyó`, `goce`, `castración`, `apego ansioso`, `elaboración`) · pero **siempre glosándola acto seguido en lenguaje sin jerga**. Patrón obligatorio · término técnico + explicación llana inmediata («el superyó —esa voz interna que te juzga—…»). Nunca jerga suelta sin glosa.
+- Esto **no levanta** la regla de claridad de un vistazo en **piezas cortas/escaneables** (hero, lede, taglines, captions, asuntos de email, hilos) · ahí no hay espacio para glosar, así que **cero jerga sin glosa** · se va directo a la imagen concreta.
+- En **formatos hablados** (directo, podcast, vídeo) prevalece ir directo a la imagen concreta · la glosa en vivo se sostiene mal. Traducir antes de hablar.
+- Mecanismo en una línea · **jerga + glosa inmediata en formato largo escrito; cero jerga en formato corto o hablado.**
+
 ---
 
 ## Regla inviolable · Naming de productos Stripe
