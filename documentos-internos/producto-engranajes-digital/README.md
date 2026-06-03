@@ -28,6 +28,15 @@ El PDF ensamblado es el **producto de pago**. Si se sube al repo, Netlify lo ser
 
 ## Entrega segura · arquitectura y estado (regla §2 · cobro = dinero, máximo cuidado)
 
+### IDs Stripe (Live · creados 3 jun 2026 vía MCP)
+| Producto | product_id | price_id | Payment Link |
+|---|---|---|---|
+| Los engranajes · edición digital ampliada · 9,90 € | `prod_UdQU34NRH5DfIO` | `price_1Te9ezFW3OLCwM3Hk5dRzXQd` | https://buy.stripe.com/dRmfZh2GS2GNgRdbvy2sM0i |
+| La mirada del otro · cuaderno · 8,90 € | `prod_UdQWdU02qcOBar` | `price_1Te9giFW3OLCwM3HTwtYsBEu` | https://buy.stripe.com/14A00jchs95bbwT9nq2sM0j |
+
+Cuenta: `acct_1Rbl1IFW3OLCwM3H` (TWIMProject). Estos `price_id` son los que el webhook debe mapear a cada PDF en la entrega.
+
+
 **Diseño:** Stripe Checkout (pago) → `stripe-webhook.js` (ya verifica firma) detecta el price del libro → firma un **token HMAC caducable** → mete al comprador en MailerLite con el enlace de descarga en un campo → una automation le envía el email → la función `descarga-libro.js` valida el token y sirve el PDF desde **Netlify Blobs (privado)**. El PDF nunca está en una ruta pública.
 
 ### Ya construido en la rama (inerte hasta activar · no rompe nada existente)
