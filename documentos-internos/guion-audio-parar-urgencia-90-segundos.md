@@ -68,7 +68,7 @@ Por eso pararla no se hace con la cabeza · diciéndote tranquila o relájate no
 
 «Vamos. Pon los pies en el suelo si puedes. Si estás en la calle, da igual · de pie también funciona.
 
-**Fase uno · siete segundos.** Vas a poner una mano sobre el pecho y otra sobre el abdomen. *pausa de 3 s* Ahora respira por la nariz, despacio, durante cuatro segundos. Cuento contigo · uno, dos, tres, cuatro.
+**Fase uno · inspira cuatro segundos.** Vas a poner una mano sobre el pecho y otra sobre el abdomen. *pausa de 3 s* Ahora respira por la nariz, despacio, durante cuatro segundos. Cuento contigo · uno, dos, tres, cuatro.
 
 *Sostener silencio durante 3 segundos.*
 
