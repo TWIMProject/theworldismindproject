@@ -68,3 +68,16 @@ Satisfecho y en modo ejecución rápida pero con exigencia alta de calidad («ci
 - Audio «Parar la urgencia»: cuando Daniel mande el MP3 → `audios-firmados/parar-urgencia-90-segundos/parar-urgencia-90-segundos.mp3` + verificar + transcripción.
 - Convenio Unió: responder a su formalización; preparar consentimiento/contrato si avanza (plantillas en `twim-clinic-modelo-derivacion.md`).
 - Entrega digital v2 (con volumen): endurecer a token+Blobs y quitar PDFs del repo.
+
+## Actualización noche · marca + visibilidad SEO
+
+**Marca (decidido).** Registrar **TWIM Project** como ancla, en **2 marcas separadas** (denominativa «TWIM Project» + figurativa del logo), ambas a nombre de Daniel, clases **41 + 44**; EUIPO si el presupuesto da, OEPM si no. Antes de presentar: búsqueda en **TMview**, **OK por escrito de Sergio y Álex** (el nombre nació en el proyecto conjunto; `theworldismind.org` era de Daniel con ellos, no es competencia) y **decidir el texto del logo** (hoy dice «Mind World Project», no «TWIM Project»). Doc + PDF: `documentos-internos/registro-marca-twim-2026-06-03.*`.
+
+**Visibilidad «psicólogo Valencia» (Daniel vio que no aparece).** Diagnóstico ya en repo, nada que reconstruir:
+- On-page **ya está bien** (`seo-estado-2026-05-29.md`): el techo NO es on-page.
+- **Kit de Google Business + reseñas éticas COMPLETO y listo para ejecutar** (`kit-ficha-google-business-profile-2026-05-30.md`, sesión ~90 min, lado Daniel): categorías, servicios, descripción, fotos, posts y goteo de reseñas con calendario. El GBP hoy solo sale por queries de marca, 0 categóricas → ejecutar el kit es la palanca #1.
+- El techo real = **autoridad/GBP/reseñas/backlinks = lado Daniel**. **Ahrefs cerrado** (decisión 17 may) y además da «insufficient plan»; fuente de SEO = **GSC** (lado Daniel).
+- **Palanca de autoridad NUEVA (hoy):** el **convenio Unió de Periodistes** → al formalizar, pedir que **`unioperiodistes.org` enlace/liste a twimproject.com** (backlink local relevante = justo el techo de autoridad que falta). Anotar al cerrar convenio.
+- **Stories WhatsApp:** Daniel comparte hoy que sale en Google (sin pedir reseñas explícitamente, copy entregado) → alimenta reseñas → ranking local.
+
+**Nota de método:** sesión con libertad de acción; se intentó Ahrefs/Motion (sin datos: plan insuficiente / cuenta no conectada) y se confirmó que el trabajo «materializable» de visibilidad ya estaba hecho en el repo. No se duplicó ni se hicieron ediciones SEO redundantes. Lo pendiente es ejecución del lado de Daniel.
