@@ -14,9 +14,42 @@ Edición digital **ampliada** del libro (que en Amazon está a 7,68 €). Se ven
 | Extra exclusivo «De los engranajes a tu día» (validado «ahora sí») | ✅ `extra-de-los-engranajes-a-tu-dia.html` |
 | PDF completo ensamblado (portada + 186 interior + extra 10 págs + contraportada) | ✅ 198 págs · script `scripts/montar-pdf-engranajes-digital.py` |
 | Precio | **9,90 €** (edición ampliada; +2 € sobre Amazon por el extra + compra directa) |
-| Producto + Payment Link Stripe | ⏳ pendiente |
-| Entrega segura | ⏳ **pendiente · requiere OK de Daniel (infraestructura)** |
-| Landing de venta | ⏳ pendiente |
+| Producto + Payment Link Stripe | ✅ creados (Live) · ver IDs abajo |
+| Entrega segura (vía rápida v1) | ✅ PDF con hash + `noindex` + página de gracias con hash · **falta el redirect en panel Stripe** |
+| Landing de venta | ✅ sección «Edición digital» en `libros-firmados.html` (rama `claude/blissful-lovelace-VPbaj`, sin mergear) |
+
+## Entrega vía rápida v1 · estado operativo (3 jun 2026)
+
+Decisión de especialista (Daniel delegó: «la que recomiendes como especialista»): **vender ya con la vía rápida**, blindar después (token+Blobs) cuando haya volumen. La vía rápida es: pago → Stripe redirige a una **página de gracias con nombre no adivinable** → botón de descarga del **PDF con hash** (`noindex`, no enlazado en ningún sitio).
+
+### Piezas (en la rama, sin mergear)
+| Pieza | Ruta |
+|---|---|
+| PDF libro (producto de pago) | `descargas/los-engranajes-edicion-digital-c3ff84e018.pdf` |
+| PDF cuaderno (producto de pago) | `descargas/la-mirada-del-otro-5447778151.pdf` |
+| Página de gracias libro | `descargas/gracias-engranajes-c69e607cf2.html` |
+| Página de gracias cuaderno | `descargas/gracias-mirada-07b0f6aade.html` |
+| `noindex` + no-cache para `/descargas/*` | `_headers` |
+| Portadas públicas (marketing) | `portada-engranajes-digital.jpg`, `portada-cuaderno-la-mirada.jpg` |
+| Sección de venta | `libros-firmados.html` → `#edicion-digital` |
+
+### Redirects que faltan (los pone Daniel en el panel de Stripe — la API MCP no puede)
+> **Por qué a mano:** `stripe_api_execute` de este MCP no serializa parámetros de tipo objeto anidado (falla con «Invalid object» en `after_completion`, y «Metadata must be a single object» en `metadata`). No es un problema de config: es un límite de la herramienta. Para una operación de dinero, además, ponerlo en el panel es lo más seguro y visible (regla §2).
+
+En cada Payment Link → «After payment» → «Redirect customers to your website» → pegar:
+
+| Payment Link | Redirect URL |
+|---|---|
+| Libro `plink_1Te9giFW3OLCwM3HYrm5mI4r` (`buy.stripe.com/dRmfZh2GS2GNgRdbvy2sM0i`) | `https://twimproject.com/descargas/gracias-engranajes-c69e607cf2.html?utm_source=stripe` |
+| Cuaderno `plink_1Te9grFW3OLCwM3HQdHNjQyN` (`buy.stripe.com/14A00jchs95bbwT9nq2sM0j`) | `https://twimproject.com/descargas/gracias-mirada-07b0f6aade.html?utm_source=stripe` |
+
+### Secuencia de salida a producción (regla cirujano · no cobrar sin haber entregado una vez)
+1. Daniel pone los 2 redirects (tabla de arriba) en el panel de Stripe.
+2. Mergear el PR (deja en producción las páginas de gracias + los PDF + la sección de venta).
+3. **Compra de prueba reembolsable** de cada producto: pagar → comprobar que el redirect lleva a la página de gracias → que el PDF se descarga. Reembolsar las 2.
+4. Solo si las 2 pruebas pasan, **anunciar/promocionar** la edición digital.
+
+Hasta el paso 4, la sección existe pero no se difunde. Si se merge antes de poner los redirects, un comprador caería en la confirmación por defecto de Stripe sin enlace de descarga (recuperable a mano, pero a evitar).
 
 ## Regla crítica · el PDF NO se commitea
 
