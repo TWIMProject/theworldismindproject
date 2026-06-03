@@ -44,3 +44,27 @@ Daniel hizo una compra de prueba real y **no pudo ni descargar ni recibir el PDF
 
 ## Estado emocional CEO al cierre
 Satisfecho y en modo ejecución rápida pero con exigencia alta de calidad («cirujano», «anticípate al problema»). Valoró «brutal» la portada verde. Confía y delega, pero quiere robustez real, no parches.
+
+## Actualización fin de jornada (3 jun, tarde)
+
+**Venta digital — CERRADA Y ABIERTA.** Daniel hizo compra de prueba fresca de los 2 productos: pago → descarga inmediata + email, **ambos OK**. La venta queda **verificada de punta a punta y abierta** (lista para difundir). Los 3 cargos de prueba (libro hoy 9,90 + cuaderno 8,90 + libro 1ª 9,90 = **28,70 €**) **reembolsados** vía MCP (con aprobación de Daniel en Stripe; refunds «pending», tardan días en abonarse).
+
+**Convenio Unió de Periodistes — EN MARCHA.**
+- Enviada carta de interés (PDF membrete, guardada en `documentos-internos/carta-unio-periodistes-2026-06-03.*`).
+- Respondió **Jéssica Ortega**: 700 asociados pero solo ~70 manifestaron problemas en su encuesta → **volumen modesto**. Modelo 1ª visita: el asociado paga una parte fija (la fija la Unió), el gabinete pasa recibo del resto. Confirmación de socio: pedir nombre, apellidos, DNI, nº socio → remitir a la Unió. Sin plazo fijo; eligen psicólogos según respuestas.
+- Daniel eligió **25 % de descuento → 60 €/sesión** (tarifa oficial 80 €). Enviada **propuesta de tarifas** (PDF, guardada en `documentos-internos/propuesta-unio-periodistes-tarifas-2026-06-03.*`).
+- Lectura de socio: el premio es el **posicionamiento ante 700 comunicadores + sello COP**, no el margen. Por volumen bajo, Daniel puede atenderlos él mismo (terreno suyo + material editorial) en vez de derivar a Sergio. **Pendiente:** que la Unió responda y formalice; que el convenio recoja el tratamiento de datos (DNI/nº socio).
+
+**Directo 7 jun — empujón final (a 4 días, ~9 inscritos, objetivo 50).**
+- **Hallazgo + fix (PR #288 mergeado):** la landing `directo-la-voz-que-te-juzga/` NO tenía píxel de Meta → el anuncio optimizaba a ciegas por «visitas» (CPL ~7,5 €) y no se podía medir/retargetizar. Añadido **píxel base + `fbq('track','Lead')`** al registro.
+- **Plan de 4 días entregado a Daniel** (acciones suyas): tras desplegar, **cambiar la optimización del anuncio a «Conversiones → Lead»**, **subir presupuesto a 30-40 €/día**, **crear anuncio de retargeting**; **Reel a cámara** (guion entregado) + **Stories diarias** con enlace; recordatorio email; **registro de prueba** para ver el evento Lead en Test Events.
+- **Pendiente (panel Daniel):** la automation de confirmación «Estás dentro» no existe → los inscritos no reciben confirmación. Recréala/actívala.
+
+**Git/infra:** los squash-merge de GitHub salen como committer `noreply@github.com` (aviso recurrente del stop-hook). Identidad local ya configurada (`Claude`/`noreply@anthropic.com`) para commits propios; NO se reescriben los commits de merge de `main`.
+
+## Tareas abiertas para la próxima sesión
+- Difusión Directo: verificar que Daniel hizo los cambios del anuncio + el registro de prueba; vigilar inscripciones hacia 50.
+- E5 post-directo (`187809557833058027`, DRAFT): programar **lun 8 jun ~10:00** con enlace de grabación (recrear con `create_campaign`, no `update`).
+- Audio «Parar la urgencia»: cuando Daniel mande el MP3 → `audios-firmados/parar-urgencia-90-segundos/parar-urgencia-90-segundos.mp3` + verificar + transcripción.
+- Convenio Unió: responder a su formalización; preparar consentimiento/contrato si avanza (plantillas en `twim-clinic-modelo-derivacion.md`).
+- Entrega digital v2 (con volumen): endurecer a token+Blobs y quitar PDFs del repo.
