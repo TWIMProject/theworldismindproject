@@ -236,4 +236,19 @@ Implicación operativa · persistida en `CLAUDE.md` §8 (Claridad de un vistazo)
 
 ---
 
-**Última actualización:** 2 jun 2026 noche · sesión `claude/blissful-lovelace-VPbaj`.
+### 3 jun 2026 · sesión `claude/blissful-lovelace-VPbaj` (Opus 4.8)
+
+Información nueva verificada con cita verbatim · se añade SIN modificar las secciones previas.
+
+**Pidió máxima exigencia anticipatoria · «cirujano que se anticipa al problema»**
+
+- Activó el modelo Opus 4.8 a mitad de sesión, verbatim: «te he puesto la opción OPUS 4.8 máxima inteligencia para que seas un cirujano con más dedicación y perfeccionista que se anticipe al posible problema. Problema como por ejemplo el sucedido, que compren el libro pdf y que luego ni se lo puedan descargar ni llegar al email.»
+- Implicación operativa · en cualquier flujo de cobro/entrega, diseñar contra TODOS los modos de fallo, no solo el camino feliz. Principio aplicado hoy: **doble canal de entrega** (descarga inmediata por redirect + email automático) porque un solo canal = un solo punto de fallo. Antes de dar algo por «listo», enumerar cómo podría fallarle a un comprador real y cubrirlo.
+
+**Dato operativo MailerLite · correo verificado para tests**
+
+- `send_test_automation` solo envía a un correo verificado de la cuenta: `danielorozco@twimproject.com` (NO `@theworldismindproject.com`, devuelve `email_not_verified`).
+
+---
+
+**Última actualización:** 3 jun 2026 · sesión `claude/blissful-lovelace-VPbaj` (Opus 4.8).
