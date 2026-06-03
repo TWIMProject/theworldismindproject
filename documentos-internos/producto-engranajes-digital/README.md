@@ -15,49 +15,47 @@ Edición digital **ampliada** del libro (que en Amazon está a 7,68 €). Se ven
 | PDF completo ensamblado (portada + 186 interior + extra 10 págs + contraportada) | ✅ 198 págs · script `scripts/montar-pdf-engranajes-digital.py` |
 | Precio | **9,90 €** (edición ampliada; +2 € sobre Amazon por el extra + compra directa) |
 | Producto + Payment Link Stripe | ✅ creados (Live) · ver IDs abajo |
-| Entrega segura (vía rápida v1) | ✅ PDF con hash + `noindex` + página de gracias con hash · **falta el redirect en panel Stripe** |
+| Entrega de doble canal | ✅ Canal 1 redirect (hecho) + Canal 2 email (construido) · ver abajo |
 | Landing de venta | ✅ sección «Edición digital» en `libros-firmados.html` (rama `claude/blissful-lovelace-VPbaj`, sin mergear) |
 
-## Entrega vía rápida v1 · estado operativo (3 jun 2026)
+## Entrega de DOBLE CANAL · estado operativo (3 jun 2026)
 
-Decisión de especialista (Daniel delegó: «la que recomiendes como especialista»): **vender ya con la vía rápida**, blindar después (token+Blobs) cuando haya volumen. La vía rápida es: pago → Stripe redirige a una **página de gracias con nombre no adivinable** → botón de descarga del **PDF con hash** (`noindex`, no enlazado en ningún sitio).
+> Endurecido tras un fallo real: Daniel hizo una compra de prueba y no pudo ni descargar ni recibir el PDF (el redirect no estaba puesto y la ficha prometía un email que no existía). Lección: **un solo canal = un solo punto de fallo.** Ahora hay dos canales independientes.
 
-### Piezas (en la rama, sin mergear)
-| Pieza | Ruta |
+**Canal 1 · Descarga inmediata (redirect Stripe → página de gracias):** garantiza el PDF en el segundo 0, pase lo que pase con el email.
+**Canal 2 · Email (webhook → grupo MailerLite → automation):** copia duradera en la bandeja del comprador. Si el email falla (spam, opt-in, typo), el canal 1 ya entregó.
+
+### Piezas (en la rama, sin mergear salvo donde se indique)
+| Pieza | Ruta / ID |
 |---|---|
-| PDF libro (producto de pago) | `descargas/los-engranajes-edicion-digital-c3ff84e018.pdf` |
-| PDF cuaderno (producto de pago) | `descargas/la-mirada-del-otro-5447778151.pdf` |
-| Página de gracias libro | `descargas/gracias-engranajes-c69e607cf2.html` |
-| Página de gracias cuaderno | `descargas/gracias-mirada-07b0f6aade.html` |
-| `noindex` + no-cache para `/descargas/*` | `_headers` |
-| Portadas públicas (marketing) | `portada-engranajes-digital.jpg`, `portada-cuaderno-la-mirada.jpg` |
+| PDF libro / cuaderno (producto de pago) | `descargas/los-engranajes-edicion-digital-c3ff84e018.pdf` · `descargas/la-mirada-del-otro-5447778151.pdf` |
+| Páginas de gracias (con hash) | `descargas/gracias-engranajes-c69e607cf2.html` · `descargas/gracias-mirada-07b0f6aade.html` |
+| `noindex` + no-cache `/descargas/*` | `_headers` |
+| Portadas públicas | `portada-engranajes-digital.jpg` · `portada-cuaderno-la-mirada.jpg` |
 | Sección de venta | `libros-firmados.html` → `#edicion-digital` |
+| **Redirect Stripe (Canal 1)** | ✅ **YA PUESTO por API** (bracket-notation `after_completion[redirect][url]`) en los 2 Payment Links |
+| Grupos MailerLite comprador (Canal 2) | Libro `189245231853471319` · Cuaderno `189245232345252997` |
+| Automations de entrega (Canal 2) | Libro `189245270546974092` · Cuaderno `189245281082017289` |
+| Webhook que enruta precio→grupo | `netlify/functions/stripe-webhook.js` (precios digitales añadidos con `groupId` fijo) |
 
-### Redirects que faltan (los pone Daniel en el panel de Stripe — la API MCP no puede)
-> **Por qué a mano:** `stripe_api_execute` de este MCP no serializa parámetros de tipo objeto anidado (falla con «Invalid object» en `after_completion`, y «Metadata must be a single object» en `metadata`). No es un problema de config: es un límite de la herramienta. Para una operación de dinero, además, ponerlo en el panel es lo más seguro y visible (regla §2).
+### Nota técnica · el redirect SÍ se pudo por API
+La clave fue la **codificación con brackets**: `after_completion[type]=redirect` + `after_completion[redirect][url]=...`. El MCP `stripe_api_execute` falla con dot-notation y con objeto anidado, pero acepta brackets. (Los IDs de grupo van fijos en el webhook a propósito: no son secretos y así el Canal 2 no depende de configurar env vars nuevas.)
 
-En cada Payment Link → «After payment» → «Redirect customers to your website» → pegar:
+### Lo que falta (panel + merge) — la API no puede «diseñar/activar» automations
+1. **MailerLite (panel):** abrir cada automation (`189245270546974092` y `189245281082017289`) → abrir el email → **guardarlo en el editor visual** (queda «designed») → **activar** la automation. El contenido HTML y el texto ya están metidos por API; solo falta el guardado+activación, que la API no permite (`send_test` da «Emails not designed»).
+2. **Mergear el PR** → deja en producción: páginas de gracias, PDFs, sección de venta y el **webhook actualizado** (sin esto, el Canal 2 no enruta).
+3. **Compra de prueba reembolsable** de cada producto: pagar → (Canal 1) cae en la página de gracias y descarga → (Canal 2) llega el email con el enlace. Reembolsar las 2.
+4. Solo si pasan, **anunciar/promocionar**.
 
-| Payment Link | Redirect URL |
-|---|---|
-| Libro `plink_1Te9giFW3OLCwM3HYrm5mI4r` (`buy.stripe.com/dRmfZh2GS2GNgRdbvy2sM0i`) | `https://twimproject.com/descargas/gracias-engranajes-c69e607cf2.html?utm_source=stripe` |
-| Cuaderno `plink_1Te9grFW3OLCwM3HQdHNjQyN` (`buy.stripe.com/14A00jchs95bbwT9nq2sM0j`) | `https://twimproject.com/descargas/gracias-mirada-07b0f6aade.html?utm_source=stripe` |
+**Importante:** el Canal 1 (descarga inmediata) funciona en cuanto se mergea, aunque las automations aún no estén activadas. Es decir, el merge ya garantiza entrega; el email es el refuerzo. La ficha de Stripe puede seguir diciendo «entrega por email» porque será cierto en cuanto se active el Canal 2; mientras, el comprador igualmente descarga al instante.
 
-### Secuencia de salida a producción (regla cirujano · no cobrar sin haber entregado una vez)
-1. Daniel pone los 2 redirects (tabla de arriba) en el panel de Stripe.
-2. Mergear el PR (deja en producción las páginas de gracias + los PDF + la sección de venta).
-3. **Compra de prueba reembolsable** de cada producto: pagar → comprobar que el redirect lleva a la página de gracias → que el PDF se descarga. Reembolsar las 2.
-4. Solo si las 2 pruebas pasan, **anunciar/promocionar** la edición digital.
+## Sobre commitear el PDF (decisión v1 vs blindaje v2)
 
-Hasta el paso 4, la sección existe pero no se difunde. Si se merge antes de poner los redirects, un comprador caería en la confirmación por defecto de Stripe sin enlace de descarga (recuperable a mano, pero a evitar).
+> Histórico: el plan original era NO commitear el PDF (servirlo desde Blobs privado con token). En v1 se decidió lo contrario, a conciencia.
 
-## Regla crítica · el PDF NO se commitea
-
-El PDF ensamblado es el **producto de pago**. Si se sube al repo, Netlify lo serviría público (gratis). Por eso:
-
-- El PDF se **genera fuera del repo** (`/tmp/LEDLM-edicion-digital.pdf`) ejecutando `scripts/montar-pdf-engranajes-digital.py`. Reproducible siempre.
-- **Nunca** añadir el PDF (ni el `LEDLM.pdf` interior como producto) a una ruta pública servida por Netlify.
-- Pendiente con OK de Daniel: mover también el extra HTML y el cuaderno fuera de `documentos-internos/` público, o bloquearlos, al montar la entrega.
+- **v1 (actual):** los PDFs SÍ se commitean en `descargas/` con **nombre-hash no adivinable** + `noindex`/no-cache (`_headers`) + no enlazados en ningún sitio público. Seguridad por oscuridad del hash, proporcionada a 8,90–9,90 €. Es lo que permite la entrega por redirect/email sin infra extra. Reproducible: `scripts/montar-pdf-engranajes-digital.py`.
+- **Límite honesto:** un PDF descargado es reenviable; sin DRM (no compensa al precio). Se blinda el acceso (hash + páginas con hash), no la copia.
+- **v2 (blindaje, cuando haya volumen):** mover los PDFs a Netlify Blobs privado + token HMAC caducable (`_lib-token.js` y `descarga-libro.js` ya están, inertes) y quitarlos del repo. Marca de agua con el email del comprador como disuasor.
 
 ## Entrega segura · arquitectura y estado (regla §2 · cobro = dinero, máximo cuidado)
 
