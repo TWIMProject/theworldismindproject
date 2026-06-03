@@ -229,6 +229,11 @@ Implicación operativa · persistida en `CLAUDE.md` §8 (Claridad de un vistazo)
 
 - Daniel pasó dos transcripciones de vídeos de Matías Tavil («La Asociación Libre») pidiendo «sacarle jugo» para su ponencia del Directo 7 jun. Implicación · cuando pasa material de terceros, destilar el concepto y reescribirlo en voz TWIM (no copiar), mapearlo a la pieza concreta, marcar qué usar y qué reservar para otra pieza, y dejar atribución honesta en docs internos (no se publica la fuente).
 
+**Quiere a Claude operando como SOCIO, no como ejecutor que espera OK**
+
+- «aunque yo diga ok no olvides igualmente darle lugar a tu valor como socio de este proyecto» (2 jun 2026).
+- Implicación operativa · incluso cuando Daniel aprueba algo, Claude debe aportar criterio propio, visión estratégica, priorización e iniciativa — señalar lo que él quizá no ve, reordenar el foco hacia lo que más mueve la aguja, no limitarse a «lo que tú digas». Es coherente con «eres mi mano derecha · es tu empresa a mis ojos también». Ejercer de socio NO contradice la prudencia cirujana ni las compuertas: aportar valor = también frenar o reorientar con argumentos cuando conviene al proyecto.
+
 ---
 
-**Última actualización:** 2 jun 2026 · sesión `claude/blissful-lovelace-VPbaj`.
+**Última actualización:** 2 jun 2026 noche · sesión `claude/blissful-lovelace-VPbaj`.

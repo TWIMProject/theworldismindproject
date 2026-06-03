@@ -122,7 +122,7 @@ section{padding:72px 0;border-bottom:1px solid rgba(23,61,48,.08)}
   border:1px solid rgba(23,61,48,.08);
   overflow:hidden;
 }
-.book-cover img{width:100%;height:100%;object-fit:cover;object-position:center}
+.book-cover img{width:100%;height:100%;object-fit:contain;object-position:center;padding:10px}
 .book-cover-placeholder{
   width:100%;height:100%;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;
@@ -191,6 +191,23 @@ section{padding:72px 0;border-bottom:1px solid rgba(23,61,48,.08)}
   font-size:24px;color:var(--verde-oscuro);margin-bottom:10px;
 }
 .incluye-item p{font-size:16px;line-height:1.6;font-weight:300}
+
+/* REALCE DEL EXTRA */
+.extra-flag{
+  display:inline-block;align-self:flex-start;
+  font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--verde-oscuro);background:rgba(194,167,139,.28);
+  padding:6px 12px;font-weight:600;margin-top:-4px;
+}
+.incluye-item.destacado{
+  background:rgba(194,167,139,.14);
+  border-left:3px solid var(--verde-oscuro);
+  padding:18px 24px;
+}
+.incluye-item.destacado h3::after{
+  content:" · exclusivo";font-style:italic;font-size:15px;color:var(--beige);
+  letter-spacing:0;text-transform:none;
+}
 
 /* FAQ */
 .faq-item{
@@ -272,6 +289,7 @@ footer a{color:var(--verde-medio)}
           <img src="/libro-ee-tapa-dura-bn-portada.png" alt="Los Engranajes de la Mente · Edición especial tapa dura B/N · firmado por Daniel Orozco">
         </div>
         <div class="book-format">Edición especial · Tapa dura · interior B/N</div>
+        <span class="extra-flag">+ Tarjeta de autor inédita dentro</span>
         <h3 class="book-title">Los Engranajes de la Mente</h3>
         <p class="book-desc">Edición única conservada de la primera tirada. Tapa dura, interior íntegramente en blanco y negro. Firmado a mano, con dedicatoria personalizada y un extra dentro que solo va con esta edición.</p>
         <div class="book-price-row">
@@ -287,6 +305,7 @@ footer a{color:var(--verde-medio)}
           <img src="/portadaretro.jpg" alt="Los Engranajes de la Mente · Edición especial tapa blanda papel grueso a color · firmado por Daniel Orozco">
         </div>
         <div class="book-format">Edición especial · Tapa blanda · papel grueso a color</div>
+        <span class="extra-flag">+ Tarjeta de autor inédita dentro</span>
         <h3 class="book-title">Los Engranajes de la Mente</h3>
         <p class="book-desc">El primer ejemplar físico que existió de este libro · el prototipo que pedí imprimir para tenerlo en las manos antes de cerrar el formato final. Papel grueso, figuras del libro a todo color, tapa blanda. No se imprimió ninguna copia idéntica · es una única pieza, la que decidió cómo iba a ser el libro. Firmado, dedicado y con la tarjeta extra inédita.</p>
         <div class="book-price-row">
@@ -370,6 +389,51 @@ footer a{color:var(--verde-medio)}
   </div>
 </section>
 
+<!-- EDICIÓN DIGITAL -->
+<section id="edicion-digital">
+  <div class="wrap">
+    <div class="section-eyebrow">Descarga inmediata · sin envío</div>
+    <h2 class="section-title">Edición digital <em style="font-style:italic;color:var(--verde-medio)">para leer hoy mismo</em></h2>
+    <p class="section-intro">Si no quieres esperar al envío, aquí tienes la versión en PDF. La descargas en el momento del pago, la lees en el móvil, la tablet o el ordenador, y es tuya para siempre. Dos piezas para acompañarte, no para darte otra lista de cosas que deberías hacer.</p>
+
+    <div class="catalogo">
+
+      <!-- ENGRANAJES · EDICIÓN DIGITAL AMPLIADA -->
+      <article class="book-card featured">
+        <div class="book-cover">
+          <img src="/portada-engranajes-digital.jpg" alt="Los Engranajes de la Mente · edición digital ampliada en PDF">
+        </div>
+        <div class="book-format">Edición digital ampliada · PDF · 198 páginas</div>
+        <span class="extra-flag">+ Apéndice que no está en Amazon</span>
+        <h3 class="book-title">Los Engranajes de la Mente</h3>
+        <p class="book-desc">El libro entero, más un apéndice que solo lleva esta edición: <em>«De los engranajes a tu día»</em>, donde bajo las ideas del libro a gestos concretos para la semana. En Amazon está la edición normal; esta es la ampliada, en PDF, y la tienes en tu pantalla nada más pagar.</p>
+        <div class="book-price-row">
+          <div class="book-price">9,90€ <small>· IVA incl.</small></div>
+          <div class="book-stock">Descarga inmediata</div>
+        </div>
+        <a class="btn-buy" href="https://buy.stripe.com/dRmfZh2GS2GNgRdbvy2sM0i" target="_blank" rel="noopener">Comprar y descargar</a>
+      </article>
+
+      <!-- CUADERNO · LA MIRADA DEL OTRO -->
+      <article class="book-card">
+        <div class="book-cover">
+          <img src="/portada-cuaderno-la-mirada.jpg" alt="La mirada del otro · cuaderno digital en PDF">
+        </div>
+        <div class="book-format">Cuaderno digital · PDF · para escribir</div>
+        <h3 class="book-title">La mirada del otro</h3>
+        <p class="book-desc">Un cuaderno para dejar de necesitar que alguien te diga que vales para poder creértelo. No es teoría: son páginas para escribir, con preguntas que te devuelven a ti cuando te descubres pendiente de la aprobación de los demás. Lo imprimes o lo rellenas en digital.</p>
+        <div class="book-price-row">
+          <div class="book-price">8,90€ <small>· IVA incl.</small></div>
+          <div class="book-stock">Descarga inmediata</div>
+        </div>
+        <a class="btn-buy" href="https://buy.stripe.com/14A00jchs95bbwT9nq2sM0j" target="_blank" rel="noopener">Comprar y descargar</a>
+      </article>
+
+    </div>
+    <p style="font-size:14px;color:var(--verde-medio);margin-top:22px;font-weight:300">Tras el pago llegas a una página privada para descargar el PDF al instante. Si lo pierdes, te lo reenvío escribiéndome a <a href="mailto:danielorozco@theworldismindproject.com">danielorozco@theworldismindproject.com</a>.</p>
+  </div>
+</section>
+
 <!-- QUÉ INCLUYE -->
 <section id="incluye">
   <div class="wrap">
@@ -386,9 +450,9 @@ footer a{color:var(--verde-medio)}
         <h3>Dedicatoria personal</h3>
         <p>En el proceso de pago de Stripe me indicas el nombre y, si quieres, una línea concreta. Si lo dejas en blanco, la dedicatoria queda neutra y va dirigida al lector.</p>
       </div>
-      <div class="incluye-item">
-        <h3>Extra dentro del libro</h3>
-        <p>Una tarjeta impresa con un texto inédito mío, distinto en cada libro, que no aparece en la edición de Amazon ni en ninguna otra parte. Solo va con los ejemplares de esta tienda.</p>
+      <div class="incluye-item destacado">
+        <h3>Tarjeta de autor inédita</h3>
+        <p>Una tarjeta impresa con un texto mío inédito —un fragmento que no está en el libro, ni en Amazon, ni en internet—, escrito para acompañar tu lectura. Cada ejemplar lleva uno <strong>distinto</strong>: no hay dos iguales. Es la pieza que convierte el ejemplar en algo solo tuyo.</p>
       </div>
     </div>
   </div>
@@ -428,6 +492,16 @@ footer a{color:var(--verde-medio)}
     <div class="faq-item">
       <h3>¿Y si quiero el libro firmado pero ya no queda stock aquí?</h3>
       <p>Esta tienda solo refleja los ejemplares físicos que tengo en mi consulta de Valencia. Cuando se agoten, no habrá más libros firmados a la venta hasta una nueva tirada. La edición sin firma sigue siempre disponible en Amazon.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>La edición digital, ¿en qué formato llega y dónde la leo?</h3>
+      <p>Llega en PDF. Tras el pago entras en una página privada desde la que descargas el archivo al instante; te queda guardado en tu dispositivo para siempre. Lo abres en el móvil, la tablet, el ordenador o el lector de ebooks, y el cuaderno también puedes imprimirlo para escribir a mano. Si en algún momento pierdes el archivo, me escribes y te lo reenvío.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Puedo devolver un PDF una vez descargado?</h3>
+      <p>Al ser contenido digital de descarga inmediata, una vez te lo has descargado no admite devolución (la ley permite renunciar al derecho de desistimiento en este caso, y al comprar lo aceptas). Lo digo claro antes de pagar para que nadie se sienta engañado. Si tienes cualquier problema con el archivo, escríbeme y lo resolvemos.</p>
     </div>
 
   </div>

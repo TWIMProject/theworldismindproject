@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>La mirada del otro · Cuaderno TWIM</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cuaderno TWIM · dejar de necesitar que te validen para sentir que vales. Producto de pago, uso del comprador.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --green-dark:#173D30; --green:#265C4B; --beige:#C2A78B; --cream:#FDFCFA; --ink:#1f1810; --muted:#6b6058; }
+*{box-sizing:border-box;}
+html,body { background:#e9e4dc; color:var(--ink); margin:0; padding:0; font-family:'Lora',Georgia,serif; font-size:11.5pt; line-height:1.7; }
+/* Cada .sheet simula una página A4 en pantalla; en impresión se ajusta a la hoja */
+.sheet { background:var(--cream); max-width:720px; margin:24px auto; padding:64px 64px 72px; box-shadow:0 2px 18px rgba(23,61,48,.10); position:relative; }
+.kicker { font-family:'Barlow Condensed',sans-serif; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--beige); font-size:9.5pt; margin:0 0 18px; }
+h1 { font-family:'Instrument Serif',serif; font-weight:400; font-size:32pt; line-height:1.1; color:var(--green-dark); margin:0 0 12px; letter-spacing:-.01em; }
+h2 { font-family:'Instrument Serif',serif; font-weight:400; font-size:22pt; line-height:1.18; color:var(--green-dark); margin:34px 0 6px; }
+.h2-meta { font-family:'Barlow Condensed',sans-serif; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--beige); font-size:9pt; margin:0 0 20px; }
+h3 { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:12.5pt; letter-spacing:.05em; text-transform:uppercase; color:var(--green); margin:26px 0 8px; }
+p { margin:0 0 14px; }
+ul,ol { margin:0 0 16px; padding-left:22px; } li { margin:0 0 8px; }
+.subtitle { font-family:'Instrument Serif',serif; font-style:italic; color:var(--green); font-size:15pt; line-height:1.4; margin:0 0 8px; }
+.quote { font-family:'Instrument Serif',serif; font-style:italic; font-size:13.5pt; line-height:1.45; color:var(--green); border-left:2px solid var(--beige); padding:8px 0 8px 20px; margin:24px 0; }
+.note { font-size:10pt; color:var(--muted); font-style:italic; }
+.box { background:rgba(194,167,139,.12); border-radius:8px; padding:18px 22px; margin:20px 0; }
+.box h3 { margin-top:0; }
+.signal { background:#fff; border:1px solid #ece6dc; border-radius:8px; padding:16px 20px; margin:16px 0; }
+.exercise { border:1.5px solid var(--green); border-radius:8px; padding:20px 24px; margin:24px 0; }
+.exercise .tag { font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--green); font-size:9.5pt; }
+.write-line { border-bottom:1px solid #d8d0c5; height:26px; margin:10px 0; }
+/* Portada */
+.cover { min-height:78vh; display:flex; flex-direction:column; justify-content:center; text-align:center; }
+.cover .brand { font-family:'Barlow Condensed',sans-serif; letter-spacing:.32em; text-transform:uppercase; color:var(--beige); font-size:11pt; margin:0 0 40px; }
+.cover h1 { font-size:46pt; margin:0 0 10px; }
+.cover .sub { font-family:'Instrument Serif',serif; font-style:italic; font-size:18pt; color:var(--green); margin:0 0 48px; }
+.cover .author { font-family:'Barlow Condensed',sans-serif; letter-spacing:.06em; color:var(--muted); font-size:11pt; line-height:1.6; }
+.toc li { font-family:'Barlow Condensed',sans-serif; font-size:13pt; letter-spacing:.02em; margin:0 0 12px; }
+.toc .n { color:var(--beige); font-weight:600; margin-right:10px; }
+.foot { text-align:center; margin-top:48px; padding-top:16px; border-top:1px solid #e6dfd6; font-family:'Barlow Condensed',sans-serif; font-size:9pt; letter-spacing:.06em; color:var(--muted); }
+@page { size:A4; margin:18mm 18mm 20mm; }
+@media print {
+  html,body{ background:#fff; }
+  .sheet{ box-shadow:none; margin:0; max-width:none; padding:0; page-break-after:always; }
+  .sheet:last-child{ page-break-after:auto; }
+  .quote,.box,.exercise,.signal{ page-break-inside:avoid; }
+  h2{ page-break-after:avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<section class="sheet cover">
+  <img src="../../assets/logo-mindworld-transparent.png" alt="MIND WORLD PROJECT" style="width:150px;height:auto;margin:0 auto 36px;display:block;">
+  <p class="brand">TWIM Project · Cuaderno</p>
+  <h1>La mirada del otro</h1>
+  <p class="sub">Dejar de necesitar que te validen para sentir que vales.</p>
+  <p class="author">Daniel Orozco Abia<br>Psicólogo General Sanitario · Col. CV11515 · Valencia</p>
+</section>
+
+<!-- CÓMO USAR -->
+<section class="sheet">
+  <p class="kicker">Antes de empezar</p>
+  <h2>Cómo usar este cuaderno</h2>
+  <p class="h2-meta">Léelo despacio · una parte por vez</p>
+  <p>Esto no es un curso ni un manual de autoayuda. No vas a encontrar aquí «diez pasos para quererte más». Es un <strong>mapa</strong> de algo que probablemente llevas haciendo desde muy pronto, casi sin darte cuenta: buscar en la mirada del otro la señal de que estás bien.</p>
+  <p>Está pensado para leerse en orden. Primero entender el mecanismo —qué es, cómo se reconoce, de dónde viene—; después, una parte que casi nadie te cuenta; y al final, una práctica concreta para empezar a notarlo en tu día. No para apagarlo de golpe (no se puede), sino para empezar a verlo.</p>
+  <div class="box">
+    <h3>Una advertencia honesta</h3>
+    <p style="margin:0;">Esto es material educativo, no clínico. Si algo de lo que leas te sacude, es normal. Pero si te paraliza, te roba el sueño o te lleva a sitios oscuros, busca a alguien que pueda mirarlo contigo de cerca. Un cuaderno no sustituye eso.</p>
+  </div>
+</section>
+
+<!-- INTRO · HAMBRE DE MIRADA -->
+<section class="sheet">
+  <p class="kicker">El punto de partida</p>
+  <h2>Hambre de mirada</h2>
+  <p class="h2-meta">No es lo que crees que es</p>
+  <p>Hay personas que necesitan ser miradas para saber que están. Lo digo casi literalmente: la mirada del otro funciona como un espejo. Si te miran, existes. Si te aprueban, vales. Si se alejan, te disuelves un poco.</p>
+  <p>A eso, en consulta, lo llamo <strong>hambre de mirada</strong>.</p>
+  <p>No es necesidad de atención. La atención es ruido y caduca rápido. Hambre de mirada es algo más íntimo: la sensación de que, sin alguien mirándote y diciéndote —con palabras o sin ellas— que estás bien, te quedas en un sitio incómodo del que necesitas salir cuanto antes.</p>
+  <div class="quote">No te falta amor propio. Aprendiste, muy pronto, que sin la mirada del otro no se podía estar tranquila. Y eso se queda.</div>
+  <p>Este cuaderno va sobre eso: sobre por qué te pasa, cómo se nota, y qué empieza a cambiar cuando dejas de pelearte con ello y empiezas a verlo.</p>
+</section>
+
+<!-- ÍNDICE -->
+<section class="sheet">
+  <p class="kicker">Lo que vas a recorrer</p>
+  <h2>Índice</h2>
+  <ol class="toc" style="list-style:none;padding-left:0;margin-top:24px;">
+    <li><span class="n">01</span> El mapa · qué es de verdad depender de la mirada del otro</li>
+    <li><span class="n">02</span> Cómo se reconoce · las señales (con autotest)</li>
+    <li><span class="n">03</span> De dónde viene · la mirada que fue condicional</li>
+    <li><span class="n">04</span> El nudo que nadie te cuenta · lo que la mirada esconde</li>
+    <li><span class="n">05</span> Práctica · empezar a notarlo sin pelearte</li>
+    <li><span class="n">06</span> El siguiente paso</li>
+  </ol>
+  <p class="note" style="margin-top:32px;">Cuaderno TWIM · primera edición · 2026. Uso personal del comprador. No se redistribuye.</p>
+</section>
+
+<!-- SECCIÓN 01 · EL MAPA -->
+<section class="sheet">
+  <p class="kicker">Parte 01</p>
+  <h2>El mapa</h2>
+  <p class="h2-meta">Qué es de verdad depender de la mirada del otro</p>
+  <p>No es amar demasiado. No es ser intensa, ni sensible, ni de las que «se enganchan rápido». Es un <strong>sistema</strong>: una manera muy concreta de regular tu sentido de quién eres usando lo que hace o dice otra persona. Y se enciende sin pedirte permiso, porque se montó cuando no había otra opción.</p>
+  <p>Funciona como un espejo. La otra persona te devuelve —o no— la señal de que estás bien, y de esa señal depende tu estado. Si te miran, existes. Si te aprueban, vales. Si se alejan, te disuelves un poco. La palabra clínica sería <em>regulación externa</em> —que te calmas desde fuera en vez de desde dentro—. La palabra de andar por casa es la que da título a esto: hambre de mirada.</p>
+  <div class="box">
+    <h3>El ciclo · por qué nunca calma del todo</h3>
+    <p style="margin:0 0 8px;">Mira la forma que tiene, porque la vas a reconocer:</p>
+    <ol style="margin:0;">
+      <li>Algo dispara la duda (un silencio, una cara, un visto).</li>
+      <li>Se enciende la pregunta: «¿sigo bien para esta persona?»</li>
+      <li>Buscas confirmación (escribes, revisas, preguntas, te explicas).</li>
+      <li>Llega el alivio. Real, pero corto.</li>
+      <li>El alivio se gasta y vuelve el vacío. Y vuelta a empezar.</li>
+    </ol>
+  </div>
+  <div class="quote">Es como beber agua salada con sed. La garganta se moja un instante. El cuerpo no se hidrata. Y cuanto más bebes, más sed tienes.</div>
+  <p>Por eso un «te quiero» dura unas horas y luego reaparece, intacta, la sensación de que necesitas otro. La confirmación de fuera calma, pero no cura. No porque la pidas mal, sino porque estás buscando dentro del otro algo que solo se construye dentro de ti.</p>
+</section>
+
+<!-- SECCIÓN 02 · SEÑALES + AUTOTEST -->
+<section class="sheet">
+  <p class="kicker">Parte 02</p>
+  <h2>Cómo se reconoce</h2>
+  <p class="h2-meta">Diez señales · un autotest honesto</p>
+  <p>Estas diez cosas se disfrazan de amor, de generosidad o de «ser buena persona». Por debajo, casi siempre, hacen lo mismo: ponen tu seguridad en manos del otro. Léelas despacio y marca, sin juzgarte, las que reconozcas en ti esta última semana.</p>
+
+  <div class="signal"><strong>1 · Necesitas saber que todo está bien, todo el rato.</strong><br>Parece que te preocupas. Es que sin confirmación constante no te quedas tranquila.</div>
+  <div class="signal"><strong>2 · Cambias de opinión según con quién estés.</strong><br>Parece que eres flexible. Es que tu opinión es un espejo de la del otro.</div>
+  <div class="signal"><strong>3 · No puedes irte aunque sepas que deberías.</strong><br>Parece que amas demasiado. Es que irte se siente como desaparecer.</div>
+  <div class="signal"><strong>4 · Das más de lo que recibes, y lo justificas.</strong><br>Parece entrega. Es comprar la relación para que el otro no se vaya.</div>
+  <div class="signal"><strong>5 · Tu ánimo depende de cómo te traten.</strong><br>Parece normal. Es que tu termostato emocional lo lleva otra persona.</div>
+  <div class="signal"><strong>6 · Tienes pánico al conflicto.</strong><br>Parece que no te gusta el drama. Es que un desacuerdo lo vives como amenaza de abandono.</div>
+  <div class="signal"><strong>7 · Idealizas a la otra persona.</strong><br>Parece amor. Es necesitar que el otro sea perfecto para que te complete.</div>
+  <div class="signal"><strong>8 · Vigilas: mensajes, horarios, redes.</strong><br>Parece interés. Es intentar controlar la incertidumbre de que se aleje.</div>
+  <div class="signal"><strong>9 · Sientes culpa cuando te priorizas.</strong><br>Parece que eres considerada. Es que aprendiste que tu necesidad molesta.</div>
+  <div class="signal"><strong>10 · Cuando te dejan, sientes que desapareces.</strong><br>Parece duelo. Es que tu identidad estaba enchufada a la relación.</div>
+
+  <div class="box" style="margin-top:22px;">
+    <h3>Cómo leer lo que marcaste</h3>
+    <p style="margin:0;">No hay nota de corte ni diagnóstico. Esto no se cura sumando cruces. Si reconoces varias, no es que estés «peor»: es que el sistema lleva tiempo encendido y aún no lo habías mirado de frente. Eso es justo lo que empieza a cambiar las cosas: mirarlo.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN 03 · DE DÓNDE VIENE -->
+<section class="sheet">
+  <p class="kicker">Parte 03</p>
+  <h2>De dónde viene</h2>
+  <p class="h2-meta">La mirada que fue condicional</p>
+  <p>No viene de tu carácter. No es que seas «así». Hambre de mirada se monta de niña, en un momento concreto: aquel en el que la mirada del adulto que te cuidaba era condicional. Si te portabas bien, te miraban. Si no, la mirada se iba —o se ponía dura, o triste, o se desviaba a otra parte—.</p>
+  <p>Aprendiste rápido que la mirada era un recurso escaso. Y aprendiste a hacer lo necesario para que no se fuera. Eso, repetido durante años, deja huella. La huella es que de adulta sigues buscando esa mirada por todas partes. Aunque tengas trabajo, pareja, hijos, vida montada. Mirar a mamá o a papá se convirtió en mirar a la pareja, al jefe, al grupo.</p>
+  <div class="box">
+    <h3>Tres cosas que dejaron la marca</h3>
+    <ul style="margin:0;">
+      <li><strong>Amor condicional.</strong> Tu valor dependía de lo que hacías o parecías. Si no eras «suficiente», la atención se retiraba.</li>
+      <li><strong>Invalidación.</strong> Tus emociones se descalificaban —«no llores», «no es para tanto»—. Aprendiste que sentir era un problema.</li>
+      <li><strong>Comparación.</strong> Siempre había alguien mejor. Nunca eras suficiente tal como eras.</li>
+    </ul>
+  </div>
+  <p>Hay un nombre clínico para la pieza que faltó: la <em>función especular</em> —la necesidad de que alguien te mirara con admiración genuina para que tú construyeras, desde dentro, un sentido sólido de tu propio valor (es la idea de Heinz Kohut)—. Dicho en llano: necesitabas un espejo que te devolviera «vales», y ese espejo falló o vino a ratos. No te quedó un hueco por capricho. Te quedó porque algo que tenía que estar, no estuvo.</p>
+</section>
+
+<!-- SECCIÓN 04 · EL NUDO -->
+<section class="sheet">
+  <p class="kicker">Parte 04</p>
+  <h2>El nudo que nadie te cuenta</h2>
+  <p class="h2-meta">Lo que la mirada esconde</p>
+  <p>Hasta aquí, la historia habitual: te falta algo y lo buscas fuera. Pero hay una vuelta de tuerca que casi nadie te explica, y es la que hace que esto no se arregle «cumpliendo más».</p>
+  <p>No es solo que te sientas en falta. Es que hay <strong>algo en ti que la mirada que buscas no aprobaría</strong> —un deseo, una rabia, una parte tuya que no encaja en el ideal de quien crees que tienes que ser para que te quieran—. Y eso es lo que de verdad escondes. Por eso, cuando alguien se aleja, la voz susurra: «fue por eso que escondo». Casi nunca es verdad. Pero lo das por hecho.</p>
+  <div class="quote">La voz que te juzga por dentro y el miedo a que el otro te rechace por fuera son la misma voz. Las dos te dicen lo mismo: esconde lo que eres, o te quedarás sola. Y las dos mienten.</div>
+  <p>Por eso ningún logro, ninguna pareja, ningún «te quiero» apaga el hambre del todo: no estás tapando algo que te falta, estás escondiendo algo que eres. La paz no llega el día que por fin eres suficiente para esa mirada. Llega —un poco— el día que dejas de tener que esconder lo que ella condena.</p>
+  <h3>Las cinco máscaras</h3>
+  <p>Mientras tanto, la dependencia se disfraza de virtud. Cada máscara parece algo bueno y por debajo es control —un intento de que el otro no se vaya—:</p>
+  <ul>
+    <li><strong>Entrega excesiva</strong> · darlo todo para asegurar que no te suelten.</li>
+    <li><strong>Hipervigilancia</strong> · leer caras, tonos y silencios todo el rato.</li>
+    <li><strong>Evitar el conflicto</strong> · capitular antes de que haya tormenta.</li>
+    <li><strong>Idealización</strong> · convertir al otro en perfecto para que te complete.</li>
+    <li><strong>Culpa automática</strong> · pedir perdón por existir, por necesitar, por molestar.</li>
+  </ul>
+  <p class="note">La idealización tiene trampa propia: cuando el otro falla (y falla, porque es humano), saltas a lo contrario —«es un monstruo»— y luego vuelves. Ese vaivén entre «todo bueno» y «todo malo» —en psicoanálisis, la <em>escisión</em>: partir a la persona en dos para no tolerar que sea compleja— no es amor. Es la necesidad buscándose un sitio.</p>
+</section>
+
+<!-- SECCIÓN 05 · PRÁCTICA -->
+<section class="sheet">
+  <p class="kicker">Parte 05</p>
+  <h2>Práctica</h2>
+  <p class="h2-meta">Empezar a notarlo sin pelearte</p>
+  <p>Nada de lo que viene es para apagar el sistema de golpe (no se puede). Es para meter un poco de espacio entre el impulso y la acción, y para empezar a verte funcionar. No son deberes. No hace falta hacerlos todos. Elige uno y pruébalo esta semana.</p>
+
+  <div class="exercise">
+    <span class="tag">Práctica 1 · La pausa de 90 segundos</span>
+    <p style="margin:8px 0 0;">Cuando notes el tirón de buscar confirmación —escribir otra vez, revisar, explicarte de más—, antes de hacerlo:</p>
+    <ol style="margin:8px 0 0;">
+      <li><strong>Nombra:</strong> «estoy buscando calma fuera».</li>
+      <li><strong>Respira:</strong> suelta el aire el doble de largo que lo tomas, tres veces.</li>
+      <li><strong>Mueve algo mínimo:</strong> cambia de postura, planta los pies en el suelo.</li>
+      <li><strong>Decide pequeño:</strong> «¿qué necesito de verdad ahora?» —no tiene que ser «dejar de necesitar».</li>
+    </ol>
+    <p class="note" style="margin-top:8px;">No es para dejar de sentir. Es para que la acción la elijas tú, no el pánico.</p>
+  </div>
+
+  <div class="exercise">
+    <span class="tag">Práctica 2 · El registro de cinco líneas</span>
+    <p style="margin:8px 0 0;">Al final del día, una situación. Cinco líneas, sin adornos:</p>
+    <ul style="margin:8px 0 0;list-style:none;padding-left:0;">
+      <li><strong>Situación</strong> (el hecho, sin interpretar): <span class="write-line" style="display:block;"></span></li>
+      <li><strong>Reacción</strong> (cuerpo + qué hiciste): <span class="write-line" style="display:block;"></span></li>
+      <li><strong>Intensidad</strong> (1 a 10): <span class="write-line" style="display:block;"></span></li>
+      <li><strong>¿Proporcional?</strong> (sí / no): <span class="write-line" style="display:block;"></span></li>
+      <li><strong>¿Qué necesidad vieja se encendió?</strong>: <span class="write-line" style="display:block;"></span></li>
+    </ul>
+    <p class="note" style="margin-top:8px;">Cuando la reacción es desproporcionada al hecho, casi siempre es una necesidad antigua activándose. Ahí está el dato, no en el mensaje sin contestar.</p>
+  </div>
+
+  <div class="exercise">
+    <span class="tag">Práctica 3 · Un micro-límite amable</span>
+    <p style="margin:8px 0 0;">Un límite pequeño a la semana, dicho con cuidado. La fórmula: <em>límite + puente que muestra que el otro te importa</em>.</p>
+    <p style="margin:8px 0 0;">«No puedo contestar ahora, pero te escribo esta noche. Sé que es importante.» El puente no es debilidad: es lo que permite que el otro lo escuche sin sentirse atacado. Cada límite cumplido es un voto silencioso: «mi necesidad también cuenta».</p>
+  </div>
+
+  <div class="exercise">
+    <span class="tag">Práctica 4 · Quitarle el micrófono al juez</span>
+    <p style="margin:8px 0 0;">Cuando oigas la frase de siempre —«no eres suficiente», «se irá por tu culpa»—, no discutas con ella. Solo ponle autor: «esto es el juez, no soy yo». No se calla. Pero deja de mandar cuando sabes de quién es la voz.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN 06 · CIERRE -->
+<section class="sheet">
+  <p class="kicker">Parte 06</p>
+  <h2>El siguiente paso</h2>
+  <p class="h2-meta">Adónde va esto</p>
+  <p>Recapitulemos en tres frases, sin resumir de más:</p>
+  <ol>
+    <li>Hambre de mirada no es un defecto tuyo: es un sistema que aprendiste para sobrevivir.</li>
+    <li>La confirmación de fuera calma pero no cura, porque lo que escondes no es lo que te falta, es lo que eres.</li>
+    <li>No se desactiva «queriéndote más». Se afloja viéndolo, metiendo pausa, y dejando de obedecerlo en automático.</li>
+  </ol>
+  <p>Esto es el mapa y las primeras herramientas. Si quieres seguir, hay dos sitios donde el trabajo continúa, más despacio y más hondo:</p>
+  <div class="box">
+    <p style="margin:0 0 10px;"><strong>El libro · «Tu valor no está en su mirada».</strong> La obra completa de la que este cuaderno es el resumen práctico: el origen, las máscaras, el ciclo y el alivio, contados con calma.</p>
+    <p style="margin:0 0 10px;"><strong>El grupo · «Volver a Mí».</strong> Si lo de aquí te ha tocado de cerca y quieres trabajarlo acompañada, hay un grupo cerrado en otoño. Puedes entrar en la lista de espera, sin pago ni compromiso.</p>
+    <p style="margin:0;"><strong>La newsletter · «Te escribo».</strong> Cartas como esto, cada tanto, sin prisa. Si te apetece seguir leyendo, ahí estoy.</p>
+  </div>
+  <p>No hace falta que decidas nada hoy. Lo que has leído no se va.</p>
+  <p style="margin-top:22px;color:var(--green-dark);">— Daniel</p>
+  <div class="foot">
+    Daniel Orozco Abia · Psicólogo General Sanitario · Col. CV11515 · Valencia · twimproject.com<br>
+    «La mirada del otro» · Cuaderno TWIM · primera edición 2026 · uso personal del comprador.
+  </div>
+</section>
+
+
+</body>
+</html>

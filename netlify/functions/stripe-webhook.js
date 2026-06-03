@@ -1,5 +1,9 @@
 // Netlify Function: Stripe webhook → MailerLite
-// Mueve al cliente al grupo "Inscritas" cuando paga el taller de 720 €.
+// 1) Talleres (720 €): mueve al cliente al grupo "Inscritas" del taller pagado.
+// 2) Ediciones digitales (libro 9,90 € / cuaderno 8,90 €): mete al comprador en su
+//    grupo "Comprador ·", lo que dispara la automation MailerLite que le envía el
+//    email con el enlace de descarga (2º canal de entrega; el 1º es el redirect de
+//    Stripe a la página de descarga).
 //
 // Variables de entorno requeridas (Netlify → Site configuration → Environment variables):
 //   STRIPE_WEBHOOK_SECRET           → del endpoint creado en https://dashboard.stripe.com/webhooks
@@ -7,16 +11,23 @@
 //   MAILERLITE_API_KEY              → ya configurada (la usa subscribe.js)
 //   MAILERLITE_GROUP_INSCRITAS_TDAH → 186093787887437444
 //   MAILERLITE_GROUP_INSCRITAS_BACH → 186093790595909010
+//   (los grupos de comprador digital van fijados en código abajo: no son secretos
+//    y así el email funciona sin depender de configurar env vars nuevas)
 //
 // Configuración del endpoint en Stripe:
 //   URL:    https://twimproject.com/.netlify/functions/stripe-webhook
 //   Evento: checkout.session.completed
 //   API ver: 2024-06-20 o superior
 //
-// Mapping price_id → grupo MailerLite Inscritas (los 2 talleres de 720 €):
+// Mapping price_id → grupo MailerLite. Cada entrada usa { env } (lee el id de una env
+// var) o { groupId } (id fijo en código). label es solo para logs.
 const PRICE_TO_GROUP = {
+  // Talleres 720 € (sin cambios)
   "price_1TRZ6RFW3OLCwM3HhOLpGNaK": { env: "MAILERLITE_GROUP_INSCRITAS_TDAH", label: "TDAH" },
   "price_1TRZ6UFW3OLCwM3HHbJYZKR0": { env: "MAILERLITE_GROUP_INSCRITAS_BACH", label: "Bachillerato" },
+  // Ediciones digitales (entrega por email vía automation al entrar en el grupo)
+  "price_1Te9ezFW3OLCwM3Hk5dRzXQd": { groupId: "189245231853471319", label: "Libro digital" },
+  "price_1Te9giFW3OLCwM3HTwtYsBEu": { groupId: "189245232345252997", label: "Cuaderno mirada" },
 };
 
 // Los deposits (40 €) NO se mueven a Inscritas: el padre solo agendó entrevista.
@@ -185,27 +196,27 @@ exports.handler = async (event) => {
     return jsonResponse(200, { received: true, ignored: "line_items_unavailable", reason: lineItemsResult.reason });
   }
 
-  let mappedGroupEnv = null;
-  let mappedLabel = null;
+  let mapping = null;
   for (const item of lineItemsResult.items) {
     const priceId = item.price?.id;
     if (priceId && PRICE_TO_GROUP[priceId]) {
-      mappedGroupEnv = PRICE_TO_GROUP[priceId].env;
-      mappedLabel = PRICE_TO_GROUP[priceId].label;
+      mapping = PRICE_TO_GROUP[priceId];
       break;
     }
   }
 
-  if (!mappedGroupEnv) {
-    // Producto no es uno de los 2 talleres 720 €. Deposit 40 € u otro producto. Ignored.
-    console.log("Session ignored (no taller match)", { sessionId, amount: session.amount_total });
-    return jsonResponse(200, { received: true, ignored: "no_taller_match" });
+  if (!mapping) {
+    // Producto no mapeado (deposit 40 € u otro producto). Ignored.
+    console.log("Session ignored (no price match)", { sessionId, amount: session.amount_total });
+    return jsonResponse(200, { received: true, ignored: "no_price_match" });
   }
 
-  const groupId = process.env[mappedGroupEnv];
+  const mappedLabel = mapping.label;
+  // groupId fijo en código (digital) o leído de env var (talleres)
+  const groupId = mapping.groupId || process.env[mapping.env];
   if (!groupId) {
-    console.error(`Env var ${mappedGroupEnv} no configurada`);
-    return jsonResponse(500, { error: "group_env_missing", missing_env_var: mappedGroupEnv });
+    console.error(`Grupo no resuelto para ${mappedLabel} (env ${mapping.env})`);
+    return jsonResponse(500, { error: "group_unresolved", label: mappedLabel });
   }
 
   const mlResult = await addToMailerLiteGroupSafe({
@@ -217,7 +228,7 @@ exports.handler = async (event) => {
   });
 
   if (mlResult.ok) {
-    console.log(`Added ${customerEmail} to Inscritas-${mappedLabel}`);
+    console.log(`Added ${customerEmail} to group [${mappedLabel}]`);
     return jsonResponse(200, { received: true, moved_to: mappedLabel, email: customerEmail });
   }
 

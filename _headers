@@ -3,3 +3,8 @@
 /audios-firmados/*
   X-Robots-Tag: noindex, nofollow, noarchive
   Cache-Control: private, max-age=0, no-cache
+
+# Descargas de productos digitales · solo accesibles con la URL exacta tras compra
+/descargas/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: private, max-age=0, no-cache
