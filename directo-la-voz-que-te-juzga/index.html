@@ -74,6 +74,20 @@
 <script src="/assets/twim-cookie-consent.js" defer></script>
 <script src="/assets/twim-legal-footer.js" defer></script>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1447483376992558');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1447483376992558&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 :root { --green-dark:#173D30; --green:#265C4B; --beige:#C2A78B; --beige-dark:#a88a6a; --cream:#FDFCFA; --ink:#1f1810; --muted:#6b6058; --text:#2B2420; }
 *{box-sizing:border-box;}
@@ -234,6 +248,7 @@ footer.site a{color:rgba(253,252,250,.85);text-decoration:underline;margin:0 6px
       btn.style.display='none';
       success.style.display='block';
       if (typeof gtag === 'function') gtag('event', 'directo_reservar_plaza', utm);
+      if (typeof fbq === 'function') fbq('track', 'Lead', {content_name: 'Directo · La voz que te juzga · 7 jun'});
     } catch {
       btn.disabled = false; btn.textContent = original;
       error.textContent='Algo no ha ido bien. Prueba en un momento o escríbeme a equipo@theworldismindproject.com';
