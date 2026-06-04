@@ -87,7 +87,8 @@ Satisfecho y en modo ejecución rápida pero con exigencia alta de calidad («ci
 **Convenio Unió de Periodistes (en negociación, avanzando):**
 - Propuesta enviada (25% → 60€/sesión). Jéssica Ortega respondió preguntando el precio base de la **primera sesión**.
 - Respondido (con OK de Daniel): **el 25% aplica a todas, también la primera → 60€**. Los 80€ quedan como tarifa oficial de referencia. El asociado abona en consulta la parte fija que fije la Unió y el centro pasa recibo por el resto hasta 60€.
-- **Estado:** la Unió debe ahora fijar **cuánto paga el asociado** de esos 60€ → luego **formalizar**. Pelota en su tejado. Al formalizar: pedir backlink/listado de `unioperiodistes.org` (palanca de autoridad).
+- **Respuesta de la Unió (4 jun, 13:41):** «Lo tenemos todo claro entonces. En cuanto respondan más compañeros y fijemos el precio que pagará la Unió os avisaremos y os diremos también con qué gabinetes hemos decidido contar finalmente. Saludos.» → bucle de tarifas **cerrado y entendido por su parte**.
+- **Estado:** en espera. La Unió necesita que **respondan más compañeros** para fijar **(a)** cuánto paga la Unió de esos 60€ y **(b)** con qué gabinetes se queda finalmente. **Pelota en su tejado · no requiere acción nuestra ahora** — esperar su aviso. Al formalizar: pedir backlink/listado de `unioperiodistes.org` (palanca de autoridad) + recoger tratamiento de datos (DNI/nº socio) en el convenio.
 
 **Surfacing de productos digitales (HECHO, en producción · PRs #290, #291):**
 - `/libro-engranajes-mente/` → bloque «edición digital ampliada» (compra directa) + mención al cuaderno.
