@@ -117,4 +117,31 @@ Eso orienta la transferencia. Y la transferencia orienta todo lo demás.
 
 ---
 
+## VI · Matiz clínico · la dirección del movimiento bajo amenaza
+
+La pregunta-eje de la sección anterior («¿teme que me vaya o que me acerque?») es correcta como entrada, pero **la clínica real complica la respuesta lineal**.
+
+### Borderline · necesidad y amenaza simultáneas
+
+Teme que te vayas. Y también puede temer que te acerques demasiado, porque la cercanía extrema amenaza los límites del self. La dinámica no es lineal: **necesita la presencia y a la vez la presencia activa la angustia de fusión**. Por eso el ciclo clínico oscila entre aferramiento e impulso de ruptura. Kernberg lo lee como escisión activa: el mismo objeto idealizado colapsa en objeto persecutorio sin causa proporcional.
+
+### Esquizoide · el dilema de Fairbairn
+
+Teme que te acerques. Pero hay algo más preciso, que Fairbairn formuló como **el dilema esquizoide**: también necesita el vínculo, pero necesitarlo es peligroso. No es indiferencia. Es necesidad que no puede moverse hacia el objeto sin activar angustia de aniquilación del self. La solución es la retirada, no la ausencia de deseo.
+
+### Lo observable · dirección del movimiento
+
+La diferencia operativa no está solo en qué teme cada uno, sino en **qué dirección se mueve cuando siente amenaza**:
+
+- **Borderline bajo amenaza:** se acerca más, ataca, actúa. *Movimiento hacia.*
+- **Esquizoide bajo amenaza:** desaparece, se cierra, se va. *Movimiento desde.*
+
+Eso es lo observable en sesión sin necesidad de teoría:
+
+> **Cuando algo duele, ¿este paciente te busca o te borra?**
+
+Esa pregunta, junto a la anterior, cierra el circuito diagnóstico. Una mira al miedo. La otra mira al gesto. Las dos juntas previenen los dos errores técnicos descritos en V.
+
+---
+
 *Daniel Orozco Abia · Psicólogo General Sanitario CV11515 · TWIM Project*
