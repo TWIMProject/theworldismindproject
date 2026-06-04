@@ -81,3 +81,23 @@ Satisfecho y en modo ejecución rápida pero con exigencia alta de calidad («ci
 - **Stories WhatsApp:** Daniel comparte hoy que sale en Google (sin pedir reseñas explícitamente, copy entregado) → alimenta reseñas → ranking local.
 
 **Nota de método:** sesión con libertad de acción; se intentó Ahrefs/Motion (sin datos: plan insuficiente / cuenta no conectada) y se confirmó que el trabajo «materializable» de visibilidad ya estaba hecho en el repo. No se duplicó ni se hicieron ediciones SEO redundantes. Lo pendiente es ejecución del lado de Daniel.
+
+## Actualización 4 jun · convenio Unió + surfacing digital + SEO
+
+**Convenio Unió de Periodistes (en negociación, avanzando):**
+- Propuesta enviada (25% → 60€/sesión). Jéssica Ortega respondió preguntando el precio base de la **primera sesión**.
+- Respondido (con OK de Daniel): **el 25% aplica a todas, también la primera → 60€**. Los 80€ quedan como tarifa oficial de referencia. El asociado abona en consulta la parte fija que fije la Unió y el centro pasa recibo por el resto hasta 60€.
+- **Estado:** la Unió debe ahora fijar **cuánto paga el asociado** de esos 60€ → luego **formalizar**. Pelota en su tejado. Al formalizar: pedir backlink/listado de `unioperiodistes.org` (palanca de autoridad).
+
+**Surfacing de productos digitales (HECHO, en producción · PRs #290, #291):**
+- `/libro-engranajes-mente/` → bloque «edición digital ampliada» (compra directa) + mención al cuaderno.
+- Home → línea «edición digital · descarga inmediata» en la zona de libros.
+- Insight `por-que-necesitas-que-te-validen` → cuaderno «La mirada del otro» como escalón menor disponible hoy (junto al CTA del programa DDBEO, que está en pre-venta).
+- Resultado: de 1 punto de entrada (libros-firmados) a **4**, desde las páginas de más tráfico/intención.
+
+**SEO (HECHO, PR #289):** enlazado interno del cluster laboral → landing de burnout (pos 9,4, striking distance). La de ansiedad ya estaba bien enlazada. Medir en GSC en 4-6 semanas.
+
+**Contenido entregado, pendiente de activar por Daniel (panel MailerLite):**
+- Secuencia de bienvenida «Te escribo» (E2+E3 + CTAs re-encuadrados) · `contenido-rrss/te-escribo-newsletters/secuencia-bienvenida-automatica.md`.
+- Email confirmación Directo «Estás dentro» · `contenido-rrss/directo-7jun-confirmacion-estas-dentro.txt`.
+- Fábulas de apertura y cierre del Directo (PDF + fuente) · `contenido-rrss/fabula-*-directo-7jun.*`.
