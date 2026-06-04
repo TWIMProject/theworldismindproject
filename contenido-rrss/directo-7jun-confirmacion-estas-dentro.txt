@@ -1,0 +1,38 @@
+CONFIRMACIÓN AUTOMÁTICA · Directo «La voz que te juzga» (7 jun)
+================================================================
+
+Para qué: hoy quien se apunta al Directo NO recibe nada hasta los emails de
+víspera/día (E2/E3/E4). Eso pierde gente (dudan, lo olvidan, no lo apuntan).
+Este email se envía AL INSTANTE de apuntarse → confirma, da el enlace, reduce
+no-shows. Especialmente útil ahora con la difusión metiendo inscritos nuevos.
+
+CÓMO MONTARLO (MailerLite · ~5 min, lo activas tú porque la API no me deja
+"diseñar" el email):
+  1. Automatizaciones → Crear → trigger "Cuando un suscriptor se une a un grupo".
+  2. Grupo: "Lead · Directo · La voz que te juzga (7 jun)" (id 187662493483533365).
+  3. 1 email, SIN retardo (inmediato).
+  4. IDIOMA = Español (verifícalo; nace en inglés por defecto).
+  5. Pega el cuerpo de abajo. Activa.
+  (Solo dispara para quien se une A PARTIR de activarla — justo los que trae la
+   difusión de estos días.)
+
+----------------------------------------------------------------
+ASUNTO:  Estás dentro.
+PREVIEW: El domingo nos vemos.
+REMITENTE: Daniel Orozco · danielorozco@twimproject.com
+----------------------------------------------------------------
+
+Hola,
+
+Estás dentro. Te he guardado el sitio para el directo «La voz que te juzga».
+
+· Cuándo: domingo 7 de junio, 19:00 (hora de España).
+· Dónde: por Google Meet → https://meet.google.com/fsu-scrz-res
+
+Te recomiendo una cosa: añádelo ya a tu calendario con ese enlace, para que el domingo no tengas que buscarlo. Y si puedes, reserva esa hora sin prisa: vamos a mirar con calma esa voz de dentro que lo comenta todo y casi siempre juzga.
+
+Te escribiré un par de recordatorios antes, así que no tienes que estar pendiente de nada. Y si al final ese día no puedes en directo, apúntate igual: te dejaré el material después.
+
+Nos vemos el domingo.
+
+— Daniel
