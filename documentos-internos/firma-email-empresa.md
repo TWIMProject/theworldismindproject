@@ -23,3 +23,11 @@ danielorozco@twimproject.com · twimproject.com
 - **Sin emojis.** Sobrio, profesional.
 - El botón tipo «Registrarse» **se quita** en correos de correspondencia (es para marketing). Para emails de venta/captación sí puede llevar CTA.
 - **Dos usos:** (a) emails branded/profesionales (propuestas, colaboraciones tipo Unió) → base completa con banner + firma; (b) respuestas rápidas del día a día → con la firma sola basta.
+
+
+## Iconos de redes (verde TWIM · en `assets/email-icons/`)
+Para el bloque «Enlaces de redes sociales». Cada icono junto a su enlace:
+- `instagram.png` → https://instagram.com/daniorozcopsicologo
+- `youtube.png` → https://youtube.com/@daniorozcopsicologo
+- `linkedin.png` → https://www.linkedin.com/in/dani-orozco-abia-1a0a90115/
+Reproducibles: estilo cuadrado redondeado verde #173D30 con glifo blanco.
