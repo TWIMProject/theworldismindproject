@@ -52,7 +52,7 @@ Esta es la última de esta primera tanda. A partir de aquí te escribiré solo c
 
 Dos cosas antes de soltarte.
 
-La primera. Si después de la carta anterior te quedaste con ganas de mirarte un poco por dentro, hice un test breve sobre el agotamiento, ese cansancio que no se va por mucho que duermas. No es un test de revista: te devuelve, en tu correo, dónde estás y por qué. Lo dejo aquí por si te sirve → [ENLACE AL TEST]. Y si no es tu tema, pásalo de largo sin más.
+La primera. Si quieres algo que puedas usar ya, hace un tiempo escribí cómo frenar la urgencia mental, esa sensación de que tienes que resolver algo ya sin saber bien qué, en un par de minutos. No es teoría: es para tenerlo a mano y usarlo cuando lo notes. Te lo dejo aquí → https://twimproject.com/insights/urgencia-mental-frenarla-120-segundos.html. Si no es tu tema, pásalo de largo sin más.
 
 La segunda, y la que más me importa. Esto no es un altavoz donde yo hablo y tú escuchas. Puedes responder a este correo: leo todo lo que llega. Si algo de lo que te he escrito te ha resonado, o te ha chirriado, cuéntamelo. Muchas veces, de ahí salen las cartas siguientes.
 
@@ -62,7 +62,7 @@ Nos leemos cuando toque. Y «cuando toque» quiere decir cuando tenga algo que d
 
 — Daniel
 
-> **Nota del [ENLACE AL TEST]:** enlazar al test/lead magnet vivo que mejor encaje (burnout / síndrome del impostor / «5 señales»). Si se construye el test de burnout del playbook («¿Estás quemado o solo cansado?»), ese es el ideal porque conecta con el libro *Burnout*.
+> **Nota del enlace de E3:** se apunta a un insight gratuito y accionable (frenar la urgencia mental) porque quien recibe esta secuencia **ya es suscriptor** — darle valor directo funciona mejor que mandarlo a un captador de emails. Alternativas si se prefiere otro: `lead-burnout-5-senales.html` o `test-sindrome-impostora.html`.
 
 ---
 
