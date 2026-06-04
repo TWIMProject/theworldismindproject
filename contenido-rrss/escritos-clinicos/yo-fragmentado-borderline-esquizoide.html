@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yo fragmentado · Borderline y esquizoide en Freud, Kernberg y Kohut · Daniel Orozco Abia</title>
+<meta name="author" content="Daniel Orozco Abia">
+<meta name="description" content="Escrito clínico interno sobre la escisión del yo en organizaciones borderline y esquizoide desde la lectura de Freud, Kernberg y Kohut.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap">
+<style>
+:root{--verde-oscuro:#173D30;--verde-medio:#265C4B;--beige:#C2A78B;--crema:#FDFCFA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow Condensed',sans-serif;background:var(--crema);color:var(--verde-oscuro);font-weight:400;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 36px}
+
+/* PORTADA */
+.cover{padding:96px 0 64px;border-bottom:2px solid var(--verde-oscuro);text-align:left}
+.cover .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--beige);font-weight:500;margin-bottom:22px}
+.cover h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:74px;line-height:.98;color:var(--verde-oscuro);letter-spacing:-1px;margin-bottom:24px}
+.cover h1 em{font-style:italic;color:var(--verde-medio)}
+.cover .subtitle{font-family:'Instrument Serif',serif;font-style:italic;font-size:26px;line-height:1.3;color:var(--verde-medio);max-width:600px;margin-bottom:32px}
+.cover .meta{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--verde-medio);font-weight:500}
+.cover .meta span::before{content:" · ";color:var(--beige)}
+.cover .meta span:first-child::before{content:""}
+
+/* TOC */
+.toc{padding:48px 0;border-bottom:1px solid rgba(23,61,48,.1)}
+.toc-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--beige);font-weight:600;margin-bottom:18px}
+.toc ol{list-style:none;counter-reset:toc;padding:0}
+.toc li{counter-increment:toc;padding:8px 0;font-family:'Instrument Serif',serif;font-size:22px;color:var(--verde-oscuro);position:relative;padding-left:50px}
+.toc li::before{content:counter(toc, upper-roman);position:absolute;left:0;top:8px;font-size:14px;color:var(--beige);font-family:'Barlow Condensed',sans-serif;letter-spacing:2px;font-weight:600}
+
+/* SECCIONES */
+.sec{padding:64px 0;border-bottom:1px solid rgba(23,61,48,.08)}
+.sec:last-of-type{border-bottom:none}
+.sec-num{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--beige);font-weight:600;margin-bottom:14px}
+.sec h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:42px;line-height:1.1;color:var(--verde-oscuro);margin-bottom:14px;letter-spacing:-.3px}
+.sec h2 em{font-style:italic;color:var(--verde-medio)}
+.sec h3{font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;font-size:26px;line-height:1.25;color:var(--verde-medio);margin:42px 0 18px}
+.sec h4{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:2px;color:var(--verde-oscuro);margin:30px 0 12px}
+.sec p{font-size:17.5px;line-height:1.75;font-weight:300;color:var(--verde-oscuro);margin:0 0 22px;max-width:680px}
+.sec p.lead{font-size:21px;line-height:1.55;font-weight:400;color:var(--verde-medio);font-family:'Instrument Serif',serif;font-style:italic;margin:14px 0 32px}
+.sec strong{font-weight:600;color:var(--verde-oscuro)}
+.sec em{font-style:italic}
+.sec ul,.sec ol{margin:0 0 24px;padding-left:0;list-style:none}
+.sec ul li,.sec ol li{position:relative;padding:6px 0 6px 28px;font-size:17.5px;line-height:1.7;font-weight:300;color:var(--verde-oscuro)}
+.sec ul li::before{content:"·";position:absolute;left:6px;top:2px;color:var(--beige);font-size:24px;font-weight:700}
+.sec ol{counter-reset:olist}
+.sec ol li{counter-increment:olist}
+.sec ol li::before{content:counter(olist);position:absolute;left:0;top:8px;width:22px;height:22px;background:var(--verde-oscuro);color:var(--crema);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;font-family:'Barlow Condensed',sans-serif}
+
+/* CITAS DESTACADAS */
+blockquote{margin:32px 0;padding:20px 0 20px 28px;border-left:3px solid var(--beige);font-family:'Instrument Serif',serif;font-style:italic;font-size:24px;line-height:1.4;color:var(--verde-medio);max-width:680px}
+blockquote strong{font-weight:400;color:var(--verde-oscuro);font-style:normal;font-family:'Barlow Condensed',sans-serif;font-weight:600}
+
+/* TABLA */
+.tabla-wrap{margin:28px 0;overflow-x:auto;border:1px solid rgba(23,61,48,.12)}
+table{width:100%;border-collapse:collapse;font-size:15.5px;font-weight:300}
+thead th{background:var(--verde-oscuro);color:var(--crema);text-align:left;padding:14px 16px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;font-size:12px}
+tbody td{padding:13px 16px;border-bottom:1px solid rgba(23,61,48,.08);vertical-align:top;line-height:1.45}
+tbody td:first-child{font-weight:600;color:var(--verde-oscuro);background:rgba(194,167,139,.08);width:24%}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even) td:not(:first-child){background:rgba(194,167,139,.04)}
+
+/* CIERRE PREGUNTA */
+.cierre-q{margin:36px 0;padding:28px 32px;background:var(--verde-oscuro);color:var(--crema);text-align:center}
+.cierre-q .label{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--beige);font-weight:500;margin-bottom:14px}
+.cierre-q .q{font-family:'Instrument Serif',serif;font-style:italic;font-size:30px;line-height:1.25;color:var(--crema)}
+
+/* FOOTER */
+footer{padding:48px 0 64px;text-align:center;font-size:12px;letter-spacing:2px;color:var(--verde-medio);text-transform:uppercase}
+footer .firma{font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;color:var(--verde-oscuro);text-transform:none;letter-spacing:.5px;margin-bottom:8px}
+
+/* Print */
+@media print{
+  body{font-size:11pt}
+  .cover{padding:40px 0 32px;page-break-after:avoid}
+  .sec{padding:32px 0;page-break-inside:auto}
+  .sec h2,.sec h3,.sec h4{page-break-after:avoid}
+  blockquote,.cierre-q,.tabla-wrap{page-break-inside:avoid}
+}
+@media(max-width:580px){
+  .wrap{padding:0 24px}
+  .cover h1{font-size:50px}
+  .sec h2{font-size:32px}
+  .cierre-q .q{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="wrap">
+    <div class="eyebrow">Escrito clínico · Daniel Orozco Abia</div>
+    <h1>Yo <em>fragmentado</em></h1>
+    <p class="subtitle">Borderline y esquizoide en Freud, Kernberg y Kohut.</p>
+    <div class="meta">
+      <span>Texto teórico de referencia</span>
+      <span>5 secciones</span>
+      <span>TWIM Project</span>
+    </div>
+  </div>
+</div>
+
+<div class="toc">
+  <div class="wrap">
+    <div class="toc-label">Contenido</div>
+    <ol>
+      <li>Freud · la escisión como condición estructural</li>
+      <li>Kernberg · estructura, no síntoma</li>
+      <li>Kohut · déficit, no conflicto</li>
+      <li>Diagnóstico diferencial · uso clínico directo</li>
+      <li>Donde se confunden · el riesgo clínico real</li>
+    </ol>
+  </div>
+</div>
+
+<!-- SECCIÓN I · FREUD -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-num">I · Freud</div>
+    <h2>La escisión como <em>condición estructural</em></h2>
+
+    <p>La <em>Spaltung</em> (1938, <em>Esquema del psicoanálisis</em>) no es represión. En la represión, el contenido inaceptable desaparece de la consciencia. En la escisión, dos posiciones contradictorias coexisten sin integrarse. El yo las sostiene simultáneamente sin que colisionen. Eso es posible porque <strong>el yo ha renunciado a su función sintética</strong>.</p>
+
+    <p>La diferencia clínica fundamental respecto a la neurosis es la naturaleza de la angustia primaria. El neurótico opera bajo angustia de castración —amenaza de pérdida de algo que se tiene. En las organizaciones pre-neuróticas, la angustia es de aniquilación del yo mismo.</p>
+
+    <blockquote>No castración. <strong>Desintegración.</strong></blockquote>
+
+    <p>Esto cambia todo el campo técnico: el objetivo no es hacer consciente lo reprimido sino <strong>reconstruir un yo que nunca logró integración</strong>.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN II · KERNBERG -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-num">II · Kernberg</div>
+    <h2>Estructura, <em>no síntoma</em></h2>
+
+    <h3>La difusión de identidad como marcador diagnóstico</h3>
+    <p>Kernberg no parte del síntoma sino de la estructura. La pregunta no es qué le pasa al paciente sino cómo está organizado su mundo interno. El indicador central en la organización borderline es la <strong>difusión de identidad</strong> (<em>identity diffusion</em>): el paciente no puede construir una imagen coherente y estable de sí mismo ni del otro.</p>
+
+    <p>Test clínico directo: «Descríbeme cómo eres tú.» En organización neurótica, la respuesta es compleja pero coherente. En organización borderline, emergen contradicciones irresolubles sin que el paciente las registre como tales. «Soy muy generoso pero también soy bastardo cuando me tocan.» Sin puente. Sin integración.</p>
+
+    <h3>Mecanismos de defensa nivel borderline</h3>
+    <p>La escisión es el eje, pero no opera sola. Los mecanismos asociados definen dos perfiles distintos.</p>
+
+    <h4>Borderline</h4>
+    <ul>
+      <li><strong>Identificación proyectiva:</strong> deposita en el terapeuta aspectos del self que no puede tolerar, y luego actúa sobre ese terapeuta para confirmar la proyección. Esto es activo, relacional, requiere al otro.</li>
+      <li>Idealización primitiva / devaluación alternante.</li>
+      <li>Negación de sectores de experiencia.</li>
+      <li>Omnipotencia.</li>
+    </ul>
+
+    <h4>Esquizoide</h4>
+    <ul>
+      <li><strong>Retirada de las relaciones de objeto.</strong> No identificación proyectiva activa: el esquizoide no necesita al otro para su defensa, sino que lo elimina del campo.</li>
+      <li>Intelectualización como sustituto del contacto afectivo.</li>
+      <li>Mundo interno rico en fantasía; empobrecimiento del vínculo real.</li>
+    </ul>
+
+    <p>La diferencia estructural es esta: el borderline usa al objeto como contenedor y regulador. El esquizoide prescinde del objeto real. Ambos están en organización borderline de personalidad —no psicóticos, prueba de realidad conservada— pero <strong>la dirección del movimiento defensivo es opuesta</strong>.</p>
+
+    <h3>Relaciones de objeto internalizadas</h3>
+    <p>Kernberg describe las unidades básicas del mundo interno como díadas: representación del self + representación del objeto + afecto que las une. En organización borderline, esas díadas permanecen escindidas: hay una díada de <em>self bueno / objeto bueno</em> y una de <em>self malo / objeto malo</em>, sin síntesis. El cuidador que nutre y el que frustra no se integran en el mismo ser.</p>
+
+    <p>Resultado clínico: idealización absoluta que colapsa en devaluación absoluta sin transición ni causa proporcional. <strong>No es inconsistencia moral. Es funcionamiento estructural.</strong></p>
+
+    <p>En el esquizoide, las díadas están igualmente disociadas, pero la investidura afectiva de las relaciones reales es mínima. La energía se vuelca en objetos internos, fantaseados. La relación con el terapeuta amenaza ese mundo interno protegido.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN III · KOHUT -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-num">III · Kohut</div>
+    <h2>Déficit, <em>no conflicto</em></h2>
+
+    <h3>El self que no se consolidó</h3>
+    <p>Kohut desplaza el eje del conflicto pulsional al <strong>déficit estructural</strong>. El self adquiere cohesión a través de tres tipos de experiencias con <em>selfobjects</em>:</p>
+
+    <ol>
+      <li><strong>Espejamiento</strong> (<em>mirroring</em>): ser visto, confirmado, reconocido en la propia grandiosidad.</li>
+      <li><strong>Idealización:</strong> poder apoyarse en una figura percibida como fuerte y estable.</li>
+      <li><strong>Gemelaridad</strong> (<em>twinship</em>): sentir que alguien es fundamentalmente como uno.</li>
+    </ol>
+
+    <p>Cuando estas experiencias fallan de manera sistemática y temprana, el self no alcanza solidez. Queda vulnerable a la <strong>fragmentación</strong>: pérdida de la sensación de ser un yo continuo bajo presión relacional o narcisista.</p>
+
+    <h3>Borderline desde Kohut</h3>
+    <p>El paciente borderline no tiene un conflicto edípico mal resuelto. Tiene un self que nunca se reguló internamente y que busca en el objeto externo la función reguladora que debió internalizarse. La intensidad relacional borderline no es capricho ni manipulación: <strong>es necesidad estructural</strong>.</p>
+
+    <p>La <strong>rabia narcisista</strong> —diferente de la rabia reactiva— emerge cuando el <em>selfobject</em> falla. Es desproporcionada a los ojos del otro porque no responde al episodio presente sino al agravio primitivo de no haber sido visto. El terapeuta que llega tarde, que se va de vacaciones, que no parece entender: activa el déficit original.</p>
+
+    <p>El self grandioso en el borderline es un intento de cohesión compensatoria. No narcisismo secundario defensivo en el sentido kernbergiano, sino frágil estructura de sostén.</p>
+
+    <h3>Esquizoide desde Kohut</h3>
+    <p>Kohut describe dos orientaciones del self patológico ante la necesidad de <em>selfobject</em>:</p>
+
+    <ul>
+      <li><strong>Tipo A:</strong> búsqueda activa de fusión (más cercano al borderline).</li>
+      <li><strong>Tipo B:</strong> terror al <em>merger</em>, retiro preventivo.</li>
+    </ul>
+
+    <p>El esquizoide ha aprendido que la exposición al <em>selfobject</em> produce aniquilación del self frágil, no su consolidación.</p>
+
+    <blockquote>El contacto no restaura: <strong>destruye.</strong></blockquote>
+
+    <p>La solución es proteger el núcleo del self —empobrecido pero propio— detrás de una muralla de distancia.</p>
+
+    <p>Esto es crucial clínicamente: la frialdad esquizoide no es ausencia de vida interior. Es protección intensa de un mundo interno que el paciente percibe como la única realidad segura.</p>
+  </div>
+</section>
+
+<!-- SECCIÓN IV · TABLA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-num">IV · Diagnóstico diferencial</div>
+    <h2>Tabla de <em>uso clínico directo</em></h2>
+
+    <div class="tabla-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Borderline</th>
+            <th>Esquizoide</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Angustia primaria</td><td>Abandono / separación</td><td>Engullimiento / fusión</td></tr>
+          <tr><td>Lo que amenaza</td><td>La distancia del otro</td><td>La cercanía del otro</td></tr>
+          <tr><td>Mecanismo central</td><td>Identificación proyectiva</td><td>Retirada del objeto</td></tr>
+          <tr><td>Necesidad del otro</td><td>Urgente, estructural</td><td>Prescindible, amenazante</td></tr>
+          <tr><td>Identidad</td><td>Difusa, fragmentada en el ruido</td><td>Aislada, fragmentada en el silencio</td></tr>
+          <tr><td>Transferencia</td><td>Intensa, oscilante, con <em>acting-out</em></td><td>Distante, idealización intelectual</td></tr>
+          <tr><td>Vacaciones / ausencias</td><td>Crisis, regresión, <em>acting</em></td><td>Alivio o indiferencia aparente</td></tr>
+          <tr><td>Silencio en sesión</td><td>Angustiante; lo llena o lo usa como agresión</td><td>Confortable, a veces preferido</td></tr>
+          <tr><td>Vida interior</td><td>Caótica, vuelca al exterior</td><td>Rica en fantasía, raramente expuesta</td></tr>
+          <tr><td>Mahler (fijación)</td><td><em>Rapprochement</em></td><td>Diferenciación / simbiosis temprana</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN V · DONDE SE CONFUNDEN -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-num">V · Donde se confunden</div>
+    <h2>El <em>riesgo clínico</em> real</h2>
+
+    <p>Ambos presentan relaciones poco estables y un yo sin cohesión aparente. El <strong>error frecuente</strong> es leer la distancia esquizoide como defensa borderline —como si el paciente estuviera «guardándose» para atacar después. No. El esquizoide no está activado relacionalmente en segundo plano: <strong>está ausente del campo relacional por necesidad defensiva</strong>.</p>
+
+    <p>El <strong>segundo error</strong> es invertir la técnica. Con el borderline, la cercanía regulada sostiene. Con el esquizoide, la cercanía prematura produce huida o disociación. El punto de trabajo con el esquizoide no es el vínculo con el terapeuta —eso es demasiado peligroso desde el inicio— sino el mundo interno fantaseado que sí puede nombrarse sin que amenace la distancia protectora.</p>
+
+    <p>La pregunta técnica diferencial no es «¿tiene rasgos borderline o esquizoides?», sino:</p>
+
+    <div class="cierre-q">
+      <div class="label">Pregunta-eje</div>
+      <div class="q">¿Qué es lo que este paciente teme más:<br>que me vaya, o que me acerque?</div>
+    </div>
+
+    <p>Eso orienta la transferencia. Y la transferencia orienta todo lo demás.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="firma">Daniel Orozco Abia</div>
+    <div>Psicólogo General Sanitario · CV11515 · TWIM Project</div>
+  </div>
+</footer>
+
+</body>
+</html>
