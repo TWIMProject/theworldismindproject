@@ -52,7 +52,7 @@
       "@type": "Offer",
       "price": "720",
       "priceCurrency": "EUR",
-      "availability": "https://schema.org/LimitedAvailability"
+      "availability": "https://schema.org/SoldOut"
     },
     "startDate": "2026-09",
     "maximumAttendeeCapacity": 6
@@ -214,14 +214,13 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">Taller presencial en Valencia · Septiembre 2026</span>
+        <span class="eyebrow">Taller presencial en Valencia · Edición actual completa</span>
         <h1>Tu hijo no es vago ni tonto. Tiene TDAH y necesita algo que las clases de repaso no pueden darle.</h1>
         <p class="subtitle">Un taller psicoeducativo grupal presencial en Valencia para adolescentes de 3º y 4º de ESO con TDAH. 16 sesiones, grupo cerrado de 6, dirigido por un Psicólogo General Sanitario con más de 13 años de experiencia.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://buy.stripe.com/9B6dR9bdo95bfN99nq2sM0a" target="_blank" rel="noopener" onclick="gtag('event','taller_deposit_click',{taller:'tdah'})">Reservar entrevista · 40 €</a>
-          <a class="btn" href="#cta-final" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Quiero información antes</a>
-          <a class="btn" href="https://wa.me/34625231297?text=Hola%20Daniel%2C%20me%20interesa%20el%20taller%20de%20TDAH%20para%20adolescentes." style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <span class="hero-note">Reembolso íntegro si te presentas. Solo 6 plazas · Inicio septiembre 2026.</span>
+          <a class="btn btn-primary" href="#cta-final">Entrar en la lista de espera</a>
+          <a class="btn" href="https://wa.me/34625231297?text=Hola%20Daniel%2C%20me%20interesa%20entrar%20en%20la%20lista%20de%20espera%20del%20taller%20de%20TDAH%20para%20adolescentes." style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <span class="hero-note">La edición actual está completa. Déjame tu email y te aviso en cuanto abra nuevas plazas · sin compromiso.</span>
         </div>
       </div>
       <aside class="hero-card" aria-label="Resumen del taller">
@@ -307,10 +306,10 @@
             <article class="detail-card"><strong>Distribución</strong><p>14 sesiones con adolescentes + 2 sesiones con padres.</p></article>
             <article class="detail-card"><strong>Grupo</strong><p>Cerrado, máximo 6 participantes. Sin incorporaciones una vez iniciado.</p></article>
             <article class="detail-card"><strong>Incluye</strong><p>Reunión informativa individual con los padres antes del inicio.</p></article>
-            <article class="detail-card"><strong>Precio</strong><p>720 € en pago único al confirmar plaza.</p></article>
-            <article class="detail-card"><strong>Inicio</strong><p>Segunda quincena de septiembre de 2026.</p></article>
+            <article class="detail-card"><strong>Precio</strong><p>720 € en pago único al confirmar plaza (referencia de la edición anterior).</p></article>
+            <article class="detail-card"><strong>Inicio</strong><p>Sin fecha confirmada · próxima edición por anunciar.</p></article>
             <article class="detail-card"><strong>Lugar</strong><p>Valencia · formato presencial.</p></article>
-            <article class="detail-card"><strong>Plazas</strong><p>Solo 6 plazas para favorecer vínculo, confianza y continuidad.</p></article>
+            <article class="detail-card"><strong>Plazas</strong><p>Edición actual completa. Lista de espera abierta para la siguiente.</p></article>
           </div>
         </div>
       </section>
@@ -337,11 +336,11 @@
 
       <section class="section" id="cta-final">
         <div class="cta-box">
-          <h2>¿Quieres explorar si este taller es adecuado para tu hijo o hija?</h2>
-          <p>El primer paso es una reunión informativa conmigo y tu pareja, o contigo si eres familia monoparental, donde os explico el taller en detalle, resuelvo vuestras dudas y evaluamos juntos si encaja con la situación de vuestro hijo o hija. Sin compromiso.</p>
+          <h2>Entra en la lista de espera del taller</h2>
+          <p>La edición actual está completa. Si quieres que te avise en cuanto abra nuevas plazas —y resolverte cualquier duda concreta mientras tanto sobre si encaja con la situación de tu hijo o hija— déjame tus datos. Sin compromiso y sin pago.</p>
           <form action="https://formspree.io/f/mpwrqplb" method="POST" class="cta-form" id="taller-form">
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            <input type="hidden" name="motivo" value="taller-tdah-adolescentes">
+            <input type="hidden" name="motivo" value="taller-tdah-lista-espera">
             <div class="cta-form__row">
               <input type="text" name="nombre_padre" placeholder="Tu nombre" required>
               <input type="email" name="email" placeholder="Tu email" required>
@@ -351,10 +350,10 @@
               <input type="text" name="edad_hijo" placeholder="Edad de tu hijo/a">
             </div>
             <textarea name="message" placeholder="¿Quieres añadir algo? (opcional)" rows="3"></textarea>
-            <button type="submit" class="btn btn-primary" id="taller-submit">Solicitar reunión informativa</button>
+            <button type="submit" class="btn btn-primary" id="taller-submit">Apuntarme a la lista de espera</button>
           </form>
           <div id="taller-success" class="cta-success" style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:rgba(38,92,75,.08);border-left:3px solid var(--green);border-radius:4px;">
-            <strong>Recibido.</strong> Te escribiré en menos de 48 h para concretar la reunión informativa. Mientras, mira tu correo: te he mandado información para empezar.
+            <strong>Recibido.</strong> Estás en la lista de espera. Te avisaré en cuanto abra nuevas plazas. Si me has dejado una duda, te respondo personalmente.
           </div>
           <div id="taller-error" class="cta-error" style="display:none;margin-top:1rem;padding:1rem 1.2rem;background:rgba(180,60,40,.08);border-left:3px solid #b43c28;border-radius:4px;color:#7a2a1c;"></div>
           <div class="cta-alt">
