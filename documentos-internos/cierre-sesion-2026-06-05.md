@@ -30,7 +30,7 @@ Estado Google Ads (captura de Daniel) · **cuenta ACTIVA, no suspendida**. Esto 
 - **PDF paso a paso** estilo TWIM enviado al móvil de Daniel (lo crea él mañana con calma).
 - **Encuadre del equipo** en home + 2 landings (PR #309, SIN MERGEAR · Daniel revisa preview) · prerrequisito deontológico + política Google.
 
-## Reglas inviolables NUEVAS declaradas hoy (ya en CLAUDE.md)
+## Reglas inviolables NUEVAS declaradas hoy (la #1 ya en CLAUDE.md; la #2 aún no)
 1. **Concreción para empatizar** (PR #302) · toda pieza de TWIM Project y TWIM Podcast se escribe desde lo concreto, nunca lo abstracto · la concreción es el motor de la identificación («esa soy yo»). Verbatim Daniel: «siempre hay que ser más concreto porque sino a la gente le cuesta más empatizar. Es inviolable esa premisa».
 2. **Máximo 5 hashtags en IG** (en la regla de carrusel) · que sirvan de verdad, no relleno. (Declarada al pasar el caption; persistida en `captions.md`, no en CLAUDE.md aún · candidata a subir a regla formal si se repite.)
 
@@ -65,7 +65,7 @@ Daniel autorizó enviar el **Recado 04 «aunque salga en inglés como excepción
 - **Daniel mañana (6 jun):** crear el anuncio de Google Ads con el PDF · revisar y mergear el preview del PR #309.
 - **Daniel domingo (7 jun):** el Directo a las 19h. Opcional · reactivar E4 en ES.
 - **Daniel lunes (9 jun):** programar E5 post-directo con la URL de la grabación.
-- **Sesión futura:** si Google Ads convierte, actualizar `modelo-captacion-supervisada-union-periodistas.md` añadiendo Google Ads como canal formal + orden estratégico de los 3 canales (Sergio → Unió → Ads). Vigilar que el éxito no convierta a Daniel en «empresario de psicólogos» y huee la marca clínico-editorial.
+- **Sesión futura:** si Google Ads convierte, actualizar `modelo-captacion-supervisada-union-periodistas.md` añadiendo Google Ads como canal formal + orden estratégico de los 3 canales (Sergio → Unió → Ads). Vigilar que el éxito no convierta a Daniel en «empresario de psicólogos» y ahueque la marca clínico-editorial.
 
 ## Estado emocional / foco del CEO al cierre
 Daniel está en modo expansión estratégica · ilusionado con la idea de la red supervisada como vía rápida para liberar tardes («sería una gran idea», «es lo que busco, liberarme desde septiembre ya, de tardes»). Mantiene firme que **él siempre va a atender pacientes** (no quiere dejar la clínica, solo soltar las tardes). Decisión del 5 jun se mantiene · foco H2 en newsletter + artículos + libro + RRSS + venta libros, ahora con la capa de captación-derivación como motor de ingresos pasivos. Día sin fricción · iteró el carrusel con criterio fino y agradeció el trabajo.
