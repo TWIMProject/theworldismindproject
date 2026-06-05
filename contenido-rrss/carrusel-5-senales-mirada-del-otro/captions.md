@@ -2,9 +2,9 @@
 
 > 7 slides 1080×1350 · paleta TWIM · destino IG + LinkedIn + X. Base teórica · cuaderno `documentos-internos/producto-la-mirada-del-otro/cuaderno-la-mirada-del-otro.html` (10 señales del autotest), reducidas a 5 con curaduría editorial: hipervigilancia diaria → identidad espejo → pánico al conflicto → idealizar y reñir → disolución.
 >
-> **Rediseño visual v2 (5 jun 2026)** · el formato plano anterior (texto centrado sobre color sólido) «no calaba» (Daniel). Sistema nuevo «Expediente + Mirada» · fondo verde con grano de cine + viñeta + número de señal gigante al fondo (composición asimétrica de revista), alternando slides crema para ritmo de grid, y un motivo de ojo/iris que abre (slide 1) y cierra (slide 7) el carrusel. Paleta TWIM exacta intacta. Generador reproducible en `documentos-internos/plantillas/generar-carrusel-mirada-v2.py`.
+> **Rediseño visual v3 · BRUTALIST tipográfico (5 jun 2026)** · Daniel pidió un «giro radical» tras el v2. Se le enseñaron 2 conceptos radicales (Cuaderno clínico / Brutalist) y eligió Brutalist al 100%. Sistema · cero adorno, una palabra/frase descomunal cubriendo el slide entero (Barlow Condensed Medium ajustada al ancho), micro-kicker + filete fuerte arriba, setup en sans beige y closer en serif italic beige. Alterna fondo crema/verde. Sin ojos, sin grano, sin números de fondo. Paleta TWIM exacta. Generador reproducible en `documentos-internos/plantillas/generar-carrusel-mirada-v3-brutalist.py`.
 >
-> **Concreción aplicada (regla CLAUDE.md 5 jun 2026)** · las 5 señales pasan de abstractas a concretas para disparar identificación. La señal 1 usa la formulación verbatim de Daniel.
+> **Concreción aplicada (regla CLAUDE.md 5 jun 2026)** · las 5 señales pasan de abstractas a concretas. La señal 1 usa la formulación verbatim de Daniel.
 
 ---
 
