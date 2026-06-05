@@ -4,24 +4,25 @@
 >
 > **Rediseño visual v3 · BRUTALIST tipográfico (5 jun 2026)** · Daniel pidió un «giro radical» tras el v2. Se le enseñaron 2 conceptos radicales (Cuaderno clínico / Brutalist) y eligió Brutalist al 100%. Sistema · cero adorno, una palabra/frase descomunal cubriendo el slide entero (Barlow Condensed Medium ajustada al ancho), micro-kicker + filete fuerte arriba, setup en sans beige y closer en serif italic beige. Alterna fondo crema/verde. Sin ojos, sin grano, sin números de fondo. Paleta TWIM exacta. Generador reproducible en `documentos-internos/plantillas/generar-carrusel-mirada-v3-brutalist.py`.
 >
-> **Concreción aplicada (regla CLAUDE.md 5 jun 2026)** · las 5 señales pasan de abstractas a concretas. La señal 1 usa la formulación verbatim de Daniel.
+> **Iteración v4 (5 jun 2026, mismo día)** · Daniel detecta que las palabras-bomba clínicas («VIVES EN SU MIRADA», «TODO BIEN», «SEGÚN QUIÉN») son demasiado abstractas y nadie las piensa así · rompe la regla de concreción. Sustituyo cada palabra-bomba por el **pensamiento literal en primera persona** que esa persona se oye a diario: «¿Estamos bien?» · «¿Estás enfadada?» · «Es que a mí también.» · «¿Me va a dejar?» · «¿Por qué me fallas?» · «¿Quién soy?» · «Míralo.». La sentencia clínica baja al kicker (Señal 01..05) como contexto.
 
 ---
 
 ## INSTAGRAM (carrusel · 7 slides)
 
 ```
-5 señales de que vives de la mirada del otro.
+5 pensamientos que tienes a diario y no sabías que eran síntoma.
 
-No son las más obvias. Son las que cuesta ver porque hace años que las haces.
+Te los oyes cada semana. No los llamabas «señales».
 
-— Necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
-— Tu opinión cambia según quién te escucha.
-— Un desacuerdo lo vives como si fueras a perderle.
-— Cuando deja de ser perfecto para ti, le castigas por ello.
-— Cuando te dejan, sientes que desapareces.
+— «¿Estamos bien?» — varias veces al día, aunque acabe de decirte que sí.
+— «¿Estás enfadada?» — y la semana pasada defendías exactamente lo contrario.
+— «Es que a mí también.» — tu opinión se mueve con quién la escucha.
+— «¿Me va a dejar?» — por una opinión distinta, ya estás haciendo cuentas.
+— «¿Por qué me fallas?» — no porque te haya fallado, porque ya no encaja con la idea que tenías.
+— «¿Quién soy?» — el día que te deja, como si te hubieras quedado en blanco.
 
-Si reconoces dos o tres, no es que estés peor que nadie. Es que el sistema lleva tiempo encendido y aún no lo habías mirado de frente. Eso es justo lo que empieza a cambiar las cosas.
+Si te has reconocido en dos o tres, no estás peor que nadie. Llevas tiempo oyéndolo sin nombrarlo. Eso es justo lo que empieza a cambiar las cosas.
 
 El domingo 7 de junio a las 19:00 hora España, hablo de esto en directo gratuito · «La voz que te juzga». Enlace en bio.
 ```
@@ -38,17 +39,18 @@ Criterio de selección · `dependenciaemocional` (nicho exacto, audiencia compra
 ## LINKEDIN (carrusel nativo · 7 slides)
 
 ```
-5 señales de que vives de la mirada del otro.
+5 pensamientos que tienes a diario y no sabías que eran síntoma.
 
-No son las más obvias. Son las que cuesta ver porque hace años que las haces:
+Te los oyes cada semana. No los llamabas «señales»:
 
-1. Necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
-2. Tu opinión cambia según quién te escucha.
-3. Un desacuerdo lo vives como si fueras a perderle.
-4. Cuando deja de ser perfecto para ti, le castigas por ello.
-5. Cuando te dejan, sientes que desapareces.
+1. «¿Estamos bien?» — varias veces al día, aunque acabe de decirte que sí.
+2. «¿Estás enfadada?» — y la semana pasada defendías exactamente lo contrario.
+3. «Es que a mí también.» — tu opinión se mueve con quién la escucha.
+4. «¿Me va a dejar?» — por una opinión distinta, ya estás haciendo cuentas.
+5. «¿Por qué me fallas?» — no porque te haya fallado, porque ya no encaja con la idea que tenías.
+6. «¿Quién soy?» — el día que te deja, como si te hubieras quedado en blanco.
 
-Si reconoces dos o tres, no es que estés peor que nadie. Es que el sistema lleva tiempo encendido y aún no lo habías mirado de frente.
+Si te has reconocido en dos o tres, no estás peor que nadie. Llevas tiempo oyéndolo sin nombrarlo.
 
 Domingo 7 de junio · 19:00 (hora España) · hablo de esto en directo, gratuito. Enlace de registro en mi perfil.
 
@@ -61,24 +63,25 @@ Domingo 7 de junio · 19:00 (hora España) · hablo de esto en directo, gratuito
 
 ```
 T1 [con slide-01.png]
-5 señales de que vives de la mirada del otro.
+5 pensamientos que tienes a diario y no sabías que eran síntoma.
 
-las que cuesta ver, porque hace años que las haces.
+te los oyes cada semana. no los llamabas señales.
 ```
 
 ```
 T2
-— necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
-— tu opinión cambia según quién te escucha.
-— un desacuerdo lo vives como si fueras a perderle.
+— «¿estamos bien?» varias veces al día, aunque acabe de decirte que sí.
+— «¿estás enfadada?» y la semana pasada defendías lo contrario.
+— «es que a mí también.» tu opinión se mueve con quién la escucha.
 ```
 
 ```
 T3
-— cuando deja de ser perfecto para ti, le castigas por ello.
-— cuando te dejan, sientes que desapareces.
+— «¿me va a dejar?» por una opinión distinta ya haces cuentas.
+— «¿por qué me fallas?» porque ya no encaja con la idea que tenías.
+— «¿quién soy?» el día que te dejan, en blanco.
 
-reconocer dos o tres no significa estar peor. significa que el sistema lleva tiempo encendido y por fin lo miras.
+si te has reconocido en dos o tres no estás peor que nadie. llevas tiempo oyéndolo sin nombrarlo.
 ```
 
 ```
