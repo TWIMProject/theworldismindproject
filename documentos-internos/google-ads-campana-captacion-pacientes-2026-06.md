@@ -2,7 +2,7 @@
 
 > Creado el 5 jun 2026 a petición de Daniel. Objetivo personal explícito · **liberar las tardes desde septiembre 2026** captando pacientes vía Google Ads y derivándolos a la red de psicólogos supervisada (modelo `modelo-captacion-supervisada-union-periodistas.md` + `twim-clinic-modelo-derivacion.md`). Daniel sigue atendiendo siempre su franja premium de mañana.
 >
-> Estado de la cuenta (5 jun 2026, verificado por captura de Daniel) · **activa**, no suspendida. Visa `····6524` cargada. Saldo 8€. Una campaña previa tipo INTELIGENTE «Tu Mente Merece Bienestar» (5 clics / 832 impr / 0 conv / CTR 0,60%) · **pausar/archivar**.
+> Estado de la cuenta (5 jun 2026, verificado por captura de Daniel) · **activa**, no suspendida. Método de pago verificado y cargado. Saldo 8€. Una campaña previa tipo INTELIGENTE «Tu Mente Merece Bienestar» (5 clics / 832 impr / 0 conv / CTR 0,60%) · **pausar/archivar**.
 >
 > Cumplimiento · este build respeta `google-ads-cumplimiento-y-reactivacion.md` §1 (política salud) y §3 (estructura limpia).
 
