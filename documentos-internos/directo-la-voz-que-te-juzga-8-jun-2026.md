@@ -175,15 +175,30 @@ Esa es la **Compartir URL** oficial que MailerLite da para este formulario integ
 
 ### 8.1 · Calendario de envíos (qué recibe un inscrito)
 
-> **Actualización 5 jun 2026 (vie 18:02 CEST)** · Daniel decide enviar los recordatorios **«aunque salgan en inglés como excepción»** (el `language_id` del conector queda en `en-US`, lo que solo afecta al bloque legal/pie automático que MailerLite inyecta · el contenido HTML va siempre en español). Y para evitar duplicidad sábado · **E2 cancelado** (campaña `189196741644388190` → `is_stopped: true`). Queda como único recordatorio víspera el «Recado 04» (campaña `189428295344850350`) programado para sáb 6 jun 10:00 CEST.
+> **Actualización 5 jun 2026 (vie 18:10 CEST)** · Daniel revisa el Outbox de MailerLite y aplica dos cambios:
+>
+> 1. **Excepción de idioma autorizada solo para el Recado 04.** El conector deja el `language_id` en `en-US` (solo afecta al bloque legal/pie automático que MailerLite inyecta · el contenido HTML va en español). Daniel autoriza expresamente esa excepción solo para el Recado 04 (campaña `189428295344850350`, sáb 6 jun 10:00 CEST).
+> 2. **Cancelación de E2 y E4 por idioma sin autorizar.** Ambos estaban en inglés como el Recado 04, pero no entran en la excepción · pasan a `draft` con `is_stopped: true`:
+>    - **E2 cancelado** (`189196741644388190` · stopped 18:02 CEST · era duplicidad con Recado 04 el sábado).
+>    - **E4 cancelado** (`189196809348843111` · stopped 18:10 CEST · era el aviso «en una hora» del domingo 18:00).
+>
+> Para reactivar E4 el domingo · cambiar `language_id` a Español en panel (Configuración del email → idioma Español) y re-programar para dom 7 jun 18:00 CEST.
 
-| # | Cuándo | Tipo MailerLite | Contenido |
-|---|---|---|---|
-| E1 | Inmediato al registrarse | Automation `187662509833979144`, paso 1 (copy ya cargado) | «Estás dentro» (§3.2) |
-| E2 | sáb 7 jun ~19:00 | Campaña programada al grupo `187662493483533365` | Recordatorio víspera + enlace Meet |
-| E3 | dom 7 jun ~10:00 | Campaña programada | «Hoy 19:00 — el enlace para entrar» (§3.3) |
-| E4 | dom 7 jun ~18:00 | Campaña programada (opcional pero recomendada) | «En 1 hora» + enlace |
-| E5 | lun 9 jun ~10:00 | Campaña | Gracias + Capítulo III gratuito + grabación → puente al embudo Cap III |
+| # | Cuándo | Estado real (5 jun 18:10 CEST) | ID | Idioma | Contenido |
+|---|---|---|---|---|---|
+| E1 | Inmediato al registrarse | activa (automation) | `187662509833979144` paso 1 | n/a | «Estás dentro» (§3.2) |
+| ~~E2~~ | ~~sáb 6 jun 19:00~~ | **cancelado** (`draft`, `is_stopped: true`) | `189196741644388190` | en | ~~Recordatorio víspera + enlace Meet~~ |
+| **Recado 04** | **sáb 6 jun 10:00** | **`ready`, scheduled** | `189428295344850350` | en (excepción) | «Recordatorio · mañana domingo 19h» |
+| E3 | dom 7 jun 10:00 | `ready`, scheduled | `187809536941229345` | **ES** | «Hoy a las 19:00 — el enlace para entrar» (§3.3) |
+| ~~E4~~ | ~~dom 7 jun 18:00~~ | **cancelado** (`draft`, `is_stopped: true`) | `189196809348843111` | en | «En una hora» |
+| E5 | lun 9 jun ~10:00 | `draft` (pendiente programar tras directo) | `187809557833058027` | ES | Gracias + Capítulo III + grabación |
+
+**Resultado del calendario (los 11 inscritos reciben):**
+- sáb 6 jun 10:00 · Recado 04 (víspera).
+- dom 7 jun 10:00 · E3 día D.
+- lun 9 jun ~10:00 · E5 (programar manualmente con URL de la grabación).
+
+Opcional pero recomendado · si Daniel cambia el `language_id` del E4 a Español el domingo por la mañana y lo re-programa para 18:00 CEST, se recupera el aviso «en una hora» en español.
 
 Enlace Meet a insertar como hipervínculo sobre el texto «Entrar aquí» (nunca pegar la URL cruda — regla `…cap3.md` §3): `https://meet.google.com/fsu-scrz-res`
 
