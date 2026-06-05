@@ -4,24 +4,26 @@
 >
 > **Rediseño visual v3 · BRUTALIST tipográfico (5 jun 2026)** · Daniel pidió un «giro radical» tras el v2. Se le enseñaron 2 conceptos radicales (Cuaderno clínico / Brutalist) y eligió Brutalist al 100%. Sistema · cero adorno, una palabra/frase descomunal cubriendo el slide entero (Barlow Condensed Medium ajustada al ancho), micro-kicker + filete fuerte arriba, setup en sans beige y closer en serif italic beige. Alterna fondo crema/verde. Sin ojos, sin grano, sin números de fondo. Paleta TWIM exacta. Generador reproducible en `documentos-internos/plantillas/generar-carrusel-mirada-v3-brutalist.py`.
 >
-> **Concreción aplicada (regla CLAUDE.md 5 jun 2026)** · las 5 señales pasan de abstractas a concretas. La señal 1 usa la formulación verbatim de Daniel.
+> **Iteración v4 (5 jun 2026, mismo día)** · Daniel detecta que las palabras-bomba clínicas («VIVES EN SU MIRADA», «TODO BIEN», «SEGÚN QUIÉN») son demasiado abstractas. Sustituyo por **pensamientos literales en primera persona** que esa persona se oye a diario. La sentencia clínica baja al kicker como contexto.
+>
+> **Iteración v4.1 (5 jun 2026, mismo día)** · tras review de Copilot y feedback de Daniel · (a) el conteo se desalineaba (titular «5 pensamientos» vs lista de 6), (b) «Es que a mí también» quedaba colgado («a mí también qué»), (c) el slide 5 idealizar/reñir necesitaba reformular el contexto (el referente que deja de encajar cuando comete un fallo humano). Cambios finales: slide 01 hook con palabra-bomba autoreferencial («Eso me pasa.»), slide 03 a «Tienes razón.», slide 05 a «Tú no eras así.». Estructura simplificada a `palabra-bomba` + un solo closer (cuándo te viene). Arco final · 01 hook «Eso me pasa.» / 02 «¿Estás enfadada?» / 03 «Tienes razón.» / 04 «¿Me va a dejar?» / 05 «Tú no eras así.» / 06 «¿Quién soy?» / 07 cierre «Míralo.».
 
 ---
 
 ## INSTAGRAM (carrusel · 7 slides)
 
 ```
-5 señales de que vives de la mirada del otro.
+5 señales que llevas años haciendo y nunca llamaste señales.
 
-No son las más obvias. Son las que cuesta ver porque hace años que las haces.
+Las vas a reconocer al leerlas. Vas a pensar «eso me pasa» en cada una. Cuenta cuántas.
 
-— Necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
-— Tu opinión cambia según quién te escucha.
-— Un desacuerdo lo vives como si fueras a perderle.
-— Cuando deja de ser perfecto para ti, le castigas por ello.
-— Cuando te dejan, sientes que desapareces.
+— «¿Estás enfadada?» — lo preguntas varias veces al día, aunque acabe de decirte que no.
+— «Tienes razón.» — aunque la semana pasada defendías exactamente lo contrario.
+— «¿Me va a dejar?» — por una opinión distinta, ya estás haciendo cuentas.
+— «Tú no eras así.» — comete un fallo humano normal y deja de encajar con el referente que era para ti.
+— «¿Quién soy?» — el día que te dejan, como si te hubieras quedado en blanco.
 
-Si reconoces dos o tres, no es que estés peor que nadie. Es que el sistema lleva tiempo encendido y aún no lo habías mirado de frente. Eso es justo lo que empieza a cambiar las cosas.
+Si te has reconocido en dos o tres, no estás peor que nadie. Llevas tiempo oyéndolo sin nombrarlo. Eso es justo lo que empieza a cambiar las cosas.
 
 El domingo 7 de junio a las 19:00 hora España, hablo de esto en directo gratuito · «La voz que te juzga». Enlace en bio.
 ```
@@ -38,17 +40,17 @@ Criterio de selección · `dependenciaemocional` (nicho exacto, audiencia compra
 ## LINKEDIN (carrusel nativo · 7 slides)
 
 ```
-5 señales de que vives de la mirada del otro.
+5 señales que llevas años haciendo y nunca llamaste señales.
 
-No son las más obvias. Son las que cuesta ver porque hace años que las haces:
+Las vas a reconocer al leerlas. Vas a pensar «eso me pasa» en cada una:
 
-1. Necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
-2. Tu opinión cambia según quién te escucha.
-3. Un desacuerdo lo vives como si fueras a perderle.
-4. Cuando deja de ser perfecto para ti, le castigas por ello.
-5. Cuando te dejan, sientes que desapareces.
+1. «¿Estás enfadada?» — lo preguntas varias veces al día, aunque acabe de decirte que no.
+2. «Tienes razón.» — aunque la semana pasada defendías exactamente lo contrario.
+3. «¿Me va a dejar?» — por una opinión distinta, ya estás haciendo cuentas.
+4. «Tú no eras así.» — comete un fallo humano normal y deja de encajar con el referente que era para ti.
+5. «¿Quién soy?» — el día que te dejan, como si te hubieras quedado en blanco.
 
-Si reconoces dos o tres, no es que estés peor que nadie. Es que el sistema lleva tiempo encendido y aún no lo habías mirado de frente.
+Si te has reconocido en dos o tres, no estás peor que nadie. Llevas tiempo oyéndolo sin nombrarlo.
 
 Domingo 7 de junio · 19:00 (hora España) · hablo de esto en directo, gratuito. Enlace de registro en mi perfil.
 
@@ -61,24 +63,24 @@ Domingo 7 de junio · 19:00 (hora España) · hablo de esto en directo, gratuito
 
 ```
 T1 [con slide-01.png]
-5 señales de que vives de la mirada del otro.
+5 señales que llevas años haciendo y nunca llamaste señales.
 
-las que cuesta ver, porque hace años que las haces.
+vas a pensar «eso me pasa» en cada una. cuenta cuántas.
 ```
 
 ```
 T2
-— necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
-— tu opinión cambia según quién te escucha.
-— un desacuerdo lo vives como si fueras a perderle.
+— «¿estás enfadada?» varias veces al día, aunque acabe de decirte que no.
+— «tienes razón.» aunque la semana pasada defendías lo contrario.
+— «¿me va a dejar?» por una opinión distinta, ya haces cuentas.
 ```
 
 ```
 T3
-— cuando deja de ser perfecto para ti, le castigas por ello.
-— cuando te dejan, sientes que desapareces.
+— «tú no eras así.» comete un fallo humano normal y deja de encajar con el referente que era para ti.
+— «¿quién soy?» el día que te dejan, como si te hubieras quedado en blanco.
 
-reconocer dos o tres no significa estar peor. significa que el sistema lleva tiempo encendido y por fin lo miras.
+si te has reconocido en dos o tres no estás peor que nadie. llevas tiempo oyéndolo sin nombrarlo.
 ```
 
 ```

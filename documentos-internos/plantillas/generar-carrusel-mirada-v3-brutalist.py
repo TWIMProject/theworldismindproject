@@ -128,31 +128,31 @@ def slide(idx, kicker, palabra, dark=False, sub_top=None, sub_bot=None, cta=None
     print(f"OK slide-{idx:02d}")
 
 
-# ---- 7 slides · arco brutalist ----
-slide(1, "5 señales · la mirada del otro", "Vives en su mirada.", dark=False,
-      sub_bot="Las que cuesta ver, porque hace años que las haces.")
+# ---- 7 slides · arco brutalist v4 · pensamientos del día a día ----
+# Cambio 5 jun 2026 · las palabras-bomba pasan de sentencias clínicas
+# abstractas a pensamientos literales que la persona se oye a diario.
+# Aplica regla de concreción CLAUDE.md.
 
-slide(2, "Señal 01 · hipervigilancia", "Todo bien.", dark=True,
-      sub_top="Necesitas que te diga, varias veces al día,",
-      sub_bot="entre vosotros, para sentirte en paz.")
+slide(1, "5 señales · la mirada del otro", "«Eso me pasa.»", dark=False,
+      sub_top="Las que llevas años haciendo. No las llamabas señales.",
+      sub_bot="Vas a pensarlo en cada slide. Cuenta cuántas.")
 
-slide(3, "Señal 02 · identidad espejo", "Según quién.", dark=False,
-      sub_top="Tu opinión cambia",
-      sub_bot="En la misma semana defiendes una cosa y la contraria.")
+slide(2, "Señal 01 · hipervigilancia", "«¿Estás enfadada?»", dark=True,
+      sub_bot="Lo preguntas varias veces al día, aunque acabe de decirte que no.")
 
-slide(4, "Señal 03 · pánico al conflicto", "Vas a perderle.", dark=True,
-      sub_top="Alguien no está de acuerdo contigo y lo vives",
-      sub_bot="como si te fueras a quedar sin él.")
+slide(3, "Señal 02 · identidad espejo", "«Tienes razón.»", dark=False,
+      sub_bot="Aunque la semana pasada defendías exactamente lo contrario.")
 
-slide(5, "Señal 04 · idealizar y reñir", "Le castigas.", dark=False,
-      sub_top="Al principio es perfecto para ti.",
-      sub_bot="Cuando deja de serlo, le castigas por ello.")
+slide(4, "Señal 03 · pánico al conflicto", "«¿Me va a dejar?»", dark=True,
+      sub_bot="Por una opinión distinta, ya estás haciendo cuentas.")
 
-slide(6, "Señal 05 · disolución", "Desapareces.", dark=True,
-      sub_top="No es la tristeza normal de una ruptura.",
-      sub_bot="Cuando te dejan, sientes que desapareces.")
+slide(5, "Señal 04 · idealizar y reñir", "«Tú no eras así.»", dark=False,
+      sub_bot="Comete un fallo humano normal y deja de encajar con el referente que era para ti.")
+
+slide(6, "Señal 05 · disolución", "«¿Quién soy?»", dark=True,
+      sub_bot="El día que te dejan, como si te hubieras quedado en blanco.")
 
 slide(7, "Cierre · directo gratuito", "Míralo.", dark=False,
-      sub_top="No se afloja queriéndote más.",
-      sub_bot="Se afloja viéndolo.",
+      sub_top="Si te has reconocido en dos o tres, no estás peor que nadie.",
+      sub_bot="Llevas tiempo oyéndolo sin nombrarlo.",
       cta="Domingo 7 jun · 19h · enlace en bio")
