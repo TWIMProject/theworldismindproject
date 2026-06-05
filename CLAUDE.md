@@ -177,7 +177,7 @@ Especificación reproducible:
 - ❌ «Necesitas saber que todo está bien» — abstracto, sin objeto ni para qué.
 - ✅ «Necesitas que te diga que todo está bien entre vosotros para sentirte en paz» — concreto · quién (te diga), qué vínculo (entre vosotros), para qué (sentirte en paz).
 
-**Convivencia:** esta regla refuerza y generaliza la de «claridad de un vistazo en copy público» y la de glosa de jerga · aquellas tratan la comprensión y la jerga; esta trata la **identificación emocional** vía concreción, y se aplica a todo formato (escrito y hablado). En **TWIM Podcast** y formatos hablados es especialmente crítica · al hablar no hay relectura, así que cada idea debe entrar ya concreta (escena, ejemplo, objeto) en la primera escucha. Coexiste con la regla dopamina-comercial (la concreción es precisamente lo que dispara la identificación «ese soy yo» del §3 dopamina-comercial) sin romper los límites éticos · concretar no es exagerar ni mentir, es bajar la verdad a una escena reconocible.
+**Convivencia:** esta regla refuerza y generaliza la de «claridad de un vistazo en copy público» y la de glosa de jerga · aquellas tratan la comprensión y la jerga; esta trata la **identificación emocional** vía concreción, y se aplica a todo formato (escrito y hablado). En **TWIM Podcast** y formatos hablados es especialmente crítica · al hablar no hay relectura, así que cada idea debe entrar ya concreta (escena, ejemplo, objeto) en la primera escucha. Coexiste con la regla dopamina-comercial (la concreción es precisamente lo que dispara la identificación «esa soy yo» del §3 dopamina-comercial) sin romper los límites éticos · concretar no es exagerar ni mentir, es bajar la verdad a una escena reconocible.
 
 ---
 
