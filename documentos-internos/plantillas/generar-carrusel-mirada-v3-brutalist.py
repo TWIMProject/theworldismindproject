@@ -1,25 +1,42 @@
 #!/usr/bin/env python3
 """Carrusel «5 señales» · DISEÑO FINAL · Concepto D Brutalist tipográfico · paleta TWIM."""
+import os
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 
 CREMA = (253, 252, 250)
 VERDE_OSCURO = (23, 61, 48)
-VERDE_MEDIO = (38, 92, 75)
 BEIGE = (194, 167, 139)
 W, H = 1080, 1350
 MX = 60
 
+# Resolución de fuentes · convención del repo (env TWIM_FONTS + ubicaciones
+# habituales), para que el script no dependa del entorno exacto de quien lo generó.
+FONT_DIRS = [
+    os.environ.get("TWIM_FONTS", ""),
+    "/tmp/fonts",
+    "/root/.fonts",
+    os.path.expanduser("~/.fonts"),
+    "/mnt/skills/examples/canvas-design/canvas-fonts",
+]
+
 FT = {
-    "serif": "/tmp/fonts/InstrumentSerif-Regular.ttf",
-    "serif_it": "/tmp/fonts/InstrumentSerif-Italic.ttf",
-    "sans": "/tmp/fonts/BarlowCondensed-Regular.ttf",
-    "sans_md": "/tmp/fonts/BarlowCondensed-Medium.ttf",
+    "serif": "InstrumentSerif-Regular.ttf",
+    "serif_it": "InstrumentSerif-Italic.ttf",
+    "sans": "BarlowCondensed-Regular.ttf",
+    "sans_md": "BarlowCondensed-Medium.ttf",
 }
 
 
+def font_path(name):
+    for d in FONT_DIRS:
+        if d and os.path.isfile(os.path.join(d, name)):
+            return os.path.join(d, name)
+    raise FileNotFoundError(f"fuente {name} no encontrada en {FONT_DIRS}")
+
+
 def font(k, s):
-    return ImageFont.truetype(FT[k], s)
+    return ImageFont.truetype(font_path(FT[k]), s)
 
 
 def wrap(draw, text, fnt, max_w):
