@@ -1,6 +1,10 @@
 # Carrusel «5 señales · hambre de mirada»
 
-> 7 slides A2 crema 1080×1350 · paleta TWIM · destino IG + LinkedIn + X. Base teórica · cuaderno `documentos-internos/producto-la-mirada-del-otro/cuaderno-la-mirada-del-otro.html` (10 señales del autotest), reducidas a 5 con curaduría editorial: hipervigilancia diaria → identidad espejo → pánico al conflicto → idealizar y reñir → disolución. Las señales 1 y 7 reformuladas según feedback de Daniel (5 jun): «todo el rato» → «varias veces al día», y «idealizas» se vuelve «idealizas y luego riñes» (oscilador).
+> 7 slides 1080×1350 · paleta TWIM · destino IG + LinkedIn + X. Base teórica · cuaderno `documentos-internos/producto-la-mirada-del-otro/cuaderno-la-mirada-del-otro.html` (10 señales del autotest), reducidas a 5 con curaduría editorial: hipervigilancia diaria → identidad espejo → pánico al conflicto → idealizar y reñir → disolución.
+>
+> **Rediseño visual v2 (5 jun 2026)** · el formato plano anterior (texto centrado sobre color sólido) «no calaba» (Daniel). Sistema nuevo «Expediente + Mirada» · fondo verde con grano de cine + viñeta + número de señal gigante al fondo (composición asimétrica de revista), alternando slides crema para ritmo de grid, y un motivo de ojo/iris que abre (slide 1) y cierra (slide 7) el carrusel. Paleta TWIM exacta intacta. Generador reproducible en `documentos-internos/plantillas/generar-carrusel-mirada-v2.py`.
+>
+> **Concreción aplicada (regla CLAUDE.md 5 jun 2026)** · las 5 señales pasan de abstractas a concretas para disparar identificación. La señal 1 usa la formulación verbatim de Daniel.
 
 ---
 
@@ -11,10 +15,10 @@
 
 No son las más obvias. Son las que cuesta ver porque hace años que las haces.
 
-— Necesitas saber, varias veces al día, que todo está bien.
-— Tu opinión con unos cambia cuando estás con otros.
-— Un desacuerdo lo vives como amenaza de abandono.
-— Lo idealizas al principio. Luego le riñes por no serlo.
+— Necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
+— Tu opinión cambia según quién te escucha.
+— Un desacuerdo lo vives como si fueras a perderle.
+— Cuando deja de ser perfecto para ti, le castigas por ello.
 — Cuando te dejan, sientes que desapareces.
 
 Si reconoces dos o tres, no es que estés peor que nadie. Es que el sistema lleva tiempo encendido y aún no lo habías mirado de frente. Eso es justo lo que empieza a cambiar las cosas.
@@ -38,10 +42,10 @@ Criterio de selección · `dependenciaemocional` (nicho exacto, audiencia compra
 
 No son las más obvias. Son las que cuesta ver porque hace años que las haces:
 
-1. Necesitas saber, varias veces al día, que todo está bien.
-2. Tu opinión con unos cambia cuando estás con otros.
-3. Un desacuerdo lo vives como amenaza de abandono.
-4. Lo idealizas al principio. Luego le riñes por no serlo.
+1. Necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
+2. Tu opinión cambia según quién te escucha.
+3. Un desacuerdo lo vives como si fueras a perderle.
+4. Cuando deja de ser perfecto para ti, le castigas por ello.
 5. Cuando te dejan, sientes que desapareces.
 
 Si reconoces dos o tres, no es que estés peor que nadie. Es que el sistema lleva tiempo encendido y aún no lo habías mirado de frente.
@@ -64,14 +68,14 @@ las que cuesta ver, porque hace años que las haces.
 
 ```
 T2
-— necesitas saber, varias veces al día, que todo está bien.
-— tu opinión con unos cambia cuando estás con otros.
-— un desacuerdo lo vives como amenaza de abandono.
+— necesitas que te diga que está todo bien entre vosotros para sentirte en paz.
+— tu opinión cambia según quién te escucha.
+— un desacuerdo lo vives como si fueras a perderle.
 ```
 
 ```
 T3
-— lo idealizas al principio. luego le riñes por no serlo.
+— cuando deja de ser perfecto para ti, le castigas por ello.
 — cuando te dejan, sientes que desapareces.
 
 reconocer dos o tres no significa estar peor. significa que el sistema lleva tiempo encendido y por fin lo miras.
