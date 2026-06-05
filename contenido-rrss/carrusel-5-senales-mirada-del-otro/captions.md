@@ -57,7 +57,7 @@ Domingo 7 de junio · 19:00 (hora España) · hablo de esto en directo, gratuito
 T1 [con slide-01.png]
 5 señales de que vives de la mirada del otro.
 
-las que cuestan de ver, porque hace años que las haces.
+las que cuesta ver, porque hace años que las haces.
 ```
 
 ```
@@ -87,7 +87,7 @@ el domingo 7 de junio a las 19h hora españa hablo de esto en directo gratuito �
 ## Ventana de publicación recomendada
 
 - **IG** (carrusel) · hoy mismo cuando puedas, idealmente antes de las 21h del viernes para coger sábado/domingo (público que reposiciona el fin de semana).
-- **LinkedIn** · domingo 8 jun por la mañana (audiencia profesional, mejor reach domingo que viernes).
+- **LinkedIn** · domingo 7 jun por la mañana, antes del directo de las 19h (audiencia profesional, mejor reach domingo que viernes).
 - **X** (hilo) · viernes o sábado por la tarde · timing alto en hispano.
 - **Story IG con countdown del directo** opcional · publicar hoy o mañana sábado para reforzar registro.
 
