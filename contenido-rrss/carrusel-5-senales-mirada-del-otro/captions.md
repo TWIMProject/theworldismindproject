@@ -22,10 +22,12 @@ Si reconoces dos o tres, no es que estés peor que nadie. Es que el sistema llev
 El domingo 7 de junio a las 19:00 hora España, hablo de esto en directo gratuito · «La voz que te juzga». Enlace en bio.
 ```
 
-**Hashtags (primer comentario, no caption):**
+**Hashtags (primer comentario, no caption · máximo 5, regla declarada por Daniel el 5 jun 2026 · que sirvan de verdad, no relleno):**
 ```
-#psicologia #ansiedad #dependenciaemocional #autoestima #autoconocimiento #psicoanalisisaplicado #psicologavalencia #twimproject
+#dependenciaemocional #psicoanalisisaplicado #ansiedad #autoestima #psicologavalencia
 ```
+
+Criterio de selección · `dependenciaemocional` (nicho exacto, audiencia compradora), `psicoanalisisaplicado` (diferenciador editorial TWIM, atrae a público clínico/conocedor), `ansiedad` (masivo y relacionado directamente con el cuadro), `autoestima` (donde mira la audiencia objetivo mujeres 25-50), `psicologavalencia` (geolocal, captación local real). Descartados del set anterior · `psicologia` (saturado, no aporta), `autoconocimiento` (genérico coaching, choca con tono TWIM), `twimproject` (branded sin tracción externa).
 
 ---
 
