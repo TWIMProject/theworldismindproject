@@ -175,6 +175,8 @@ Esa es la **Compartir URL** oficial que MailerLite da para este formulario integ
 
 ### 8.1 · Calendario de envíos (qué recibe un inscrito)
 
+> **Actualización 5 jun 2026 (vie 18:02 CEST)** · Daniel decide enviar los recordatorios **«aunque salgan en inglés como excepción»** (el `language_id` del conector queda en `en-US`, lo que solo afecta al bloque legal/pie automático que MailerLite inyecta · el contenido HTML va siempre en español). Y para evitar duplicidad sábado · **E2 cancelado** (campaña `189196741644388190` → `is_stopped: true`). Queda como único recordatorio víspera el «Recado 04» (campaña `189428295344850350`) programado para sáb 6 jun 10:00 CEST.
+
 | # | Cuándo | Tipo MailerLite | Contenido |
 |---|---|---|---|
 | E1 | Inmediato al registrarse | Automation `187662509833979144`, paso 1 (copy ya cargado) | «Estás dentro» (§3.2) |
