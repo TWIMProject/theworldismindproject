@@ -134,8 +134,8 @@ def slide(idx, kicker, palabra, dark=False, sub_top=None, sub_bot=None, cta=None
 # Aplica regla de concreción CLAUDE.md.
 
 slide(1, "5 señales · la mirada del otro", "«Eso me pasa.»", dark=False,
-      sub_top="Las que llevas años haciendo. No las llamabas señales.",
-      sub_bot="Vas a pensarlo en cada slide. Cuenta cuántas.")
+      sub_top="5 frases que dices o piensas sin nombrarlas.",
+      sub_bot="Lo vas a pensar tú en cada slide. Cuenta cuántas.")
 
 slide(2, "Señal 01 · hipervigilancia", "«¿Estás enfadada?»", dark=True,
       sub_bot="Lo preguntas varias veces al día, aunque acabe de decirte que no.")
