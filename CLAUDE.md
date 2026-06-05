@@ -159,6 +159,28 @@ Especificación reproducible:
 
 ---
 
+## Regla inviolable · Concreción para empatizar
+
+> Regla declarada por Daniel el 5 jun 2026, a raíz de reformular una señal del carrusel «La mirada del otro». Cita verbatim · «Claro, siempre hay que ser más concreto porque sino a la gente le cuesta más empatizar. Es inviolable esa premisa para nosotros, para TWIM Project y TWIM Podcast.»
+
+**Toda pieza de TWIM Project y de TWIM Podcast se escribe siempre desde lo concreto, nunca desde lo abstracto.** La concreción es el motor de la empatía · cuanto más concreta es una frase (una escena, un objeto, un gesto, un para qué), más fácil le resulta al lector/oyente reconocerse («esa soy yo»). La abstracción distancia · obliga a un trabajo de inferencia que la mayoría no hace, y la identificación se pierde.
+
+**Mecanismo operativo · de abstracto a concreto:**
+
+- **Añadir el objeto / el otro concreto.** No «necesitas saber que todo está bien» → sí «necesitas que *te diga* que todo está bien *entre vosotros*». El sujeto que falta (quién lo dice, con quién) es lo que hace empatizar.
+- **Añadir el para qué emocional.** No «buscas confirmación» → sí «para *sentirte en paz*». El propósito concreto es el ancla de identificación.
+- **Bajar a la escena.** No «vives con ansiedad» → sí «se te encoge el estómago cuando tarda en responder». La sensación corporal y la situación cotidiana concretan el concepto.
+- **Sustituir el concepto por su manifestación.** No «dependencia emocional» (en copy corto) → sí «cuando te dejan, sientes que desapareces».
+
+**Ejemplo verificado (5 jun 2026, carrusel «5 señales»):**
+
+- ❌ «Necesitas saber que todo está bien» — abstracto, sin objeto ni para qué.
+- ✅ «Necesitas que te diga que todo está bien entre vosotros para sentirte en paz» — concreto · quién (te diga), qué vínculo (entre vosotros), para qué (sentirte en paz).
+
+**Convivencia:** esta regla refuerza y generaliza la de «claridad de un vistazo en copy público» y la de glosa de jerga · aquellas tratan la comprensión y la jerga; esta trata la **identificación emocional** vía concreción, y se aplica a todo formato (escrito y hablado). En **TWIM Podcast** y formatos hablados es especialmente crítica · al hablar no hay relectura, así que cada idea debe entrar ya concreta (escena, ejemplo, objeto) en la primera escucha. Coexiste con la regla dopamina-comercial (la concreción es precisamente lo que dispara la identificación «esa soy yo» del §3 dopamina-comercial) sin romper los límites éticos · concretar no es exagerar ni mentir, es bajar la verdad a una escena reconocible.
+
+---
+
 ## Regla inviolable · Naming de productos Stripe
 
 > Regla persistida el 25 may 2026 tras auditoría completa del catálogo Stripe (`documentos-internos/auditoria-stripe-2026-05-25.md`). Detectada inconsistencia · 3 separadores distintos (`—`, `-`, `·`), comillas mezcladas (`"…"` y sin), categorías sin estandarizar (`Training`, `Predefinido: Formación`, `Training Services - Live Virtual`).
