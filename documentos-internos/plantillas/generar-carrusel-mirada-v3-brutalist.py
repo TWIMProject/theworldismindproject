@@ -133,29 +133,24 @@ def slide(idx, kicker, palabra, dark=False, sub_top=None, sub_bot=None, cta=None
 # abstractas a pensamientos literales que la persona se oye a diario.
 # Aplica regla de concreción CLAUDE.md.
 
-slide(1, "5 pensamientos · la mirada del otro", "«¿Estamos bien?»", dark=False,
-      sub_top="Te los oyes cada semana. No los llamabas señales.",
-      sub_bot="Cuenta cuántos has pensado tú.")
+slide(1, "5 señales · la mirada del otro", "«Eso me pasa.»", dark=False,
+      sub_top="Las que llevas años haciendo. No las llamabas señales.",
+      sub_bot="Vas a pensarlo en cada slide. Cuenta cuántas.")
 
 slide(2, "Señal 01 · hipervigilancia", "«¿Estás enfadada?»", dark=True,
-      sub_top="Lo preguntas (o lo piensas) varias veces al día.",
-      sub_bot="Aunque acabe de decirte que no.")
+      sub_bot="Lo preguntas varias veces al día, aunque acabe de decirte que no.")
 
-slide(3, "Señal 02 · identidad espejo", "«Es que a mí también.»", dark=False,
-      sub_top="Y la semana pasada defendías exactamente lo contrario.",
-      sub_bot="No mientes. Tu opinión se mueve con quién la escucha.")
+slide(3, "Señal 02 · identidad espejo", "«Tienes razón.»", dark=False,
+      sub_bot="Aunque la semana pasada defendías exactamente lo contrario.")
 
 slide(4, "Señal 03 · pánico al conflicto", "«¿Me va a dejar?»", dark=True,
-      sub_top="No estáis de acuerdo en algo y lo primero que piensas es:",
-      sub_bot="Por una opinión distinta · ya estás haciendo cuentas.")
+      sub_bot="Por una opinión distinta, ya estás haciendo cuentas.")
 
-slide(5, "Señal 04 · idealizar y reñir", "«¿Por qué me fallas?»", dark=False,
-      sub_top="Hace tres meses era perfecto para ti. Ahora le dices:",
-      sub_bot="No porque te haya fallado · porque ya no encaja con la idea.")
+slide(5, "Señal 04 · idealizar y reñir", "«Tú no eras así.»", dark=False,
+      sub_bot="Comete un fallo humano normal y deja de encajar con el referente que era para ti.")
 
 slide(6, "Señal 05 · disolución", "«¿Quién soy?»", dark=True,
-      sub_top="Te ha dejado. No piensas «estoy triste». Piensas:",
-      sub_bot="Como si te hubieras quedado en blanco.")
+      sub_bot="El día que te dejan, como si te hubieras quedado en blanco.")
 
 slide(7, "Cierre · directo gratuito", "Míralo.", dark=False,
       sub_top="Si te has reconocido en dos o tres, no estás peor que nadie.",
