@@ -1,6 +1,10 @@
-# Directo «La voz que te juzga» · domingo 7 jun 2026 · 19:00
+# Directo «La voz que te juzga» · domingo 14 jun 2026 · 21:30 CEST
+
+> *Fechas anteriores anunciadas y descartadas · «dom 8 jun 19:00» (error original, 8 jun era lunes) → «dom 7 jun 19:00» (corregido 25 may) → **«dom 14 jun 21:30» (pospuesto 7 jun por conciliación familiar) ← fecha vigente**.*
 
 > **🚨 POSPUESTO 7 jun 16:24 CEST · NUEVA FECHA: domingo 14 jun 21:30 CEST.** Daniel comunica a Code una imposibilidad de conciliación familiar para hoy. Decisión inmediata · mover el Directo al **domingo 14 de junio a las 21:30 hora España** (mismo Meet · `https://meet.google.com/fsu-scrz-res`). Razones del horario · 21:30 post-cena resuelve la conciliación; se mantiene patrón domingo (el que captó las inscripciones); se evita lun 15 jun que choca con el inicio de la ventana de grabación de DDBEO (15 jun–28 jul).
+>
+> **⚠️ Aviso de coherencia interna del doc** · las secciones §1-§9 y los copys verbatim de E2/E3/E4/E5 (asuntos, fechas, horas) **fueron escritos para el «7 jun 19:00» y NO se han reescrito en este commit** (foco · resolver la urgencia del envío a inscritos antes de las 19h). Esos bloques siguen siendo válidos como referencia de estructura/tono pero **no como copys ejecutables** · cualquier reutilización para el 14 jun requiere sustituir manualmente las menciones a «7 jun», «8 jun», «19:00» y «mañana domingo» por las nuevas. La cabecera y el bloque «Histórico de incidencias» son la única fuente de verdad sobre fecha/hora vigentes.
 >
 > **Email de aviso a inscritos enviado vía MCP a las 16:24 CEST (campaña `189626791039600196`)** · 13 destinatarios reales del grupo `Lead · Directo · La voz que te juzga (7 jun)` (subieron de 11 a 13 desde la última auditoría del 5 jun). Tono honesto (conciliación familiar declarada), nueva fecha firme, compensación inmediata: enlace al Capítulo III gratuito como adelanto del material que iba para el lunes.
 >
