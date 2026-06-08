@@ -2,11 +2,11 @@
 
 > Primer vídeo del formato anti-tutorial «prescripción del síntoma» (decisión Daniel 8 jun: «grabemos el A»).
 > Método y reglas del formato en `documentos-internos/youtube-narrativa-prescripcion-sintoma.md`.
-> **v2 (8 jun):** ampliado de 7 a 10 pasos + salida del sarcasmo enriquecida, tras feedback de Daniel («lo veo corto»). ~4.000 palabras.
+> **v2 (8 jun):** ampliado de 7 a 10 pasos + salida del sarcasmo enriquecida, tras feedback de Daniel («lo veo corto»). ~3.150 palabras.
 
 **Documento operativo · 8 jun 2026**
 **Formato:** anti-tutorial a cámara (talking-head enérgico pero sobrio), no vídeo-ensayo.
-**Duración objetivo:** 15-20 min (≈4.000 palabras).
+**Duración objetivo:** 15-20 min (≈3.150 palabras).
 **Pilar:** ansiedad.
 **Embudo:** newsletter «Te escribo» (CTA principal, evergreen). Directo del 14 jun como CTA opcional si se publica antes.
 **Registro:** ironía seca apuntando al mecanismo y a la cultura del «contrólalo / sé fuerte», NUNCA al espectador.
@@ -187,7 +187,7 @@ Nos vemos en el próximo. Cuídate.
 
 | Campo | Valor |
 |---|---|
-| Palabras (cuerpo hablado) | ≈4.000 |
+| Palabras (cuerpo hablado) | ≈3.150 |
 | Duración estimada | 15-20 min según ritmo (holgadamente por encima de 12 aunque se lea rápido) |
 | Registro | A cámara, enérgico pero sobrio. Humor seco, no histriónico. La ironía NUNCA cae sobre el espectador (regla del formato §3). |
 | Reglas respetadas | Sin emojis · sin jerga sin glosa (se va directo a la imagen: «sistema de alarma») · concreción en cada paso · anti-coaching · sin «tú puedes» · CTA solo dos veces (siembra + cierre) · disclaimer educativo. |
