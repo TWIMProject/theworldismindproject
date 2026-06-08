@@ -2,11 +2,11 @@
 
 > Primer vídeo del formato anti-tutorial «prescripción del síntoma» (decisión Daniel 8 jun: «grabemos el A»).
 > Método y reglas del formato en `documentos-internos/youtube-narrativa-prescripcion-sintoma.md`.
-> **v2 (8 jun):** ampliado de 7 a 10 pasos + salida del sarcasmo enriquecida, tras feedback de Daniel («lo veo corto»). ~3.150 palabras.
+> **v3 (8 jun):** reescritura anti-calco tras feedback de Daniel («es un calco de Claudia Nicolasa, no seamos descarados»). Se conserva el recurso (anti-tutorial) y los 10 mecanismos de ansiedad, pero se eliminan la apertura, las muletillas y el giro calcados de su vídeo. Regla anti-calco persistida en el doc del formato §3.1.
 
 **Documento operativo · 8 jun 2026**
 **Formato:** anti-tutorial a cámara (talking-head enérgico pero sobrio), no vídeo-ensayo.
-**Duración objetivo:** 15-20 min (≈3.150 palabras).
+**Duración objetivo:** 15-20 min (≈3.000 palabras).
 **Pilar:** ansiedad.
 **Embudo:** newsletter «Te escribo» (CTA principal, evergreen). Directo del 14 jun como CTA opcional si se publica antes.
 **Registro:** ironía seca apuntando al mecanismo y a la cultura del «contrólalo / sé fuerte», NUNCA al espectador.
@@ -17,11 +17,10 @@
 
 | Campo | Valor |
 |---|---|
-| Título YouTube (provisional) | Cómo vivir con ansiedad el resto de tu vida · paso a paso (al revés) |
-| Alternativas de título | `Manual para no soltar nunca la ansiedad (10 pasos que ya estás dando)` · `La guía definitiva para vivir con ansiedad (léela al revés)` |
+| Título (pendiente de elección de Daniel) | Recomendado: `10 pasos para no soltar nunca tu ansiedad (que ya estás dando sin saberlo)` · alt.: `Cómo vivir con ansiedad el resto de tu vida · guía paso a paso (al revés)` |
 | Subtítulo / descripción corta | Un anti-tutorial: las diez cosas que haces para quitarte la ansiedad y que en realidad la mantienen. |
 | Miniatura | Sistema visual TWIM. Fondo verde oscuro `#173D30`, texto beige `#C2A78B` en Barlow Condensed: `CÓMO VIVIR / CON ANSIEDAD / (AL REVÉS)`. Sin cara reaccionando, sin flechas, sin emojis. |
-| Capítulos | `00:00 Por qué te enseño a empeorarla` · `01:30 Paso 1 · Anticipa` · `03:00 Paso 2 · Contrólalo todo` · `04:20 Paso 3 · Evita` · `05:50 Paso 4 · No pares nunca` · `07:10 Paso 5 · Vigila tu cuerpo` · `08:40 Paso 6 · Regúlate con lo que pilles` · `10:00 Paso 7 · Rumia de noche` · `11:20 Paso 8 · Pide que te tranquilicen` · `12:40 Paso 9 · No lo cuentes` · `14:00 Paso 10 · Pelea contra ella` · `15:20 Saliendo del sarcasmo · qué sí` |
+| Capítulos | `00:00 Por qué te lo cuento al revés` · `01:30 1 · Vive siempre en mañana` · `03:00 2 · No sueltes el control` · `04:20 3 · Huye de lo que te asusta` · `05:50 4 · No pares nunca` · `07:10 5 · Vigila tu cuerpo` · `08:40 6 · Pide prestada la calma` · `10:00 7 · La cama como despacho` · `11:20 8 · Que te calmen los demás` · `12:40 9 · No lo cuentes de verdad` · `14:00 10 · Peléate con ella` · `15:20 Ahora, en serio · qué sí` |
 | Disclaimer educativo | Obligatorio, incluido en el cierre. |
 | CTA | Newsletter «Te escribo» (principal). Directo 14 jun (opcional, marcado en el guion). |
 
@@ -29,153 +28,147 @@
 
 ## GUION LIMPIO PARA LEER
 
-### Apertura · por qué te voy a enseñar a empeorarla
+### Apertura · por qué te lo cuento al revés
 
-Cómo vivir con ansiedad el resto de tu vida.
+Son las tres de la madrugada. No ha pasado nada. Nadie te ha llamado con una mala noticia, no hay ninguna emergencia. Y, sin embargo, estás con los ojos abiertos mirando el techo, el cuerpo en tensión, resolviendo por enésima vez una conversación que todavía no ha ocurrido. Mañana estarás agotado y no habrás hecho nada. Solo has estado despierto, defendiéndote de algo que aún no existe.
 
-Daniel, eres psicólogo, ¿no deberías enseñar justo lo contrario? Sí. En teoría sí. Pero hoy no. Hoy te voy a enseñar a quedártela. A tenerla cerca, bien cuidada, para que no se vaya nunca. Paso por paso, con método.
+Si esa escena, o una parecida, la reconoces, este vídeo va de ti.
 
-Y antes de que cierres el vídeo pensando que se me ha ido la cabeza, déjame decirte una cosa, porque esto tiene un sentido. En psicología hay una idea muy vieja: cuando coges algo que haces sin darte cuenta, en automático, y lo haces a propósito, mirándolo de frente, algo cambia. Deja de tener el poder que tenía. Porque si puedes encender la ansiedad a propósito, resulta que también puedes empezar a hacer otra cosa con ella. Pero eso es para el final.
+Pero lo voy a hacer de una forma rara, así que aguanta un momento. No te voy a dar diez claves para calmarte. Voy a hacer justo lo contrario. Te voy a explicar, con todo detalle, cómo se mantiene una ansiedad encendida para siempre. Cómo conseguir que no se vaya nunca.
 
-De momento, vamos a lo que de verdad funciona si lo que quieres es vivir con un nudo en el pecho para siempre. Vamos a repasar, una por una, todas las cosas que probablemente ya estás haciendo sin saberlo y que mantienen la alarma encendida de día y de noche. Te aviso: van a ser diez. Y lo más incómodo no es que sean diez. Es que seguramente reconozcas en ti unas cuantas.
+Y no es una broma cruel: tiene su lógica. Lo que haces a oscuras, sin mirarlo, en piloto automático, es lo que tiene poder sobre ti. En el momento en que lo enciendes a propósito, en que lo ves funcionar desde fuera, empieza a perder ese poder. Así que vamos a encender la luz y a mirar el mecanismo de frente. Te aviso de una cosa: van a ser diez. Y lo incómodo no va a ser la lista. Lo incómodo va a ser cuántas reconoces.
 
-Una cosa antes de empezar. Todo esto, pero del derecho —es decir, cómo se afloja de verdad— lo escribo despacio en las cartas que mando por correo. Se llaman «Te escribo». Te dejo el enlace abajo por si al terminar quieres seguir. Pero sigue aquí, que vamos a por el paso uno.
+Una cosa antes de empezar, y sigo. Todo esto, pero del derecho —cómo se afloja de verdad—, lo escribo despacio en las cartas que mando por correo, «Te escribo». El enlace está abajo, por si al terminar quieres seguir.
 
-### Paso 1 · No estés nunca donde estás
+### Paso 1 · Vive siempre en mañana
 
-Paso uno: no estés nunca donde estás. Adelántate siempre.
+Lo primero, que es la base de todo: no estés nunca donde estás.
 
-Si mañana tienes una reunión, no esperes a mañana. Vívela hoy. Y no una vez: vívela doce veces, con doce finales distintos, todos malos. Si has quedado el viernes, empieza el lunes a imaginar todo lo que puede salir torcido. Si mandas un mensaje y la otra persona tarda en contestar, no te quedes con que estará ocupada. No. Monta la película entera: le ha molestado algo, se está repensando lo vuestro, te va a dejar, y tú repasando qué dijiste mal.
+Si mañana tienes una reunión, no la dejes para mañana. Vívela hoy. Y no una vez: vívela entera, con todos los finales malos posibles. Si has quedado el viernes, empieza el lunes a imaginar todo lo que puede torcerse. Si le escribes a alguien y tarda en contestar, no pienses que estará liado: monta la película completa —le ha sentado mal algo, se está cansando de ti, te va a dejar— y quédate ahí dentro, repasando qué dijiste.
 
-La clave de este paso es no darle al momento presente ni un respiro. Que tu cabeza esté siempre en una habitación en la que todavía no has entrado, ensayando una conversación que todavía no ha pasado.
+La idea es no pisar nunca el presente. Que tu cabeza viva siempre en una habitación en la que todavía no has entrado.
 
-Lo único malo —y es un detalle pequeño— es que te vas a perder tu vida entera mientras ensayas otra que casi nunca llega. Porque eso que tanto ensayas, el noventa por ciento de las veces, ni pasa. Y el día que pasa, ya lo has sufrido tantas veces por dentro que llegas agotado. Pero bueno. Sigamos.
+¿El precio? Que te pierdes tu vida real mientras ensayas una que casi nunca llega. Porque eso que tanto temes, la mayoría de las veces, ni pasa. Y el día que pasa, llegas ya agotado de haberlo sufrido veinte veces por dentro.
 
-### Paso 2 · Contrólalo todo
+### Paso 2 · No sueltes el control
 
-Paso dos: controla. Todo.
+Lo segundo: agárrate al control con las dos manos.
 
-Esto va muy unido al anterior. La idea es sencilla: si lo tienes todo bajo control, no puede pasar nada malo. Así que no dejes ningún cabo suelto. Haz listas. Y luego haz listas de las listas. No delegues en nadie, porque nadie lo va a hacer tan bien como tú. Revisa el correo cuatro veces antes de enviarlo, y otras cuatro después de enviarlo, por si acaso. Llega siempre media hora antes. Ten un plan B, un plan C, y un plan por si fallan el B y el C.
+Si lo tienes todo previsto, no puede sorprenderte nada malo. Así que no dejes ni un cabo suelto. Listas, y listas de las listas. No delegues, que nadie lo va a hacer como tú. Repasa el mensaje cuatro veces antes de mandarlo, y otras cuatro después. Llega siempre con margen, ten un plan B, un plan C, y un plan por si fallan los dos.
 
-Un truco extra para este paso, muy potente: no distingas nunca entre lo que depende de ti y lo que no. Mételo todo en el mismo saco. El tráfico, el tiempo que va a hacer, lo que piensa de ti tu cuñado, una pandemia. Todo igual. Hazte responsable de controlarlo todo por igual.
+Y para que el método sea redondo, no separes nunca lo que depende de ti de lo que no. El tráfico, el tiempo que hará, lo que opine de ti tu cuñado, lo que pase dentro de tres años: todo a la misma bolsa, todo tuyo, todo por controlar.
 
-Lo único malo es que el control no quita el miedo: lo alimenta. Cuanto más intentas controlar, más cosas descubres que podrían salir mal, así que más tienes que vigilar, así que más cansado estás, así que más frágil te sientes. Y la lista de cosas que controlar no se acaba nunca, porque la vida, resulta, no se deja controlar. Pero tú dale.
+Aquí la trampa es fina: el control no apaga el miedo, lo ceba. Cuanto más quieres controlar, más peligros descubres, más cosas tienes que vigilar, más agotado acabas. Y resulta que la vida no se deja sujetar, así que la sensación de que algo se te va a escapar no se va nunca. Es un trabajo a jornada completa que no termina y que encima no paga.
 
-### Paso 3 · Evita
+### Paso 3 · Huye de lo que te asusta
 
-Paso tres, y este es de los importantes: evita. Cada vez que algo te dé miedo o te ponga nervioso, no lo hagas. Date la vuelta.
+Lo tercero, y este es de los grandes: evita. Lo que te dé miedo, no lo hagas. Date la vuelta.
 
-¿Te angustia ese plan con gente? Pon una excusa y quédate en casa. ¿Te da apuro hablar en esa reunión? Mejor te callas. ¿Hay una llamada que te pone nervioso? Que sea un mensaje. ¿El mensaje también te cuesta? Pues ya tal, otro día. ¿Te asusta el metro, el ascensor, la autopista, el avión? Evítalos. Busca siempre el camino que no pasa por ahí.
+¿Te angustia el plan con gente? Una excusa y a casa. ¿Te cuesta hablar en la reunión? Cállate. ¿Te pone nervioso llamar? Mejor un mensaje. ¿El mensaje también? Ya tal, otro día. El metro, el ascensor, la autopista, el avión: rodéalos, busca siempre el camino que no pasa por ahí.
 
-Al principio vas a notar un alivio enorme. En cuanto cancelas el plan, en cuanto evitas eso que temías, el cuerpo se relaja de golpe. Qué gusto. Apúntatelo como una victoria.
+Y fíjate lo bien que sienta. En cuanto cancelas, en cuanto evitas, el cuerpo se afloja de golpe. Alivio puro. Apúntatelo como una victoria.
 
-Lo único malo es lo que pasa después, y es la trampa más fina de todas. Cada vez que evitas algo, le estás diciendo a tu cabeza, sin palabras: tenías razón, eso era peligroso, menos mal que huimos. Y la próxima vez el miedo es un poco más grande. Y la lista de cosas que evitas crece. Primero evitas el avión. Luego el tren. Luego la autopista. Luego el coche. Luego salir. Tu mundo se va haciendo pequeño, pequeño, pequeño, hasta que cabe en una habitación. Pero eso sí: dentro de la habitación, tranquilo. De momento.
+Lo que no se ve es que esa victoria se cobra intereses. Cada vez que evitas algo, tu cabeza toma nota: «efectivamente, eso era peligroso, menos mal que huí». Y la próxima vez el miedo viene un poco más crecido. La lista de lo que evitas se alarga sola: primero el avión, luego el tren, luego conducir, luego salir. Tu mundo se encoge, despacio, hasta que cabe en una habitación. Eso sí: dentro de la habitación, de momento, tranquilo.
 
 ### Paso 4 · No pares nunca
 
-Paso cuatro: no pares nunca. Llénate la agenda hasta arriba y no dejes ni un hueco.
+Lo cuarto: no pares. Llena la agenda hasta que no quepa un alfiler.
 
-Esto parece lo contrario de la ansiedad, pero es de los mejores combustibles que hay. La regla es simple: que no quede un solo minuto de silencio. Si vas en el coche, pon música o un podcast. Si esperas el ascensor, saca el móvil. En el semáforo, el móvil. En la cola del súper, el móvil. En cuanto te metes en la cama, una serie de fondo. Di que sí a todos los planes, coge más trabajo del que puedes, apúntate a todo. Que tu vida vaya tan llena y tan rápida que no quede espacio para pararte a sentir nada.
+Esto parece lo contrario de la ansiedad, pero es de los mejores combustibles que hay. Que no quede un solo minuto de silencio. En el coche, música o un audio. Esperando el ascensor, el móvil. En el semáforo, el móvil. En la cola, el móvil. En la cama, una serie de fondo. Di que sí a todo, coge más de lo que puedes, no te quedes quieto. Que la vida vaya tan rápida que no haya hueco para sentir nada.
 
-Porque ese es el truco fino: mientras corres, no lo notas. La ansiedad sigue ahí, debajo, pero el ruido la tapa.
+Porque el truco está justo ahí: mientras corres, no la oyes. Sigue debajo, pero el ruido la tapa.
 
-Lo único malo es que lo que tapas no desaparece, solo espera. Espera al primer momento de silencio: el domingo por la tarde, el primer día de vacaciones, la noche cuando por fin apagas todo. Y entonces llega de golpe, toda junta, y no entiendes por qué, si «no estabas haciendo nada». No estabas haciendo nada: por eso, por fin, la oíste. Pero tú no pares. Mientras corras, bien.
+Y lo que tapas no se va: espera. Espera al primer silencio. El domingo por la tarde, el primer día de vacaciones, la noche en que por fin apagas todo. Y entonces aparece de golpe, toda junta, y no entiendes por qué, «si no estaba haciendo nada». Claro: por eso, justo, la oíste.
 
-### (Marcador · mirar a cámara)
+### (Respiro · a mitad)
 
-Vas bien, por cierto. Si te estás reconociendo en alguno de estos pasos, es buena señal: significa que estás escuchando de verdad, no que te pase nada raro. Seguimos, que queda lo más fino.
+Paro un segundo, en serio. Si llevas un rato asintiendo, no es mala señal, y no es que estés peor que nadie. Es que esto es de lo más común que hay, y casi nadie lo dice en voz alta. Sigo.
 
-### Paso 5 · Vigila tu cuerpo
+### Paso 5 · Vigila tu cuerpo como a un sospechoso
 
-Paso cinco: conviértete en el vigilante de tu propio cuerpo.
+Lo quinto: trátate el cuerpo como a un sospechoso al que no le quitas el ojo.
 
-Esto es delicado y muy eficaz. Pásate el día escaneándote por dentro. ¿Me late raro el corazón? ¿Me he mareado un poco? ¿Esto que noto en el pecho será algo? Coge cualquier sensación normal del cuerpo —un pinchazo, el corazón un poco acelerado por subir las escaleras, un hormigueo en la mano— y trátala como la primera señal de que algo va muy mal.
+Escúchate por dentro todo el día. ¿Me ha latido raro el corazón? ¿Eso ha sido un mareo? ¿Este pinchazo en el pecho será algo? Coge cualquier sensación normal —el corazón acelerado por subir las escaleras, un hormigueo en la mano, una punzada— y trátala como el primer aviso de algo grave.
 
-Y cuando lo notes, haz dos cosas. Una: búscalo en internet a las dos de la mañana, hasta dar con la enfermedad más grave que encaje. Dos: quédate muy quieto, muy atento, esperando a que vuelva. Porque cuanto más vigilas una sensación, más la notas; y cuanto más la notas, más te asustas; y cuanto más te asustas, más se acelera el cuerpo, que te da más sensaciones todavía que vigilar.
+Y cuando la notes, dos cosas. Una: búscala en internet a las dos de la madrugada, hasta dar con la enfermedad más seria que encaje. Dos: quédate muy quieto, esperando a que vuelva. Porque cuanto más miras una sensación, más la notas; cuanto más la notas, más te asustas; cuanto más te asustas, más se acelera el cuerpo, y más sensaciones tienes que vigilar.
 
-Lo único malo es que el cuerpo no es un enemigo que te esté traicionando. Es ese sistema de alarma del que hablábamos. Y una alarma a la que miras fijamente todo el rato termina saltando por cualquier cosa. Pero tú no se lo perdones ni una.
+El detalle es que el cuerpo no te está traicionando. Es una alarma. Y a una alarma que vigilas fijamente todo el día acabas haciéndola saltar por nada.
 
-### Paso 6 · Regúlate con lo que tengas a mano
+### Paso 6 · Pide prestada la calma
 
-Paso seis: cuando el cuerpo se te dispare, cálmalo con lo primero que pilles.
+Lo sexto: cuando el cuerpo se dispare, cálmalo con lo primero que tengas a mano.
 
-El sexto café del día, aunque ya te tiemble un poco la mano. La copa de vino para poder dormir, y la segunda. El scroll infinito en la cama hasta las dos, pasando vídeos que ni miras. Comer algo aunque no tengas hambre, solo para tener la boca ocupada. Comprar una cosa que no necesitas porque al darle a «comprar» sientes un chispazo de alivio. Lo que sea que baje el ruido un rato.
+El sexto café del día, aunque ya te tiemble un poco el pulso. La copa para poder dormir, y la segunda. El móvil en la cama hasta las dos, pasando vídeos que ni miras. Picar algo sin hambre, solo por tener la boca ocupada. Comprar una cosa que no necesitas porque al darle a «pagar» hay un chispazo de alivio. Lo que sea que baje el ruido un rato.
 
-Lo único malo es que cada una de esas cosas te presta una calma que luego te cobra, y con recargo. El café te pone el cuerpo todavía más acelerado, que era justo el problema. La copa te ayuda a dormirte y te despierta a las cuatro de la madrugada con el corazón a mil. El scroll te deja más vacío de lo que estabas. Le pides la calma prestada a cosas que la cobran a un interés altísimo, y a final de mes —el mes de tu cuerpo— estás más en números rojos que al principio. Pero oye, los diez minutos de tregua, buenos.
+El asunto es que toda esa calma es prestada, y te la prestan a un interés altísimo. El café te acelera más, que era el problema de origen. La copa te duerme y te despierta a las cuatro con el corazón disparado. El móvil te deja más vacío que antes. A final de mes —el de tu cuerpo— estás más en números rojos que al empezar. Pero los diez minutos de tregua, bien.
 
-### Paso 7 · Usa la cama como oficina
+### Paso 7 · Convierte la cama en un despacho
 
-Paso siete: que la cama sea tu oficina.
+Lo séptimo: que la cama sea tu despacho de noche.
 
-El día es para aguantar. La noche es para pensar. Así que cuando apagues la luz, cuando por fin estés en silencio y a oscuras —que es el momento perfecto—, sácalo todo. Repasa la conversación de esta mañana y lo que deberías haber contestado. Repasa esa cosa que dijiste hace seis años y que seguro que aquella persona todavía recuerda. Planifica los próximos diez años. Decide ahora, a las tres de la madrugada, sin información y sin fuerzas, qué vas a hacer con tu vida.
+El día es para aguantar; la noche, para pensarlo todo. Así que cuando apagues la luz, en ese silencio perfecto, sácalo entero. La conversación de la mañana y lo que deberías haber contestado. Aquello que soltaste hace seis años y que seguro que la otra persona aún recuerda. El plan de los próximos diez años: decídelo ahora, a las tres, sin datos y sin fuerzas.
 
-Y si te empiezas a dormir, no pasa nada: para eso está tu cabeza, para recordarte de golpe algo que te falta por preocuparte.
+Y si te entra el sueño, tranquilo: tu cabeza te despertará de golpe con algo más que todavía no has preocupado.
 
-Lo único malo es que de noche no se resuelve nada. A esa hora no estás pensando: estás dando vueltas. Pensar es buscar una salida; rumiar es pasar por el mismo sitio otra vez, y otra, sin avanzar, gastando justo el sueño que necesitarías para que mañana todo se viera un poco menos enorme. Pero ya dormirás cuando estés tranquilo. Que será, con este método, nunca.
+El problema es que de noche no se resuelve nada. A esa hora no piensas: das vueltas. Pensar busca una salida; rumiar es pasar por el mismo punto otra vez, y otra, gastando justo el sueño que te haría falta para que mañana todo se viera menos enorme.
 
-### (Marcador corto)
+### Paso 8 · Que te calmen los demás
 
-Llevamos siete. Si vas contando y te salen muchos, no te asustes: precisamente de eso va el final. Aguanta dos más y el de propina.
+Lo octavo: que la tranquilidad venga siempre de fuera. Pregunta. Sin parar.
 
-### Paso 8 · Pide que te tranquilicen, sin parar
+«¿Seguro que no estás enfadado?» «¿Me lo prometes?» «¿De verdad estoy bien?» «¿Tú crees que saldrá?» Cada duda, no la sostengas ni un segundo: busca a alguien que te diga que todo está en orden. El mensaje para que te confirmen. La pregunta en el grupo. La quinta vez que hoy le preguntas a tu pareja lo mismo. Y cuando te tranquilicen, créetelo lo justo, para que en media hora vuelva la duda y toque preguntar otra vez.
 
-Paso ocho: que sean los demás los que te calmen. Pregunta. Una y otra vez.
+Lo que ocurre por debajo es que, cada vez que otro te calma, tu cabeza aprende que sola no sabe. Que necesita a alguien para estar bien. Así que la duda vuelve antes y más fuerte, preguntas más, la persona a la que preguntas se va cansando, y tú te quedas más inseguro todavía.
 
-«¿Seguro que no estás enfadado?» «¿Me lo prometes?» «¿De verdad estoy bien?» «¿Tú crees que saldrá bien?» «¿Me lo dices en serio o lo dices por decir?» Cada vez que te entre la duda, no la sostengas ni un segundo: busca a alguien que te diga que todo está bien. Manda el mensaje para que te confirmen. Pregunta en el grupo. Pregúntale a tu pareja por quinta vez hoy. Que la calma venga siempre de fuera, de la boca de otro.
+### Paso 9 · No lo cuentes de verdad
 
-Y cuando te tranquilicen, créetelo solo un rato. Lo justo. Que en media hora vuelva la duda y tengas que volver a preguntar.
+Lo noveno, y ojo que no me contradigo con lo anterior: preguntar mil veces «¿estás bien conmigo?», sí; contar de verdad lo que llevas dentro, jamás.
 
-Lo único malo es que cada vez que alguien te calma desde fuera, tu cabeza aprende una cosa: que tú solo no puedes. Que necesitas a otro para estar bien. Así que la próxima vez la duda llega antes y más fuerte, y necesitas preguntar más, y la persona a la que preguntas se va cansando, y tú te sientes todavía más inseguro. El alivio que viene de fuera es como el de evitar: rapidísimo, y te deja un poco peor que antes. Pero tú pregunta otra vez. Por si acaso.
+Que en la superficie esté todo en orden. Tú eres el fuerte, el que puede con todo, el que escucha los líos de los demás y nunca cuenta el suyo. Que nadie sepa que llevas meses con un nudo en el pecho. Porque si lo dices, igual te ven flojo, igual descubren que no controlas tanto como parece, igual te conviertes en una carga.
 
-### Paso 9 · No se lo cuentes a nadie
+Así que sonríe, di «cansado pero bien», y guárdatelo. Si alguien insiste, cambia de tema.
 
-Paso nueve: no se lo cuentes a nadie de verdad. Por dentro, terremoto. Por fuera, «todo bien, ¿y tú?».
+Lo que pasa es que lo que no se cuenta crece. A solas, en tu cabeza, eres el único del mundo al que le pasa esto, y eso asusta el doble. El día que se lo dices a alguien y te contesta «yo también», algo se afloja. No porque se arregle, sino porque dejas de cargarlo a solas. Pero para eso habría que bajar la guardia, y la guardia es muy cómoda.
 
-Ojo, no me contradigo con el paso anterior. Una cosa es preguntar mil veces «¿estás enfadado conmigo?» —eso sí—, y otra muy distinta es contarle a alguien, de verdad, que llevas meses con un nudo en el pecho. Eso no. Eso jamás. Sé la persona fuerte, la que siempre puede, la que resuelve, la que escucha los problemas de los demás y nunca cuenta los suyos. Que nadie sepa lo que llevas dentro. Porque si lo cuentas, igual te ven débil. Igual descubren que no lo llevas todo tan bien como parece. Igual te conviertes en una carga.
+### Paso 10 · Peléate con ella
 
-Así que sonríe, di que estás cansado pero bien, y guárdatelo. Si alguien pregunta de más, cambia de tema.
+Y lo décimo, lo que lo remata: declárale la guerra.
 
-Lo único malo es que la ansiedad que no se cuenta se hace más grande, no más pequeña. En tu cabeza, a solas, eres el único en el mundo al que le pasa esto, y eso da mucho más miedo. El día que se lo dices a alguien y esa persona te contesta «yo también», algo afloja. No porque se solucione, sino porque dejas de estar solo con ello. Pero claro, para eso habría que quitarse la máscara, y la máscara es muy cómoda. Tú sigue con ella puesta. De momento.
+Cada vez que asome, ponte rígido. «Otra vez no. Ahora no. Esto no lo quiero sentir.» Enfádate por estar nervioso. Repítete que no deberías, que la gente normal no está así, que tienes que quitártela ya. Empuja contra ella con todas tus fuerzas, como quien hunde un flotador en el agua.
 
-### Paso 10 · Pelea contra ella
+Y ahí está el remate: el flotador, cuanto más fuerte lo hundes, más fuerte sale disparado. Pelear con la ansiedad es echarle gasolina, porque le estás diciendo al cuerpo que hay una emergencia —la de no estar nervioso— y el cuerpo responde a las emergencias poniéndose más nervioso todavía. Acabas con ansiedad por tener ansiedad. Y de ese pozo casi no se sale.
 
-Y el paso diez, que es el que lo corona todo: pelea. Declárale la guerra a tu ansiedad.
+### Ahora, en serio
 
-Cada vez que aparezca, ponte en tensión. «Otra vez no. Ahora no. Esto no lo quiero sentir.» Enfádate contigo por sentirla. Dite que no deberías estar así, que la gente normal no está así, que tienes que quitártela ya, hoy, ahora mismo. Lucha contra ella con todas tus fuerzas, como quien intenta hundir una pelota en el agua con la mano.
+Suelto la ironía aquí, porque lo que queda es lo que de verdad importa.
 
-Lo único malo —y con esto cerramos el manual— es que la pelota, cuanto más fuerte la hundes, con más fuerza sube. Pelear contra la ansiedad es echarle gasolina. Porque le estás diciendo a tu cuerpo que hay una emergencia —la emergencia de no estar nervioso— y tu cuerpo responde a las emergencias poniéndose más nervioso. Es una trampa perfecta. La mejor de todas. Quien pelea contra su ansiedad acaba teniendo ansiedad por tener ansiedad. Y de ahí ya casi no se sale. Con este método, claro.
+Si te has reconocido en seis, en siete, en ocho de estos —tranquilo, es lo más normal del mundo—, no estás roto y no eres débil. Tienes un sistema de alarma que aprendió, en algún momento en que de verdad hizo falta, a no apagarse. Eso no es un fallo de fábrica: es un aprendizaje. Tu cabeza aprendió a anticipar, a controlar, a vigilar, a huir, porque un día eso te cuidó. Lo que pasa es que se quedó encendida mucho después de que el peligro se fuera.
 
-### Saliendo del sarcasmo · esto va en serio
+Y fíjate en lo que une a los diez, porque es la clave entera: todos son intentos de quitarte la ansiedad. Controlar es intentar calmarte. Evitar es intentar calmarte. No parar, beberte el café, vigilar el cuerpo, pedir que te tranquilicen, pelear con ella: todo es intentar calmarte. Y todo, sin excepción, la alimenta. Esa es la trampa de fondo: estás apagando un fuego con gasolina, convencido de que es agua.
 
-Y hasta aquí la broma. Porque a partir de aquí va en serio, y es lo más importante del vídeo.
+¿Y entonces qué? No hay truco, y no te voy a vender uno. Hay una dirección, que es casi la contraria de todo lo anterior, y te la dejo en cuatro gestos concretos.
 
-Si te has reconocido en estos pasos —y si te has reconocido en seis o siete, tranquilo, es lo normal—, no te pasa nada raro, y desde luego no eres débil. Lo que tienes es un sistema de alarma que, en algún momento de tu vida en que sí hizo falta, aprendió a no apagarse. Eso no es un defecto. Es un aprendizaje. Tu cabeza aprendió a anticipar, a controlar, a vigilar, a evitar, porque en algún momento eso te protegió. El problema es que se quedó encendido cuando el peligro que lo encendió ya había pasado.
+Cuando te descubras en la habitación de mañana, en vez de pelear, date cuenta: «ah, otra vez», y vuelve despacio a la de hoy. No la eches; solo míralo.
 
-Y fíjate en una cosa, porque es la clave de todo: cada uno de estos diez pasos es, en el fondo, un intento de quitarte la ansiedad. Controlar es un intento de calmarte. Evitar es un intento de calmarte. No parar, regularte con café, vigilar el cuerpo, pedir que te tranquilicen, pelear contra ella: todo son intentos de calmarte. Y todos, sin excepción, la alimentan. Eso es lo que tiene de cruel, y de importante, este tema: que muchas de las cosas que haces para librarte de la ansiedad son justo las que la sostienen. No estás roto. Estás apagando un fuego con gasolina, convencido de que es agua.
+Lo que evitas, en vez de rodearlo, acércate de a poco. El plan que ibas a cancelar, quédate media hora. La llamada, hazla aunque te tiemble la voz. Para que tu cabeza, que aprendió el miedo huyendo, aprenda lo contrario quedándose.
 
-Entonces, ¿qué sí? No te voy a vender que hay un truco, porque no lo hay. La dirección —que no es un truco, sino un camino— es casi la contraria de todo lo anterior. Te la cuento en cuatro gestos, para que no quede en abstracto.
+Lo que te quita el sueño, pásalo por una sola pregunta: «¿esto está en mi mano, o no?». Si está, haz lo que puedas. Si no está, devuélveselo a la vida, que es suya.
 
-En vez de pelear con la alarma, notar que se ha encendido. Cuando te descubras en la habitación de mañana, en esa conversación que aún no ha pasado, decirte «ah, otra vez», y volver despacio a la habitación de hoy. No echarla: solo verla.
+Y lo que te callas, cuéntaselo a una persona. Una. Y deja que ese «yo también» haga lo suyo.
 
-En vez de huir de lo que temes, acercarte despacio, en dosis pequeñas. Ese plan que ibas a cancelar, ir media hora. Esa llamada, hacerla aunque te tiemble la voz. Para que tu cabeza, que aprendió que era peligroso huyendo, aprenda ahora lo contrario: quedándose y comprobando que se podía.
-
-En vez de controlarlo todo, soltar lo que no depende de ti. Ante cada cosa que te quita el sueño, una sola pregunta: «¿esto está en mi mano, o no?». Si está, haz lo que puedas. Si no está, devuélveselo a la vida, que para eso es suya y no tuya.
-
-Y en vez de guardártelo, contarlo. A una persona. Una sola. Y oír ese «yo también» que lo cambia casi todo, no porque resuelva nada, sino porque por fin no estás solo con ello.
-
-Nada de eso se hace de golpe, ni leyendo este vídeo, ni a base de fuerza de voluntad. Se hace despacio, repitiéndolo muchas veces, y casi siempre mejor acompañado de alguien que sepa mirarlo contigo. La ansiedad no se gana como una batalla. Se afloja, como un nudo: tirando del hilo correcto, y con paciencia.
+Nada de esto se hace de golpe, ni con este vídeo, ni a fuerza de voluntad. Se hace despacio, muchas veces, y casi siempre mejor acompañado de alguien que sepa mirarlo contigo. La ansiedad no se gana como una guerra. Se afloja como un nudo: tirando del hilo bueno, y con paciencia.
 
 ### Cierre + CTA
 
-Si has llegado hasta aquí, ya has hecho la parte más difícil, que es mirarlo de frente en vez de seguir haciéndolo a oscuras.
+Si has llegado hasta aquí, ya has hecho lo más difícil: mirarlo de frente en vez de seguir a oscuras.
 
-Si quieres seguir, esto lo escribo despacio en las cartas que mando por correo, «Te escribo». No es una lista de tips. Es lo que te contaría si estuvieras sentado delante de mí. El enlace está abajo, es gratis, y te apuntas en un minuto.
+Si quieres seguir, esto lo escribo con calma en «Te escribo», las cartas que mando por correo. No es una lista de trucos: es lo que te contaría si estuvieras sentado enfrente de mí. El enlace, abajo. Es gratis y te apuntas en un minuto.
 
-[OPCIONAL · solo si el vídeo se publica antes del 14 jun: Y este domingo hago una hora en directo, gratis, sobre una hermana muy cercana de la ansiedad: esa voz interna que te dice que no es suficiente. También te dejo el enlace abajo.]
+[OPCIONAL · solo si el vídeo se publica antes del 14 jun: Y este domingo hago una hora en directo, gratis, sobre una pariente muy cercana de la ansiedad: esa voz que te dice que no es suficiente. El enlace, también abajo.]
 
-Y antes de irme, una cosa importante. Esto es un vídeo, no una consulta. Si la ansiedad te está paralizando, si te impide hacer tu vida normal, o si viene acompañada de pensamientos más oscuros, no te quedes solo con un vídeo: busca a alguien que pueda mirarlo contigo de cerca. Lo que digo aquí no sustituye eso, y no pretende hacerlo.
+Una última cosa, importante. Esto es un vídeo, no una consulta. Si la ansiedad te está bloqueando la vida, si no te deja funcionar, o si viene con pensamientos más oscuros, no te quedes con un vídeo: busca a alguien que pueda mirarlo contigo de cerca. Lo que digo aquí no sustituye eso.
 
-Por lo demás, llévate lo único que de verdad importa de todo esto: muchas veces, lo que haces para quitarte la ansiedad de encima es justo lo que la mantiene. Y el día que empiezas a hacer lo contrario —despacio, sin pelear— algo empieza a aflojarse.
+Y si te llevas una sola frase de todo esto, que sea esta: muchas veces, lo que haces para sacarte la ansiedad de encima es justo lo que la sostiene. El día que empiezas a hacer lo contrario —despacio, sin pelear— algo empieza a ceder.
 
 Nos vemos en el próximo. Cuídate.
 
@@ -187,12 +180,12 @@ Nos vemos en el próximo. Cuídate.
 
 | Campo | Valor |
 |---|---|
-| Palabras (cuerpo hablado) | ≈3.150 |
+| Palabras (cuerpo hablado) | ≈3.000 |
 | Duración estimada | 15-20 min según ritmo (holgadamente por encima de 12 aunque se lea rápido) |
-| Registro | A cámara, enérgico pero sobrio. Humor seco, no histriónico. La ironía NUNCA cae sobre el espectador (regla del formato §3). |
-| Reglas respetadas | Sin emojis · sin jerga sin glosa (se va directo a la imagen: «sistema de alarma») · concreción en cada paso · anti-coaching · sin «tú puedes» · CTA solo dos veces (siembra + cierre) · disclaimer educativo. |
-| Lo que NO se hace | No ridiculizar a quien mira · no prometer transformación · no vender en el vídeo · no clickbait en la miniatura. |
-| Si aún se queda corto al grabarlo | Margen extra natural: alargar las pausas tras cada «lo único malo es que…», o desdoblar el Paso 5 (vigilar el cuerpo) en «sensaciones» + «buscar síntomas en internet». No hace falta meter más pasos. |
+| Registro | A cámara, enérgico pero sobrio. Humor seco, no histriónico. La ironía NUNCA cae sobre el espectador. |
+| Anti-calco (v3) | Reescrito para no replicar la ejecución de Claudia Nicolasa: apertura con escena (no su gag), coste contado distinto en cada paso (sin estribillo «lo único malo es que»), sin «truco extra para este paso», respiro propio, giro a la verdad con palabras propias. Regla en `youtube-narrativa-prescripcion-sintoma.md` §3.1. |
+| Reglas respetadas | Sin emojis · sin jerga sin glosa · concreción en cada paso · anti-coaching · sin «tú puedes» · CTA solo dos veces · disclaimer educativo. |
+| Si se queda corto al grabar | Alargar las pausas tras cada coste, o desdoblar el Paso 5 en «sensaciones» + «buscar síntomas en internet». No hace falta meter más pasos. |
 | CTA en descripción | `https://twimproject.com/newsletter/` (principal). Si se publica antes del 14 jun, añadir enlace de registro del Directo. |
 | Hashtags | #ansiedad #psicología #psicoanalisisaplicado #DanielOrozco #TWIMProject |
 
@@ -200,15 +193,15 @@ Nos vemos en el próximo. Cuídate.
 
 ## Shorts derivados (del propio guion, sin volver a grabar)
 
-1. **«Lo que haces para quitártela es lo que la mantiene»** — el núcleo de la salida del sarcasmo, 45 s. El más potente.
-2. **«Apagar un fuego con gasolina, convencido de que es agua»** — la frase de cierre de la salida del sarcasmo, 30 s.
-3. **«Tu mundo cabe en una habitación»** — el final del Paso 3 (evitar), 40 s.
-4. **«La pelota en el agua»** — el Paso 10 entero, 30 s.
-5. **«Lo que tapas no desaparece, espera al domingo por la tarde»** — el Paso 4 (no parar), 40 s.
+1. **«Lo que haces para quitártela es lo que la mantiene»** — el núcleo del giro final, 45 s. El más potente.
+2. **«Apagar un fuego con gasolina, convencido de que es agua»** — frase del giro, 30 s.
+3. **«Tu mundo cabe en una habitación»** — final del Paso 3 (evitar), 40 s.
+4. **«El flotador en el agua»** — el Paso 10, 30 s.
+5. **«Lo que tapas espera al domingo por la tarde»** — el Paso 4 (no parar), 40 s.
 6. **«Le pides la calma prestada y te la cobran con recargo»** — el Paso 6, 40 s.
-7. **«Vívela hoy doce veces»** — el Paso 1, 30 s.
+7. **«Vives siempre en mañana»** — el Paso 1, 30 s.
 
 ---
 
-*Documento generado el 8 jun 2026, sesión `claude/awesome-hopper-3ejG1`. v2 ampliada a 10 pasos tras feedback de Daniel. Para iterar, avisar antes de grabar.*
+*Documento generado el 8 jun 2026, sesión `claude/awesome-hopper-3ejG1`. v3 anti-calco tras feedback de Daniel. Para iterar, avisar antes de grabar.*
 

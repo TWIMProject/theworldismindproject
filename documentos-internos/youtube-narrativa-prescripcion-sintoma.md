@@ -65,6 +65,24 @@ La regla dopamina-comercial (`CLAUDE.md`) autoriza expresamente **«seducir con 
 
 **Regla de oro del formato (inviolable dentro de este doc):** la ironía de la prescripción del síntoma se dirige **al patrón autodestructivo y a la cultura que lo alimenta** (el «sé positivo», el «tú puedes», la mirada del otro como termómetro), **nunca al espectador**. En el momento en que una frase humilla a quien mira, se ha roto el formato. Claudia se salva porque se autocorrige («igual me estoy pasando de meterme en el personaje»); TWIM directamente no entra ahí.
 
+### 3.1 · Anti-calco · qué NO se replica de la ejecución concreta de Claudia
+
+> Regla declarada por Daniel el 8 jun 2026, verbatim: «el guion no puede tener los pasos tan iguales como Claudia Nicolasa, es un calco. No seamos tan descarados, por favor.»
+
+El recurso (prescripción del síntoma) y el género (anti-tutorial) son de **dominio público** y SÍ se usan — eso es lo que Daniel pidió grabar. Lo que NO se replica es la **ejecución y las muletillas concretas** del vídeo de referencia, que son su firma autoral. Tomar la técnica es legítimo; calcar la puesta en escena es descarado.
+
+| Muletilla / recurso de Claudia | Qué hace TWIM en su lugar |
+|---|---|
+| Gancho «[nombre], eres psicólogo/a, ¿no deberías enseñar lo contrario?» | Abrir con una **escena concreta** (regla de concreción) y entrar al recurso por su propia puerta. |
+| Nombrar la técnica con su frase de manual («esto en terapia sistémica se llama prescripción del síntoma… si puedo empeorarlo a propósito, puedo mejorarlo») | En hablado, **no nombrar la etiqueta**: usar el recurso y, como mucho, justificarlo con palabras propias. |
+| «Lo único malo es que…» como estribillo fijo en cada paso | **Variar** en cada paso la forma de nombrar el coste. Sin muletilla repetida. |
+| «Un tip / truco extra para este paso» | Integrar el matiz sin la coletilla. |
+| Guiño de retención «vas muy bien, veo que vas cumpliendo» | Un respiro propio, sobrio y distinto. |
+| «Saliendo ya del sarcasmo…» para el giro a la verdad | Girar con palabras propias. |
+| Mismo número y mismo orden de pasos que el vídeo de referencia | Otro número, otro orden, otros mecanismos (los del tema TWIM). |
+
+**Prueba antes de publicar:** si pusieras tu guion y el del creador de referencia en dos columnas, **ninguna frase de conexión debería poder intercambiarse**. Si alguna sí, reescríbela. La identificación («esa soy yo») la tiene que dar la escena concreta de TWIM, no el molde prestado.
+
 ---
 
 ## 4 · La versión TWIM-segura del formato
