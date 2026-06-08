@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planilla · orden de temas · Directo «La voz que te juzga» · dom 14 jun 21:30</title>
+<meta name="description" content="Planilla de orden de temas para tener delante en el directo. Uso interno · Daniel Orozco Abia.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-dark:#173D30; --green:#265C4B; --beige:#C2A78B; --cream:#FDFCFA;
+  --ink:#241d14; --muted:#7b7167; --hair:#e8e1d7;
+}
+*{box-sizing:border-box;}
+html,body{background:var(--cream);color:var(--ink);margin:0;padding:0;font-family:'Barlow Condensed',sans-serif;font-size:16px;line-height:1.5;}
+.page{max-width:860px;margin:0 auto;padding:48px 40px 64px;}
+.kicker{font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--beige);font-size:12px;margin:0 0 14px;}
+h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:42px;line-height:1.05;color:var(--green-dark);margin:0 0 8px;letter-spacing:-.01em;}
+.subtitle{font-family:'Instrument Serif',serif;font-style:italic;color:var(--green);font-size:20px;line-height:1.35;margin:0 0 22px;}
+.meta-bar{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--green);font-weight:500;letter-spacing:.02em;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:12px 0;margin:0 0 30px;}
+.meta-bar b{color:var(--green-dark);font-weight:600;}
+
+/* Leyenda */
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin:0 0 30px;}
+.legend .item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);letter-spacing:.02em;}
+.swatch{width:26px;height:14px;border-radius:3px;flex:none;}
+.sw-key{background:var(--green-dark);}
+.sw-dev{background:var(--green);}
+.sw-chat{background:var(--beige);}
+.sw-log{background:transparent;border:1.5px solid var(--hair);}
+
+/* Tarjetas */
+.card{position:relative;background:#fff;border:1px solid var(--hair);border-left-width:5px;border-radius:8px;padding:16px 20px 16px 22px;margin:0 0 12px;page-break-inside:avoid;}
+.card .top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0 0 4px;}
+.time{font-weight:700;font-size:20px;color:var(--green-dark);letter-spacing:.01em;font-variant-numeric:tabular-nums;}
+.tag{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:3px 9px;border-radius:999px;}
+.block-name{font-family:'Instrument Serif',serif;font-size:23px;color:var(--green-dark);line-height:1.1;margin:2px 0 8px;}
+.say{font-size:16px;color:var(--ink);margin:0 0 8px;}
+.say .q{font-family:'Instrument Serif',serif;font-style:italic;color:var(--green);font-size:17px;}
+.why{font-size:13px;color:var(--muted);letter-spacing:.01em;}
+.why b{color:var(--green);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:11px;}
+
+/* estados */
+.is-key{border-left-color:var(--green-dark);}
+.is-key .tag{background:var(--green-dark);color:var(--cream);}
+.is-dev{border-left-color:var(--green);}
+.is-dev .tag{background:var(--green);color:var(--cream);}
+.is-chat{border-left-color:var(--beige);}
+.is-chat .tag{background:var(--beige);color:var(--green-dark);}
+.is-log{border-left-color:var(--hair);background:#fcfaf6;}
+.is-log .tag{background:transparent;border:1px solid var(--beige);color:var(--muted);}
+.is-mini{padding:11px 20px;}
+.is-mini .block-name{font-size:18px;margin:0;}
+
+h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;color:var(--green-dark);margin:38px 0 6px;}
+.h2-meta{font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--beige);font-size:11px;margin:0 0 14px;}
+ul{margin:0 0 14px;padding-left:20px;}li{margin:0 0 6px;font-size:15px;}
+.tip{background:rgba(194,167,139,.12);border-radius:8px;padding:14px 18px;margin:14px 0;font-size:14px;color:var(--ink);}
+.tip b{color:var(--green-dark);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:11px;display:block;margin-bottom:5px;}
+footer{text-align:center;margin-top:46px;padding-top:16px;border-top:1px solid var(--hair);font-size:12px;letter-spacing:.05em;color:var(--muted);line-height:1.7;}
+
+@page{size:A4;margin:14mm 16mm;}
+@media print{
+  body{background:#fff;font-size:11pt;}
+  .page{padding:0;max-width:none;}
+  .card{box-shadow:none;}
+  h2{page-break-after:avoid;}
+}
+@media(max-width:560px){
+  .page{padding:30px 18px 48px;}
+  h1{font-size:32px;}
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+<p class="kicker">Planilla de directo · orden de temas · uso interno</p>
+<h1>La voz que te juzga</h1>
+<p class="subtitle">Lo que tienes delante mientras hablas. Sigues el orden, miras la hora, dices con tus palabras.</p>
+
+<div class="meta-bar">
+  <span><b>Domingo 14 jun 2026</b></span>
+  <span><b>21:30 CEST</b> · termina ~22:30</span>
+  <span>Google Meet · <b>fsu-scrz-res</b></span>
+  <span>Gratuito · captación · <b>sin venta</b></span>
+</div>
+
+<div class="legend">
+  <span class="item"><span class="swatch sw-key"></span> Bloque clave / núcleo del contenido</span>
+  <span class="item"><span class="swatch sw-dev"></span> Desarrollo que sostiene</span>
+  <span class="item"><span class="swatch sw-chat"></span> Interacción con el chat</span>
+  <span class="item"><span class="swatch sw-log"></span> Logística / CTA</span>
+</div>
+
+<!-- TARJETAS -->
+
+<div class="card is-dev">
+  <div class="top"><span class="time">21:30</span><span class="tag">Bloque 0 · Apertura</span></div>
+  <div class="block-name">Apertura ancla</div>
+  <p class="say"><span class="q">«Hay una voz que no elegiste y que habla como si fuera tú.»</span> Sin presentación larga. Qué vemos y qué no: no es terapia, es leer un mecanismo en voz alta.</p>
+  <p class="why"><b>Para qué</b> · enganchar en 60 s y bajar la expectativa de «clase». Aquí se gana o se pierde a quien entra.</p>
+</div>
+
+<div class="card is-log">
+  <div class="top"><span class="time">21:35</span><span class="tag">Bloque 1 · CTA siembra</span></div>
+  <div class="block-name">Plantar lo que hay al final</div>
+  <p class="say">«Al cierre os dejo el <b>Capítulo III, gratis</b>, donde esto está escrito y ampliado. Lo pego en el chat.» Sin vender.</p>
+  <p class="why"><b>Para qué</b> · plantar pronto (lección del funnel de Claudia: la CTA va al minuto 1, no solo al final).</p>
+</div>
+
+<div class="card is-key">
+  <div class="top"><span class="time">21:37</span><span class="tag">Bloque 2 · Núcleo</span></div>
+  <div class="block-name">El mecanismo · de dónde sale el juez</div>
+  <p class="say">Vínculo temprano: lo que se le dice a un niño se vuelve su voz adulta. El superyó —esa voz interna que te juzga— bajado a escena cotidiana, no a clínica.</p>
+  <p class="why"><b>Para qué</b> · que se reconozcan: «esa voz la tengo yo». Es el bloque más largo.</p>
+</div>
+
+<div class="card is-chat">
+  <div class="top"><span class="time">~21:52</span><span class="tag">Retención · chat</span></div>
+  <div class="block-name">Mirar el chat · vamos por la mitad</div>
+  <p class="say">«Vamos por la mitad. ¿Alguien la reconoce? Decidme de dónde escribís.»</p>
+  <p class="why"><b>Para qué</b> · reenganche e interacción, como los guiños de retención del vídeo.</p>
+</div>
+
+<div class="card is-dev">
+  <div class="top"><span class="time">21:55</span><span class="tag">Bloque 3 · Desarrollo</span></div>
+  <div class="block-name">Por qué no se calla con razones</div>
+  <p class="say">Comprender ≠ elaborar. Por qué «sé positivo» y la motivación no la tocan. Cuando te tapas con autoafirmaciones, el juez sube el volumen. Qué trabajo sí.</p>
+  <p class="why"><b>Para qué</b> · desmontar la falsa solución · diferenciar TWIM del coaching. Recoge 1-2 preguntas del chat aquí.</p>
+</div>
+
+<div class="card is-key">
+  <div class="top"><span class="time">22:10</span><span class="tag">Bloque 4 · Núcleo</span></div>
+  <div class="block-name">Una intervención concreta</div>
+  <p class="say">No discutir la frase: nombrar quién habla. <span class="q">«Ah, otra vez el juez»</span>, ponerla entre comillas antes de creértela. Sin convertirlo en ejercicio de coach.</p>
+  <p class="why"><b>Para qué</b> · dar algo real, pequeño y para hoy. Es la «salida del sarcasmo» del directo: aquí entregas la verdad de frente.</p>
+</div>
+
+<div class="card is-log">
+  <div class="top"><span class="time">22:22</span><span class="tag">Bloque 5 · Cierre + CTA</span></div>
+  <div class="block-name">Cierre + puente</div>
+  <p class="say">Recap en una frase. «Esto está escrito y ampliado en el <b>Capítulo III, gratis</b>» + mención sobria de la newsletter «Te escribo». Se graba y se manda a quien se registró.</p>
+  <p class="why"><b>Para qué</b> · cerrar el embudo sin venta. El libro completo solo se nombra como que existe, no se empuja.</p>
+</div>
+
+<div class="card is-log is-mini">
+  <div class="top"><span class="time">22:30</span><span class="tag">Fin</span></div>
+  <div class="block-name">Agradecer · recordar grabación</div>
+</div>
+
+<div class="tip">
+  <b>Enlace a pegar en el chat</b>
+  Capítulo III gratuito · <strong>https://twimproject.com/libro/capitulo-3/</strong> &nbsp;—&nbsp; verifica antes que abre bien (pendiente manual del doc del directo).
+</div>
+
+<h2>Cómo usar esta planilla en vivo</h2>
+<p class="h2-meta">tres reglas y a hablar</p>
+<ul>
+  <li><b>La hora es tu checkpoint.</b> Si a las 21:55 sigues en el mecanismo, acelera. Las horas de cada tarjeta son tus marcas de tiempo.</li>
+  <li><b>La frase en cursiva es tu ancla</b> · la dices casi literal; el resto lo cuentas con tus palabras, desde la consulta, sin sonar a texto leído.</li>
+  <li><b>La CTA aparece dos veces y solo dos</b> · siembra (21:35) y recap (22:22). Nunca en medio del núcleo: rompe el hilo.</li>
+</ul>
+
+<div class="tip">
+  <b>De dónde sale el orden</b>
+  Destilado del funnel del vídeo de Claudia Nicolasa (gancho → CTA temprana → temas numerados → giro a la verdad → CTA final) aplicado al guion-esqueleto de 5 bloques que ya tenías. Lo que NO se copia: ridiculizar a quien asiste, registro de creador, venta en directo.
+</div>
+
+<footer>
+  TWIM Project · Daniel Orozco Abia · PGS CV11515 · uso interno<br>
+  Fuente y método en <b>directo-planilla-orden-temas.md</b> · hermano de funnel: <b>youtube-narrativa-prescripcion-sintoma.md</b>
+</footer>
+
+</main>
+</body>
+</html>
