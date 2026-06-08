@@ -6,7 +6,7 @@
 
 **Documento operativo · 8 jun 2026**
 **Formato:** anti-tutorial a cámara (talking-head enérgico pero sobrio), no vídeo-ensayo.
-**Duración objetivo:** 15-20 min (≈3.000 palabras).
+**Duración objetivo:** 15-20 min (≈2.800 palabras).
 **Pilar:** ansiedad.
 **Embudo:** newsletter «Te escribo» (CTA principal, evergreen). Directo del 14 jun como CTA opcional si se publica antes.
 **Registro:** ironía seca apuntando al mecanismo y a la cultura del «contrólalo / sé fuerte», NUNCA al espectador.
@@ -32,7 +32,11 @@
 
 Son las tres de la madrugada. No ha pasado nada. Nadie te ha llamado con una mala noticia, no hay ninguna emergencia. Y, sin embargo, estás con los ojos abiertos mirando el techo, el cuerpo en tensión, resolviendo por enésima vez una conversación que todavía no ha ocurrido. Mañana estarás agotado y no habrás hecho nada. Solo has estado despierto, defendiéndote de algo que aún no existe.
 
-Si esa escena, o una parecida, la reconoces, este vídeo va de ti.
+O puede que la tuya sea de día. Estás en mitad de algo normal —trabajando, comiendo con gente, viendo una serie— y por debajo, sin parar, hay una voz haciendo inventario de todo lo que podría salir mal. No estás del todo en ningún sitio. Una parte de ti está siempre montando guardia.
+
+O puede que sea esto: coges el móvil sin ningún motivo, lo desbloqueas, lo miras, lo vuelves a dejar. Y treinta segundos después, otra vez. No buscas nada. Solo necesitas hacer algo con las manos mientras por dentro no se está quieto.
+
+Si reconoces alguna de estas escenas, este vídeo va de ti.
 
 Pero lo voy a hacer de una forma rara, así que aguanta un momento. No te voy a dar diez claves para calmarte. Voy a hacer justo lo contrario. Te voy a explicar, con todo detalle, cómo se mantiene una ansiedad encendida para siempre. Cómo conseguir que no se vaya nunca.
 
@@ -46,7 +50,7 @@ Lo primero, que es la base de todo: no estés nunca donde estás.
 
 Si mañana tienes una reunión, no la dejes para mañana. Vívela hoy. Y no una vez: vívela entera, con todos los finales malos posibles. Si has quedado el viernes, empieza el lunes a imaginar todo lo que puede torcerse. Si le escribes a alguien y tarda en contestar, no pienses que estará liado: monta la película completa —le ha sentado mal algo, se está cansando de ti, te va a dejar— y quédate ahí dentro, repasando qué dijiste.
 
-La idea es no pisar nunca el presente. Que tu cabeza viva siempre en una habitación en la que todavía no has entrado.
+La idea es no pisar nunca el presente. Que tu cabeza viva siempre en una habitación en la que todavía no has entrado. Es domingo por la tarde y ya estás sufriendo el lunes. Es agosto y ya se te ha metido septiembre en el cuerpo.
 
 ¿El precio? Que te pierdes tu vida real mientras ensayas una que casi nunca llega. Porque eso que tanto temes, la mayoría de las veces, ni pasa. Y el día que pasa, llegas ya agotado de haberlo sufrido veinte veces por dentro.
 
@@ -156,6 +160,8 @@ Lo que te quita el sueño, pásalo por una sola pregunta: «¿esto está en mi m
 
 Y lo que te callas, cuéntaselo a una persona. Una. Y deja que ese «yo también» haga lo suyo.
 
+Y vas a recaer, que quede claro. Vas a controlar otra vez, vas a evitar otra vez, vas a mandar el mensaje a las dos de la madrugada para que te confirmen que todo está bien. Eso va a pasar muchas veces. La diferencia es que, cada vez que pase, en vez de sumarle culpa a la culpa, vas a poder decir: ah, otra vez el mecanismo. Y eso, repetido durante meses, va aflojando algo que llevaba mucho tiempo apretado.
+
 Nada de esto se hace de golpe, ni con este vídeo, ni a fuerza de voluntad. Se hace despacio, muchas veces, y casi siempre mejor acompañado de alguien que sepa mirarlo contigo. La ansiedad no se gana como una guerra. Se afloja como un nudo: tirando del hilo bueno, y con paciencia.
 
 ### Cierre + CTA
@@ -180,7 +186,7 @@ Nos vemos en el próximo. Cuídate.
 
 | Campo | Valor |
 |---|---|
-| Palabras (cuerpo hablado) | ≈3.000 |
+| Palabras (cuerpo hablado) | ≈2.800 |
 | Duración estimada | 15-20 min según ritmo (holgadamente por encima de 12 aunque se lea rápido) |
 | Registro | A cámara, enérgico pero sobrio. Humor seco, no histriónico. La ironía NUNCA cae sobre el espectador. |
 | Anti-calco (v3) | Reescrito para no replicar la ejecución de Claudia Nicolasa: apertura con escena (no su gag), coste contado distinto en cada paso (sin estribillo «lo único malo es que»), sin «truco extra para este paso», respiro propio, giro a la verdad con palabras propias. Regla en `youtube-narrativa-prescripcion-sintoma.md` §3.1. |
