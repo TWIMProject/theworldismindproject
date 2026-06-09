@@ -251,4 +251,31 @@ Información nueva verificada con cita verbatim · se añade SIN modificar las s
 
 ---
 
-**Última actualización:** 3 jun 2026 · sesión `claude/blissful-lovelace-VPbaj` (Opus 4.8).
+**Última actualización:** 9 jun 2026 · sesión `claude/awesome-hopper-3ejG1` (Opus 4.8).
+
+---
+
+### 9 jun 2026 · sesión `claude/awesome-hopper-3ejG1` (Opus 4.8)
+
+Información nueva verificada con cita verbatim · se añade SIN modificar las secciones previas.
+
+**Instinto editorial anti-plagio · destilar, nunca calcar**
+
+- Verbatim · «EL GUION NO PUEDE TENER LOS PASOS TAN IGUALES COMO CLAUDIA NICOLASA, ES UN CALCO. NO SEAMOS TAN DESCARADOS, POR FAVOR.» (9 jun). Detectó que un guion había copiado la **ejecución y las muletillas** de un creador de referencia, no solo la técnica.
+- Implicación · cuando se destila material de terceros, tomar el **concepto/recurso** (dominio público) pero reescribir con voz y estructura propias · nunca replicar aperturas, estribillos ni guiños del original. Regla persistida en `youtube-narrativa-prescripcion-sintoma.md` §3.1 (anti-calco).
+
+**Exige la longitud que pide · no se conforma con menos**
+
+- Verbatim · «PÁSAME EL GUION LIMPIO PARA LEER Y EXTENSO PARA QUE DURE 10 MINUTOS O MÁS» y «lo veo corto, no creo que llegue a los 12 ni de coña». Implicación · cuando pide duración/extensión, cumplirla de verdad (y verificar el conteo real, sin inflar la cifra · él lo nota).
+
+**Aplica intuición clínica al marketing · y valora que se le confirme una buena decisión**
+
+- Al montar Google Ads, decidió por su cuenta horario **domingos 19-00** «porque es momento de estar en casa, que aparezca la ansiedad y buscar psicólogos en Google». Es una lectura clínica fina aplicada al targeting. Implicación · reconocer y reforzar explícitamente cuando toma una decisión acertada (no solo corregir lo que falla).
+
+**Delegación sostenida · ejecutar + autoauditar**
+
+- «adecua la web si falta algo por calibrar y afinar», «sigue con lo que quedaba pendiente». Implicación · ante estas frases, ejecutar con criterio y cerrar con autoauditoría, sin pedir confirmaciones triviales. Si dice «sigue», asumir continuación natural del trabajo previo.
+
+**Contexto de proyectos nuevo (9 jun)**
+
+- Quiere pasar *Los engranajes de la mente* (base) y el libro nuevo de septiembre a **audiolibro con su voz clonada (ElevenLabs)**, y meter *Los Engranajes* en **Amazon tapa blanda/dura**. Roadmap en `roadmap-libros-audiolibro-y-tapa-2026.md`. Lanzó su **primera campaña de Google Ads** de captación de pacientes (Búsqueda, Valencia) el 9 jun.
