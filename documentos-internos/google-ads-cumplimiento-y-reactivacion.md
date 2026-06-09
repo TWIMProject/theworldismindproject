@@ -4,6 +4,8 @@
 > Cuando Daniel pregunte sobre Google Ads, reactivación de cuenta, políticas de salud mental en publicidad, o verificación de anunciante, abrir este documento.
 > Complementa: política de privacidad (`privacy.html`), aviso legal y cookies.
 
+> **⚠️ CORRECCIÓN 9 jun 2026 (verificada contra la política oficial de Google Ads):** este documento (1 may) afirmaba que un psicólogo necesita la certificación «Healthcare and Medicines» para anunciarse. **Es INCORRECTO para anuncios de Búsqueda de terapia/psicología en España.** Esa certificación es solo para **farmacias online, telemedicina que prescribe medicamentos, tratamiento de adicciones y medicamentos con receta**. Un psicólogo que da terapia (presencial/online, sin medicación) **NO necesita certificación**. El aviso «Health in personalized advertising» que aparece sobre las keywords es **informativo**: limita audiencias de **Display/remarketing**, NO la campaña de **Búsqueda**. Requisitos reales: copy veraz sin promesas de cura, colegiado CV11515 visible, política de privacidad RGPD con consentimiento en formularios. **Tratar como obsoletos** los puntos sobre certificación de salud del TL;DR, §1.1(b), §1.2 y §2.4. Fuente: `support.google.com/adspolicy/answer/176031`.
+
 ---
 
 ## TL;DR

@@ -5,6 +5,8 @@
 > Estado de la cuenta (5 jun 2026, verificado por captura de Daniel) · **activa**, no suspendida. Método de pago verificado y cargado. Saldo 8€. Una campaña previa tipo INTELIGENTE «Tu Mente Merece Bienestar» (5 clics / 832 impr / 0 conv / CTR 0,60%) · **pausar/archivar**.
 >
 > Cumplimiento · este build respeta `google-ads-cumplimiento-y-reactivacion.md` §1 (política salud) y §3 (estructura limpia).
+>
+> **✅ LANZADA 9 jun 2026.** Campaña «Búsqueda · Captación pacientes · Valencia + Online» publicada. Config final: tipo **Búsqueda manual**; redes **solo Búsqueda** (partners y Display OFF); geo **Valencia + radio** (presencia); ES; **presupuesto 8,5 €/día**; puja **Maximizar clics, CPC máx 1,80 €**; **horario lun-vie 8-22, sáb 8-14, dom 19-00** (domingo noche lo añadió Daniel: pico de ansiedad anticipatoria del lunes); grupo **Ansiedad** con 9 keywords (frase+exacta) → landing `/psicologo-ansiedad-valencia/`; RSA «Buena» eficacia; **6 sitelinks + callouts**; nombre **TWIM Project**; **IA Max OFF**. **Sin certificación de salud** (no requerida para terapia en España, ver corrección en `google-ads-cumplimiento-y-reactivacion.md`). **Conversión:** Daniel configuró el resultado como **Llamadas telefónicas** (las llamadas desde anuncios se miden solas, sin tag web). **Aviso de coherencia de embudo:** la landing empuja a **WhatsApp/email**, no a llamada (no hay `tel:` en la landing) → la conversión de llamada NO captura la vía real de contacto. Por eso se añade evento GA4 `generate_lead` en clics de WhatsApp/email de las landings vía `assets/twim-ads-conversion.js`. **Pendiente de Daniel:** marcar `generate_lead` como **evento clave en GA4** e **importarlo a Google Ads** para ver el embudo completo (llamadas + WhatsApp/email).
 
 ---
 
