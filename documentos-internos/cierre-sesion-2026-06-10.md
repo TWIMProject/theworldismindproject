@@ -33,7 +33,8 @@
 
 | PR | Tema | Estado |
 |---|---|---|
-| (esta sesión) | Análisis foco x2 + perfil handoff + cierre | abierto al cierre de turno · auto-merge si CI verde (regla §7) |
+| #321 | Análisis foco x2 + perfil handoff + cierre | **merged** (Gitleaks verde + Netlify preview verde · regla §7 auto-merge) |
+| #322 | Autoauditoría · fidelidad de cierre y sello del perfil | merged |
 
 ## Estado emocional / foco del CEO
 
