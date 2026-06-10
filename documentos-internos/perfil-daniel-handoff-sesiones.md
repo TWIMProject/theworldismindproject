@@ -279,3 +279,20 @@ Información nueva verificada con cita verbatim · se añade SIN modificar las s
 **Contexto de proyectos nuevo (9 jun)**
 
 - Quiere pasar *Los engranajes de la mente* (base) y el libro nuevo de septiembre a **audiolibro con su voz clonada (ElevenLabs)**, y meter *Los Engranajes* en **Amazon tapa blanda/dura**. Roadmap en `roadmap-libros-audiolibro-y-tapa-2026.md`. Lanzó su **primera campaña de Google Ads** de captación de pacientes (Búsqueda, Valencia) el 9 jun.
+
+---
+
+### 10 jun 2026 · sesión `claude/practical-hypatia-3dmulg`
+
+Información nueva verificada con cita verbatim · se añade SIN modificar las secciones previas.
+
+**Primera vez que declara su energía y su rol de padre y marido como restricción explícita de diseño del modelo**
+
+- Verbatim · «Analiza la posibilidad de que aunque sea viable y bueno lo que ya está programado, Daniel por su cantidad de horas de trabajo, agotamiento por su función de padre y de marido puede provocar que no sean tan viables para acometer él psicológicamente por falta de energía.» (10 jun 2026, encargo de análisis del modelo).
+- Es la primera mención explícita de **padre y marido** en el repo, y la primera vez que pide auditar los planes contra su propia energía psicológica, no solo contra viabilidad de negocio.
+- Implicación operativa · al proponer cualquier plan o calendario, dimensionarlo contra **su presupuesto real de horas/energía** (1-2 h/día fuera de consulta), no contra la capacidad de producción de Claude. Señalar proactivamente cuando un plan exceda ese presupuesto, aunque el plan sea bueno. La familia es restricción de diseño, no variable de ajuste.
+
+**Objetivo económico declarado del proyecto**
+
+- Verbatim · «Tenemos el objetivo de aumentar los ingresos que ingresa ya daniel orozco en su consulta privada, x2, creando productos más allá de los pacientes que va tratando en consulta.» (10 jun 2026).
+- Cifra base documentada · consulta ≈ 54.000 €/año (4.500 €/mes) → objetivo · +4.500 €/mes adicionales sostenidos fuera de consulta. Análisis completo y camino propuesto en `analisis-foco-x2-ingresos-2026-06-10.md`.
