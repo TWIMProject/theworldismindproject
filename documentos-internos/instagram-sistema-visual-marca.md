@@ -1,5 +1,7 @@
 # TWIM Project · Sistema visual Instagram + plan de transición
 
+> **⚠️ EVOLUCIÓN 10-jun-2026 · leer antes de producir posts/carruseles.** Los datos de mayo-junio (Carruseles #2-#4 · 94,3 % alcance solo a seguidores · save 0,24 % · confirmación de Daniel con capturas: «los peores en años») refutaron el formato **lámina tipográfica como portada** — en ambas paletas A1 y A2, con y sin foto de fondo. El sistema de este doc sigue vigente en paleta, tipografía, principios y políticas, pero el **empaquetado de portada y la arquitectura del carrusel** se rigen ahora por `instagram-rearme-posts-carruseles-2026-06-10.md` (portada = escena humana en foto + hook concreto en segunda persona · lámina verde en interiores · carrusel mixto de 7). Patrón de evolución de reglas: se persiste, no se borra.
+
 > Documento interno · v1 · 30 abril 2026
 > Autor: Daniel Orozco Abia · Borrador estructurado por Claude
 > Estado: borrador para discusión. Algunas decisiones (§4) dependen de confirmación de Daniel sobre la arquitectura de marcas — marcadas como "PENDIENTE CONFIRMAR".
