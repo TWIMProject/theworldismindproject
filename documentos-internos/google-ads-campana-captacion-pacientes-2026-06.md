@@ -206,3 +206,36 @@ Vía · Google Ads → Objetivos → Conversiones → Nueva acción → Sitio we
 ---
 
 **Pendiente de afinar con datos reales** · tarifas de derivación cerradas, capacidad real de la red, CPL real del nicho en Valencia. Revisar este doc cuando haya 2 semanas de datos.
+
+---
+
+## Seguimiento · 10 jun 2026 (48 h de campaña) · HALLAZGO + datos + plan corrector
+
+> Capturas de Daniel del panel (10 jun). Registrado por Claude.
+
+### Hallazgo principal · la campaña activa es INTELIGENTE (Smart/Express), no la Búsqueda manual diseñada
+
+El panel es `ads.google.com/aw/express/` y los textos hablan de «campañas inteligentes». Nombre visible: «Psicólogos Expertos en Ansiedad». Implicaciones: sin keywords exactas/negativas reales (solo «temas»), Google decide dónde mostrar (incluye Maps), y el copy del anuncio lo generó Google. El presupuesto coincide (8,5 €/día · máx 258 €/mes) y el horario personalizado se mantuvo.
+
+### Datos 9-10 jun
+
+| Métrica | Valor | Lectura |
+|---|---|---|
+| Inversión | 13,19 € | en línea con 8,5 €/día |
+| Impresiones | 5.191 (96 % móvil · 909 a 25-34) | volumen alto por mezcla smart |
+| Clics | 18 → **CPC medio 0,73 €** | bueno (máx era 1,80) |
+| Origen clics | 9 Búsqueda · **9 Maps** · 0 YouTube/Gmail | la mitad va a la ficha GBP |
+| Llamadas / acciones locales / conversiones | **0 / 0 / 0** | sin `generate_lead` como conversión, la campaña optimiza a ciegas |
+| Términos | «psicologos en burjassot» 2 · «erea» 2 (1,16 €) · «emdr valencia» 1 (1,01 €) · «catarroja» 1 · «psicología cerca de mí» 1 | **fuga ~16-24 %**: «erea» es ruido y «emdr» es una técnica que Daniel no ofrece · en smart no hay negativas reales |
+| Tendencia | impresiones 3,8k→1,5k · clics 14→4 | normal en día 2 (calibración) · no alarmante aún |
+
+### Copy del anuncio generado por Google · rompe la voz TWIM
+
+«Contamos con el Respaldo de Psicólogos Expertos, Siempre Dispuestos a Brindarte Apoyo» — genérico, Title Case, voz corporativa. Sustituir (botón Editar) por: **«Psicólogo para ansiedad en Valencia. Daniel Orozco Abia, colegiado CV11515, en consulta desde 2012. Presencial en Valencia u online. Primera respuesta en 48 h.»** (concreto, con credencial, sin promesa vacía).
+
+### Plan corrector (decidido 10 jun)
+
+1. **NO apagar todavía.** 48 h no es muestra. El gate sigue siendo el del doc: revisión 23 jun, CPL objetivo ≤15-20 € por lead real.
+2. **Daniel (5 min, lo más urgente):** marcar `generate_lead` evento clave en GA4 + vincular a Ads. Con 0 conversiones registradas, la smart campaign no puede aprender NI podemos juzgarla.
+3. **Daniel (3 min):** editar el texto del anuncio con el copy de arriba · revisar «temas de palabras clave» y quitar los que no encajen (si EMDR aparece como tema, fuera).
+4. **Decisión del 23 jun:** si con conversiones midiendo el CPL real no cumple, **migrar a la campaña de Búsqueda manual de este doc** (estructura ya definida arriba: keywords frase/exacta, negativas, RSA propia). Una smart campaign nunca dará el control que el plan exige; se le da su ventana de prueba porque ya está pagada y calibrando.
