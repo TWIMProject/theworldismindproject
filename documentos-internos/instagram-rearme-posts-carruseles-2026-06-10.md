@@ -76,3 +76,12 @@ Caption (primera línea buscable): «¿Por qué relees los mensajes mil veces an
 
 ## 5 · Qué NO cambia (para que nadie lo malinterprete)
 Paleta y tipografías TWIM (ahora como acento y en interiores) · anti-clickbait · sin emojis · sin motivacional · sin familia en feed · políticas de reposts y legado · checklist §12 del doc de sistema (se le añade: «¿la portada es una escena concreta en segunda persona?»). La estética premium se mantiene; lo que cambia es **qué se ve primero**.
+
+---
+
+## Actualización 10 jun (tarde) · decisiones de producción del piloto, fijadas con Daniel
+
+1. **Cero marca en las escenas** (slides foto): ni kicker ni web · «rompe la intimidad y pasan a sentir que les vendemos algo» (Daniel). La firma vive en los footers discretos de las láminas y en el cierre.
+2. **Plantillas maestras**: escenas = diseño del slide 2 (sans fina sobre foto a sangre, texto abajo) · láminas = lienzo de la lámina 4 (verde sólido limpio, serif beige, footer pequeño). Todo carrusel nuevo se produce CLONANDO estos diseños en Canva (copy-design), nunca generando desde cero — la generación introduce fuentes/tonos dispares.
+3. **Fotos reales > fotos IA, siempre.** Daniel detectó la foto IA del slide 3 al instante («se ve que está hecha con IA, así que mal»). Circuito validado: buscar en Pexels (licencia libre comercial) → `upload-asset-from-url` a Canva → `update_fill`. La IA solo si no existe la escena en banco — y entonces sin caras frontales iluminadas (es donde se delata).
+4. Captions multicanal del piloto en `contenido-rrss/carrusel-relees-el-mensaje/captions-multicanal.md`.
