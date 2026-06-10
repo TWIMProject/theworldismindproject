@@ -36,6 +36,31 @@
 | #321 | Análisis foco x2 + perfil handoff + cierre | **merged** (Gitleaks verde + Netlify preview verde · regla §7 auto-merge) |
 | #322 | Autoauditoría · fidelidad de cierre y sello del perfil | merged |
 
+## Segunda tanda · mandato de autonomía («qué está en tu mano sin mí»)
+
+Daniel pidió ejecutar de forma autónoma todo lo reparable/accionable sin él (verbatim en perfil §10-jun). Ejecutado vía MCP y verificado:
+
+1. **Google Calendar · Directo movido** · evento `p5f6uqf6fsr0sitslqrciq7hu8` reprogramado de dom 7 jun 19:00 → **dom 14 jun 21:30-22:30 Europe/Madrid**, descripción actualizada (fecha, planilla, nota de reprogramación).
+2. **MailerLite · embudo del Directo reparado y programado**:
+   - **E2 víspera** (id 189196741644388190) · contenido corregido a «Domingo 14, 21:30», renombrada, **programada sáb 13 jun 19:00 CEST** (verificado `scheduled_for 2026-06-13 17:00 UTC`, status `ready`).
+   - **E4 «en 1 hora»** (id 189196809348843111) · contenido corregido a «Hoy, a las 21:30», renombrada, **programada dom 14 jun 20:30 CEST** (verificado `18:30 UTC`, `ready`).
+   - **Idioma de ambas campañas corregido a es-ES** (language_id 8 vía API · el pendiente «idioma E4» queda cerrado; el tool MCP `update_campaign` no soporta idioma, se hizo con `batch_requests` PUT).
+   - **Asunto del email de confirmación de la automation** (187662509833979144, paso 0) corregido a «(dom 14 jun, 21:30)» · cada nueva inscrita recibía «dom 7 jun, 19:00».
+   - **Grupo renombrado** a «Lead · Directo · La voz que te juzga (14 jun)» (mismo ID, automation y Netlify function intactas).
+   - **Incidente cazado en autoauditoría en caliente:** el primer intento con `update_campaign` (MCP) **reseteó el filtro de destinatarios a «todos» (63)**. Detectado en la respuesta y corregido vía API cruda restaurando el grupo (13 destinatarias) antes de programar nada. Lección para futuras sesiones: tras `update_campaign`, verificar SIEMPRE `filter`/`recipients_count` antes de programar.
+3. **Stripe · origen del card-testing identificado** · el precio de 75 € atacado es `price_1Tc5wFFW3OLCwM3HANjYxCq5` del producto `prod_UbE1eMyz4kOIGq` «Libro · Edición especial · Los engranajes de la mente · tapa blanda · papel grueso a color · pieza única» (tienda libros firmados). No se desactiva (venta viva, stock 1) · blindar con Radar/3DS desde panel (Daniel).
+4. **Hook de hitos reparado** (`.claude/scripts/hitos-calendario.js`) · retirados 3 vencidos falsos (métricas Carrusel #3 ya hechas, idioma carta hecho 3 jun, Directo 7 jun movido) · añadidos: E2 13 jun, Directo 14 jun 21:30, revisión CPL Ads 23 jun, agosto sagrado. Probado en local (JSON válido).
+5. **Análisis foco-x2 §5.1 actualizado** con el producto identificado.
+
+**Lo que NO se hizo y por qué** (honestidad de autoauditoría): reembolsos de las 3 compras de prueba — la API no muestra el email del comprador, no puedo distinguir con certeza prueba de compra real · lo hace Daniel en 2 min (él sabe cuáles son suyas). Preheader del email de confirmación de la automation — sigue diciendo «domingo 7 jun, 19:00», el MCP no permite editarlo (solo asunto) · panel: https://dashboard.mailerlite.com/automations/187662509833979144, revisar también el cuerpo. Renombrar la automation «Secuencia · Directo 8 jun» — sin endpoint en el MCP, cosmético. Kit de arranque del primer asociado (red supervisada) — se difiere a que Unió responda, coherente con la regla de no producir docs que esperan decisiones.
+
+## Pendientes manuales para Daniel (actualizados tras la segunda tanda)
+
+1. **Stripe · 10 min** · Radar/3DS (producto identificado arriba) + reembolsar 3 compras de prueba (2×9,90 + 8,90 del 3 jun).
+2. **MailerLite · 2 min** · preheader + cuerpo del email «Estás dentro» de la automation del Directo (fecha vieja en preheader).
+3. **GA4** · marcar `generate_lead` evento clave + importar a Google Ads.
+4. **Tras el Directo del 14** · programar E5 con URL de grabación (Claude puede hacerlo en cuanto exista la URL).
+
 ## Estado emocional / foco del CEO
 
-Daniel abre la sesión pidiendo por primera vez que se audite el plan contra su propia energía («agotamiento por su función de padre y de marido»). Tono sereno, delegación total («Adelante»). Señal importante: el CEO está pidiendo freno selectivo, no más planes. Las próximas sesiones deben honrar esto · antes de proponer trabajo nuevo para Daniel, comprobar el presupuesto de energía del §3 del análisis.
+Daniel abre la sesión pidiendo por primera vez que se audite el plan contra su propia energía («agotamiento por su función de padre y de marido»). Tono sereno, delegación total («Adelante»). En la segunda petición formaliza el mandato de autonomía («Es importante como miembro del equipo que tengas autonomía también»). Señal importante: el CEO está pidiendo freno selectivo y un equipo que ejecute sin él, no más planes. Las próximas sesiones deben honrar esto · antes de proponer trabajo nuevo para Daniel, comprobar el presupuesto de energía del §3 del análisis.
