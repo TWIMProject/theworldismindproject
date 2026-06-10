@@ -251,7 +251,7 @@ Información nueva verificada con cita verbatim · se añade SIN modificar las s
 
 ---
 
-**Última actualización:** 9 jun 2026 · sesión `claude/awesome-hopper-3ejG1` (Opus 4.8).
+**Última actualización:** 10 jun 2026 · sesión `claude/practical-hypatia-3dmulg` (Fable 5).
 
 ---
 
