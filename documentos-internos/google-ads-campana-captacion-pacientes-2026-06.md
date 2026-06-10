@@ -239,3 +239,12 @@ El panel es `ads.google.com/aw/express/` y los textos hablan de «campañas inte
 2. **Daniel (5 min, lo más urgente):** marcar `generate_lead` evento clave en GA4 + vincular a Ads. Con 0 conversiones registradas, la smart campaign no puede aprender NI podemos juzgarla.
 3. **Daniel (3 min):** editar el texto del anuncio con el copy de arriba · revisar «temas de palabras clave» y quitar los que no encajen (si EMDR aparece como tema, fuera).
 4. **Decisión del 23 jun:** si con conversiones midiendo el CPL real no cumple, **migrar a la campaña de Búsqueda manual de este doc** (estructura ya definida arriba: keywords frase/exacta, negativas, RSA propia). Una smart campaign nunca dará el control que el plan exige; se le da su ventana de prueba porque ya está pagada y calibrando.
+
+### Verificación E2E del evento de conversión · 10 jun 2026 · OK
+
+Test real ejecutado por Daniel (móvil → landing ansiedad → botón WhatsApp) y verificado en GA4 Tiempo real por captura: **`generate_lead · 1` registrado** (junto a page_view 3, session_start 2, form_start 1). El circuito botón → gtag → GA4 funciona de punta a punta. «Eventos clave» aún sin datos = esperado (falta la estrella).
+
+Pasos restantes (Daniel):
+1. **Mañana 11 jun** · GA4 → Administrar → Visualización de datos → Eventos → pestaña «Eventos recientes» → estrella en `generate_lead` (Google tarda hasta 24 h en listarlo tras el primer disparo). Aprovechar y poner estrella también a `sign_up`, `cap3_lead_capture` y `directo_reservar_plaza` (leads reales ya con datos).
+2. Después · Google Ads → llave inglesa → Conversiones → «+ Nueva acción de conversión» → Importar → Propiedades GA4 → Web → `generate_lead` → Importar. (Si el panel express no lo muestra: ⋮ → «Cambiar al modo experto», no afecta a la campaña.)
+3. Nota: el test de hoy contará como 1 conversión falsa cuando se importe · irrelevante a efectos de optimización, no requiere acción.
