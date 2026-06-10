@@ -131,3 +131,14 @@ Lo que **no** se congela: DDBEO (grabación 15 jun-28 jul) · Volver a Mí (cale
 ---
 
 *Generado el 10 jun 2026 · sesión `claude/practical-hypatia-3dmulg` · fuentes: repo completo al 10 jun + Stripe MCP + MailerLite MCP en vivo. Sustituye a ningún documento: ordena los existentes bajo el criterio de energía como recurso escaso. Si Daniel valida §3 y §4, persistir la regla 1-2-3 en CLAUDE.md y actualizar los planes afectados (roadmap libros, calendario H2).*
+
+---
+
+## Apéndice · Correcciones de Daniel tras la lectura (10 jun, misma tarde)
+
+Daniel leyó el análisis y corrigió cuatro puntos · el repo iba por detrás de la realidad. Quedan registrados para que el análisis no se cite con datos viejos:
+
+1. **Reembolsos hechos.** Las 3 compras de prueba (29,70 €) ya están reembolsadas. El contador de ingresos de producto queda limpio en 0 € reales — punto de partida correcto del §1.1.
+2. **Podcast E5 y E6 ya publicados** (hace ~4 semanas y ~13 días respectivamente). La fila «Podcast E5 · CONGELADO» del §4 y la mención del §2 a «grabar E5 · 14 días atascado» quedan **anuladas**: ese frente ya estaba cerrado y el repo no lo reflejaba. La congelación del §4 aplica solo al vídeo YouTube de ansiedad pendiente de grabar (si sigue pendiente).
+3. **Red supervisada · estado real:** Google Ads ya invierte en recibir llamadas (campaña 9 jun) · Unió de Periodistes sin cerrar, falta su feedback final · Sergio a la espera de derivaciones. El motor A del §1.3 está encendido en fase de arranque, no en idea.
+4. **«Libros que trabajan solos»** · Daniel pregunta el mecanismo («¿cómo van a trabajar solos para ser vistos y comprados?»). Respuesta concreta en el plan x10 (`plan-x10-lista-email-2026-06-10.md`) y en el resumen de sesión: trabajan solos **solo si** los 4 circuitos están montados (Cap III → automation D0/D3/D7 ya activa · email post-compra pidiendo reseña Amazon · superficies fijas con un solo CTA · SEO de la landing del libro) **y** el motor x10 les pasa tráfico. Sin tráfico, los circuitos convierten poco · por eso la lista precede al libro (§1.2).
