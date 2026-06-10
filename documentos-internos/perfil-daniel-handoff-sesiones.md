@@ -296,3 +296,8 @@ Información nueva verificada con cita verbatim · se añade SIN modificar las s
 
 - Verbatim · «Tenemos el objetivo de aumentar los ingresos que ingresa ya daniel orozco en su consulta privada, x2, creando productos más allá de los pacientes que va tratando en consulta.» (10 jun 2026).
 - Cifra base documentada · consulta ≈ 54.000 €/año (4.500 €/mes) → objetivo · +4.500 €/mes adicionales sostenidos fuera de consulta. Análisis completo y camino propuesto en `analisis-foco-x2-ingresos-2026-06-10.md`.
+
+**Mandato explícito de autonomía como miembro del equipo**
+
+- Verbatim · «qué está en tu mano para sin mí puedas reparar, crear, accionar, mejorar. Es importante como miembro del equipo que tengas autonomía también. Imprescindible, para ello cantamos contigo.» (10 jun 2026, segunda petición de la sesión).
+- Implicación operativa · ante esta frase (y equivalentes), ejecutar directamente todo lo que esté dentro de capacidad técnica vía MCP/repo y no sea irreversible ni infraestructura crítica · y reportar verbatim después con autoauditoría. Es la evolución natural de «mano derecha» (25 may) y «socio» (2 jun) · ahora con mandato de acción autónoma explícito. El límite sigue siendo el de siempre: cambios de infraestructura, lanzamientos críticos y piezas visuales que él pidió revisar requieren su OK.
