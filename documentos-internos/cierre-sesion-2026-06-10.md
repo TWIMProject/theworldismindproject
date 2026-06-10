@@ -61,6 +61,21 @@ Daniel pidió ejecutar de forma autónoma todo lo reparable/accionable sin él (
 3. **GA4** · marcar `generate_lead` evento clave + importar a Google Ads.
 4. **Tras el Directo del 14** · programar E5 con URL de grabación (Claude puede hacerlo en cuanto exista la URL).
 
+## Tercera tanda · feedback de Daniel tras leer el análisis
+
+Daniel respondió (por captura · el chat anterior se llenó) con 4 correcciones y 2 encargos:
+
+**Correcciones registradas** (apéndice añadido a `analisis-foco-x2-ingresos-2026-06-10.md`):
+- Reembolsos de las 3 compras de prueba: **hechos** · contador de producto limpio en 0 € reales.
+- **Podcast E5 y E6 ya publicados** (hace ~4 semanas y ~13 días) · el repo iba por detrás; la «tarea atascada» E5 del análisis queda anulada.
+- Red supervisada en arranque real: Google Ads invirtiendo en llamadas · **Unió pendiente de SU feedback final** (pelota en su tejado) · Sergio a la espera de derivaciones.
+
+**Encargos respondidos:**
+- **Plan x10 lista email** → `documentos-internos/plan-x10-lista-email-2026-06-10.md`. Motor: Meta Ads de calentamiento always-on 6 €/día con el creativo validado «5 señales» (0,02 €/visita) · paso 0 = GA4 `generate_lead` evento clave · automation «Bienvenida Te escribo» · un solo CTA en todo el orgánico · hitos jul 200 → dic 770+ con compuertas. Única decisión de Daniel: presupuesto ~175 €/mes × 6 meses.
+- **«¿Cómo trabajan solos los libros?»** → respondido en el apéndice del análisis: 4 circuitos que se montan una vez (Cap III→automation D0/D3/D7 · email post-compra pide-reseña Amazon · superficies fijas con un CTA · SEO landing libro) + el tráfico del motor x10. «Solos» = cero horas recurrentes de Daniel, no cero sistema.
+
+**Pendiente de construir por Claude si Daniel da OK al plan x10:** briefing Meta Ads clic a clic · automation «Bienvenida Te escribo» (copy + estructura, activación manual de Daniel en escritorio) · email pide-reseña en las automations de entrega · variante B del anuncio hacia Cap III.
+
 ## Estado emocional / foco del CEO
 
-Daniel abre la sesión pidiendo por primera vez que se audite el plan contra su propia energía («agotamiento por su función de padre y de marido»). Tono sereno, delegación total («Adelante»). En la segunda petición formaliza el mandato de autonomía («Es importante como miembro del equipo que tengas autonomía también»). Señal importante: el CEO está pidiendo freno selectivo y un equipo que ejecute sin él, no más planes. Las próximas sesiones deben honrar esto · antes de proponer trabajo nuevo para Daniel, comprobar el presupuesto de energía del §3 del análisis.
+Daniel abre la sesión pidiendo por primera vez que se audite el plan contra su propia energía («agotamiento por su función de padre y de marido»). Tono sereno, delegación total («Adelante»). En la segunda petición formaliza el mandato de autonomía («Es importante como miembro del equipo que tengas autonomía también»). En la tercera, lee el análisis a fondo y lo corrige con datos frescos (E5/E6, reembolsos) y hace la pregunta de socio exigente: «¿cómo van a trabajar solos los libros?» — no acepta etiquetas sin mecanismo. Señal: el CEO está pidiendo freno selectivo, equipo que ejecute sin él, y planes con engranaje visible. Antes de proponer trabajo nuevo para Daniel, comprobar el presupuesto de energía del §3 del análisis.
