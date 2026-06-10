@@ -76,6 +76,18 @@ Daniel respondió (por captura · el chat anterior se llenó) con 4 correcciones
 
 **Pendiente de construir por Claude si Daniel da OK al plan x10:** briefing Meta Ads clic a clic · automation «Bienvenida Te escribo» (copy + estructura, activación manual de Daniel en escritorio) · email pide-reseña en las automations de entrega · variante B del anuncio hacia Cap III.
 
+## Cuarta tanda · regla de constancia newsletter + ejecución del x10
+
+Daniel (en CAPS): la newsletter debe mandar cartas SIEMPRE aunque él no lo diga, con constancia y automatización. Y «ADELANTE CON EL X10». Ejecutado:
+
+1. **Carta #3 «Necesitas que te miren para saber que vales» PROGRAMADA** · mar **16 jun 19:00 CEST** (verificado `scheduled_for 2026-06-16 17:00 UTC`, status `ready`, es-ES, toda la lista activa) · id campaña 189878430782719669 · **nota:** retirado del envío el bloque final del directo del 7 jun (pasado) respecto al HTML del repo; CTA único = lista de espera Volver a Mí (vigente).
+2. **Regla nueva persistida en `CLAUDE.md`** («Constancia de la newsletter») + sistema completo en `newsletter-sistema-constancia-2026-06-10.md` · ritmo quincenal interno, Claude redacta desde material propio, ventana de veto 48 h, calendario de cartas H2 (Carta 4 «cansancio» 30 jun · Carta 5 «saberlo» 14 jul · Carta 6 «autoexigencia» 28 jul). Evoluciona —no borra— la línea roja de no-cadencia (promesa pública intacta). Registrado también en perfil.
+3. **Automation «Post-compra · Engranajes digital · reseña Amazon (D+7)» CREADA** · id 189878466140701979 · delay 7 días + email pide-reseña (copy dentro, voz Te escribo) · **INACTIVA** · Daniel: panel → confirmar diseño del email → Activar (2-3 min).
+4. **Briefing Meta Ads x10 clic a clic** · `briefing-meta-ads-x10-clic-a-clic.md` · campaña Tráfico 6 €/día, anuncio A control («5 señales», validado) + anuncio B (Cap III), UTMs, compuertas. Requisito previo: `generate_lead` evento clave en GA4.
+5. **Hallazgo que simplifica el plan x10:** la «Bienvenida Te escribo» ya existe de facto · automation «Web - Newsletter Home» (Carta 1 D0 + Carta 2 D+10, open 75 %/61 %) + secuencias por lead magnet. No se duplica nada.
+
+**Pendientes de Daniel (actualizado):** publicar campaña Meta Ads con el briefing (30-40 min) · GA4 `generate_lead` evento clave (5 min) · activar automation reseña (2-3 min) · preheader automation Directo (2 min) · Stripe Radar/3DS (10 min). La Carta 3 sale sola el 16 si no la veta antes (ventana de veto activa desde este aviso).
+
 ## Estado emocional / foco del CEO
 
 Daniel abre la sesión pidiendo por primera vez que se audite el plan contra su propia energía («agotamiento por su función de padre y de marido»). Tono sereno, delegación total («Adelante»). En la segunda petición formaliza el mandato de autonomía («Es importante como miembro del equipo que tengas autonomía también»). En la tercera, lee el análisis a fondo y lo corrige con datos frescos (E5/E6, reembolsos) y hace la pregunta de socio exigente: «¿cómo van a trabajar solos los libros?» — no acepta etiquetas sin mecanismo. Señal: el CEO está pidiendo freno selectivo, equipo que ejecute sin él, y planes con engranaje visible. Antes de proponer trabajo nuevo para Daniel, comprobar el presupuesto de energía del §3 del análisis.

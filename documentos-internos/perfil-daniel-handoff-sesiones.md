@@ -301,3 +301,9 @@ Información nueva verificada con cita verbatim · se añade SIN modificar las s
 
 - Verbatim · «qué está en tu mano para sin mí puedas reparar, crear, accionar, mejorar. Es importante como miembro del equipo que tengas autonomía también. Imprescindible, para ello cantamos contigo.» (10 jun 2026, segunda petición de la sesión).
 - Implicación operativa · ante esta frase (y equivalentes), ejecutar directamente todo lo que esté dentro de capacidad técnica vía MCP/repo y no sea irreversible ni infraestructura crítica · y reportar verbatim después con autoauditoría. Es la evolución natural de «mano derecha» (25 may) y «socio» (2 jun) · ahora con mandato de acción autónoma explícito. El límite sigue siendo el de siempre: cambios de infraestructura, lanzamientos críticos y piezas visuales que él pidió revisar requieren su OK.
+
+**Evolución de la línea roja de no-cadencia en newsletter (10 jun, tercera petición, en CAPS)**
+
+- Verbatim · «LA NEWSLETTER TIENE QUE SEGUIR SIEMPRE MANDANDO CARTAS A LOS SUSCRIPTORES AUNQUE YO NO TE LO DIGA. TIENE QUE HABER UNA CONSTANCIA EN LA CREACIÓN DE CONTENIDO VALIDO Y COHERENTE Y UNA AUTOMATIZACIÓN.»
+- Esto **evoluciona** la línea roja del §4 («Frecuencia obligada en newsletter · su modelo es "cuando tengo algo que escribirte" · no prometer cadencia») sin borrarla: la promesa **pública** sigue siendo sin cadencia; lo que Daniel exige ahora es **garantía interna de ritmo** (≈quincenal) con redacción delegada a Claude + ventana de veto de 48 h. Sistema persistido en `CLAUDE.md` (regla nueva) y `newsletter-sistema-constancia-2026-06-10.md`. Aprobó también el x10 en el mismo mensaje («ADELANTE CON EL X10»).
+- Patrón confirmado dos veces (26 may compuerta Ads · 10 jun cadencia): cuando Daniel evoluciona una regla, se persiste la evolución en todos los docs afectados citando la regla original, sin borrar nada.
