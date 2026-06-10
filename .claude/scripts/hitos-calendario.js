@@ -32,6 +32,15 @@ const todayUTC = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
 const isoToday = new Date(todayUTC).toISOString().slice(0, 10);
 const MS_PER_DAY = 86400000;
 
+// Hito recurrente (idea #7, aprobada por Daniel el 10-jun-2026):
+// cada lunes · dashboard semanal de métricas para Daniel + triaje de inbox.
+// Se calcula el próximo lunes (o hoy si es lunes) y se inyecta como hito.
+const dow = new Date(todayUTC).getUTCDay(); // 0=domingo · 1=lunes
+const daysToMonday = (8 - dow) % 7; // 0 si hoy es lunes
+const mondayISO = new Date(todayUTC + daysToMonday * MS_PER_DAY).toISOString().slice(0, 10);
+items.push([mondayISO, "LUNES · generar dashboard semanal TWIM (panel HTML, regla §5) + triaje inbox con borradores Gmail y enviarlo a Daniel con el enlace · idea #7 · si la sesión arranca en lunes, hacerlo SIN esperar instrucción"]);
+items.sort((a, b) => a[0].localeCompare(b[0]));
+
 const lines = [`[recordatorio hitos calendario TWIM al ${isoToday}]`];
 for (const [fecha, desc] of items) {
   const [y, m, d] = fecha.split("-").map(Number);

@@ -354,4 +354,24 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- ========== ARCHIVO DE CARTAS TE ESCRIBO (JUNIO 2026) ========== -->
+  <url>
+    <loc>https://twimproject.com/newsletter/cartas/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://twimproject.com/newsletter/cartas/carta-01-esto-es-lo-que-vas-a-recibir.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://twimproject.com/newsletter/cartas/carta-02-la-voz-que-te-juzga.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

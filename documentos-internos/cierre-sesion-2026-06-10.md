@@ -92,6 +92,16 @@ Daniel (en CAPS): la newsletter debe mandar cartas SIEMPRE aunque él no lo diga
 
 Daniel pidió ideas que no hubiera tenido en cuenta, con % accionable por Claude. Entregadas 7 en `ideas-nuevas-no-contempladas-2026-06-10.md` (filtradas contra el repo y contra decisiones vetadas): AEO/citación por IA (Claude 95 %) · archivo público de cartas (95 %) · guiones→insights SEO (90 %) · cross-sell checkout Stripe (80 %) · directo→lead magnet permanente (90 %) · carta derivación médicos Valencia (85 %, sept) · triaje inbox + dashboard lunes (70-100 %). Programación reestructurada: todo lo de jun-jul cae en Claude, Daniel solo graba DDBEO. Pendiente: OK de Daniel a cuáles arrancar.
 
+## Sexta tanda · OK de Daniel a las ideas + ejecución
+
+Daniel: automation pide-reseña **ACTIVADA** · #4 cross-sell **ya estaba probado** (las compras de prueba del 3 jun eran ese test — corrección registrada, tarea retirada) · adelante #1, #2, #6 («tenerlo listo») y #7 (da acceso, pide aviso del lunes con enlace).
+
+**Ejecutado:**
+1. **#1 AEO** · `llms.txt` desplegado en raíz (mapa para crawlers de IA con autoría CV11515) + estrategia por fases en `aeo-citacion-ia-estrategia-2026-06.md` (F2: schema FAQPage en landings + párrafos citables, semana del 16 · F3: medición mensual Ahrefs Brand Radar).
+2. **#2 Archivo público de cartas** · `/newsletter/cartas/` creado con index + Carta 1 + Carta 2 (cumplen el delay de ~4 semanas) · paleta TWIM, schema Article, CTA de suscripción · enlazado desde `/newsletter/` y añadido al sitemap (3 URLs). La Carta 3 se publicará aquí ~mediados de julio.
+3. **#6 Carta médicos LISTA** · `carta-derivacion-medicos-valencia-2026-06.md` · carta redactada + protocolo de envío + cumplimiento deontológico (sin contraprestación, retorno solo con consentimiento). Faltan de Daniel: teléfono y dirección de consulta (no constan en el repo, no se inventan), validar texto, listado y firmar/enviar (~2 h, sept o cuando quiera).
+4. **#7 Lunes** · hito recurrente dinámico añadido al hook (`hitos-calendario.js` calcula el próximo lunes y lo inyecta): toda sesión que arranque en lunes genera el dashboard semanal + triaje de inbox con borradores Gmail y se lo envía a Daniel con enlace, sin esperar instrucción. Probado en local. **Limitación honesta dicha a Daniel:** sin sesión abierta no me despierto solo · él abre sesión el lunes (una palabra basta) y el hito hace el resto.
+
 ## Estado emocional / foco del CEO
 
 Daniel abre la sesión pidiendo por primera vez que se audite el plan contra su propia energía («agotamiento por su función de padre y de marido»). Tono sereno, delegación total («Adelante»). En la segunda petición formaliza el mandato de autonomía («Es importante como miembro del equipo que tengas autonomía también»). En la tercera, lee el análisis a fondo y lo corrige con datos frescos (E5/E6, reembolsos) y hace la pregunta de socio exigente: «¿cómo van a trabajar solos los libros?» — no acepta etiquetas sin mecanismo. Señal: el CEO está pidiendo freno selectivo, equipo que ejecute sin él, y planes con engranaje visible. Antes de proponer trabajo nuevo para Daniel, comprobar el presupuesto de energía del §3 del análisis.
