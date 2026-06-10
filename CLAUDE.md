@@ -230,6 +230,16 @@ Especificación reproducible:
 
 ---
 
+## Regla inviolable · Constancia de la newsletter «Te escribo»
+
+> Regla declarada por Daniel el 10 jun 2026, verbatim: «LA NEWSLETTER TIENE QUE SEGUIR SIEMPRE MANDANDO CARTAS A LOS SUSCRIPTORES AUNQUE YO NO TE LO DIGA. TIENE QUE HABER UNA CONSTANCIA EN LA CREACIÓN DE CONTENIDO VALIDO Y COHERENTE Y UNA AUTOMATIZACIÓN.» Sistema completo en `documentos-internos/newsletter-sistema-constancia-2026-06-10.md`.
+
+- **Garantía interna: una carta cada ~2 semanas (martes 19:00).** Claude la redacta destilando material propio del repo (nunca desde memoria genérica), la programa en MailerLite vía API (idioma es-ES · verificar destinatarios tras crear) y avisa a Daniel con **48 h de ventana de veto**. Si Daniel no dice nada, sale.
+- **La promesa pública NO cambia:** al suscriptor no se le promete cadencia («te escribo cuando algo merece tu tiempo»). La constancia es compromiso interno del equipo, no claim de marketing. Esto evoluciona —no borra— la línea roja previa de no-cadencia (patrón del 26 may: las reglas se evolucionan con persistencia, no se borran).
+- **Toda sesión nueva comprueba al arrancar:** ¿hay carta programada en los próximos 15 días? Si no, preparar y programar la siguiente del calendario del doc **sin esperar instrucción**.
+
+---
+
 ## Reglas al compartir URLs del proyecto
 
 - **Siempre con trailing slash en URLs de directorio.** Las páginas servidas desde un directorio con `index.html` (`/newsletter/`, `/insights/`, `/talleres/`, `/soluciones/`, `/libro-engranajes-mente/`, `/psicologo-ansiedad-valencia/`) deben compartirse **siempre** con la barra final. La versión sin slash puede dar problemas según el navegador y la caché. Convención canónica: terminar siempre en `/`.
