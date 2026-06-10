@@ -88,6 +88,10 @@ Daniel (en CAPS): la newsletter debe mandar cartas SIEMPRE aunque él no lo diga
 
 **Pendientes de Daniel (actualizado):** publicar campaña Meta Ads con el briefing (30-40 min) · GA4 `generate_lead` evento clave (5 min) · activar automation reseña (2-3 min) · preheader automation Directo (2 min) · Stripe Radar/3DS (10 min). La Carta 3 sale sola el 16 si no la veta antes (ventana de veto activa desde este aviso).
 
+## Quinta tanda · ideas nuevas no contempladas
+
+Daniel pidió ideas que no hubiera tenido en cuenta, con % accionable por Claude. Entregadas 7 en `ideas-nuevas-no-contempladas-2026-06-10.md` (filtradas contra el repo y contra decisiones vetadas): AEO/citación por IA (Claude 95 %) · archivo público de cartas (95 %) · guiones→insights SEO (90 %) · cross-sell checkout Stripe (80 %) · directo→lead magnet permanente (90 %) · carta derivación médicos Valencia (85 %, sept) · triaje inbox + dashboard lunes (70-100 %). Programación reestructurada: todo lo de jun-jul cae en Claude, Daniel solo graba DDBEO. Pendiente: OK de Daniel a cuáles arrancar.
+
 ## Estado emocional / foco del CEO
 
 Daniel abre la sesión pidiendo por primera vez que se audite el plan contra su propia energía («agotamiento por su función de padre y de marido»). Tono sereno, delegación total («Adelante»). En la segunda petición formaliza el mandato de autonomía («Es importante como miembro del equipo que tengas autonomía también»). En la tercera, lee el análisis a fondo y lo corrige con datos frescos (E5/E6, reembolsos) y hace la pregunta de socio exigente: «¿cómo van a trabajar solos los libros?» — no acepta etiquetas sin mecanismo. Señal: el CEO está pidiendo freno selectivo, equipo que ejecute sin él, y planes con engranaje visible. Antes de proponer trabajo nuevo para Daniel, comprobar el presupuesto de energía del §3 del análisis.
