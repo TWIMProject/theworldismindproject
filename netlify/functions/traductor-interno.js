@@ -101,15 +101,18 @@ function respuesta(statusCode, body, origin) {
       "Access-Control-Allow-Origin": origin,
       "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
+      "Vary": "Origin",
       "Cache-Control": "no-store",
     },
-    body: JSON.stringify(body),
+    // Un 204 debe ir sin cuerpo (preflight CORS).
+    body: statusCode === 204 ? "" : JSON.stringify(body),
   };
 }
 
 exports.handler = async (event) => {
-  const origin = ALLOWED_ORIGINS.has(event.headers.origin)
-    ? event.headers.origin
+  const origenPeticion = event.headers?.origin || event.headers?.Origin || "";
+  const origin = ALLOWED_ORIGINS.has(origenPeticion)
+    ? origenPeticion
     : "https://twimproject.com";
 
   if (event.httpMethod === "OPTIONS") {
@@ -121,7 +124,7 @@ exports.handler = async (event) => {
 
   // Un Origin server-to-server es falsificable, pero exigirlo corta el abuso
   // ingenuo (curl directo, scrapers) sin afectar al uso real desde la web.
-  if (!ALLOWED_ORIGINS.has(event.headers.origin)) {
+  if (!ALLOWED_ORIGINS.has(origenPeticion)) {
     return respuesta(403, { ok: false, code: "origen" }, origin);
   }
 
