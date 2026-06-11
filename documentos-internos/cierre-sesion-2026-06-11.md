@@ -36,6 +36,16 @@ Antes de tocar nada se leyó: `index.html` completo, `plan-x10-lista-email-2026-
 2. **«Sin secuencia agresiva» en emails — auditado por capturas del builder (11 jun):** el único email VIVO con la frase es el de la automation DDBEO. Es builder HTML y el conector MCP no puede editarlo → **pendiente manual de Daniel (1 línea, ~2 min)**: <https://dashboard.mailerlite.com/automations/188015669577516322> → step de email → «Te lo regalo en PDF, sin secuencia agresiva:» pasa a «Te lo regalo en PDF · solo el capítulo:». DDO y los 3 emails de Volver a Mí están limpios (verificado en captura). El README fuente (`email-templates/automations-listas-lead-21-may/README.md`) ya está corregido con el criterio nuevo. Posts ya publicados de X/LinkedIn no se tocan (archivo histórico).
 3. **Validación visual de la home**: el cambio respeta paleta y sobriedad, pero Daniel no lo ha visto renderizado. Si algo no le encaja al verlo, se revierte la sección `#orientacion` con un solo commit (es un bloque autocontenido).
 
+## Tercera pasada (tarde) · OK a la home + empuje del directo + diapositivas
+
+Instrucciones verbatim de Daniel (tarde): «Adelante con la Home nueva.» · «Alimentar alcance para captar para el directo del domingo porque además no sabemos si la gente se conectará o se a apuntado para recibir la grabación.» · «También necesito estructurada una secuencia de "diapositivas" que me acompañen mientras hablo en el directo».
+
+- **Home nueva: VALIDADA por Daniel.** El pendiente de validación visual de los PRs #334 queda cerrado.
+- **Hallazgo de captación:** la promo del 3 jun fue a toda la lista anunciando el 7 jun; el aviso del cambio al 14 solo llegó a las 13 inscritas → la lista general no conocía la fecha nueva. Corregido con campaña `189996292943906778` programada vie 12 jun 19:00 CEST a los 64 activos (⚠️ Daniel: idioma → Español en panel). Copy doble-válido (inscritas/no inscritas) y con el argumento de estar en vivo (preguntar por chat sin cámara).
+- **Kit RRSS última semana** en `contenido-rrss/directo-14-jun-kit-ultima-semana.md` (captions jue–dom + checklist canales + quote-tweet X pendiente).
+- **Diapositivas del directo** en `documentos-internos/directo-14-jun-2026-diapositivas.html` (17 slides, navegación por flechas, mapeadas a la planilla de bloques). Daniel comparte la ventana en Meet: mitad él, mitad slides.
+- **Sobre la duda asistencia vs. grabación:** no se encuesta; se argumenta el vivo en todo el copy de la semana y el domingo se mide asistentes reales vs. registrados (queda para el post-mortem del directo).
+
 ## Estado emocional CEO al cierre
 
 Sin señal directa en esta sesión (instrucción operativa breve, en mayúsculas parciales — modo ejecutivo habitual). Sin cambios para el perfil handoff: el patrón «trae análisis externo → pide validación contra criterio propio → pide ejecución» ya está documentado (4 jun).

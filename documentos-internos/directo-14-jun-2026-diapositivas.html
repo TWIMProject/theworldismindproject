@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La voz que te juzga · diapositivas del directo · 14 jun 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow+Condensed:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --crema:#FDFCFA; --verde:#173D30; --verde-medio:#265C4B; --beige:#C2A78B; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{background:var(--crema);color:var(--verde);font-family:'Barlow Condensed',sans-serif;overflow:hidden;}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6vh 7vw;}
+  .slide.activa{display:flex;}
+  .eyebrow{font-size:clamp(.8rem,1.6vw,1.05rem);letter-spacing:.3em;text-transform:uppercase;color:var(--beige);font-weight:600;margin-bottom:2.2vh;}
+  h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,6.5vw,4.6rem);line-height:1.12;max-width:24ch;}
+  h1 em{font-style:italic;color:var(--verde-medio);}
+  .sub{font-size:clamp(1.05rem,2.3vw,1.6rem);color:var(--verde-medio);font-weight:300;margin-top:2.6vh;max-width:46ch;line-height:1.45;}
+  .frase{font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(1.5rem,3.6vw,2.6rem);color:var(--verde-medio);margin-top:3vh;line-height:1.3;}
+  .lista{margin-top:3vh;font-size:clamp(1.15rem,2.6vw,1.8rem);font-weight:300;line-height:2;color:var(--verde);}
+  .lista strong{font-weight:500;}
+  .seccion-num{font-family:'Instrument Serif',serif;font-size:clamp(1rem,2vw,1.4rem);color:var(--beige);margin-bottom:1.2vh;letter-spacing:.08em;}
+  .oscura{background:var(--verde);}
+  .oscura h1,.oscura .lista{color:var(--crema);}
+  .oscura .sub,.oscura .frase{color:rgba(253,252,250,.75);}
+  .oscura .eyebrow{color:var(--beige);}
+  .url{display:inline-block;margin-top:3.2vh;font-size:clamp(1.2rem,2.6vw,1.9rem);font-weight:500;color:var(--verde);border:2px solid var(--beige);border-radius:10px;padding:.5em 1.1em;letter-spacing:.02em;}
+  .oscura .url{color:var(--crema);}
+  .contador{position:fixed;bottom:14px;right:18px;font-size:.85rem;color:rgba(23,61,48,.4);letter-spacing:.08em;z-index:5;}
+  .oscura ~ .contador{color:rgba(253,252,250,.5);}
+  .progreso{position:fixed;top:0;left:0;height:4px;background:var(--beige);width:0;z-index:5;transition:width .25s ease;}
+  .marca{position:fixed;bottom:14px;left:18px;font-size:.85rem;color:rgba(23,61,48,.4);letter-spacing:.18em;text-transform:uppercase;z-index:5;}
+</style>
+</head>
+<body>
+
+<div class="progreso" id="progreso"></div>
+<div class="marca">TWIM Project</div>
+<div class="contador" id="contador"></div>
+
+<!-- SLIDES-A · portada y apertura (bloques 0-1 de la planilla) -->
+
+<section class="slide oscura">
+  <p class="eyebrow">TWIM Project · en directo</p>
+  <h1>La voz que te juzga</h1>
+  <p class="sub">Domingo 14 de junio · 21:30<br>Daniel Orozco Abia · Psicólogo General Sanitario · CV11515</p>
+</section>
+
+<section class="slide">
+  <h1>Hay una voz que no elegiste<br>y que habla <em>como si fuera tú</em>.</h1>
+</section>
+
+<section class="slide">
+  <p class="eyebrow">Qué vamos a hacer esta hora</p>
+  <div class="lista">
+    <p>Esto <strong>no</strong> es terapia.</p>
+    <p>Esto <strong>no</strong> es motivación.</p>
+    <p>Vamos a <strong>leer un mecanismo en voz alta</strong>.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="eyebrow">Antes de empezar</p>
+  <h1>Al final os dejo el Capítulo III del libro, gratis.</h1>
+  <p class="sub">Donde todo esto está escrito y ampliado. El enlace va al chat al cierre.</p>
+</section>
+
+<!-- SLIDES-B · el mecanismo + mitad (bloques 2 y retención) -->
+
+<section class="slide oscura">
+  <p class="seccion-num">1 de 3</p>
+  <h1>¿De dónde sale el juez?</h1>
+</section>
+
+<section class="slide">
+  <h1>Lo que se le dijo a una niña<br>se vuelve la voz con la que<br>se habla de adulta.</h1>
+</section>
+
+<section class="slide">
+  <p class="eyebrow">Suena así de pequeña</p>
+  <div class="lista">
+    <p>«No llores.»</p>
+    <p>«No molestes.»</p>
+    <p>«Con esa nota, ¿estás contenta?»</p>
+  </div>
+  <p class="frase">Y así de adulta: «No es suficiente.»</p>
+</section>
+
+<section class="slide">
+  <h1>El <em>superyó</em>: la voz interna que te juzga.</h1>
+  <p class="sub">No nació contigo. Se instaló. Y como lleva ahí toda la vida, suena a verdad.</p>
+</section>
+
+<section class="slide oscura">
+  <p class="eyebrow">Vamos por la mitad</p>
+  <h1>¿La reconoces?</h1>
+  <p class="sub">Decídmelo en el chat. Sin cámara, sin micrófono: solo escribir.</p>
+</section>
+
+<!-- SLIDES-C · por qué no se calla + intervención + cierre (bloques 3-5) -->
+
+<section class="slide oscura">
+  <p class="seccion-num">2 de 3</p>
+  <h1>¿Por qué no se calla con razones?</h1>
+</section>
+
+<section class="slide">
+  <h1>Comprenderlo no es lo mismo<br>que desactivarlo.</h1>
+  <p class="sub">Puedes saber perfectamente de dónde viene esa voz… y seguir creyéndotela a las once de la noche.</p>
+</section>
+
+<section class="slide">
+  <h1>Cuando te tapas con frases positivas,<br>el juez <em>sube el volumen</em>.</h1>
+</section>
+
+<section class="slide oscura">
+  <p class="seccion-num">3 de 3</p>
+  <h1>Qué empieza a debilitarla</h1>
+</section>
+
+<section class="slide">
+  <h1>No discutas la frase.<br>Nombra <em>quién habla</em>.</h1>
+  <p class="frase">«Ah. Otra vez el juez.»</p>
+</section>
+
+<section class="slide">
+  <h1>Ponerla entre comillas<br>antes de creértela.</h1>
+  <p class="sub">No es positividad. Es dejar de firmar con tu nombre lo que dictó otro.</p>
+</section>
+
+<section class="slide oscura">
+  <p class="eyebrow">En una frase</p>
+  <h1>Esa voz se instaló.<br>No se discute: <em>se nombra</em>.</h1>
+</section>
+
+<section class="slide">
+  <p class="eyebrow">Para seguir desde aquí</p>
+  <h1>Capítulo III · gratis</h1>
+  <p class="sub">Todo esto, escrito y ampliado. Y si quieres que te escriba cada tanto: la newsletter «Te escribo», en la misma página.</p>
+  <span class="url">twimproject.com/libro/capitulo-3/</span>
+</section>
+
+<section class="slide oscura">
+  <h1>Gracias.</h1>
+  <p class="sub">Esto se ha grabado: a quienes os registrasteis os llega por email.<br>twimproject.com</p>
+</section>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  const contador=document.getElementById('contador');
+  const progreso=document.getElementById('progreso');
+  function pinta(){
+    slides.forEach((s,k)=>s.classList.toggle('activa',k===i));
+    contador.textContent=(i+1)+' / '+slides.length;
+    progreso.style.width=((i+1)/slides.length*100)+'%';
+    document.body.style.background=slides[i].classList.contains('oscura')?'#173D30':'#FDFCFA';
+    contador.style.color=slides[i].classList.contains('oscura')?'rgba(253,252,250,.5)':'rgba(23,61,48,.4)';
+    document.querySelector('.marca').style.color=contador.style.color;
+  }
+  function ir(d){ i=Math.min(Math.max(i+d,0),slides.length-1); pinta(); }
+  document.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(e.key)) {e.preventDefault();ir(1);}
+    if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)) {e.preventDefault();ir(-1);}
+    if(e.key==='Home'){i=0;pinta();}
+    if(e.key==='End'){i=slides.length-1;pinta();}
+  });
+  document.addEventListener('click',e=>{ ir(e.clientX>window.innerWidth/3?1:-1); });
+  pinta();
+</script>
+</body>
+</html>
