@@ -49,3 +49,26 @@ Instrucciones verbatim de Daniel (tarde): «Adelante con la Home nueva.» · «A
 ## Estado emocional CEO al cierre
 
 Sin señal directa en esta sesión (instrucción operativa breve, en mayúsculas parciales — modo ejecutivo habitual). Sin cambios para el perfil handoff: el patrón «trae análisis externo → pide validación contra criterio propio → pide ejecución» ya está documentado (4 jun).
+
+## Cuarta pasada (noche) · App «Di lo que quieres decir» · PR #338
+
+Encargo de Daniel (spec completa de producto): app web que actúa como «traductor interno» para preparar conversaciones importantes — separa el mensaje nuclear del ruido defensivo. Plan de arquitectura presentado en 10 líneas y aprobado por Daniel antes de escribir código.
+
+- **Construido y subido en PR #338** (rama `claude/twimproject-communication-app-i508h2`): `/di-lo-que-quieres-decir/` (HTML/CSS/JS vanilla, sin build, 5 pasos: volcado en crudo → destinatario+objetivo → detección de 4 tipos de ruido resaltados con explicación → reformulación editable antes/después → mensaje limpio + copiar + 3 frases ancla) + función `netlify/functions/traductor-interno.js` (proxy sin estado a la API de Anthropic; `ANTHROPIC_API_KEY` por env var; modelo configurable, por defecto `claude-haiku-4-5-20251001`; salida JSON con esquema estricto vía `output_config`).
+- **Privacidad innegociable cumplida:** todo en memoria de sesión, sin localStorage, sin servidor; el texto solo sale hacia Anthropic al pulsar «Analizar». Modo degradado por reglas regex en español si no hay clave/falla la API, con aviso honesto.
+- **Verificado:** `node --check` OK; sitemap actualizado y validado; motor de reglas detecta los 4 tipos de ruido en el caso de aceptación («nunca me escuchas… paso de hablar contigo»); deploy preview de Netlify verde con Lighthouse A11y 97 / BP 100 / SEO 100.
+- **⚠️ PR #338 = cambio de infraestructura** (añade fichero a `netlify/functions/`, aunque es aditivo y no toca netlify.toml ni redirects). El sandbox no puede abrir el preview en navegador (Netlify devuelve 403 a peticiones automatizadas) → **NO se auto-mergea**: Daniel debe probar el preview (app + home + /newsletter/ + un insight) y dar OK explícito.
+
+### Pendientes de Daniel para activar la app
+
+1. Probar el deploy preview: <https://deploy-preview-338--lighthearted-kitten-8aba94.netlify.app/di-lo-que-quieres-decir/>
+2. Crear `ANTHROPIC_API_KEY` en Netlify → Environment variables (scope Functions). Sin ella la app funciona en modo básico (usable, avisa con honestidad). Opcional: `TRADUCTOR_INTERNO_MODEL` para cambiar modelo sin tocar código.
+3. Dar OK al merge en el PR o en chat. La sesión queda suscrita al PR y mergeará tras el OK.
+4. Decisión de producto pendiente (no bloquea): la app está en sitemap pero NO enlazada desde la home ni desde ninguna página — decidir cuándo y cómo se lanza (¿pieza de captación IG? ¿lead magnet?).
+
+### Autoauditoría de la pasada
+
+- Archivos nuevos: 4 en `di-lo-que-quieres-decir/` + 1 función. Enlazados desde sitemap ✔ · sintaxis verificada ✔ · sin huérfanos salvo el no-enlace desde la home, que es intencional y queda reportado arriba.
+- Sin secretos en el repo ✔ (la clave va por env var, aún no creada — verificación vía MCP Netlify imposible: el conector no expone lectura de env vars).
+- PR abierto refleja el último commit de la rama ✔ · cuerpo del PR actualizado con estado de verificación real (preview no abierto desde sandbox, dicho explícitamente).
+- Reglas de sesión: carta programada <15 días ya verificada en pasadas anteriores ✔ · perfil handoff sin cambios (sesión técnica, sin señal nueva de Daniel).

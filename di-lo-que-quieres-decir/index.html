@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Di lo que quieres decir · Prepara una conversación importante</title>
+  <meta name="description" content="Convierte lo que sientes en palabras claras antes de una conversación importante. Separa tu mensaje real del reproche y la defensa. Nada se guarda: cuando cierras la página, desaparece.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="cabecera">
+    <p class="cabecera-marca">The World Is Mind Project</p>
+    <h1 class="cabecera-titulo">Di lo que quieres decir</h1>
+    <p class="cabecera-sub">Antes de esa conversación que llevas días dándole vueltas, separa lo que de verdad quieres decir del ruido que lo tapa.</p>
+    <p class="aviso-privacidad" role="note">Lo que escribes aquí no se almacena. Cuando cierres esta página, desaparece.</p>
+  </header>
+
+  <nav class="pasos-indicador" aria-label="Progreso">
+    <ol id="indicador-lista">
+      <li data-paso="1" class="activo"><span>1</span> Suéltalo</li>
+      <li data-paso="2"><span>2</span> A quién</li>
+      <li data-paso="3"><span>3</span> El ruido</li>
+      <li data-paso="4"><span>4</span> Tu mensaje</li>
+      <li data-paso="5"><span>5</span> Ensayo</li>
+    </ol>
+  </nav>
+
+  <main id="contenido">
+
+    <!-- PASO 1 · Volcado en crudo -->
+    <section class="paso" id="paso-1" aria-labelledby="titulo-paso-1">
+      <h2 id="titulo-paso-1">Escribe lo que te sale, sin filtro</h2>
+      <p class="paso-ayuda">Nadie lo va a leer. Suelta el enfado, la pena, el reproche, todo. Después lo ordenamos juntos.</p>
+      <label class="oculto-visual" for="texto-crudo">Tu texto en crudo</label>
+      <textarea id="texto-crudo" rows="10" placeholder="Por ejemplo: «Estoy harto, nunca me escuchas, siempre estás con el móvil...»" autocomplete="off" spellcheck="true"></textarea>
+      <p class="error-campo" id="error-paso-1" role="alert" hidden>Escribe algo primero, aunque sea una frase.</p>
+      <div class="acciones">
+        <button type="button" class="btn btn-principal" id="btn-seguir-1">Seguir</button>
+      </div>
+    </section>
+
+    <!-- PASO 2 · ¿A quién y para qué? -->
+    <section class="paso" id="paso-2" aria-labelledby="titulo-paso-2" hidden>
+      <h2 id="titulo-paso-2">¿A quién y para qué?</h2>
+      <p class="paso-ayuda">Saber qué quieres que pase te protege: cuando la conversación se desvíe, sabrás a dónde volver.</p>
+      <div class="campo">
+        <label for="destinatario">¿A quién va dirigido?</label>
+        <select id="destinatario">
+          <option value="" selected disabled>Elige una opción</option>
+          <option value="mi pareja">Mi pareja</option>
+          <option value="mi madre o mi padre">Mi madre / mi padre</option>
+          <option value="mi hijo o mi hija">Mi hijo / mi hija</option>
+          <option value="mi jefe o mi jefa">Mi jefe / mi jefa</option>
+          <option value="un amigo o una amiga">Un amigo / una amiga</option>
+          <option value="otro">Otra persona</option>
+        </select>
+        <label class="oculto-visual" for="destinatario-otro">Especifica a quién</label>
+        <input type="text" id="destinatario-otro" placeholder="¿Quién?" hidden autocomplete="off">
+      </div>
+      <div class="campo">
+        <label for="objetivo">¿Qué quieres que pase después de esta conversación?</label>
+        <select id="objetivo">
+          <option value="" selected disabled>Elige una opción</option>
+          <option value="que me entienda">Que me entienda</option>
+          <option value="que cambie algo concreto">Que cambie algo concreto</option>
+          <option value="que nos reconciliemos">Que nos reconciliemos</option>
+          <option value="poner un límite">Poner un límite</option>
+          <option value="pedir algo">Pedir algo</option>
+          <option value="otro">Otra cosa</option>
+        </select>
+        <label class="oculto-visual" for="objetivo-otro">Especifica qué quieres que pase</label>
+        <input type="text" id="objetivo-otro" placeholder="¿Qué quieres que pase?" hidden autocomplete="off">
+      </div>
+      <p class="error-campo" id="error-paso-2" role="alert" hidden>Responde a las dos preguntas para seguir.</p>
+      <div class="acciones">
+        <button type="button" class="btn btn-secundario" data-volver="1">Volver</button>
+        <button type="button" class="btn btn-principal" id="btn-analizar">Analizar mi texto</button>
+      </div>
+    </section>
+
+    <!-- PASO 3 · Detección de ruido -->
+    <section class="paso" id="paso-3" aria-labelledby="titulo-paso-3" hidden>
+      <h2 id="titulo-paso-3">Esto es lo que tapa tu mensaje</h2>
+      <div id="estado-analisis" aria-live="polite">
+        <div class="cargando" id="cargando" hidden>
+          <p>Leyendo tu texto con calma…</p>
+        </div>
+        <div class="error-analisis" id="error-analisis" hidden>
+          <p id="error-analisis-texto">No hemos podido analizar tu texto ahora mismo. No es culpa tuya: inténtalo de nuevo en unos segundos.</p>
+          <button type="button" class="btn btn-secundario" id="btn-reintentar">Reintentar</button>
+        </div>
+        <p class="aviso-modo-basico" id="aviso-modo-basico" hidden>Ahora mismo el análisis completo no está disponible, así que estás viendo una versión básica, hecha con reglas sencillas. Detecta menos matices, pero te sirve para empezar.</p>
+      </div>
+      <div id="resultado-analisis" hidden>
+        <p class="paso-ayuda" id="resumen-ruido"></p>
+        <div class="leyenda" aria-hidden="true">
+          <span class="leyenda-item ruido-reproche">Reproche acumulado</span>
+          <span class="leyenda-item ruido-ataque">Ataque a la persona</span>
+          <span class="leyenda-item ruido-defensa">Anticipación defensiva</span>
+          <span class="leyenda-item ruido-mensaje_escondido">Mensaje escondido</span>
+        </div>
+        <div class="texto-resaltado" id="texto-resaltado"></div>
+        <ul class="explicaciones" id="lista-explicaciones"></ul>
+      </div>
+      <div class="acciones">
+        <button type="button" class="btn btn-secundario" data-volver="2">Volver</button>
+        <button type="button" class="btn btn-principal" id="btn-seguir-3" hidden>Ver mi mensaje limpio</button>
+      </div>
+    </section>
+
+    <!-- PASO 4 · Reformulación guiada -->
+    <section class="paso" id="paso-4" aria-labelledby="titulo-paso-4" hidden>
+      <h2 id="titulo-paso-4">Tu mensaje, sin el ruido</h2>
+      <p class="paso-ayuda">Misma intención, mismas ganas, pero dicho de forma que el otro pueda escucharlo. Edítalo hasta que suene a ti.</p>
+      <div class="comparativa">
+        <div class="columna">
+          <h3>Antes</h3>
+          <div class="texto-antes" id="texto-antes"></div>
+        </div>
+        <div class="columna">
+          <h3>Después</h3>
+          <label class="oculto-visual" for="texto-despues">Tu mensaje reformulado, editable</label>
+          <textarea id="texto-despues" rows="8"></textarea>
+        </div>
+      </div>
+      <div class="acciones">
+        <button type="button" class="btn btn-secundario" data-volver="3">Volver</button>
+        <button type="button" class="btn btn-principal" id="btn-seguir-4">Seguir</button>
+      </div>
+    </section>
+
+    <!-- PASO 5 · Ensayo y cierre -->
+    <section class="paso" id="paso-5" aria-labelledby="titulo-paso-5" hidden>
+      <h2 id="titulo-paso-5">Listo para decirlo</h2>
+      <div class="mensaje-final" id="mensaje-final" tabindex="-1"></div>
+      <div class="acciones acciones-copiar">
+        <button type="button" class="btn btn-principal" id="btn-copiar">Copiar al portapapeles</button>
+        <span class="copiado-ok" id="copiado-ok" role="status" hidden>Copiado</span>
+      </div>
+      <section class="seccion-ancla" aria-labelledby="titulo-ancla">
+        <h3 id="titulo-ancla">Si la conversación se tuerce</h3>
+        <p class="paso-ayuda">Tres frases para volver al tema cuando el otro desvíe o tú te actives. Léelas un par de veces antes de hablar.</p>
+        <ul class="frases-ancla" id="frases-ancla"></ul>
+      </section>
+      <div class="acciones">
+        <button type="button" class="btn btn-secundario" data-volver="4">Volver</button>
+        <button type="button" class="btn btn-secundario" id="btn-empezar">Empezar de nuevo</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p class="pie-aviso">Esta herramienta no sustituye un proceso terapéutico.</p>
+    <p>Una herramienta de <a href="https://twimproject.com" rel="noopener">The World Is Mind Project — twimproject.com</a></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
