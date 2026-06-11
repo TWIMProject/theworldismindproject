@@ -16,6 +16,13 @@
 >
 > Histórico de incidencias del Directo (no borrar) · primero (25 may) corrección de fecha original «8 jun» (lunes) → «7 jun» (domingo). Segundo (7 jun) · posponer 7 jun 19:00 → 14 jun 21:30 por conciliación familiar.
 
+> **Actualización 11 jun 2026 (última semana) · instrucción verbatim de Daniel: «Alimentar alcance para captar para el directo del domingo».**
+>
+> - **Campaña de invitación a TODA la lista** (64 activos) creada y programada vía MCP · ID `189996292943906778` · **vie 12 jun 19:00 CEST** · la lista general no conocía la fecha nueva (la promo del 3 jun decía 7 jun; el aviso del cambio fue solo a las 13 inscritas). Copy válido para inscritas y no inscritas · argumenta el directo EN VIVO (preguntar por chat sin cámara) · ⚠️ pendiente 1 clic de Daniel: idioma → Español en panel antes del viernes.
+> - **Kit RRSS última semana**: `contenido-rrss/directo-14-jun-kit-ultima-semana.md` (captions jue–dom, checklist de canales, quote-tweet X pendiente desde el 7 jun).
+> - **Diapositivas para el directo**: `documentos-internos/directo-14-jun-2026-diapositivas.html` · 17 slides mapeadas a la planilla (`directo-planilla-orden-temas.md` §3) · compartir ventana del navegador en Meet, avanzar con flechas.
+> - E2 (sáb 19:00) y E4 (dom 20:30) verificadas `ready` con idioma es-ES y filtro al grupo correcto (auditoría de la mañana).
+
 > Creado el 16 may 2026, sesión `claude/improve-proposal-quality-pq3d9`. Kit completo del directo único de captación. Fundamentado en `plan-captacion-verano-2026.md` (Fase 1), `palancas-venta-libro-engranajes-15-may-2026.md`, CEO doc §6.2/§8 y `mailerlite-automation-lectores-engranajes-cap3.md` §4.
 
 ---
