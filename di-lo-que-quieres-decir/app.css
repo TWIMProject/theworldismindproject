@@ -1,0 +1,311 @@
+/* Di lo que quieres decir · The World Is Mind Project
+   Mobile-first. Paleta y tipografía fijadas por especificación. */
+
+:root {
+  --green: #1f5a49;
+  --green-dark: #174a3c;
+  --green-deep: #11352b;
+  --green-light: #2c6c59;
+  --beige: #c7a587;
+  --beige-dark: #aa8665;
+  --beige-light: #decab6;
+  --sand: #f7f4f0;
+  --sand-dark: #ede8e2;
+  --cream: #fdfcfa;
+  --text: #2b2420;
+  --text-soft: #6b6058;
+  --text-muted: #9a8e84;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--cream);
+}
+
+h1, h2, h3 {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+  color: var(--green-deep);
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+a { color: var(--green); }
+a:hover { color: var(--green-dark); }
+
+.oculto-visual {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Cabecera */
+.cabecera {
+  background: var(--green-deep);
+  color: var(--cream);
+  padding: 2.5rem 1.25rem 2rem;
+  text-align: center;
+}
+.cabecera-marca {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--beige-light);
+  margin: 0 0 0.75rem;
+}
+.cabecera-titulo {
+  color: var(--cream);
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+.cabecera-sub {
+  max-width: 36rem;
+  margin: 0.5rem auto 1.25rem;
+  color: var(--sand-dark);
+}
+.aviso-privacidad {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--cream);
+  background: var(--green-dark);
+  border: 1px solid var(--green-light);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  margin: 0;
+}
+
+/* Indicador de pasos */
+.pasos-indicador { background: var(--sand); border-bottom: 1px solid var(--sand-dark); }
+.pasos-indicador ol {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0.75rem 0.5rem;
+  max-width: 44rem;
+  overflow-x: auto;
+}
+.pasos-indicador li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+}
+.pasos-indicador li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem; height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--beige);
+  background: var(--cream);
+  color: var(--text-soft);
+  font-weight: 500;
+}
+.pasos-indicador li.activo { color: var(--green-deep); font-weight: 500; }
+.pasos-indicador li.activo span {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--cream);
+}
+.pasos-indicador li.hecho span {
+  background: var(--beige-light);
+  border-color: var(--beige);
+  color: var(--green-deep);
+}
+
+/* Pasos */
+main { max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+.paso h2 { font-size: clamp(1.5rem, 4.5vw, 2rem); }
+.paso-ayuda { color: var(--text-soft); margin-top: 0; }
+
+textarea, select, input[type="text"] {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--beige);
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.9rem;
+  margin-top: 0.35rem;
+}
+textarea { resize: vertical; min-height: 9rem; }
+textarea:focus, select:focus, input:focus, button:focus-visible {
+  outline: 3px solid var(--green-light);
+  outline-offset: 1px;
+}
+
+.campo { margin-bottom: 1.5rem; }
+.campo label { font-weight: 500; color: var(--green-deep); }
+.campo input[type="text"] { margin-top: 0.5rem; }
+
+.error-campo { color: #8a3322; font-size: 0.9rem; }
+
+/* Botones */
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+.btn {
+  font: inherit;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease;
+}
+.btn-principal { background: var(--green); color: var(--cream); }
+.btn-principal:hover { background: var(--green-dark); }
+.btn-secundario {
+  background: var(--cream);
+  color: var(--green-dark);
+  border-color: var(--beige);
+}
+.btn-secundario:hover { background: var(--sand); }
+.btn[disabled] { opacity: 0.6; cursor: wait; }
+
+/* Paso 3: análisis */
+.cargando p { color: var(--text-soft); font-style: italic; }
+.error-analisis {
+  background: var(--sand);
+  border: 1px solid var(--beige);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+}
+.aviso-modo-basico {
+  background: var(--sand);
+  border-left: 4px solid var(--beige-dark);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+.leyenda { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.leyenda-item {
+  font-size: 0.78rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  color: var(--green-deep);
+}
+
+/* Colores por tipo de ruido: 4 tintes derivados de la paleta,
+   distinguibles también por el borde inferior (no solo por color). */
+.ruido-reproche { background: var(--beige-light); border-bottom: 3px solid var(--beige-dark); }
+.ruido-ataque { background: #e9d3c8; border-bottom: 3px double #a05a3c; }
+.ruido-defensa { background: var(--sand-dark); border-bottom: 3px dotted var(--text-muted); }
+.ruido-mensaje_escondido { background: #d8e4de; border-bottom: 3px dashed var(--green-light); }
+
+.texto-resaltado {
+  background: #fff;
+  border: 1px solid var(--sand-dark);
+  border-radius: 0.5rem;
+  padding: 1.1rem 1.25rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.texto-resaltado mark {
+  color: inherit;
+  padding: 0.05rem 0.15rem;
+  border-radius: 0.2rem;
+}
+
+.explicaciones { list-style: none; padding: 0; margin: 1.25rem 0 0; }
+.explicaciones li {
+  background: var(--sand);
+  border-radius: 0.5rem;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+.explicaciones .fragmento-cita {
+  display: block;
+  font-style: italic;
+  color: var(--green-deep);
+  margin-bottom: 0.25rem;
+}
+.explicaciones .tipo-etiqueta {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+}
+
+/* Paso 4: comparativa */
+.comparativa { display: grid; gap: 1.25rem; margin-top: 1rem; }
+.comparativa h3 { font-size: 1.1rem; color: var(--text-soft); font-family: "DM Sans", sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; }
+.texto-antes {
+  background: var(--sand);
+  border-radius: 0.5rem;
+  padding: 1rem 1.1rem;
+  color: var(--text-soft);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.95rem;
+}
+@media (min-width: 40rem) {
+  .comparativa { grid-template-columns: 1fr 1fr; }
+}
+
+/* Paso 5 */
+.mensaje-final {
+  background: #fff;
+  border: 1px solid var(--beige);
+  border-left: 5px solid var(--green);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.4rem;
+  font-size: 1.05rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.copiado-ok { color: var(--green); font-weight: 500; }
+.seccion-ancla { margin-top: 2.25rem; }
+.seccion-ancla h3 { font-size: 1.35rem; }
+.frases-ancla { list-style: none; padding: 0; margin: 0; }
+.frases-ancla li {
+  background: var(--sand);
+  border-left: 4px solid var(--beige);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  font-style: italic;
+  color: var(--green-deep);
+}
+
+/* Pie */
+.pie {
+  background: var(--sand);
+  border-top: 1px solid var(--sand-dark);
+  text-align: center;
+  padding: 1.75rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-soft);
+}
+.pie-aviso { color: var(--text-muted); margin: 0 0 0.5rem; }
+.pie p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
