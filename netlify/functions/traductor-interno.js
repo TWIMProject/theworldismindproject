@@ -18,6 +18,14 @@ const ALLOWED_ORIGINS = new Set([
   "http://localhost:3000",
 ]);
 
+// Los deploy previews del propio sitio también son orígenes legítimos
+// (necesarios para verificar PRs antes de mergear).
+const RE_DEPLOY_PREVIEW = /^https:\/\/deploy-preview-\d+--lighthearted-kitten-8aba94\.netlify\.app$/;
+
+function origenPermitido(origen) {
+  return ALLOWED_ORIGINS.has(origen) || RE_DEPLOY_PREVIEW.test(origen);
+}
+
 // El usuario nunca ve esta lógica interna: hecho observable + emoción en
 // primera persona + necesidad real + petición concreta. El prompt evita
 // jerga clínica en el output por regla editorial TWIM.
@@ -111,7 +119,7 @@ function respuesta(statusCode, body, origin) {
 
 exports.handler = async (event) => {
   const origenPeticion = event.headers?.origin || event.headers?.Origin || "";
-  const origin = ALLOWED_ORIGINS.has(origenPeticion)
+  const origin = origenPermitido(origenPeticion)
     ? origenPeticion
     : "https://twimproject.com";
 
@@ -124,7 +132,7 @@ exports.handler = async (event) => {
 
   // Un Origin server-to-server es falsificable, pero exigirlo corta el abuso
   // ingenuo (curl directo, scrapers) sin afectar al uso real desde la web.
-  if (!ALLOWED_ORIGINS.has(origenPeticion)) {
+  if (!origenPermitido(origenPeticion)) {
     return respuesta(403, { ok: false, code: "origen" }, origin);
   }
 
