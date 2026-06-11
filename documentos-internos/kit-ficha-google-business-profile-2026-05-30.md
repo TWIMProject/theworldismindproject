@@ -229,7 +229,7 @@ No se copian tal cual: se entregan como chispa y **cada persona escribe la suya*
 |---|---|---|---|---|---|
 | 1 | ~mar 2026 | Novedades | TDAH / adolescencia («Tu hijo no es vago ni tonto. Tiene TDAH…») | (no registrado) | Publicado (detectado en captura 11 jun) |
 | 2 | ~mar 2026 | Novedades | Malestar laboral / vacío en el trabajo («…siento que me vacío por dentro») | (no registrado) | Publicado (detectado en captura 11 jun) |
-| 3 | 11 jun 2026 | Novedades | Dependencia emocional | `psicologo-dependencia-emocional-valencia.html` | Preparado · pendiente de que Daniel lo pegue en el panel |
+| 3 | 11 jun 2026 | Novedades | Dependencia emocional | `psicologo-dependencia-emocional-valencia.html` | Publicado 11 jun por Daniel · en revisión de Google (estado «Pendiente» antes de mostrarse, es lo normal en GBP) |
 
 **Criterio del post 3.** Los dos previos cubren adolescencia y malestar laboral; el pilar central del público TWIM (ansiedad / dependencia emocional) estaba ausente en la ficha. Se elige dependencia emocional por ser «la landing categórica más fuerte» (`metricas-gbp` §5.3), núcleo del público objetivo y siembra del lanzamiento de otoño (libro «Tu valor no está en su mirada» + taller «Volver a Mí»). **Siguiente pilar sugerido (post 4): ansiedad** (`psicologo-ansiedad-valencia/`, la más trabajada, kit §3).
 
