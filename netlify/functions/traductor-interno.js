@@ -65,6 +65,34 @@ const ESQUEMA_SALIDA = {
   additionalProperties: false,
 };
 
+// Mitigación de abuso: la función es públicamente invocable y CORS solo
+// protege dentro del navegador. Tres barreras de mejor esfuerzo antes de
+// gastar en la API: (1) se rechazan peticiones sin Origin de la allowlist,
+// (2) límite por IP y (3) tope global, ambos en memoria de la instancia
+// warm (cada instancia cuenta por separado: acota el coste, no lo elimina).
+// Si la app gana tracción pública, subir a Turnstile o rate limiting de
+// Netlify — decisión de Daniel, documentada en el PR #338.
+const VENTANA_MS = 60_000;
+const LIMITE_POR_IP = 6;
+const LIMITE_GLOBAL = 60;
+const cubosPorIP = new Map();
+let cuboGlobal = { inicio: 0, n: 0 };
+
+function superaLimite(ip) {
+  const ahora = Date.now();
+  if (ahora - cuboGlobal.inicio > VENTANA_MS) cuboGlobal = { inicio: ahora, n: 0 };
+  cuboGlobal.n++;
+  if (cuboGlobal.n > LIMITE_GLOBAL) return true;
+  if (cubosPorIP.size > 5000) cubosPorIP.clear();
+  const cubo = cubosPorIP.get(ip);
+  if (!cubo || ahora - cubo.inicio > VENTANA_MS) {
+    cubosPorIP.set(ip, { inicio: ahora, n: 1 });
+    return false;
+  }
+  cubo.n++;
+  return cubo.n > LIMITE_POR_IP;
+}
+
 function respuesta(statusCode, body, origin) {
   return {
     statusCode,
@@ -89,6 +117,20 @@ exports.handler = async (event) => {
   }
   if (event.httpMethod !== "POST") {
     return respuesta(405, { ok: false, code: "metodo" }, origin);
+  }
+
+  // Un Origin server-to-server es falsificable, pero exigirlo corta el abuso
+  // ingenuo (curl directo, scrapers) sin afectar al uso real desde la web.
+  if (!ALLOWED_ORIGINS.has(event.headers.origin)) {
+    return respuesta(403, { ok: false, code: "origen" }, origin);
+  }
+
+  const ip =
+    event.headers["x-nf-client-connection-ip"] ||
+    (event.headers["x-forwarded-for"] || "").split(",")[0].trim() ||
+    "desconocida";
+  if (superaLimite(ip)) {
+    return respuesta(429, { ok: false, code: "sobrecarga", reintentable: true }, origin);
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
