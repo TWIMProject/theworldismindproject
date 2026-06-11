@@ -72,3 +72,5 @@ Encargo de Daniel (spec completa de producto): app web que actúa como «traduct
 - Sin secretos en el repo ✔ (la clave va por env var, aún no creada — verificación vía MCP Netlify imposible: el conector no expone lectura de env vars).
 - PR abierto refleja el último commit de la rama ✔ · cuerpo del PR actualizado con estado de verificación real (preview no abierto desde sandbox, dicho explícitamente).
 - Reglas de sesión: carta programada <15 días ya verificada en pasadas anteriores ✔ · perfil handoff sin cambios (sesión técnica, sin señal nueva de Daniel).
+
+**Actualización (misma noche):** Daniel dio OK explícito («Ok») tras la batería de verificación → **PR #338 MERGEADO** a main (`a483cc3`). Review de Copilot atendida antes del merge (mitigación de abuso de la función: Origin allowlist + rate limit por IP/global; robustez CORS; previews permitidos como origen). Producción verificada tras el deploy. Queda solo el paso 2 de los pendientes: crear `ANTHROPIC_API_KEY` en Netlify para activar el modo IA (mientras tanto la app vive en modo básico honesto). El paso 4 (decisión de lanzamiento/enlazado desde la home) sigue abierto.
