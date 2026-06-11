@@ -212,6 +212,15 @@ No se copian tal cual: se entregan como chispa y **cada persona escribe la suya*
 
 ---
 
+## 10 · Trazabilidad
+
+- Generado: 30 may 2026, sesión `claude/confident-ptolemy-e6Kpx`.
+- Fuentes: `SEO_ANALISIS_2026-03-20.md` §6-7, `metricas-gbp-daniel-orozco-q1-2026.md` §5, NAP de `index.html`, landings de servicio existentes.
+- Encaje con reglas TWIM: criterio dopamina-comercial (verdad, no mentira), identidad editorial (sin emojis, descriptivo), método (anclado en repo).
+- Próxima revisión: cierre Q3 en `metricas-gbp-daniel-orozco-q3-2026.md` (31 ago 2026).
+
+---
+
 ## 11 · Registro de posts publicados (log vivo · regla simétrica de método)
 
 > Cada post que se publique en la ficha se anota aquí el mismo día (tema, landing, fecha). Así la siguiente sesión no repite pilar y sabe qué falta. Orden cronológico. Este log nace el 11 jun 2026: los dos primeros se reconstruyen desde una captura del panel «Tus publicaciones» (texto parcial, fecha aproximada).
@@ -237,12 +246,3 @@ No se copian tal cual: se entregan como chispa y **cada persona escribe la suya*
 - **Botón:** «Más información» → `https://twimproject.com/psicologo-dependencia-emocional-valencia.html` (es un `.html`, va **sin** barra final).
 - **Imagen sugerida:** retrato de consulta (`daniel-orozco-consulta.jpg` o `daniel-orozco-sillon.jpg`).
 - **Reglas aplicadas:** concreción para empatizar (5 jun · estómago, «tarda en responder», «hasta la próxima vez»), «mirada del otro» en vez de «validación» (23 may), anti-coaching («ni a fuerza de voluntad ni de quererte más»), sin promesa de cura, sin emojis.
-
----
-
-## 10 · Trazabilidad
-
-- Generado: 30 may 2026, sesión `claude/confident-ptolemy-e6Kpx`.
-- Fuentes: `SEO_ANALISIS_2026-03-20.md` §6-7, `metricas-gbp-daniel-orozco-q1-2026.md` §5, NAP de `index.html`, landings de servicio existentes.
-- Encaje con reglas TWIM: criterio dopamina-comercial (verdad, no mentira), identidad editorial (sin emojis, descriptivo), método (anclado en repo).
-- Próxima revisión: cierre Q3 en `metricas-gbp-daniel-orozco-q3-2026.md` (31 ago 2026).
