@@ -212,6 +212,34 @@ No se copian tal cual: se entregan como chispa y **cada persona escribe la suya*
 
 ---
 
+## 11 · Registro de posts publicados (log vivo · regla simétrica de método)
+
+> Cada post que se publique en la ficha se anota aquí el mismo día (tema, landing, fecha). Así la siguiente sesión no repite pilar y sabe qué falta. Orden cronológico. Este log nace el 11 jun 2026: los dos primeros se reconstruyen desde una captura del panel «Tus publicaciones» (texto parcial, fecha aproximada).
+
+| # | Fecha | Tipo | Pilar / tema | Enlace (botón) | Estado |
+|---|---|---|---|---|---|
+| 1 | ~mar 2026 | Novedades | TDAH / adolescencia («Tu hijo no es vago ni tonto. Tiene TDAH…») | (no registrado) | Publicado (detectado en captura 11 jun) |
+| 2 | ~mar 2026 | Novedades | Malestar laboral / vacío en el trabajo («…siento que me vacío por dentro») | (no registrado) | Publicado (detectado en captura 11 jun) |
+| 3 | 11 jun 2026 | Novedades | Dependencia emocional | `psicologo-dependencia-emocional-valencia.html` | Preparado · pendiente de que Daniel lo pegue en el panel |
+
+**Criterio del post 3.** Los dos previos cubren adolescencia y malestar laboral; el pilar central del público TWIM (ansiedad / dependencia emocional) estaba ausente en la ficha. Se elige dependencia emocional por ser «la landing categórica más fuerte» (`metricas-gbp` §5.3), núcleo del público objetivo y siembra del lanzamiento de otoño (libro «Tu valor no está en su mirada» + taller «Volver a Mí»). **Siguiente pilar sugerido (post 4): ansiedad** (`psicologo-ansiedad-valencia/`, la más trabajada, kit §3).
+
+**Copy del post 3 (Novedades · ≤1.500 car · pegar tal cual):**
+
+> Se te encoge el estómago cuando tarda en responder. Repasas la última conversación buscando si dijiste algo mal. Y cuando por fin lee «todo bien», respiras. Hasta la próxima vez.
+>
+> No es que ames demasiado. Es que tu calma depende de la mirada del otro, y eso agota.
+>
+> A esto solemos llamarlo dependencia emocional, y no se trabaja a fuerza de voluntad ni de «quererte más». Se entiende: de dónde viene ese automatismo y para qué se enciende. Cuando lo ves, deja de mandarte.
+>
+> Acompaño a personas adultas a soltar ese peso. En consulta en Valencia y online para toda España.
+
+- **Botón:** «Más información» → `https://twimproject.com/psicologo-dependencia-emocional-valencia.html` (es un `.html`, va **sin** barra final).
+- **Imagen sugerida:** retrato de consulta (`daniel-orozco-consulta.jpg` o `daniel-orozco-sillon.jpg`).
+- **Reglas aplicadas:** concreción para empatizar (5 jun · estómago, «tarda en responder», «hasta la próxima vez»), «mirada del otro» en vez de «validación» (23 may), anti-coaching («ni a fuerza de voluntad ni de quererte más»), sin promesa de cura, sin emojis.
+
+---
+
 ## 10 · Trazabilidad
 
 - Generado: 30 may 2026, sesión `claude/confident-ptolemy-e6Kpx`.
