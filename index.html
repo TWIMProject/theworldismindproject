@@ -249,7 +249,7 @@
     {
       "@type": "Question",
       "name": "¿Cuánto cuesta un psicólogo en Valencia?",
-      "acceptedAnswer": { "@type": "Answer", "text": "El precio de una sesión de psicología en Valencia varía según el profesional y la modalidad. En TWIM Project, las tarifas se adaptan al tipo de terapia (individual, de pareja o deportiva). Puedes contactar directamente para consultar disponibilidad y condiciones." }
+      "acceptedAnswer": { "@type": "Answer", "text": "El precio varía según la modalidad de la sesión: terapia individual, de pareja, deportiva u online. Escríbeme a través del formulario de contacto o por email y te informo de tarifas y disponibilidad sin compromiso." }
     },
     {
       "@type": "Question",
@@ -259,7 +259,7 @@
     {
       "@type": "Question",
       "name": "¿Cómo saber si necesito ir al psicólogo?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Si sientes malestar emocional persistente, ansiedad, dificultad para descansar, bloqueos recurrentes, problemas en tus relaciones o la sensación de vivir en piloto automático, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Si llevas tiempo con malestar que no se va (ansiedad, estrés, tristeza persistente, problemas de autoestima, dificultad para descansar, bloqueos que se repiten o la sensación de vivir en piloto automático) y por más que lo intentas no consigues mejorar por tu cuenta, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia." }
     },
     {
       "@type": "Question",
@@ -270,16 +270,6 @@
       "@type": "Question",
       "name": "¿Trabajas con dependencia emocional?",
       "acceptedAnswer": { "@type": "Answer", "text": "Sí, tanto en terapia individual como a través del programa específico 'Deja de Buscarte en Otros'. La dependencia emocional tiene raíces profundas que van más allá de la relación actual; entender el mecanismo es el primer paso para desactivarlo." }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo sé si necesito un psicólogo?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Si llevas tiempo sintiéndote mal, con ansiedad, estrés, tristeza persistente, problemas de autoestima o dificultad en tus relaciones, y sientes que por más que lo intentas no consigues mejorar por tu cuenta, es un buen momento para consultar. No hace falta estar en crisis para pedir ayuda profesional." }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto cuesta la sesión con un psicólogo en Valencia?",
-      "acceptedAnswer": { "@type": "Answer", "text": "El precio de las sesiones varía según la modalidad (individual, pareja, online). Puedes consultarme directamente a través del formulario de contacto o por email y te informo sin compromiso." }
     }
   ]
 }
@@ -670,6 +660,13 @@
     .prog-standard li { padding: .3rem 0 .3rem 1.4rem; font-size: .93rem; color: var(--text); position: relative; }
     .prog-standard li::before { content: '—'; position: absolute; left: 0; color: var(--green); font-weight: 600; }
 
+    /* Tarjetas «próximamente» (listas de espera) · fondo claro requiere texto oscuro */
+    .prog-soon { background: rgba(194,167,139,0.08); border: 1px dashed var(--beige); color: var(--text); }
+    .prog-soon h3 { color: var(--green-dark); }
+    .prog-soon .prog-tag { color: var(--text-soft); }
+    .prog-soon li { color: var(--text); opacity: 1; }
+    .prog-soon li::before { color: var(--beige-dark); }
+
     /* ── TALLERES DESTACADOS ── */
     .workshops-spotlight {
       background: linear-gradient(150deg, var(--green-dark), var(--green));
@@ -1010,6 +1007,20 @@
   </div>
 </section>
 
+<!-- ── ORIENTACIÓN · QUÉ TE TRAE AQUÍ ── -->
+
+<section id="orientacion" aria-label="Qué te trae aquí" style="padding:2.6rem 0 2.4rem;">
+  <div class="container" style="max-width:880px;text-align:center;">
+    <h2 style="font-size:1.3rem;font-weight:600;color:var(--green-dark);margin:0 0 .35rem;">¿Qué te trae aquí?</h2>
+    <p style="font-size:.97rem;color:var(--text-soft);margin:0 0 1.4rem;">Elige y te llevo directo.</p>
+    <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;">
+      <a href="#especialidades" class="btn btn-green" style="min-width:230px;">Busco terapia para mí</a>
+      <a href="psicologo-adolescentes-valencia.html" class="btn btn-outline-dark" style="min-width:230px;">Me preocupa mi hijo o mi hija</a>
+      <a href="#libros" class="btn btn-outline-dark" style="min-width:230px;">Vengo por los libros</a>
+    </div>
+  </div>
+</section>
+
 <!-- ── RETO 7 DÍAS · DESTACADO ── -->
 
 <section id="cap3-destacado" aria-label="Capítulo III gratis · La voz que te juzga" style="background:#173D30;color:#fff;padding:3.2rem 1.5rem;">
@@ -1018,7 +1029,7 @@
     <h2 style="color:#fff;font-size:clamp(1.6rem,3.5vw,2.1rem);margin:0 0 .9rem;font-weight:600;line-height:1.25;letter-spacing:.3px;">La voz que te juzga</h2>
     <p style="color:rgba(255,255,255,.82);max-width:640px;margin:0 auto 1.8rem;font-size:1.05rem;line-height:1.6;">Capítulo III de «Los Engranajes de la Mente». Sobre el juez interno que llevas dentro · cómo se montó, por qué no se calla con razones y qué empieza a debilitarlo.</p>
     <a href="libro/capitulo-3/" style="display:inline-block;background:#C2A78B;color:#fff;padding:.9rem 2rem;border-radius:6px;text-decoration:none;font-weight:500;font-size:1rem;letter-spacing:.3px;">Descargar gratis →</a>
-    <p style="margin:1.3rem 0 0;color:rgba(255,255,255,.55);font-size:.85rem;">PDF al instante · Sin secuencia agresiva · Solo el capítulo</p>
+    <p style="margin:1.3rem 0 0;color:rgba(255,255,255,.55);font-size:.85rem;">El PDF te llega al instante · después, solo mis cartas · te das de baja en un clic</p>
   </div>
 </section>
 
@@ -1032,7 +1043,7 @@
         <h2 class="section-title">Hola, soy Daniel Orozco Abia</h2>
         <p><strong>Psicólogo General Sanitario, CV11515.</strong></p>
         <p>En consulta privada desde 2012 en Valencia ayudando a <strong>adultos, adolescentes, deportistas profesionales y parejas</strong> a entenderse por dentro para vivir mejor por fuera.</p>
-        <p>Mi enfoque es de psicología profunda y aplicada, pero sin jerga. Trabajo con ansiedad, depresión, estrés, dependencia emocional, trastornos de personalidad, bipolaridad, duelos y todo lo que frena sin que sepas por qué. El objetivo siempre será ayudarte a ver lo que no ves; aquello que, sin que lo sepas, está detrás de tu malestar.</p>
+        <p>Mi enfoque es de psicología profunda y aplicada, pero sin jerga. Trabajo con la ansiedad que no te deja descansar, la autoexigencia que no para, los vínculos donde te pierdes y todo lo que te frena sin que sepas por qué. El objetivo siempre será ayudarte a ver lo que no ves; aquello que, sin que lo sepas, está detrás de tu malestar.</p>
         <p>Autor de <em>Los Engranajes de la Mente</em> y <em>Burnout: El libro para no petar</em>.</p>
         <p>En TWIM Project no estoy solo. Somos un <strong>equipo de psicólogos sanitarios colegiados</strong>, cada uno especializado en un tipo de dificultad. Yo dirijo y <strong>superviso clínicamente</strong> su trabajo. Según tu caso y tu disponibilidad, te acompañará el profesional más adecuado del equipo, siempre bajo mi supervisión.</p>
         <p style="margin-top:.5rem;"><a href="daniel-orozco-abia.html" style="color:var(--green-dark);font-weight:500;">Conocer más sobre Daniel Orozco Abia →</a></p>
@@ -1123,7 +1134,7 @@
     <h2 class="section-title">Programas</h2>
     <p class="section-sub"></p>
     <div class="prog-grid">
-      <div class="prog-card prog-featured" style="border:1px dashed var(--beige); background:rgba(194,167,139,0.08);">
+      <div class="prog-card prog-featured prog-soon">
         <span class="prog-badge">PRÓXIMAMENTE · FINALES 2026</span>
         <h3>Deja de Obligarte</h3>
         <p class="prog-tag">Programa digital sobre autoexigencia desbordante · en revisión · disponible a finales de 2026</p>
@@ -1134,9 +1145,9 @@
           <li>Acceso de por vida cuando se publique</li>
         </ul>
         <a href="dejadeobligarte-preventa.html" class="btn btn-beige">Apuntarme a la lista de espera</a>
-        <p style="font-size:.85rem; color:var(--text-soft); margin-top:.6rem; font-style:italic;">Aviso por email cuando se abra. Sin pago todavía.</p>
+        <p style="font-size:.85rem; color:var(--text-soft); margin-top:.6rem; font-style:italic;">Te aviso por email cuando se abra · sin pago todavía. Mientras llega, te van llegando mis cartas. Y si lo estás pasando mal ahora, no hace falta esperar: <a href="#contacto" style="color:var(--green-dark);">pide cita</a>.</p>
       </div>
-      <div class="prog-card prog-featured" style="border:1px dashed var(--beige); background:rgba(194,167,139,0.08);">
+      <div class="prog-card prog-featured prog-soon">
         <span class="prog-badge">PRÓXIMAMENTE · VERANO 2026</span>
         <h3>Deja de Buscarte en Otros</h3>
         <p class="prog-tag">Programa digital sobre dependencia emocional · grabándose ahora · disponible a finales de verano de 2026</p>
@@ -1147,7 +1158,7 @@
           <li>Acceso de por vida cuando se publique</li>
         </ul>
         <a href="dejadebuscarteenotros-preventa.html" class="btn btn-beige">Apuntarme a la lista de espera</a>
-        <p style="font-size:.85rem; color:var(--text-soft); margin-top:.6rem; font-style:italic;">Aviso por email cuando se abra la pre-venta. Sin pago todavía.</p>
+        <p style="font-size:.85rem; color:var(--text-soft); margin-top:.6rem; font-style:italic;">Te aviso por email cuando se abra la pre-venta · sin pago todavía. Mientras llega, te van llegando mis cartas. Y si lo estás pasando mal ahora, no hace falta esperar: <a href="#contacto" style="color:var(--green-dark);">pide cita</a>.</p>
       </div>
     </div>
   </div>
@@ -1429,7 +1440,7 @@
       </details>
       <details class="faq-item">
         <summary>¿Cuánto cuesta un psicólogo en Valencia?</summary>
-        <p>El precio varía según el profesional y la modalidad. En TWIM Project, las tarifas se adaptan al tipo de terapia (individual, de pareja o deportiva). Puedes contactar directamente para consultar disponibilidad y condiciones.</p>
+        <p>El precio varía según la modalidad de la sesión: terapia individual, de pareja, deportiva u online. Escríbeme a través del formulario de contacto o por email y te informo de tarifas y disponibilidad sin compromiso.</p>
       </details>
       <details class="faq-item">
         <summary>¿Qué es TWIM Project?</summary>
@@ -1437,7 +1448,7 @@
       </details>
       <details class="faq-item">
         <summary>¿Cómo saber si necesito ir al psicólogo?</summary>
-        <p>Si sientes malestar emocional persistente, ansiedad, dificultad para descansar, bloqueos recurrentes o la sensación de vivir en piloto automático, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia.</p>
+        <p>Si llevas tiempo con malestar que no se va —ansiedad, estrés, tristeza persistente, problemas de autoestima, dificultad para descansar, bloqueos que se repiten o la sensación de vivir en piloto automático— y por más que lo intentas no consigues mejorar por tu cuenta, son señales de que un proceso terapéutico puede ayudarte. No hace falta estar en crisis para empezar terapia.</p>
       </details>
       <details class="faq-item">
         <summary>¿Tratas ansiedad y depresión?</summary>
@@ -1446,14 +1457,6 @@
       <details class="faq-item">
         <summary>¿Trabajas con dependencia emocional?</summary>
         <p>Sí, tanto en terapia individual como a través del programa específico "Deja de Buscarte en Otros". La dependencia emocional tiene raíces profundas que van más allá de la relación actual; entender el mecanismo es el primer paso para desactivarlo.</p>
-      </details>
-      <details class="faq-item">
-        <summary>¿Cómo sé si necesito un psicólogo?</summary>
-        <p>Si llevas tiempo sintiéndote mal, con ansiedad, estrés, tristeza persistente, problemas de autoestima o dificultad en tus relaciones, y sientes que por más que lo intentas no consigues mejorar por tu cuenta, es un buen momento para consultar. No hace falta estar en crisis para pedir ayuda profesional.</p>
-      </details>
-      <details class="faq-item">
-        <summary>¿Cuánto cuesta la sesión con un psicólogo en Valencia?</summary>
-        <p>El precio de las sesiones varía según la modalidad (individual, pareja, online). Puedes consultarme directamente a través del formulario de contacto o por email y te informo sin compromiso.</p>
       </details>
     </div>
   </div>
