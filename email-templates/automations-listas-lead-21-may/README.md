@@ -2,6 +2,13 @@
 
 > **Por qué este doc.** Las 3 automations creadas el 20-may vía MCP MailerLite quedaron con la carcasa (trigger + subject + remitente) pero **sin cuerpo HTML diseñado** (`is_designed: false` confirmado en API). El conector MCP solo permite editar `plain_text` vía `update_automation_email`, no HTML del builder. Auditoría completa registrada en `contenido-rrss/te-escribo-newsletters/PLAN-CAPTACION-30D.md` §6 del 21-may.
 
+> **Actualización 11 jun 2026 (verificado contra API MailerLite):**
+>
+> - Las automations **2 (DDBEO) y 3 (DDO) ya están ACTIVAS** (`enabled: true`, emails diseñados en builder, envíos de prueba realizados). El estado «en borrador» de este doc quedó obsoleto.
+> - La automation **1 (lead magnet 5 señales, `188015660948784728`) ya NO existe** · fue sustituida el 26-may por «Secuencia · Lista espera Volver a Mí · 3 emails» (`188524234377528522`, activa, copy propio sin la frase de jerga). El cuerpo de la sección 1 queda solo como referencia histórica.
+> - **Cambio de copy 11 jun** (criterio claridad de un vistazo, mismo aplicado a la web en PR #334): se elimina «sin secuencia agresiva» de los cuerpos de este doc — es jerga de embudo que el público no entiende a la primera. Sustituido por «solo el capítulo».
+> - **Pendiente manual de Daniel (1 línea, ~2 min):** el email VIVO de la automation DDBEO aún dice «Te lo regalo en PDF, sin secuencia agresiva:» (verificado en captura del builder). Editar en panel → <https://dashboard.mailerlite.com/automations/188015669577516322> → step de email → cambiar esa línea por «Te lo regalo en PDF · solo el capítulo:». El email vivo de DDO está limpio (no lleva la frase).
+
 ## Flujo para activar cada automation (5 min cada una)
 
 1. Abrir <https://dashboard.mailerlite.com/automations/status/drafts>.
@@ -35,7 +42,7 @@ Mientras tanto, en mi newsletter «Te escribo» voy publicando piezas más larga
 
 → https://twimproject.com/newsletter/
 
-Y si te interesa entender cómo se monta la voz interna que juzga (el aparato Yo / Ello / Superyó), te regalo el Capítulo III de mi libro «Los Engranajes de la Mente» en PDF, sin secuencia agresiva:
+Y si te interesa entender cómo se monta la voz interna que juzga (el aparato Yo / Ello / Superyó), te regalo el Capítulo III de mi libro «Los Engranajes de la Mente» en PDF · solo el capítulo:
 
 → https://twimproject.com/libro/capitulo-3/
 
@@ -62,7 +69,7 @@ Es un programa en producción. Aún no está disponible. La ventana de grabació
 
 Cuando esté listo, te aviso primero a ti, antes que al resto, y con condiciones de lista de espera (no precio inflado, no urgencia falsa, no upsells por todas partes).
 
-Mientras tanto, si lo que te trajo hasta aquí fue la sensación de buscarte en el otro y no encontrarte, en el Capítulo III de mi libro «Los Engranajes de la Mente» toco un fragmento adyacente sobre cómo se monta el juez interno que aprende a hablarte con voz de los demás. Te lo regalo en PDF, sin secuencia agresiva:
+Mientras tanto, si lo que te trajo hasta aquí fue la sensación de buscarte en el otro y no encontrarte, en el Capítulo III de mi libro «Los Engranajes de la Mente» toco un fragmento adyacente sobre cómo se monta el juez interno que aprende a hablarte con voz de los demás. Te lo regalo en PDF · solo el capítulo:
 
 → https://twimproject.com/libro/capitulo-3/
 
