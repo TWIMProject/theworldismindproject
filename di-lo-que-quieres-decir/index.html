@@ -41,6 +41,7 @@
 
     <!-- PASO 1 · Volcado en crudo -->
     <section class="paso" id="paso-1" aria-labelledby="titulo-paso-1">
+      <p class="copiado-ok" id="aviso-pase-ok" role="status" hidden>Tu Pase está activo en este navegador. Gracias por apoyar esta herramienta.</p>
       <h2 id="titulo-paso-1">Escribe lo que te sale, sin filtro</h2>
       <p class="paso-ayuda">Nadie lo va a leer. Suelta el enfado, la pena, el reproche, todo. Después lo ordenamos juntos.</p>
       <label class="oculto-visual" for="texto-crudo">Tu texto en crudo</label>
@@ -93,6 +94,38 @@
         </select>
       </div>
       <p class="error-campo" id="error-paso-2" role="alert" hidden>Responde a las dos primeras preguntas para seguir.</p>
+      <div class="puerta" id="puerta" hidden aria-labelledby="titulo-puerta">
+        <h3 id="titulo-puerta">Tu primer análisis fue el regalo</h3>
+        <p class="paso-ayuda">Para seguir usando la herramienta, déjame tu email y te doy tu código personal al instante — gratis. Es el mismo email de mis cartas: te escribo cuando algo merece tu tiempo, sin cadencia. Tu texto no se envía ni se guarda; solo el email.</p>
+        <div class="puerta-form" id="puerta-alta">
+          <label class="oculto-visual" for="puerta-email">Tu email</label>
+          <input type="email" id="puerta-email" placeholder="tu@email.com" autocomplete="email" inputmode="email">
+          <button type="button" class="btn btn-principal" id="btn-puerta">Dame mi código</button>
+        </div>
+        <div class="puerta-form" id="puerta-codigo" hidden>
+          <label class="oculto-visual" for="puerta-email-2">El email con el que te suscribiste</label>
+          <input type="email" id="puerta-email-2" placeholder="tu@email.com" autocomplete="email" inputmode="email">
+          <label class="oculto-visual" for="puerta-cod">Tu código o tu Pase</label>
+          <input type="text" id="puerta-cod" placeholder="Tu código o tu Pase" autocomplete="off" maxlength="13" style="text-transform:uppercase">
+          <button type="button" class="btn btn-principal" id="btn-puerta-entrar">Entrar</button>
+        </div>
+        <button type="button" class="enlace-discreto" id="puerta-alternar">Ya tengo mi código</button>
+        <p class="error-campo" id="puerta-error" role="alert" hidden></p>
+        <div id="puerta-exito" hidden>
+          <p class="paso-ayuda">Este es tu código personal. Queda guardado en este navegador; apúntalo para usar la app en otros dispositivos. Si lo pierdes, vuelve aquí, pon tu email y te lo doy otra vez.</p>
+          <p class="codigo-dado" id="codigo-dado-valor" role="status"></p>
+          <button type="button" class="btn btn-principal" id="btn-puerta-continuar">Continuar con mi análisis</button>
+        </div>
+      </div>
+      <div class="puerta" id="panel-pase" hidden aria-labelledby="titulo-pase">
+        <h3 id="titulo-pase">Has usado tus 3 análisis gratis de este mes</h3>
+        <p class="paso-ayuda">El Pase quita el límite durante 12 meses: análisis ilimitados por 14,90 € — menos que un solo mes de ChatGPT, para todo el año, y haciendo una sola cosa mejor que ninguna. Pago único, sin suscripción. Tus textos siguen sin guardarse jamás.</p>
+        <div class="puerta-form">
+          <a class="btn btn-principal" id="enlace-pase" href="#" rel="noopener">Conseguir mi Pase · 14,90 €</a>
+          <button type="button" class="btn btn-secundario" id="btn-pase-tengo">Ya tengo mi Pase</button>
+        </div>
+        <p class="paso-ayuda" style="font-size:.85rem">Si prefieres esperar, el mes que viene tendrás otros 3 análisis gratis.</p>
+      </div>
       <div class="acciones">
         <button type="button" class="btn btn-secundario" data-volver="1">Volver</button>
         <button type="button" class="btn btn-principal" id="btn-analizar">Analizar mi texto</button>
@@ -186,6 +219,7 @@
   <footer class="pie">
     <p class="pie-aviso">Esta herramienta no sustituye un proceso terapéutico.</p>
     <p>Una herramienta de <a href="https://twimproject.com" rel="noopener">The World Is Mind Project — twimproject.com</a></p>
+    <p><button type="button" class="enlace-discreto" id="btn-borrar-datos">Borrar mis datos de este navegador</button></p>
   </footer>
 
   <script src="app.js" defer></script>

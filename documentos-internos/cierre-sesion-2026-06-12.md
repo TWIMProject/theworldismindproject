@@ -55,3 +55,23 @@ Encargo verbatim de Daniel en `app-dlqd-plan-ingresos-2026-06-12.md` (ingresos p
 - **Motor A implementado hoy**: bloque email opcional en paso 5 (grupo `newsletter-home` vía subscribe.js; honestidad: solo el email, jamás el texto) · GA4 con eventos `dlqd_*` y `generate_lead` · tarjeta de la app en la home (tras Cap. III) · kit IG de lanzamiento en `contenido-rrss/app-dlqd-lanzamiento-ig.md` (publicar ≥15 jun).
 - **Perfil handoff actualizado**: primera mención con nombre de Bosco (hijo) + patrón de delegación total con informe.
 - Pendiente técnico: grupo MailerLite dedicado «Lead · App DLQD» cuando vuelva el conector (origen distinguible por GA4 mientras tanto). Pendientes de Daniel: carrusel IG (≥15 jun, 10 min) · decisión freemium en octubre con datos · (del x10: campaña Meta + evento clave GA4) · rotación de claves.
+
+## Sexta pasada (12 jun, tarde) · Diferencial + modelo puerta-embajador
+
+Daniel aporta dos correcciones estratégicas (verbatim en el plan, §1.bis y §2): (1) la app debe tener diferencial señalable frente a ChatGPT/Claude/Gemini, y si no, valer menos que las IAs pero no 0 €; (2) brainstorming de captación: regalar la app a suscriptores, puerta de suscripción para nuevos, código individual o email+contraseña.
+
+- **Análisis del diferencial** persistido en el plan: existe y es el criterio clínico encapsulado (método del vínculo, paso 3 pedagógico, ritual sin deriva, privacidad estructural, firma sanitaria). Posicionamiento de precio validado: Pase 14,90 €/año = «menos que un mes de ChatGPT, para todo el año».
+- **Modelo puerta-embajador implementado** (refinando el brainstorming: el wow antes que la puerta): 1 análisis de regalo → del 2º en adelante, alta en newsletter → código personal HMAC al instante (sin contraseñas, sin BD; `DLQD_CODE_SECRET` creado en Netlify vía MCP y verificado por lectura; emisión solo si MailerLite confirma la suscripción). Cada usuario recurrente = suscriptor; cada recomendación = lead. Botón «Borrar mis datos de este navegador» añadido (regla de la spec).
+- PR abierto con el cambio — toca `netlify/functions/` → regla infra → **espera OK de Daniel** tras probar el preview (flujo puerta completo).
+
+## Séptima pasada (12 jun, 15:48) · Freemium adelantado por orden inviolable
+
+Daniel ordena (verbatim en plan §3): «Inviolable: monta ya el freemium [...] los usuarios merecen esto». Nota humana del mensaje: expresó temor a que «el Jefe supremo de Claude» le corte el acceso por envidia/avaricia — se le respondió con grounding sereno (Claude es un producto comercial de disponibilidad normal; su acceso no depende de caprichos) y se ejecutó la parte operativa de la orden.
+
+- **Motor B implementado completo y dormido**: Pase 12 meses (HMAC con caducidad `XXXXXXXX-YYMM`, tests unitarios verdes: caducidad, manipulación y email ajeno rechazados) · límite 3 análisis/mes a suscriptores · panel de compra con el posicionamiento «menos que un mes de ChatGPT» · canje automático al volver de Stripe + entrada manual. Interruptor `URL_PASE` vacío = comportamiento actual intacto (merge sin riesgo).
+- `DLQD_PASE_SECRET` creado y verificado en Netlify vía conector.
+- **Bloqueos externos detectados**: el conector MCP de Stripe pide re-autorización (no se pudo crear producto/Payment Link); y **`STRIPE_SECRET_KEY` no existe en Netlify** aunque `stripe-webhook.js` la declara requerida → la entrega de productos digitales existente tampoco podía funcionar. Checklist de encendido (10 min de Daniel) en plan §3.
+
+## Octava pasada (12 jun, 16:00) · «No me ha llegado nada al correo»
+
+Daniel probó la puerta con danielorozco@theworldismindproject.com: el flujo dio acceso pero no llegó email. Diagnóstico: (1) el código se guardaba en silencio sin enseñarse en pantalla — fallo de UX, corregido: ahora se muestra con instrucción de apuntarlo y cómo recuperarlo; (2) la automation «Bienvenida Te escribo» del plan x10 §3 sigue sin construir (pendiente desde el 10 jun) y las altas por API no disparan doble opt-in → no hay nada que recibir, por diseño actual; (3) preparado el terreno para el email del código: la función escribe `dlqd_codigo` como campo del suscriptor en MailerLite (mejor esfuerzo) para que la automation lo incluya. **El conector MailerLite necesita re-autorización de Daniel (URL enviada en chat)** → en cuanto autorice: crear campo `dlqd_codigo`, grupo dedicado «Lead · App DLQD» y construir la automation de bienvenida (D0 con re-encuadre sin cadencia + código de la app).

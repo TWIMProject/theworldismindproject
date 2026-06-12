@@ -294,6 +294,43 @@ textarea:focus, select:focus, input:focus, button:focus-visible {
   color: var(--green-deep);
 }
 
+/* Puerta de suscriptor (tras el análisis de regalo) */
+.puerta {
+  margin-top: 1.5rem;
+  background: var(--sand);
+  border: 1px solid var(--beige);
+  border-left: 5px solid var(--green);
+  border-radius: 0.75rem;
+  padding: 1.3rem 1.4rem;
+}
+.puerta h3 { margin-top: 0; font-size: 1.35rem; }
+.puerta-form { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.6rem; }
+.puerta-form input { flex: 1 1 12rem; margin-top: 0; }
+.puerta-form .btn { white-space: nowrap; text-decoration: none; display: inline-block; }
+.enlace-discreto {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--green-light);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.enlace-discreto:disabled { color: var(--text-muted); text-decoration: none; cursor: default; }
+.codigo-dado {
+  font-size: 1.6rem;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+  color: var(--green-deep);
+  background: #fff;
+  border: 1px dashed var(--beige-dark);
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  display: inline-block;
+  user-select: all;
+}
+
 /* Captación newsletter (paso 5) */
 .seccion-newsletter {
   margin-top: 2.5rem;

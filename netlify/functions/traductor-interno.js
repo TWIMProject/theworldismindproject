@@ -9,6 +9,8 @@
 // Si no hay clave configurada devuelve 503 con code "sin_clave" y el front
 // pasa a modo degradado (detección por reglas en el navegador).
 
+const crypto = require("node:crypto");
+
 const MODELO_POR_DEFECTO = "claude-haiku-4-5-20251001";
 
 const ALLOWED_ORIGINS = new Set([
@@ -123,6 +125,79 @@ function superaLimite(ip) {
   return cubo.n > LIMITE_POR_IP;
 }
 
+// Código personal de acceso (modelo embajador, 12 jun): derivado del email
+// con HMAC — sin base de datos, sin contraseñas, revocable rotando el secreto.
+function codigoParaEmail(email) {
+  const secreto = process.env.DLQD_CODE_SECRET;
+  if (!secreto) return null;
+  return crypto
+    .createHmac("sha256", secreto)
+    .update(email.trim().toLowerCase())
+    .digest("hex")
+    .slice(0, 8)
+    .toUpperCase();
+}
+
+// Pase de pago (freemium, 12 jun): código con caducidad incorporada en el
+// propio formato («XXXXXXXX-YYMM»), también sin base de datos. La caducidad
+// va dentro del HMAC: no se puede alargar editando el sufijo.
+function paseParaEmail(email, caducidadYYMM) {
+  const secreto = process.env.DLQD_PASE_SECRET;
+  if (!secreto) return null;
+  const firma = crypto
+    .createHmac("sha256", secreto)
+    .update(email.trim().toLowerCase() + "|" + caducidadYYMM)
+    .digest("hex")
+    .slice(0, 8)
+    .toUpperCase();
+  return firma + "-" + caducidadYYMM;
+}
+
+function paseValido(email, pase) {
+  const partes = String(pase).trim().toUpperCase().split("-");
+  if (partes.length !== 2 || !/^\d{4}$/.test(partes[1])) return false;
+  const esperado = paseParaEmail(email, partes[1]);
+  if (!esperado || esperado !== partes[0] + "-" + partes[1]) return false;
+  // Caducidad YYMM: válido hasta el final de ese mes.
+  const ahora = new Date();
+  const ahoraYYMM = String(ahora.getUTCFullYear() % 100).padStart(2, "0") +
+    String(ahora.getUTCMonth() + 1).padStart(2, "0");
+  return partes[1] >= ahoraYYMM;
+}
+
+// Comprueba contra MailerLite que el email está suscrito de verdad
+// (la puerta regala el acceso a quien se suscribe, no a cualquier email).
+async function estaSuscrito(email) {
+  const apiKey = process.env.MAILERLITE_API_KEY;
+  if (!apiKey) return { error: "config" };
+  let res;
+  try {
+    res = await fetch(
+      "https://connect.mailerlite.com/api/subscribers/" + encodeURIComponent(email.trim().toLowerCase()),
+      { headers: { Authorization: "Bearer " + apiKey, "Content-Type": "application/json" } }
+    );
+  } catch {
+    return { error: "red" };
+  }
+  if (res.status === 404) return { suscrito: false };
+  if (!res.ok) return { error: "upstream" };
+  let datos;
+  try {
+    datos = await res.json();
+  } catch {
+    return { error: "upstream" };
+  }
+  // El endpoint directo de MailerLite v3 acepta email como identificador y
+  // devuelve data como objeto; parseo tolerante por si la cuenta respondiera
+  // con la forma de listado (data como array).
+  const item = datos && datos.data
+    ? (Array.isArray(datos.data) ? datos.data[0] : datos.data)
+    : null;
+  if (!item) return { suscrito: false };
+  const estado = item.status;
+  return { suscrito: estado !== "unsubscribed" && estado !== "bounced" && estado !== "junk" };
+}
+
 function respuesta(statusCode, body, origin) {
   return {
     statusCode,
@@ -194,6 +269,95 @@ exports.handler = async (event) => {
     return respuesta(400, { ok: false, code: "json_invalido" }, origin);
   }
 
+  // ---- Acciones de la puerta de acceso (no consumen API de Anthropic) ----
+  const accion = typeof datos.accion === "string" ? datos.accion : "";
+  const emailPuerta = typeof datos.email === "string" ? datos.email.trim() : "";
+
+  if (accion === "codigo") {
+    if (!emailPuerta || !emailPuerta.includes("@")) {
+      return respuesta(400, { ok: false, code: "campos" }, origin);
+    }
+    const sus = await estaSuscrito(emailPuerta);
+    if (sus.error) {
+      return respuesta(502, { ok: false, code: "sobrecarga", reintentable: true }, origin);
+    }
+    if (!sus.suscrito) {
+      return respuesta(200, { ok: false, code: "no_suscrito" }, origin);
+    }
+    const cod = codigoParaEmail(emailPuerta);
+    if (!cod) {
+      return respuesta(503, { ok: false, code: "config" }, origin);
+    }
+    // Mejor esfuerzo: dejar el código en el perfil de MailerLite (campo
+    // dlqd_codigo) para que la automation de bienvenida pueda incluirlo en
+    // el email. Si falla, el código se entrega en pantalla igualmente.
+    try {
+      await fetch("https://connect.mailerlite.com/api/subscribers", {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + process.env.MAILERLITE_API_KEY,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: emailPuerta.trim().toLowerCase(),
+          fields: { dlqd_codigo: cod },
+        }),
+      });
+    } catch { /* sin bloqueo */ }
+    return respuesta(200, { ok: true, codigo: cod }, origin);
+  }
+
+  if (accion === "validar") {
+    const codDado = typeof datos.codigo === "string" ? datos.codigo.trim().toUpperCase() : "";
+    if (codDado.includes("-")) {
+      // Formato de Pase de pago (XXXXXXXX-YYMM)
+      const valido = Boolean(emailPuerta) && paseValido(emailPuerta, codDado);
+      return respuesta(200, { ok: true, valido, tipo: "pase" }, origin);
+    }
+    const codReal = emailPuerta ? codigoParaEmail(emailPuerta) : null;
+    return respuesta(200, { ok: true, valido: Boolean(codReal) && codDado === codReal, tipo: "suscriptor" }, origin);
+  }
+
+  // Canje del Pase tras el pago: verifica la sesión de Checkout contra Stripe
+  // (pagada y del precio correcto) y devuelve el Pase ligado al email del pago.
+  if (accion === "pase") {
+    const sessionId = typeof datos.session_id === "string" ? datos.session_id.trim() : "";
+    const stripeKey = process.env.STRIPE_SECRET_KEY;
+    const precioEsperado = process.env.DLQD_PASE_PRICE_ID;
+    if (!sessionId || !/^cs_/.test(sessionId)) {
+      return respuesta(400, { ok: false, code: "campos" }, origin);
+    }
+    if (!stripeKey || !precioEsperado || !process.env.DLQD_PASE_SECRET) {
+      return respuesta(503, { ok: false, code: "config" }, origin);
+    }
+    let sesion;
+    try {
+      const r = await fetch(
+        "https://api.stripe.com/v1/checkout/sessions/" + encodeURIComponent(sessionId) + "?expand[]=line_items",
+        { headers: { Authorization: "Bearer " + stripeKey } }
+      );
+      if (!r.ok) {
+        return respuesta(200, { ok: false, code: "pago_no_encontrado" }, origin);
+      }
+      sesion = await r.json();
+    } catch {
+      return respuesta(502, { ok: false, code: "red", reintentable: true }, origin);
+    }
+    const pagada = sesion.payment_status === "paid";
+    const lineas = (sesion.line_items && sesion.line_items.data) || [];
+    const precioOk = lineas.some((l) => l.price && l.price.id === precioEsperado);
+    const emailPago = sesion.customer_details && sesion.customer_details.email;
+    if (!pagada || !precioOk || !emailPago) {
+      return respuesta(200, { ok: false, code: "pago_no_valido" }, origin);
+    }
+    const cad = new Date();
+    cad.setUTCMonth(cad.getUTCMonth() + 12);
+    const cadYYMM = String(cad.getUTCFullYear() % 100).padStart(2, "0") +
+      String(cad.getUTCMonth() + 1).padStart(2, "0");
+    return respuesta(200, { ok: true, pase: paseParaEmail(emailPago, cadYYMM), email: emailPago }, origin);
+  }
+
+  // ---- Acción por defecto: análisis ----
   const texto = typeof datos.texto === "string" ? datos.texto.trim() : "";
   const destinatario = typeof datos.destinatario === "string" ? datos.destinatario.trim() : "";
   const objetivo = typeof datos.objetivo === "string" ? datos.objetivo.trim() : "";

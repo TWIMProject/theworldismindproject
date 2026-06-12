@@ -34,6 +34,84 @@
     }
   }
 
+  /* ---------- Acceso: 1 análisis de regalo, después código de suscriptor ----------
+     Lo único que se guarda en este navegador es el contador de usos y, si la
+     persona se suscribe, su email y su código. El texto jamás. Botón de borrado
+     total en el pie. */
+
+  var USOS_GRATIS = 1;
+  // Freemium (Motor B, orden de Daniel 12 jun): los suscriptores tienen
+  // LIMITE_SUSCRIPTOR_MES análisis gratis al mes; el Pase (pago único,
+  // 12 meses) quita el límite. El cobro se enciende rellenando URL_PASE
+  // con el Payment Link de Stripe; mientras esté vacío, no hay límite mensual.
+  var URL_PASE = "";
+  var LIMITE_SUSCRIPTOR_MES = 3;
+
+  function mesActual() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+  }
+  function usosEsteMes() {
+    try {
+      var raw = JSON.parse(localStorage.getItem("dlqd_usos_mes") || "{}");
+      return raw.mes === mesActual() ? (Number(raw.n) || 0) : 0;
+    } catch (e) { return 0; }
+  }
+  function sumarUsoMes() {
+    try {
+      localStorage.setItem("dlqd_usos_mes", JSON.stringify({ mes: mesActual(), n: usosEsteMes() + 1 }));
+    } catch (e) { /* sin storage */ }
+  }
+  function paseGuardado() {
+    try {
+      var em = localStorage.getItem("dlqd_email");
+      var p = localStorage.getItem("dlqd_pase");
+      return em && p ? { email: em, pase: p } : null;
+    } catch (e) { return null; }
+  }
+  function guardarPase(email, pase) {
+    try {
+      localStorage.setItem("dlqd_email", email);
+      localStorage.setItem("dlqd_pase", pase);
+    } catch (e) { /* sin storage */ }
+  }
+
+  function usosHechos() {
+    try { return Number(localStorage.getItem("dlqd_usos") || "0") || 0; } catch (e) { return 0; }
+  }
+  function sumarUso() {
+    try { localStorage.setItem("dlqd_usos", String(usosHechos() + 1)); } catch (e) { /* sin storage: gratis */ }
+  }
+  function accesoGuardado() {
+    try {
+      var em = localStorage.getItem("dlqd_email");
+      var cod = localStorage.getItem("dlqd_codigo");
+      return em && cod ? { email: em, codigo: cod } : null;
+    } catch (e) { return null; }
+  }
+  function guardarAcceso(email, codigo) {
+    try {
+      localStorage.setItem("dlqd_email", email);
+      localStorage.setItem("dlqd_codigo", codigo);
+    } catch (e) { /* sin storage: la puerta volverá a salir */ }
+  }
+
+  function pedirCodigo(email) {
+    return fetch(URL_MOTOR, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ accion: "codigo", email: email }),
+    }).then(function (res) { return res.json(); });
+  }
+
+  function suscribir(email) {
+    return fetch("/.netlify/functions/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, group: "newsletter-home" }),
+    });
+  }
+
   function escaparHTML(s) {
     return s.replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -112,8 +190,162 @@
     estado.destinatario = destinatario;
     estado.objetivo = objetivo;
     estado.medio = $("medio").value;
+    if (!paseGuardado()) {
+      if (!accesoGuardado() && usosHechos() >= USOS_GRATIS) {
+        $("puerta").hidden = false;
+        evento("dlqd_puerta_vista", {});
+        $("puerta-email").focus();
+        return;
+      }
+      if (accesoGuardado() && URL_PASE && usosEsteMes() >= LIMITE_SUSCRIPTOR_MES) {
+        $("panel-pase").hidden = false;
+        evento("dlqd_pase_visto", {});
+        return;
+      }
+    }
     irAPaso(3);
     analizar();
+  });
+
+  /* ---------- Puerta de suscriptor ---------- */
+
+  function continuarTrasPuerta() {
+    $("puerta").hidden = true;
+    irAPaso(3);
+    analizar();
+  }
+
+  function errorPuerta(msg) {
+    $("puerta-error").textContent = msg;
+    $("puerta-error").hidden = false;
+  }
+
+  $("btn-puerta-continuar").addEventListener("click", continuarTrasPuerta);
+
+  $("puerta-alternar").addEventListener("click", function () {
+    var verCodigo = $("puerta-codigo").hidden;
+    $("puerta-codigo").hidden = !verCodigo;
+    $("puerta-alta").hidden = verCodigo;
+    this.textContent = verCodigo ? "Quiero un código nuevo" : "Ya tengo mi código";
+    $("puerta-error").hidden = true;
+  });
+
+  $("btn-puerta").addEventListener("click", function () {
+    var email = $("puerta-email").value.trim();
+    if (!email || email.indexOf("@") === -1) { errorPuerta("Escribe tu email para conseguir tu código."); return; }
+    var btn = this;
+    btn.disabled = true;
+    $("puerta-error").hidden = true;
+    suscribir(email)
+      .then(function (res) {
+        if (!res.ok) throw new Error("subscribe " + res.status);
+        return pedirCodigo(email);
+      })
+      .then(function (r) {
+        if (r && r.ok && r.codigo) {
+          guardarAcceso(email, r.codigo);
+          evento("dlqd_alta_newsletter", { via: "puerta" });
+          evento("generate_lead", { origen: "app-dlqd-puerta" });
+          // Enseñar el código antes de continuar (para otros dispositivos).
+          $("puerta-alta").hidden = true;
+          $("puerta-codigo").hidden = true;
+          $("puerta-alternar").hidden = true;
+          $("codigo-dado-valor").textContent = r.codigo;
+          $("puerta-exito").hidden = false;
+        } else if (r && r.code === "no_suscrito") {
+          errorPuerta("Tu alta está en camino. Espera unos segundos y vuelve a pulsar el botón.");
+          btn.disabled = false;
+        } else {
+          throw new Error("codigo");
+        }
+      })
+      .catch(function () {
+        errorPuerta("No se ha podido completar. Inténtalo de nuevo en un momento.");
+        btn.disabled = false;
+      });
+  });
+
+  $("btn-puerta-entrar").addEventListener("click", function () {
+    var email = $("puerta-email-2").value.trim();
+    var cod = $("puerta-cod").value.trim().toUpperCase();
+    if (!email || !cod) { errorPuerta("Escribe el email y el código."); return; }
+    var btn = this;
+    btn.disabled = true;
+    $("puerta-error").hidden = true;
+    fetch(URL_MOTOR, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ accion: "validar", email: email, codigo: cod }),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (r) {
+        if (r && r.ok && r.valido) {
+          if (r.tipo === "pase") {
+            guardarPase(email, cod);
+          } else {
+            guardarAcceso(email, cod);
+          }
+          continuarTrasPuerta();
+        } else {
+          errorPuerta("Ese código no coincide con ese email. Revísalos o pide un código nuevo.");
+          btn.disabled = false;
+        }
+      })
+      .catch(function () {
+        errorPuerta("No se ha podido comprobar. Inténtalo de nuevo en un momento.");
+        btn.disabled = false;
+      });
+  });
+
+  /* ---------- Pase de pago (freemium) ---------- */
+
+  if (URL_PASE) {
+    $("enlace-pase").href = URL_PASE;
+  }
+
+  $("btn-pase-tengo").addEventListener("click", function () {
+    // Reutiliza la puerta en modo «ya tengo mi código»: valida también pases.
+    $("panel-pase").hidden = true;
+    $("puerta").hidden = false;
+    if ($("puerta-codigo").hidden) $("puerta-alternar").click();
+    $("puerta-email-2").focus();
+  });
+
+  // Vuelta de Stripe: canjear la sesión de pago por el Pase.
+  (function canjearPaseSiVuelveDeStripe() {
+    var params = new URLSearchParams(window.location.search);
+    var sesion = params.get("pase_sesion");
+    if (!sesion) return;
+    history.replaceState(null, "", window.location.pathname);
+    fetch(URL_MOTOR, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ accion: "pase", session_id: sesion }),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (r) {
+        if (r && r.ok && r.pase && r.email) {
+          guardarPase(r.email, r.pase);
+          evento("dlqd_pase_canjeado", {});
+          $("aviso-pase-ok").hidden = false;
+        }
+      })
+      .catch(function () { /* podrá canjearlo con «ya tengo mi código» */ });
+  })();
+
+  $("btn-borrar-datos").addEventListener("click", function () {
+    try {
+      localStorage.removeItem("dlqd_usos");
+      localStorage.removeItem("dlqd_usos_mes");
+      localStorage.removeItem("dlqd_email");
+      localStorage.removeItem("dlqd_codigo");
+      localStorage.removeItem("dlqd_pase");
+    } catch (e) { /* nada que borrar */ }
+    var btn = this;
+    btn.textContent = "Datos borrados de este navegador";
+    setTimeout(function () {
+      btn.textContent = "Borrar mis datos de este navegador";
+    }, 2500);
   });
 
   /* ---------- Paso 3 · análisis ---------- */
@@ -171,6 +403,7 @@
     estado.modoBasico = esBasico;
     estado.analizado = true;
     estado.claveAnalisis = clave;
+    if (!esBasico) { sumarUso(); sumarUsoMes(); }
     evento("dlqd_analisis", { modo: esBasico ? "basico" : "ia", destinatario: estado.destinatario, objetivo: estado.objetivo });
     pintarAnalisis();
   }
@@ -383,6 +616,8 @@
   $("btn-seguir-4").addEventListener("click", function () {
     var mensaje = $("texto-despues").value.trim() || estado.analisis.reformulacion;
     $("aviso-basico-5").hidden = !estado.modoBasico;
+    // Si ya tiene código o Pase (= ya está suscrita), el bloque de newsletter sobra.
+    $("titulo-newsletter").parentElement.hidden = Boolean(accesoGuardado() || paseGuardado());
     $("mensaje-final").textContent = mensaje;
     var lista = $("frases-ancla");
     lista.innerHTML = "";
@@ -417,17 +652,20 @@
     var btn = $("btn-newsletter");
     btn.disabled = true;
     $("newsletter-error").hidden = true;
-    fetch("/.netlify/functions/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: email, group: "newsletter-home" }),
-    })
+    suscribir(email)
       .then(function (res) {
         if (!res.ok) throw new Error("subscribe " + res.status);
         $("form-newsletter").hidden = true;
         $("newsletter-ok").hidden = false;
-        evento("dlqd_alta_newsletter", {});
+        evento("dlqd_alta_newsletter", { via: "paso5" });
         evento("generate_lead", { origen: "app-dlqd" });
+        // Le dejamos también su código guardado y se lo enseñamos.
+        return pedirCodigo(email).then(function (r) {
+          if (r && r.ok && r.codigo) {
+            guardarAcceso(email, r.codigo);
+            $("newsletter-ok").textContent = "Hecho. Tu código personal para usar la app donde quieras: " + r.codigo + " — apúntalo. Te escribiré cuando algo merezca tu tiempo.";
+          }
+        }).catch(function () { /* el código podrá pedirlo en la puerta */ });
       })
       .catch(function () {
         $("newsletter-error").hidden = false;
