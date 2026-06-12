@@ -318,6 +318,18 @@ textarea:focus, select:focus, input:focus, button:focus-visible {
   cursor: pointer;
 }
 .enlace-discreto:disabled { color: var(--text-muted); text-decoration: none; cursor: default; }
+.codigo-dado {
+  font-size: 1.6rem;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+  color: var(--green-deep);
+  background: #fff;
+  border: 1px dashed var(--beige-dark);
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+  display: inline-block;
+  user-select: all;
+}
 
 /* Captación newsletter (paso 5) */
 .seccion-newsletter {

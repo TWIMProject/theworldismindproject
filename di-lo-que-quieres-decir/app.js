@@ -220,6 +220,8 @@
     $("puerta-error").hidden = false;
   }
 
+  $("btn-puerta-continuar").addEventListener("click", continuarTrasPuerta);
+
   $("puerta-alternar").addEventListener("click", function () {
     var verCodigo = $("puerta-codigo").hidden;
     $("puerta-codigo").hidden = !verCodigo;
@@ -244,7 +246,12 @@
           guardarAcceso(email, r.codigo);
           evento("dlqd_alta_newsletter", { via: "puerta" });
           evento("generate_lead", { origen: "app-dlqd-puerta" });
-          continuarTrasPuerta();
+          // Enseñar el código antes de continuar (para otros dispositivos).
+          $("puerta-alta").hidden = true;
+          $("puerta-codigo").hidden = true;
+          $("puerta-alternar").hidden = true;
+          $("codigo-dado-valor").textContent = r.codigo;
+          $("puerta-exito").hidden = false;
         } else if (r && r.code === "no_suscrito") {
           errorPuerta("Tu alta está en camino. Espera unos segundos y vuelve a pulsar el botón.");
           btn.disabled = false;
@@ -652,9 +659,12 @@
         $("newsletter-ok").hidden = false;
         evento("dlqd_alta_newsletter", { via: "paso5" });
         evento("generate_lead", { origen: "app-dlqd" });
-        // Le dejamos también su código guardado para que la puerta no le salga.
+        // Le dejamos también su código guardado y se lo enseñamos.
         return pedirCodigo(email).then(function (r) {
-          if (r && r.ok && r.codigo) guardarAcceso(email, r.codigo);
+          if (r && r.ok && r.codigo) {
+            guardarAcceso(email, r.codigo);
+            $("newsletter-ok").textContent = "Hecho. Tu código personal para usar la app donde quieras: " + r.codigo + " — apúntalo. Te escribiré cuando algo merezca tu tiempo.";
+          }
         }).catch(function () { /* el código podrá pedirlo en la puerta */ });
       })
       .catch(function () {

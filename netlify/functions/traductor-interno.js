@@ -288,6 +288,22 @@ exports.handler = async (event) => {
     if (!cod) {
       return respuesta(503, { ok: false, code: "config" }, origin);
     }
+    // Mejor esfuerzo: dejar el código en el perfil de MailerLite (campo
+    // dlqd_codigo) para que la automation de bienvenida pueda incluirlo en
+    // el email. Si falla, el código se entrega en pantalla igualmente.
+    try {
+      await fetch("https://connect.mailerlite.com/api/subscribers", {
+        method: "POST",
+        headers: {
+          Authorization: "Bearer " + process.env.MAILERLITE_API_KEY,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: emailPuerta.trim().toLowerCase(),
+          fields: { dlqd_codigo: cod },
+        }),
+      });
+    } catch { /* sin bloqueo */ }
     return respuesta(200, { ok: true, codigo: cod }, origin);
   }
 
