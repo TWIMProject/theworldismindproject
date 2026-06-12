@@ -62,8 +62,11 @@ El repo ya despliega en Netlify (publish `.`, functions `netlify/functions` seg�
 
 Una sola llamada por sesión de análisis. La función envía a la API:
 
-- `system`: instrucciones para detectar los 4 tipos de ruido (fragmentos literales para poder resaltarlos), reformular conservando vocabulario y registro del usuario (hecho observable + emoción en primera persona + necesidad + petición realizable, sin nombrar la estructura) y generar 3 frases ancla a partir del objetivo. Prohibido moralizar, diagnosticar o usar tecnicismos.
+- `system` (v2, 12 jun): el motor distingue las tres capas de un volcado en crudo — meta-instrucciones a la herramienta («quiero mandárselo por WhatsApp», «sin que se sienta atacada»: requisitos a obedecer, no ruido), desahogo en tercera persona (donde está el ruido y el material real) y frases directas al destinatario. Detecta los 4 tipos de ruido (fragmentos literales para resaltarlos), reformula **construyendo solo con el material del texto** (prohibido el relleno genérico de manual), respeta el medio elegido (si es mensaje escrito, redacta el mensaje listo para enviar y nunca propone «hablarlo en persona») y genera 3 frases ancla adaptadas al objetivo y al canal. Prohibido moralizar, diagnosticar o usar tecnicismos.
+- `medio` (opcional, del paso 2): «en persona», «por mensaje escrito» o «por llamada».
 - `output_config.format` con JSON Schema estricto → la respuesta es siempre JSON válido con `{ruidos[], reformulacion, frases_ancla[]}`.
+
+Diagnóstico rápido sin exponer secretos: `GET /.netlify/functions/traductor-interno?diag=1` devuelve si la clave está configurada y qué modelo se usa.
 
 Manejo de errores: 429/5xx de la API → mensaje amable + botón «Reintentar»; fallo no reintentable o sin red → opción de «Usar análisis básico»; sin clave → modo degradado automático con aviso honesto.
 

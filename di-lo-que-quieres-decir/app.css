@@ -152,6 +152,7 @@ textarea:focus, select:focus, input:focus, button:focus-visible {
 .campo { margin-bottom: 1.5rem; }
 .campo label { font-weight: 500; color: var(--green-deep); }
 .campo input[type="text"] { margin-top: 0.5rem; }
+.campo .opcional { font-weight: 400; font-size: 0.85em; color: var(--text-muted); }
 
 .error-campo { color: #8a3322; font-size: 0.9rem; }
 
