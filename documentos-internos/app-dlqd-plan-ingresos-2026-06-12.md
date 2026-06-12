@@ -80,6 +80,11 @@ La app es la fuente de leads más barata del sistema. Cada email que capta vale 
 
 La compuerta de tráfico de octubre deja de ser bloqueante y pasa a ser **métrica de seguimiento** (conversión del panel: `dlqd_pase_visto` → `dlqd_pase_canjeado`).
 
+**Decisión de precios de Daniel (12 jun, 21:01, verbatim: «Yo lo haría anual pero pondría el equivalente del mes para que la gente flipe de lo barato que es»):** todo anual con el equivalente mensual como reclamo —
+- **Pase: 14,90 €/año → se comunica como «1,24 €/mes (cobro anual)»**. Copy del panel ya actualizado.
+- **Plus seguimiento: anual, 12,90 €/año → «1,08 €/mes»** (cifra propuesta, confirmar al crear el producto Stripe). Paquete «Pase Completo» 24,90 €/año → «2,08 €/mes».
+- **Objetivo de ingresos declarado por el CEO: ~1.800 €/MES** (la proyección anual «le sabe a poco»). La matemática del objetivo, sin autoengaño: 1.800 €/mes ≈ 21.600 €/año ≈ 1.200-1.450 pases/año (100-120/mes) o mezcla con Completos y atribución a DDBEO/Volver a Mí. Con conversión del 2 % visitante→pase, requiere ~5.000-6.000 visitantes/mes sostenidos: no sale del Pase solo en 2026; sale del embudo completo (app como canal de DDBEO/VAM) + escala de tráfico 2027-2028. Es la estrella que orienta; los escenarios objetivos siguen siendo los del informe.
+
 **Diseño propuesto** (decisión final de Daniel en octubre, con datos):
 - **Gratis:** 3 análisis completos/mes (contador localStorage, límite blando) — suficiente para resolver LA conversación que te trajo.
 - **Pase 12 meses · 14,90 €** (pago único, sin suscripción ni cuentas): análisis ilimitados + guía descargable «El enfoque vínculo» (PDF, destilado del principio — Claude lo redacta) + packs de situaciones (pareja · familia · trabajo · amistad).
