@@ -34,6 +34,49 @@
     }
   }
 
+  /* ---------- Acceso: 1 análisis de regalo, después código de suscriptor ----------
+     Lo único que se guarda en este navegador es el contador de usos y, si la
+     persona se suscribe, su email y su código. El texto jamás. Botón de borrado
+     total en el pie. */
+
+  var USOS_GRATIS = 1;
+
+  function usosHechos() {
+    try { return Number(localStorage.getItem("dlqd_usos") || "0") || 0; } catch (e) { return 0; }
+  }
+  function sumarUso() {
+    try { localStorage.setItem("dlqd_usos", String(usosHechos() + 1)); } catch (e) { /* sin storage: gratis */ }
+  }
+  function accesoGuardado() {
+    try {
+      var em = localStorage.getItem("dlqd_email");
+      var cod = localStorage.getItem("dlqd_codigo");
+      return em && cod ? { email: em, codigo: cod } : null;
+    } catch (e) { return null; }
+  }
+  function guardarAcceso(email, codigo) {
+    try {
+      localStorage.setItem("dlqd_email", email);
+      localStorage.setItem("dlqd_codigo", codigo);
+    } catch (e) { /* sin storage: la puerta volverá a salir */ }
+  }
+
+  function pedirCodigo(email) {
+    return fetch(URL_MOTOR, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ accion: "codigo", email: email }),
+    }).then(function (res) { return res.json(); });
+  }
+
+  function suscribir(email) {
+    return fetch("/.netlify/functions/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, group: "newsletter-home" }),
+    });
+  }
+
   function escaparHTML(s) {
     return s.replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -112,8 +155,103 @@
     estado.destinatario = destinatario;
     estado.objetivo = objetivo;
     estado.medio = $("medio").value;
+    if (usosHechos() >= USOS_GRATIS && !accesoGuardado()) {
+      $("puerta").hidden = false;
+      evento("dlqd_puerta_vista", {});
+      $("puerta-email").focus();
+      return;
+    }
     irAPaso(3);
     analizar();
+  });
+
+  /* ---------- Puerta de suscriptor ---------- */
+
+  function continuarTrasPuerta() {
+    $("puerta").hidden = true;
+    irAPaso(3);
+    analizar();
+  }
+
+  function errorPuerta(msg) {
+    $("puerta-error").textContent = msg;
+    $("puerta-error").hidden = false;
+  }
+
+  $("puerta-alternar").addEventListener("click", function () {
+    var verCodigo = $("puerta-codigo").hidden;
+    $("puerta-codigo").hidden = !verCodigo;
+    $("puerta-alta").hidden = verCodigo;
+    this.textContent = verCodigo ? "Quiero un código nuevo" : "Ya tengo mi código";
+    $("puerta-error").hidden = true;
+  });
+
+  $("btn-puerta").addEventListener("click", function () {
+    var email = $("puerta-email").value.trim();
+    if (!email || email.indexOf("@") === -1) { errorPuerta("Escribe tu email para conseguir tu código."); return; }
+    var btn = this;
+    btn.disabled = true;
+    $("puerta-error").hidden = true;
+    suscribir(email)
+      .then(function (res) {
+        if (!res.ok) throw new Error("subscribe " + res.status);
+        return pedirCodigo(email);
+      })
+      .then(function (r) {
+        if (r && r.ok && r.codigo) {
+          guardarAcceso(email, r.codigo);
+          evento("dlqd_alta_newsletter", { via: "puerta" });
+          evento("generate_lead", { origen: "app-dlqd-puerta" });
+          continuarTrasPuerta();
+        } else if (r && r.code === "no_suscrito") {
+          errorPuerta("Tu alta está en camino. Espera unos segundos y vuelve a pulsar el botón.");
+          btn.disabled = false;
+        } else {
+          throw new Error("codigo");
+        }
+      })
+      .catch(function () {
+        errorPuerta("No se ha podido completar. Inténtalo de nuevo en un momento.");
+        btn.disabled = false;
+      });
+  });
+
+  $("btn-puerta-entrar").addEventListener("click", function () {
+    var email = $("puerta-email-2").value.trim();
+    var cod = $("puerta-cod").value.trim().toUpperCase();
+    if (!email || !cod) { errorPuerta("Escribe el email y el código."); return; }
+    var btn = this;
+    btn.disabled = true;
+    $("puerta-error").hidden = true;
+    fetch(URL_MOTOR, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ accion: "validar", email: email, codigo: cod }),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (r) {
+        if (r && r.ok && r.valido) {
+          guardarAcceso(email, cod);
+          continuarTrasPuerta();
+        } else {
+          errorPuerta("Ese código no coincide con ese email. Revísalos o pide un código nuevo.");
+          btn.disabled = false;
+        }
+      })
+      .catch(function () {
+        errorPuerta("No se ha podido comprobar. Inténtalo de nuevo en un momento.");
+        btn.disabled = false;
+      });
+  });
+
+  $("btn-borrar-datos").addEventListener("click", function () {
+    try {
+      localStorage.removeItem("dlqd_usos");
+      localStorage.removeItem("dlqd_email");
+      localStorage.removeItem("dlqd_codigo");
+    } catch (e) { /* nada que borrar */ }
+    this.textContent = "Datos borrados de este navegador";
+    this.disabled = true;
   });
 
   /* ---------- Paso 3 · análisis ---------- */
@@ -171,6 +309,7 @@
     estado.modoBasico = esBasico;
     estado.analizado = true;
     estado.claveAnalisis = clave;
+    if (!esBasico) sumarUso();
     evento("dlqd_analisis", { modo: esBasico ? "basico" : "ia", destinatario: estado.destinatario, objetivo: estado.objetivo });
     pintarAnalisis();
   }
@@ -383,6 +522,8 @@
   $("btn-seguir-4").addEventListener("click", function () {
     var mensaje = $("texto-despues").value.trim() || estado.analisis.reformulacion;
     $("aviso-basico-5").hidden = !estado.modoBasico;
+    // Si ya tiene código (= ya está suscrita), el bloque de newsletter sobra.
+    $("titulo-newsletter").parentElement.hidden = Boolean(accesoGuardado());
     $("mensaje-final").textContent = mensaje;
     var lista = $("frases-ancla");
     lista.innerHTML = "";
@@ -417,17 +558,17 @@
     var btn = $("btn-newsletter");
     btn.disabled = true;
     $("newsletter-error").hidden = true;
-    fetch("/.netlify/functions/subscribe", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: email, group: "newsletter-home" }),
-    })
+    suscribir(email)
       .then(function (res) {
         if (!res.ok) throw new Error("subscribe " + res.status);
         $("form-newsletter").hidden = true;
         $("newsletter-ok").hidden = false;
-        evento("dlqd_alta_newsletter", {});
+        evento("dlqd_alta_newsletter", { via: "paso5" });
         evento("generate_lead", { origen: "app-dlqd" });
+        // Le dejamos también su código guardado para que la puerta no le salga.
+        return pedirCodigo(email).then(function (r) {
+          if (r && r.ok && r.codigo) guardarAcceso(email, r.codigo);
+        }).catch(function () { /* el código podrá pedirlo en la puerta */ });
       })
       .catch(function () {
         $("newsletter-error").hidden = false;

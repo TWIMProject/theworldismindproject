@@ -93,6 +93,24 @@
         </select>
       </div>
       <p class="error-campo" id="error-paso-2" role="alert" hidden>Responde a las dos primeras preguntas para seguir.</p>
+      <div class="puerta" id="puerta" hidden aria-labelledby="titulo-puerta">
+        <h3 id="titulo-puerta">Tu primer análisis fue el regalo</h3>
+        <p class="paso-ayuda">Para seguir usando la herramienta, déjame tu email y te doy tu código personal al instante — gratis. Es el mismo email de mis cartas: te escribo cuando algo merece tu tiempo, sin cadencia. Tu texto no se envía ni se guarda; solo el email.</p>
+        <div class="puerta-form" id="puerta-alta">
+          <label class="oculto-visual" for="puerta-email">Tu email</label>
+          <input type="email" id="puerta-email" placeholder="tu@email.com" autocomplete="email" inputmode="email">
+          <button type="button" class="btn btn-principal" id="btn-puerta">Dame mi código</button>
+        </div>
+        <div class="puerta-form" id="puerta-codigo" hidden>
+          <label class="oculto-visual" for="puerta-email-2">El email con el que te suscribiste</label>
+          <input type="email" id="puerta-email-2" placeholder="tu@email.com" autocomplete="email" inputmode="email">
+          <label class="oculto-visual" for="puerta-cod">Tu código</label>
+          <input type="text" id="puerta-cod" placeholder="Tu código (8 caracteres)" autocomplete="off" maxlength="8" style="text-transform:uppercase">
+          <button type="button" class="btn btn-principal" id="btn-puerta-entrar">Entrar</button>
+        </div>
+        <button type="button" class="enlace-discreto" id="puerta-alternar">Ya tengo mi código</button>
+        <p class="error-campo" id="puerta-error" role="alert" hidden></p>
+      </div>
       <div class="acciones">
         <button type="button" class="btn btn-secundario" data-volver="1">Volver</button>
         <button type="button" class="btn btn-principal" id="btn-analizar">Analizar mi texto</button>
@@ -186,6 +204,7 @@
   <footer class="pie">
     <p class="pie-aviso">Esta herramienta no sustituye un proceso terapéutico.</p>
     <p>Una herramienta de <a href="https://twimproject.com" rel="noopener">The World Is Mind Project — twimproject.com</a></p>
+    <p><button type="button" class="enlace-discreto" id="btn-borrar-datos">Borrar mis datos de este navegador</button></p>
   </footer>
 
   <script src="app.js" defer></script>

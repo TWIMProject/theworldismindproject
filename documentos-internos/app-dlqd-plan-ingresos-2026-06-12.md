@@ -25,7 +25,34 @@
 
 La app es la fuente de leads más barata del sistema. Cada email que capta vale lo que cuesta conseguirlo por Ads.
 
-## 2 · Motor A · Captación (ACTIVO desde hoy)
+## 1.bis · El diferencial frente a las IAs generalistas (análisis del 12 jun, segunda iteración)
+
+> Planteamiento de Daniel (verbatim): «ya existe la IA y esta app no hace algo diferente al resto de IAs como Claude, ChatGPT, Gemini [...] analiza si podemos crear algo que sí señalemos como diferencial y a su vez ver que si no es así, tiene entiendo que valer menos que las IAs pero no 0 €.»
+
+**Veredicto: el diferencial existe y es defendible, pero no es la tecnología — es el criterio clínico encapsulado.** Cinco capas, de más a menos copiable:
+
+1. **El método del vínculo** (doctrina de 8 reglas, `app-dlqd-principio-vinculo.md`): una IA generalista da «mensaje-yo» de manual (CNV estándar) — exactamente el enfoque que la doctrina de Daniel supera. El usuario de ChatGPT no sabe pedir lo que no sabe que existe.
+2. **El paso 3 es pedagógico**: ver TU texto con el ruido resaltado y explicado te enseña a verte. ChatGPT hace el trabajo por ti sin que aprendas nada; la app trabaja como un terapeuta: te muestra el patrón.
+3. **Ritual guiado sin deriva**: 5 pasos, un resultado, frases ancla para el después. ChatGPT chatea, repregunta, moraliza y se va por las ramas — justo lo que la persona activada no puede gestionar.
+4. **Privacidad estructural**: sin cuenta, sin historial, sin entrenar con tus datos. La gente no quiere pegar su conflicto de pareja en ChatGPT.
+5. **Firma clínica**: detrás hay un Psicólogo General Sanitario colegiado con consulta desde 2012, no una herramienta anónima.
+
+**Implicación de precio** (la intuición de Daniel es correcta): la app vale menos que una IA generalista pero no 0 €. Posicionamiento del Pase: **14,90 €/año = «menos que UN MES de ChatGPT (20 €), para todo el año, y hace una sola cosa mejor que ninguna»**. Refuerzo del diferencial a construir (Fase 2): packs por tipo de vínculo con profundidad clínica, seguimiento de la conversación real («pega su respuesta y prepara la siguiente»), y nombrar el método en la interfaz como sello TWIM.
+
+## 2 · Motor A · Captación · MODELO PUERTA-EMBAJADOR (refinado el 12 jun con el brainstorming de Daniel)
+
+> Propuesta de Daniel (verbatim): «regalar a los suscritos la opción de usar ellos la app para que ellos sean de forma indirecta nuestros mejores embajadores y que para los que vengan, tienen que suscribirse a la newsletter y se les envía el enlace para utilizar la app de forma gratuita [...] que cada uno tuviera su código de entrada, o que darse de alta con su email y contraseña.»
+
+**Refinamiento implementado** (mejora sobre la puerta dura: el «wow» va antes que la puerta):
+
+- **1 análisis completo de regalo, sin pedir nada.** El mejor anuncio de la app es usarla; una puerta antes del valor hace rebotar a la mayoría (y mataría el destino de Ads/SEO).
+- **Del 2º análisis en adelante: puerta de suscriptor.** Email → alta en newsletter → **código personal al instante** en la propia app (8 caracteres, ligado a su email).
+- **Sin contraseñas ni cuentas** (la opción email+contraseña del brainstorming se descarta: rompe la promesa de privacidad y añade infraestructura): el código es criptográfico (HMAC del email con secreto del servidor `DLQD_CODE_SECRET`), **sin base de datos**, revocable en bloque rotando el secreto. La emisión verifica contra MailerLite que el email está suscrito de verdad.
+- **Mecánica embajador**: el código es personal e intransferible en la práctica (va ligado al email); para que un amigo use la app tiene que suscribirse y obtener el suyo → cada usuario recurrente = un suscriptor, y cada recomendación = un lead. Los suscriptores actuales ya tienen acceso: con poner su email en la puerta, reciben su código (están en MailerLite).
+- Datos en el navegador limitados a contador de usos + email/código si se suscribe, con botón visible «Borrar mis datos de este navegador» (regla de la spec original). El texto de la conversación sigue sin guardarse jamás.
+- Medición: evento `dlqd_puerta_vista` + altas por vía (`puerta` / `paso5`) → la conversión de la puerta es EL kpi del Motor A.
+
+## 2.bis · Motor A · superficies de distribución (implementado el 12 jun, primera iteración)
 
 **Implementado el 12 jun (Claude, sin Daniel):**
 - Bloque de email opcional en el paso 5 («te escribo cuando algo merece tu tiempo» — promesa sin cadencia intacta, honestidad de privacidad: solo el email, jamás el texto) → grupo `newsletter-home` vía `subscribe.js`. *Pendiente técnico: migrar a grupo dedicado «Lead · App DLQD» cuando el conector MailerLite vuelva, para segmentar; mientras, el origen se distingue por GA4.*

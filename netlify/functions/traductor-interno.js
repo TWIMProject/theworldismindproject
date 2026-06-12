@@ -9,6 +9,8 @@
 // Si no hay clave configurada devuelve 503 con code "sin_clave" y el front
 // pasa a modo degradado (detección por reglas en el navegador).
 
+const crypto = require("node:crypto");
+
 const MODELO_POR_DEFECTO = "claude-haiku-4-5-20251001";
 
 const ALLOWED_ORIGINS = new Set([
@@ -123,6 +125,45 @@ function superaLimite(ip) {
   return cubo.n > LIMITE_POR_IP;
 }
 
+// Código personal de acceso (modelo embajador, 12 jun): derivado del email
+// con HMAC — sin base de datos, sin contraseñas, revocable rotando el secreto.
+function codigoParaEmail(email) {
+  const secreto = process.env.DLQD_CODE_SECRET;
+  if (!secreto) return null;
+  return crypto
+    .createHmac("sha256", secreto)
+    .update(email.trim().toLowerCase())
+    .digest("hex")
+    .slice(0, 8)
+    .toUpperCase();
+}
+
+// Comprueba contra MailerLite que el email está suscrito de verdad
+// (la puerta regala el acceso a quien se suscribe, no a cualquier email).
+async function estaSuscrito(email) {
+  const apiKey = process.env.MAILERLITE_API_KEY;
+  if (!apiKey) return { error: "config" };
+  let res;
+  try {
+    res = await fetch(
+      "https://connect.mailerlite.com/api/subscribers/" + encodeURIComponent(email.trim().toLowerCase()),
+      { headers: { Authorization: "Bearer " + apiKey, "Content-Type": "application/json" } }
+    );
+  } catch {
+    return { error: "red" };
+  }
+  if (res.status === 404) return { suscrito: false };
+  if (!res.ok) return { error: "upstream" };
+  let datos;
+  try {
+    datos = await res.json();
+  } catch {
+    return { error: "upstream" };
+  }
+  const estado = datos && datos.data && datos.data.status;
+  return { suscrito: estado !== "unsubscribed" && estado !== "bounced" && estado !== "junk" };
+}
+
 function respuesta(statusCode, body, origin) {
   return {
     statusCode,
@@ -194,6 +235,35 @@ exports.handler = async (event) => {
     return respuesta(400, { ok: false, code: "json_invalido" }, origin);
   }
 
+  // ---- Acciones de la puerta de acceso (no consumen API de Anthropic) ----
+  const accion = typeof datos.accion === "string" ? datos.accion : "";
+  const emailPuerta = typeof datos.email === "string" ? datos.email.trim() : "";
+
+  if (accion === "codigo") {
+    if (!emailPuerta || !emailPuerta.includes("@")) {
+      return respuesta(400, { ok: false, code: "campos" }, origin);
+    }
+    const sus = await estaSuscrito(emailPuerta);
+    if (sus.error) {
+      return respuesta(502, { ok: false, code: "sobrecarga", reintentable: true }, origin);
+    }
+    if (!sus.suscrito) {
+      return respuesta(200, { ok: false, code: "no_suscrito" }, origin);
+    }
+    const cod = codigoParaEmail(emailPuerta);
+    if (!cod) {
+      return respuesta(503, { ok: false, code: "config" }, origin);
+    }
+    return respuesta(200, { ok: true, codigo: cod }, origin);
+  }
+
+  if (accion === "validar") {
+    const codDado = typeof datos.codigo === "string" ? datos.codigo.trim().toUpperCase() : "";
+    const codReal = emailPuerta ? codigoParaEmail(emailPuerta) : null;
+    return respuesta(200, { ok: true, valido: Boolean(codReal) && codDado === codReal }, origin);
+  }
+
+  // ---- Acción por defecto: análisis ----
   const texto = typeof datos.texto === "string" ? datos.texto.trim() : "";
   const destinatario = typeof datos.destinatario === "string" ? datos.destinatario.trim() : "";
   const objetivo = typeof datos.objetivo === "string" ? datos.objetivo.trim() : "";
