@@ -294,6 +294,22 @@ textarea:focus, select:focus, input:focus, button:focus-visible {
   color: var(--green-deep);
 }
 
+/* Captación newsletter (paso 5) */
+.seccion-newsletter {
+  margin-top: 2.5rem;
+  background: var(--sand);
+  border: 1px solid var(--sand-dark);
+  border-radius: 0.75rem;
+  padding: 1.4rem 1.5rem;
+}
+.seccion-newsletter h3 { font-size: 1.35rem; margin-top: 0; }
+.form-newsletter { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.form-newsletter input[type="email"] {
+  flex: 1 1 14rem;
+  margin-top: 0;
+}
+.form-newsletter .btn { white-space: nowrap; }
+
 /* Pie */
 .pie {
   background: var(--sand);
