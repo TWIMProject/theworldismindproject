@@ -6,21 +6,26 @@
 
 Formato: sistema visual IG de marca (fondo crema, tipografía de marca, sin emojis).
 
+> **PNGs generados** (12 jun 2026): `contenido-rrss/app-dlqd-lanzamiento-ig/slide-01..07.png` (1080×1350, plantilla brutalist tipográfica, script en `documentos-internos/plantillas/generar-carrusel-app-dlqd.py`). Nota rearme 10 jun: la portada-escena con foto humana queda como mejora opcional en Canva si Daniel quiere maximizar alcance; estas láminas son publicables tal cual.
+
+> **v2 · 12 jun 2026, indicación de Daniel:** «Yo el carrusel lo haría más empezando por algo así como: seguro que te ha pasado, quieres explicar algo pero no te salen las palabras correctas, te salen palabras envueltas de ansiedad, de rabia, de frustración o llenas de negatividad por ejemplo». Slides 1-2 reescritos desde la identificación; la escena de borrar/reescribir pasa al slide 3.
+
 **Slide 1 (portada):**
-El mensaje que llevas días
-sin atreverte a enviar.
+Seguro que te ha pasado.
+Quieres explicar algo
+y no te salen las palabras correctas.
 
 **Slide 2:**
+Las palabras te salen envueltas
+de ansiedad, de rabia, de frustración.
+O cargadas de una negatividad
+que no querías poner ahí.
+
+**Slide 3:**
 Lo escribes. Lo borras.
 Lo vuelves a escribir.
 Y al final no envías nada —
 o envías el reproche entero.
-
-**Slide 3:**
-El problema no es lo que sientes.
-Es que el mensaje real va enterrado
-debajo del «siempre», del «nunca»
-y del «ya sé que me vas a decir que...».
 
 **Slide 4:**
 Cuando el otro lee un reproche,
