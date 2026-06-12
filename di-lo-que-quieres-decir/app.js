@@ -207,7 +207,9 @@
     estado.destinatario = destinatario;
     estado.objetivo = objetivo;
     estado.medio = $("medio").value;
-    if (!paseGuardado()) {
+    // Re-ver un análisis ya hecho (cacheado) no cuesta nada: sin puerta.
+    var esCacheado = estado.analizado && estado.claveAnalisis === claveDeEntrada();
+    if (!esCacheado && !paseGuardado()) {
       if (!accesoGuardado() && usosHechos() >= USOS_GRATIS) {
         $("puerta").hidden = false;
         evento("dlqd_puerta_vista", {});
