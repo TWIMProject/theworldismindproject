@@ -6,6 +6,8 @@
 
 Formato: sistema visual IG de marca (fondo crema, tipografía de marca, sin emojis).
 
+> **PNGs generados** (12 jun 2026): `contenido-rrss/app-dlqd-lanzamiento-ig/slide-01..07.png` (1080×1350, plantilla brutalist tipográfica, script en `documentos-internos/plantillas/generar-carrusel-app-dlqd.py`). Nota rearme 10 jun: la portada-escena con foto humana queda como mejora opcional en Canva si Daniel quiere maximizar alcance; estas láminas son publicables tal cual.
+
 **Slide 1 (portada):**
 El mensaje que llevas días
 sin atreverte a enviar.
