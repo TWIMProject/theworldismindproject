@@ -250,8 +250,11 @@
       localStorage.removeItem("dlqd_email");
       localStorage.removeItem("dlqd_codigo");
     } catch (e) { /* nada que borrar */ }
-    this.textContent = "Datos borrados de este navegador";
-    this.disabled = true;
+    var btn = this;
+    btn.textContent = "Datos borrados de este navegador";
+    setTimeout(function () {
+      btn.textContent = "Borrar mis datos de este navegador";
+    }, 2500);
   });
 
   /* ---------- Paso 3 · análisis ---------- */

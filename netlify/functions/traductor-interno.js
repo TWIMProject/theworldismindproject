@@ -160,7 +160,14 @@ async function estaSuscrito(email) {
   } catch {
     return { error: "upstream" };
   }
-  const estado = datos && datos.data && datos.data.status;
+  // El endpoint directo de MailerLite v3 acepta email como identificador y
+  // devuelve data como objeto; parseo tolerante por si la cuenta respondiera
+  // con la forma de listado (data como array).
+  const item = datos && datos.data
+    ? (Array.isArray(datos.data) ? datos.data[0] : datos.data)
+    : null;
+  if (!item) return { suscrito: false };
+  const estado = item.status;
   return { suscrito: estado !== "unsubscribed" && estado !== "bounced" && estado !== "junk" };
 }
 
