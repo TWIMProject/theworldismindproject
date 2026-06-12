@@ -46,6 +46,23 @@
   // con el Payment Link de Stripe; mientras esté vacío, no hay límite mensual.
   var URL_PASE = "";
   var LIMITE_SUSCRIPTOR_MES = 3;
+  // Plus de seguimiento (función de pago adicional al Pase). Mientras
+  // PLUS_ACTIVO sea false, su apartado no se muestra (precio por decidir).
+  var PLUS_ACTIVO = false;
+
+  function plusGuardado() {
+    try {
+      var em = localStorage.getItem("dlqd_email");
+      var p = localStorage.getItem("dlqd_plus");
+      return em && p ? { email: em, plus: p } : null;
+    } catch (e) { return null; }
+  }
+  function guardarPlus(email, plus) {
+    try {
+      localStorage.setItem("dlqd_email", email);
+      localStorage.setItem("dlqd_plus", plus);
+    } catch (e) { /* sin storage */ }
+  }
 
   function mesActual() {
     var d = new Date();
@@ -280,7 +297,10 @@
       .then(function (res) { return res.json(); })
       .then(function (r) {
         if (r && r.ok && r.valido) {
-          if (r.tipo === "pase") {
+          if (r.tipo === "plus") {
+            guardarPase(email, cod);
+            guardarPlus(email, cod);
+          } else if (r.tipo === "pase") {
             guardarPase(email, cod);
           } else {
             guardarAcceso(email, cod);
@@ -340,6 +360,7 @@
       localStorage.removeItem("dlqd_email");
       localStorage.removeItem("dlqd_codigo");
       localStorage.removeItem("dlqd_pase");
+      localStorage.removeItem("dlqd_plus");
     } catch (e) { /* nada que borrar */ }
     var btn = this;
     btn.textContent = "Datos borrados de este navegador";
@@ -388,7 +409,8 @@
           // Sin clave configurada: modo degradado por reglas, avisando con honestidad.
           aceptarAnalisis(analisisPorReglas(), true, clave);
         } else if (r.datos && r.datos.reintentable) {
-          mostrarErrorAnalisis("Ahora mismo hay mucha gente usando la herramienta y no hemos podido leer tu texto. Espera unos segundos y vuelve a intentarlo.");
+          // Resiliencia ante picos: también en sobrecarga se ofrece el modo básico.
+          mostrarErrorAnalisis("Ahora mismo hay mucha gente usando la herramienta y no hemos podido leer tu texto. Espera unos segundos y reinténtalo, o sigue con el análisis básico.", true);
         } else {
           mostrarErrorAnalisis("No hemos podido hacer el análisis completo. Puedes reintentarlo o seguir con el análisis básico.", true);
         }
@@ -618,6 +640,8 @@
     $("aviso-basico-5").hidden = !estado.modoBasico;
     // Si ya tiene código o Pase (= ya está suscrita), el bloque de newsletter sobra.
     $("titulo-newsletter").parentElement.hidden = Boolean(accesoGuardado() || paseGuardado());
+    // El seguimiento solo se muestra cuando el Plus esté a la venta y la persona lo tenga.
+    $("seccion-seguimiento").hidden = !(PLUS_ACTIVO && plusGuardado());
     $("mensaje-final").textContent = mensaje;
     var lista = $("frases-ancla");
     lista.innerHTML = "";
@@ -695,6 +719,61 @@
     $("objetivo-otro").value = ""; $("objetivo-otro").hidden = true;
     $("texto-despues").value = ""; delete $("texto-despues").dataset.origen;
     irAPaso(1);
+  });
+
+  /* ---------- Seguimiento de conversación (Plus) ---------- */
+
+  $("btn-seguimiento").addEventListener("click", function () {
+    var contestacion = $("texto-respuesta").value.trim();
+    var plus = plusGuardado();
+    if (!contestacion) {
+      $("seguimiento-error").textContent = "Pega primero lo que te ha respondido.";
+      $("seguimiento-error").hidden = false;
+      return;
+    }
+    if (!plus) return;
+    var btn = this;
+    btn.disabled = true;
+    $("seguimiento-error").hidden = true;
+    fetch(URL_MOTOR, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        accion: "seguimiento",
+        email: plus.email,
+        plus: plus.plus,
+        mensaje_enviado: $("mensaje-final").textContent,
+        respuesta: contestacion,
+        destinatario: estado.destinatario,
+        objetivo: estado.objetivo,
+        medio: estado.medio,
+      }),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (r) {
+        btn.disabled = false;
+        if (r && r.ok && r.resultado) {
+          $("seguimiento-lectura").textContent = r.resultado.lectura || "";
+          $("seguimiento-mensaje").textContent = r.resultado.siguiente_mensaje || "";
+          var lista = $("seguimiento-anclas");
+          lista.innerHTML = "";
+          (r.resultado.frases_ancla || []).forEach(function (f) {
+            var li = document.createElement("li");
+            li.textContent = f;
+            lista.appendChild(li);
+          });
+          $("seguimiento-resultado").hidden = false;
+          evento("dlqd_seguimiento", {});
+        } else {
+          $("seguimiento-error").textContent = "No se ha podido preparar el mensaje. Inténtalo de nuevo en un momento.";
+          $("seguimiento-error").hidden = false;
+        }
+      })
+      .catch(function () {
+        btn.disabled = false;
+        $("seguimiento-error").textContent = "No se ha podido conectar. Inténtalo de nuevo en un momento.";
+        $("seguimiento-error").hidden = false;
+      });
   });
 
   // Aviso interno en consola, sin datos del usuario.
