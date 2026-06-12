@@ -33,3 +33,5 @@ Hallazgos adicionales del repaso:
 ## Estado emocional CEO al cierre
 
 Frustración constructiva tras la prueba: reporta el problema con precisión clínica (3 capturas + diagnóstico en una frase) y espera iteración rápida. Patrón coherente con el perfil documentado: feedback directo, sin adornos, orientado a producto.
+
+**Actualización (12 jun, tarde):** Daniel creó la clave de Anthropic pero la pegó en el chat (contra la regla de seguridad del repo). Decisión operativa: se usó para desbloquear — `ANTHROPIC_API_KEY` creada en Netlify vía conector MCP (secret, scope functions, todos los contextos) y preview del PR #340 relanzado. **⚠️ PENDIENTE DE SEGURIDAD: rotar esa clave** — cuando la app esté validada, Daniel crea una clave nueva en console.anthropic.com, la pega directamente en el panel de Netlify (editar variable) y revoca la expuesta. Mismo tratamiento que el token de Netlify del 1 may (aún pendiente de revocar).
