@@ -144,21 +144,33 @@ function codigoParaEmail(email) {
 function paseParaEmail(email, caducidadYYMM) {
   const secreto = process.env.DLQD_PASE_SECRET;
   if (!secreto) return null;
-  const firma = crypto
+  return firmaConCaducidad(email, caducidadYYMM, secreto);
+}
+
+function paseValido(email, pase) {
+  return codigoConCaducidadValido(email, pase, process.env.DLQD_PASE_SECRET);
+}
+
+// Plus de seguimiento (12 jun, orden de Daniel): mismo formato que el Pase,
+// con secreto propio (DLQD_PLUS_SECRET) — se vende como adición al Pase.
+function plusValido(email, pase) {
+  return codigoConCaducidadValido(email, pase, process.env.DLQD_PLUS_SECRET);
+}
+
+function firmaConCaducidad(email, caducidadYYMM, secreto) {
+  return crypto
     .createHmac("sha256", secreto)
     .update(email.trim().toLowerCase() + "|" + caducidadYYMM)
     .digest("hex")
     .slice(0, 8)
-    .toUpperCase();
-  return firma + "-" + caducidadYYMM;
+    .toUpperCase() + "-" + caducidadYYMM;
 }
 
-function paseValido(email, pase) {
-  const partes = String(pase).trim().toUpperCase().split("-");
+function codigoConCaducidadValido(email, codigo, secreto) {
+  if (!secreto || !email) return false;
+  const partes = String(codigo).trim().toUpperCase().split("-");
   if (partes.length !== 2 || !/^\d{4}$/.test(partes[1])) return false;
-  const esperado = paseParaEmail(email, partes[1]);
-  if (!esperado || esperado !== partes[0] + "-" + partes[1]) return false;
-  // Caducidad YYMM: válido hasta el final de ese mes.
+  if (firmaConCaducidad(email, partes[1], secreto) !== partes[0] + "-" + partes[1]) return false;
   const ahora = new Date();
   const ahoraYYMM = String(ahora.getUTCFullYear() % 100).padStart(2, "0") +
     String(ahora.getUTCMonth() + 1).padStart(2, "0");
@@ -197,6 +209,32 @@ async function estaSuscrito(email) {
   const estado = item.status;
   return { suscrito: estado !== "unsubscribed" && estado !== "bounced" && estado !== "junk" };
 }
+
+// Seguimiento de conversación real (Plus, 12 jun): el usuario pega la
+// respuesta del otro y el motor prepara el siguiente mensaje con la misma
+// doctrina del vínculo. Función de pago — verificada en servidor.
+const PROMPT_SEGUIMIENTO = `Eres el motor de seguimiento de la herramienta «Di lo que quieres decir». La persona ya envió un mensaje cuidado y la otra parte ha respondido. Recibes un JSON con: "mensaje_enviado" (lo que la persona envió), "respuesta" (lo que la otra parte contestó, literal), "destinatario", "objetivo" y opcionalmente "medio".
+
+Tu trabajo, en tres partes (devuélvelas en el JSON de salida):
+
+1. "lectura": en 2-4 frases llanas, qué está pasando en la respuesta del otro — ¿hay apertura (aunque sea pequeña), defensa, contraataque, desvío del tema, o silencio emocional? Señala también lo aprovechable: el punto de la respuesta donde hay puerta. PROHIBIDO demonizar al otro o diagnosticarlo: se lee la respuesta, no a la persona. Si hay apertura, dilo claramente: que la persona no la pise por seguir defendiendo su punto.
+
+2. "siguiente_mensaje": el mensaje listo para enviar que continúa la conversación. Mismas reglas inviolables del motor principal: ENFOQUE VÍNCULO (la petición anclada en el nosotros, en plural de principio a fin, sin recentrar el yo), UNA IDEA CENTRAL (no respondas a todos los frentes de la respuesta del otro: elige el que sirve al objetivo), MUTUALIDAD INDIRECTA, prohibida la acusación negada, construido con el material real de los dos mensajes, registro de la persona, español de España (tuteo, jamás voseo; espejo solo si la persona escribe en otra variedad). Más corto que un primer mensaje: en una conversación viva, menos es más. Si el otro mostró apertura, el siguiente mensaje la RECOGE y agradece antes de pedir nada más. Si el otro atacó, el mensaje no devuelve el golpe ni se justifica: vuelve al vínculo y a la idea central.
+
+3. "frases_ancla": exactamente 2 frases cortas para los siguientes intercambios, adaptadas al medio.
+
+Reglas globales: no moralices, no diagnostiques, no uses tecnicismos, no inventes hechos. Responde únicamente con el JSON.`;
+
+const ESQUEMA_SEGUIMIENTO = {
+  type: "object",
+  properties: {
+    lectura: { type: "string" },
+    siguiente_mensaje: { type: "string" },
+    frases_ancla: { type: "array", items: { type: "string" } },
+  },
+  required: ["lectura", "siguiente_mensaje", "frases_ancla"],
+  additionalProperties: false,
+};
 
 function respuesta(statusCode, body, origin) {
   return {
@@ -310,7 +348,10 @@ exports.handler = async (event) => {
   if (accion === "validar") {
     const codDado = typeof datos.codigo === "string" ? datos.codigo.trim().toUpperCase() : "";
     if (codDado.includes("-")) {
-      // Formato de Pase de pago (XXXXXXXX-YYMM)
+      // Formato con caducidad (XXXXXXXX-YYMM): puede ser Pase o Plus.
+      if (emailPuerta && plusValido(emailPuerta, codDado)) {
+        return respuesta(200, { ok: true, valido: true, tipo: "plus" }, origin);
+      }
       const valido = Boolean(emailPuerta) && paseValido(emailPuerta, codDado);
       return respuesta(200, { ok: true, valido, tipo: "pase" }, origin);
     }
@@ -355,6 +396,70 @@ exports.handler = async (event) => {
     const cadYYMM = String(cad.getUTCFullYear() % 100).padStart(2, "0") +
       String(cad.getUTCMonth() + 1).padStart(2, "0");
     return respuesta(200, { ok: true, pase: paseParaEmail(emailPago, cadYYMM), email: emailPago }, origin);
+  }
+
+  // ---- Seguimiento de conversación (función Plus, verificada en servidor) ----
+  if (accion === "seguimiento") {
+    const plusDado = typeof datos.plus === "string" ? datos.plus.trim() : "";
+    if (!emailPuerta || !plusValido(emailPuerta, plusDado)) {
+      return respuesta(403, { ok: false, code: "plus_requerido" }, origin);
+    }
+    const enviado = typeof datos.mensaje_enviado === "string" ? datos.mensaje_enviado.trim() : "";
+    const contestacion = typeof datos.respuesta === "string" ? datos.respuesta.trim() : "";
+    const dest = typeof datos.destinatario === "string" ? datos.destinatario.trim() : "";
+    const obj = typeof datos.objetivo === "string" ? datos.objetivo.trim() : "";
+    const med = typeof datos.medio === "string" ? datos.medio.trim().slice(0, 60) : "";
+    if (!enviado || !contestacion || !dest || !obj) {
+      return respuesta(400, { ok: false, code: "campos" }, origin);
+    }
+    if ((enviado.length + contestacion.length) > 20000) {
+      return respuesta(413, { ok: false, code: "texto_largo" }, origin);
+    }
+    const modeloSeg = process.env.TRADUCTOR_INTERNO_MODEL || MODELO_POR_DEFECTO;
+    let upSeg;
+    try {
+      upSeg = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": process.env.ANTHROPIC_API_KEY || "",
+          "anthropic-version": "2023-06-01",
+        },
+        body: JSON.stringify({
+          model: modeloSeg,
+          max_tokens: 3000,
+          system: PROMPT_SEGUIMIENTO,
+          messages: [{
+            role: "user",
+            content: JSON.stringify({ mensaje_enviado: enviado, respuesta: contestacion, destinatario: dest, objetivo: obj, medio: med }),
+          }],
+          output_config: { format: { type: "json_schema", schema: ESQUEMA_SEGUIMIENTO } },
+        }),
+      });
+    } catch {
+      return respuesta(502, { ok: false, code: "red", reintentable: true }, origin);
+    }
+    if (!upSeg.ok) {
+      if (upSeg.status === 429 || upSeg.status >= 500) {
+        return respuesta(502, { ok: false, code: "sobrecarga", reintentable: true }, origin);
+      }
+      return respuesta(500, { ok: false, code: "api" }, origin);
+    }
+    let msjSeg;
+    try {
+      msjSeg = await upSeg.json();
+    } catch {
+      return respuesta(502, { ok: false, code: "respuesta_invalida", reintentable: true }, origin);
+    }
+    const bloqueSeg = Array.isArray(msjSeg.content) ? msjSeg.content.find((b) => b.type === "text") : null;
+    if (!bloqueSeg || msjSeg.stop_reason === "refusal") {
+      return respuesta(500, { ok: false, code: "api" }, origin);
+    }
+    try {
+      return respuesta(200, { ok: true, resultado: JSON.parse(bloqueSeg.text) }, origin);
+    } catch {
+      return respuesta(502, { ok: false, code: "respuesta_invalida", reintentable: true }, origin);
+    }
   }
 
   // ---- Acción por defecto: análisis ----

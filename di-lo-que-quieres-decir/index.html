@@ -198,6 +198,21 @@
         <p class="paso-ayuda">Tres frases para volver al tema cuando el otro desvíe o tú te actives. Léelas un par de veces antes de hablar.</p>
         <ul class="frases-ancla" id="frases-ancla"></ul>
       </section>
+      <section class="seccion-ancla" id="seccion-seguimiento" hidden aria-labelledby="titulo-seguimiento">
+        <h3 id="titulo-seguimiento">¿La conversación ha seguido?</h3>
+        <p class="paso-ayuda">Pega lo que te ha respondido y preparo tu siguiente mensaje, cuidando el vínculo también en caliente.</p>
+        <label class="oculto-visual" for="texto-respuesta">Lo que te ha respondido</label>
+        <textarea id="texto-respuesta" rows="5" placeholder="Pega aquí su respuesta, tal cual te llegó"></textarea>
+        <div class="acciones">
+          <button type="button" class="btn btn-principal" id="btn-seguimiento">Preparar mi siguiente mensaje</button>
+        </div>
+        <p class="error-campo" id="seguimiento-error" role="alert" hidden></p>
+        <div id="seguimiento-resultado" hidden aria-live="polite">
+          <p class="paso-ayuda" id="seguimiento-lectura"></p>
+          <div class="mensaje-final" id="seguimiento-mensaje"></div>
+          <ul class="frases-ancla" id="seguimiento-anclas"></ul>
+        </div>
+      </section>
       <section class="seccion-newsletter" aria-labelledby="titulo-newsletter">
         <h3 id="titulo-newsletter">¿Te ha servido?</h3>
         <p class="paso-ayuda">De vez en cuando escribo una carta sobre vínculos y conversaciones que cuestan. Sin cadencia: te escribo cuando algo merece tu tiempo. Tu texto de hoy no se envía ni se guarda — solo tu email.</p>
