@@ -244,18 +244,20 @@
     return "siento que no me tienes en cuenta";
   }
 
+  // Peticiones con enfoque vínculo (sello de la herramienta): el sujeto que
+  // importa es el «nosotros», no el déficit de quien habla ni la conducta del otro.
   var PETICIONES = {
-    "que me entienda": "Necesito que entiendas cómo me siento. ¿Puedes escucharme un momento, sin interrumpirme, aunque no estés de acuerdo?",
-    "que cambie algo concreto": "Necesito que algo cambie de verdad. ¿Podemos acordar una cosa concreta y probarla esta semana?",
-    "que nos reconciliemos": "Me importas y quiero que estemos bien. ¿Podemos hablarlo con calma, sin guardarnos nada?",
-    "poner un límite": "Necesito que esto no se repita. Te lo digo en serio y con respeto, porque me hace daño.",
-    "pedir algo": "Quiero pedirte una cosa concreta y me gustaría que la pensaras de verdad antes de contestar.",
+    "que me entienda": "Para lo que tenemos, me importa mucho que entiendas cómo lo vivo yo. ¿Puedes escucharme un momento, aunque no estés de acuerdo?",
+    "que cambie algo concreto": "Para cuidar lo que tenemos, necesito que algo cambie de verdad. ¿Acordamos una cosa concreta y la probamos esta semana?",
+    "que nos reconciliemos": "Lo que tenemos me importa más que esta pelea. ¿Lo hablamos con calma, sin guardarnos nada?",
+    "poner un límite": "Precisamente porque me importa lo que tenemos, necesito que esto no se repita. Te lo digo en serio y con respeto.",
+    "pedir algo": "Para cuidar lo que tenemos, quiero pedirte una cosa concreta. Piénsala de verdad antes de contestar.",
   };
 
   // Variantes para mensaje escrito: sin verbos que empujen a verse o hablar en voz alta.
   var PETICIONES_ESCRITO = {
-    "que me entienda": "Necesito que entiendas cómo me siento. Léeme entero antes de contestar, aunque no estés de acuerdo.",
-    "que nos reconciliemos": "Me importas y quiero que estemos bien. Contéstame cuando puedas hacerlo con calma, sin guardarte nada.",
+    "que me entienda": "Para lo que tenemos, me importa mucho que entiendas cómo lo vivo yo. Léeme entero antes de contestar, aunque no estés de acuerdo.",
+    "que nos reconciliemos": "Lo que tenemos me importa más que esta pelea. Contéstame cuando puedas hacerlo con calma, sin guardarte nada.",
   };
 
   function reformulacionPorReglas() {
@@ -281,7 +283,7 @@
 
   var ANCLA_POR_OBJETIVO = {
     "que me entienda": "No busco tener razón: busco que entiendas cómo lo vivo yo.",
-    "que cambie algo concreto": "Solo te pido un cambio concreto. No te estoy juzgando como persona.",
+    "que cambie algo concreto": "Te pido un cambio concreto por nosotros. No te estoy juzgando como persona.",
     "que nos reconciliemos": "Te estoy diciendo esto porque quiero que estemos bien, no para reabrir la herida.",
     "poner un límite": "Esto es un límite para mí y necesito que lo respetes.",
     "pedir algo": "Te lo estoy pidiendo a ti porque confío en ti.",
@@ -290,7 +292,7 @@
   function frasesAnclaPorReglas() {
     return [
       "No te estoy atacando: te estoy pidiendo algo concreto.",
-      "Esto es importante para mí. No quiero que acabemos hablando de otra cosa.",
+      "Esto no va de quién tiene razón: va de cuidar lo que tenemos.",
       ANCLA_POR_OBJETIVO[estado.objetivo] ||
         "Volvamos a lo que te estaba diciendo: " + estado.objetivo + ".",
     ];
