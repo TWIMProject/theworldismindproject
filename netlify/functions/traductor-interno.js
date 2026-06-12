@@ -138,6 +138,33 @@ function codigoParaEmail(email) {
     .toUpperCase();
 }
 
+// Pase de pago (freemium, 12 jun): código con caducidad incorporada en el
+// propio formato («XXXXXXXX-YYMM»), también sin base de datos. La caducidad
+// va dentro del HMAC: no se puede alargar editando el sufijo.
+function paseParaEmail(email, caducidadYYMM) {
+  const secreto = process.env.DLQD_PASE_SECRET;
+  if (!secreto) return null;
+  const firma = crypto
+    .createHmac("sha256", secreto)
+    .update(email.trim().toLowerCase() + "|" + caducidadYYMM)
+    .digest("hex")
+    .slice(0, 8)
+    .toUpperCase();
+  return firma + "-" + caducidadYYMM;
+}
+
+function paseValido(email, pase) {
+  const partes = String(pase).trim().toUpperCase().split("-");
+  if (partes.length !== 2 || !/^\d{4}$/.test(partes[1])) return false;
+  const esperado = paseParaEmail(email, partes[1]);
+  if (!esperado || esperado !== partes[0] + "-" + partes[1]) return false;
+  // Caducidad YYMM: válido hasta el final de ese mes.
+  const ahora = new Date();
+  const ahoraYYMM = String(ahora.getUTCFullYear() % 100).padStart(2, "0") +
+    String(ahora.getUTCMonth() + 1).padStart(2, "0");
+  return partes[1] >= ahoraYYMM;
+}
+
 // Comprueba contra MailerLite que el email está suscrito de verdad
 // (la puerta regala el acceso a quien se suscribe, no a cualquier email).
 async function estaSuscrito(email) {
@@ -266,8 +293,52 @@ exports.handler = async (event) => {
 
   if (accion === "validar") {
     const codDado = typeof datos.codigo === "string" ? datos.codigo.trim().toUpperCase() : "";
+    if (codDado.includes("-")) {
+      // Formato de Pase de pago (XXXXXXXX-YYMM)
+      const valido = Boolean(emailPuerta) && paseValido(emailPuerta, codDado);
+      return respuesta(200, { ok: true, valido, tipo: "pase" }, origin);
+    }
     const codReal = emailPuerta ? codigoParaEmail(emailPuerta) : null;
-    return respuesta(200, { ok: true, valido: Boolean(codReal) && codDado === codReal }, origin);
+    return respuesta(200, { ok: true, valido: Boolean(codReal) && codDado === codReal, tipo: "suscriptor" }, origin);
+  }
+
+  // Canje del Pase tras el pago: verifica la sesión de Checkout contra Stripe
+  // (pagada y del precio correcto) y devuelve el Pase ligado al email del pago.
+  if (accion === "pase") {
+    const sessionId = typeof datos.session_id === "string" ? datos.session_id.trim() : "";
+    const stripeKey = process.env.STRIPE_SECRET_KEY;
+    const precioEsperado = process.env.DLQD_PASE_PRICE_ID;
+    if (!sessionId || !/^cs_/.test(sessionId)) {
+      return respuesta(400, { ok: false, code: "campos" }, origin);
+    }
+    if (!stripeKey || !precioEsperado || !process.env.DLQD_PASE_SECRET) {
+      return respuesta(503, { ok: false, code: "config" }, origin);
+    }
+    let sesion;
+    try {
+      const r = await fetch(
+        "https://api.stripe.com/v1/checkout/sessions/" + encodeURIComponent(sessionId) + "?expand[]=line_items",
+        { headers: { Authorization: "Bearer " + stripeKey } }
+      );
+      if (!r.ok) {
+        return respuesta(200, { ok: false, code: "pago_no_encontrado" }, origin);
+      }
+      sesion = await r.json();
+    } catch {
+      return respuesta(502, { ok: false, code: "red", reintentable: true }, origin);
+    }
+    const pagada = sesion.payment_status === "paid";
+    const lineas = (sesion.line_items && sesion.line_items.data) || [];
+    const precioOk = lineas.some((l) => l.price && l.price.id === precioEsperado);
+    const emailPago = sesion.customer_details && sesion.customer_details.email;
+    if (!pagada || !precioOk || !emailPago) {
+      return respuesta(200, { ok: false, code: "pago_no_valido" }, origin);
+    }
+    const cad = new Date();
+    cad.setUTCMonth(cad.getUTCMonth() + 12);
+    const cadYYMM = String(cad.getUTCFullYear() % 100).padStart(2, "0") +
+      String(cad.getUTCMonth() + 1).padStart(2, "0");
+    return respuesta(200, { ok: true, pase: paseParaEmail(emailPago, cadYYMM), email: emailPago }, origin);
   }
 
   // ---- Acción por defecto: análisis ----

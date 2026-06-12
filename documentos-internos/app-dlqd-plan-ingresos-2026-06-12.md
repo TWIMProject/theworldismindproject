@@ -66,11 +66,19 @@ La app es la fuente de leads más barata del sistema. Cada email que capta vale 
 
 **SEO/AEO (Claude, próxima sesión):** 1 insight «Cómo decir lo que quieres decir sin que acabe en pelea» (jerga+glosa, concreción) enlazando la app + schema.org `WebApplication` + entrada en `llms.txt`. La app puede rankear por «cómo decirle a mi pareja que…» — búsquedas de intención altísima.
 
-## 3 · Motor B · Freemium (OCTUBRE 2026 · con compuerta)
+## 3 · Motor B · Freemium (ADELANTADO · orden inviolable de Daniel, 12 jun 15:48)
 
-**Por qué no ahora:** paywall sin tráfico = fricción sin ingresos que además mata el Motor A. Doctrina 10 jun: la lista precede al producto.
+> Verbatim: «Inviolable: monta ya el freemium [...] los usuarios merecen esto que les estamos creando porque va a ayudar una barbaridad a mejorar las relaciones personales.»
 
-**Compuerta de activación (cualquiera de las dos):** ≥750 análisis/mes en GA4 o ≥1.500 usuarios acumulados. Si no se alcanza en octubre, se revisa en diciembre — no se fuerza.
+**Estado (12 jun, tarde): maquinaria COMPLETA y dormida.** Implementado: códigos de Pase con caducidad incorporada (HMAC `email|YYMM`, sin BD, inalargables), límite de 3 análisis/mes para suscriptores (contador mensual local), panel de compra en la app, canje automático al volver de Stripe (verificación de la Checkout Session: pagada + precio correcto) y entrada manual «Ya tengo mi Pase». El interruptor es `URL_PASE` en `app.js`: mientras esté vacío, los suscriptores siguen sin límite (cero riesgo al mergear).
+
+**Para encender el cobro (10 min, una vez):**
+1. Stripe → Product catalog → Add product: nombre exacto `Infoproducto · Di lo que quieres decir · Pase 12 meses` · 14,90 € · pago único · metadata `funcion: infoproducto`, `taller_id: app-dlqd`. (El conector MCP de Stripe pedía re-autorización el 12 jun; si Daniel lo re-autoriza, Claude lo crea todo.)
+2. Crear Payment Link de ese precio · After payment → redirect a `https://twimproject.com/di-lo-que-quieres-decir/?pase_sesion={CHECKOUT_SESSION_ID}`.
+3. Pasar a Claude el `price_...` y la URL del link → Claude configura `DLQD_PASE_PRICE_ID` en Netlify y rellena `URL_PASE` (1 commit).
+4. **`STRIPE_SECRET_KEY` en Netlify** (Developers → API keys → pegar en el panel, jamás por chat). Hallazgo del 12 jun: NO existe pese a que `stripe-webhook.js` la declara requerida — sin ella tampoco funcionaba la entrega de productos digitales existente.
+
+La compuerta de tráfico de octubre deja de ser bloqueante y pasa a ser **métrica de seguimiento** (conversión del panel: `dlqd_pase_visto` → `dlqd_pase_canjeado`).
 
 **Diseño propuesto** (decisión final de Daniel en octubre, con datos):
 - **Gratis:** 3 análisis completos/mes (contador localStorage, límite blando) — suficiente para resolver LA conversación que te trajo.

@@ -40,6 +40,41 @@
      total en el pie. */
 
   var USOS_GRATIS = 1;
+  // Freemium (Motor B, orden de Daniel 12 jun): los suscriptores tienen
+  // LIMITE_SUSCRIPTOR_MES análisis gratis al mes; el Pase (pago único,
+  // 12 meses) quita el límite. El cobro se enciende rellenando URL_PASE
+  // con el Payment Link de Stripe; mientras esté vacío, no hay límite mensual.
+  var URL_PASE = "";
+  var LIMITE_SUSCRIPTOR_MES = 3;
+
+  function mesActual() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+  }
+  function usosEsteMes() {
+    try {
+      var raw = JSON.parse(localStorage.getItem("dlqd_usos_mes") || "{}");
+      return raw.mes === mesActual() ? (Number(raw.n) || 0) : 0;
+    } catch (e) { return 0; }
+  }
+  function sumarUsoMes() {
+    try {
+      localStorage.setItem("dlqd_usos_mes", JSON.stringify({ mes: mesActual(), n: usosEsteMes() + 1 }));
+    } catch (e) { /* sin storage */ }
+  }
+  function paseGuardado() {
+    try {
+      var em = localStorage.getItem("dlqd_email");
+      var p = localStorage.getItem("dlqd_pase");
+      return em && p ? { email: em, pase: p } : null;
+    } catch (e) { return null; }
+  }
+  function guardarPase(email, pase) {
+    try {
+      localStorage.setItem("dlqd_email", email);
+      localStorage.setItem("dlqd_pase", pase);
+    } catch (e) { /* sin storage */ }
+  }
 
   function usosHechos() {
     try { return Number(localStorage.getItem("dlqd_usos") || "0") || 0; } catch (e) { return 0; }
@@ -155,11 +190,18 @@
     estado.destinatario = destinatario;
     estado.objetivo = objetivo;
     estado.medio = $("medio").value;
-    if (usosHechos() >= USOS_GRATIS && !accesoGuardado()) {
-      $("puerta").hidden = false;
-      evento("dlqd_puerta_vista", {});
-      $("puerta-email").focus();
-      return;
+    if (!paseGuardado()) {
+      if (!accesoGuardado() && usosHechos() >= USOS_GRATIS) {
+        $("puerta").hidden = false;
+        evento("dlqd_puerta_vista", {});
+        $("puerta-email").focus();
+        return;
+      }
+      if (accesoGuardado() && URL_PASE && usosEsteMes() >= LIMITE_SUSCRIPTOR_MES) {
+        $("panel-pase").hidden = false;
+        evento("dlqd_pase_visto", {});
+        return;
+      }
     }
     irAPaso(3);
     analizar();
@@ -231,7 +273,11 @@
       .then(function (res) { return res.json(); })
       .then(function (r) {
         if (r && r.ok && r.valido) {
-          guardarAcceso(email, cod);
+          if (r.tipo === "pase") {
+            guardarPase(email, cod);
+          } else {
+            guardarAcceso(email, cod);
+          }
           continuarTrasPuerta();
         } else {
           errorPuerta("Ese código no coincide con ese email. Revísalos o pide un código nuevo.");
@@ -244,11 +290,49 @@
       });
   });
 
+  /* ---------- Pase de pago (freemium) ---------- */
+
+  if (URL_PASE) {
+    $("enlace-pase").href = URL_PASE;
+  }
+
+  $("btn-pase-tengo").addEventListener("click", function () {
+    // Reutiliza la puerta en modo «ya tengo mi código»: valida también pases.
+    $("panel-pase").hidden = true;
+    $("puerta").hidden = false;
+    if ($("puerta-codigo").hidden) $("puerta-alternar").click();
+    $("puerta-email-2").focus();
+  });
+
+  // Vuelta de Stripe: canjear la sesión de pago por el Pase.
+  (function canjearPaseSiVuelveDeStripe() {
+    var params = new URLSearchParams(window.location.search);
+    var sesion = params.get("pase_sesion");
+    if (!sesion) return;
+    history.replaceState(null, "", window.location.pathname);
+    fetch(URL_MOTOR, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ accion: "pase", session_id: sesion }),
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (r) {
+        if (r && r.ok && r.pase && r.email) {
+          guardarPase(r.email, r.pase);
+          evento("dlqd_pase_canjeado", {});
+          $("aviso-pase-ok").hidden = false;
+        }
+      })
+      .catch(function () { /* podrá canjearlo con «ya tengo mi código» */ });
+  })();
+
   $("btn-borrar-datos").addEventListener("click", function () {
     try {
       localStorage.removeItem("dlqd_usos");
+      localStorage.removeItem("dlqd_usos_mes");
       localStorage.removeItem("dlqd_email");
       localStorage.removeItem("dlqd_codigo");
+      localStorage.removeItem("dlqd_pase");
     } catch (e) { /* nada que borrar */ }
     var btn = this;
     btn.textContent = "Datos borrados de este navegador";
@@ -312,7 +396,7 @@
     estado.modoBasico = esBasico;
     estado.analizado = true;
     estado.claveAnalisis = clave;
-    if (!esBasico) sumarUso();
+    if (!esBasico) { sumarUso(); sumarUsoMes(); }
     evento("dlqd_analisis", { modo: esBasico ? "basico" : "ia", destinatario: estado.destinatario, objetivo: estado.objetivo });
     pintarAnalisis();
   }
@@ -525,8 +609,8 @@
   $("btn-seguir-4").addEventListener("click", function () {
     var mensaje = $("texto-despues").value.trim() || estado.analisis.reformulacion;
     $("aviso-basico-5").hidden = !estado.modoBasico;
-    // Si ya tiene código (= ya está suscrita), el bloque de newsletter sobra.
-    $("titulo-newsletter").parentElement.hidden = Boolean(accesoGuardado());
+    // Si ya tiene código o Pase (= ya está suscrita), el bloque de newsletter sobra.
+    $("titulo-newsletter").parentElement.hidden = Boolean(accesoGuardado() || paseGuardado());
     $("mensaje-final").textContent = mensaje;
     var lista = $("frases-ancla");
     lista.innerHTML = "";

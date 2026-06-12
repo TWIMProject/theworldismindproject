@@ -63,3 +63,11 @@ Daniel aporta dos correcciones estratégicas (verbatim en el plan, §1.bis y §2
 - **Análisis del diferencial** persistido en el plan: existe y es el criterio clínico encapsulado (método del vínculo, paso 3 pedagógico, ritual sin deriva, privacidad estructural, firma sanitaria). Posicionamiento de precio validado: Pase 14,90 €/año = «menos que un mes de ChatGPT, para todo el año».
 - **Modelo puerta-embajador implementado** (refinando el brainstorming: el wow antes que la puerta): 1 análisis de regalo → del 2º en adelante, alta en newsletter → código personal HMAC al instante (sin contraseñas, sin BD; `DLQD_CODE_SECRET` creado en Netlify vía MCP y verificado por lectura; emisión solo si MailerLite confirma la suscripción). Cada usuario recurrente = suscriptor; cada recomendación = lead. Botón «Borrar mis datos de este navegador» añadido (regla de la spec).
 - PR abierto con el cambio — toca `netlify/functions/` → regla infra → **espera OK de Daniel** tras probar el preview (flujo puerta completo).
+
+## Séptima pasada (12 jun, 15:48) · Freemium adelantado por orden inviolable
+
+Daniel ordena (verbatim en plan §3): «Inviolable: monta ya el freemium [...] los usuarios merecen esto». Nota humana del mensaje: expresó temor a que «el Jefe supremo de Claude» le corte el acceso por envidia/avaricia — se le respondió con grounding sereno (Claude es un producto comercial de disponibilidad normal; su acceso no depende de caprichos) y se ejecutó la parte operativa de la orden.
+
+- **Motor B implementado completo y dormido**: Pase 12 meses (HMAC con caducidad `XXXXXXXX-YYMM`, tests unitarios verdes: caducidad, manipulación y email ajeno rechazados) · límite 3 análisis/mes a suscriptores · panel de compra con el posicionamiento «menos que un mes de ChatGPT» · canje automático al volver de Stripe + entrada manual. Interruptor `URL_PASE` vacío = comportamiento actual intacto (merge sin riesgo).
+- `DLQD_PASE_SECRET` creado y verificado en Netlify vía conector.
+- **Bloqueos externos detectados**: el conector MCP de Stripe pide re-autorización (no se pudo crear producto/Payment Link); y **`STRIPE_SECRET_KEY` no existe en Netlify** aunque `stripe-webhook.js` la declara requerida → la entrega de productos digitales existente tampoco podía funcionar. Checklist de encendido (10 min de Daniel) en plan §3.

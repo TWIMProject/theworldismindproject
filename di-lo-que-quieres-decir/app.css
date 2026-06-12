@@ -306,7 +306,7 @@ textarea:focus, select:focus, input:focus, button:focus-visible {
 .puerta h3 { margin-top: 0; font-size: 1.35rem; }
 .puerta-form { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.6rem; }
 .puerta-form input { flex: 1 1 12rem; margin-top: 0; }
-.puerta-form .btn { white-space: nowrap; }
+.puerta-form .btn { white-space: nowrap; text-decoration: none; display: inline-block; }
 .enlace-discreto {
   background: none;
   border: none;
