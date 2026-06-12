@@ -735,6 +735,8 @@
     var btn = this;
     btn.disabled = true;
     $("seguimiento-error").hidden = true;
+    // Limpiar el resultado anterior para no mezclarlo con la nueva petición.
+    $("seguimiento-resultado").hidden = true;
     fetch(URL_MOTOR, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -757,7 +759,8 @@
           $("seguimiento-mensaje").textContent = r.resultado.siguiente_mensaje || "";
           var lista = $("seguimiento-anclas");
           lista.innerHTML = "";
-          (r.resultado.frases_ancla || []).forEach(function (f) {
+          // El esquema de la API no permite fijar longitud de array: se normaliza aquí.
+          (r.resultado.frases_ancla || []).slice(0, 2).forEach(function (f) {
             var li = document.createElement("li");
             li.textContent = f;
             lista.appendChild(li);
