@@ -75,7 +75,16 @@
         <label class="oculto-visual" for="objetivo-otro">Especifica qué quieres que pase</label>
         <input type="text" id="objetivo-otro" placeholder="¿Qué quieres que pase?" hidden autocomplete="off">
       </div>
-      <p class="error-campo" id="error-paso-2" role="alert" hidden>Responde a las dos preguntas para seguir.</p>
+      <div class="campo">
+        <label for="medio">¿Cómo se lo quieres decir? <span class="opcional">(opcional)</span></label>
+        <select id="medio">
+          <option value="" selected>Todavía no lo sé</option>
+          <option value="en persona">En persona</option>
+          <option value="por mensaje escrito">Por mensaje escrito (WhatsApp o similar)</option>
+          <option value="por llamada">Por llamada o videollamada</option>
+        </select>
+      </div>
+      <p class="error-campo" id="error-paso-2" role="alert" hidden>Responde a las dos primeras preguntas para seguir.</p>
       <div class="acciones">
         <button type="button" class="btn btn-secundario" data-volver="1">Volver</button>
         <button type="button" class="btn btn-principal" id="btn-analizar">Analizar mi texto</button>
@@ -116,6 +125,7 @@
     <section class="paso" id="paso-4" aria-labelledby="titulo-paso-4" hidden>
       <h2 id="titulo-paso-4">Tu mensaje, sin el ruido</h2>
       <p class="paso-ayuda">Misma intención, mismas ganas, pero dicho de forma que el otro pueda escucharlo. Edítalo hasta que suene a ti.</p>
+      <p class="aviso-modo-basico" id="aviso-basico-4" hidden>Esto es la plantilla general del modo básico, no un mensaje hecho con tus palabras. Úsala solo como guion de partida y edítala a fondo. Con el análisis completo activado, esta versión se redacta a partir de tu propio texto.</p>
       <div class="comparativa">
         <div class="columna">
           <h3>Antes</h3>
@@ -136,6 +146,7 @@
     <!-- PASO 5 · Ensayo y cierre -->
     <section class="paso" id="paso-5" aria-labelledby="titulo-paso-5" hidden>
       <h2 id="titulo-paso-5">Listo para decirlo</h2>
+      <p class="aviso-modo-basico" id="aviso-basico-5" hidden>Este mensaje viene del modo básico (una plantilla general). Léelo bien y hazlo tuyo antes de enviarlo.</p>
       <div class="mensaje-final" id="mensaje-final" tabindex="-1"></div>
       <div class="acciones acciones-copiar">
         <button type="button" class="btn btn-principal" id="btn-copiar">Copiar al portapapeles</button>
