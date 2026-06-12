@@ -348,7 +348,9 @@ exports.handler = async (event) => {
     // entregarlo en pantalla para no dejar a nadie fuera.
     if (process.env.NETLIFY_EMAILS_SECRET) {
       try {
-        const base = process.env.URL || "https://twimproject.com";
+        // DEPLOY_PRIME_URL apunta al deploy actual (preview/branch incluidos);
+        // URL apunta al dominio primario. Sin barra final para componer la ruta.
+        const base = (process.env.DEPLOY_PRIME_URL || process.env.URL || "https://twimproject.com").replace(/\/$/, "");
         const envio = await fetch(base + "/.netlify/functions/emails/codigo-dlqd", {
           method: "POST",
           headers: {

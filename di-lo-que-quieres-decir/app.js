@@ -247,6 +247,7 @@
     $("puerta-alta").hidden = verCodigo;
     this.textContent = verCodigo ? "Quiero un código nuevo" : "Ya tengo mi código";
     $("puerta-error").hidden = true;
+    $("puerta-enviado").hidden = true;
   });
 
   $("btn-puerta").addEventListener("click", function () {
@@ -263,11 +264,13 @@
       .then(function (r) {
         if (r && r.ok && r.enviado) {
           // Entrega segura: el código ha ido a su correo. Solo su dueño lo verá.
+          // El botón y el alternador quedan disponibles para reintentar si no llega.
           evento("dlqd_alta_newsletter", { via: "puerta" });
           evento("generate_lead", { origen: "app-dlqd-puerta" });
+          btn.disabled = false;
           $("puerta-alta").hidden = true;
-          $("puerta-alternar").hidden = true;
           $("puerta-codigo").hidden = false;
+          $("puerta-alternar").textContent = "Quiero un código nuevo";
           $("puerta-email-2").value = email;
           $("puerta-error").hidden = true;
           $("puerta-enviado").hidden = false;
