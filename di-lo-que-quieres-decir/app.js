@@ -27,6 +27,13 @@
 
   function $(id) { return document.getElementById(id); }
 
+  // Medición anónima de uso (GA4). Jamás se envía el texto del usuario.
+  function evento(nombre, params) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", nombre, params || {});
+    }
+  }
+
   function escaparHTML(s) {
     return s.replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -164,6 +171,7 @@
     estado.modoBasico = esBasico;
     estado.analizado = true;
     estado.claveAnalisis = clave;
+    evento("dlqd_analisis", { modo: esBasico ? "basico" : "ia", destinatario: estado.destinatario, objetivo: estado.objetivo });
     pintarAnalisis();
   }
 
@@ -392,11 +400,39 @@
       $("copiado-ok").hidden = false;
       setTimeout(function () { $("copiado-ok").hidden = true; }, 2500);
     }
+    evento("dlqd_mensaje_copiado", { modo: estado.modoBasico ? "basico" : "ia" });
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(texto).then(avisar, function () { copiarFallback(texto, avisar); });
     } else {
       copiarFallback(texto, avisar);
     }
+  });
+
+  /* ---------- Captación newsletter (paso 5, opcional) ---------- */
+
+  $("form-newsletter").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = $("email-newsletter").value.trim();
+    if (!email) return;
+    var btn = $("btn-newsletter");
+    btn.disabled = true;
+    $("newsletter-error").hidden = true;
+    fetch("/.netlify/functions/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, group: "newsletter-home" }),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("subscribe " + res.status);
+        $("form-newsletter").hidden = true;
+        $("newsletter-ok").hidden = false;
+        evento("dlqd_alta_newsletter", {});
+        evento("generate_lead", { origen: "app-dlqd" });
+      })
+      .catch(function () {
+        $("newsletter-error").hidden = false;
+        btn.disabled = false;
+      });
   });
 
   function copiarFallback(texto, listo) {
