@@ -245,19 +245,20 @@
   }
 
   // Peticiones con enfoque vínculo (sello de la herramienta): el sujeto que
-  // importa es el «nosotros», no el déficit de quien habla ni la conducta del otro.
+  // importa es el «nosotros». Regla de concordancia: la frase del vínculo se
+  // mantiene en plural de principio a fin; la primera persona va en frase aparte.
   var PETICIONES = {
-    "que me entienda": "Para lo que tenemos, me importa mucho que entiendas cómo lo vivo yo. ¿Puedes escucharme un momento, aunque no estés de acuerdo?",
-    "que cambie algo concreto": "Para cuidar lo que tenemos, necesito que algo cambie de verdad. ¿Acordamos una cosa concreta y la probamos esta semana?",
-    "que nos reconciliemos": "Lo que tenemos me importa más que esta pelea. ¿Lo hablamos con calma, sin guardarnos nada?",
-    "poner un límite": "Precisamente porque me importa lo que tenemos, necesito que esto no se repita. Te lo digo en serio y con respeto.",
-    "pedir algo": "Para cuidar lo que tenemos, quiero pedirte una cosa concreta. Piénsala de verdad antes de contestar.",
+    "que me entienda": "Para lo que tenemos, importa que nos entendamos de verdad. Escúchame un momento, aunque no estés de acuerdo.",
+    "que cambie algo concreto": "Para cuidar lo que tenemos, necesitamos que algo cambie. ¿Acordamos una cosa concreta y la probamos esta semana?",
+    "que nos reconciliemos": "Lo que tenemos importa más que esta pelea. ¿Lo hablamos con calma, sin guardarnos nada?",
+    "poner un límite": "Esto que pasa daña lo que tenemos. Necesito que no se repita; te lo digo en serio y con respeto.",
+    "pedir algo": "Para cuidar lo que tenemos, te pido una cosa concreta. Piénsala de verdad antes de contestar.",
   };
 
   // Variantes para mensaje escrito: sin verbos que empujen a verse o hablar en voz alta.
   var PETICIONES_ESCRITO = {
-    "que me entienda": "Para lo que tenemos, me importa mucho que entiendas cómo lo vivo yo. Léeme entero antes de contestar, aunque no estés de acuerdo.",
-    "que nos reconciliemos": "Lo que tenemos me importa más que esta pelea. Contéstame cuando puedas hacerlo con calma, sin guardarte nada.",
+    "que me entienda": "Para lo que tenemos, importa que nos entendamos de verdad. Léeme entero antes de contestar, aunque no estés de acuerdo.",
+    "que nos reconciliemos": "Lo que tenemos importa más que esta pelea. Contéstame cuando puedas hacerlo con calma, sin guardarte nada.",
   };
 
   function reformulacionPorReglas() {
