@@ -126,16 +126,17 @@ def slide(idx, kicker, palabra, dark=False, sub_top=None, sub_bot=None, cta=None
     print(f"OK slide-{idx:02d}")
 
 
-# ---- 7 slides · copy verbatim del kit, repartido entre palabra-bomba y sublíneas ----
+# ---- 7 slides · copy verbatim del kit (v2 · arranque por identificación, indicación de Daniel 12 jun) ----
 
-slide(1, "Herramienta nueva · gratuita", "El mensaje que llevas días sin atreverte a enviar.",
-      dark=True)
+slide(1, "Herramienta nueva · gratuita", "Seguro que te ha pasado.", dark=True,
+      sub_bot="Quieres explicar algo y no te salen las palabras correctas.")
 
-slide(2, "La escena", "Lo escribes. Lo borras. Lo vuelves a escribir.", dark=False,
+slide(2, "Lo que sale en su lugar", "Las palabras te salen envueltas de ansiedad, de rabia, de frustración.",
+      dark=False,
+      sub_bot="O cargadas de una negatividad que no querías poner ahí.")
+
+slide(3, "La escena", "Lo escribes. Lo borras. Lo vuelves a escribir.", dark=True,
       sub_bot="Y al final no envías nada — o envías el reproche entero.")
-
-slide(3, "El problema real", "El problema no es lo que sientes.", dark=True,
-      sub_bot="Es que el mensaje real va enterrado debajo del «siempre», del «nunca» y del «ya sé que me vas a decir que...».")
 
 slide(4, "Por qué no te escucha", "Cuando el otro lee un reproche, se defiende del reproche.",
       dark=False,
