@@ -736,6 +736,12 @@
     irAPaso(1);
   });
 
+  /* ---------- Cross-sell del libro (paso 5) ---------- */
+
+  $("enlace-libro").addEventListener("click", function () {
+    evento("dlqd_click_libro", {});
+  });
+
   /* ---------- Seguimiento de conversación (Plus) ---------- */
 
   $("btn-seguimiento").addEventListener("click", function () {
