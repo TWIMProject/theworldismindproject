@@ -328,7 +328,7 @@ exports.handler = async (event) => {
     }
     // Mejor esfuerzo: dejar el código en el perfil de MailerLite (campo
     // dlqd_codigo) para que la automation de bienvenida pueda incluirlo en
-    // el email. Si falla, el código se entrega en pantalla igualmente.
+    // el email. Si falla, el código se entrega igualmente.
     try {
       await fetch("https://connect.mailerlite.com/api/subscribers", {
         method: "POST",
@@ -342,6 +342,33 @@ exports.handler = async (event) => {
         }),
       });
     } catch { /* sin bloqueo */ }
+    // Entrega segura (decisión de Daniel, 12 jun 21:19): el código se envía
+    // al correo del suscriptor — así solo su dueño lo recibe. Si el envío
+    // falla (integración de email sin proveedor configurado), se recurre a
+    // entregarlo en pantalla para no dejar a nadie fuera.
+    if (process.env.NETLIFY_EMAILS_SECRET) {
+      try {
+        // DEPLOY_PRIME_URL apunta al deploy actual (preview/branch incluidos);
+        // URL apunta al dominio primario. Sin barra final para componer la ruta.
+        const base = (process.env.DEPLOY_PRIME_URL || process.env.URL || "https://twimproject.com").replace(/\/$/, "");
+        const envio = await fetch(base + "/.netlify/functions/emails/codigo-dlqd", {
+          method: "POST",
+          headers: {
+            "netlify-emails-secret": process.env.NETLIFY_EMAILS_SECRET,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: "daniel@twimproject.com",
+            to: emailPuerta.trim().toLowerCase(),
+            subject: "Tu código de «Di lo que quieres decir»",
+            parameters: { codigo: cod },
+          }),
+        });
+        if (envio.ok) {
+          return respuesta(200, { ok: true, enviado: true }, origin);
+        }
+      } catch { /* cae al fallback de pantalla */ }
+    }
     return respuesta(200, { ok: true, codigo: cod }, origin);
   }
 

@@ -128,6 +128,14 @@ Licencia de la app con marca blanca o acceso profesional para psicólogos/centro
 
 *Registro de ejecución: [2026-06-12]: Motor A implementado y mergeado · informe visual entregado a Daniel en chat (no versionado, regla §5).*
 
+## 7.bis · Redirección estratégica del 12 jun, 21:19 (orden de Daniel tras la autoauditoría)
+
+> Verbatim: «mejor que la app lleve a comprar los libros de Amazon, los de edición limitada y pdfs, que son los activos monetizables actuales. Luego que se les renueve el pago anual de forma automática a los suscriptores. Cambia el código y envíalo por correo u otra forma segura.»
+
+1. **Cross-sell de libros ACTIVADO YA** (no se espera a octubre): bloque «Si quieres ir más hondo» en el paso 5 → landing del libro «Los engranajes de la mente» (que vende Amazon + edición firmada). Evento GA4 `dlqd_click_libro`. Los activos monetizables actuales son el destino del tráfico de la app desde hoy.
+2. **El Pase pasa de pago único a SUSCRIPCIÓN ANUAL RENOVABLE** (Stripe subscription, no one-time): copy del panel y legal.html actualizados (renovación automática + aviso previo + cancelación en cualquier momento). Pendiente al encender Stripe: crear el producto como suscripción anual; y para la renovación de códigos (año 2+), webhook `invoice.paid` → email con código renovado (apuntado, se construye al encender).
+3. **Entrega segura del código** (cierra el riesgo #3 de la auditoría): la función envía el código por correo vía Netlify Emails (plantilla `emails/codigo-dlqd/`) y solo recurre a mostrarlo en pantalla si el envío falla (p. ej. proveedor de email sin configurar en la extensión de Netlify — verificar en panel: Extensions → Emails → provider). Así solo el dueño del email recibe su código.
+
 ## 8 · Autoauditoría del 12 jun (a petición de Daniel, 21:12) · hallazgos y riesgos aceptados
 
 1. **Bug corregido en el acto**: la puerta bloqueaba re-ver un análisis cacheado (volver al paso 2 y re-pulsar «Analizar» con el mismo texto). Ahora el caché se sirve sin puerta — solo se gatea lo que cuesta.

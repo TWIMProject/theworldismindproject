@@ -247,6 +247,7 @@
     $("puerta-alta").hidden = verCodigo;
     this.textContent = verCodigo ? "Quiero un código nuevo" : "Ya tengo mi código";
     $("puerta-error").hidden = true;
+    $("puerta-enviado").hidden = true;
   });
 
   $("btn-puerta").addEventListener("click", function () {
@@ -261,7 +262,20 @@
         return pedirCodigo(email);
       })
       .then(function (r) {
-        if (r && r.ok && r.codigo) {
+        if (r && r.ok && r.enviado) {
+          // Entrega segura: el código ha ido a su correo. Solo su dueño lo verá.
+          // El botón y el alternador quedan disponibles para reintentar si no llega.
+          evento("dlqd_alta_newsletter", { via: "puerta" });
+          evento("generate_lead", { origen: "app-dlqd-puerta" });
+          btn.disabled = false;
+          $("puerta-alta").hidden = true;
+          $("puerta-codigo").hidden = false;
+          $("puerta-alternar").textContent = "Quiero un código nuevo";
+          $("puerta-email-2").value = email;
+          $("puerta-error").hidden = true;
+          $("puerta-enviado").hidden = false;
+          $("puerta-cod").focus();
+        } else if (r && r.ok && r.codigo) {
           guardarAcceso(email, r.codigo);
           evento("dlqd_alta_newsletter", { via: "puerta" });
           evento("generate_lead", { origen: "app-dlqd-puerta" });
@@ -685,9 +699,11 @@
         $("newsletter-ok").hidden = false;
         evento("dlqd_alta_newsletter", { via: "paso5" });
         evento("generate_lead", { origen: "app-dlqd" });
-        // Le dejamos también su código guardado y se lo enseñamos.
+        // Su código le llega por correo (o en pantalla si el envío falla).
         return pedirCodigo(email).then(function (r) {
-          if (r && r.ok && r.codigo) {
+          if (r && r.ok && r.enviado) {
+            $("newsletter-ok").textContent = "Hecho. Tu código personal te llega ahora mismo por correo — con él usas la app donde quieras. Te escribiré cuando algo merezca tu tiempo.";
+          } else if (r && r.ok && r.codigo) {
             guardarAcceso(email, r.codigo);
             $("newsletter-ok").textContent = "Hecho. Tu código personal para usar la app donde quieras: " + r.codigo + " — apúntalo. Te escribiré cuando algo merezca tu tiempo.";
           }
@@ -721,6 +737,12 @@
     $("objetivo-otro").value = ""; $("objetivo-otro").hidden = true;
     $("texto-despues").value = ""; delete $("texto-despues").dataset.origen;
     irAPaso(1);
+  });
+
+  /* ---------- Cross-sell del libro (paso 5) ---------- */
+
+  $("enlace-libro").addEventListener("click", function () {
+    evento("dlqd_click_libro", {});
   });
 
   /* ---------- Seguimiento de conversación (Plus) ---------- */

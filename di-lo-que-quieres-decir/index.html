@@ -110,6 +110,7 @@
           <button type="button" class="btn btn-principal" id="btn-puerta-entrar">Entrar</button>
         </div>
         <button type="button" class="enlace-discreto" id="puerta-alternar">Ya tengo mi código</button>
+        <p class="copiado-ok" id="puerta-enviado" role="status" hidden>Te hemos enviado tu código a tu correo (mira también en promociones o spam). Escríbelo aquí abajo.</p>
         <p class="error-campo" id="puerta-error" role="alert" hidden></p>
         <div id="puerta-exito" hidden>
           <p class="paso-ayuda">Este es tu código personal. Queda guardado en este navegador; apúntalo para usar la app en otros dispositivos. Si lo pierdes, vuelve aquí, pon tu email y te lo doy otra vez.</p>
@@ -119,7 +120,7 @@
       </div>
       <div class="puerta" id="panel-pase" hidden aria-labelledby="titulo-pase">
         <h3 id="titulo-pase">Has usado tus 3 análisis gratis de este mes</h3>
-        <p class="paso-ayuda">El Pase quita el límite durante 12 meses: análisis ilimitados por lo que sale a <strong>1,24 € al mes</strong> (14,90 € al año, un solo pago) — menos que un solo mes de ChatGPT, para todo el año, y haciendo una sola cosa mejor que ninguna. Sin suscripción. Tus textos siguen sin guardarse jamás.</p>
+        <p class="paso-ayuda">El Pase quita el límite: análisis ilimitados por lo que sale a <strong>1,24 € al mes</strong> (14,90 € al año, cobro anual que se renueva solo — lo cancelas cuando quieras) — menos que un solo mes de ChatGPT, para todo el año, y haciendo una sola cosa mejor que ninguna. Tus textos siguen sin guardarse jamás.</p>
         <div class="puerta-form">
           <a class="btn btn-principal" id="enlace-pase" href="#" rel="noopener">Conseguir mi Pase · 1,24 €/mes (cobro anual)</a>
           <button type="button" class="btn btn-secundario" id="btn-pase-tengo">Ya tengo mi Pase</button>
@@ -197,6 +198,11 @@
         <h3 id="titulo-ancla">Si la conversación se tuerce</h3>
         <p class="paso-ayuda">Tres frases para volver al tema cuando el otro desvíe o tú te actives. Léelas un par de veces antes de hablar.</p>
         <ul class="frases-ancla" id="frases-ancla"></ul>
+      </section>
+      <section class="seccion-ancla" id="seccion-libro" aria-labelledby="titulo-libro">
+        <h3 id="titulo-libro">Si quieres ir más hondo</h3>
+        <p class="paso-ayuda">Esta herramienta nace de «Los engranajes de la mente», el libro donde explico cómo se montan la voz que te juzga y los patrones que se te repiten en los vínculos. Lo tienes en Amazon y en edición firmada.</p>
+        <a class="btn btn-secundario" id="enlace-libro" href="https://twimproject.com/libro-engranajes-mente/" rel="noopener">Conocer el libro</a>
       </section>
       <section class="seccion-ancla" id="seccion-seguimiento" hidden aria-labelledby="titulo-seguimiento">
         <h3 id="titulo-seguimiento">¿La conversación ha seguido?</h3>
