@@ -1,8 +1,8 @@
 # Cierre de sesión · 2026-06-12
 
-Continuación de la sesión del 11 jun (app «Di lo que quieres decir», PRs #338 y #339 mergeados anoche).
+Continuación de la sesión del 11 jun 2026 (app «Di lo que quieres decir», PRs #338 y #339 mergeados la noche del 11 jun 2026).
 
-## Feedback de Daniel tras probar la app en producción (mañana del 12)
+## Feedback de Daniel tras probar la app en producción (12 jun 2026, primera hora)
 
 Daniel probó la app desde el móvil con un caso real (mensaje de WhatsApp a su pareja) y mandó 3 capturas con este veredicto verbatim: «Mira porque no me gusta. Lleva siempre a concretar hablarlo en persona y no recoge bien el mensaje y se basa en el mensaje realmente. Es demasiado genérico».
 

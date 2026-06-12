@@ -149,7 +149,6 @@ exports.handler = async (event) => {
         diag: {
           clave_configurada: Boolean(process.env.ANTHROPIC_API_KEY),
           modelo: process.env.TRADUCTOR_INTERNO_MODEL || MODELO_POR_DEFECTO,
-          node: process.version,
         },
       }, origin);
     }
