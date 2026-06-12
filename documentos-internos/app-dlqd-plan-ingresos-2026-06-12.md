@@ -127,3 +127,11 @@ Licencia de la app con marca blanca o acceso profesional para psicólogos/centro
 ---
 
 *Registro de ejecución: [2026-06-12]: Motor A implementado y mergeado · informe visual entregado a Daniel en chat (no versionado, regla §5).*
+
+## 8 · Autoauditoría del 12 jun (a petición de Daniel, 21:12) · hallazgos y riesgos aceptados
+
+1. **Bug corregido en el acto**: la puerta bloqueaba re-ver un análisis cacheado (volver al paso 2 y re-pulsar «Analizar» con el mismo texto). Ahora el caché se sirve sin puerta — solo se gatea lo que cuesta.
+2. **Hueco futuro (no es bug hoy, el Plus está dormido)**: el canje post-pago (`accion=pase`) solo reconoce el precio del Pase (`DLQD_PASE_PRICE_ID`). **Al poner el Plus a la venta habrá que añadir `DLQD_PLUS_PRICE_ID`** y devolver código Plus cuando la sesión de Checkout sea de ese precio. Apuntado para el encendido de Stripe.
+3. **Riesgo aceptado y consciente**: `accion=codigo` devuelve el código de cualquier email YA suscrito (quien conozca el email de otra persona puede obtener su código de acceso gratuito). Impacto bajo: solo da uso de la app, sin datos personales ni de pago. Mitigación futura si molesta: cuando la automation de bienvenida esté activa, cambiar a «te lo enviamos a tu email» en vez de mostrarlo en pantalla (trade-off de fricción).
+4. **Decisión consciente**: en modo básico (IA caída) los análisis no consumen usos → la puerta no aparece. Deliberado: no se gatea una experiencia degradada.
+5. **Verificado en esta auditoría**: 3 secretos en Netlify leídos de vuelta ✔ · campo MailerLite existente ✔ · aritmética de precios (14,90/12=1,24 · 12,90/12=1,08 · 24,90/12=2,08) ✔ · CORS y rate-limit cubren todas las acciones nuevas ✔ · gate del Plus verificado en servidor ✔ · claim del Pase idempotente ✔ · enlaces y clases de legal.html ✔ · sitemap XML válido ✔.
