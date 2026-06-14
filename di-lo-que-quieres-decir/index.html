@@ -39,6 +39,37 @@
     <p class="aviso-privacidad" role="note">Lo que escribes aquí no se almacena. Cuando cierres esta página, desaparece.</p>
   </header>
 
+  <!-- NARRATIVA · por qué y para qué · contexto para quien llega por primera vez -->
+  <section class="historieta" aria-labelledby="historieta-titulo">
+    <style>
+      .historieta{max-width:760px;margin:0 auto;padding:14px 20px 4px;}
+      .historieta h2{font-family:"DM Serif Display",Georgia,serif;color:var(--green-deep);font-size:clamp(1.5rem,4.4vw,2.05rem);line-height:1.2;text-align:center;margin:1.2rem 0 .5rem;}
+      .historieta .intro{text-align:center;color:var(--text-soft);font-size:1.02rem;line-height:1.6;max-width:560px;margin:0 auto 1.8rem;}
+      .escena{display:flex;gap:1.1rem;align-items:flex-start;padding:.95rem 0;border-bottom:1px solid var(--sand-dark);}
+      .escena:last-of-type{border-bottom:0;}
+      .escena .n{flex:0 0 auto;font-family:"DM Serif Display",Georgia,serif;font-size:1.7rem;color:var(--sand);line-height:1;width:1.8rem;text-align:center;}
+      .escena p{margin:0;font-size:1.05rem;line-height:1.6;color:var(--text);}
+      .escena strong{color:var(--green-deep);}
+      .historieta .cierre{margin:1.8rem 0 0;padding:1.25rem 1.35rem;background:var(--sand);border-radius:10px;font-size:1rem;line-height:1.65;color:var(--text-soft);}
+      .historieta .empezar{text-align:center;margin:1.7rem 0 .4rem;}
+      .historieta .empezar a{display:inline-block;background:var(--green);color:var(--cream);text-decoration:none;font-weight:600;padding:.85rem 1.9rem;border-radius:8px;font-size:1.05rem;}
+      .historieta .empezar a:hover{background:var(--green-dark);}
+    </style>
+    <h2 id="historieta-titulo">Lo que pasa cuando tienes algo importante que decir</h2>
+    <p class="intro">Te lo cuento en seis escenas. Seguramente te reconozcas en alguna.</p>
+
+    <div class="escena"><div class="n">1</div><p><strong>Tienes una frase atravesada.</strong> Llevas días con algo que decirle a tu pareja, a tu madre, a alguien del trabajo. Algo que importa y que no sabes por dónde coger.</p></div>
+    <div class="escena"><div class="n">2</div><p><strong>Pero al abrir la boca, sale otra cosa.</strong> Sale con reproche, con «siempre» y «nunca», con la rabia o el miedo pegados. No porque seas injusto: es lo que hay debajo cuando algo duele.</p></div>
+    <div class="escena"><div class="n">3</div><p><strong>Y el otro deja de escucharte.</strong> Oye el ataque, no el fondo. Se defiende. Y lo que de verdad necesitabas decir se queda sin llegar.</p></div>
+    <div class="escena"><div class="n">4</div><p><strong>Aquí lo sueltas todo, sin filtro.</strong> El enfado entero, tal cual te sale. Nadie lo lee y no se guarda en ningún sitio.</p></div>
+    <div class="escena"><div class="n">5</div><p><strong>Y te lo devuelvo dicho de otra forma.</strong> El mismo fondo y las mismas ganas, pero limpio del ruido que lo tapaba: dicho para que la otra persona pueda escucharlo sin ponerse a la defensiva.</p></div>
+    <div class="escena"><div class="n">6</div><p><strong>Para que esa conversación cuide el vínculo, en vez de romperlo.</strong> Porque casi nunca se trata de ganar la discusión, sino de seguir cerca de quien te importa.</p></div>
+
+    <p class="cierre">Esto no es un truco de palabras bonitas. Nace de años de consulta viendo cómo se perdían conversaciones que importaban —entre parejas, entre padres e hijos, entre amigos— no por falta de cariño, sino por cómo salían las palabras. La herramienta hace, en un momento, ese trabajo de traducir lo que sientes a algo que el otro pueda recibir.</p>
+
+    <div class="empezar"><a href="#paso-1">Empezar a escribir</a></div>
+  </section>
+
   <nav class="pasos-indicador" aria-label="Progreso">
     <ol id="indicador-lista">
       <li data-paso="1" class="activo"><span>1</span> Suéltalo</li>
@@ -253,6 +284,7 @@
     <p class="pie-aviso">Esta herramienta no sustituye un proceso terapéutico. Si estás en crisis, llama al 024 (atención a la conducta suicida, 24 h).</p>
     <p>Una herramienta de <a href="https://twimproject.com" rel="noopener">The World Is Mind Project — twimproject.com</a></p>
     <p><a href="legal.html">Privacidad y condiciones</a> · <button type="button" class="enlace-discreto" id="btn-borrar-datos">Borrar mis datos de este navegador</button></p>
+    <p style="font-size:.78rem;color:var(--text-muted);margin-top:.6rem;">© The World Is Mind Project · Daniel Orozco Abia. Método, textos y funcionamiento de esta herramienta son originales y están protegidos. Prohibida su reproducción.</p>
   </footer>
 
   <script src="app.js" defer></script>
