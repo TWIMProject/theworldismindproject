@@ -68,7 +68,16 @@ exports.handler = async (event) => {
   let yaTenian = 0;
   let escritos = 0;
   let errores = 0;
+  let omitidosInactivos = 0;
+  const erroresMuestra = [];
   let cursor = null;
+
+  function enmascara(email) {
+    const s = String(email || "");
+    const i = s.indexOf("@");
+    if (i <= 1) return "***";
+    return s[0] + "***" + s.slice(i);
+  }
 
   try {
     do {
@@ -92,11 +101,17 @@ exports.handler = async (event) => {
           yaTenian++;
           continue;
         }
+        // No tocar suscriptores que no están activos (baja/rebote/no confirmado):
+        // ni se les puede enviar la campaña ni MailerLite deja actualizarlos limpio.
+        if (s.status && s.status !== "active") {
+          omitidosInactivos++;
+          continue;
+        }
         pendientes.push(s);
       }
 
       // Lotes paralelos para no agotar el tiempo de la función ni el rate limit.
-      const LOTE = 8;
+      const LOTE = 5;
       for (let i = 0; i < pendientes.length; i += LOTE) {
         const trozo = pendientes.slice(i, i + LOTE);
         const resultados = await Promise.allSettled(
@@ -109,7 +124,15 @@ exports.handler = async (event) => {
               headers: { Authorization: "Bearer " + API, "Content-Type": "application/json" },
               body: JSON.stringify({ email: s.email, fields: { dlqd_codigo: cod } }),
             });
-            if (!up.ok) throw new Error("update " + up.status);
+            if (!up.ok) {
+              let detalle = "";
+              try { detalle = (await up.text()).slice(0, 160); } catch {}
+              const err = new Error("HTTP " + up.status);
+              err.status = up.status;
+              err.email = s.email;
+              err.detalle = detalle;
+              throw err;
+            }
             return "ok";
           })
         );
@@ -118,6 +141,14 @@ exports.handler = async (event) => {
             if (apply) escritos++;
           } else {
             errores++;
+            if (erroresMuestra.length < 5) {
+              const e = res.reason || {};
+              erroresMuestra.push({
+                status: e.status || null,
+                email: enmascara(e.email),
+                detalle: e.detalle || String(e.message || e),
+              });
+            }
           }
         }
       }
@@ -133,8 +164,10 @@ exports.handler = async (event) => {
     modo: apply ? "aplicado" : "dry-run (no se ha escrito nada)",
     total_suscriptores: total,
     ya_tenian_codigo: yaTenian,
-    pendientes: total - yaTenian,
+    omitidos_inactivos: omitidosInactivos,
+    pendientes_activos: apply ? 0 : (total - yaTenian - omitidosInactivos),
     escritos: apply ? escritos : 0,
     errores,
+    errores_muestra: erroresMuestra,
   });
 };
