@@ -127,6 +127,8 @@ Licencia de la app con marca blanca o acceso profesional para psicólogos/centro
 ---
 
 *Registro de ejecución: [2026-06-12]: Motor A implementado y mergeado · informe visual entregado a Daniel en chat (no versionado, regla §5).*
+*[2026-06-14]: Motor A · vía SEO/AEO (§2.bis) ejecutada · insight `insights/como-decir-lo-que-quieres-decir-sin-pelea.html` con schema `WebApplication` + CTA a la app (utm_source=insight) · enlazado en insights/index, sitemap y llms.txt · PR #354 mergeado.*
+*[2026-06-14]: Segunda pieza de la familia · insight `insights/como-poner-un-limite-sin-sentirte-culpable.html` (decir que no / culpa vs vergüenza, destilado del manuscrito DDBEO) · mismo patrón schema WebApplication + CTA app (utm_content=poner-limite) · enlazado en index/sitemap/llms.*
 
 ## 7.bis · Redirección estratégica del 12 jun, 21:19 (orden de Daniel tras la autoauditoría)
 
