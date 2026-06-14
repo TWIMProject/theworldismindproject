@@ -10,14 +10,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app.css">
-  <!-- Google tag (gtag.js) · solo eventos de uso, jamás el texto del usuario -->
+  <!-- Google tag (gtag.js) · Consent Mode v2 · solo eventos de uso, jamás el texto del usuario -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VMMZ1TKWZ0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // Consent Mode v2: por defecto denegado hasta que el banner recoja el
+    // consentimiento (mismo patrón que el resto del sitio · cumple RGPD/LSSI).
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
     gtag('config', 'G-VMMZ1TKWZ0');
   </script>
+  <!-- Banner de consentimiento de cookies (el mismo del resto del sitio) -->
+  <script src="/assets/twim-cookie-consent.js" defer></script>
+
 </head>
 <body>
   <header class="cabecera">
