@@ -30,6 +30,24 @@
 // Diagnóstico: GET /.netlify/functions/subscribe?diag=1 devuelve qué env vars están
 // configuradas (sin exponer valores) y la versión de Node del runtime.
 
+const crypto = require("node:crypto");
+
+// Código personal de acceso a la app «Di lo que quieres decir» (modelo
+// embajador): derivado del email con HMAC, sin base de datos ni contraseñas.
+// MISMO cálculo que netlify/functions/traductor-interno.js (codigoParaEmail).
+// Se escribe en el alta para que la automation de bienvenida pueda incluirlo
+// desde el primer email (campo dlqd_codigo); si el secreto falta, no se añade.
+function codigoParaEmail(email) {
+  const secreto = process.env.DLQD_CODE_SECRET;
+  if (!secreto) return null;
+  return crypto
+    .createHmac("sha256", secreto)
+    .update(email.trim().toLowerCase())
+    .digest("hex")
+    .slice(0, 8)
+    .toUpperCase();
+}
+
 const ALLOWED_ORIGINS = new Set([
   "https://twimproject.com",
   "https://www.twimproject.com",
@@ -145,13 +163,23 @@ exports.handler = async (event) => {
       });
     }
 
+    const fields = {
+      name: name || "",
+      last_name: "",
+      phone: whatsapp || "",
+    };
+    // Dejar el código de la app en el perfil DESDE el alta, para que la carta
+    // de bienvenida (automation) pueda incluirlo en el primer email sin carrera
+    // de tiempos. Determinista y de mejor esfuerzo: si no se puede calcular,
+    // el alta sigue igual.
+    const codigoApp = codigoParaEmail(email);
+    if (codigoApp) {
+      fields.dlqd_codigo = codigoApp;
+    }
+
     const mlPayload = {
       email,
-      fields: {
-        name: name || "",
-        last_name: "",
-        phone: whatsapp || "",
-      },
+      fields,
       groups: [groupId],
       status: "active",
     };
